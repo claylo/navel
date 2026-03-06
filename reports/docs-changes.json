@@ -1,0 +1,327 @@
+{
+  "last_checked": "2026-03-06T17:46:27Z",
+  "changes": [
+    {
+      "date": "2026-03-06T15:12:10Z",
+      "version_at_time": "2.1.70",
+      "files_changed": [
+        "changelog.md",
+        "common-workflows.md",
+        "costs.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "mcp.md",
+        "memory.md",
+        "remote-control.md",
+        "sandboxing.md",
+        "security.md",
+        "server-managed-settings.md",
+        "troubleshooting.md",
+        "vs-code.md",
+        "zero-data-retention.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-03-05T21:24:01Z",
+      "version_at_time": "2.1.69",
+      "files_changed": [
+        "changelog.md",
+        "checkpointing.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md",
+        "common-workflows.md",
+        "costs.md",
+        "data-usage.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "devcontainer.md",
+        "discover-plugins.md",
+        "fast-mode.md",
+        "features-overview.md",
+        "github-actions.md",
+        "gitlab-ci-cd.md",
+        "google-vertex-ai.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "keybindings.md",
+        "legal-and-compliance.md",
+        "llm-gateway.md",
+        "mcp.md",
+        "memory.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "output-styles.md",
+        "permissions.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "quickstart.md",
+        "remote-control.md",
+        "sandboxing.md",
+        "security.md",
+        "server-managed-settings.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slack.md",
+        "statusline.md",
+        "sub-agents.md",
+        "terminal-config.md",
+        "third-party-integrations.md",
+        "troubleshooting.md",
+        "vs-code.md",
+        "zero-data-retention.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-03-01T19:33:16Z",
+      "version_at_time": "2.1.63",
+      "files_changed": [
+        "agent-teams.md",
+        "amazon-bedrock.md",
+        "analytics.md",
+        "authentication.md",
+        "best-practices.md",
+        "changelog.md",
+        "checkpointing.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md",
+        "common-workflows.md",
+        "costs.md",
+        "data-usage.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "devcontainer.md",
+        "discover-plugins.md",
+        "fast-mode.md",
+        "features-overview.md",
+        "github-actions.md",
+        "gitlab-ci-cd.md",
+        "google-vertex-ai.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "keybindings.md",
+        "legal-and-compliance.md",
+        "llm-gateway.md",
+        "mcp.md",
+        "memory.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "output-styles.md",
+        "overview.md",
+        "permissions.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "quickstart.md",
+        "remote-control.md",
+        "sandboxing.md",
+        "security.md",
+        "server-managed-settings.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slack.md",
+        "statusline.md",
+        "sub-agents.md",
+        "terminal-config.md",
+        "third-party-integrations.md",
+        "troubleshooting.md",
+        "vs-code.md",
+        "zero-data-retention.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-03-01T19:26:58Z",
+      "version_at_time": "2.1.63",
+      "files_changed": [
+        "slack.md",
+        "vs-code.md",
+        "zero-data-retention.md"
+      ],
+      "files_added": [
+        "skills.md",
+        "troubleshooting.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-03-01T19:26:18Z",
+      "version_at_time": "2.1.63",
+      "files_changed": [
+        "changelog.md",
+        "checkpointing.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md",
+        "slack.md",
+        "vs-code.md",
+        "zero-data-retention.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        "skills.md",
+        "troubleshooting.md"
+      ]
+    },
+    {
+      "date": "2026-03-01T19:25:48Z",
+      "version_at_time": "2.1.63",
+      "files_changed": [
+        "changelog.md",
+        "checkpointing.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-03-01T19:25:06Z",
+      "version_at_time": "2.1.63",
+      "files_changed": [
+        "changelog.md",
+        "checkpointing.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-03-01T19:16:42Z",
+      "version_at_time": "2.1.63",
+      "files_changed": [
+        "changelog.md",
+        "checkpointing.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-03-01T19:16:36Z",
+      "version_at_time": "2.1.63",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        "agent-teams.md",
+        "amazon-bedrock.md",
+        "analytics.md",
+        "authentication.md",
+        "best-practices.md",
+        "changelog.md",
+        "checkpointing.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md",
+        "common-workflows.md",
+        "costs.md",
+        "data-usage.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "devcontainer.md",
+        "discover-plugins.md",
+        "fast-mode.md",
+        "features-overview.md",
+        "github-actions.md",
+        "gitlab-ci-cd.md",
+        "google-vertex-ai.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "keybindings.md",
+        "legal-and-compliance.md",
+        "llm-gateway.md",
+        "mcp.md",
+        "memory.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "output-styles.md",
+        "overview.md",
+        "permissions.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "quickstart.md",
+        "remote-control.md",
+        "sandboxing.md",
+        "security.md",
+        "server-managed-settings.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slack.md",
+        "statusline.md",
+        "sub-agents.md",
+        "terminal-config.md",
+        "third-party-integrations.md",
+        "troubleshooting.md",
+        "vs-code.md",
+        "zero-data-retention.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    }
+  ]
+}

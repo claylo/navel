@@ -2,7 +2,11 @@
 
 An introspection toolkit for examining Claude Code's internals—system prompts, tool definitions, hook events, documentation—across every published version.
 
-The name is exactly what you think it is. We're gazing at the navel. The Claude logo even looks like a belly button if you squint even a little bit.
+And the name? Exactly what you think it is: a whole lot of navel-gazing. The Claude logo even looks like a belly button if you squint even a little bit.
+
+<!-- navel:begin:badges -->
+![Versions](https://img.shields.io/badge/versions-346-blue?style=flat&logo=claude) ![Hooks](https://img.shields.io/badge/hooks-21-green?style=flat&logo=claude) ![Commands](https://img.shields.io/badge/commands-78-orange?style=flat&logo=claude) ![Last sync](https://img.shields.io/badge/last_sync-2026--03--06-lightgrey?style=flat)
+<!-- navel:end:badges -->
 
 ## What it does
 
@@ -56,8 +60,9 @@ Run `navel prompts help` for the full prompt subcommand list.
 | Directory | Contents |
 |-----------|----------|
 | `npm/versions/` | Cached npm packages (one per version) |
-| `npm/hooks.json` | Hook events, history, and docs coverage |
-| `npm/commands.json` | Bundled slash commands, history, and docs coverage |
+| `reports/hooks.json` | Hook events, history, and docs coverage |
+| `reports/commands.json` | Bundled slash commands, history, and docs coverage |
+| `reports/docs-changes.json` | Documentation change log across syncs |
 | `prompts/versions/` | Captured system prompts and raw payloads |
 | `docs/` | Official documentation from code.claude.com |
 | `docs/diffs/` | Unified diffs between doc syncs |

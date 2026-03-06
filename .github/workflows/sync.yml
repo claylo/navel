@@ -1,0 +1,55 @@
+name: Sync Claude Code Data
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq jq ripgrep
+
+      - name: Run sync
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            Run these navel sync commands in order. Each one may take a moment.
+
+            1. bin/navel npm sync
+            2. bin/navel hooks sync
+            3. bin/navel commands sync
+            4. bin/navel docs sync
+            5. bin/navel readme sync
+
+            After all commands complete, check if any of these tracked files
+            changed: npm/versions.json, reports/hooks.json, reports/commands.json,
+            reports/docs-changes.json, reports/README.md, README.md
+
+            Use `git diff --name-only` to check.
+
+            If changes exist:
+            - Create a new branch named auto/sync-YYYY-MM-DD-HHMM
+            - Commit all changed tracked files with a conventional commit
+              message like "chore: sync claude code data (vX.Y.Z)" where
+              the version is the latest in npm/versions.json
+            - Push the branch and create a PR
+            - The PR title should summarize what changed
+            - Enable auto-merge on the PR with: gh pr merge --auto --squash
+
+            If nothing changed, just say "No changes detected" and exit.
+          claude_args: '--model claude-haiku-4-5-20251001 --max-turns 15'

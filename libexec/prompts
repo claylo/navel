@@ -1,0 +1,367 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_ROOT="${NAVEL_HOME:-$(cd "$SCRIPT_DIR/.." && pwd)}"
+JS_DIR="$SCRIPT_DIR/js"
+NPM_CACHE="${CLAUDE_NPM_CACHE:-$REPO_ROOT/npm}"
+PROMPTS_DIR="$REPO_ROOT/prompts/versions"
+DEFAULT_MODEL="opus"
+
+# ─────────────────────────────────────
+# Helpers
+# ─────────────────────────────────────
+
+die() { echo "error: $*" >&2; exit 1; }
+
+# Accept "2.1.63", "v2.1.63", or "latest" — normalize to "v2.1.63"
+normalize_version() {
+  local v="$1"
+  if [[ "$v" == "latest" ]]; then
+    v=$(cmd_latest)
+  fi
+  [[ "$v" == v* ]] || v="v$v"
+  echo "$v"
+}
+
+cli_path() {
+  echo "$NPM_CACHE/versions/$1/node_modules/@anthropic-ai/claude-code/cli.js"
+}
+
+require_cli() {
+  local v="$1"
+  local cli
+  cli=$(cli_path "$v")
+  [[ -f "$cli" ]] || die "cli.js not found for $v"
+  echo "$cli"
+}
+
+out_dir() {
+  local dir="$PROMPTS_DIR/$1"
+  mkdir -p "$dir"
+  echo "$dir"
+}
+
+diff_file() {
+  local f="$PROMPTS_DIR/$1/capture.md"
+  [[ -f "$f" ]] || die "no capture found for $1"
+  echo "$f"
+}
+
+# ─────────────────────────────────────
+# Info
+# ─────────────────────────────────────
+
+cmd_versions() {
+  ls "$NPM_CACHE/versions" | sort -V
+}
+
+cmd_latest() {
+  ls "$NPM_CACHE/versions" | sort -V | tail -1
+}
+
+cmd_count() {
+  echo "$(ls "$NPM_CACHE/versions" | wc -l | tr -d ' ') cached versions"
+}
+
+# ─────────────────────────────────────
+# Extract
+# ─────────────────────────────────────
+
+cmd_capture() {
+  local verbose=false
+  local real_auth=false
+  local model="$DEFAULT_MODEL"
+
+  while [[ "${1:-}" == -* && "${1:-}" != "--" ]]; do
+    case "$1" in
+      -v|--verbose) verbose=true; shift ;;
+      -m|--model) model="$2"; shift 2 ;;
+      --real-auth) real_auth=true; shift ;;
+      *) die "unknown flag: $1" ;;
+    esac
+  done
+
+  [[ $# -ge 1 ]] || die "usage: prompts capture [flags] <version> [-- claude-flags...]"
+  local v
+  v=$(normalize_version "$1")
+  shift
+
+  # Collect passthrough args (skip -- separator if present)
+  [[ "${1:-}" == "--" ]] && shift
+
+  local cli
+  cli=$(require_cli "$v")
+  local dir
+  dir=$(out_dir "$v")
+
+  local capture_flags=()
+  $real_auth && capture_flags+=(--real-auth)
+
+  local cmd=(node "$JS_DIR/api-capture.mjs" "${capture_flags[@]}" "$cli" -- --model "$model" "$@")
+
+  if $verbose; then
+    CAPTURE_RAW_DIR="$dir" "${cmd[@]}" > "$dir/capture.md"
+  else
+    CAPTURE_RAW_DIR="$dir" "${cmd[@]}" > "$dir/capture.md" 2>/dev/null
+  fi
+  echo "Wrote $dir/capture.md"
+}
+
+# ─────────────────────────────────────
+# Batch
+# ─────────────────────────────────────
+
+cmd_capture_all() {
+  local model="${1:-$DEFAULT_MODEL}"
+  local versions
+  versions=$(ls "$NPM_CACHE/versions" | sort -V)
+  local total
+  total=$(echo "$versions" | wc -l | tr -d ' ')
+  local i=0
+
+  for v in $versions; do
+    i=$((i + 1))
+    if [[ -f "$PROMPTS_DIR/$v/capture.md" ]]; then
+      echo "[$i/$total] $v — already captured, skipping"
+      continue
+    fi
+    local cli
+    cli=$(cli_path "$v")
+    if [[ ! -f "$cli" ]]; then
+      echo "[$i/$total] $v — cli.js not found, skipping"
+      continue
+    fi
+    echo -n "[$i/$total] $v — capturing... "
+    mkdir -p "$PROMPTS_DIR/$v"
+    if CAPTURE_RAW_DIR="$PROMPTS_DIR/$v" node "$JS_DIR/api-capture.mjs" "$cli" -- --model "$model" > "$PROMPTS_DIR/$v/capture.md" 2>/dev/null; then
+      echo "ok"
+    else
+      echo "failed (exit $?)"
+      rm -f "$PROMPTS_DIR/$v/capture.md"
+    fi
+  done
+  echo "Done. $(find "$PROMPTS_DIR" -name 'capture.md' 2>/dev/null | wc -l | tr -d ' ') captures total"
+}
+
+cmd_capture_range() {
+  [[ $# -ge 2 ]] || die "usage: prompts capture-range <from> <to> [model]"
+  local from
+  from=$(normalize_version "$1")
+  local to
+  to=$(normalize_version "$2")
+  local model="${3:-$DEFAULT_MODEL}"
+  local in_range=false
+
+  for v in $(ls "$NPM_CACHE/versions" | sort -V); do
+    [[ "$v" == "$from" ]] && in_range=true
+    if $in_range; then
+      if [[ -f "$PROMPTS_DIR/$v/capture.md" ]]; then
+        echo "$v — already captured, skipping"
+      else
+        echo -n "$v — capturing... "
+        local cli
+        cli=$(cli_path "$v")
+        mkdir -p "$PROMPTS_DIR/$v"
+        if [[ -f "$cli" ]] && CAPTURE_RAW_DIR="$PROMPTS_DIR/$v" node "$JS_DIR/api-capture.mjs" "$cli" -- --model "$model" > "$PROMPTS_DIR/$v/capture.md" 2>/dev/null; then
+          echo "ok"
+        else
+          echo "failed"
+          rm -f "$PROMPTS_DIR/$v/capture.md"
+        fi
+      fi
+      [[ "$v" == "$to" ]] && break
+    fi
+  done
+}
+
+# ─────────────────────────────────────
+# Compare
+# ─────────────────────────────────────
+
+cmd_diff() {
+  [[ $# -ge 2 ]] || die "usage: prompts diff <a> <b>"
+  local a b
+  a=$(normalize_version "$1")
+  b=$(normalize_version "$2")
+  diff --color=auto "$(diff_file "$a")" "$(diff_file "$b")" || true
+}
+
+cmd_udiff() {
+  [[ $# -ge 2 ]] || die "usage: prompts udiff <a> <b>"
+  local a b
+  a=$(normalize_version "$1")
+  b=$(normalize_version "$2")
+  diff -u --color=auto "$(diff_file "$a")" "$(diff_file "$b")" || true
+}
+
+cmd_diff_all() {
+  local files=()
+  for d in $(ls -d "$PROMPTS_DIR"/v* 2>/dev/null | sort -V); do
+    [[ -f "$d/capture.md" ]] && files+=("$d/capture.md")
+  done
+
+  if [[ ${#files[@]} -lt 2 ]]; then
+    die "need at least 2 captured versions to diff"
+  fi
+
+  for ((i=0; i < ${#files[@]}-1; i++)); do
+    local a="${files[$i]}"
+    local b="${files[$((i+1))]}"
+    local va vb
+    va=$(basename "$(dirname "$a")")
+    vb=$(basename "$(dirname "$b")")
+    local changes
+    changes=$(diff "$a" "$b" | grep -c '^[<>]' || true)
+    if [[ $changes -gt 0 ]]; then
+      echo "  CHANGED  $va → $vb  ($changes lines differ)"
+    else
+      echo "  same     $va → $vb"
+    fi
+  done
+}
+
+# ─────────────────────────────────────
+# Inspect
+# ─────────────────────────────────────
+
+cmd_inspect() {
+  local v
+  v=$(normalize_version "${1:-latest}")
+  local payload="$PROMPTS_DIR/$v/captured-payload.json"
+  [[ -f "$payload" ]] || die "no captured payload for $v (run: prompts capture $v)"
+
+  jq '{
+    model,
+    stream,
+    max_tokens,
+    system_blocks: (.system | length),
+    tools: (.tools | length),
+    tool_names: [.tools | sort_by(.name) | .[].name]
+  }' "$payload"
+}
+
+cmd_tools() {
+  local v
+  v=$(normalize_version "${1:-latest}")
+  local payload="$PROMPTS_DIR/$v/captured-payload.json"
+  [[ -f "$payload" ]] || die "no captured payload for $v (run: prompts capture $v)"
+
+  jq -r '.tools | sort_by(.name) | .[].name' "$payload"
+}
+
+# ─────────────────────────────────────
+# Manage
+# ─────────────────────────────────────
+
+cmd_ls() {
+  if [[ ! -d "$PROMPTS_DIR" ]]; then
+    echo "No captures yet."
+    return
+  fi
+  for d in $(ls -d "$PROMPTS_DIR"/v* 2>/dev/null | sort -V); do
+    local v
+    v=$(basename "$d")
+    local files
+    files=$(ls "$d"/*.md 2>/dev/null | xargs -I{} basename {} | tr '\n' ' ')
+    if [[ -n "$files" ]]; then
+      echo "$v: $files"
+    fi
+  done
+}
+
+cmd_clean() {
+  if [[ $# -ge 1 ]]; then
+    local v
+    v=$(normalize_version "$1")
+    if [[ "$v" == "all" ]]; then
+      rm -rf "${PROMPTS_DIR:?}"
+      echo "Cleaned all captures"
+    else
+      rm -rf "${PROMPTS_DIR:?}/$v"
+      echo "Cleaned $v"
+    fi
+  else
+    local v
+    v=$(normalize_version "latest")
+    rm -rf "${PROMPTS_DIR:?}/$v"
+    echo "Cleaned $v"
+  fi
+}
+
+# ─────────────────────────────────────
+# Help
+# ─────────────────────────────────────
+
+cmd_help() {
+  cat <<'EOF'
+Usage: prompts <command> [args...]
+
+Info:
+  versions                           List cached versions
+  latest                             Show latest cached version
+  count                              Count cached versions
+
+Capture (from npm cache only):
+  capture [flags] <version> [-- claude-flags...]
+                                     Capture system prompt via API gateway
+
+    Flags:
+      -v, --verbose                  Show gateway diagnostics on stderr
+      -m, --model <model>            Model to request (default: opus)
+      --real-auth                    Use real API key / session auth
+
+    Claude flags (after --) are passed through to Claude Code.
+    Useful flags to explore:
+      --disable-slash-commands       Remove skills from context
+      --disallowedTools <tools...>   Remove tools from model context
+      --tools <tools>                Restrict available tools
+      --append-system-prompt <text>  Append to system prompt
+      --system-prompt <text>         Replace entire system prompt
+
+Batch:
+  capture-all [model]                Capture all cached versions
+  capture-range <from> <to> [model]  Capture version range
+
+Compare:
+  diff <a> <b>                       Diff two captured versions
+  udiff <a> <b>                      Unified diff
+  diff-all                           Show which consecutive versions changed
+
+Inspect:
+  inspect [version]                  Metadata from captured payload
+  tools [version]                    List tools from captured payload
+
+Manage:
+  ls                                 List captured prompts
+  clean [version|all]                Remove captures (default: latest)
+
+Environment:
+  CLAUDE_NPM_CACHE                   Override npm cache path (default: ../npm)
+
+Model defaults to "opus". Version accepts "2.1.63", "v2.1.63", or "latest".
+EOF
+}
+
+# ─────────────────────────────────────
+# Dispatch
+# ─────────────────────────────────────
+
+case "${1:-}" in
+  versions)      shift; cmd_versions "$@" ;;
+  latest)        shift; cmd_latest "$@" ;;
+  count)         shift; cmd_count "$@" ;;
+  capture)       shift; cmd_capture "$@" ;;
+  capture-all)   shift; cmd_capture_all "$@" ;;
+  capture-range) shift; cmd_capture_range "$@" ;;
+  diff)          shift; cmd_diff "$@" ;;
+  udiff)         shift; cmd_udiff "$@" ;;
+  diff-all)      shift; cmd_diff_all "$@" ;;
+  inspect)       shift; cmd_inspect "$@" ;;
+  tools)         shift; cmd_tools "$@" ;;
+  ls)            shift; cmd_ls "$@" ;;
+  clean)         shift; cmd_clean "$@" ;;
+  help|--help|-h) cmd_help ;;
+  "")            cmd_help ;;
+  *)             die "unknown command: $1" ;;
+esac

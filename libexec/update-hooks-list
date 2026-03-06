@@ -1,0 +1,98 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_ROOT="${NAVEL_HOME:-$(cd "$(dirname "$0")/.." && pwd)}"
+
+cd "${REPO_ROOT}/npm"
+mkdir -p "${REPO_ROOT}/reports"
+
+# Phase 1: Scan versions, build hooks history
+cache_dir="${REPO_ROOT}/npm/.cache/hooks"
+mkdir -p "$cache_dir"
+
+prev_hooks=""
+history="{}"
+latest_hooks=""
+
+while IFS= read -r version; do
+  dir="v${version}"
+  cli="versions/$dir/node_modules/@anthropic-ai/claude-code/cli.js"
+  [[ -f "$cli" ]] || continue
+
+  cache_file="${cache_dir}/${version}.txt"
+
+  if [[ -f "$cache_file" ]]; then
+    hooks=$(cat "$cache_file")
+  else
+    hooks=$(rg -o '[A-Za-z]+:\{summary:"[^"]*"' "$cli" 2>/dev/null \
+      | sed 's/:{summary:.*//' \
+      | sort \
+      | tr '\n' ' ' || true)
+    echo "$hooks" > "$cache_file"
+  fi
+
+  if [[ -n "$hooks" ]]; then
+    added=$(comm -23 \
+      <(echo "$hooks" | tr ' ' '\n' | grep -v '^$' | sort) \
+      <(echo "$prev_hooks" | tr ' ' '\n' | grep -v '^$' | sort))
+    if [[ -n "$added" ]]; then
+      added_json=$(echo "$added" | jq -R . | jq -s .)
+      history=$(echo "$history" | jq \
+        --arg v "$version" --argjson a "$added_json" \
+        '. + {($v): {"added": $a}}')
+    fi
+    prev_hooks="$hooks"
+    latest_hooks="$hooks"
+  fi
+done < <(jq -r '.[] | select(split(".")[0] | tonumber >= 2)' versions.json | sort -V)
+
+if [[ -n "$latest_hooks" ]]; then
+  hooks_json=$(echo "$latest_hooks" | tr ' ' '\n' | grep -v '^$' | sort | jq -R . | jq -s .)
+else
+  hooks_json='[]'
+fi
+
+# Phase 2: Scan docs for hook documentation
+docs_dir="${REPO_ROOT}/docs"
+today=$(date +%Y-%m-%d)
+
+if [[ -d "$docs_dir" ]] && ls "$docs_dir"/*.md &>/dev/null; then
+  # Concatenate all docs once with filename markers
+  all_docs=$(mktemp)
+  for md in "$docs_dir"/*.md; do
+    fname=$(basename "$md")
+    sed "s|^|${fname}:|" "$md"
+  done > "$all_docs"
+
+  # Per-hook grep against single file — JSONL → merge
+  hooks_docs=$(
+    while IFS= read -r hook; do
+      mentions=$(grep -c "$hook" "$all_docs" 2>/dev/null || true)
+      mentions=${mentions:-0}
+      if [[ "$mentions" -gt 0 ]]; then
+        files_json=$(grep "$hook" "$all_docs" 2>/dev/null \
+          | cut -d: -f1 | sort -u | jq -R . | jq -s .)
+        jq -n --arg h "$hook" --argjson f "$files_json" --argjson m "$mentions" \
+          '{($h): {documented: true, doc_files: $f, mentions: $m}}'
+      else
+        jq -n --arg h "$hook" \
+          '{($h): {documented: false, doc_files: [], mentions: 0}}'
+      fi
+    done < <(echo "$hooks_json" | jq -r '.[]') | jq -s 'add // {}'
+  )
+
+  rm -f "$all_docs"
+else
+  echo "Warning: no docs found at $docs_dir — skipping docs scan"
+  hooks_docs="{}"
+fi
+
+# Write hooks.json
+jq -n \
+  --argjson hooks "$hooks_json" \
+  --argjson history "$history" \
+  --argjson docs "$hooks_docs" \
+  --arg date "$today" \
+  '{hooks: $hooks, hooks_history: $history, hooks_docs: $docs, docs_checked_at: $date}' > "${REPO_ROOT}/reports/hooks.json"
+
+echo "Updated reports/hooks.json ($(echo "$hooks_json" | jq length) hooks, docs checked $today)"

@@ -1,0 +1,151 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_ROOT="${NAVEL_HOME:-$(cd "$(dirname "$0")/.." && pwd)}"
+NPM_DIR="$REPO_ROOT/npm"
+REGISTRY="https://registry.npmjs.org"
+PACKAGE="@anthropic-ai/claude-code"
+TARBALL_DIR="$NPM_DIR/tarballs"
+PARALLEL_MAX="${NAVEL_PARALLEL_MAX:-16}"
+PARALLEL_THRESHOLD="${NAVEL_PARALLEL_THRESHOLD:-10}"
+
+mkdir -p "$NPM_DIR"
+
+# Fetch all versions from npm registry
+echo "Fetching version list..."
+curl -sf "$REGISTRY/$PACKAGE" \
+  | jq '[.versions | keys[] | select(test("^[0-9]"))]' \
+  > "$NPM_DIR/versions.json"
+
+total=$(jq length "$NPM_DIR/versions.json")
+echo "Found $total versions"
+
+# Which versions still need downloading?
+# Check for package.json (not cli.js) — older versions lack cli.js
+skipped=0
+need_fetch=()
+
+while IFS= read -r version; do
+  pkg_dir="$NPM_DIR/versions/v${version}/node_modules/$PACKAGE"
+  if [[ -f "$pkg_dir/package.json" ]]; then
+    skipped=$((skipped + 1))
+    continue
+  fi
+  need_fetch+=("$version")
+done < <(jq -r '.[]' "$NPM_DIR/versions.json")
+
+to_fetch=${#need_fetch[@]}
+echo "Cached: $skipped  Needed: $to_fetch"
+
+if [[ $to_fetch -eq 0 ]]; then
+  echo "All versions cached."
+  exit 0
+fi
+
+# ── Sequential: curl|tar per version (small batches) ─────────────────────
+
+fetch_sequential() {
+  local fetched=0 failed=0
+  for version in "${need_fetch[@]}"; do
+    local pkg_dir="$NPM_DIR/versions/v${version}/node_modules/$PACKAGE"
+    echo -n "v${version}... "
+    mkdir -p "$pkg_dir"
+    if curl -sfL "$REGISTRY/$PACKAGE/-/claude-code-${version}.tgz" \
+         | tar xz -C "$pkg_dir" --strip-components=1; then
+      echo "ok"
+      fetched=$((fetched + 1))
+    else
+      echo "failed"
+      rm -rf "$NPM_DIR/versions/v${version}"
+      failed=$((failed + 1))
+    fi
+  done
+  echo "Done: $fetched fetched, $skipped cached, $failed failed ($total total)"
+}
+
+# ── Parallel: curl glob + FIFO-driven streaming extraction ───────────────
+#
+# Architecture:
+#   1. curl --parallel with URL globbing {v1,v2,...} downloads all tarballs
+#   2. --write-out streams each completed path to a FIFO via %output{>>fifo}
+#   3. Background extractor reads the FIFO, unpacks each tarball on arrival
+#   4. exec 3>"$fifo" holds the write-end open so the reader survives
+#      curl's per-transfer open/write/close cycle on the FIFO
+#   5. exec 3>&- after curl exits signals EOF to the extractor
+#
+# Result: extraction overlaps with downloads — no waiting for the full batch.
+
+fetch_parallel() {
+  mkdir -p "$TARBALL_DIR"
+
+  local fifo
+  fifo=$(mktemp -u)
+  mkfifo "$fifo"
+  # Expand paths now — local vars won't be in scope when the trap fires
+  trap "rm -f '${fifo}'; rm -rf '${TARBALL_DIR}'" EXIT
+
+  # Extractor: reads completed tarball paths from FIFO, unpacks on arrival
+  {
+    while IFS= read -r tarball; do
+      [[ -f "$tarball" ]] || continue
+      # Path: .../tarballs/<version>/pkg.tgz
+      ver=$(basename "$(dirname "$tarball")")
+      pkg_dir="$NPM_DIR/versions/v${ver}/node_modules/$PACKAGE"
+      mkdir -p "$pkg_dir"
+      if tar xz -C "$pkg_dir" --strip-components=1 -f "$tarball" 2>/dev/null; then
+        rm -rf "$(dirname "$tarball")"
+        echo "  v${ver} ok"
+      else
+        rm -rf "$NPM_DIR/versions/v${ver}" "$(dirname "$tarball")"
+        echo "  v${ver} FAILED" >&2
+      fi
+    done
+  } < "$fifo" &
+  local extractor_pid=$!
+
+  # Hold FIFO write-end open — prevents reader EOF between per-transfer writes
+  exec 3>"$fifo"
+
+  # Build curl glob: {0.2.33,0.2.34,...}
+  local versions_glob
+  versions_glob=$(IFS=,; echo "${need_fetch[*]}")
+
+  echo "Downloading $to_fetch versions (--parallel max $PARALLEL_MAX)..."
+
+  # One curl invocation:
+  #   - glob expands {v1,v2,...} into N URLs
+  #   - --parallel fetches up to PARALLEL_MAX concurrently over HTTP/2
+  #   - -o with #1 saves each tarball into a version-named directory
+  #   - --create-dirs makes those directories on the fly
+  #   - -w %output{>>fifo} streams each completed path to the extractor
+  #   - --remove-on-error cleans up partial files on HTTP errors
+  curl --parallel --parallel-max "$PARALLEL_MAX" \
+       --create-dirs \
+       --retry 3 --retry-delay 1 \
+       -sfL \
+       --remove-on-error \
+       -o "$TARBALL_DIR/#1/pkg.tgz" \
+       -w '%output{>>'"$fifo"'}%{filename_effective}\n' \
+       "$REGISTRY/$PACKAGE/-/claude-code-{$versions_glob}.tgz" || true
+
+  # Signal extractor: no more downloads coming
+  exec 3>&-
+  wait "$extractor_pid"
+
+  # Count versions with the package extracted (exact path, no nested matches)
+  local after=0
+  for f in "$NPM_DIR"/versions/v*/node_modules/"$PACKAGE"/package.json; do
+    [[ -f "$f" ]] && after=$((after + 1))
+  done
+  local fetched=$((after - skipped))
+  local failed=$((to_fetch - fetched))
+  echo "Done: $fetched fetched, $skipped cached, $failed failed ($total total)"
+}
+
+# ── Pick strategy based on batch size ────────────────────────────────────
+
+if [[ $to_fetch -le $PARALLEL_THRESHOLD ]]; then
+  fetch_sequential
+else
+  fetch_parallel
+fi

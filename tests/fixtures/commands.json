@@ -1,0 +1,22 @@
+{
+  "commands": ["clear", "color", "commit", "compact", "config", "help", "review", "voice"],
+  "descriptions": {
+    "review": "Review code changes",
+    "commit": "Create a git commit"
+  },
+  "commands_history": {
+    "2.0.0": { "added": ["clear", "color", "commit", "compact", "config", "help", "review"] },
+    "2.0.5": { "added": ["voice"] }
+  },
+  "commands_docs": {
+    "clear": { "documented": true, "doc_files": ["reference.md"], "mentions": 1 },
+    "commit": { "documented": true, "doc_files": ["getting-started.md"], "mentions": 1 },
+    "config": { "documented": true, "doc_files": ["reference.md"], "mentions": 1 },
+    "help": { "documented": true, "doc_files": ["getting-started.md"], "mentions": 1 },
+    "review": { "documented": true, "doc_files": ["reference.md"], "mentions": 1 },
+    "color": { "documented": false, "doc_files": [], "mentions": 0 },
+    "compact": { "documented": false, "doc_files": [], "mentions": 0 },
+    "voice": { "documented": false, "doc_files": [], "mentions": 0 }
+  },
+  "docs_checked_at": "2026-02-28"
+}

@@ -1,0 +1,219 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_ROOT="${NAVEL_HOME:-$(cd "$(dirname "$0")/.." && pwd)}"
+
+HOOKS_JSON="$REPO_ROOT/reports/hooks.json"
+COMMANDS_JSON="$REPO_ROOT/reports/commands.json"
+VERSIONS_JSON="$REPO_ROOT/npm/versions.json"
+ROOT_README="$REPO_ROOT/README.md"
+REPORTS_DIR="$REPO_ROOT/reports"
+REPORTS_README="$REPORTS_DIR/README.md"
+
+# ─────────────────────────────────────
+# Preflight
+# ─────────────────────────────────────
+
+for f in "$HOOKS_JSON" "$COMMANDS_JSON" "$VERSIONS_JSON" "$ROOT_README"; do
+  [[ -f "$f" ]] || { echo "error: required file not found: $f" >&2; exit 1; }
+done
+
+mkdir -p "$REPORTS_DIR"
+
+# ─────────────────────────────────────
+# Helpers
+# ─────────────────────────────────────
+
+inject_section() {
+  local section="$1"
+  local content="$2"
+  local file="$3"
+  local begin="<!-- navel:begin:${section} -->"
+  local end="<!-- navel:end:${section} -->"
+
+  if ! grep -q "$begin" "$file"; then
+    echo "warning: marker $begin not found in $file — skipping" >&2
+    return
+  fi
+
+  awk -v begin="$begin" -v end="$end" -v content="$content" '
+    $0 == begin { print; printf "%s\n", content; skip=1; next }
+    $0 == end   { skip=0 }
+    !skip       { print }
+  ' "$file" > "${file}.tmp" && mv "${file}.tmp" "$file"
+}
+
+# shields.io needs -- for literal hyphens in values
+shield_escape() {
+  echo "$1" | sed 's/-/--/g'
+}
+
+# Truncate string to max length, add ellipsis if truncated
+truncate() {
+  local str="$1"
+  local max="$2"
+  if [[ ${#str} -gt $max ]]; then
+    echo "${str:0:$((max - 3))}..."
+  else
+    echo "$str"
+  fi
+}
+
+# ─────────────────────────────────────
+# Gather counts
+# ─────────────────────────────────────
+
+version_count=$(jq 'length' "$VERSIONS_JSON")
+hook_count=$(jq '.hooks | length' "$HOOKS_JSON")
+command_count=$(jq '.commands | length' "$COMMANDS_JSON")
+
+# Use the latest docs_checked_at from either file
+hooks_date=$(jq -r '.docs_checked_at' "$HOOKS_JSON")
+commands_date=$(jq -r '.docs_checked_at' "$COMMANDS_JSON")
+# Pick the more recent date
+if [[ "$hooks_date" > "$commands_date" ]]; then
+  last_sync="$hooks_date"
+else
+  last_sync="$commands_date"
+fi
+
+last_sync_escaped=$(shield_escape "$last_sync")
+
+# ─────────────────────────────────────
+# 1. Inject badges into root README.md
+# ─────────────────────────────────────
+
+badges="![Versions](https://img.shields.io/badge/versions-${version_count}-blue?style=flat&logo=claude)"
+badges+=" ![Hooks](https://img.shields.io/badge/hooks-${hook_count}-green?style=flat&logo=claude)"
+badges+=" ![Commands](https://img.shields.io/badge/commands-${command_count}-orange?style=flat&logo=claude)"
+badges+=" ![Last sync](https://img.shields.io/badge/last_sync-${last_sync_escaped}-lightgrey?style=flat)"
+
+inject_section "badges" "$badges" "$ROOT_README"
+echo "Updated badges in README.md"
+
+# ─────────────────────────────────────
+# 2. Generate reports/README.md
+# ─────────────────────────────────────
+
+{
+  cat <<'HEADER'
+# navel reports
+
+Auto-generated tracking data for Claude Code versions, hooks, and commands.
+
+HEADER
+
+  # ── Hooks table ──
+  echo '<details>'
+  echo "<summary>Hooks (${hook_count})</summary>"
+  echo ''
+  echo '| Hook | Since | Documented |'
+  echo '|------|-------|------------|'
+
+  # Build a lookup: hook -> first version it appeared
+  hook_since=$(jq -r '
+    [.hooks_history | to_entries[] | .key as $ver | .value.added[] | {hook: ., ver: $ver}]
+    | group_by(.hook)
+    | map({key: .[0].hook, value: (map(.ver) | sort_by(split(".") | map(tonumber)) | first)})
+    | from_entries
+  ' "$HOOKS_JSON")
+
+  while IFS= read -r hook; do
+    since=$(echo "$hook_since" | jq -r --arg h "$hook" '.[$h] // "—"')
+    documented=$(jq -r --arg h "$hook" '.hooks_docs[$h].documented' "$HOOKS_JSON")
+    if [[ "$documented" == "true" ]]; then
+      doc_icon="yes"
+      echo "| ${hook} | ${since} | ${doc_icon} |"
+    else
+      doc_icon="**no**"
+      echo "| **${hook}** | ${since} | ${doc_icon} |"
+    fi
+  done < <(jq -r '.hooks[]' "$HOOKS_JSON")
+
+  echo ''
+  echo '</details>'
+  echo ''
+
+  # ── Commands table ──
+  echo '<details>'
+  echo "<summary>Commands (${command_count})</summary>"
+  echo ''
+  echo '| Command | Description | Since | Status | Documented |'
+  echo '|---------|-------------|-------|--------|------------|'
+
+  # Build a lookup: command -> first version it appeared
+  cmd_since=$(jq -r '
+    [.commands_history | to_entries[] | .key as $ver | .value.added[] | {cmd: ., ver: $ver}]
+    | group_by(.cmd)
+    | map({key: .[0].cmd, value: (map(.ver) | sort_by(split(".") | map(tonumber)) | first)})
+    | from_entries
+  ' "$COMMANDS_JSON")
+
+  while IFS= read -r cmd; do
+    desc_raw=$(jq -r --arg c "$cmd" '.descriptions[$c] // "—"' "$COMMANDS_JSON")
+    desc=$(truncate "$desc_raw" 60)
+    since=$(echo "$cmd_since" | jq -r --arg c "$cmd" '.[$c] // "—"')
+    cmd_stat=$(jq -r --arg c "$cmd" '.status[$c] // "available"' "$COMMANDS_JSON")
+    documented=$(jq -r --arg c "$cmd" '.commands_docs[$c].documented' "$COMMANDS_JSON")
+
+    # Bold undocumented commands; italicize gated/disabled status
+    if [[ "$documented" == "true" ]]; then
+      doc_col="yes"
+    else
+      doc_col="**no**"
+    fi
+
+    case "$cmd_stat" in
+      gated)    stat_col="*gated*" ;;
+      disabled) stat_col="*disabled*" ;;
+      *)        stat_col="available" ;;
+    esac
+
+    if [[ "$documented" != "true" || "$cmd_stat" != "available" ]]; then
+      echo "| **/${cmd}** | ${desc} | ${since} | ${stat_col} | ${doc_col} |"
+    else
+      echo "| /${cmd} | ${desc} | ${since} | ${stat_col} | ${doc_col} |"
+    fi
+  done < <(jq -r '.commands[]' "$COMMANDS_JSON")
+
+  echo ''
+  echo '</details>'
+  echo ''
+
+  # ── Changelog table ──
+  echo '<details>'
+  echo '<summary>Changelog</summary>'
+  echo ''
+  echo '| Version | Hooks | Commands |'
+  echo '|---------|-------|----------|'
+
+  # Merge hooks_history and commands_history keys, reverse sort by version
+  all_versions=$(jq -r -s '
+    (.[0].hooks_history | keys) + (.[1].commands_history | keys)
+    | unique
+    | sort_by(split(".") | map(tonumber))
+    | reverse
+    | .[]
+  ' "$HOOKS_JSON" "$COMMANDS_JSON")
+
+  while IFS= read -r ver; do
+    hooks_added=$(jq -r --arg v "$ver" '
+      .hooks_history[$v].added // [] | map("+" + .) | join(", ")
+    ' "$HOOKS_JSON")
+    cmds_added=$(jq -r --arg v "$ver" '
+      .commands_history[$v].added // [] | map("+" + .) | join(", ")
+    ' "$COMMANDS_JSON")
+    [[ -z "$hooks_added" ]] && hooks_added="—"
+    [[ -z "$cmds_added" ]] && cmds_added="—"
+    echo "| ${ver} | ${hooks_added} | ${cmds_added} |"
+  done <<< "$all_versions"
+
+  echo ''
+  echo '</details>'
+  echo ''
+  echo "---"
+  echo "*Last updated: ${last_sync}*"
+
+} > "$REPORTS_README"
+
+echo "Generated reports/README.md"
