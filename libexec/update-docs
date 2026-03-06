@@ -1,0 +1,218 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# update-docs
+#
+# Downloads all .md documentation files referenced in Claude Code's llms.txt
+# using parallel curl with URL globbing. Change detection uses SHA256 checksums
+# against docs/manifest.sha256 — no If-Modified-Since bookkeeping needed.
+#
+# See docs/adr/0001-docs-fetch-parallel-sha256.md for design rationale.
+
+LLMS_TXT_URL="https://code.claude.com/docs/llms.txt"
+DOCS_BASE_URL="https://code.claude.com/docs/en"
+# Changelog is served as rendered GitHub HTML, not markdown. Fetch raw instead.
+CHANGELOG_RAW_URL="https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md"
+
+# shellcheck source=_portable.sh
+. "$(dirname "$0")/_portable.sh"
+
+REPO_ROOT="${NAVEL_HOME:-$(cd "$(dirname "$0")/.." && pwd)}"
+OUTDIR="${REPO_ROOT}/docs"
+MANIFEST="${OUTDIR}/manifest.sha256"
+DIFFS_DIR="${OUTDIR}/diffs"
+
+mkdir -p "$OUTDIR" "$DIFFS_DIR"
+
+# --- Fetch llms.txt ---
+LLMS_TXT="${OUTDIR}/llms.txt"
+
+echo "Fetching llms.txt..."
+curl --silent --show-error --location --output "$LLMS_TXT" "$LLMS_TXT_URL"
+
+# --- Parse filenames from llms.txt ---
+# URLs look like: https://code.claude.com/docs/en/agent-teams.md
+names=$(grep -oE 'https://[^)]+\.md' "$LLMS_TXT" | sed 's|.*/||;s|\.md$||' | sort -u)
+total=$(echo "$names" | wc -l | tr -d ' ')
+echo "Found ${total} documentation files"
+
+# --- Parallel fetch to staging ---
+STAGING=$(mktemp -d)
+trap 'rm -rf "$STAGING"' EXIT
+
+glob_list=$(echo "$names" | paste -sd, -)
+
+echo "Fetching all docs in parallel..."
+curl --parallel --parallel-max 16 \
+     --silent --show-error \
+     --location \
+     --create-dirs \
+     --remove-on-error \
+     "${DOCS_BASE_URL}/{${glob_list}}.md" \
+     -o "${STAGING}/#1.md"
+
+fetched=$(ls "$STAGING"/*.md 2>/dev/null | wc -l | tr -d ' ')
+echo "  ${fetched}/${total} files downloaded"
+
+if [[ "$fetched" -eq 0 ]]; then
+  echo "error: no files fetched" >&2
+  exit 1
+fi
+
+# --- Post-fetch validation: detect HTML served instead of markdown ---
+html_files=()
+for f in "$STAGING"/*.md; do
+  if grep -m1 '[^ ]' "$f" | grep -q '<!DOCTYPE\|<html'; then
+    html_files+=("$(basename "$f")")
+  fi
+done
+
+if [[ ${#html_files[@]} -gt 0 ]]; then
+  echo "  warning: ${#html_files[@]} file(s) returned HTML instead of markdown:"
+  for f in "${html_files[@]}"; do
+    printf "    %-45s %s\n" "$f" "HTML (not markdown)"
+  done
+
+  # Known case: changelog.md is proxied from GitHub, fetch raw instead
+  if [[ -f "${STAGING}/changelog.md" ]] && grep -m1 '[^ ]' "${STAGING}/changelog.md" | grep -q '<!DOCTYPE\|<html'; then
+    echo "  fetching changelog.md from raw.githubusercontent.com..."
+    curl --silent --show-error --location --output "${STAGING}/changelog.md" "$CHANGELOG_RAW_URL"
+    # Remove from warning list since we fixed it
+    html_files=("${html_files[@]/changelog.md/}")
+  fi
+
+  # Any remaining HTML files are unexpected — remove them so they don't
+  # contaminate the manifest with per-request noise (CSRF tokens, etc.)
+  for f in "${html_files[@]}"; do
+    [[ -z "$f" ]] && continue
+    echo "  removing $f (HTML content cannot be tracked reliably)"
+    rm -f "${STAGING}/${f}"
+  done
+fi
+
+# --- Compare against manifest ---
+NEW_MANIFEST="${STAGING}/manifest.sha256"
+(cd "$STAGING" && _sha256 ./*.md | sed 's| \./| |' | sort -k2) > "$NEW_MANIFEST"
+
+changed=()
+added=()
+removed=()
+
+if [[ -f "$MANIFEST" ]]; then
+  # Files whose hash changed
+  while IFS= read -r filename; do
+    changed+=("$filename")
+  done < <(comm -13 <(sort -k2 "$MANIFEST") <(sort -k2 "$NEW_MANIFEST") | \
+           awk '{print $2}' | \
+           comm -12 - <(awk '{print $2}' "$MANIFEST" | sort))
+
+  # New files (in new manifest but not old)
+  while IFS= read -r filename; do
+    added+=("$filename")
+  done < <(comm -23 <(awk '{print $2}' "$NEW_MANIFEST" | sort) \
+                     <(awk '{print $2}' "$MANIFEST" | sort))
+
+  # Removed files (in old manifest but not new)
+  while IFS= read -r filename; do
+    removed+=("$filename")
+  done < <(comm -13 <(awk '{print $2}' "$NEW_MANIFEST" | sort) \
+                     <(awk '{print $2}' "$MANIFEST" | sort))
+else
+  # First run — everything is new
+  while IFS= read -r filename; do
+    added+=("$filename")
+  done < <(awk '{print $2}' "$NEW_MANIFEST")
+fi
+
+n_changed=${#changed[@]}
+n_added=${#added[@]}
+n_removed=${#removed[@]}
+
+echo ""
+if [[ $n_changed -eq 0 && $n_added -eq 0 && $n_removed -eq 0 ]]; then
+  echo "No documentation changes detected."
+else
+  echo "Changes: ${n_changed} modified, ${n_added} added, ${n_removed} removed"
+
+  # --- Generate diffs for changed files ---
+  timestamp=$(date +%Y-%m-%d-%H%M)
+  diff_dir="${DIFFS_DIR}/${timestamp}"
+  mkdir -p "$diff_dir"
+
+  for f in "${changed[@]}"; do
+    if [[ -f "${OUTDIR}/${f}" && -f "${STAGING}/${f}" ]]; then
+      diff -u "${OUTDIR}/${f}" "${STAGING}/${f}" \
+        --label "a/${f}" --label "b/${f}" \
+        > "${diff_dir}/${f}.diff" 2>/dev/null || true
+      # Remove empty diffs (SHA changed but content identical)
+      if [[ ! -s "${diff_dir}/${f}.diff" ]]; then
+        rm -f "${diff_dir}/${f}.diff"
+      fi
+      printf "  %-45s %s\n" "$f" "modified"
+    fi
+  done
+
+  # Remove diff directory if all diffs were empty
+  if [[ -d "$diff_dir" ]] && ! ls -A "$diff_dir" | grep -q .; then
+    rmdir "$diff_dir"
+  fi
+
+  for f in "${added[@]}"; do
+    printf "  %-45s %s\n" "$f" "added"
+  done
+
+  for f in "${removed[@]}"; do
+    printf "  %-45s %s\n" "$f" "removed"
+  done
+
+  if [[ $n_changed -gt 0 ]]; then
+    echo ""
+    echo "Diffs saved to docs/diffs/${timestamp}/"
+  fi
+fi
+
+# --- Copy fetched docs into place ---
+cp "$STAGING"/*.md "$OUTDIR/"
+
+# Remove docs that disappeared from llms.txt
+for f in "${removed[@]}"; do
+  rm -f "${OUTDIR}/${f}"
+done
+
+# Update manifest
+cp "$NEW_MANIFEST" "$MANIFEST"
+
+# --- Update docs-changes.json ---
+mkdir -p "${REPO_ROOT}/reports"
+DOCS_CHANGES="${REPO_ROOT}/reports/docs-changes.json"
+latest_version=$(ls "${REPO_ROOT}/npm/versions" 2>/dev/null | sort -V | tail -1 | sed 's/^v//' || true)
+now=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+
+if [[ ! -f "$DOCS_CHANGES" ]]; then
+  echo '{"last_checked":"","changes":[]}' > "$DOCS_CHANGES"
+fi
+
+if [[ $n_changed -gt 0 || $n_added -gt 0 || $n_removed -gt 0 ]]; then
+  files_changed=$(printf '%s\n' "${changed[@]}" | jq -R . | jq -s . 2>/dev/null || echo '[]')
+  files_added=$(printf '%s\n' "${added[@]}" | jq -R . | jq -s . 2>/dev/null || echo '[]')
+  files_removed=$(printf '%s\n' "${removed[@]}" | jq -R . | jq -s . 2>/dev/null || echo '[]')
+
+  new_entry=$(jq -n \
+    --arg date "$now" \
+    --arg version "$latest_version" \
+    --argjson changed "$files_changed" \
+    --argjson added "$files_added" \
+    --argjson removed "$files_removed" \
+    '{date: $date, version_at_time: $version, files_changed: $changed, files_added: $added, files_removed: $removed}')
+
+  jq --argjson entry "$new_entry" --arg now "$now" '
+    .last_checked = $now |
+    .changes = ([$entry] + .changes) |
+    .changes = .changes[:100]
+  ' "$DOCS_CHANGES" > "${DOCS_CHANGES}.tmp" && mv "${DOCS_CHANGES}.tmp" "$DOCS_CHANGES"
+
+  echo "  docs-changes.json updated (changes recorded)"
+else
+  jq --arg now "$now" '.last_checked = $now' "$DOCS_CHANGES" > "${DOCS_CHANGES}.tmp" && mv "${DOCS_CHANGES}.tmp" "$DOCS_CHANGES"
+  echo "  docs-changes.json updated (no changes)"
+fi

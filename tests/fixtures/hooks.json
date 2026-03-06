@@ -1,0 +1,13 @@
+{
+  "hooks": ["PreToolUse", "PostToolUse", "SessionStart"],
+  "hooks_history": {
+    "2.0.0": { "added": ["PreToolUse", "SessionStart"] },
+    "2.0.5": { "added": ["PostToolUse"] }
+  },
+  "hooks_docs": {
+    "PreToolUse": { "documented": true, "doc_files": ["getting-started.md", "reference.md"], "mentions": 3 },
+    "PostToolUse": { "documented": true, "doc_files": ["reference.md"], "mentions": 1 },
+    "SessionStart": { "documented": true, "doc_files": ["getting-started.md"], "mentions": 1 }
+  },
+  "docs_checked_at": "2026-02-28"
+}

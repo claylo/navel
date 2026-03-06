@@ -1,0 +1,420 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Version — "devel" in source, replaced by release process
+VERSION="devel"
+
+# ─────────────────────────────────────
+# Path resolution: dual mode
+# ─────────────────────────────────────
+
+# Resolve through symlinks (Homebrew symlinks bin/navel into prefix/bin/)
+REAL_SELF="$(readlink -f "$0" 2>/dev/null || realpath "$0")"
+REAL_DIR="$(cd "$(dirname "$REAL_SELF")" && pwd)"
+
+if [[ -d "$REAL_DIR/../libexec" && -f "$REAL_DIR/../libexec/prompts" ]]; then
+  # Repo checkout: libexec/ is a sibling of bin/
+  NAVEL_HOME="$(cd "$REAL_DIR/.." && pwd)"
+  LIBEXEC="$NAVEL_HOME/libexec"
+elif [[ -d "$REAL_DIR/../libexec/navel" ]]; then
+  # Homebrew: libexec/navel/ is the installed prefix
+  NAVEL_HOME="${NAVEL_HOME:-$HOME/.navel}"
+  LIBEXEC="$REAL_DIR/../libexec/navel"
+else
+  echo "error: cannot find libexec scripts" >&2
+  exit 1
+fi
+
+export NAVEL_HOME
+# shellcheck source=../libexec/_portable.sh
+. "$LIBEXEC/_portable.sh"
+
+NPM_CACHE="$NAVEL_HOME/npm"
+PROMPTS_DIR="$NAVEL_HOME/prompts/versions"
+DOCS_DIR="$NAVEL_HOME/docs"
+
+die() { echo "error: $*" >&2; exit 1; }
+
+# ─────────────────────────────────────
+# Inline commands
+# ─────────────────────────────────────
+
+cmd_status() {
+  local cached latest installed last_capture docs_age
+
+  cached=$(ls "$NPM_CACHE/versions" 2>/dev/null | wc -l | tr -d ' ')
+  latest=$(ls "$NPM_CACHE/versions" 2>/dev/null | sort -V | tail -1)
+  installed=$(claude --version 2>/dev/null || echo "not found")
+
+  last_capture=""
+  if [[ -d "$PROMPTS_DIR" ]]; then
+    local newest
+    newest=$(ls -d "$PROMPTS_DIR"/v* 2>/dev/null | sort -V | tail -1)
+    if [[ -n "$newest" && -f "$newest/capture.md" ]]; then
+      last_capture="$(basename "$newest") ($(_stat_mtime "$newest/capture.md"))"
+    fi
+  fi
+
+  docs_age="no docs"
+  if [[ -d "$DOCS_DIR" ]]; then
+    local newest_doc
+    newest_doc=$(ls -t "$DOCS_DIR"/*.md 2>/dev/null | head -1)
+    if [[ -n "$newest_doc" ]]; then
+      docs_age="$(_stat_mtime "$newest_doc")"
+    fi
+  fi
+
+  echo "navel status"
+  echo "────────────────────────────────"
+  echo "  NAVEL_HOME:       $NAVEL_HOME"
+  echo "  Cached versions:  $cached"
+  echo "  Latest cached:    ${latest:-none}"
+  echo "  Installed claude: $installed"
+  echo "  Last capture:     ${last_capture:-none}"
+  echo "  Docs last synced: $docs_age"
+}
+
+cmd_outdated() {
+  local latest installed
+  latest=$(ls "$NPM_CACHE/versions" 2>/dev/null | sort -V | tail -1 | sed 's/^v//')
+  installed=$(claude --version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1)
+
+  if [[ -z "$installed" ]]; then
+    echo "claude not found in PATH"
+    return 1
+  fi
+  if [[ -z "$latest" ]]; then
+    echo "no cached versions (run: navel npm sync)"
+    return 1
+  fi
+
+  echo "  Installed: $installed"
+  echo "  Latest:    $latest"
+
+  if [[ "$installed" == "$latest" ]]; then
+    echo "  Up to date."
+  else
+    echo "  Update available."
+  fi
+}
+
+cmd_update() {
+  echo "==> Checking for updates..."
+  cmd_outdated || true
+  echo ""
+  echo "==> Syncing npm cache..."
+  "$LIBEXEC/update-npm"
+  echo ""
+  echo "==> Syncing docs..."
+  "$LIBEXEC/update-docs"
+  echo ""
+  echo "==> Syncing hooks..."
+  "$LIBEXEC/update-hooks-list"
+  echo ""
+  echo "==> Syncing commands..."
+  "$LIBEXEC/update-commands-list"
+  echo ""
+  echo "==> Updating README..."
+  "$LIBEXEC/update-readme"
+  echo ""
+
+  # Capture prompt for latest version if not already captured
+  local latest
+  latest=$(ls "$NPM_CACHE/versions" 2>/dev/null | sort -V | tail -1)
+  if [[ -n "$latest" && ! -f "$PROMPTS_DIR/$latest/capture.md" ]]; then
+    echo "==> Capturing prompt for $latest..."
+    "$LIBEXEC/prompts" capture "$latest"
+  else
+    echo "==> Prompt already captured for $latest"
+  fi
+}
+
+cmd_docs_diff() {
+  local diffs_dir="$DOCS_DIR/diffs"
+  if [[ ! -d "$diffs_dir" ]]; then
+    echo "No docs diffs yet. Run: navel docs sync"
+    return
+  fi
+
+  local target
+  if [[ $# -ge 1 ]]; then
+    # Accept full timestamp (2026-03-01-1430) or date prefix (2026-03-01)
+    local matches
+    matches=$(ls -d "$diffs_dir/$1"* 2>/dev/null | sort -r)
+    if [[ -z "$matches" ]]; then
+      local available
+      available=$(ls -d "$diffs_dir"/*/ 2>/dev/null | xargs -I{} basename {} | tr '\n' ' ')
+      die "no diffs matching '$1' (available: ${available:-none})"
+    fi
+    # If date prefix matches multiple, show the latest
+    target=$(echo "$matches" | head -1)
+  else
+    # Find the most recent diff directory
+    target=$(ls -d "$diffs_dir"/*/ 2>/dev/null | sort -r | head -1)
+    if [[ -z "$target" ]]; then
+      echo "No diffs recorded yet."
+      return
+    fi
+  fi
+
+  local diff_files
+  diff_files=$(ls "$target"/*.diff 2>/dev/null)
+  if [[ -z "$diff_files" ]]; then
+    echo "No file diffs in $(basename "$target")."
+    return
+  fi
+
+  echo "=== Docs changes: $(basename "$target") ==="
+  echo ""
+  for f in $diff_files; do
+    cat "$f"
+    echo ""
+  done
+}
+
+# ─────────────────────────────────────
+# Schedule
+# ─────────────────────────────────────
+
+SCHEDULE_LABEL="dev.claylo.navel"
+
+_schedule_navel_bin() {
+  readlink -f "$0" 2>/dev/null || realpath "$0"
+}
+
+cmd_schedule_install() {
+  local navel_bin
+  navel_bin="$(_schedule_navel_bin)"
+  mkdir -p "$NAVEL_HOME/logs"
+
+  case "$_UNAME_S" in
+    Darwin)
+      local plist_dir="$HOME/Library/LaunchAgents"
+      local plist="${plist_dir}/${SCHEDULE_LABEL}.plist"
+      mkdir -p "$plist_dir"
+      cat > "$plist" <<PLIST
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>${SCHEDULE_LABEL}</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>${navel_bin}</string>
+    <string>update</string>
+  </array>
+  <key>StartInterval</key>
+  <integer>3600</integer>
+  <key>StandardOutPath</key>
+  <string>${NAVEL_HOME}/logs/schedule.log</string>
+  <key>StandardErrorPath</key>
+  <string>${NAVEL_HOME}/logs/schedule.log</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>${PATH}</string>
+    <key>NAVEL_HOME</key>
+    <string>${NAVEL_HOME}</string>
+  </dict>
+</dict>
+</plist>
+PLIST
+      launchctl unload "$plist" 2>/dev/null || true
+      launchctl load "$plist"
+      echo "Installed: $plist"
+      echo "Schedule: every hour"
+      echo "Logs: $NAVEL_HOME/logs/schedule.log"
+      ;;
+    Linux)
+      local unit_dir="$HOME/.config/systemd/user"
+      mkdir -p "$unit_dir"
+      cat > "${unit_dir}/navel.service" <<UNIT
+[Unit]
+Description=navel update
+
+[Service]
+Type=oneshot
+ExecStart=${navel_bin} update
+Environment=NAVEL_HOME=${NAVEL_HOME}
+Environment=PATH=${PATH}
+UNIT
+      cat > "${unit_dir}/navel.timer" <<UNIT
+[Unit]
+Description=navel hourly sync
+
+[Timer]
+OnCalendar=hourly
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+UNIT
+      systemctl --user daemon-reload
+      systemctl --user enable --now navel.timer
+      echo "Installed: ${unit_dir}/navel.{service,timer}"
+      echo "Schedule: every hour (Persistent=true)"
+      echo "Logs: journalctl --user -u navel"
+      ;;
+    *)
+      die "unsupported platform: $_UNAME_S (expected Darwin or Linux)"
+      ;;
+  esac
+}
+
+cmd_schedule_uninstall() {
+  case "$_UNAME_S" in
+    Darwin)
+      local plist="$HOME/Library/LaunchAgents/${SCHEDULE_LABEL}.plist"
+      if [[ -f "$plist" ]]; then
+        launchctl unload "$plist" 2>/dev/null || true
+        rm -f "$plist"
+        echo "Uninstalled: $plist"
+      else
+        echo "Not installed."
+      fi
+      ;;
+    Linux)
+      local unit_dir="$HOME/.config/systemd/user"
+      if [[ -f "${unit_dir}/navel.timer" ]]; then
+        systemctl --user disable --now navel.timer 2>/dev/null || true
+        rm -f "${unit_dir}/navel.service" "${unit_dir}/navel.timer"
+        systemctl --user daemon-reload
+        echo "Uninstalled: ${unit_dir}/navel.{service,timer}"
+      else
+        echo "Not installed."
+      fi
+      ;;
+    *)
+      die "unsupported platform: $_UNAME_S"
+      ;;
+  esac
+}
+
+cmd_schedule_status() {
+  case "$_UNAME_S" in
+    Darwin)
+      local plist="$HOME/Library/LaunchAgents/${SCHEDULE_LABEL}.plist"
+      if [[ -f "$plist" ]]; then
+        echo "Plist: $plist"
+        if launchctl list "$SCHEDULE_LABEL" &>/dev/null; then
+          echo "Status: loaded"
+          launchctl list "$SCHEDULE_LABEL" 2>/dev/null || true
+        else
+          echo "Status: not loaded (run: navel schedule install)"
+        fi
+        local log="$NAVEL_HOME/logs/schedule.log"
+        if [[ -f "$log" ]]; then
+          echo ""
+          echo "Last 5 log lines:"
+          tail -5 "$log"
+        fi
+      else
+        echo "Not installed. Run: navel schedule install"
+      fi
+      ;;
+    Linux)
+      local timer="$HOME/.config/systemd/user/navel.timer"
+      if [[ -f "$timer" ]]; then
+        systemctl --user status navel.timer 2>/dev/null || true
+      else
+        echo "Not installed. Run: navel schedule install"
+      fi
+      ;;
+    *)
+      die "unsupported platform: $_UNAME_S"
+      ;;
+  esac
+}
+
+# ─────────────────────────────────────
+# Help
+# ─────────────────────────────────────
+
+cmd_help() {
+  cat <<'EOF'
+Usage: navel <command> [args...]
+
+Prompts:
+  prompts <subcommand>         System prompt extraction (capture, diff, inspect, ...)
+                               Run 'navel prompts help' for full subcommand list
+
+Sync:
+  npm sync                     Download new Claude Code versions from registry
+  hooks sync                   Scan cached versions for hook events
+  commands sync                Scan cached versions for bundled slash commands
+  docs sync                    Fetch Claude Code documentation
+
+Docs:
+  docs diff [date]             Show docs changes from latest (or specific) sync
+
+Reports:
+  readme sync                  Regenerate README badges and reports
+
+Dashboard:
+  status                       Show cache state and versions
+  outdated                     Compare installed vs latest cached version
+  update                       Sync everything + capture new prompt if needed
+
+Schedule:
+  schedule install             Install hourly sync (launchd/systemd)
+  schedule uninstall           Remove scheduled sync
+  schedule status              Check scheduler status and recent logs
+
+Options:
+  --version, -V                Show version
+  --help, -h                   Show this help
+
+Environment:
+  NAVEL_HOME                   Data directory (default: ~/.navel or repo root)
+EOF
+}
+
+# ─────────────────────────────────────
+# Dispatch
+# ─────────────────────────────────────
+
+case "${1:-}" in
+  prompts)   shift; exec "$LIBEXEC/prompts" "$@" ;;
+  npm)
+    case "${2:-}" in
+      sync) "$LIBEXEC/update-npm" ;;
+      *)    die "usage: navel npm sync" ;;
+    esac ;;
+  hooks)
+    case "${2:-}" in
+      sync) "$LIBEXEC/update-hooks-list" ;;
+      *)    die "usage: navel hooks sync" ;;
+    esac ;;
+  commands)
+    case "${2:-}" in
+      sync) "$LIBEXEC/update-commands-list" ;;
+      *)    die "usage: navel commands sync" ;;
+    esac ;;
+  docs)
+    case "${2:-}" in
+      sync) "$LIBEXEC/update-docs" ;;
+      diff) shift 2; cmd_docs_diff "$@" ;;
+      *)    die "usage: navel docs {sync|diff}" ;;
+    esac ;;
+  readme)
+    case "${2:-}" in
+      sync) "$LIBEXEC/update-readme" ;;
+      *)    die "usage: navel readme sync" ;;
+    esac ;;
+  status)    cmd_status ;;
+  outdated)  cmd_outdated ;;
+  update)    cmd_update ;;
+  schedule)
+    case "${2:-}" in
+      install)   cmd_schedule_install ;;
+      uninstall) cmd_schedule_uninstall ;;
+      status)    cmd_schedule_status ;;
+      *)         die "usage: navel schedule {install|uninstall|status}" ;;
+    esac ;;
+  help|--help|-h) cmd_help ;;
+  --version|-V)  echo "navel ${VERSION}"; exit 0 ;;
+  "")        cmd_help ;;
+  *)         die "unknown command: $1 (try: navel help)" ;;
+esac

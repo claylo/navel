@@ -1,0 +1,268 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_ROOT="${NAVEL_HOME:-$(cd "$(dirname "$0")/.." && pwd)}"
+
+cd "${REPO_ROOT}/npm"
+mkdir -p "${REPO_ROOT}/reports"
+
+# Phase 1: Scan versions for bundled slash commands
+#
+# Commands are registered in cli.js with several patterns (minifier reorders
+# object properties, so type can appear before or after name):
+#
+#   type:"local",name:"..."       — type before name
+#   type:"local-jsx",name:"..."   — type before name
+#   type:"prompt",name:"..."      — type before name
+#   name:"...",... type:"local"   — name before type (same statement)
+#   {name:"...",...isEnabled       — name-first with isEnabled marker
+#   name:"...",progressMessage:    — skill-like builtins (statusline)
+#   name:"...",description:"..."...async  — skill-registered commands
+#
+# We extract from all patterns, dedup, and filter out:
+#   - mcp__ prefix (internal MCP routing, not a user command)
+#   - private:!0 (internal commands like claude-local)
+
+cache_dir="${REPO_ROOT}/npm/.cache/commands"
+mkdir -p "$cache_dir"
+
+prev_cmds=""
+history="{}"
+latest_cmds=""
+
+while IFS= read -r version; do
+  dir="v${version}"
+  cli="versions/$dir/node_modules/@anthropic-ai/claude-code/cli.js"
+  [[ -f "$cli" ]] || continue
+
+  cache_file="${cache_dir}/${version}.txt"
+
+  if [[ -f "$cache_file" ]]; then
+    cmds=$(cat "$cache_file")
+  else
+    # Extract commands from all registration patterns
+    cmds=$(
+      {
+        # Pattern 1: type before name
+        rg -o 'type:"(local|local-jsx|prompt)",name:"[a-z][-a-z_]*"' "$cli" 2>/dev/null \
+          | sed 's/.*name:"//;s/"//'
+
+        # Pattern 2: name before type (within same ; delimited statement)
+        rg -o 'name:"[a-z][-a-z_]*"[^;]*type:"(local|local-jsx|prompt)"' "$cli" 2>/dev/null \
+          | sed 's/name:"//;s/".*//'
+
+        # Pattern 3: name-first with isEnabled (command marker)
+        rg -o '\{name:"[a-z][-a-z_]*"[^;]*isEnabled' "$cli" 2>/dev/null \
+          | sed 's/{name:"//;s/".*//'
+
+        # Pattern 4: name + progressMessage (skill-like builtins e.g. statusline)
+        rg -o 'name:"[a-z][-a-z_]*",progressMessage:' "$cli" 2>/dev/null \
+          | sed 's/name:"//;s/".*//'
+
+        # Pattern 5: skill-registered commands (name+description+async)
+        rg -o 'name:"[a-z][-a-z_]*",description:"[^"]*"[^;]*async ' "$cli" 2>/dev/null \
+          | sed 's/name:"//;s/".*//'
+      } \
+      | grep -v '^mcp__' \
+      | sort -u \
+      | tr '\n' ' ' || true
+    )
+
+    # Bulk filter: find ALL private command names in one rg pass
+    if [[ -n "$cmds" ]]; then
+      private_cmds=$(rg -o 'name:"[a-z][-a-z_]*"[^;]*private:!0' "$cli" 2>/dev/null \
+        | sed 's/name:"//;s/".*//' | sort -u || true)
+      if [[ -n "$private_cmds" ]]; then
+        cmds=$(comm -23 \
+          <(echo "$cmds" | tr ' ' '\n' | grep -v '^$' | sort) \
+          <(echo "$private_cmds") \
+          | tr '\n' ' ')
+      fi
+    fi
+
+    echo "$cmds" > "$cache_file"
+  fi
+
+  if [[ -n "$cmds" ]]; then
+    added=$(comm -23 \
+      <(echo "$cmds" | tr ' ' '\n' | grep -v '^$' | sort) \
+      <(echo "$prev_cmds" | tr ' ' '\n' | grep -v '^$' | sort))
+    if [[ -n "$added" ]]; then
+      added_json=$(echo "$added" | jq -R . | jq -s .)
+      history=$(echo "$history" | jq \
+        --arg v "$version" --argjson a "$added_json" \
+        '. + {($v): {"added": $a}}')
+    fi
+    prev_cmds="$cmds"
+    latest_cmds="$cmds"
+  fi
+done < <(jq -r '.[] | select(split(".")[0] | tonumber >= 2)' versions.json | sort -V)
+
+if [[ -z "$latest_cmds" ]]; then
+  cmds_json='[]'
+  echo "Updated reports/commands.json (0 commands)"
+  jq -n '{commands:[], descriptions:{}, commands_history:{}, commands_docs:{}, docs_checked_at:"'$(date +%Y-%m-%d)'"}' \
+    > "${REPO_ROOT}/reports/commands.json"
+  exit 0
+fi
+
+cmds_json=$(echo "$latest_cmds" | tr ' ' '\n' | grep -v '^$' | sort | jq -R . | jq -s .)
+
+# Extract descriptions from latest version only — build as JSONL then assemble
+latest_version=$(jq -r '.[] | select(split(".")[0] | tonumber >= 2)' versions.json | sort -V | tail -1)
+latest_cli="versions/v${latest_version}/node_modules/@anthropic-ai/claude-code/cli.js"
+desc_tmp=$(mktemp)
+
+if [[ -f "$latest_cli" ]]; then
+  # Extract all name:"...",description:"..." pairs in one rg pass
+  rg -o 'name:"[a-z][-a-z_]*",description:"[^"]*"' "$latest_cli" 2>/dev/null \
+    | sed 's/name:"//;s/",description:"/\t/;s/"$//' \
+    | sort -t$'\t' -k1,1 -u \
+    > "$desc_tmp" || true
+fi
+
+# Build descriptions JSON from the temp file
+latest_descs=$(
+  while IFS=$'\t' read -r cmd desc; do
+    # Only include descriptions for commands we found
+    if echo "$cmds_json" | jq -e --arg c "$cmd" 'index($c)' &>/dev/null; then
+      jq -n --arg c "$cmd" --arg d "$desc" '{($c): $d}'
+    fi
+  done < "$desc_tmp" | jq -s 'add // {}'
+)
+rm -f "$desc_tmp"
+
+# Classify command availability from isEnabled in latest CLI
+# Three statuses:
+#   available — isEnabled returns true (or depends on runtime env/platform)
+#   gated    — isEnabled checks a GrowthBook feature flag (server-side rollout)
+#   disabled — isEnabled hardcodes false
+#
+# Detection: function names are mangled per-build, but the pattern
+# "function XX(){return e8("tengu_..." is stable — string literals survive minification.
+# We resolve one level of indirection to catch wrapper functions.
+
+# ── Status classification & feature flag mapping ──
+#
+# The minified cli.js uses short function names (gz6, SE, QX1, etc.) that change
+# every build. But feature flag calls survive minification because they contain
+# string literals:
+#
+#   function gz6(){return e8("tengu_marble_whisper",!1)}
+#   function SE(){return e8("tengu_keybinding_customization_release",!1)}
+#
+# Stable anchors (never change):
+#   e8("tengu_...",!1)  — getFeatureFlag with default
+#   r2("tengu_...")     — checkFeatureFlag boolean
+#   isEnabled:()=>!1    — hardcoded disabled
+#   isEnabled:()=>!0    — hardcoded enabled
+#
+# The technique:
+#   1. Find all functions matching: function XX(){return (e8|r2)("tengu_...
+#   2. This gives us wrapper_name → flag_name mappings
+#   3. Check each command's isEnabled for wrapper calls or direct flag calls
+#
+# We cache the flag mappings per version so future runs can quickly resolve
+# new mangled names without re-deriving the patterns.
+
+flags_cache_dir="${REPO_ROOT}/npm/.cache/flags"
+mkdir -p "$flags_cache_dir"
+
+cmd_status="{}"
+if [[ -f "$latest_cli" ]]; then
+  flags_cache="${flags_cache_dir}/${latest_version}.tsv"
+
+  if [[ -f "$flags_cache" ]]; then
+    flag_funcs=$(cut -f1 "$flags_cache" | paste -sd'|' - || true)
+  else
+    # Extract wrapper→flag mappings and cache them
+    rg -o 'function [A-Za-z0-9_]+\(\)\{return (e8|r2)\("tengu_[a-z_]+"' "$latest_cli" 2>/dev/null \
+      | while read -r line; do
+          func=$(echo "$line" | sed 's/function //;s/(.*//')
+          flag=$(echo "$line" | grep -o '"tengu_[a-z_]*"' | tr -d '"')
+          echo "${func}	${flag}"
+        done | sort -t$'\t' -k2 > "$flags_cache" || true
+    flag_funcs=$(cut -f1 "$flags_cache" | paste -sd'|' - || true)
+  fi
+
+  # Function names are mangled per-build but the pattern is stable:
+  flag_funcs=$(rg -o 'function [A-Za-z0-9_]+\(\)\{return (e8|r2)\("tengu_[a-z_]+' "$latest_cli" 2>/dev/null \
+    | sed 's/function //;s/(.*//' | sort -u | paste -sd'|' - || true)
+
+  cmd_status=$(
+    while IFS= read -r cmd; do
+      # Extract isEnabled body — try simple arrow first, then block form
+      enabled=$(rg -o "name:\"${cmd}\"[^;]*isEnabled:\(\)=>[^,}]*" "$latest_cli" 2>/dev/null \
+        | head -1 | sed 's/.*isEnabled://' || true)
+      if [[ -z "$enabled" ]]; then
+        enabled=$(rg -o "name:\"${cmd}\"[^;]*isEnabled:\(\)=>\{[^}]*\}" "$latest_cli" 2>/dev/null \
+          | head -1 | sed 's/.*isEnabled://' || true)
+      fi
+
+      if [[ "$enabled" == "()=>!1" ]]; then
+        jq -n --arg c "$cmd" '{($c): "disabled"}'
+      elif [[ -n "$flag_funcs" ]] && echo "$enabled" | grep -qE "(${flag_funcs})\(\)" 2>/dev/null; then
+        jq -n --arg c "$cmd" '{($c): "gated"}'
+      elif echo "$enabled" | grep -qE '(e8|r2)\("tengu_' 2>/dev/null; then
+        jq -n --arg c "$cmd" '{($c): "gated"}'
+      else
+        jq -n --arg c "$cmd" '{($c): "available"}'
+      fi
+    done < <(echo "$cmds_json" | jq -r '.[]') | jq -s 'add // {}'
+  )
+fi
+
+# Phase 2: Cross-reference commands against docs
+# Goal: find commands that are NOT documented
+docs_dir="${REPO_ROOT}/docs"
+today=$(date +%Y-%m-%d)
+cmds_docs="{}"
+
+if [[ -d "$docs_dir" ]] && ls "$docs_dir"/*.md &>/dev/null; then
+  # Concatenate all docs once into a temp file with filename markers
+  # Format: "filename.md:line content" — same as grep -H output
+  all_docs=$(mktemp)
+  for md in "$docs_dir"/*.md; do
+    fname=$(basename "$md")
+    sed "s|^|${fname}:|" "$md"
+  done > "$all_docs"
+
+  # Per-command grep against the single concatenated file (fast, fixed-string-like)
+  cmds_docs=$(
+    while IFS= read -r cmd; do
+      # Match /command or `command` or "command" with word-boundary-ish context
+      mentions=$(grep -cE "(/${cmd}[^-a-z]|\`${cmd}\`|\"${cmd}\")" "$all_docs" 2>/dev/null || true)
+      mentions=${mentions:-0}
+      if [[ "$mentions" -gt 0 ]]; then
+        files_json=$(grep -E "(/${cmd}[^-a-z]|\`${cmd}\`|\"${cmd}\")" "$all_docs" 2>/dev/null \
+          | cut -d: -f1 | sort -u | jq -R . | jq -s .)
+        jq -n --arg c "$cmd" --argjson f "$files_json" --argjson m "$mentions" \
+          '{($c): {documented: true, doc_files: $f, mentions: $m}}'
+      else
+        jq -n --arg c "$cmd" \
+          '{($c): {documented: false, doc_files: [], mentions: 0}}'
+      fi
+    done < <(echo "$cmds_json" | jq -r '.[]') | jq -s 'add // {}'
+  )
+
+  rm -f "$all_docs"
+else
+  echo "Warning: no docs found at $docs_dir — skipping docs scan"
+fi
+
+# Counts
+undocumented=$(echo "$cmds_docs" | jq '[to_entries[] | select(.value.documented == false)] | length')
+gated=$(echo "$cmd_status" | jq '[to_entries[] | select(.value == "gated")] | length')
+disabled=$(echo "$cmd_status" | jq '[to_entries[] | select(.value == "disabled")] | length')
+
+# Write commands.json
+jq -n \
+  --argjson commands "$cmds_json" \
+  --argjson descriptions "$latest_descs" \
+  --argjson status "$cmd_status" \
+  --argjson history "$history" \
+  --argjson docs "$cmds_docs" \
+  --arg date "$today" \
+  '{commands: $commands, descriptions: $descriptions, status: $status, commands_history: $history, commands_docs: $docs, docs_checked_at: $date}' > "${REPO_ROOT}/reports/commands.json"
+
+echo "Updated reports/commands.json ($(echo "$cmds_json" | jq length) commands, ${gated} gated, ${disabled} disabled, ${undocumented} undocumented, docs checked $today)"
