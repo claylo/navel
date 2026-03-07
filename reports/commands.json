@@ -643,11 +643,12 @@
         "interactive-mode.md",
         "overview.md",
         "quickstart.md",
+        "scheduled-tasks.md",
         "setup.md",
         "troubleshooting.md",
         "zero-data-retention.md"
       ],
-      "mentions": 34
+      "mentions": 37
     },
     "diff": {
       "documented": true,
@@ -886,9 +887,12 @@
     "loop": {
       "documented": true,
       "doc_files": [
-        "changelog.md"
+        "changelog.md",
+        "scheduled-tasks.md",
+        "settings.md",
+        "skills.md"
       ],
-      "mentions": 1
+      "mentions": 12
     },
     "mcp": {
       "documented": true,
@@ -1210,11 +1214,12 @@
         "plugin-marketplaces.md",
         "plugins-reference.md",
         "plugins.md",
+        "scheduled-tasks.md",
         "settings.md",
         "skills.md",
         "sub-agents.md"
       ],
-      "mentions": 83
+      "mentions": 84
     },
     "stats": {
       "documented": true,

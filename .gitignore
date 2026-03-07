@@ -10,3 +10,4 @@ npm/.cache/
 # only the downloaded version tarballs (npm/versions/) are ignored
 docs/
 prompts/versions/
+dist/
