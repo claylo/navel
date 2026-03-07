@@ -19,9 +19,23 @@ jobs:
           fetch-depth: 1
 
       - name: Install dependencies
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq jq ripgrep
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq jq ripgrep
+
+      - name: Restore npm cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            npm/versions
+            npm/.cache
+          key: navel-npm-${{ hashFiles('npm/versions.json') }}
+          restore-keys: navel-npm-
+
+      - name: Restore docs cache
+        uses: actions/cache@v4
+        with:
+          path: docs
+          key: navel-docs-${{ hashFiles('reports/docs-changes.json') }}
+          restore-keys: navel-docs-
 
       - name: Run sync
         uses: anthropics/claude-code-action@v1
