@@ -27,6 +27,7 @@
     "feedback",
     "files",
     "fork",
+    "heapdump",
     "help",
     "hooks",
     "ide",
@@ -40,6 +41,7 @@
     "keybindings-help",
     "login",
     "logout",
+    "loop",
     "mcp",
     "memory",
     "mobile",
@@ -96,7 +98,7 @@
     "context": "Visualize current context usage as a colored grid",
     "copy": "Copy Claude's last response or a code block to clipboard",
     "cost": "Show the total cost and duration of the current session",
-    "debug": "Debug your current Claude Code session by reading the session debug log.",
+    "debug": "Enable debug logging for this session and help diagnose issues",
     "diff": "View uncommitted changes and per-turn diffs",
     "doctor": "Diagnose and verify your Claude Code installation and settings",
     "export": "Export the current conversation to a file or clipboard",
@@ -104,6 +106,7 @@
     "feedback": "Submit feedback about Claude Code",
     "files": "List all files currently in context",
     "fork": "Create a fork of the current conversation at this point",
+    "heapdump": "Dump the JS heap to ~/Desktop",
     "help": "Show help and available commands",
     "hooks": "Manage hook configurations for tool events",
     "ide": "Manage IDE integrations and show status",
@@ -115,6 +118,7 @@
     "install-slack-app": "Install the Claude Slack app",
     "keybindings": "Open or create your keybindings configuration file",
     "logout": "Sign out from your Anthropic account",
+    "loop": "Run a prompt or slash command on a recurring interval (e.g. /loop 5m /foo, defaults to 10m)",
     "mcp": "Manage MCP servers",
     "memory": "Edit Claude memory files",
     "plan": "Enable plan mode or view the current session plan",
@@ -142,7 +146,7 @@
     "add-dir": "available",
     "agents": "available",
     "batch": "available",
-    "btw": "gated",
+    "btw": "available",
     "chrome": "available",
     "claude-api": "available",
     "claude-in-chrome": "available",
@@ -166,6 +170,7 @@
     "feedback": "available",
     "files": "disabled",
     "fork": "available",
+    "heapdump": "available",
     "help": "available",
     "hooks": "available",
     "ide": "available",
@@ -175,10 +180,11 @@
     "install": "available",
     "install-github-app": "available",
     "install-slack-app": "available",
-    "keybindings": "gated",
+    "keybindings": "available",
     "keybindings-help": "available",
     "login": "available",
     "logout": "available",
+    "loop": "available",
     "mcp": "available",
     "memory": "available",
     "mobile": "available",
@@ -211,12 +217,12 @@
     "tasks": "available",
     "terminal-setup": "available",
     "theme": "available",
-    "think-back": "gated",
-    "thinkback-play": "gated",
+    "think-back": "available",
+    "thinkback-play": "available",
     "upgrade": "available",
     "usage": "available",
     "vim": "available",
-    "voice": "gated"
+    "voice": "available"
   },
   "commands_history": {
     "2.0.0": {
@@ -426,6 +432,12 @@
         "claude-api",
         "reload-plugins"
       ]
+    },
+    "2.1.71": {
+      "added": [
+        "heapdump",
+        "loop"
+      ]
     }
   },
   "commands_docs": {
@@ -619,7 +631,7 @@
         "plugins-reference.md",
         "skills.md"
       ],
-      "mentions": 5
+      "mentions": 6
     },
     "desktop": {
       "documented": true,
@@ -635,7 +647,7 @@
         "troubleshooting.md",
         "zero-data-retention.md"
       ],
-      "mentions": 33
+      "mentions": 34
     },
     "diff": {
       "documented": true,
@@ -718,7 +730,12 @@
         "interactive-mode.md",
         "skills.md"
       ],
-      "mentions": 3
+      "mentions": 4
+    },
+    "heapdump": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "help": {
       "documented": true,
@@ -759,7 +776,7 @@
         "sub-agents.md",
         "terminal-config.md"
       ],
-      "mentions": 182
+      "mentions": 183
     },
     "ide": {
       "documented": true,
@@ -865,6 +882,13 @@
         "troubleshooting.md"
       ],
       "mentions": 9
+    },
+    "loop": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md"
+      ],
+      "mentions": 1
     },
     "mcp": {
       "documented": true,
@@ -993,7 +1017,7 @@
         "sub-agents.md",
         "troubleshooting.md"
       ],
-      "mentions": 54
+      "mentions": 55
     },
     "plan": {
       "documented": true,
@@ -1025,7 +1049,7 @@
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 83
+      "mentions": 87
     },
     "pr-comments": {
       "documented": true,
@@ -1241,7 +1265,7 @@
         "plugin-marketplaces.md",
         "settings.md"
       ],
-      "mentions": 7
+      "mentions": 8
     },
     "tasks": {
       "documented": true,

@@ -211,20 +211,21 @@
         "plugins-reference.md",
         "settings.md"
       ],
-      "mentions": 34
+      "mentions": 38
     },
     "Setup": {
       "documented": true,
       "doc_files": [
         "amazon-bedrock.md",
         "changelog.md",
+        "claude-code-on-the-web.md",
         "discover-plugins.md",
         "github-actions.md",
         "gitlab-ci-cd.md",
         "google-vertex-ai.md",
         "microsoft-foundry.md"
       ],
-      "mentions": 12
+      "mentions": 18
     },
     "Stop": {
       "documented": true,

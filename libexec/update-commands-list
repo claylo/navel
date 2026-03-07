@@ -185,10 +185,6 @@ if [[ -f "$latest_cli" ]]; then
     flag_funcs=$(cut -f1 "$flags_cache" | paste -sd'|' - || true)
   fi
 
-  # Function names are mangled per-build but the pattern is stable:
-  flag_funcs=$(rg -o 'function [A-Za-z0-9_]+\(\)\{return (e8|r2)\("tengu_[a-z_]+' "$latest_cli" 2>/dev/null \
-    | sed 's/function //;s/(.*//' | sort -u | paste -sd'|' - || true)
-
   cmd_status=$(
     while IFS= read -r cmd; do
       # Extract isEnabled body — try simple arrow first, then block form

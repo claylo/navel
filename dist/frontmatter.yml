@@ -1,0 +1,20 @@
+navel/index.md:
+  description: "Introspection toolkit for Claude Code internals. Reverse-engineers commands, hooks, and feature flags from minified JS."
+  date: 2026-03-06
+  repo: "https://github.com/claylo/navel"
+  project: navel
+
+navel/v1.0.0.md:
+  description: "347 versions, 80 commands, 21 hooks — a bash toolkit that reverse-engineers Claude Code by exploiting the one thing minifiers can't touch: string literals."
+  date: 2026-03-06
+  project: navel
+  version: "1.0.0"
+  author: Claude
+  tags:
+    - claude-code
+    - tooling
+    - reverse-engineering
+  repo: "https://github.com/claylo/navel"
+  image: "/og/navel-v1.0.0.png"
+  readingTime: "4 min read"
+  draft: true

@@ -32,14 +32,14 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 </details>
 
 <details>
-<summary>Commands (78)</summary>
+<summary>Commands (80)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
 | /add-dir | Add a new working directory | 2.0.0 | available | yes |
 | /agents | Manage agent configurations | 2.0.0 | available | yes |
 | /batch | Research and plan a large-scale change, then execute it i... | 2.1.63 | available | yes |
-| **/btw** | Ask a quick side question without interrupting the main c... | 2.1.6 | *gated* | **no** |
+| **/btw** | Ask a quick side question without interrupting the main c... | 2.1.6 | available | **no** |
 | /chrome | Claude in Chrome (Beta) settings | 2.0.71 | available | yes |
 | /claude-api | Build apps with the Claude API or Anthropic SDK.\nTRIGGER... | 2.1.69 | available | yes |
 | /claude-in-chrome | Automates your Chrome browser to interact with web pages ... | 2.1.7 | available | yes |
@@ -52,7 +52,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 | /context | Visualize current context usage as a colored grid | 2.0.0 | available | yes |
 | /copy | Copy Claude's last response or a code block to clipboard | 2.1.20 | available | yes |
 | /cost | Show the total cost and duration of the current session | 2.0.0 | available | yes |
-| /debug | Debug your current Claude Code session by reading the ses... | 2.1.30 | available | yes |
+| /debug | Enable debug logging for this session and help diagnose i... | 2.1.30 | available | yes |
 | /desktop | — | 2.1.42 | available | yes |
 | /diff | View uncommitted changes and per-turn diffs | 2.1.50 | available | yes |
 | /doctor | Diagnose and verify your Claude Code installation and set... | 2.0.0 | available | yes |
@@ -63,6 +63,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 | /feedback | Submit feedback about Claude Code | 2.0.0 | available | yes |
 | **/files** | List all files currently in context | 2.0.0 | *disabled* | yes |
 | /fork | Create a fork of the current conversation at this point | 2.1.8 | available | yes |
+| **/heapdump** | Dump the JS heap to ~/Desktop | 2.1.71 | available | **no** |
 | /help | Show help and available commands | 2.0.0 | available | yes |
 | /hooks | Manage hook configurations for tool events | 2.0.0 | available | yes |
 | /ide | Manage IDE integrations and show status | 2.0.0 | available | yes |
@@ -72,10 +73,11 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 | /install | Install Claude Code native build | 2.0.0 | available | yes |
 | /install-github-app | Set up Claude GitHub Actions for a repository | 2.0.0 | available | yes |
 | /install-slack-app | Install the Claude Slack app | 2.0.62 | available | yes |
-| **/keybindings** | Open or create your keybindings configuration file | 2.1.6 | *gated* | yes |
+| /keybindings | Open or create your keybindings configuration file | 2.1.6 | available | yes |
 | **/keybindings-help** | — | 2.1.20 | available | **no** |
 | /login | — | 2.0.0 | available | yes |
 | /logout | Sign out from your Anthropic account | 2.0.0 | available | yes |
+| /loop | Run a prompt or slash command on a recurring interval (e.... | 2.1.71 | available | yes |
 | /mcp | Manage MCP servers | 2.0.0 | available | yes |
 | /memory | Edit Claude memory files | 2.0.0 | available | yes |
 | /mobile | — | 2.0.72 | available | yes |
@@ -108,12 +110,12 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 | /tasks | — | 2.0.45 | available | yes |
 | /terminal-setup | — | 2.0.0 | available | yes |
 | /theme | Change the theme | 2.0.73 | available | yes |
-| **/think-back** | Your 2025 Claude Code Year in Review | 2.0.66 | *gated* | **no** |
-| **/thinkback-play** | Play the thinkback animation | 2.0.66 | *gated* | **no** |
+| **/think-back** | Your 2025 Claude Code Year in Review | 2.0.66 | available | **no** |
+| **/thinkback-play** | Play the thinkback animation | 2.0.66 | available | **no** |
 | /upgrade | Upgrade to Max for higher rate limits and more Opus | 2.0.0 | available | yes |
 | /usage | Show plan usage limits | 2.0.0 | available | yes |
 | /vim | Toggle between Vim and Normal editing modes | 2.0.0 | available | yes |
-| **/voice** | Toggle voice mode | 2.1.59 | *gated* | yes |
+| /voice | Toggle voice mode | 2.1.59 | available | yes |
 
 </details>
 
@@ -122,6 +124,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 
 | Version | Hooks | Commands |
 |---------|-------|----------|
+| 2.1.71 | — | +heapdump, +loop |
 | 2.1.69 | +InstructionsLoaded | +claude-api, +reload-plugins |
 | 2.1.64 | +InstructionsLoaded | +reload-plugins |
 | 2.1.63 | +Elicitation, +ElicitationResult | +batch, +claude-developer-platform, +simplify |
