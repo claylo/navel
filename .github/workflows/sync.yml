@@ -78,4 +78,4 @@ jobs:
             --body "Automated sync of Claude Code tracking data for v${latest}." \
             --base main
 
-          gh pr merge --auto --squash "$branch"
+          gh pr merge --squash --delete-branch "$branch"
