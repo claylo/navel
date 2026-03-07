@@ -1,6 +1,31 @@
 {
-  "last_checked": "2026-03-07T00:36:02Z",
+  "last_checked": "2026-03-07T02:43:04Z",
   "changes": [
+    {
+      "date": "2026-03-07T02:43:04Z",
+      "version_at_time": "2.1.71",
+      "files_changed": [
+        "overview.md",
+        "permissions.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slack.md",
+        "statusline.md",
+        "sub-agents.md",
+        "terminal-config.md",
+        "third-party-integrations.md",
+        "troubleshooting.md",
+        "vs-code.md",
+        "zero-data-retention.md"
+      ],
+      "files_added": [
+        "scheduled-tasks.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
     {
       "date": "2026-03-07T00:36:02Z",
       "version_at_time": "2.1.71",
