@@ -9,5 +9,6 @@ npm/.cache/
 # npm/versions.json and reports/*.json are committed data
 # only the downloaded version tarballs (npm/versions/) are ignored
 docs/
+logs/
 prompts/versions/
 dist/
