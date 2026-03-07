@@ -63,7 +63,7 @@ jobs:
             exit 0
           fi
 
-          latest=$(jq -r '.[-1]' npm/versions.json)
+          latest=$(jq -r '.[]' npm/versions.json | sort -V | tail -1)
           branch="auto/sync-$(date -u +%Y-%m-%d-%H%M)"
 
           git config user.name "github-actions[bot]"
