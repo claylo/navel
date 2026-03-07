@@ -189,8 +189,11 @@ latest_version=$(ls "${REPO_ROOT}/npm/versions" 2>/dev/null | sort -V | tail -1 
 now=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 
 if [[ ! -f "$DOCS_CHANGES" ]]; then
-  echo '{"last_checked":"","changes":[]}' > "$DOCS_CHANGES"
+  echo '{"changes":[]}' > "$DOCS_CHANGES"
 fi
+
+SYNC_LOG="${REPO_ROOT}/logs/docs-sync.jsonl"
+mkdir -p "${REPO_ROOT}/logs"
 
 if [[ $n_changed -gt 0 || $n_added -gt 0 || $n_removed -gt 0 ]]; then
   files_changed=$(printf '%s\n' "${changed[@]}" | jq -R . | jq -s . 2>/dev/null || echo '[]')
@@ -205,14 +208,19 @@ if [[ $n_changed -gt 0 || $n_added -gt 0 || $n_removed -gt 0 ]]; then
     --argjson removed "$files_removed" \
     '{date: $date, version_at_time: $version, files_changed: $changed, files_added: $added, files_removed: $removed}')
 
-  jq --argjson entry "$new_entry" --arg now "$now" '
-    .last_checked = $now |
+  jq --argjson entry "$new_entry" '
     .changes = ([$entry] + .changes) |
     .changes = .changes[:100]
   ' "$DOCS_CHANGES" > "${DOCS_CHANGES}.tmp" && mv "${DOCS_CHANGES}.tmp" "$DOCS_CHANGES"
 
+  jq -nc --arg ts "$now" --arg v "$latest_version" --arg status "changed" \
+    --argjson nc "$n_changed" --argjson na "$n_added" --argjson nr "$n_removed" \
+    '{ts:$ts,version:$v,status:$status,changed:$nc,added:$na,removed:$nr}' >> "$SYNC_LOG"
+
   echo "  docs-changes.json updated (changes recorded)"
 else
-  jq --arg now "$now" '.last_checked = $now' "$DOCS_CHANGES" > "${DOCS_CHANGES}.tmp" && mv "${DOCS_CHANGES}.tmp" "$DOCS_CHANGES"
-  echo "  docs-changes.json updated (no changes)"
+  jq -nc --arg ts "$now" --arg v "$latest_version" --arg status "unchanged" \
+    '{ts:$ts,version:$v,status:$status}' >> "$SYNC_LOG"
+
+  echo "  docs-changes.json unchanged (no changes)"
 fi
