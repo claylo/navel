@@ -1,0 +1,30 @@
+[
+  {
+    "tab": "Getting started",
+    "groups": [
+      {
+        "group": "Getting started",
+        "pages": ["en/overview", "en/quickstart", "en/changelog"]
+      },
+      {
+        "group": "Core concepts",
+        "pages": [
+          "en/how-claude-code-works",
+          {
+            "group": "IDE integrations",
+            "pages": ["en/vs-code", "en/jetbrains"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tab": "Reference",
+    "groups": [
+      {
+        "group": "Reference",
+        "pages": ["en/cli-reference", "en/hooks"]
+      }
+    ]
+  }
+]
