@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Fetch navigation structure from code.claude.com docs site.
+# Writes build/_html/nav.json with {navMap, navOrder}.
+#
+# Usage:
+#   navel nav sync       (via dispatcher)
+#   libexec/fetch-nav    (standalone)
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export REPO_ROOT="${REPO_ROOT:-$(cd "$SCRIPT_DIR/.." && pwd)}"
+
+command -v node >/dev/null || { echo "error: node not found in PATH" >&2; exit 1; }
+
+node "$SCRIPT_DIR/js/fetch-nav.mjs"

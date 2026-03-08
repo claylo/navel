@@ -1,0 +1,25 @@
+{
+  "name": "claude-code-docset",
+  "version": "1.0.0",
+  "description": "Builds a [Dash](https://kapeli.com/dash) docset from [Claude Code](https://code.claude.com/docs) documentation, styled to match the official site.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@mintlify/components": "1.0.1",
+    "@mintlify/mdx": "3.0.4",
+    "@radix-ui/react-popover": "1.1.15",
+    "@tailwindcss/cli": "^4.1.18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^4.1.18"
+  }
+}

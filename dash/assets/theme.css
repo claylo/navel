@@ -1,0 +1,847 @@
+/*
+ * Claude Code Docset Theme
+ * Extracted from code.claude.com/docs
+ *
+ * Fonts: linked from assets.claude.ai (not bundled)
+ * Colors: Anthropic brand color system
+ * Typography: matches #content-container rules from the live site
+ *
+ * This file loads AFTER mintlify.css (Tailwind 4) and must override it.
+ * Mintlify sets --color-primary:#166534 (green) and .prose typography.
+ * We use !important where inline styles or Tailwind layers conflict.
+ */
+
+/* ── Anthropic Sans ─────────────────────────────────────────── */
+
+@font-face {
+    font-family: "Anthropic Sans";
+    src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-Regular-Static.otf")
+        format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Anthropic Sans";
+    src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-RegularItalic-Static.otf")
+        format("opentype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Anthropic Sans";
+    src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-Medium-Static.otf")
+        format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Anthropic Sans";
+    src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-MediumItalic-Static.otf")
+        format("opentype");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Anthropic Sans";
+    src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-Semibold-Static.otf")
+        format("opentype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Anthropic Sans";
+    src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-SemiboldItalic-Static.otf")
+        format("opentype");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Anthropic Sans";
+    src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-Bold-Static.otf")
+        format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Anthropic Sans";
+    src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-BoldItalic-Static.otf")
+        format("opentype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ── Anthropic Serif Display ────────────────────────────────── */
+
+@font-face {
+    font-family: "Anthropic Serif Display";
+    src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Display-Regular-Static.otf")
+        format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Anthropic Serif Display";
+    src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Display-RegularItalic-Static.otf")
+        format("opentype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Anthropic Serif Display";
+    src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Display-Medium-Static.otf")
+        format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Anthropic Serif Display";
+    src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Display-Semibold-Static.otf")
+        format("opentype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Anthropic Serif Display";
+    src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Display-Bold-Static.otf")
+        format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ── Override Mintlify/Tailwind theme variables ──────────────── */
+/* Mintlify sets --color-primary:#166534 (green). We override to Anthropic. */
+
+:root {
+    /* Anthropic brand - override Mintlify defaults */
+    --color-primary: #0e0e0e !important;
+    --color-primary-light: #d4a27f !important;
+    --color-primary-dark: #0e0e0e !important;
+    --color-background-dark: #09090b !important;
+
+    /* Mintlify component tokens */
+    --primary: 14 14 14;
+    --primary-light: 212 162 127;
+    --primary-dark: 14 14 14;
+    --background-light: 253 253 247;
+    --background-dark: 9 9 11;
+
+    /* Override Tailwind font-family variables */
+    --font-sans:
+        "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+        sans-serif !important;
+    --font-mono:
+        "JetBrains Mono", "JetBrains Mono Fallback", "SF Mono", SFMono-Regular,
+        Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono",
+        "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono",
+        "Droid Sans Mono", Consolas, "Courier New", monospace !important;
+    --default-font-family:
+        "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+        sans-serif !important;
+    --default-mono-font-family:
+        "JetBrains Mono", "JetBrains Mono Fallback", "SF Mono", SFMono-Regular,
+        Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono",
+        "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono",
+        "Droid Sans Mono", Consolas, "Courier New", monospace !important;
+
+    /* Override prose typography variables for headings */
+    --tw-prose-headings: #0e0e0e;
+
+    /* Anthropic color tokens (HSL space-separated for Tailwind) */
+    --constant-slate-050: 48 33.3% 97.1%;
+    --constant-slate-100: 53 28.6% 94.5%;
+    --constant-slate-150: 48 25% 92.2%;
+    --constant-slate-200: 50 20.7% 88.6%;
+    --constant-slate-300: 50 11.5% 79.6%;
+    --constant-slate-400: 49 6.5% 66.9%;
+    --constant-slate-500: 53 3.2% 51.4%;
+    --constant-slate-600: 48 2.7% 35.9%;
+    --constant-slate-700: 60 2.5% 23.3%;
+    --constant-slate-800: 60 2.7% 14.5%;
+    --constant-slate-900: 30 4% 9.8%;
+    --constant-slate-950: 60 2.6% 7.6%;
+    --constant-slate-1000: 60 3.4% 5.7%;
+}
+
+/* Light mode color tokens */
+:root:not(.dark) {
+    --accent-brand: 15 63.1% 59.6%;
+    --accent-main-100: 15 55.6% 52.4%;
+    --accent-main-200: 15 63.1% 59.6%;
+    --bg-000: 0 0% 100%;
+    --bg-100: 48 33.3% 97.1%;
+    --bg-200: 53 28.6% 94.5%;
+    --bg-300: 48 25% 92.2%;
+    --border-100: 30 3.3% 11.8%;
+    --text-000: 60 2.6% 7.6%;
+    --text-100: 60 2.6% 7.6%;
+    --text-200: 60 2.5% 23.3%;
+    --text-400: 51 3.1% 43.7%;
+    --text-500: 51 3.1% 43.7%;
+    --danger-100: 0 58.6% 34.1%;
+}
+
+/* Dark mode color tokens */
+:root.dark {
+    --accent-brand: 15 63.1% 59.6%;
+    --accent-main-100: 15 63.1% 59.6%;
+    --accent-main-200: 15 63.1% 59.6%;
+    --bg-000: 60 2.1% 18.4%;
+    --bg-100: 60 2.7% 14.5%;
+    --bg-200: 30 3.3% 11.8%;
+    --bg-300: 60 2.6% 7.6%;
+    --border-100: 51 16.5% 84.5%;
+    --text-000: 48 33.3% 97.1%;
+    --text-100: 48 33.3% 97.1%;
+    --text-200: 50 9% 73.7%;
+    --text-400: 48 4.8% 59.2%;
+    --text-500: 48 4.8% 59.2%;
+    --danger-100: 0 58.6% 34.1%;
+}
+
+/* ── Body / page layout ─────────────────────────────────────── */
+
+body {
+    font-family:
+        "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+        sans-serif !important;
+    font-size: 16px;
+    line-height: 26.4px;
+    color: rgb(62, 62, 62) !important;
+    max-width: 529px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    background: rgb(var(--background-light)) !important;
+}
+
+/* ── Body text ─────────────────────────────────────────────── */
+
+.prose p,
+.prose :where(p) {
+    font-size: 16px !important;
+    line-height: 26.4px !important;
+    color: rgb(62, 62, 62) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .prose p,
+    .prose :where(p) {
+        color: hsl(var(--text-200, 50 9% 73.7%)) !important;
+    }
+}
+
+/* ── Headings: Anthropic Serif Display ──────────────────────── */
+/* Must use !important to override .prose :where(h1) etc. which
+   sets font-weight:800 and font-size:2.25em. Even though :where()
+   has zero specificity, some browsers apply @layer ordering. */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family:
+        "Anthropic Serif Display", Georgia, "Times New Roman", Times, serif !important;
+    font-weight: 400 !important;
+}
+
+h1 {
+    font-size: 30px !important;
+    line-height: 36px !important;
+    letter-spacing: -0.75px !important;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11" !important;
+    color: rgb(23, 23, 23) !important;
+}
+h2 {
+    font-size: 24px !important;
+    line-height: 32px !important;
+    letter-spacing: -0.6px !important;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11" !important;
+    color: rgb(17, 24, 39) !important;
+    margin-top: 48px !important;
+    margin-bottom: 16px !important;
+    white-space-collapse: preserve !important;
+}
+h3 {
+    font-size: 20px !important;
+}
+
+/* ── Lists ──────────────────────────────────────────────────── */
+
+ul,
+ol {
+    color: rgb(62, 62, 62) !important;
+    font-family:
+        "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+        sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    list-style-position: outside !important;
+}
+
+li::marker {
+    color: rgb(62, 62, 62) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    ul, ol {
+        color: hsl(var(--text-200, 50 9% 73.7%)) !important;
+    }
+    li::marker {
+        color: hsl(var(--text-200, 50 9% 73.7%)) !important;
+    }
+}
+
+/* ── Links ──────────────────────────────────────────────────── */
+/* The real site uses dark, non-underlined links with underline on hover */
+
+.prose a,
+.prose :where(a) {
+    color: rgb(17, 24, 39) !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+}
+
+.prose a:hover,
+.prose :where(a):hover {
+    text-decoration: underline !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .prose a,
+    .prose :where(a) {
+        color: hsl(var(--text-100, 48 33.3% 97.1%)) !important;
+    }
+}
+
+/* ── Tables ─────────────────────────────────────────────────── */
+
+.prose table,
+.prose :where(table) {
+    font-size: 14px !important;
+    width: 100% !important;
+}
+
+.prose th,
+.prose :where(th) {
+    padding: 0 8px 8px 0 !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+    color: rgb(17, 24, 39) !important;
+}
+
+.prose td,
+.prose :where(td) {
+    padding: 8px 8px 8px 0 !important;
+    color: rgb(62, 62, 62) !important;
+}
+
+.prose tr,
+.prose :where(tr) {
+    border-bottom: 1px solid rgb(238, 238, 238) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .prose th,
+    .prose :where(th),
+    .prose td,
+    .prose :where(td) {
+        color: hsl(var(--text-200, 50 9% 73.7%)) !important;
+    }
+    .prose th,
+    .prose :where(th) {
+        color: rgb(230, 230, 225) !important;
+    }
+    .prose tr,
+    .prose :where(tr) {
+        border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+    }
+}
+
+/* Card links must not show link styling at all */
+a.card,
+a.card:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+/* ── Section label (nav group name above h1) ────────────────── */
+/* The real site shows the navigation group (e.g., "Getting started")
+   as a small label above the page title. */
+
+.section-label {
+    font-family:
+        "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+        sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 20px !important;
+    letter-spacing: 0.32px !important;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11" !important;
+    font-variation-settings: normal !important;
+    text-transform: uppercase !important;
+    color: rgb(14, 14, 14) !important;
+    margin: 0 0 0.25rem 0 !important;
+    padding: 0 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .section-label {
+        color: hsl(var(--text-100, 48 33.3% 97.1%)) !important;
+    }
+
+    h1,
+    h2 {
+        color: hsl(var(--text-000, 48 33.3% 97.1%)) !important;
+    }
+}
+
+/* ── Page description (subtitle below h1) ───────────────────── */
+/* Mintlify renders `> text` after `# Title` as a styled paragraph,
+   not a blockquote. We convert it in render.mjs and style it here. */
+
+.page-description {
+    font-size: 1.125rem !important;
+    line-height: 1.75rem !important;
+    color: hsl(var(--text-400, 51 3.1% 43.7%)) !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 2rem !important;
+    font-family:
+        "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+        sans-serif !important;
+    font-weight: 400 !important;
+    border: none !important;
+    padding: 0 !important;
+    background: none !important;
+}
+
+/* ── Tab panels: remove nested prose max-width ──────────────── */
+/* Mintlify wraps tab content in .prose which constrains width */
+
+[data-component-part="tab-content"] {
+    max-width: none !important;
+}
+
+/* ── Card grids ─────────────────────────────────────────────── */
+/* .prose overrides grid children layout. Force grid and reset prose
+   interference inside cards. */
+
+.grid.grid-cols-2,
+.card-group {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+}
+
+/* Cards must escape .prose layout overrides */
+.card {
+    display: block !important;
+    max-width: none !important;
+    margin: 0.5rem 0 !important;
+}
+
+.card [data-component-part="card-content-container"] {
+    display: block !important;
+    padding: 1.25rem 1.5rem !important;
+    position: relative !important;
+}
+
+.card [data-component-part="card-icon"] {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+}
+
+.card [data-component-part="card-icon"] svg,
+.card [data-component-part="icon-svg"] {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+}
+
+.card [data-component-part="card-title"] {
+    font-family:
+        "Anthropic Serif Display", Georgia, "Times New Roman", Times, serif !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    letter-spacing: normal !important;
+    margin-top: 1rem !important;
+    margin-bottom: 0 !important;
+    color: rgb(37, 37, 37) !important;
+}
+
+.card [data-component-part="card-content"] {
+    margin-top: 0.25rem !important;
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+    max-width: none !important;
+    color: rgb(80, 80, 80) !important;
+}
+
+.card [data-component-part="card-content"] p {
+    margin: 0 !important;
+}
+
+/* ── Code blocks ────────────────────────────────────────────── */
+/* Shiki outputs dual-theme inline styles: light values in color/
+   background-color, dark values in --shiki-dark/--shiki-dark-bg.
+   We let the light values show by default and swap in dark mode. */
+
+pre.shiki,
+.prose pre.shiki,
+.prose :where(pre).shiki {
+    position: relative !important;
+    background-color: white !important;
+    border-radius: 16px !important;
+    padding: 14px 16px !important;
+    overflow-x: auto;
+    font-family:
+        "JetBrains Mono", "JetBrains Mono Fallback", "SF Mono", SFMono-Regular,
+        Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono",
+        "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono",
+        "Droid Sans Mono", Consolas, "Courier New", monospace !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    color: rgb(31, 35, 40) !important;
+    border: 1px solid rgba(10, 10, 10, 0.1) !important;
+    margin-top: 20px !important;
+    margin-bottom: 32px !important;
+}
+
+pre.shiki code,
+.prose pre.shiki code {
+    background: transparent !important;
+    padding: 0 !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    color: inherit !important;
+    font-weight: inherit !important;
+    border-width: 0 !important;
+    border-radius: 0 !important;
+}
+
+/* Remove backtick pseudo-elements from code inside pre */
+pre.shiki code::before,
+pre.shiki code::after,
+.prose pre.shiki code::before,
+.prose pre.shiki code::after {
+    content: none !important;
+}
+
+/* Dark mode: swap Shiki colors to dark theme variants */
+@media (prefers-color-scheme: dark) {
+    pre.shiki,
+    .prose pre.shiki,
+    .prose :where(pre).shiki {
+        background-color: var(--shiki-dark-bg, #0b0c0e) !important;
+        color: var(--shiki-dark, #d4d4d4) !important;
+        border-color: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    pre.shiki span[style] {
+        color: var(--shiki-dark) !important;
+    }
+}
+
+/* Inline code (not inside pre) */
+:not(pre) > code {
+    background: rgba(238, 238, 238, 0.5) !important;
+    color: rgb(17, 24, 39) !important;
+    padding: 2px 8px !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-family:
+        "JetBrains Mono", "JetBrains Mono Fallback", "SF Mono", SFMono-Regular,
+        Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono",
+        "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono",
+        "Droid Sans Mono", Consolas, "Courier New", monospace !important;
+    font-weight: 500 !important;
+}
+
+/* Remove backtick pseudo-elements from inline code */
+:not(pre) > code::before,
+:not(pre) > code::after {
+    content: none !important;
+}
+
+/* ── Dark mode via prefers-color-scheme (for Dash) ──────────── */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --accent-brand: 15 63.1% 59.6%;
+        --accent-main-100: 15 63.1% 59.6%;
+        --accent-main-200: 15 63.1% 59.6%;
+        --bg-000: 60 2.1% 18.4%;
+        --bg-100: 60 2.7% 14.5%;
+        --bg-200: 30 3.3% 11.8%;
+        --bg-300: 60 2.6% 7.6%;
+        --border-100: 51 16.5% 84.5%;
+        --text-000: 48 33.3% 97.1%;
+        --text-100: 48 33.3% 97.1%;
+        --text-200: 50 9% 73.7%;
+        --text-400: 48 4.8% 59.2%;
+        --text-500: 48 4.8% 59.2%;
+        --danger-100: 0 58.6% 34.1%;
+        --tw-prose-headings: #fff;
+    }
+
+    body {
+        background: rgb(var(--background-dark)) !important;
+        color: hsl(var(--text-000, 48 33.3% 97.1%)) !important;
+    }
+
+    :not(pre) > code {
+        background: rgba(255, 255, 255, 0.08) !important;
+        color: rgb(230, 230, 225) !important;
+    }
+}
+
+/* ── Claude Code logo mark ──────────────────────────────────── */
+
+.docset-logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid hsl(var(--bg-300, 48 25% 92.2%));
+}
+
+.docset-logo img {
+    height: 28px;
+    width: auto;
+}
+
+/* Light/dark logo switching */
+.docset-logo .logo-dark {
+    display: none;
+}
+.docset-logo .logo-light {
+    display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+    .docset-logo {
+        border-bottom-color: hsl(60 2.7% 14.5%);
+    }
+    .docset-logo .logo-light {
+        display: none;
+    }
+    .docset-logo .logo-dark {
+        display: block;
+    }
+}
+
+/* ── Floating buttons on code blocks (Copy + Ask AI) ────────── */
+
+.code-buttons {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+}
+
+.code-btn {
+    height: 26px;
+    width: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    border: none;
+    background: transparent;
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+    color: #9ca3af; /* gray-400 */
+    padding: 0;
+    line-height: 0;
+    transition: color 0.15s ease;
+}
+
+.code-btn:hover {
+    color: #6b7280; /* gray-500 */
+}
+
+@media (prefers-color-scheme: dark) {
+    .code-btn {
+        color: rgba(255, 255, 255, 0.4);
+    }
+    .code-btn:hover {
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+/* ── Generation footer ─────────────────────────────────────── */
+
+.docset-footer {
+    margin-top: 4rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgb(238, 238, 238);
+    font-family: "Anthropic Sans", system-ui, sans-serif;
+    font-size: 12px;
+    color: rgb(160, 160, 155);
+    text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    .docset-footer {
+        border-top-color: rgba(255, 255, 255, 0.1);
+        color: rgb(100, 100, 95);
+    }
+}
+
+/* ── Dash-specific anchors ──────────────────────────────────── */
+
+a.dashAnchor {
+    display: block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── Table of Contents dropdown ────────────────────────────── */
+/* Mirrors the "Copy page" dropdown from code.claude.com/docs */
+
+.toc-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.toc-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 12px;
+    border: 1px solid rgb(222, 222, 222);
+    background: rgb(253, 253, 247);
+    color: rgb(62, 62, 62);
+    font-family: "Anthropic Sans", system-ui, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background 0.1s ease;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.toc-button:hover {
+    background: rgb(248, 248, 242);
+}
+
+.toc-button svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    transition: transform 0.15s ease;
+}
+
+.toc-button[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+}
+
+.toc-panel {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 50;
+    min-width: 240px;
+    max-width: 320px;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 4px;
+    border-radius: 16px;
+    border: 1px solid rgb(222, 222, 222);
+    background: rgb(253, 253, 247);
+    box-shadow: rgba(112, 112, 112, 0.05) 0px 20px 25px -5px,
+                rgba(112, 112, 112, 0.05) 0px 8px 10px -6px;
+}
+
+.toc-panel.open {
+    display: block;
+}
+
+.toc-group-label {
+    padding: 8px 8px 2px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: hsl(var(--text-400, 20 5.9% 55%));
+    font-family: "Anthropic Sans", system-ui, sans-serif;
+}
+
+.toc-panel a {
+    display: block;
+    padding: 6px 8px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: "Anthropic Sans", system-ui, sans-serif;
+    color: hsl(var(--text-200, 20 5.9% 38.2%));
+    text-decoration: none !important;
+    transition: background 0.1s ease, color 0.1s ease;
+}
+
+.toc-panel a:hover {
+    background: hsla(0 0% 40% / 0.05);
+    color: hsl(var(--text-100, 20 5.9% 24.3%));
+}
+
+.toc-panel a.toc-current {
+    color: rgb(191, 82, 29) !important;
+    font-weight: 600 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .toc-button {
+        border-color: rgba(255, 255, 255, 0.15);
+        background: rgb(30, 30, 32);
+        color: rgb(180, 180, 175);
+    }
+    .toc-button:hover {
+        background: rgb(38, 38, 40);
+    }
+    .toc-panel {
+        border-color: rgba(255, 255, 255, 0.15);
+        background: rgb(30, 30, 32);
+        box-shadow: none;
+    }
+    .toc-panel a {
+        color: rgb(160, 160, 155);
+    }
+    .toc-panel a:hover {
+        background: rgba(255, 255, 255, 0.05);
+        color: rgb(210, 210, 205);
+    }
+    .toc-group-label {
+        color: rgb(120, 120, 115);
+    }
+}

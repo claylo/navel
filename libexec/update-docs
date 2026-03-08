@@ -182,6 +182,10 @@ done
 # Update manifest
 cp "$NEW_MANIFEST" "$MANIFEST"
 
+# --- Fetch navigation structure ---
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+"$SCRIPT_DIR/fetch-nav"
+
 # --- Update docs-changes.json ---
 mkdir -p "${REPO_ROOT}/reports"
 DOCS_CHANGES="${REPO_ROOT}/reports/docs-changes.json"

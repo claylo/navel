@@ -349,6 +349,13 @@ Sync:
 Docs:
   docs diff [date]             Show docs changes from latest (or specific) sync
 
+Navigation:
+  nav sync                     Fetch docs site navigation structure
+
+Docset:
+  dash                         Build ClaudeCode.docset for Dash
+  dash clean                   Remove all build artifacts
+
 Reports:
   readme sync                  Regenerate README badges and reports
 
@@ -398,6 +405,13 @@ case "${1:-}" in
       diff) shift 2; cmd_docs_diff "$@" ;;
       *)    die "usage: navel docs {sync|diff}" ;;
     esac ;;
+  nav)
+    case "${2:-}" in
+      sync) "$LIBEXEC/fetch-nav" ;;
+      *)    die "usage: navel nav sync" ;;
+    esac ;;
+  dash)
+    shift; exec "$LIBEXEC/dash" "$@" ;;
   readme)
     case "${2:-}" in
       sync) "$LIBEXEC/update-readme" ;;

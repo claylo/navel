@@ -1,0 +1,137 @@
+#!/usr/bin/env bash
+# build-docset — Assemble ClaudeCode.docset from rendered HTML.
+#
+# Expects REPO_ROOT env var (set by libexec/dash).
+#
+# Reads from:  build/_html/ (rendered HTML, CSS, images, index.json)
+# Writes to:   build/ClaudeCode.docset/
+
+set -euo pipefail
+
+: "${REPO_ROOT:?REPO_ROOT not set (run via 'navel dash')}"
+
+BUILD_HTML="$REPO_ROOT/build/_html"
+BUILD_DIR="$REPO_ROOT/build"
+DASH_DIR="$REPO_ROOT/dash"
+
+# Determine version from latest cached npm version
+DOCS_VERSION=$(ls "$REPO_ROOT/npm/versions" 2>/dev/null | sort -V | tail -1 | sed 's/^v//')
+: "${DOCS_VERSION:=unknown}"
+
+DOCSET="$BUILD_DIR/ClaudeCode.docset"
+CONTENTS="$DOCSET/Contents"
+RESOURCES="$CONTENTS/Resources"
+DOCUMENTS="$RESOURCES/Documents"
+DB="$RESOURCES/docSet.dsidx"
+
+echo "Building ClaudeCode.docset ..."
+
+# -- Clean previous docset --
+
+rm -rf "$DOCSET"
+mkdir -p "$DOCUMENTS"
+
+# -- Info.plist --
+
+write_plist() {
+  local dest="$1" bundle_id="$2" bundle_name="$3"
+  cat > "$dest" <<PLIST
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>${bundle_id}</string>
+    <key>CFBundleName</key>
+    <string>${bundle_name}</string>
+    <key>DocSetPlatformFamily</key>
+    <string>cc</string>
+    <key>isDashDocset</key>
+    <true/>
+    <key>dashIndexFilePath</key>
+    <string>overview.html</string>
+    <key>DashDocSetFamily</key>
+    <string>dashtoc</string>
+    <key>DashDocSetFallbackURL</key>
+    <string>https://code.claude.com/docs/en/</string>
+    <key>DashDocSetDefaultFTSEnabled</key>
+    <true/>
+</dict>
+</plist>
+PLIST
+}
+
+write_plist "$CONTENTS/Info.plist" "dev.claylo.claude-code" "Claude Code"
+echo "  Created Info.plist"
+
+# -- Icons --
+
+if [[ -f "$DASH_DIR/assets/icon.png" ]]; then
+  cp "$DASH_DIR/assets/icon.png" "$DOCSET/icon.png"
+  echo "  Copied icon.png"
+fi
+if [[ -f "$DASH_DIR/assets/icon@2x.png" ]]; then
+  cp "$DASH_DIR/assets/icon@2x.png" "$DOCSET/icon@2x.png"
+  echo "  Copied icon@2x.png"
+fi
+
+# -- Copy HTML + CSS --
+
+cp "$BUILD_HTML"/*.html "$DOCUMENTS/"
+cp "$BUILD_HTML/mintlify.css" "$DOCUMENTS/"
+cp "$BUILD_HTML/theme.css" "$DOCUMENTS/"
+cp "$BUILD_HTML/logo-light.svg" "$DOCUMENTS/"
+cp "$BUILD_HTML/logo-dark.svg" "$DOCUMENTS/"
+if [[ -d "$BUILD_HTML/images" ]]; then
+  cp -R "$BUILD_HTML/images" "$DOCUMENTS/"
+  img_count=$(ls -1 "$DOCUMENTS/images" 2>/dev/null | wc -l | tr -d ' ')
+  echo "  Copied $img_count images"
+fi
+html_count=$(ls -1 "$DOCUMENTS"/*.html 2>/dev/null | wc -l | tr -d ' ')
+echo "  Copied $html_count HTML files + CSS + logos"
+
+# -- SQLite search index --
+
+sqlite3 "$DB" << 'SQL'
+CREATE TABLE IF NOT EXISTS searchIndex(
+  id INTEGER PRIMARY KEY,
+  name TEXT,
+  type TEXT,
+  path TEXT
+);
+CREATE UNIQUE INDEX IF NOT EXISTS anchor ON searchIndex (name, type, path);
+SQL
+
+# Read index.json and insert entries
+node -e "
+const entries = JSON.parse(require('fs').readFileSync('$BUILD_HTML/index.json', 'utf-8'));
+const lines = entries.map(e =>
+  'INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES(' +
+  \"'\" + e.title.replace(/'/g, \"''\") + \"', '\" + e.type + \"', '\" + e.slug + \".html');\"
+);
+console.log(lines.join('\n'));
+" | sqlite3 "$DB"
+
+entry_count=$(sqlite3 "$DB" "SELECT COUNT(*) FROM searchIndex;")
+echo "  Indexed $entry_count entries"
+
+# -- Versioned copy (only with --with-version-number) --
+
+WITH_VERSION="${WITH_VERSION_NUMBER:-}"
+if [[ -n "$WITH_VERSION" ]]; then
+  # Build only the versioned docset — remove the unversioned one
+  VERSIONED="$BUILD_DIR/ClaudeCode-${DOCS_VERSION}.docset"
+  rm -rf "$VERSIONED"
+  mv "$DOCSET" "$VERSIONED"
+  write_plist "$VERSIONED/Contents/Info.plist" \
+    "dev.claylo.claude-code.${DOCS_VERSION}" \
+    "Claude Code ${DOCS_VERSION}"
+  DOCSET="$VERSIONED"
+fi
+
+# -- Summary --
+
+docset_size=$(du -sh "$DOCSET" | cut -f1)
+echo ""
+echo "Done: $DOCSET ($docset_size)"
+echo "  open $DOCSET    # to view in Dash"
