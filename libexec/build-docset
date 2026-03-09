@@ -87,6 +87,11 @@ if [[ -d "$BUILD_HTML/images" ]]; then
   img_count=$(ls -1 "$DOCUMENTS/images" 2>/dev/null | wc -l | tr -d ' ')
   echo "  Copied $img_count images"
 fi
+if [[ -d "$BUILD_HTML/icons" ]]; then
+  cp -R "$BUILD_HTML/icons" "$DOCUMENTS/"
+  icon_count=$(ls -1 "$DOCUMENTS/icons" 2>/dev/null | wc -l | tr -d ' ')
+  echo "  Copied $icon_count icons"
+fi
 html_count=$(ls -1 "$DOCUMENTS"/*.html 2>/dev/null | wc -l | tr -d ' ')
 echo "  Copied $html_count HTML files + CSS + logos"
 

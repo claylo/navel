@@ -4,8 +4,9 @@ set -euo pipefail
 # Build pipeline for creating a Dash docset from Claude Code docs.
 #
 # Usage:
-#   navel dash          Build the docset (render → localize → assemble)
-#   navel dash clean    Remove all build artifacts
+#   navel dash                      Build the docset (render → localize → assemble)
+#   navel dash clean                Remove all build artifacts
+#   navel dash --with-remote-fonts  Keep @font-face blocks (Anthropic fonts, local use only)
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
@@ -29,6 +30,7 @@ cmd_build() {
   while [[ $# -gt 0 ]]; do
     case "$1" in
       --with-version-number) export WITH_VERSION_NUMBER=1; shift ;;
+      --with-remote-fonts)   export WITH_REMOTE_FONTS=1; shift ;;
       *) die "unknown flag: $1" ;;
     esac
   done
@@ -65,5 +67,5 @@ case "${1:-}" in
   clean) cmd_clean ;;
   --*)   cmd_build "$@" ;;
   "")    cmd_build ;;
-  *)     die "usage: navel dash [clean] [--with-version-number]" ;;
+  *)     die "usage: navel dash [clean] [--with-version-number] [--with-remote-fonts]" ;;
 esac

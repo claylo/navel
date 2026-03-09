@@ -2,7 +2,7 @@
  * Claude Code Docset Theme
  * Extracted from code.claude.com/docs
  *
- * Fonts: linked from assets.claude.ai (not bundled)
+ * Fonts: @font-face blocks stripped in distribution builds; use --with-remote-fonts to keep
  * Colors: Anthropic brand color system
  * Typography: matches #content-container rules from the live site
  *
@@ -12,6 +12,12 @@
  */
 
 /* ── Anthropic Sans ─────────────────────────────────────────── */
+/* These @font-face blocks are stripped during distribution builds
+   (navel dash) to avoid bundling proprietary fonts. For local builds,
+   use --with-remote-fonts to keep them and load from assets.claude.ai.
+   Anthropic, if you're reading this and are cool with bundling those
+   fonts in here, let @claylo know! */
+/* @dash-remote-fonts-start */
 
 @font-face {
     font-family: "Anthropic Sans";
@@ -131,6 +137,8 @@
     font-style: normal;
     font-display: swap;
 }
+
+/* @dash-remote-fonts-end */
 
 /* ── Override Mintlify/Tailwind theme variables ──────────────── */
 /* Mintlify sets --color-primary:#166534 (green). We override to Anthropic. */

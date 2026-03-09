@@ -327,7 +327,21 @@ copyFileSync(
   join(dashDir, "node_modules", "@mintlify/components/dist/styles.css"),
   join(buildDir, "mintlify.css"),
 );
-copyFileSync(join(dashAssetsDir, "theme.css"), join(buildDir, "theme.css"));
+// Copy theme.css — strip @font-face blocks unless WITH_REMOTE_FONTS is set.
+// The @font-face declarations reference proprietary Anthropic fonts from
+// assets.claude.ai. For distribution builds (Dash User Contributions),
+// we strip them so the docset is fully offline with no licensing concerns.
+// Local builds can use --with-remote-fonts to keep them.
+{
+  let themeCss = readFileSync(join(dashAssetsDir, "theme.css"), "utf-8");
+  if (!process.env.WITH_REMOTE_FONTS) {
+    themeCss = themeCss.replace(
+      /\/\* @dash-remote-fonts-start \*\/[\s\S]*?\/\* @dash-remote-fonts-end \*\//,
+      "/* @font-face blocks stripped — use --with-remote-fonts for Anthropic fonts */",
+    );
+  }
+  writeFileSync(join(buildDir, "theme.css"), themeCss);
+}
 copyFileSync(join(assetsDir, "logo-light.svg"), join(buildDir, "logo-light.svg"));
 copyFileSync(join(assetsDir, "logo-dark.svg"), join(buildDir, "logo-dark.svg"));
 

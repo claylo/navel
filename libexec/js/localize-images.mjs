@@ -1,5 +1,10 @@
 #!/usr/bin/env node
-// Download external images and rewrite HTML src attributes to local paths.
+// Download external resources and rewrite references to local paths.
+//
+// Handles two types of remote references:
+//   1. <img src="https://...">       — images in HTML (per-page, slug-prefixed)
+//   2. url(https://...) in HTML       — CSS mask-image icons from Mintlify (shared)
+//
 // Expects REPO_ROOT env var (set by libexec/dash).
 
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from "node:fs";
@@ -14,66 +19,98 @@ if (!REPO_ROOT) {
 
 const buildDir = join(REPO_ROOT, "build", "_html");
 const imgDir = join(buildDir, "images");
-
-// Ensure images dir exists
-if (!existsSync(imgDir)) {
-  mkdirSync(imgDir, { recursive: true });
+const iconsDir = join(buildDir, "icons");
+// Ensure output dirs exist
+for (const dir of [imgDir, iconsDir]) {
+  if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
 }
 
-const files = readdirSync(buildDir).filter(f => f.endsWith(".html")).sort();
 let downloadCount = 0;
 let rewriteCount = 0;
 
-for (const file of files) {
+// ── Download helper (shared cache by local path) ──────────────────────
+
+function download(url, localPath) {
+  if (existsSync(localPath)) return true;
+  const name = basename(localPath);
+  console.log(`  Downloading: ${name}`);
+  try {
+    execSync(`curl -sL -o "${localPath}" "${url}"`, { timeout: 30000 });
+    downloadCount++;
+    return true;
+  } catch (e) {
+    console.error(`  FAILED: ${name} — ${e.message}`);
+    return false;
+  }
+}
+
+// ── Phase 1 & 2: Process HTML files ───────────────────────────────────
+
+const htmlFiles = readdirSync(buildDir).filter(f => f.endsWith(".html")).sort();
+
+for (const file of htmlFiles) {
   const filePath = join(buildDir, file);
   let html = readFileSync(filePath, "utf-8");
   let modified = false;
+  const slug = basename(file, ".html");
 
-  // Find all external image src attributes
-  const extPattern = /src="(https?:\/\/[^"]+)"/g;
+  // Phase 1: <img src="https://..."> — per-page images
+  const srcPattern = /src="(https?:\/\/[^"]+)"/g;
   let match;
-  const replacements = [];
+  const srcReplacements = [];
 
-  while ((match = extPattern.exec(html)) !== null) {
+  while ((match = srcPattern.exec(html)) !== null) {
     const fullMatch = match[0];
-    const url = match[1];
-
-    // Decode HTML entities in URL
-    const cleanUrl = url.replace(/&amp;/g, "&");
-
-    // Extract a clean filename from the URL path
-    const urlObj = new URL(cleanUrl);
-    const pathParts = urlObj.pathname.split("/");
-    const rawFilename = pathParts[pathParts.length - 1];
-
-    // Prefix with slug to avoid collisions
-    const slug = basename(file, ".html");
+    const url = match[1].replace(/&amp;/g, "&");
+    const urlObj = new URL(url);
+    const rawFilename = urlObj.pathname.split("/").pop();
     const localFilename = `${slug}--${rawFilename}`;
     const localPath = join(imgDir, localFilename);
-    const relativePath = `images/${localFilename}`;
 
-    // Download if not already cached
-    if (!existsSync(localPath)) {
-      console.log(`Downloading: ${localFilename}`);
-      try {
-        execSync(`curl -sL -o "${localPath}" "${cleanUrl}"`, { timeout: 30000 });
-        downloadCount++;
-      } catch (e) {
-        console.error(`  FAILED: ${e.message}`);
-        continue;
-      }
-    } else {
-      console.log(`Cached: ${localFilename}`);
+    if (download(url, localPath)) {
+      srcReplacements.push({ from: fullMatch, to: `src="images/${localFilename}"` });
     }
-
-    replacements.push({ from: fullMatch, to: `src="${relativePath}"` });
   }
 
-  // Apply replacements
-  for (const r of replacements) {
+  for (const r of srcReplacements) {
     html = html.replace(r.from, r.to);
     modified = true;
     rewriteCount++;
+  }
+
+  // Phase 2: url(https://...) in inline CSS — shared icons
+  // Mintlify renders icon="foo" as mask-image:url(https://cdn/.../foo.svg)
+  // Each URL appears twice per element (-webkit-mask-image + mask-image)
+  const cssUrlPattern = /url\((https?:\/\/[^)]+)\)/g;
+  const urlReplacements = new Map(); // url → local relative path
+
+  while ((match = cssUrlPattern.exec(html)) !== null) {
+    const url = match[1];
+    if (urlReplacements.has(url)) continue;
+
+    const urlObj = new URL(url);
+    const pathParts = urlObj.pathname.split("/").filter(Boolean);
+    // e.g. /v7.1.0/regular/hammer.svg → regular--hammer.svg
+    const localFilename = pathParts.length >= 2
+      ? `${pathParts[pathParts.length - 2]}--${pathParts[pathParts.length - 1]}`
+      : pathParts[pathParts.length - 1];
+    const localPath = join(iconsDir, localFilename);
+
+    if (download(url, localPath)) {
+      urlReplacements.set(url, `icons/${localFilename}`);
+    }
+  }
+
+  for (const [url, localRel] of urlReplacements) {
+    // Replace all occurrences of this URL in the file
+    const escaped = url.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const globalPattern = new RegExp(`url\\(${escaped}\\)`, "g");
+    const count = (html.match(globalPattern) || []).length;
+    html = html.replace(globalPattern, `url(${localRel})`);
+    if (count > 0) {
+      modified = true;
+      rewriteCount += count;
+    }
   }
 
   if (modified) {
@@ -82,4 +119,4 @@ for (const file of files) {
   }
 }
 
-console.log(`\nDone: ${downloadCount} downloaded, ${rewriteCount} src attributes rewritten`);
+console.log(`\nDone: ${downloadCount} downloaded, ${rewriteCount} references rewritten`);
