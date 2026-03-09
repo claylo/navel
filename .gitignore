@@ -15,3 +15,6 @@ prompts/versions/
 dist/
 
 dash/node_modules/
+
+# Local-only scripts (not part of the navel toolkit)
+bin/publish-docset
