@@ -1,0 +1,150 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# build-sync-commit-msg — Create per-scope commits for the sync workflow.
+#
+# Examines the working tree for changes in each navel scope, stages the
+# relevant files, and creates a conventional commit for each:
+#
+#   chore(npm): sync claude code data (v2.1.72)
+#   chore(commands): sync claude code data (v2.1.72) — +review, +code-review
+#   chore(hooks): sync claude code data (v2.1.72) — +PreEdit
+#   chore(docs): sync claude code data (v2.1.72) — 3 updated, 1 added
+#   chore(readme): sync claude code data (v2.1.72)
+#
+# Outputs a summary to stdout for use as the PR body.
+#
+# Prerequisites: git config user.name/email set, on a feature branch.
+# Usage: libexec/build-sync-commit-msg
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+cd "$REPO_ROOT"
+
+latest=$(jq -r '.[]' npm/versions.json | sort -V | tail -1)
+pr_body=""
+
+commit_scope() {
+  local scope="$1" detail="$2"
+  shift 2
+  local files=("$@")
+
+  # Check if any of the specified paths have changes
+  if git diff --quiet -- "${files[@]}" 2>/dev/null; then
+    return
+  fi
+
+  git add -- "${files[@]}"
+
+  local subject="chore(${scope}): sync claude code data (v${latest})"
+  if [[ -n "$detail" ]]; then
+    subject="${subject} — ${detail}"
+  fi
+
+  git commit -m "$subject" --allow-empty >/dev/null 2>&1 || true
+  echo "  committed: ${scope}${detail:+ — ${detail}}"
+  pr_body+="- **${scope}**: ${detail:-updated}"$'\n'
+}
+
+# ── npm scope ──────────────────────────────────────────────────────────
+# New cli.js versions fetched to npm/versions/
+
+npm_detail=""
+if ! git diff --quiet -- npm/versions.json 2>/dev/null; then
+  prev=$(git show HEAD:npm/versions.json 2>/dev/null | jq -r '.[]' | sort -V | tail -1 || true)
+  if [[ -n "$prev" && "$prev" != "$latest" ]]; then
+    npm_detail="${prev} → ${latest}"
+  else
+    npm_detail="version metadata updated"
+  fi
+fi
+commit_scope "npm" "$npm_detail" \
+  npm/versions.json npm/versions/
+
+# ── commands scope ─────────────────────────────────────────────────────
+
+cmd_detail=""
+if ! git diff --quiet -- reports/commands.json 2>/dev/null; then
+  added=$(jq -r --arg v "$latest" '.commands_history[$v].added // [] | .[]' reports/commands.json 2>/dev/null || true)
+  removed=$(jq -r --arg v "$latest" '.commands_history[$v].removed // [] | .[]' reports/commands.json 2>/dev/null || true)
+
+  parts=()
+  if [[ -n "$added" ]]; then
+    items=$(echo "$added" | sed 's/^/+/' | paste -sd, - | sed 's/,/, /g')
+    parts+=("$items")
+  fi
+  if [[ -n "$removed" ]]; then
+    items=$(echo "$removed" | sed 's/^/-/' | paste -sd, - | sed 's/,/, /g')
+    parts+=("$items")
+  fi
+  if [[ ${#parts[@]} -gt 0 ]]; then
+    cmd_detail=$(IFS='; '; echo "${parts[*]}")
+  else
+    cmd_detail="metadata updated"
+  fi
+fi
+commit_scope "commands" "$cmd_detail" \
+  reports/commands.json npm/.cache/commands/ npm/.cache/flags/
+
+# ── hooks scope ────────────────────────────────────────────────────────
+
+hook_detail=""
+if ! git diff --quiet -- reports/hooks.json 2>/dev/null; then
+  added=$(jq -r --arg v "$latest" '.hooks_history[$v].added // [] | .[]' reports/hooks.json 2>/dev/null || true)
+  removed=$(jq -r --arg v "$latest" '.hooks_history[$v].removed // [] | .[]' reports/hooks.json 2>/dev/null || true)
+
+  parts=()
+  if [[ -n "$added" ]]; then
+    items=$(echo "$added" | sed 's/^/+/' | paste -sd, - | sed 's/,/, /g')
+    parts+=("$items")
+  fi
+  if [[ -n "$removed" ]]; then
+    items=$(echo "$removed" | sed 's/^/-/' | paste -sd, - | sed 's/,/, /g')
+    parts+=("$items")
+  fi
+  if [[ ${#parts[@]} -gt 0 ]]; then
+    hook_detail=$(IFS='; '; echo "${parts[*]}")
+  else
+    hook_detail="metadata updated"
+  fi
+fi
+commit_scope "hooks" "$hook_detail" \
+  reports/hooks.json npm/.cache/hooks/
+
+# ── docs scope ─────────────────────────────────────────────────────────
+
+doc_detail=""
+if ! git diff --quiet -- docs/ reports/docs-changes.json reports/nav.json 2>/dev/null; then
+  doc_added=$(git diff --name-status -- docs/ | grep -c '^A' || true)
+  doc_modified=$(git diff --name-status -- docs/ | grep -c '^M' || true)
+  doc_deleted=$(git diff --name-status -- docs/ | grep -c '^D' || true)
+
+  parts=()
+  [[ "$doc_modified" -gt 0 ]] && parts+=("${doc_modified} updated")
+  [[ "$doc_added" -gt 0 ]] && parts+=("${doc_added} added")
+  [[ "$doc_deleted" -gt 0 ]] && parts+=("${doc_deleted} removed")
+
+  if [[ ${#parts[@]} -gt 0 ]]; then
+    doc_detail=$(IFS=', '; echo "${parts[*]}")
+  else
+    doc_detail="metadata updated"
+  fi
+fi
+commit_scope "docs" "$doc_detail" \
+  docs/ reports/docs-changes.json reports/nav.json
+
+# ── readme scope (catch-all for reports/README.md) ─────────────────────
+
+commit_scope "readme" "" \
+  reports/README.md
+
+# ── Output PR body ─────────────────────────────────────────────────────
+
+if [[ -n "$pr_body" ]]; then
+  echo ""
+  echo "Automated sync of Claude Code tracking data for v${latest}."
+  echo ""
+  echo "$pr_body"
+else
+  echo "No changes detected."
+fi

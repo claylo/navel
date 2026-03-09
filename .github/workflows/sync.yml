@@ -69,13 +69,15 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$branch"
-          git add -u
-          git commit -m "chore: sync claude code data (v${latest})"
+
+          # Create per-scope commits and capture PR body
+          pr_body=$(libexec/build-sync-commit-msg)
+
           git push -u origin "$branch"
 
           gh pr create \
             --title "chore: sync claude code data (v${latest})" \
-            --body "Automated sync of Claude Code tracking data for v${latest}." \
+            --body "$pr_body" \
             --base main
 
           gh pr merge --squash --delete-branch "$branch"
