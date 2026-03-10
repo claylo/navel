@@ -219,13 +219,14 @@
         "amazon-bedrock.md",
         "changelog.md",
         "claude-code-on-the-web.md",
+        "code-review.md",
         "discover-plugins.md",
         "github-actions.md",
         "gitlab-ci-cd.md",
         "google-vertex-ai.md",
         "microsoft-foundry.md"
       ],
-      "mentions": 18
+      "mentions": 20
     },
     "Stop": {
       "documented": true,
@@ -313,5 +314,5 @@
       "mentions": 19
     }
   },
-  "docs_checked_at": "2026-03-09"
+  "docs_checked_at": "2026-03-10"
 }
