@@ -3,6 +3,7 @@
     "add-dir",
     "agents",
     "batch",
+    "brief",
     "btw",
     "chrome",
     "claude-api",
@@ -85,6 +86,7 @@
     "add-dir": "Add a new working directory",
     "agents": "Manage agent configurations",
     "batch": "Research and plan a large-scale change, then execute it in parallel across 5–30 isolated worktree agents that each open a PR.",
+    "brief": "Toggle brief-only mode",
     "btw": "Ask a quick side question without interrupting the main conversation",
     "chrome": "Claude in Chrome (Beta) settings",
     "claude-api": "Build apps with the Claude API or Anthropic SDK.\\nTRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`/`claude_agent_sdk`, or user asks to use Claude API, Anthropic SDKs, or Agent SDK.\\nDO NOT TRIGGER when: code imports `openai`/other AI SDK, general programming, or ML/data-science tasks.",
@@ -146,6 +148,7 @@
     "add-dir": "available",
     "agents": "available",
     "batch": "available",
+    "brief": "available",
     "btw": "available",
     "chrome": "available",
     "claude-api": "available",
@@ -438,6 +441,11 @@
         "heapdump",
         "loop"
       ]
+    },
+    "2.1.72": {
+      "added": [
+        "brief"
+      ]
     }
   },
   "commands_docs": {
@@ -477,6 +485,11 @@
         "skills.md"
       ],
       "mentions": 4
+    },
+    "brief": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "btw": {
       "documented": false,
@@ -929,6 +942,7 @@
       "doc_files": [
         "best-practices.md",
         "changelog.md",
+        "code-review.md",
         "costs.md",
         "desktop.md",
         "features-overview.md",
@@ -945,7 +959,7 @@
         "third-party-integrations.md",
         "troubleshooting.md"
       ],
-      "mentions": 46
+      "mentions": 48
     },
     "mobile": {
       "documented": true,
@@ -1145,14 +1159,9 @@
     "review": {
       "documented": true,
       "doc_files": [
-        "features-overview.md",
-        "github-actions.md",
-        "interactive-mode.md",
-        "plugin-marketplaces.md",
-        "plugins.md",
-        "skills.md"
+        "interactive-mode.md"
       ],
-      "mentions": 13
+      "mentions": 1
     },
     "rewind": {
       "documented": true,
@@ -1202,6 +1211,7 @@
         "desktop-quickstart.md",
         "desktop.md",
         "features-overview.md",
+        "github-actions.md",
         "headless.md",
         "hooks-guide.md",
         "hooks.md",
@@ -1219,7 +1229,7 @@
         "skills.md",
         "sub-agents.md"
       ],
-      "mentions": 84
+      "mentions": 86
     },
     "stats": {
       "documented": true,
@@ -1321,10 +1331,11 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "code-review.md",
         "interactive-mode.md",
         "vs-code.md"
       ],
-      "mentions": 7
+      "mentions": 8
     },
     "vim": {
       "documented": true,
@@ -1345,5 +1356,5 @@
       "mentions": 1
     }
   },
-  "docs_checked_at": "2026-03-09"
+  "docs_checked_at": "2026-03-10"
 }

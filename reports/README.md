@@ -32,13 +32,14 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 </details>
 
 <details>
-<summary>Commands (80)</summary>
+<summary>Commands (81)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
 | /add-dir | Add a new working directory | 2.0.0 | available | yes |
 | /agents | Manage agent configurations | 2.0.0 | available | yes |
 | /batch | Research and plan a large-scale change, then execute it i... | 2.1.63 | available | yes |
+| **/brief** | Toggle brief-only mode | 2.1.72 | available | **no** |
 | **/btw** | Ask a quick side question without interrupting the main c... | 2.1.6 | available | **no** |
 | /chrome | Claude in Chrome (Beta) settings | 2.0.71 | available | yes |
 | /claude-api | Build apps with the Claude API or Anthropic SDK.\nTRIGGER... | 2.1.69 | available | yes |
@@ -124,6 +125,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 
 | Version | Hooks | Commands |
 |---------|-------|----------|
+| 2.1.72 | — | +brief |
 | 2.1.71 | — | +heapdump, +loop |
 | 2.1.69 | +InstructionsLoaded | +claude-api, +reload-plugins |
 | 2.1.64 | +InstructionsLoaded | +reload-plugins |
@@ -163,4 +165,4 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 </details>
 
 ---
-*Last updated: 2026-03-09*
+*Last updated: 2026-03-10*
