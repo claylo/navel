@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 concurrency:
   group: navel-sync
@@ -22,15 +21,6 @@ jobs:
 
       - name: Install dependencies
         run: sudo apt-get update -qq && sudo apt-get install -y -qq jq ripgrep
-
-      - name: Restore npm cache
-        uses: actions/cache@v5
-        with:
-          path: |
-            npm/versions
-            npm/.cache
-          key: navel-npm-${{ hashFiles('npm/versions.json') }}
-          restore-keys: navel-npm-
 
       - name: Restore docs cache
         uses: actions/cache@v5
@@ -51,33 +41,22 @@ jobs:
       - name: Sync docs
         run: bin/navel docs sync
 
-      - name: Update README
-        run: bin/navel readme sync
-
-      - name: Create PR if changed
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Commit and push if changed
         run: |
-          if git diff --quiet; then
-            echo "No changes detected"
+          # Only proceed if data files changed — ignore README badge-only updates
+          data_files="npm/versions.json reports/commands.json reports/hooks.json reports/docs-changes.json reports/nav.json"
+          if git diff --quiet -- $data_files; then
+            echo "No data changes detected"
             exit 0
           fi
 
-          latest=$(jq -r '.[]' npm/versions.json | sort -V | tail -1)
-          branch="auto/sync-$(date -u +%Y-%m-%d-%H%M)"
+          # Regenerate READMEs only when data actually changed
+          bin/navel readme sync
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -b "$branch"
 
-          # Create per-scope commits and capture PR body
-          pr_body=$(libexec/build-sync-commit-msg)
+          # Create per-scope commits
+          libexec/build-sync-commit-msg
 
-          git push -u origin "$branch"
-
-          gh pr create \
-            --title "chore: sync claude code data (v${latest})" \
-            --body "$pr_body" \
-            --base main
-
-          gh pr merge --squash --delete-branch "$branch"
+          git push origin main
