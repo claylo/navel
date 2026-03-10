@@ -356,6 +356,10 @@ Docset:
   dash                         Build ClaudeCode.docset for Dash
   dash clean                   Remove all build artifacts
 
+PDF:
+  pdf                          Build Claude Code docs as PDF (requires node + typst)
+  pdf clean                    Remove PDF build artifacts
+
 Reports:
   readme sync                  Regenerate README badges and reports
 
@@ -412,6 +416,8 @@ case "${1:-}" in
     esac ;;
   dash)
     shift; exec "$LIBEXEC/dash" "$@" ;;
+  pdf)
+    shift; exec "$LIBEXEC/pdf" "$@" ;;
   readme)
     case "${2:-}" in
       sync) "$LIBEXEC/update-readme" ;;

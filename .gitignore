@@ -14,7 +14,10 @@ logs/
 prompts/versions/
 dist/
 
-dash/node_modules/
+node_modules/
+
+# Fonts downloaded at build time (proprietary, embedded in PDF only)
+pdf/fonts/
 
 # Local-only scripts (not part of the navel toolkit)
 bin/publish-docset

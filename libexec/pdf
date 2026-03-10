@@ -1,0 +1,116 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Build pipeline for creating a PDF from Claude Code docs.
+#
+# Usage:
+#   navel pdf              Build the PDF (render → compile)
+#   navel pdf clean        Remove PDF build artifacts
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+export REPO_ROOT
+
+PDF_DIR="$REPO_ROOT/pdf"
+BUILD_TYPST="$REPO_ROOT/build/_typst"
+BUILD_DIR="$REPO_ROOT/build"
+DOCS_DIR="$REPO_ROOT/docs"
+FONTS_DIR="$PDF_DIR/fonts"
+
+die() { echo "error: $*" >&2; exit 1; }
+
+cmd_clean() {
+  echo "Cleaning PDF build artifacts..."
+  rm -rf "$BUILD_TYPST"
+  rm -f "$BUILD_DIR/claude-code-docs.pdf"
+  echo "  Removed build/_typst/ and build/claude-code-docs.pdf"
+}
+
+cmd_build() {
+  # Preflight checks
+  [[ -d "$DOCS_DIR" ]] || die "no docs found — run 'navel docs sync' first"
+
+  local md_count
+  md_count=$(ls "$DOCS_DIR"/*.md 2>/dev/null | wc -l | tr -d ' ')
+  [[ "$md_count" -gt 0 ]] || die "no .md files in docs/"
+
+  [[ -d "$REPO_ROOT/node_modules" ]] || die "node_modules missing — run 'npm install' at repo root"
+
+  command -v node >/dev/null || die "node not found — install via: brew install node"
+  command -v typst >/dev/null || die "typst not found — install via: brew install typst (or cargo install typst-cli)"
+
+  [[ -f "$REPO_ROOT/reports/nav.json" ]] || die "reports/nav.json missing — run 'navel docs sync' first"
+
+  mkdir -p "$BUILD_TYPST" "$FONTS_DIR"
+
+  # Download Anthropic fonts if not cached (embedded in PDF, not distributed)
+  # Font sources: Anthropic (proprietary, embedded only) + JetBrains Mono (OFL)
+  local anthro_base="https://assets.claude.ai/Fonts"
+  local jb_base="https://github.com/JetBrains/JetBrainsMono/raw/master/fonts/ttf"
+  local -a font_urls=(
+    "$anthro_base/AnthropicSans-Text-Regular-Static.otf"
+    "$anthro_base/AnthropicSans-Text-Medium-Static.otf"
+    "$anthro_base/AnthropicSans-Text-Semibold-Static.otf"
+    "$anthro_base/AnthropicSans-Text-Bold-Static.otf"
+    "$anthro_base/AnthropicSans-Text-RegularItalic-Static.otf"
+    "$anthro_base/AnthropicSans-Text-MediumItalic-Static.otf"
+    "$anthro_base/AnthropicSans-Text-SemiboldItalic-Static.otf"
+    "$anthro_base/AnthropicSans-Text-BoldItalic-Static.otf"
+    "$anthro_base/AnthropicSerif-Display-Regular-Static.otf"
+    "$anthro_base/AnthropicSerif-Display-Medium-Static.otf"
+    "$anthro_base/AnthropicSerif-Display-Semibold-Static.otf"
+    "$anthro_base/AnthropicSerif-Display-Bold-Static.otf"
+    "$anthro_base/AnthropicSerif-Display-RegularItalic-Static.otf"
+    "$jb_base/JetBrainsMono-Regular.ttf"
+    "$jb_base/JetBrainsMono-Bold.ttf"
+    "$jb_base/JetBrainsMono-Italic.ttf"
+    "$jb_base/JetBrainsMono-BoldItalic.ttf"
+  )
+
+  local need_download=false
+  for url in "${font_urls[@]}"; do
+    local f="${url##*/}"
+    if [[ ! -f "$FONTS_DIR/$f" ]]; then
+      need_download=true
+      break
+    fi
+  done
+
+  if $need_download; then
+    echo "==> Downloading fonts (embedded in PDF, not distributed)..."
+    for url in "${font_urls[@]}"; do
+      local f="${url##*/}"
+      if [[ ! -f "$FONTS_DIR/$f" ]]; then
+        printf "  %s" "$f"
+        if curl -sL -o "$FONTS_DIR/$f" "$url"; then
+          echo " ✓"
+        else
+          echo " FAILED"
+        fi
+      fi
+    done
+  fi
+
+  echo "==> Rendering Typst from docs..."
+  node "$SCRIPT_DIR/js/pdf-render.mjs"
+
+  echo ""
+  echo "==> Compiling PDF..."
+  typst compile \
+    --root "$REPO_ROOT" \
+    --font-path "$FONTS_DIR" \
+    "$PDF_DIR/main.typ" \
+    "$BUILD_DIR/claude-code-docs.pdf"
+
+  local pdf_size
+  pdf_size=$(du -sh "$BUILD_DIR/claude-code-docs.pdf" | cut -f1)
+  echo ""
+  echo "Done: build/claude-code-docs.pdf ($pdf_size)"
+  echo "  open build/claude-code-docs.pdf"
+}
+
+case "${1:-}" in
+  clean) cmd_clean ;;
+  "")    cmd_build ;;
+  *)     die "usage: navel pdf [clean]" ;;
+esac
