@@ -114,24 +114,17 @@ commit_scope "hooks" "$hook_detail" \
 # ── docs scope ─────────────────────────────────────────────────────────
 
 doc_detail=""
-if ! git diff --quiet -- docs/ reports/docs-changes.json reports/nav.json 2>/dev/null; then
-  doc_added=$(git diff --name-status -- docs/ | grep -c '^A' || true)
-  doc_modified=$(git diff --name-status -- docs/ | grep -c '^M' || true)
-  doc_deleted=$(git diff --name-status -- docs/ | grep -c '^D' || true)
-
-  parts=()
-  [[ "$doc_modified" -gt 0 ]] && parts+=("${doc_modified} updated")
-  [[ "$doc_added" -gt 0 ]] && parts+=("${doc_added} added")
-  [[ "$doc_deleted" -gt 0 ]] && parts+=("${doc_deleted} removed")
-
-  if [[ ${#parts[@]} -gt 0 ]]; then
-    doc_detail=$(IFS=', '; echo "${parts[*]}")
+if ! git diff --quiet -- reports/docs-changes.json reports/nav.json 2>/dev/null; then
+  # docs/ is gitignored — get change count from the latest manifest entry
+  doc_count=$(jq -r '.changes[0].files_changed | length' reports/docs-changes.json 2>/dev/null || echo 0)
+  if [[ "$doc_count" -gt 0 ]]; then
+    doc_detail="${doc_count} docs changed"
   else
     doc_detail="metadata updated"
   fi
 fi
 commit_scope "docs" "$doc_detail" \
-  docs/ reports/docs-changes.json reports/nav.json
+  reports/docs-changes.json reports/nav.json
 
 # ── readme scope (catch-all for reports/README.md) ─────────────────────
 
