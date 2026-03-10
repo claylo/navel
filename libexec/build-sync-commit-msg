@@ -14,7 +14,7 @@ set -euo pipefail
 #
 # Outputs a summary to stdout for use as the PR body.
 #
-# Prerequisites: git config user.name/email set, on a feature branch.
+# Prerequisites: git config user.name/email set.
 # Usage: libexec/build-sync-commit-msg
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -126,10 +126,10 @@ fi
 commit_scope "docs" "$doc_detail" \
   reports/docs-changes.json reports/nav.json
 
-# ── readme scope (catch-all for reports/README.md) ─────────────────────
+# ── readme scope (catch-all for both READMEs) ────────────────────────
 
 commit_scope "readme" "" \
-  reports/README.md
+  README.md reports/README.md
 
 # ── Output PR body ─────────────────────────────────────────────────────
 
