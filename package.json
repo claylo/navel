@@ -3,6 +3,9 @@
   "name": "navel",
   "description": "Claude Code introspection toolkit — tracks commands, hooks, flags, docs, and builds docsets/PDFs.",
   "type": "commonjs",
+  "overrides": {
+    "lodash-es": "4.17.23"
+  },
   "dependencies": {
     "@mintlify/components": "1.0.1",
     "@mintlify/mdx": "3.0.4",
