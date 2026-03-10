@@ -59,7 +59,7 @@ if ! git diff --quiet -- npm/versions.json 2>/dev/null; then
   fi
 fi
 commit_scope "npm" "$npm_detail" \
-  npm/versions.json npm/versions/
+  npm/versions.json
 
 # ── commands scope ─────────────────────────────────────────────────────
 
@@ -84,7 +84,7 @@ if ! git diff --quiet -- reports/commands.json 2>/dev/null; then
   fi
 fi
 commit_scope "commands" "$cmd_detail" \
-  reports/commands.json npm/.cache/commands/ npm/.cache/flags/
+  reports/commands.json
 
 # ── hooks scope ────────────────────────────────────────────────────────
 
@@ -109,7 +109,7 @@ if ! git diff --quiet -- reports/hooks.json 2>/dev/null; then
   fi
 fi
 commit_scope "hooks" "$hook_detail" \
-  reports/hooks.json npm/.cache/hooks/
+  reports/hooks.json
 
 # ── docs scope ─────────────────────────────────────────────────────────
 
