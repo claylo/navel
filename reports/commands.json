@@ -537,7 +537,7 @@
         "interactive-mode.md",
         "quickstart.md"
       ],
-      "mentions": 26
+      "mentions": 28
     },
     "color": {
       "documented": true,
@@ -602,7 +602,7 @@
         "setup.md",
         "terminal-config.md"
       ],
-      "mentions": 37
+      "mentions": 38
     },
     "context": {
       "documented": true,
@@ -623,7 +623,7 @@
         "changelog.md",
         "interactive-mode.md"
       ],
-      "mentions": 4
+      "mentions": 5
     },
     "cost": {
       "documented": true,
@@ -935,7 +935,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 97
+      "mentions": 98
     },
     "memory": {
       "documented": true,
@@ -990,7 +990,7 @@
         "sub-agents.md",
         "vs-code.md"
       ],
-      "mentions": 59
+      "mentions": 61
     },
     "output-style": {
       "documented": true,
@@ -1049,7 +1049,7 @@
         "sub-agents.md",
         "vs-code.md"
       ],
-      "mentions": 10
+      "mentions": 11
     },
     "plugin": {
       "documented": true,
@@ -1189,7 +1189,7 @@
       "doc_files": [
         "changelog.md"
       ],
-      "mentions": 1
+      "mentions": 2
     },
     "simplify": {
       "documented": true,
