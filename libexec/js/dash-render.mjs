@@ -40,10 +40,10 @@ const dashDir = join(REPO_ROOT, "dash");
 const assetsDir = join(REPO_ROOT, "assets");
 const dashAssetsDir = join(dashDir, "assets");
 
-// Resolve dash/node_modules deps by direct dist paths — these packages
+// Resolve node_modules deps by direct dist paths — these packages
 // only export ESM via "import" (no CJS "require"), so createRequire can't
 // resolve them. Direct file imports bypass the exports map entirely.
-const nm = join(dashDir, "node_modules");
+const nm = join(REPO_ROOT, "node_modules");
 
 const { serialize } = await import(join(nm, "@mintlify/mdx/dist/server/index.js"));
 const { MDXClient } = await import(join(nm, "@mintlify/mdx/dist/client/default.js"));
@@ -324,7 +324,7 @@ if (!existsSync(buildDir)) mkdirSync(buildDir, { recursive: true });
 
 // Copy CSS + logo assets
 copyFileSync(
-  join(dashDir, "node_modules", "@mintlify/components/dist/styles.css"),
+  join(REPO_ROOT, "node_modules", "@mintlify/components/dist/styles.css"),
   join(buildDir, "mintlify.css"),
 );
 // Copy theme.css — strip @font-face blocks unless WITH_REMOTE_FONTS is set.

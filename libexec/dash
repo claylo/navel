@@ -42,7 +42,7 @@ cmd_build() {
   md_count=$(ls "$DOCS_DIR"/*.md 2>/dev/null | wc -l | tr -d ' ')
   [[ "$md_count" -gt 0 ]] || die "no .md files in docs/"
 
-  [[ -d "$DASH_DIR/node_modules" ]] || die "node_modules missing — run 'npm install' in dash/"
+  [[ -d "$REPO_ROOT/node_modules" ]] || die "node_modules missing — run 'npm install' at repo root"
 
   command -v node >/dev/null || die "node not found in PATH"
   command -v sqlite3 >/dev/null || die "sqlite3 not found in PATH"
