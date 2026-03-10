@@ -157,7 +157,7 @@
         "sub-agents.md",
         "troubleshooting.md"
       ],
-      "mentions": 61
+      "mentions": 62
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -235,9 +235,10 @@
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
+        "settings.md",
         "sub-agents.md"
       ],
-      "mentions": 62
+      "mentions": 63
     },
     "SubagentStart": {
       "documented": true,
