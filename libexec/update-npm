@@ -11,14 +11,6 @@ PARALLEL_THRESHOLD="${NAVEL_PARALLEL_THRESHOLD:-10}"
 
 mkdir -p "$NPM_DIR"
 
-# Snapshot known versions before fetching (committed versions.json = already processed)
-known_tmp=$(mktemp)
-if [[ -f "$NPM_DIR/versions.json" ]]; then
-  jq -r '.[]' "$NPM_DIR/versions.json" | sort > "$known_tmp"
-else
-  : > "$known_tmp"
-fi
-
 # Fetch all versions from npm registry
 echo "Fetching version list..."
 curl -sf "$REGISTRY/$PACKAGE" \
@@ -28,26 +20,19 @@ curl -sf "$REGISTRY/$PACKAGE" \
 total=$(jq length "$NPM_DIR/versions.json")
 echo "Found $total versions"
 
-# Only download versions not in the previous versions.json.
-# Also skip versions whose tarballs are already extracted (local dev).
-need_fetch=()
+# Which versions still need downloading?
+# Check for package.json (not cli.js) — older versions lack cli.js
 skipped=0
+need_fetch=()
 
 while IFS= read -r version; do
-  # Already extracted locally?
   pkg_dir="$NPM_DIR/versions/v${version}/node_modules/$PACKAGE"
   if [[ -f "$pkg_dir/package.json" ]]; then
     skipped=$((skipped + 1))
     continue
   fi
-  # Already processed in a previous sync?
-  if grep -qxF "$version" "$known_tmp"; then
-    skipped=$((skipped + 1))
-    continue
-  fi
   need_fetch+=("$version")
 done < <(jq -r '.[]' "$NPM_DIR/versions.json")
-rm -f "$known_tmp"
 
 to_fetch=${#need_fetch[@]}
 echo "Cached: $skipped  Needed: $to_fetch"
