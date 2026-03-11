@@ -95,4 +95,10 @@ jq -n \
   --arg date "$today" \
   '{hooks: $hooks, hooks_history: $history, hooks_docs: $docs, docs_checked_at: $date}' > "${REPO_ROOT}/reports/hooks.json"
 
-echo "Updated reports/hooks.json ($(echo "$hooks_json" | jq length) hooks, docs checked $today)"
+# Revert if only the date changed (avoid noise commits)
+if git diff -- "${REPO_ROOT}/reports/hooks.json" | grep '^[+-]' | grep -v '^[+-][+-][+-]' | grep -qv 'docs_checked_at'; then
+  echo "Updated reports/hooks.json ($(echo "$hooks_json" | jq length) hooks, docs checked $today)"
+else
+  git checkout -- "${REPO_ROOT}/reports/hooks.json" 2>/dev/null || true
+  echo "reports/hooks.json unchanged (docs checked $today)"
+fi

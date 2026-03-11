@@ -42,12 +42,15 @@ trap 'rm -rf "$STAGING"' EXIT
 
 glob_list=$(echo "$names" | paste -sd, -)
 
+HEADERS_LOG="${STAGING}/_headers.tsv"
+
 echo "Fetching all docs in parallel..."
 curl --parallel --parallel-max 16 \
      --silent --show-error \
      --location \
      --create-dirs \
      --remove-on-error \
+     -w '%output{>>'"$HEADERS_LOG"'}%{filename_effective}\t%header{last-modified}\n' \
      "${DOCS_BASE_URL}/{${glob_list}}.md" \
      -o "${STAGING}/#1.md"
 
@@ -204,8 +207,25 @@ if [[ $n_changed -gt 0 || $n_added -gt 0 || $n_removed -gt 0 ]]; then
   files_added=$(printf '%s\n' "${added[@]}" | jq -R . | jq -s . 2>/dev/null || echo '[]')
   files_removed=$(printf '%s\n' "${removed[@]}" | jq -R . | jq -s . 2>/dev/null || echo '[]')
 
+  # Use the publication date (Last-Modified header) rather than script run time.
+  # The headers log was captured during the parallel fetch via -w %header{}.
+  # All docs in a Vercel deploy share approximately the same Last-Modified,
+  # so we take the max across changed/added files as the publication date.
+  pub_date=""
+  if [[ -f "$HEADERS_LOG" ]]; then
+    # Find the latest Last-Modified from the fetched headers
+    # Format: /path/to/staging/slug.md\tDay, DD Mon YYYY HH:MM:SS GMT
+    latest_lm=$(sort -t$'\t' -k2 "$HEADERS_LOG" | tail -1 | cut -f2 | tr -d '\r')
+    if [[ -n "$latest_lm" ]]; then
+      pub_date=$(date -u -j -f "%a, %d %b %Y %H:%M:%S GMT" "$latest_lm" +%Y-%m-%dT%H:%M:%SZ 2>/dev/null \
+                 || date -u -d "$latest_lm" +%Y-%m-%dT%H:%M:%SZ 2>/dev/null \
+                 || true)
+    fi
+  fi
+  change_date="${pub_date:-$now}"
+
   new_entry=$(jq -n \
-    --arg date "$now" \
+    --arg date "$change_date" \
     --arg version "$latest_version" \
     --argjson changed "$files_changed" \
     --argjson added "$files_added" \
