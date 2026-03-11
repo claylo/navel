@@ -4,7 +4,9 @@ set -euo pipefail
 # Build pipeline for creating a PDF from Claude Code docs.
 #
 # Usage:
-#   navel pdf              Build the PDF (render → compile)
+#   navel pdf              Build the PDF (prep → compile)
+#   navel pdf prep         Render intermediates only (build/_md + build/_typ)
+#   navel pdf compile      Compile build/_typ → PDF (skips render)
 #   navel pdf clean        Remove PDF build artifacts
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -12,7 +14,8 @@ REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 export REPO_ROOT
 
 PDF_DIR="$REPO_ROOT/pdf"
-BUILD_TYPST="$REPO_ROOT/build/_typst"
+BUILD_TYPST="$REPO_ROOT/build/_typ"
+BUILD_MD="$REPO_ROOT/build/_md"
 BUILD_DIR="$REPO_ROOT/build"
 DOCS_DIR="$REPO_ROOT/docs"
 FONTS_DIR="$PDF_DIR/fonts"
@@ -21,29 +24,14 @@ die() { echo "error: $*" >&2; exit 1; }
 
 cmd_clean() {
   echo "Cleaning PDF build artifacts..."
-  rm -rf "$BUILD_TYPST"
+  rm -rf "$BUILD_TYPST" "$BUILD_MD"
   rm -f "$BUILD_DIR/claude-code-docs.pdf"
-  echo "  Removed build/_typst/ and build/claude-code-docs.pdf"
+  echo "  Removed build/_typ/, build/_md/, and build/claude-code-docs.pdf"
 }
 
-cmd_build() {
-  # Preflight checks
-  [[ -d "$DOCS_DIR" ]] || die "no docs found — run 'navel docs sync' first"
+ensure_fonts() {
+  mkdir -p "$FONTS_DIR"
 
-  local md_count
-  md_count=$(ls "$DOCS_DIR"/*.md 2>/dev/null | wc -l | tr -d ' ')
-  [[ "$md_count" -gt 0 ]] || die "no .md files in docs/"
-
-  [[ -d "$REPO_ROOT/node_modules" ]] || die "node_modules missing — run 'npm install' at repo root"
-
-  command -v node >/dev/null || die "node not found — install via: brew install node"
-  command -v typst >/dev/null || die "typst not found — install via: brew install typst (or cargo install typst-cli)"
-
-  [[ -f "$REPO_ROOT/reports/nav.json" ]] || die "reports/nav.json missing — run 'navel docs sync' first"
-
-  mkdir -p "$BUILD_TYPST" "$FONTS_DIR"
-
-  # Download Anthropic fonts if not cached (embedded in PDF, not distributed)
   # Font sources: Anthropic (proprietary, embedded only) + JetBrains Mono (OFL)
   local anthro_base="https://assets.claude.ai/Fonts"
   local jb_base="https://github.com/JetBrains/JetBrainsMono/raw/master/fonts/ttf"
@@ -90,11 +78,44 @@ cmd_build() {
       fi
     done
   fi
+}
 
-  echo "==> Rendering Typst from docs..."
+cmd_prep() {
+  # Preflight checks
+  [[ -d "$DOCS_DIR" ]] || die "no docs found — run 'navel docs sync' first"
+
+  local md_count
+  md_count=$(ls "$DOCS_DIR"/*.md 2>/dev/null | wc -l | tr -d ' ')
+  [[ "$md_count" -gt 0 ]] || die "no .md files in docs/"
+
+  [[ -d "$REPO_ROOT/node_modules" ]] || die "node_modules missing — run 'npm install' at repo root"
+
+  command -v node >/dev/null || die "node not found — install via: brew install node"
+
+  [[ -f "$REPO_ROOT/reports/nav.json" ]] || die "reports/nav.json missing — run 'navel docs sync' first"
+
+  mkdir -p "$BUILD_TYPST"
+
+  ensure_fonts
+
+  echo "==> Rendering intermediates from docs..."
   node "$SCRIPT_DIR/js/pdf-render.mjs"
 
   echo ""
+  echo "Prep complete. Intermediate files:"
+  echo "  build/_md/    — clean markdown ($(ls "$BUILD_MD"/*.md 2>/dev/null | wc -l | tr -d ' ') files)"
+  echo "  build/_typ/ — Typst markup (pages/ + pages.typ)"
+  echo ""
+  echo "Run 'navel pdf compile' when ready."
+}
+
+cmd_compile() {
+  [[ -f "$BUILD_TYPST/pages.typ" ]] || die "build/_typ/pages.typ not found — run 'navel pdf prep' first"
+
+  command -v typst >/dev/null || die "typst not found — install via: brew install typst (or cargo install typst-cli)"
+
+  ensure_fonts
+
   echo "==> Compiling PDF..."
   typst compile \
     --root "$REPO_ROOT" \
@@ -109,8 +130,15 @@ cmd_build() {
   echo "  open build/claude-code-docs.pdf"
 }
 
+cmd_build() {
+  cmd_prep
+  cmd_compile
+}
+
 case "${1:-}" in
-  clean) cmd_clean ;;
-  "")    cmd_build ;;
-  *)     die "usage: navel pdf [clean]" ;;
+  clean)   cmd_clean ;;
+  prep)    cmd_prep ;;
+  compile) cmd_compile ;;
+  "")      cmd_build ;;
+  *)       die "usage: navel pdf [prep|compile|clean]" ;;
 esac

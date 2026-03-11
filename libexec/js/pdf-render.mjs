@@ -5,7 +5,7 @@
 //
 // Reads docs/*.md, flattens interactive MDX components (Tabs, Accordions,
 // Cards) into plain markdown, then converts to Typst via markdown2typst.
-// Writes individual .typ files to build/_typst/pages/ and a pages.typ
+// Writes individual .typ files to build/_typ/pages/ and a pages.typ
 // manifest that main.typ imports.
 //
 // Expects REPO_ROOT env var (set by libexec/pdf).
@@ -22,7 +22,7 @@ if (!REPO_ROOT) {
 }
 
 const docsDir = join(REPO_ROOT, "docs");
-const buildDir = join(REPO_ROOT, "build", "_typst");
+const buildDir = join(REPO_ROOT, "build", "_typ");
 const pagesDir = join(buildDir, "pages");
 const mdOutDir = join(REPO_ROOT, "build", "_md");
 const nm = join(REPO_ROOT, "node_modules");
