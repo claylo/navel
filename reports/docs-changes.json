@@ -1,6 +1,53 @@
 {
   "changes": [
     {
+      "date": "2026-03-11T00:09:37Z",
+      "version_at_time": "",
+      "files_changed": [
+        "best-practices.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "keybindings.md",
+        "legal-and-compliance.md",
+        "llm-gateway.md",
+        "mcp.md",
+        "memory.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "output-styles.md",
+        "overview.md",
+        "permissions.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "quickstart.md",
+        "remote-control.md",
+        "sandboxing.md",
+        "scheduled-tasks.md",
+        "security.md",
+        "server-managed-settings.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slack.md",
+        "statusline.md",
+        "sub-agents.md",
+        "terminal-config.md",
+        "third-party-integrations.md",
+        "troubleshooting.md",
+        "vs-code.md",
+        "zero-data-retention.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-03-10T23:04:57Z",
       "version_at_time": "",
       "files_changed": [
