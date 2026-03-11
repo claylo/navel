@@ -1,7 +1,1366 @@
 {
-  "commands": [],
-  "descriptions": {},
-  "commands_history": {},
-  "commands_docs": {},
+  "commands": [
+    "add-dir",
+    "agents",
+    "batch",
+    "brief",
+    "btw",
+    "chrome",
+    "claude-api",
+    "claude-in-chrome",
+    "clear",
+    "color",
+    "commit",
+    "commit-push-pr",
+    "compact",
+    "config",
+    "context",
+    "copy",
+    "cost",
+    "debug",
+    "desktop",
+    "diff",
+    "doctor",
+    "exit",
+    "export",
+    "extra-usage",
+    "fast",
+    "feedback",
+    "files",
+    "fork",
+    "heapdump",
+    "help",
+    "hooks",
+    "ide",
+    "init",
+    "init-verifiers",
+    "insights",
+    "install",
+    "install-github-app",
+    "install-slack-app",
+    "keybindings",
+    "keybindings-help",
+    "login",
+    "logout",
+    "loop",
+    "mcp",
+    "memory",
+    "mobile",
+    "model",
+    "output-style",
+    "passes",
+    "permissions",
+    "plan",
+    "plugin",
+    "pr-comments",
+    "privacy-settings",
+    "rate-limit-options",
+    "release-notes",
+    "reload-plugins",
+    "remote-control",
+    "remote-env",
+    "rename",
+    "resume",
+    "review",
+    "rewind",
+    "security-review",
+    "session",
+    "simplify",
+    "skills",
+    "stats",
+    "status",
+    "statusline",
+    "stickers",
+    "tag",
+    "tasks",
+    "terminal-setup",
+    "theme",
+    "think-back",
+    "thinkback-play",
+    "upgrade",
+    "usage",
+    "vim",
+    "voice"
+  ],
+  "descriptions": {
+    "add-dir": "Add a new working directory",
+    "agents": "Manage agent configurations",
+    "batch": "Research and plan a large-scale change, then execute it in parallel across 5–30 isolated worktree agents that each open a PR.",
+    "brief": "Toggle brief-only mode",
+    "btw": "Ask a quick side question without interrupting the main conversation",
+    "chrome": "Claude in Chrome (Beta) settings",
+    "claude-api": "Build apps with the Claude API or Anthropic SDK.\\nTRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`/`claude_agent_sdk`, or user asks to use Claude API, Anthropic SDKs, or Agent SDK.\\nDO NOT TRIGGER when: code imports `openai`/other AI SDK, general programming, or ML/data-science tasks.",
+    "claude-in-chrome": "Automates your Chrome browser to interact with web pages - clicking elements, filling forms, capturing screenshots, reading console logs, and navigating sites. Opens pages in new tabs within your existing Chrome session. Requires site-level permissions before executing (configured in the extension).",
+    "clear": "Clear conversation history and free up context",
+    "color": "Set the prompt bar color for this session",
+    "commit": "Create a git commit",
+    "commit-push-pr": "Commit, push, and open a PR",
+    "compact": "Clear conversation history but keep a summary in context. Optional: /compact [instructions for summarization]",
+    "config": "Open config panel",
+    "context": "Visualize current context usage as a colored grid",
+    "copy": "Copy Claude's last response or a code block to clipboard",
+    "cost": "Show the total cost and duration of the current session",
+    "debug": "Enable debug logging for this session and help diagnose issues",
+    "diff": "View uncommitted changes and per-turn diffs",
+    "doctor": "Diagnose and verify your Claude Code installation and settings",
+    "export": "Export the current conversation to a file or clipboard",
+    "extra-usage": "Configure extra usage to keep working when limits are hit",
+    "feedback": "Submit feedback about Claude Code",
+    "files": "List all files currently in context",
+    "fork": "Create a fork of the current conversation at this point",
+    "heapdump": "Dump the JS heap to ~/Desktop",
+    "help": "Show help and available commands",
+    "hooks": "Manage hook configurations for tool events",
+    "ide": "Manage IDE integrations and show status",
+    "init": "Initialize a new CLAUDE.md file with codebase documentation",
+    "init-verifiers": "Create verifier skill(s) for automated verification of code changes",
+    "insights": "Generate a report analyzing your Claude Code sessions",
+    "install": "Install Claude Code native build",
+    "install-github-app": "Set up Claude GitHub Actions for a repository",
+    "install-slack-app": "Install the Claude Slack app",
+    "keybindings": "Open or create your keybindings configuration file",
+    "logout": "Sign out from your Anthropic account",
+    "loop": "Run a prompt or slash command on a recurring interval (e.g. /loop 5m /foo, defaults to 10m)",
+    "mcp": "Manage MCP servers",
+    "memory": "Edit Claude memory files",
+    "plan": "Enable plan mode or view the current session plan",
+    "pr-comments": "Get comments from a GitHub pull request",
+    "privacy-settings": "View and update your privacy settings",
+    "reload-plugins": "Activate pending plugin changes in the current session",
+    "rename": "Rename the current conversation",
+    "resume": "Resume a previous conversation",
+    "review": "Review a pull request",
+    "security-review": "Complete a security review of the pending changes on the current branch",
+    "simplify": "Review changed code for reuse, quality, and efficiency, then fix any issues found.",
+    "skills": "List available skills",
+    "stats": "Show your Claude Code usage statistics and activity",
+    "status": "Show Claude Code status including version, model, account, API connectivity, and tool statuses",
+    "stickers": "Order Claude Code stickers",
+    "theme": "Change the theme",
+    "think-back": "Your 2025 Claude Code Year in Review",
+    "thinkback-play": "Play the thinkback animation",
+    "upgrade": "Upgrade to Max for higher rate limits and more Opus",
+    "usage": "Show plan usage limits",
+    "vim": "Toggle between Vim and Normal editing modes",
+    "voice": "Toggle voice mode"
+  },
+  "status": {
+    "add-dir": "available",
+    "agents": "available",
+    "batch": "available",
+    "brief": "available",
+    "btw": "available",
+    "chrome": "available",
+    "claude-api": "available",
+    "claude-in-chrome": "available",
+    "clear": "available",
+    "color": "available",
+    "commit": "available",
+    "commit-push-pr": "available",
+    "compact": "available",
+    "config": "available",
+    "context": "available",
+    "copy": "available",
+    "cost": "available",
+    "debug": "available",
+    "desktop": "available",
+    "diff": "available",
+    "doctor": "available",
+    "exit": "available",
+    "export": "available",
+    "extra-usage": "available",
+    "fast": "available",
+    "feedback": "available",
+    "files": "disabled",
+    "fork": "available",
+    "heapdump": "available",
+    "help": "available",
+    "hooks": "available",
+    "ide": "available",
+    "init": "available",
+    "init-verifiers": "available",
+    "insights": "available",
+    "install": "available",
+    "install-github-app": "available",
+    "install-slack-app": "available",
+    "keybindings": "available",
+    "keybindings-help": "available",
+    "login": "available",
+    "logout": "available",
+    "loop": "available",
+    "mcp": "available",
+    "memory": "available",
+    "mobile": "available",
+    "model": "available",
+    "output-style": "available",
+    "passes": "available",
+    "permissions": "available",
+    "plan": "available",
+    "plugin": "available",
+    "pr-comments": "available",
+    "privacy-settings": "available",
+    "rate-limit-options": "available",
+    "release-notes": "available",
+    "reload-plugins": "available",
+    "remote-control": "available",
+    "remote-env": "available",
+    "rename": "available",
+    "resume": "available",
+    "review": "available",
+    "rewind": "available",
+    "security-review": "available",
+    "session": "available",
+    "simplify": "available",
+    "skills": "available",
+    "stats": "available",
+    "status": "available",
+    "statusline": "available",
+    "stickers": "available",
+    "tag": "disabled",
+    "tasks": "available",
+    "terminal-setup": "available",
+    "theme": "available",
+    "think-back": "available",
+    "thinkback-play": "available",
+    "upgrade": "available",
+    "usage": "available",
+    "vim": "available",
+    "voice": "available"
+  },
+  "commands_history": {
+    "2.0.0": {
+      "added": [
+        "add-dir",
+        "agents",
+        "bashes",
+        "clear",
+        "compact",
+        "config",
+        "context",
+        "cost",
+        "doctor",
+        "exit",
+        "export",
+        "feedback",
+        "files",
+        "help",
+        "hooks",
+        "ide",
+        "init",
+        "install",
+        "install-github-app",
+        "login",
+        "logout",
+        "mcp",
+        "memory",
+        "migrate-installer",
+        "model",
+        "output-style",
+        "permissions",
+        "pr-comments",
+        "privacy-settings",
+        "release-notes",
+        "resume",
+        "review",
+        "rewind",
+        "security-review",
+        "status",
+        "statusline",
+        "terminal-setup",
+        "todos",
+        "upgrade",
+        "usage",
+        "vim"
+      ]
+    },
+    "2.0.12": {
+      "added": [
+        "plugin"
+      ]
+    },
+    "2.0.32": {
+      "added": [
+        "stickers"
+      ]
+    },
+    "2.0.36": {
+      "added": [
+        "extra-usage"
+      ]
+    },
+    "2.0.41": {
+      "added": [
+        "rename"
+      ]
+    },
+    "2.0.43": {
+      "added": [
+        "rate-limit-options"
+      ]
+    },
+    "2.0.45": {
+      "added": [
+        "passes",
+        "tasks"
+      ]
+    },
+    "2.0.47": {
+      "added": [
+        "remote-env"
+      ]
+    },
+    "2.0.56": {
+      "added": [
+        "plan"
+      ]
+    },
+    "2.0.62": {
+      "added": [
+        "install-slack-app"
+      ]
+    },
+    "2.0.63": {
+      "added": [
+        "stats"
+      ]
+    },
+    "2.0.65": {
+      "added": [
+        "tag"
+      ]
+    },
+    "2.0.66": {
+      "added": [
+        "think-back",
+        "thinkback-play"
+      ]
+    },
+    "2.0.70": {
+      "added": [
+        "discover"
+      ]
+    },
+    "2.0.71": {
+      "added": [
+        "chrome"
+      ]
+    },
+    "2.0.72": {
+      "added": [
+        "mobile"
+      ]
+    },
+    "2.0.73": {
+      "added": [
+        "skills",
+        "theme"
+      ]
+    },
+    "2.1.6": {
+      "added": [
+        "btw",
+        "keybindings"
+      ]
+    },
+    "2.1.7": {
+      "added": [
+        "claude-in-chrome",
+        "color"
+      ]
+    },
+    "2.1.8": {
+      "added": [
+        "fork"
+      ]
+    },
+    "2.1.15": {
+      "added": [
+        "session"
+      ]
+    },
+    "2.1.20": {
+      "added": [
+        "copy",
+        "keybindings-help"
+      ]
+    },
+    "2.1.30": {
+      "added": [
+        "debug",
+        "insights"
+      ]
+    },
+    "2.1.36": {
+      "added": [
+        "fast"
+      ]
+    },
+    "2.1.42": {
+      "added": [
+        "desktop"
+      ]
+    },
+    "2.1.50": {
+      "added": [
+        "diff"
+      ]
+    },
+    "2.1.51": {
+      "added": [
+        "commit",
+        "commit-push-pr",
+        "init-verifiers",
+        "remote-control"
+      ]
+    },
+    "2.1.59": {
+      "added": [
+        "voice"
+      ]
+    },
+    "2.1.63": {
+      "added": [
+        "batch",
+        "claude-developer-platform",
+        "simplify"
+      ]
+    },
+    "2.1.64": {
+      "added": [
+        "reload-plugins"
+      ]
+    },
+    "2.1.69": {
+      "added": [
+        "claude-api",
+        "reload-plugins"
+      ]
+    },
+    "2.1.71": {
+      "added": [
+        "heapdump",
+        "loop"
+      ]
+    },
+    "2.1.72": {
+      "added": [
+        "brief"
+      ]
+    }
+  },
+  "commands_docs": {
+    "add-dir": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "interactive-mode.md",
+        "permissions.md"
+      ],
+      "mentions": 7
+    },
+    "agents": {
+      "documented": true,
+      "doc_files": [
+        "best-practices.md",
+        "changelog.md",
+        "common-workflows.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "settings.md",
+        "skills.md",
+        "sub-agents.md"
+      ],
+      "mentions": 35
+    },
+    "batch": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "features-overview.md",
+        "interactive-mode.md",
+        "skills.md"
+      ],
+      "mentions": 4
+    },
+    "brief": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "btw": {
+      "documented": true,
+      "doc_files": [
+        "best-practices.md",
+        "interactive-mode.md",
+        "sub-agents.md"
+      ],
+      "mentions": 7
+    },
+    "chrome": {
+      "documented": true,
+      "doc_files": [
+        "best-practices.md",
+        "changelog.md",
+        "chrome.md",
+        "cli-reference.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "overview.md",
+        "troubleshooting.md",
+        "vs-code.md"
+      ],
+      "mentions": 18
+    },
+    "claude-api": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "skills.md"
+      ],
+      "mentions": 2
+    },
+    "claude-in-chrome": {
+      "documented": true,
+      "doc_files": [
+        "chrome.md"
+      ],
+      "mentions": 1
+    },
+    "clear": {
+      "documented": true,
+      "doc_files": [
+        "best-practices.md",
+        "changelog.md",
+        "costs.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "quickstart.md"
+      ],
+      "mentions": 28
+    },
+    "color": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md"
+      ],
+      "mentions": 1
+    },
+    "commit": {
+      "documented": true,
+      "doc_files": [
+        "headless.md",
+        "settings.md",
+        "skills.md"
+      ],
+      "mentions": 6
+    },
+    "commit-push-pr": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md"
+      ],
+      "mentions": 1
+    },
+    "compact": {
+      "documented": true,
+      "doc_files": [
+        "best-practices.md",
+        "changelog.md",
+        "checkpointing.md",
+        "costs.md",
+        "desktop.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "memory.md",
+        "skills.md",
+        "troubleshooting.md",
+        "vs-code.md"
+      ],
+      "mentions": 26
+    },
+    "config": {
+      "documented": true,
+      "doc_files": [
+        "agent-teams.md",
+        "changelog.md",
+        "common-workflows.md",
+        "costs.md",
+        "desktop.md",
+        "github-actions.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "mcp.md",
+        "monitoring-usage.md",
+        "output-styles.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "remote-control.md",
+        "settings.md",
+        "setup.md",
+        "terminal-config.md"
+      ],
+      "mentions": 38
+    },
+    "context": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "costs.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "keybindings.md",
+        "skills.md",
+        "statusline.md"
+      ],
+      "mentions": 23
+    },
+    "copy": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "interactive-mode.md"
+      ],
+      "mentions": 5
+    },
+    "cost": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "costs.md",
+        "interactive-mode.md",
+        "statusline.md"
+      ],
+      "mentions": 11
+    },
+    "debug": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "features-overview.md",
+        "interactive-mode.md",
+        "plugins-reference.md",
+        "skills.md"
+      ],
+      "mentions": 6
+    },
+    "desktop": {
+      "documented": true,
+      "doc_files": [
+        "best-practices.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "overview.md",
+        "quickstart.md",
+        "scheduled-tasks.md",
+        "setup.md",
+        "troubleshooting.md",
+        "zero-data-retention.md"
+      ],
+      "mentions": 37
+    },
+    "diff": {
+      "documented": true,
+      "doc_files": [
+        "interactive-mode.md"
+      ],
+      "mentions": 1
+    },
+    "doctor": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "keybindings.md",
+        "troubleshooting.md"
+      ],
+      "mentions": 12
+    },
+    "exit": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "interactive-mode.md",
+        "quickstart.md"
+      ],
+      "mentions": 3
+    },
+    "export": {
+      "documented": true,
+      "doc_files": [
+        "best-practices.md",
+        "changelog.md",
+        "hooks.md",
+        "interactive-mode.md"
+      ],
+      "mentions": 4
+    },
+    "extra-usage": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "interactive-mode.md"
+      ],
+      "mentions": 2
+    },
+    "fast": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "fast-mode.md",
+        "google-vertex-ai.md",
+        "interactive-mode.md",
+        "monitoring-usage.md",
+        "settings.md"
+      ],
+      "mentions": 18
+    },
+    "feedback": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "interactive-mode.md",
+        "zero-data-retention.md"
+      ],
+      "mentions": 3
+    },
+    "files": {
+      "documented": true,
+      "doc_files": [
+        "skills.md"
+      ],
+      "mentions": 3
+    },
+    "fork": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "interactive-mode.md",
+        "skills.md"
+      ],
+      "mentions": 4
+    },
+    "heapdump": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "help": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "interactive-mode.md",
+        "plugins.md",
+        "quickstart.md",
+        "skills.md"
+      ],
+      "mentions": 8
+    },
+    "hooks": {
+      "documented": true,
+      "doc_files": [
+        "agent-teams.md",
+        "best-practices.md",
+        "changelog.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "common-workflows.md",
+        "costs.md",
+        "desktop.md",
+        "features-overview.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "memory.md",
+        "overview.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "security.md",
+        "server-managed-settings.md",
+        "settings.md",
+        "skills.md",
+        "sub-agents.md",
+        "terminal-config.md"
+      ],
+      "mentions": 183
+    },
+    "ide": {
+      "documented": true,
+      "doc_files": [
+        "interactive-mode.md",
+        "jetbrains.md",
+        "vs-code.md"
+      ],
+      "mentions": 3
+    },
+    "init": {
+      "documented": true,
+      "doc_files": [
+        "best-practices.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "memory.md",
+        "skills.md"
+      ],
+      "mentions": 6
+    },
+    "init-verifiers": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "insights": {
+      "documented": true,
+      "doc_files": [
+        "interactive-mode.md"
+      ],
+      "mentions": 1
+    },
+    "install": {
+      "documented": true,
+      "doc_files": [
+        "claude-code-on-the-web.md",
+        "gitlab-ci-cd.md",
+        "overview.md",
+        "quickstart.md",
+        "setup.md",
+        "troubleshooting.md"
+      ],
+      "mentions": 35
+    },
+    "install-github-app": {
+      "documented": true,
+      "doc_files": [
+        "github-actions.md",
+        "interactive-mode.md"
+      ],
+      "mentions": 4
+    },
+    "install-slack-app": {
+      "documented": true,
+      "doc_files": [
+        "interactive-mode.md"
+      ],
+      "mentions": 1
+    },
+    "keybindings": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "interactive-mode.md",
+        "keybindings.md"
+      ],
+      "mentions": 4
+    },
+    "keybindings-help": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "login": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "claude-code-on-the-web.md",
+        "costs.md",
+        "google-vertex-ai.md",
+        "interactive-mode.md",
+        "microsoft-foundry.md",
+        "quickstart.md",
+        "remote-control.md",
+        "settings.md",
+        "skills.md",
+        "troubleshooting.md"
+      ],
+      "mentions": 14
+    },
+    "logout": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "authentication.md",
+        "google-vertex-ai.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "microsoft-foundry.md",
+        "troubleshooting.md"
+      ],
+      "mentions": 9
+    },
+    "loop": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "scheduled-tasks.md",
+        "settings.md",
+        "skills.md"
+      ],
+      "mentions": 12
+    },
+    "mcp": {
+      "documented": true,
+      "doc_files": [
+        "best-practices.md",
+        "changelog.md",
+        "chrome.md",
+        "cli-reference.md",
+        "common-workflows.md",
+        "costs.md",
+        "desktop.md",
+        "discover-plugins.md",
+        "features-overview.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "mcp.md",
+        "overview.md",
+        "permissions.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "remote-control.md",
+        "server-managed-settings.md",
+        "settings.md",
+        "sub-agents.md",
+        "third-party-integrations.md",
+        "troubleshooting.md",
+        "vs-code.md"
+      ],
+      "mentions": 98
+    },
+    "memory": {
+      "documented": true,
+      "doc_files": [
+        "best-practices.md",
+        "changelog.md",
+        "code-review.md",
+        "costs.md",
+        "desktop.md",
+        "features-overview.md",
+        "github-actions.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "memory.md",
+        "overview.md",
+        "settings.md",
+        "skills.md",
+        "sub-agents.md",
+        "third-party-integrations.md",
+        "troubleshooting.md"
+      ],
+      "mentions": 48
+    },
+    "mobile": {
+      "documented": true,
+      "doc_files": [
+        "interactive-mode.md",
+        "remote-control.md"
+      ],
+      "mentions": 2
+    },
+    "model": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "cli-reference.md",
+        "common-workflows.md",
+        "costs.md",
+        "fast-mode.md",
+        "github-actions.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "settings.md",
+        "skills.md",
+        "statusline.md",
+        "sub-agents.md",
+        "vs-code.md"
+      ],
+      "mentions": 61
+    },
+    "output-style": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "interactive-mode.md",
+        "output-styles.md"
+      ],
+      "mentions": 5
+    },
+    "passes": {
+      "documented": true,
+      "doc_files": [
+        "interactive-mode.md"
+      ],
+      "mentions": 1
+    },
+    "permissions": {
+      "documented": true,
+      "doc_files": [
+        "agent-teams.md",
+        "analytics.md",
+        "best-practices.md",
+        "changelog.md",
+        "cli-reference.md",
+        "common-workflows.md",
+        "desktop.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "mcp.md",
+        "memory.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "permissions.md",
+        "sandboxing.md",
+        "security.md",
+        "server-managed-settings.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "sub-agents.md",
+        "troubleshooting.md"
+      ],
+      "mentions": 55
+    },
+    "plan": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "common-workflows.md",
+        "desktop.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "permissions.md",
+        "sub-agents.md",
+        "vs-code.md"
+      ],
+      "mentions": 11
+    },
+    "plugin": {
+      "documented": true,
+      "doc_files": [
+        "best-practices.md",
+        "changelog.md",
+        "desktop.md",
+        "discover-plugins.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "overview.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "settings.md",
+        "troubleshooting.md"
+      ],
+      "mentions": 87
+    },
+    "pr-comments": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "interactive-mode.md"
+      ],
+      "mentions": 2
+    },
+    "privacy-settings": {
+      "documented": true,
+      "doc_files": [
+        "interactive-mode.md"
+      ],
+      "mentions": 2
+    },
+    "rate-limit-options": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "release-notes": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "interactive-mode.md"
+      ],
+      "mentions": 2
+    },
+    "reload-plugins": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "discover-plugins.md",
+        "interactive-mode.md",
+        "plugins.md"
+      ],
+      "mentions": 6
+    },
+    "remote-control": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md",
+        "data-usage.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "overview.md",
+        "permissions.md",
+        "remote-control.md",
+        "security.md"
+      ],
+      "mentions": 15
+    },
+    "remote-env": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "claude-code-on-the-web.md",
+        "interactive-mode.md"
+      ],
+      "mentions": 3
+    },
+    "rename": {
+      "documented": true,
+      "doc_files": [
+        "best-practices.md",
+        "changelog.md",
+        "common-workflows.md",
+        "costs.md",
+        "interactive-mode.md",
+        "remote-control.md"
+      ],
+      "mentions": 13
+    },
+    "resume": {
+      "documented": true,
+      "doc_files": [
+        "agent-teams.md",
+        "changelog.md",
+        "common-workflows.md",
+        "costs.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "quickstart.md"
+      ],
+      "mentions": 24
+    },
+    "review": {
+      "documented": true,
+      "doc_files": [
+        "interactive-mode.md"
+      ],
+      "mentions": 1
+    },
+    "rewind": {
+      "documented": true,
+      "doc_files": [
+        "agent-teams.md",
+        "best-practices.md",
+        "changelog.md",
+        "checkpointing.md",
+        "common-workflows.md",
+        "costs.md",
+        "interactive-mode.md"
+      ],
+      "mentions": 10
+    },
+    "security-review": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "interactive-mode.md"
+      ],
+      "mentions": 2
+    },
+    "session": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md"
+      ],
+      "mentions": 2
+    },
+    "simplify": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "features-overview.md",
+        "interactive-mode.md",
+        "skills.md"
+      ],
+      "mentions": 4
+    },
+    "skills": {
+      "documented": true,
+      "doc_files": [
+        "best-practices.md",
+        "changelog.md",
+        "cli-reference.md",
+        "costs.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "features-overview.md",
+        "github-actions.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "mcp.md",
+        "memory.md",
+        "output-styles.md",
+        "overview.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "scheduled-tasks.md",
+        "settings.md",
+        "skills.md",
+        "sub-agents.md"
+      ],
+      "mentions": 86
+    },
+    "stats": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "costs.md",
+        "interactive-mode.md"
+      ],
+      "mentions": 6
+    },
+    "status": {
+      "documented": true,
+      "doc_files": [
+        "interactive-mode.md",
+        "model-config.md",
+        "settings.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 4
+    },
+    "statusline": {
+      "documented": true,
+      "doc_files": [
+        "best-practices.md",
+        "costs.md",
+        "fast-mode.md",
+        "interactive-mode.md",
+        "model-config.md",
+        "settings.md",
+        "statusline.md",
+        "sub-agents.md",
+        "terminal-config.md"
+      ],
+      "mentions": 26
+    },
+    "stickers": {
+      "documented": true,
+      "doc_files": [
+        "interactive-mode.md"
+      ],
+      "mentions": 1
+    },
+    "tag": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "github-actions.md",
+        "plugin-marketplaces.md",
+        "settings.md"
+      ],
+      "mentions": 8
+    },
+    "tasks": {
+      "documented": true,
+      "doc_files": [
+        "agent-teams.md",
+        "changelog.md",
+        "claude-code-on-the-web.md",
+        "interactive-mode.md"
+      ],
+      "mentions": 8
+    },
+    "terminal-setup": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "interactive-mode.md",
+        "terminal-config.md"
+      ],
+      "mentions": 9
+    },
+    "theme": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "interactive-mode.md"
+      ],
+      "mentions": 5
+    },
+    "think-back": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "thinkback-play": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "upgrade": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "interactive-mode.md"
+      ],
+      "mentions": 5
+    },
+    "usage": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "code-review.md",
+        "interactive-mode.md",
+        "vs-code.md"
+      ],
+      "mentions": 8
+    },
+    "vim": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "interactive-mode.md",
+        "keybindings.md",
+        "statusline.md",
+        "terminal-config.md"
+      ],
+      "mentions": 7
+    },
+    "voice": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md"
+      ],
+      "mentions": 1
+    }
+  },
   "docs_checked_at": "2026-03-11"
 }
