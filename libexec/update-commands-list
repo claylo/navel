@@ -261,4 +261,10 @@ jq -n \
   --arg date "$today" \
   '{commands: $commands, descriptions: $descriptions, status: $status, commands_history: $history, commands_docs: $docs, docs_checked_at: $date}' > "${REPO_ROOT}/reports/commands.json"
 
-echo "Updated reports/commands.json ($(echo "$cmds_json" | jq length) commands, ${gated} gated, ${disabled} disabled, ${undocumented} undocumented, docs checked $today)"
+# Revert if only the date changed (avoid noise commits)
+if git diff -- "${REPO_ROOT}/reports/commands.json" | grep '^[+-]' | grep -v '^[+-][+-][+-]' | grep -qv 'docs_checked_at'; then
+  echo "Updated reports/commands.json ($(echo "$cmds_json" | jq length) commands, ${gated} gated, ${disabled} disabled, ${undocumented} undocumented, docs checked $today)"
+else
+  git checkout -- "${REPO_ROOT}/reports/commands.json" 2>/dev/null || true
+  echo "reports/commands.json unchanged (docs checked $today)"
+fi
