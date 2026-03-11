@@ -25,7 +25,7 @@
 )
 
 // Include all pages in navigation order
-#include "../build/_typst/pages.typ"
+#include "../build/_typ/pages.typ"
 
 // ── Colophon ──────────────────────────────────────────────────────────
 

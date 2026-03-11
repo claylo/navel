@@ -357,7 +357,9 @@ Docset:
   dash clean                   Remove all build artifacts
 
 PDF:
-  pdf                          Build Claude Code docs as PDF (requires node + typst)
+  pdf                          Build Claude Code docs as PDF (prep → compile)
+  pdf prep                     Render intermediates only (build/_md + build/_typ)
+  pdf compile                  Compile build/_typ → PDF (skips render)
   pdf clean                    Remove PDF build artifacts
 
 Reports:
