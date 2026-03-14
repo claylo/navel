@@ -206,23 +206,21 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
-        "env-vars.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 22
+      "mentions": 19
     },
     "SessionStart": {
       "documented": true,
       "doc_files": [
         "changelog.md",
         "claude-code-on-the-web.md",
-        "env-vars.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
-        "tools-reference.md"
+        "settings.md"
       ],
       "mentions": 38
     },
@@ -248,8 +246,8 @@
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
-        "sub-agents.md",
-        "tools-reference.md"
+        "settings.md",
+        "sub-agents.md"
       ],
       "mentions": 63
     },
@@ -328,5 +326,5 @@
       "mentions": 19
     }
   },
-  "docs_checked_at": "2026-03-13"
+  "docs_checked_at": "2026-03-14"
 }
