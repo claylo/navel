@@ -3,7 +3,7 @@
 Auto-generated tracking data for Claude Code versions, hooks, and commands.
 
 <details>
-<summary>Hooks (21)</summary>
+<summary>Hooks (22)</summary>
 
 | Hook | Since | Documented |
 |------|-------|------------|
@@ -13,6 +13,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 | InstructionsLoaded | 2.1.64 | yes |
 | Notification | 2.0.0 | yes |
 | PermissionRequest | 2.0.45 | yes |
+| **PostCompact** | 2.1.76 | **no** |
 | PostToolUse | 2.0.0 | yes |
 | PostToolUseFailure | 2.0.56 | yes |
 | PreCompact | 2.0.0 | yes |
@@ -32,13 +33,14 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 </details>
 
 <details>
-<summary>Commands (81)</summary>
+<summary>Commands (83)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
 | /add-dir | Add a new working directory | 2.0.0 | available | yes |
 | /agents | Manage agent configurations | 2.0.0 | available | yes |
 | /batch | Research and plan a large-scale change, then execute it i... | 2.1.63 | available | yes |
+| **/bridge-kick** | Inject bridge failure states for manual recovery testing | 2.1.76 | *disabled* | **no** |
 | **/brief** | Toggle brief-only mode | 2.1.72 | available | **no** |
 | /btw | Ask a quick side question without interrupting the main c... | 2.1.6 | available | yes |
 | /chrome | Claude in Chrome (Beta) settings | 2.0.71 | available | yes |
@@ -57,6 +59,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 | /desktop | — | 2.1.42 | available | yes |
 | /diff | View uncommitted changes and per-turn diffs | 2.1.50 | available | yes |
 | /doctor | Diagnose and verify your Claude Code installation and set... | 2.0.0 | available | yes |
+| /effort | Set effort level for model usage | 2.1.76 | available | yes |
 | /exit | — | 2.0.0 | available | yes |
 | /export | Export the current conversation to a file or clipboard | 2.0.0 | available | yes |
 | /extra-usage | Configure extra usage to keep working when limits are hit | 2.0.36 | available | yes |
@@ -64,9 +67,9 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 | /feedback | Submit feedback about Claude Code | 2.0.0 | available | yes |
 | **/files** | List all files currently in context | 2.0.0 | *disabled* | yes |
 | /fork | Create a fork of the current conversation at this point | 2.1.8 | available | yes |
-| **/heapdump** | Dump the JS heap to ~/Desktop | 2.1.71 | available | **no** |
+| /heapdump | Dump the JS heap to ~/Desktop | 2.1.71 | available | yes |
 | /help | Show help and available commands | 2.0.0 | available | yes |
-| /hooks | Manage hook configurations for tool events | 2.0.0 | available | yes |
+| /hooks | View hook configurations for tool events | 2.0.0 | available | yes |
 | /ide | Manage IDE integrations and show status | 2.0.0 | available | yes |
 | /init | Initialize a new CLAUDE.md file with codebase documentation | 2.0.0 | available | yes |
 | **/init-verifiers** | Create verifier skill(s) for automated verification of co... | 2.1.51 | available | **no** |
@@ -125,6 +128,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 
 | Version | Hooks | Commands |
 |---------|-------|----------|
+| 2.1.76 | +PostCompact | +bridge-kick, +effort |
 | 2.1.72 | — | +brief |
 | 2.1.71 | — | +heapdump, +loop |
 | 2.1.69 | +InstructionsLoaded | +claude-api, +reload-plugins |
@@ -165,4 +169,4 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 </details>
 
 ---
-*Last updated: 2026-03-11*
+*Last updated: 2026-03-13*

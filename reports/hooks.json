@@ -6,6 +6,7 @@
     "InstructionsLoaded",
     "Notification",
     "PermissionRequest",
+    "PostCompact",
     "PostToolUse",
     "PostToolUseFailure",
     "PreCompact",
@@ -88,6 +89,11 @@
       "added": [
         "InstructionsLoaded"
       ]
+    },
+    "2.1.76": {
+      "added": [
+        "PostCompact"
+      ]
     }
   },
   "hooks_docs": {
@@ -145,6 +151,11 @@
       ],
       "mentions": 25
     },
+    "PostCompact": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
     "PostToolUse": {
       "documented": true,
       "doc_files": [
@@ -195,21 +206,23 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "env-vars.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 19
+      "mentions": 22
     },
     "SessionStart": {
       "documented": true,
       "doc_files": [
         "changelog.md",
         "claude-code-on-the-web.md",
+        "env-vars.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
-        "settings.md"
+        "tools-reference.md"
       ],
       "mentions": 38
     },
@@ -235,8 +248,8 @@
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
-        "settings.md",
-        "sub-agents.md"
+        "sub-agents.md",
+        "tools-reference.md"
       ],
       "mentions": 63
     },
@@ -315,5 +328,5 @@
       "mentions": 19
     }
   },
-  "docs_checked_at": "2026-03-11"
+  "docs_checked_at": "2026-03-13"
 }
