@@ -67,7 +67,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 | /feedback | Submit feedback about Claude Code | 2.0.0 | available | yes |
 | **/files** | List all files currently in context | 2.0.0 | *disabled* | yes |
 | /fork | Create a fork of the current conversation at this point | 2.1.8 | available | yes |
-| /heapdump | Dump the JS heap to ~/Desktop | 2.1.71 | available | yes |
+| **/heapdump** | Dump the JS heap to ~/Desktop | 2.1.71 | available | **no** |
 | /help | Show help and available commands | 2.0.0 | available | yes |
 | /hooks | View hook configurations for tool events | 2.0.0 | available | yes |
 | /ide | Manage IDE integrations and show status | 2.0.0 | available | yes |
@@ -169,4 +169,4 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 </details>
 
 ---
-*Last updated: 2026-03-13*
+*Last updated: 2026-03-14*
