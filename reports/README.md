@@ -40,6 +40,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 | /add-dir | Add a new working directory | 2.0.0 | available | yes |
 | /agents | Manage agent configurations | 2.0.0 | available | yes |
 | /batch | Research and plan a large-scale change, then execute it i... | 2.1.63 | available | yes |
+| /branch | — | 2.1.77 | available | yes |
 | **/bridge-kick** | Inject bridge failure states for manual recovery testing | 2.1.76 | *disabled* | **no** |
 | **/brief** | Toggle brief-only mode | 2.1.72 | available | **no** |
 | /btw | Ask a quick side question without interrupting the main c... | 2.1.6 | available | yes |
@@ -53,7 +54,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 | /compact | Clear conversation history but keep a summary in context.... | 2.0.0 | available | yes |
 | /config | Open config panel | 2.0.0 | available | yes |
 | /context | Visualize current context usage as a colored grid | 2.0.0 | available | yes |
-| /copy | Copy Claude's last response or a code block to clipboard | 2.1.20 | available | yes |
+| /copy | Copy Claude's last response to clipboard (or /copy N for ... | 2.1.20 | available | yes |
 | /cost | Show the total cost and duration of the current session | 2.0.0 | available | yes |
 | /debug | Enable debug logging for this session and help diagnose i... | 2.1.30 | available | yes |
 | /desktop | — | 2.1.42 | available | yes |
@@ -66,12 +67,11 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 | /fast | — | 2.1.36 | available | yes |
 | /feedback | Submit feedback about Claude Code | 2.0.0 | available | yes |
 | **/files** | List all files currently in context | 2.0.0 | *disabled* | yes |
-| /fork | Create a fork of the current conversation at this point | 2.1.8 | available | yes |
 | **/heapdump** | Dump the JS heap to ~/Desktop | 2.1.71 | available | **no** |
 | /help | Show help and available commands | 2.0.0 | available | yes |
 | /hooks | View hook configurations for tool events | 2.0.0 | available | yes |
 | /ide | Manage IDE integrations and show status | 2.0.0 | available | yes |
-| /init | Initialize a new CLAUDE.md file with codebase documentation | 2.0.0 | available | yes |
+| /init | — | 2.0.0 | available | yes |
 | **/init-verifiers** | Create verifier skill(s) for automated verification of co... | 2.1.51 | available | **no** |
 | /insights | Generate a report analyzing your Claude Code sessions | 2.1.30 | available | yes |
 | /install | Install Claude Code native build | 2.0.0 | available | yes |
@@ -128,6 +128,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 
 | Version | Hooks | Commands |
 |---------|-------|----------|
+| 2.1.77 | — | +branch |
 | 2.1.76 | +PostCompact | +bridge-kick, +effort |
 | 2.1.72 | — | +brief |
 | 2.1.71 | — | +heapdump, +loop |
@@ -169,4 +170,4 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 </details>
 
 ---
-*Last updated: 2026-03-14*
+*Last updated: 2026-03-16*
