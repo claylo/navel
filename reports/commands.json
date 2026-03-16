@@ -3,6 +3,7 @@
     "add-dir",
     "agents",
     "batch",
+    "branch",
     "bridge-kick",
     "brief",
     "btw",
@@ -29,7 +30,6 @@
     "fast",
     "feedback",
     "files",
-    "fork",
     "heapdump",
     "help",
     "hooks",
@@ -101,7 +101,7 @@
     "compact": "Clear conversation history but keep a summary in context. Optional: /compact [instructions for summarization]",
     "config": "Open config panel",
     "context": "Visualize current context usage as a colored grid",
-    "copy": "Copy Claude's last response or a code block to clipboard",
+    "copy": "Copy Claude's last response to clipboard (or /copy N for the Nth-latest)",
     "cost": "Show the total cost and duration of the current session",
     "debug": "Enable debug logging for this session and help diagnose issues",
     "diff": "View uncommitted changes and per-turn diffs",
@@ -111,12 +111,10 @@
     "extra-usage": "Configure extra usage to keep working when limits are hit",
     "feedback": "Submit feedback about Claude Code",
     "files": "List all files currently in context",
-    "fork": "Create a fork of the current conversation at this point",
     "heapdump": "Dump the JS heap to ~/Desktop",
     "help": "Show help and available commands",
     "hooks": "View hook configurations for tool events",
     "ide": "Manage IDE integrations and show status",
-    "init": "Initialize a new CLAUDE.md file with codebase documentation",
     "init-verifiers": "Create verifier skill(s) for automated verification of code changes",
     "insights": "Generate a report analyzing your Claude Code sessions",
     "install": "Install Claude Code native build",
@@ -152,6 +150,7 @@
     "add-dir": "available",
     "agents": "available",
     "batch": "available",
+    "branch": "available",
     "bridge-kick": "disabled",
     "brief": "available",
     "btw": "available",
@@ -178,7 +177,6 @@
     "fast": "available",
     "feedback": "available",
     "files": "disabled",
-    "fork": "available",
     "heapdump": "available",
     "help": "available",
     "hooks": "available",
@@ -458,6 +456,11 @@
         "bridge-kick",
         "effort"
       ]
+    },
+    "2.1.77": {
+      "added": [
+        "branch"
+      ]
     }
   },
   "commands_docs": {
@@ -497,6 +500,13 @@
         "skills.md"
       ],
       "mentions": 4
+    },
+    "branch": {
+      "documented": true,
+      "doc_files": [
+        "statusline.md"
+      ],
+      "mentions": 2
     },
     "bridge-kick": {
       "documented": false,
@@ -765,15 +775,6 @@
         "skills.md"
       ],
       "mentions": 3
-    },
-    "fork": {
-      "documented": true,
-      "doc_files": [
-        "changelog.md",
-        "interactive-mode.md",
-        "skills.md"
-      ],
-      "mentions": 4
     },
     "heapdump": {
       "documented": false,
@@ -1387,5 +1388,5 @@
       "mentions": 1
     }
   },
-  "docs_checked_at": "2026-03-14"
+  "docs_checked_at": "2026-03-16"
 }
