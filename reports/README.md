@@ -3,7 +3,7 @@
 Auto-generated tracking data for Claude Code versions, hooks, and commands.
 
 <details>
-<summary>Hooks (22)</summary>
+<summary>Hooks (23)</summary>
 
 | Hook | Since | Documented |
 |------|-------|------------|
@@ -22,6 +22,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 | SessionStart | 2.0.0 | yes |
 | Setup | 2.1.10 | yes |
 | Stop | 2.0.0 | yes |
+| **StopFailure** | 2.1.78 | **no** |
 | SubagentStart | 2.0.43 | yes |
 | SubagentStop | 2.0.0 | yes |
 | TaskCompleted | 2.1.33 | yes |
@@ -128,6 +129,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 
 | Version | Hooks | Commands |
 |---------|-------|----------|
+| 2.1.78 | +StopFailure | — |
 | 2.1.77 | — | +branch |
 | 2.1.76 | +PostCompact | +bridge-kick, +effort |
 | 2.1.72 | — | +brief |
@@ -170,4 +172,4 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 </details>
 
 ---
-*Last updated: 2026-03-16*
+*Last updated: 2026-03-17*

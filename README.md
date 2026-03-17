@@ -5,7 +5,7 @@ An introspection toolkit for examining Claude Code's internals—system prompts,
 And the name? Exactly what you think it is: a whole lot of navel-gazing. The Claude logo even looks like a belly button if you squint even a little bit.
 
 <!-- navel:begin:badges -->
-![Versions](https://img.shields.io/badge/versions-353-blue?style=flat&logo=claude) ![Hooks](https://img.shields.io/badge/hooks-22-green?style=flat&logo=claude) ![Commands](https://img.shields.io/badge/commands-83-orange?style=flat&logo=claude) ![Last sync](https://img.shields.io/badge/last_sync-2026--03--16-lightgrey?style=flat)
+![Versions](https://img.shields.io/badge/versions-354-blue?style=flat&logo=claude) ![Hooks](https://img.shields.io/badge/hooks-23-green?style=flat&logo=claude) ![Commands](https://img.shields.io/badge/commands-83-orange?style=flat&logo=claude) ![Last sync](https://img.shields.io/badge/last_sync-2026--03--17-lightgrey?style=flat)
 <!-- navel:end:badges -->
 
 ## What it does
