@@ -8,12 +8,12 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 | Hook | Since | Documented |
 |------|-------|------------|
 | ConfigChange | 2.1.48 | yes |
-| **Elicitation** | 2.1.63 | **no** |
-| **ElicitationResult** | 2.1.63 | **no** |
+| Elicitation | 2.1.63 | yes |
+| ElicitationResult | 2.1.63 | yes |
 | InstructionsLoaded | 2.1.64 | yes |
 | Notification | 2.0.0 | yes |
 | PermissionRequest | 2.0.45 | yes |
-| **PostCompact** | 2.1.76 | **no** |
+| PostCompact | 2.1.76 | yes |
 | PostToolUse | 2.0.0 | yes |
 | PostToolUseFailure | 2.0.56 | yes |
 | PreCompact | 2.0.0 | yes |
@@ -68,7 +68,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 | /fast | — | 2.1.36 | available | yes |
 | /feedback | Submit feedback about Claude Code | 2.0.0 | available | yes |
 | **/files** | List all files currently in context | 2.0.0 | *disabled* | yes |
-| **/heapdump** | Dump the JS heap to ~/Desktop | 2.1.71 | available | **no** |
+| /heapdump | Dump the JS heap to ~/Desktop | 2.1.71 | available | yes |
 | /help | Show help and available commands | 2.0.0 | available | yes |
 | /hooks | View hook configurations for tool events | 2.0.0 | available | yes |
 | /ide | Manage IDE integrations and show status | 2.0.0 | available | yes |
