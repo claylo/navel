@@ -112,26 +112,17 @@
         "security.md",
         "server-managed-settings.md"
       ],
-      "mentions": 23
+      "mentions": 22
     },
     "Elicitation": {
-      "documented": true,
-      "doc_files": [
-        "changelog.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "mcp.md"
-      ],
-      "mentions": 26
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "ElicitationResult": {
-      "documented": true,
-      "doc_files": [
-        "changelog.md",
-        "hooks-guide.md",
-        "hooks.md"
-      ],
-      "mentions": 13
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "InstructionsLoaded": {
       "documented": true,
@@ -154,7 +145,7 @@
         "statusline.md",
         "terminal-config.md"
       ],
-      "mentions": 37
+      "mentions": 28
     },
     "PermissionRequest": {
       "documented": true,
@@ -164,16 +155,12 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 32
+      "mentions": 25
     },
     "PostCompact": {
-      "documented": true,
-      "doc_files": [
-        "changelog.md",
-        "hooks-guide.md",
-        "hooks.md"
-      ],
-      "mentions": 12
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "PostToolUse": {
       "documented": true,
@@ -187,7 +174,7 @@
         "sub-agents.md",
         "troubleshooting.md"
       ],
-      "mentions": 63
+      "mentions": 62
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -206,7 +193,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 14
+      "mentions": 13
     },
     "PreToolUse": {
       "documented": true,
@@ -219,29 +206,27 @@
         "plugins-reference.md",
         "sub-agents.md"
       ],
-      "mentions": 73
+      "mentions": 71
     },
     "SessionEnd": {
       "documented": true,
       "doc_files": [
         "changelog.md",
-        "env-vars.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 22
+      "mentions": 19
     },
     "SessionStart": {
       "documented": true,
       "doc_files": [
         "changelog.md",
         "claude-code-on-the-web.md",
-        "env-vars.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
-        "tools-reference.md"
+        "settings.md"
       ],
       "mentions": 38
     },
@@ -267,10 +252,10 @@
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
-        "sub-agents.md",
-        "tools-reference.md"
+        "settings.md",
+        "sub-agents.md"
       ],
-      "mentions": 64
+      "mentions": 63
     },
     "StopFailure": {
       "documented": false,
@@ -286,7 +271,7 @@
         "plugins-reference.md",
         "sub-agents.md"
       ],
-      "mentions": 20
+      "mentions": 19
     },
     "SubagentStop": {
       "documented": true,
@@ -308,7 +293,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 20
+      "mentions": 19
     },
     "TeammateIdle": {
       "documented": true,
@@ -352,5 +337,5 @@
       "mentions": 19
     }
   },
-  "docs_checked_at": "2026-03-17"
+  "docs_checked_at": "2026-03-18"
 }
