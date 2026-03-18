@@ -34,7 +34,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 </details>
 
 <details>
-<summary>Commands (83)</summary>
+<summary>Commands (84)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -121,6 +121,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 | /usage | Show plan usage limits | 2.0.0 | available | yes |
 | /vim | Toggle between Vim and Normal editing modes | 2.0.0 | available | yes |
 | /voice | Toggle voice mode | 2.1.59 | available | yes |
+| **/web-setup** | Setup Claude Code on the web (requires connecting your Gi... | 2.1.79 | available | **no** |
 
 </details>
 
@@ -129,6 +130,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 
 | Version | Hooks | Commands |
 |---------|-------|----------|
+| 2.1.79 | — | +web-setup |
 | 2.1.78 | +StopFailure | — |
 | 2.1.77 | — | +branch |
 | 2.1.76 | +PostCompact | +bridge-kick, +effort |
