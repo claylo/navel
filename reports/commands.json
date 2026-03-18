@@ -82,7 +82,8 @@
     "upgrade",
     "usage",
     "vim",
-    "voice"
+    "voice",
+    "web-setup"
   ],
   "descriptions": {
     "add-dir": "Add a new working directory",
@@ -144,7 +145,8 @@
     "upgrade": "Upgrade to Max for higher rate limits and more Opus",
     "usage": "Show plan usage limits",
     "vim": "Toggle between Vim and Normal editing modes",
-    "voice": "Toggle voice mode"
+    "voice": "Toggle voice mode",
+    "web-setup": "Setup Claude Code on the web (requires connecting your GitHub account)"
   },
   "status": {
     "add-dir": "available",
@@ -229,7 +231,8 @@
     "upgrade": "available",
     "usage": "available",
     "vim": "available",
-    "voice": "available"
+    "voice": "available",
+    "web-setup": "available"
   },
   "commands_history": {
     "2.0.0": {
@@ -460,6 +463,11 @@
     "2.1.77": {
       "added": [
         "branch"
+      ]
+    },
+    "2.1.79": {
+      "added": [
+        "web-setup"
       ]
     }
   },
@@ -1386,6 +1394,11 @@
         "changelog.md"
       ],
       "mentions": 1
+    },
+    "web-setup": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     }
   },
   "docs_checked_at": "2026-03-18"
