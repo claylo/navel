@@ -39,10 +39,15 @@ const RAW_OUTPUT_FILE = join(RAW_OUTPUT_DIR, 'captured-payload.json');
 // Arg parsing
 // ---------------------------------------------------------------------------
 
+// Capture modes:
+//   'clean' (default) — suppresses plugins, MCP, settings, caching, thinking
+//   'full'            — user's real environment, prompt caching OFF
+//   'full-cached'     — user's real environment, prompt caching ON
 function parseArgs(argv) {
   const args = argv.slice(2);
   let cliPath = null;
   let realAuth = false;
+  let mode = 'clean';
   const passthroughArgs = [];
 
   const sepIdx = args.indexOf('--');
@@ -54,13 +59,17 @@ function parseArgs(argv) {
       passthroughArgs.push('--model', ownArgs[++i]);
     } else if (ownArgs[i] === '--real-auth') {
       realAuth = true;
+    } else if (ownArgs[i] === '--full') {
+      mode = 'full';
+    } else if (ownArgs[i] === '--full-prompt-caching') {
+      mode = 'full-cached';
     } else if (!ownArgs[i].startsWith('-')) {
       cliPath = ownArgs[i];
     }
   }
 
   passthroughArgs.push(...extraArgs);
-  return { cliPath, passthroughArgs, realAuth };
+  return { cliPath, passthroughArgs, realAuth, mode };
 }
 
 // ---------------------------------------------------------------------------
@@ -241,15 +250,24 @@ function createNoPluginsDir(baseDir) {
 // Spawn Claude Code
 // ---------------------------------------------------------------------------
 
-function spawnClaude(cliPath, port, { passthroughArgs, realAuth }) {
+function spawnClaude(cliPath, port, { passthroughArgs, realAuth, mode }) {
+  const isClean = mode === 'clean';
+  const disableCaching = mode !== 'full-cached';
+
   const env = {
     ...process.env,
     ANTHROPIC_BASE_URL: `http://127.0.0.1:${port}`,
     NO_COLOR: '1',
-    DISABLE_PROMPT_CACHING: '1',
-    MAX_THINKING_TOKENS: '0',
-    CLAUDE_CODE_PLUGIN_CACHE_DIR: createNoPluginsDir(RAW_OUTPUT_DIR),
   };
+
+  if (disableCaching) {
+    env.DISABLE_PROMPT_CACHING = '1';
+  }
+
+  if (isClean) {
+    env.MAX_THINKING_TOKENS = '0';
+    env.CLAUDE_CODE_PLUGIN_CACHE_DIR = createNoPluginsDir(RAW_OUTPUT_DIR);
+  }
 
   // In real-auth mode, keep the user's existing API key or session auth.
   // Otherwise use a fake key (the gateway responds before it matters).
@@ -261,15 +279,17 @@ function spawnClaude(cliPath, port, { passthroughArgs, realAuth }) {
 
   claudeArgs.push('--no-session-persistence');
 
-  const emptyMcpConfig = join(RAW_OUTPUT_DIR, 'empty-mcp.json');
-  mkdirSync(RAW_OUTPUT_DIR, { recursive: true });
-  writeFileSync(emptyMcpConfig, '{"mcpServers":{}}');
-  claudeArgs.push('--strict-mcp-config', '--mcp-config', emptyMcpConfig);
-  claudeArgs.push('--settings', '{}')
-  claudeArgs.push('--setting-sources', 'local')
+  if (isClean) {
+    const emptyMcpConfig = join(RAW_OUTPUT_DIR, 'empty-mcp.json');
+    mkdirSync(RAW_OUTPUT_DIR, { recursive: true });
+    writeFileSync(emptyMcpConfig, '{"mcpServers":{}}');
+    claudeArgs.push('--strict-mcp-config', '--mcp-config', emptyMcpConfig);
+    claudeArgs.push('--settings', '{}');
+    claudeArgs.push('--setting-sources', 'local');
 
-  const noPluginsDir = createNoPluginsDir(RAW_OUTPUT_DIR);
-  claudeArgs.push('--plugin-dir', noPluginsDir);
+    const noPluginsDir = createNoPluginsDir(RAW_OUTPUT_DIR);
+    claudeArgs.push('--plugin-dir', noPluginsDir);
+  }
 
   claudeArgs.push(...passthroughArgs);
 
@@ -306,12 +326,19 @@ function spawnClaude(cliPath, port, { passthroughArgs, realAuth }) {
 // Format captured payload as markdown
 // ---------------------------------------------------------------------------
 
-function formatOutput(payload, version) {
+function formatOutput(payload, version, mode) {
+  const modeLabel = {
+    clean: 'clean (baseline — plugins, MCP, settings suppressed)',
+    full: 'full (user environment, prompt caching OFF)',
+    'full-cached': 'full (user environment, prompt caching ON)',
+  }[mode] || mode;
+
   const lines = [];
 
   lines.push(`# Claude Code v${version} — System Prompt (API capture)`);
   lines.push('');
   lines.push('Captured by intercepting the Anthropic API request.');
+  lines.push(`Mode: ${modeLabel}`);
   lines.push(`Model: ${payload.model || 'unknown'}`);
   lines.push(`Stream: ${payload.stream ?? 'unknown'}`);
   lines.push(`Max tokens: ${payload.max_tokens ?? 'unknown'}`);
@@ -394,11 +421,11 @@ function saveRawPayload(payload) {
 // ---------------------------------------------------------------------------
 
 async function main() {
-  const { cliPath, passthroughArgs, realAuth } = parseArgs(process.argv);
+  const { cliPath, passthroughArgs, realAuth, mode } = parseArgs(process.argv);
   if (!cliPath || !existsSync(cliPath)) {
     console.error(
       'Path to cli.js is required.\n' +
-      'Usage: node api-capture.mjs [--real-auth] <path-to-cli.js> [-- claude-code-flags...]',
+      'Usage: node api-capture.mjs [--real-auth] [--full | --full-prompt-caching] <path-to-cli.js> [-- claude-code-flags...]',
     );
     process.exit(1);
   }
@@ -406,6 +433,7 @@ async function main() {
   const version = extractVersion(cliPath);
   console.error(`Target: ${cliPath}`);
   console.error(`Version: ${version}`);
+  console.error(`Mode: ${mode}`);
   if (realAuth) console.error('Auth: real (using existing credentials)');
   if (passthroughArgs.length > 0) {
     console.error(`Pass-through flags: ${passthroughArgs.join(' ')}`);
@@ -419,7 +447,7 @@ async function main() {
   });
   const { port } = server.address();
 
-  const proc = spawnClaude(cliPath, port, { passthroughArgs, realAuth });
+  const proc = spawnClaude(cliPath, port, { passthroughArgs, realAuth, mode });
 
   const cleanup = () => {
     proc.kill('SIGTERM');
@@ -441,7 +469,7 @@ async function main() {
 
   saveRawPayload(payload);
 
-  const md = formatOutput(payload, version);
+  const md = formatOutput(payload, version, mode);
   process.stdout.write(md);
 
   const systemBlocks = Array.isArray(payload.system) ? payload.system.length : 1;

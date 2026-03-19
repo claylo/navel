@@ -71,6 +71,7 @@ cmd_count() {
 cmd_capture() {
   local verbose=false
   local real_auth=false
+  local capture_mode=""
   local model="$DEFAULT_MODEL"
 
   while [[ "${1:-}" == -* && "${1:-}" != "--" ]]; do
@@ -78,6 +79,8 @@ cmd_capture() {
       -v|--verbose) verbose=true; shift ;;
       -m|--model) model="$2"; shift 2 ;;
       --real-auth) real_auth=true; shift ;;
+      --full) capture_mode="--full"; shift ;;
+      --full-prompt-caching) capture_mode="--full-prompt-caching"; shift ;;
       *) die "unknown flag: $1" ;;
     esac
   done
@@ -97,6 +100,7 @@ cmd_capture() {
 
   local capture_flags=()
   $real_auth && capture_flags+=(--real-auth)
+  [[ -n "$capture_mode" ]] && capture_flags+=("$capture_mode")
 
   local cmd=(node "$JS_DIR/api-capture.mjs" "${capture_flags[@]}" "$cli" -- --model "$model" "$@")
 
@@ -310,6 +314,10 @@ Capture (from npm cache only):
       -v, --verbose                  Show gateway diagnostics on stderr
       -m, --model <model>            Model to request (default: opus)
       --real-auth                    Use real API key / session auth
+      --full                         Capture with user's real environment
+                                     (plugins, MCP, settings — caching OFF)
+      --full-prompt-caching          Same as --full but with prompt caching ON
+                                     (shows cache boundary markers)
 
     Claude flags (after --) are passed through to Claude Code.
     Useful flags to explore:
