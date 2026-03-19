@@ -1,0 +1,115 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_ROOT="${NAVEL_HOME:-$(cd "$(dirname "$0")/.." && pwd)}"
+
+cd "${REPO_ROOT}/npm"
+mkdir -p "${REPO_ROOT}/reports"
+
+# Phase 1: Scan versions, build env vars history
+cache_dir="${REPO_ROOT}/npm/.cache/env-vars"
+mkdir -p "$cache_dir"
+
+prev_vars=""
+history="{}"
+latest_vars=""
+
+while IFS= read -r version; do
+  dir="v${version}"
+  cli="versions/$dir/node_modules/@anthropic-ai/claude-code/cli.js"
+  [[ -f "$cli" ]] || continue
+
+  cache_file="${cache_dir}/${version}.txt"
+
+  if [[ -f "$cache_file" ]]; then
+    vars=$(cat "$cache_file")
+  else
+    vars=$(rg -o 'process\.env\.[A-Z_][A-Z0-9_]*' "$cli" 2>/dev/null \
+      | sed 's/process\.env\.//' \
+      | sort -u \
+      | tr '\n' ' ' || true)
+    echo "$vars" > "$cache_file"
+  fi
+
+  if [[ -n "$vars" ]]; then
+    current_sorted=$(echo "$vars" | tr ' ' '\n' | grep -v '^$' | sort || true)
+    prev_sorted=$(echo "$prev_vars" | tr ' ' '\n' | grep -v '^$' | sort || true)
+
+    added=$(comm -23 <(echo "$current_sorted") <(echo "$prev_sorted"))
+    removed=$(comm -13 <(echo "$current_sorted") <(echo "$prev_sorted"))
+
+    entry="{}"
+    if [[ -n "$added" ]]; then
+      added_json=$(echo "$added" | jq -R . | jq -s .)
+      entry=$(echo "$entry" | jq --argjson a "$added_json" '. + {added: $a}')
+    fi
+    if [[ -n "$removed" ]]; then
+      removed_json=$(echo "$removed" | jq -R . | jq -s .)
+      entry=$(echo "$entry" | jq --argjson r "$removed_json" '. + {removed: $r}')
+    fi
+
+    if [[ "$entry" != "{}" ]]; then
+      history=$(echo "$history" | jq \
+        --arg v "$version" --argjson e "$entry" \
+        '. + {($v): $e}')
+    fi
+
+    prev_vars="$vars"
+    latest_vars="$vars"
+  fi
+done < <(jq -r '.[]' versions.json | sort -V)
+
+if [[ -n "$latest_vars" ]]; then
+  vars_json=$(echo "$latest_vars" | tr ' ' '\n' | grep -v '^$' | sort | jq -R . | jq -s .)
+else
+  vars_json='[]'
+fi
+
+# Phase 2: Scan docs for env var documentation
+docs_dir="${REPO_ROOT}/docs"
+today=$(date +%Y-%m-%d)
+
+if [[ -d "$docs_dir" ]] && ls "$docs_dir"/*.md &>/dev/null; then
+  all_docs=$(mktemp)
+  for md in "$docs_dir"/*.md; do
+    fname=$(basename "$md")
+    sed "s|^|${fname}:|" "$md"
+  done > "$all_docs"
+
+  vars_docs=$(
+    while IFS= read -r var; do
+      mentions=$(grep -c "$var" "$all_docs" 2>/dev/null || true)
+      mentions=${mentions:-0}
+      if [[ "$mentions" -gt 0 ]]; then
+        files_json=$(grep "$var" "$all_docs" 2>/dev/null \
+          | cut -d: -f1 | sort -u | jq -R . | jq -s .)
+        jq -n --arg v "$var" --argjson f "$files_json" --argjson m "$mentions" \
+          '{($v): {documented: true, doc_files: $f, mentions: $m}}'
+      else
+        jq -n --arg v "$var" \
+          '{($v): {documented: false, doc_files: [], mentions: 0}}'
+      fi
+    done < <(echo "$vars_json" | jq -r '.[]') | jq -s 'add // {}'
+  )
+
+  rm -f "$all_docs"
+else
+  echo "Warning: no docs found at $docs_dir — skipping docs scan"
+  vars_docs="{}"
+fi
+
+# Write env-vars.json
+jq -n \
+  --argjson env_vars "$vars_json" \
+  --argjson history "$history" \
+  --argjson docs "$vars_docs" \
+  --arg date "$today" \
+  '{env_vars: $env_vars, env_vars_history: $history, env_vars_docs: $docs, docs_checked_at: $date}' > "${REPO_ROOT}/reports/env-vars.json"
+
+# Revert if only the date changed (avoid noise commits)
+if git diff -- "${REPO_ROOT}/reports/env-vars.json" | grep '^[+-]' | grep -v '^[+-][+-][+-]' | grep -qv 'docs_checked_at'; then
+  echo "Updated reports/env-vars.json ($(echo "$vars_json" | jq length) env vars, docs checked $today)"
+else
+  git checkout -- "${REPO_ROOT}/reports/env-vars.json" 2>/dev/null || true
+  echo "reports/env-vars.json unchanged (docs checked $today)"
+fi
