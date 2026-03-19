@@ -114,6 +114,9 @@ cmd_update() {
   echo "==> Syncing commands..."
   "$LIBEXEC/update-commands-list"
   echo ""
+  echo "==> Syncing env vars..."
+  "$LIBEXEC/update-env-vars-list"
+  echo ""
   echo "==> Updating README..."
   "$LIBEXEC/update-readme"
   echo ""
@@ -344,6 +347,7 @@ Sync:
   npm sync                     Download new Claude Code versions from registry
   hooks sync                   Scan cached versions for hook events
   commands sync                Scan cached versions for bundled slash commands
+  env-vars sync                Scan cached versions for environment variables
   docs sync                    Fetch Claude Code documentation
 
 Docs:
@@ -404,6 +408,11 @@ case "${1:-}" in
     case "${2:-}" in
       sync) "$LIBEXEC/update-commands-list" ;;
       *)    die "usage: navel commands sync" ;;
+    esac ;;
+  env-vars)
+    case "${2:-}" in
+      sync) "$LIBEXEC/update-env-vars-list" ;;
+      *)    die "usage: navel env-vars sync" ;;
     esac ;;
   docs)
     case "${2:-}" in

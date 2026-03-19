@@ -1,0 +1,5144 @@
+{
+  "env_vars": [
+    "__CFB",
+    "ALACRITTY_LOG",
+    "ANALYTICS_LOG_TOOL_DETAILS",
+    "ANTHROPIC_API_KEY",
+    "ANTHROPIC_AUTH_TOKEN",
+    "ANTHROPIC_BASE_URL",
+    "ANTHROPIC_BEDROCK_BASE_URL",
+    "ANTHROPIC_BETAS",
+    "ANTHROPIC_CUSTOM_HEADERS",
+    "ANTHROPIC_CUSTOM_MODEL_OPTION",
+    "ANTHROPIC_CUSTOM_MODEL_OPTION_DESCRIPTION",
+    "ANTHROPIC_CUSTOM_MODEL_OPTION_NAME",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL",
+    "ANTHROPIC_FOUNDRY_API_KEY",
+    "ANTHROPIC_FOUNDRY_BASE_URL",
+    "ANTHROPIC_FOUNDRY_RESOURCE",
+    "ANTHROPIC_MODEL",
+    "ANTHROPIC_SMALL_FAST_MODEL",
+    "ANTHROPIC_SMALL_FAST_MODEL_AWS_REGION",
+    "ANTHROPIC_UNIX_SOCKET",
+    "ANTHROPIC_VERTEX_PROJECT_ID",
+    "API_TIMEOUT_MS",
+    "APP_URL",
+    "APPDATA",
+    "AUDIO_CAPTURE_NODE_PATH",
+    "AWS_ACCESS_KEY_ID",
+    "AWS_BEARER_TOKEN_BEDROCK",
+    "AWS_DEFAULT_REGION",
+    "AWS_EXECUTION_ENV",
+    "AWS_LAMBDA_BENCHMARK_MODE",
+    "AWS_LAMBDA_FUNCTION_NAME",
+    "AWS_LOGIN_CACHE_DIRECTORY",
+    "AWS_PROFILE",
+    "AWS_REGION",
+    "AWS_SECRET_ACCESS_KEY",
+    "AWS_SESSION_TOKEN",
+    "AZURE_ADDITIONALLY_ALLOWED_TENANTS",
+    "AZURE_AUTHORITY_HOST",
+    "AZURE_CLIENT_CERTIFICATE_PASSWORD",
+    "AZURE_CLIENT_CERTIFICATE_PATH",
+    "AZURE_CLIENT_ID",
+    "AZURE_CLIENT_SECRET",
+    "AZURE_CLIENT_SEND_CERTIFICATE_CHAIN",
+    "AZURE_FEDERATED_TOKEN_FILE",
+    "AZURE_FUNCTIONS_ENVIRONMENT",
+    "AZURE_IDENTITY_DISABLE_MULTITENANTAUTH",
+    "AZURE_PASSWORD",
+    "AZURE_POD_IDENTITY_AUTHORITY_HOST",
+    "AZURE_REGIONAL_AUTHORITY_NAME",
+    "AZURE_TENANT_ID",
+    "AZURE_TOKEN_CREDENTIALS",
+    "AZURE_USERNAME",
+    "BASH_MAX_OUTPUT_LENGTH",
+    "BEDROCK_BASE_URL",
+    "BETA_TRACING_ENDPOINT",
+    "BROWSER",
+    "BUILDKITE",
+    "C",
+    "CCR_ENABLE_BUNDLE",
+    "CCR_FORCE_BUNDLE",
+    "CF_PAGES",
+    "CHOKIDAR_INTERVAL",
+    "CHOKIDAR_USEPOLLING",
+    "CIRCLECI",
+    "CLAUBBIT",
+    "CLAUDE_AFTER_LAST_COMPACT",
+    "CLAUDE_AGENT_SDK_CLIENT_APP",
+    "CLAUDE_AGENT_SDK_DISABLE_BUILTIN_AGENTS",
+    "CLAUDE_AGENT_SDK_MCP_NO_PREFIX",
+    "CLAUDE_AGENT_SDK_VERSION",
+    "CLAUDE_AUTO_BACKGROUND_TASKS",
+    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE",
+    "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR",
+    "CLAUDE_BRIDGE_USE_CCR_V2",
+    "CLAUDE_CHROME_PERMISSION_MODE",
+    "CLAUDE_CODE_ACCESSIBILITY",
+    "CLAUDE_CODE_ACCOUNT_TAGGED_ID",
+    "CLAUDE_CODE_ACCOUNT_UUID",
+    "CLAUDE_CODE_ACTION",
+    "CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD",
+    "CLAUDE_CODE_ADDITIONAL_PROTECTION",
+    "CLAUDE_CODE_ALWAYS_ENABLE_EFFORT",
+    "CLAUDE_CODE_API_BASE_URL",
+    "CLAUDE_CODE_API_KEY_FILE_DESCRIPTOR",
+    "CLAUDE_CODE_API_KEY_HELPER_TTL_MS",
+    "CLAUDE_CODE_ATTRIBUTION_HEADER",
+    "CLAUDE_CODE_AUTO_COMPACT_WINDOW",
+    "CLAUDE_CODE_AUTO_CONNECT_IDE",
+    "CLAUDE_CODE_BASE_REF",
+    "CLAUDE_CODE_BASH_SANDBOX_SHOW_INDICATOR",
+    "CLAUDE_CODE_BLOCKING_LIMIT_OVERRIDE",
+    "CLAUDE_CODE_BRIEF",
+    "CLAUDE_CODE_BRIEF_UPLOAD",
+    "CLAUDE_CODE_BUBBLEWRAP",
+    "CLAUDE_CODE_CLIENT_CERT",
+    "CLAUDE_CODE_CLIENT_KEY",
+    "CLAUDE_CODE_CLIENT_KEY_PASSPHRASE",
+    "CLAUDE_CODE_CONTAINER_ID",
+    "CLAUDE_CODE_CUSTOM_OAUTH_URL",
+    "CLAUDE_CODE_DATADOG_FLUSH_INTERVAL_MS",
+    "CLAUDE_CODE_DEBUG_LOG_LEVEL",
+    "CLAUDE_CODE_DEBUG_LOGS_DIR",
+    "CLAUDE_CODE_DIAGNOSTICS_FILE",
+    "CLAUDE_CODE_DISABLE_1M_CONTEXT",
+    "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING",
+    "CLAUDE_CODE_DISABLE_ATTACHMENTS",
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY",
+    "CLAUDE_CODE_DISABLE_BACKGROUND_TASKS",
+    "CLAUDE_CODE_DISABLE_CLAUDE_MDS",
+    "CLAUDE_CODE_DISABLE_COMMAND_INJECTION_CHECK",
+    "CLAUDE_CODE_DISABLE_CRON",
+    "CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS",
+    "CLAUDE_CODE_DISABLE_FAST_MODE",
+    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY",
+    "CLAUDE_CODE_DISABLE_FILE_CHECKPOINTING",
+    "CLAUDE_CODE_DISABLE_GIT_INSTRUCTIONS",
+    "CLAUDE_CODE_DISABLE_LEGACY_MODEL_REMAP",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC",
+    "CLAUDE_CODE_DISABLE_OFFICIAL_MARKETPLACE_AUTOINSTALL",
+    "CLAUDE_CODE_DISABLE_PRECOMPACT_SKIP",
+    "CLAUDE_CODE_DISABLE_TERMINAL_TITLE",
+    "CLAUDE_CODE_DISABLE_THINKING",
+    "CLAUDE_CODE_DISABLE_VIRTUAL_SCROLL",
+    "CLAUDE_CODE_DONT_INHERIT_ENV",
+    "CLAUDE_CODE_EAGER_FLUSH",
+    "CLAUDE_CODE_EFFORT_LEVEL",
+    "CLAUDE_CODE_EMIT_TOOL_USE_SUMMARIES",
+    "CLAUDE_CODE_ENABLE_CFC",
+    "CLAUDE_CODE_ENABLE_FINE_GRAINED_TOOL_STREAMING",
+    "CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION",
+    "CLAUDE_CODE_ENABLE_SDK_FILE_CHECKPOINTING",
+    "CLAUDE_CODE_ENABLE_TASKS",
+    "CLAUDE_CODE_ENABLE_TELEMETRY",
+    "CLAUDE_CODE_ENABLE_TOKEN_USAGE_ATTACHMENT",
+    "CLAUDE_CODE_ENHANCED_TELEMETRY_BETA",
+    "CLAUDE_CODE_ENTRYPOINT",
+    "CLAUDE_CODE_ENVIRONMENT_KIND",
+    "CLAUDE_CODE_ENVIRONMENT_RUNNER_VERSION",
+    "CLAUDE_CODE_EXIT_AFTER_FIRST_RENDER",
+    "CLAUDE_CODE_EXIT_AFTER_STOP_DELAY",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS",
+    "CLAUDE_CODE_EXTRA_BODY",
+    "CLAUDE_CODE_EXTRA_METADATA",
+    "CLAUDE_CODE_FILE_READ_MAX_OUTPUT_TOKENS",
+    "CLAUDE_CODE_FORCE_FULL_LOGO",
+    "CLAUDE_CODE_FORCE_GLOBAL_CACHE",
+    "CLAUDE_CODE_FRAME_TIMING_LOG",
+    "CLAUDE_CODE_GIT_BASH_PATH",
+    "CLAUDE_CODE_GLOB_HIDDEN",
+    "CLAUDE_CODE_GLOB_NO_IGNORE",
+    "CLAUDE_CODE_GLOB_TIMEOUT_SECONDS",
+    "CLAUDE_CODE_HOST_PLATFORM",
+    "CLAUDE_CODE_IDE_HOST_OVERRIDE",
+    "CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL",
+    "CLAUDE_CODE_IDE_SKIP_VALID_CHECK",
+    "CLAUDE_CODE_INCLUDE_PARTIAL_MESSAGES",
+    "CLAUDE_CODE_IS_COWORK",
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS",
+    "CLAUDE_CODE_MAX_RETRIES",
+    "CLAUDE_CODE_MAX_TOOL_USE_CONCURRENCY",
+    "CLAUDE_CODE_MCP_INSTR_DELTA",
+    "CLAUDE_CODE_NEW_INIT",
+    "CLAUDE_CODE_OAUTH_CLIENT_ID",
+    "CLAUDE_CODE_OAUTH_REFRESH_TOKEN",
+    "CLAUDE_CODE_OAUTH_SCOPES",
+    "CLAUDE_CODE_OAUTH_TOKEN",
+    "CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR",
+    "CLAUDE_CODE_ORGANIZATION_UUID",
+    "CLAUDE_CODE_OTEL_FLUSH_TIMEOUT_MS",
+    "CLAUDE_CODE_OTEL_HEADERS_HELPER_DEBOUNCE_MS",
+    "CLAUDE_CODE_OTEL_SHUTDOWN_TIMEOUT_MS",
+    "CLAUDE_CODE_PERFETTO_TRACE",
+    "CLAUDE_CODE_PLAN_MODE_INTERVIEW_PHASE",
+    "CLAUDE_CODE_PLAN_MODE_REQUIRED",
+    "CLAUDE_CODE_PLAN_V2_AGENT_COUNT",
+    "CLAUDE_CODE_PLAN_V2_EXPLORE_AGENT_COUNT",
+    "CLAUDE_CODE_PLUGIN_CACHE_DIR",
+    "CLAUDE_CODE_PLUGIN_GIT_TIMEOUT_MS",
+    "CLAUDE_CODE_PLUGIN_SEED_DIR",
+    "CLAUDE_CODE_PLUGIN_USE_ZIP_CACHE",
+    "CLAUDE_CODE_POST_FOR_SESSION_INGRESS_V2",
+    "CLAUDE_CODE_PROFILE_STARTUP",
+    "CLAUDE_CODE_PROXY_RESOLVES_HOSTS",
+    "CLAUDE_CODE_QUESTION_PREVIEW_FORMAT",
+    "CLAUDE_CODE_REMOTE",
+    "CLAUDE_CODE_REMOTE_ENVIRONMENT_TYPE",
+    "CLAUDE_CODE_REMOTE_MEMORY_DIR",
+    "CLAUDE_CODE_REMOTE_SEND_KEEPALIVES",
+    "CLAUDE_CODE_REMOTE_SESSION_ID",
+    "CLAUDE_CODE_RESUME_INTERRUPTED_TURN",
+    "CLAUDE_CODE_SAVE_HOOK_ADDITIONAL_CONTEXT",
+    "CLAUDE_CODE_SEARCH_HINTS_IN_LIST",
+    "CLAUDE_CODE_SESSION_ACCESS_TOKEN",
+    "CLAUDE_CODE_SESSIONEND_HOOKS_TIMEOUT_MS",
+    "CLAUDE_CODE_SHELL",
+    "CLAUDE_CODE_SHELL_PREFIX",
+    "CLAUDE_CODE_SIMPLE",
+    "CLAUDE_CODE_SKIP_BEDROCK_AUTH",
+    "CLAUDE_CODE_SKIP_FAST_MODE_NETWORK_ERRORS",
+    "CLAUDE_CODE_SKIP_FOUNDRY_AUTH",
+    "CLAUDE_CODE_SKIP_PROMPT_HISTORY",
+    "CLAUDE_CODE_SKIP_VERTEX_AUTH",
+    "CLAUDE_CODE_SLOW_OPERATION_THRESHOLD_MS",
+    "CLAUDE_CODE_SSE_PORT",
+    "CLAUDE_CODE_STALL_TIMEOUT_MS_FOR_TESTING",
+    "CLAUDE_CODE_SUBAGENT_MODEL",
+    "CLAUDE_CODE_SUBPROCESS_ENV_SCRUB",
+    "CLAUDE_CODE_SYNC_PLUGIN_INSTALL",
+    "CLAUDE_CODE_SYNC_PLUGIN_INSTALL_TIMEOUT_MS",
+    "CLAUDE_CODE_SYNTAX_HIGHLIGHT",
+    "CLAUDE_CODE_TAGS",
+    "CLAUDE_CODE_TASK_LIST_ID",
+    "CLAUDE_CODE_TEST_FIXTURES_ROOT",
+    "CLAUDE_CODE_TMPDIR",
+    "CLAUDE_CODE_TMUX_PREFIX",
+    "CLAUDE_CODE_TMUX_PREFIX_CONFLICTS",
+    "CLAUDE_CODE_TMUX_SESSION",
+    "CLAUDE_CODE_USE_BEDROCK",
+    "CLAUDE_CODE_USE_CCR_V2",
+    "CLAUDE_CODE_USE_COWORK_PLUGINS",
+    "CLAUDE_CODE_USE_FOUNDRY",
+    "CLAUDE_CODE_USE_NATIVE_FILE_SEARCH",
+    "CLAUDE_CODE_USE_VERTEX",
+    "CLAUDE_CODE_USER_EMAIL",
+    "CLAUDE_CODE_WEBSOCKET_AUTH_FILE_DESCRIPTOR",
+    "CLAUDE_CODE_WORKER_EPOCH",
+    "CLAUDE_CODE_WORKSPACE_HOST_PATHS",
+    "CLAUDE_CONFIG_DIR",
+    "CLAUDE_COWORK_MEMORY_EXTRA_GUIDELINES",
+    "CLAUDE_COWORK_MEMORY_PATH_OVERRIDE",
+    "CLAUDE_DEBUG",
+    "CLAUDE_ENABLE_STREAM_WATCHDOG",
+    "CLAUDE_ENV_FILE",
+    "CLAUDE_FORCE_DISPLAY_SURVEY",
+    "CLAUDE_REPL_MODE",
+    "CLAUDE_TMPDIR",
+    "CLI_WIDTH",
+    "CLOUD_ML_REGION",
+    "CLOUD_RUN_JOB",
+    "CODESPACES",
+    "COLORTERM",
+    "COREPACK_ENABLE_AUTO_PIN",
+    "CURSOR_TRACE_ID",
+    "DEBUG",
+    "DEBUG_AUTH",
+    "DEBUG_SDK",
+    "DEMO_VERSION",
+    "DENO_DEPLOYMENT_ID",
+    "DETECT_GCP_RETRIES",
+    "DISABLE_AUTO_COMPACT",
+    "DISABLE_AUTO_MIGRATE_TO_NATIVE",
+    "DISABLE_AUTOUPDATER",
+    "DISABLE_BUG_COMMAND",
+    "DISABLE_CLAUDE_CODE_SM_COMPACT",
+    "DISABLE_COMPACT",
+    "DISABLE_COST_WARNINGS",
+    "DISABLE_DOCTOR_COMMAND",
+    "DISABLE_ERROR_REPORTING",
+    "DISABLE_EXTRA_USAGE_COMMAND",
+    "DISABLE_FEEDBACK_COMMAND",
+    "DISABLE_INSTALL_GITHUB_APP_COMMAND",
+    "DISABLE_INSTALLATION_CHECKS",
+    "DISABLE_INTERLEAVED_THINKING",
+    "DISABLE_LOGIN_COMMAND",
+    "DISABLE_LOGOUT_COMMAND",
+    "DISABLE_PROMPT_CACHING",
+    "DISABLE_PROMPT_CACHING_HAIKU",
+    "DISABLE_PROMPT_CACHING_OPUS",
+    "DISABLE_PROMPT_CACHING_SONNET",
+    "DISABLE_TELEMETRY",
+    "DISABLE_UPGRADE_COMMAND",
+    "DYNO",
+    "EDITOR",
+    "EMBEDDED_SEARCH_TOOLS",
+    "ENABLE_BETA_TRACING_DETAILED",
+    "ENABLE_CLAUDE_CODE_SM_COMPACT",
+    "ENABLE_CLAUDEAI_MCP_SERVERS",
+    "ENABLE_ENHANCED_TELEMETRY_BETA",
+    "ENABLE_MCP_LARGE_OUTPUT_FILES",
+    "ENABLE_PROMPT_CACHING_1H_BEDROCK",
+    "ENABLE_TOOL_SEARCH",
+    "FALLBACK_FOR_ALL_PRIMARY_MODELS",
+    "FLY_APP_NAME",
+    "FLY_MACHINE_ID",
+    "FORCE_AUTOUPDATE_PLUGINS",
+    "FORCE_CODE_TERMINAL",
+    "FUNCTION_NAME",
+    "FUNCTION_TARGET",
+    "GAE_MODULE_NAME",
+    "GAE_SERVICE",
+    "GCE_METADATA_HOST",
+    "GCE_METADATA_IP",
+    "GCLOUD_PROJECT",
+    "GITHUB_ACTION_INPUTS",
+    "GITHUB_ACTION_PATH",
+    "GITHUB_ACTIONS",
+    "GITHUB_ACTOR",
+    "GITHUB_ACTOR_ID",
+    "GITHUB_EVENT_NAME",
+    "GITHUB_REPOSITORY",
+    "GITHUB_REPOSITORY_ID",
+    "GITHUB_REPOSITORY_OWNER",
+    "GITHUB_REPOSITORY_OWNER_ID",
+    "GITLAB_CI",
+    "GITPOD_WORKSPACE_ID",
+    "GNOME_TERMINAL_SERVICE",
+    "GOOGLE_APPLICATION_CREDENTIALS",
+    "GOOGLE_CLOUD_PROJECT",
+    "GOOGLE_CLOUD_QUOTA_PROJECT",
+    "GRACEFUL_FS_PLATFORM",
+    "GRPC_DEFAULT_SSL_ROOTS_FILE_PATH",
+    "GRPC_EXPERIMENTAL_ENABLE_OUTLIER_DETECTION",
+    "GRPC_NODE_TRACE",
+    "GRPC_NODE_USE_ALTERNATIVE_RESOLVER",
+    "GRPC_NODE_VERBOSITY",
+    "GRPC_SSL_CIPHER_SUITES",
+    "GRPC_TRACE",
+    "GRPC_VERBOSITY",
+    "HOME",
+    "HTTP_PROXY",
+    "HTTPS_PROXY",
+    "IS_DEMO",
+    "IS_SANDBOX",
+    "ITERM_SESSION_ID",
+    "JEST_WORKER_ID",
+    "K_CONFIGURATION",
+    "K_SERVICE",
+    "KITTY_WINDOW_ID",
+    "KONSOLE_VERSION",
+    "KUBERNETES_SERVICE_HOST",
+    "LC_TERMINAL",
+    "LOCAL_BRIDGE",
+    "LOCALAPPDATA",
+    "MAX_MCP_OUTPUT_TOKENS",
+    "MAX_STRUCTURED_OUTPUT_RETRIES",
+    "MAX_THINKING_TOKENS",
+    "MCP_CLIENT_SECRET",
+    "MCP_OAUTH_CALLBACK_PORT",
+    "MCP_REMOTE_SERVER_CONNECTION_BATCH_SIZE",
+    "MCP_SERVER_CONNECTION_BATCH_SIZE",
+    "MCP_TIMEOUT",
+    "MCP_TOOL_TIMEOUT",
+    "METADATA_SERVER_DETECTION",
+    "MODIFIERS_NODE_PATH",
+    "MSYSTEM",
+    "N",
+    "NETLIFY",
+    "NO_PROXY",
+    "NODE_DEBUG",
+    "NODE_EXTRA_CA_CERTS",
+    "NODE_OPTIONS",
+    "NODE_V8_COVERAGE",
+    "OSTYPE",
+    "OTEL_EXPORTER_OTLP_ENDPOINT",
+    "OTEL_EXPORTER_OTLP_HEADERS",
+    "OTEL_EXPORTER_OTLP_INSECURE",
+    "OTEL_EXPORTER_OTLP_LOGS_PROTOCOL",
+    "OTEL_EXPORTER_OTLP_METRICS_PROTOCOL",
+    "OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE",
+    "OTEL_EXPORTER_OTLP_PROTOCOL",
+    "OTEL_EXPORTER_OTLP_TRACES_PROTOCOL",
+    "OTEL_EXPORTER_PROMETHEUS_HOST",
+    "OTEL_EXPORTER_PROMETHEUS_PORT",
+    "OTEL_LOG_TOOL_CONTENT",
+    "OTEL_LOG_TOOL_DETAILS",
+    "OTEL_LOG_USER_PROMPTS",
+    "OTEL_LOGS_EXPORT_INTERVAL",
+    "OTEL_LOGS_EXPORTER",
+    "OTEL_METRIC_EXPORT_INTERVAL",
+    "OTEL_METRICS_EXPORTER",
+    "OTEL_TRACES_EXPORT_INTERVAL",
+    "OTEL_TRACES_EXPORTER",
+    "P",
+    "P4PORT",
+    "PATH",
+    "PATHEXT",
+    "PKG_CONFIG_PATH",
+    "PROJECT_DOMAIN",
+    "PWD",
+    "RAILWAY_ENVIRONMENT_NAME",
+    "RAILWAY_SERVICE_NAME",
+    "RENDER",
+    "REPL_ID",
+    "REPL_SLUG",
+    "RUNNER_ENVIRONMENT",
+    "RUNNER_OS",
+    "S",
+    "SAFEUSER",
+    "SESSION_INGRESS_URL",
+    "SESSIONNAME",
+    "SHARP_FORCE_GLOBAL_LIBVIPS",
+    "SHARP_IGNORE_GLOBAL_LIBVIPS",
+    "SHELL",
+    "SLASH_COMMAND_TOOL_CHAR_BUDGET",
+    "SPACE_CREATOR_USER_ID",
+    "SRT_DEBUG",
+    "SSH_CLIENT",
+    "SSH_CONNECTION",
+    "SSH_TTY",
+    "STY",
+    "SWE_BENCH_INSTANCE_ID",
+    "SWE_BENCH_RUN_ID",
+    "SWE_BENCH_TASK_ID",
+    "SYSTEM_OIDCREQUESTURI",
+    "SYSTEMROOT",
+    "TASK_MAX_OUTPUT_LENGTH",
+    "TEAM_MEMORY_SYNC_URL",
+    "TEMP",
+    "TERM",
+    "TERM_PROGRAM",
+    "TERM_PROGRAM_VERSION",
+    "TERMINAL_EMULATOR",
+    "TERMINATOR_UUID",
+    "TEST_ENABLE_SESSION_PERSISTENCE",
+    "TEST_GRACEFUL_FS_GLOBAL_PATCH",
+    "TILIX_ID",
+    "TMPDIR",
+    "TMUX",
+    "TMUX_PANE",
+    "UNDICI_NO_FG",
+    "USE_API_CONTEXT_MANAGEMENT",
+    "USE_BUILTIN_RIPGREP",
+    "USE_LOCAL_OAUTH",
+    "USE_STAGING_OAUTH",
+    "USER",
+    "USERNAME",
+    "USERPROFILE",
+    "UV_THREADPOOL_SIZE",
+    "V",
+    "VCR_RECORD",
+    "VERCEL",
+    "VERTEX_BASE_URL",
+    "VISUAL",
+    "VOICE_STREAM_BASE_URL",
+    "VSCODE_GIT_ASKPASS_MAIN",
+    "VTE_VERSION",
+    "WEBSITE_SITE_NAME",
+    "WEBSITE_SKU",
+    "WS_NO_BUFFER_UTIL",
+    "WS_NO_UTF_8_VALIDATE",
+    "WSL_DISTRO_NAME",
+    "WT_SESSION",
+    "XDG_CONFIG_HOME",
+    "XDG_RUNTIME_DIR",
+    "XTERM_VERSION",
+    "ZED_TERM"
+  ],
+  "env_vars_history": {
+    "0.2.33": {
+      "added": [
+        "__CFB",
+        "__MINIMATCH_TESTING_PLATFORM__",
+        "ALACRITTY_LOG",
+        "ALIYUN_REGION_ID",
+        "ANTHROPIC_AUTH_TOKEN",
+        "ANTHROPIC_MODEL",
+        "API_TIMEOUT_MS",
+        "APPDATA",
+        "AWS_ACCESS_KEY_ID",
+        "AWS_DEFAULT_REGION",
+        "AWS_EXECUTION_ENV",
+        "AWS_REGION",
+        "AWS_SECRET_ACCESS_KEY",
+        "AWS_SESSION_TOKEN",
+        "BUN_INSTALL",
+        "C",
+        "CF_PAGES_COMMIT_SHA",
+        "CLAUDE_CODE_USE_BEDROCK",
+        "CLAUDE_CODE_USE_VERTEX",
+        "CLAUDE_CONFIG_DIR",
+        "CLOUD_ML_REGION",
+        "CLOUD_RUN_JOB",
+        "COMMIT_REF",
+        "CURSOR_TRACE_ID",
+        "DEBUG",
+        "DEBUG_AUTH",
+        "DETECT_GCP_RETRIES",
+        "DISABLE_PROMPT_CACHING",
+        "DOTENV_CONFIG_DEBUG",
+        "DOTENV_CONFIG_DOTENV_KEY",
+        "DOTENV_CONFIG_ENCODING",
+        "DOTENV_CONFIG_OVERRIDE",
+        "DOTENV_CONFIG_PATH",
+        "DOTENV_KEY",
+        "DYNO",
+        "FLY_REGION",
+        "FUNCTION_NAME",
+        "FUNCTION_TARGET",
+        "GAE_MODULE_NAME",
+        "GAE_SERVICE",
+        "GCE_METADATA_HOST",
+        "GCE_METADATA_IP",
+        "GCLOUD_PROJECT",
+        "GCP_PROJECT",
+        "GITHUB_SHA",
+        "GNOME_TERMINAL_SERVICE",
+        "GOOGLE_APPLICATION_CREDENTIALS",
+        "GOOGLE_CLOUD_PROJECT",
+        "GOOGLE_CLOUD_QUOTA_PROJECT",
+        "HOME",
+        "HTTP_PROXY",
+        "HTTPS_PROXY",
+        "IBM_CLOUD_REGION",
+        "IGNORE_TEST_WIN32",
+        "K_CONFIGURATION",
+        "K_SERVICE",
+        "KITTY_WINDOW_ID",
+        "KONSOLE_VERSION",
+        "METADATA_SERVER_DETECTION",
+        "MSYSTEM",
+        "NETLIFY",
+        "NO_PROXY",
+        "NODE_DEBUG",
+        "PATH",
+        "PKG_CONFIG_PATH",
+        "REGION_NAME",
+        "SENTRY_BAGGAGE",
+        "SENTRY_DSN",
+        "SENTRY_ENVIRONMENT",
+        "SENTRY_NAME",
+        "SENTRY_RELEASE",
+        "SENTRY_TRACE",
+        "SENTRY_TRACES_SAMPLE_RATE",
+        "SENTRY_USE_ENVIRONMENT",
+        "SESSIONNAME",
+        "SHARP_FORCE_GLOBAL_LIBVIPS",
+        "SHARP_IGNORE_GLOBAL_LIBVIPS",
+        "SHELL",
+        "SSH_CLIENT",
+        "SSH_CONNECTION",
+        "SSH_TTY",
+        "STY",
+        "SWE_BENCH",
+        "SYSTEMROOT",
+        "TENCENTCLOUD_APPID",
+        "TENCENTCLOUD_REGION",
+        "TENCENTCLOUD_ZONE",
+        "TERM",
+        "TERM_PROGRAM",
+        "TERMINATOR_UUID",
+        "TILIX_ID",
+        "TMUX",
+        "USE_BUILTIN_RIPGREP",
+        "VERCEL",
+        "VERCEL_BITBUCKET_COMMIT_SHA",
+        "VERCEL_GIT_COMMIT_SHA",
+        "VERCEL_GITHUB_COMMIT_SHA",
+        "VERCEL_GITLAB_COMMIT_SHA",
+        "VERCEL_REGION",
+        "VERTEX_REGION_CLAUDE_3_5_HAIKU",
+        "VERTEX_REGION_CLAUDE_3_5_SONNET",
+        "VERTEX_REGION_CLAUDE_3_7_SONNET",
+        "VTE_VERSION",
+        "WEBSITE_SITE_NAME",
+        "WS_NO_BUFFER_UTIL",
+        "WS_NO_UTF_8_VALIDATE",
+        "WSL_DISTRO_NAME",
+        "WT_SESSION",
+        "XTERM_VERSION",
+        "ZEIT_BITBUCKET_COMMIT_SHA",
+        "ZEIT_GITHUB_COMMIT_SHA",
+        "ZEIT_GITLAB_COMMIT_SHA"
+      ]
+    },
+    "0.2.36": {
+      "added": [
+        "USERPROFILE"
+      ]
+    },
+    "0.2.39": {
+      "added": [
+        "DISABLE_AUTOUPDATER",
+        "DISABLE_BUG_COMMAND",
+        "DISABLE_COST_WARNINGS",
+        "DISABLE_ERROR_REPORTING",
+        "DISABLE_TELEMETRY",
+        "IS_DEMO"
+      ]
+    },
+    "0.2.40": {
+      "added": [
+        "ANTHROPIC_CUSTOM_HEADERS"
+      ]
+    },
+    "0.2.42": {
+      "added": [
+        "MCP_TIMEOUT"
+      ]
+    },
+    "0.2.45": {
+      "added": [
+        "CLAUDE_CODE_EXTRA_BODY"
+      ]
+    },
+    "0.2.46": {
+      "added": [
+        "ANTHROPIC_SMALL_FAST_MODEL"
+      ]
+    },
+    "0.2.47": {
+      "added": [
+        "MAX_THINKING_TOKENS"
+      ]
+    },
+    "0.2.51": {
+      "added": [
+        "NODE_OPTIONS"
+      ]
+    },
+    "0.2.54": {
+      "added": [
+        "ANTHROPIC_API_KEY",
+        "EDITOR",
+        "VISUAL"
+      ],
+      "removed": [
+        "DOTENV_CONFIG_DEBUG",
+        "DOTENV_CONFIG_DOTENV_KEY",
+        "DOTENV_CONFIG_ENCODING",
+        "DOTENV_CONFIG_OVERRIDE",
+        "DOTENV_CONFIG_PATH",
+        "DOTENV_KEY"
+      ]
+    },
+    "0.2.55": {
+      "added": [
+        "MCP_TOOL_TIMEOUT"
+      ]
+    },
+    "0.2.56": {
+      "added": [
+        "ANTHROPIC_BASE_URL"
+      ]
+    },
+    "0.2.65": {
+      "added": [
+        "FORCE_CODE_TERMINAL",
+        "GITHUB_ACTIONS"
+      ]
+    },
+    "0.2.74": {
+      "added": [
+        "COREPACK_ENABLE_AUTO_PIN"
+      ]
+    },
+    "0.2.76": {
+      "added": [
+        "CLAUDE_CODE_ENABLE_TELEMETRY",
+        "GRPC_DEFAULT_SSL_ROOTS_FILE_PATH",
+        "GRPC_EXPERIMENTAL_ENABLE_OUTLIER_DETECTION",
+        "GRPC_NODE_TRACE",
+        "GRPC_NODE_USE_ALTERNATIVE_RESOLVER",
+        "GRPC_NODE_VERBOSITY",
+        "GRPC_SSL_CIPHER_SUITES",
+        "GRPC_TRACE",
+        "GRPC_VERBOSITY",
+        "OSTYPE",
+        "OTEL_EXPORTER_OTLP_ENDPOINT",
+        "OTEL_EXPORTER_OTLP_HEADERS",
+        "OTEL_EXPORTER_OTLP_INSECURE",
+        "OTEL_EXPORTER_OTLP_METRICS_PROTOCOL",
+        "OTEL_EXPORTER_OTLP_PROTOCOL",
+        "OTEL_EXPORTER_PROMETHEUS_HOST",
+        "OTEL_EXPORTER_PROMETHEUS_PORT",
+        "OTEL_METRIC_EXPORT_INTERVAL",
+        "OTEL_METRICS_EXPORTER",
+        "PATHEXT",
+        "PERSIST_OAUTH_TOKENS",
+        "TEMP"
+      ]
+    },
+    "0.2.79": {
+      "added": [
+        "CLAUBBIT",
+        "OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE"
+      ]
+    },
+    "0.2.80": {
+      "added": [
+        "CLAUDE_MAX",
+        "USE_TEST_OAUTH"
+      ],
+      "removed": [
+        "PERSIST_OAUTH_TOKENS"
+      ]
+    },
+    "0.2.89": {
+      "added": [
+        "AWS_PROFILE",
+        "CLAUDE_CODE_ENTRYPOINT",
+        "ENABLE_IDE_INTEGRATION"
+      ]
+    },
+    "0.2.90": {
+      "added": [
+        "LOCALAPPDATA"
+      ]
+    },
+    "0.2.96": {
+      "removed": [
+        "CLAUDE_MAX"
+      ]
+    },
+    "0.2.101": {
+      "added": [
+        "DEV",
+        "STRICT_ALLOWED_TOOLS"
+      ]
+    },
+    "0.2.104": {
+      "added": [
+        "ANTHROPIC_BETAS",
+        "CLAUDE_CODE_SKIP_VERTEX_AUTH",
+        "GRACEFUL_FS_PLATFORM",
+        "TEST_GRACEFUL_FS_GLOBAL_PATCH",
+        "VSCODE_GIT_ASKPASS_MAIN"
+      ],
+      "removed": [
+        "SWE_BENCH"
+      ]
+    },
+    "0.2.106": {
+      "added": [
+        "ANTHROPIC_VERTEX_PROJECT_ID",
+        "CLAUDE_CODE_SSE_PORT"
+      ]
+    },
+    "0.2.108": {
+      "added": [
+        "BASH_DEFAULT_TIMEOUT_MS",
+        "BASH_MAX_TIMEOUT_MS",
+        "DISABLE_BATCH_TOOL",
+        "TERMINAL_EMULATOR"
+      ]
+    },
+    "0.2.109": {
+      "added": [
+        "BASH_MAX_OUTPUT_LENGTH",
+        "GITHUB_ACTOR",
+        "GITHUB_ACTOR_ID",
+        "GITHUB_EVENT_NAME",
+        "GITHUB_REPOSITORY_OWNER",
+        "GITHUB_REPOSITORY_OWNER_ID",
+        "NODE_ENV",
+        "RUNNER_ENVIRONMENT",
+        "RUNNER_OS"
+      ]
+    },
+    "0.2.113": {
+      "removed": [
+        "NODE_ENV"
+      ]
+    },
+    "0.2.114": {
+      "added": [
+        "CLAUDE_CODE_ACTION"
+      ]
+    },
+    "0.2.116": {
+      "added": [
+        "CLAUDE_CODE_API_KEY_HELPER_TTL_MS",
+        "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC"
+      ]
+    },
+    "0.2.117": {
+      "added": [
+        "ENABLE_BACKGROUND_TASKS",
+        "FORCE_AUTO_BACKGROUND_TASKS"
+      ]
+    },
+    "0.2.119": {
+      "added": [
+        "CLAUDE_CODE_DONT_INHERIT_ENV"
+      ]
+    },
+    "0.2.125": {
+      "added": [
+        "CLAUDE_CODE_SKIP_BEDROCK_AUTH",
+        "JEST_WORKER_ID",
+        "NODE_V8_COVERAGE",
+        "UNDICI_NO_FG"
+      ]
+    },
+    "0.2.126": {
+      "added": [
+        "CLAUDE_CODE_OTEL_SHUTDOWN_TIMEOUT_MS"
+      ]
+    },
+    "1.0.0": {
+      "added": [
+        "VERTEX_REGION_CLAUDE_4_0_OPUS",
+        "VERTEX_REGION_CLAUDE_4_0_SONNET"
+      ],
+      "removed": [
+        "DISABLE_BATCH_TOOL",
+        "ENABLE_IDE_INTEGRATION"
+      ]
+    },
+    "1.0.1": {
+      "added": [
+        "DISABLE_INTERLEAVED_THINKING"
+      ]
+    },
+    "1.0.3": {
+      "added": [
+        "XDG_CONFIG_HOME"
+      ]
+    },
+    "1.0.4": {
+      "added": [
+        "BEDROCK_BASE_URL",
+        "CLAUDE_CODE_ENABLE_UNIFIED_READ_TOOL",
+        "CLAUDE_CODE_IDE_HOST_OVERRIDE",
+        "CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL",
+        "CLAUDE_CODE_IDE_SKIP_VALID_CHECK",
+        "PWD",
+        "VERTEX_BASE_URL"
+      ]
+    },
+    "1.0.7": {
+      "added": [
+        "OTEL_EXPORTER_OTLP_LOGS_PROTOCOL",
+        "OTEL_LOG_USER_PROMPTS",
+        "OTEL_LOGS_EXPORT_INTERVAL",
+        "OTEL_LOGS_EXPORTER",
+        "ZDOTDIR"
+      ]
+    },
+    "1.0.10": {
+      "added": [
+        "CLAUDE_CODE_MAX_OUTPUT_TOKENS",
+        "DISABLE_NON_ESSENTIAL_MODEL_CALLS"
+      ]
+    },
+    "1.0.14": {
+      "added": [
+        "ANTHROPIC_SMALL_FAST_MODEL_AWS_REGION_AWS_REGION"
+      ],
+      "removed": [
+        "STRICT_ALLOWED_TOOLS"
+      ]
+    },
+    "1.0.17": {
+      "added": [
+        "MCP_SSE_AUTH_ENABLED"
+      ]
+    },
+    "1.0.18": {
+      "added": [
+        "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR"
+      ]
+    },
+    "1.0.19": {
+      "added": [
+        "BROWSER"
+      ]
+    },
+    "1.0.22": {
+      "added": [
+        "XDG_CACHE_HOME",
+        "XDG_DATA_HOME",
+        "XDG_STATE_HOME"
+      ]
+    },
+    "1.0.23": {
+      "removed": [
+        "MCP_SSE_AUTH_ENABLED"
+      ]
+    },
+    "1.0.26": {
+      "added": [
+        "USE_LOCAL_OAUTH"
+      ],
+      "removed": [
+        "USE_TEST_OAUTH"
+      ]
+    },
+    "1.0.27": {
+      "added": [
+        "CLAUDE_CODE_DISABLE_FINE_GRAINED_TOOL_STREAMING"
+      ]
+    },
+    "1.0.28": {
+      "added": [
+        "MAX_MCP_OUTPUT_TOKENS"
+      ]
+    },
+    "1.0.35": {
+      "added": [
+        "CLAUDE_CODE_AUTO_CONNECT_IDE"
+      ]
+    },
+    "1.0.36": {
+      "added": [
+        "CLAUDE_CODE_CLIENT_CERT",
+        "CLAUDE_CODE_CLIENT_KEY",
+        "CLAUDE_CODE_CLIENT_KEY_PASSPHRASE",
+        "CLAUDE_CODE_INTERNAL_METRICS",
+        "NODE_EXTRA_CA_CERTS"
+      ]
+    },
+    "1.0.37": {
+      "added": [
+        "CLAUDE_CODE_DISABLE_COST_REPORTING"
+      ],
+      "removed": [
+        "CLAUDE_CODE_INTERNAL_METRICS"
+      ]
+    },
+    "1.0.42": {
+      "added": [
+        "ANTHROPIC_SMALL_FAST_MODEL_AWS_REGION"
+      ],
+      "removed": [
+        "ANTHROPIC_SMALL_FAST_MODEL_AWS_REGION_AWS_REGION",
+        "CLAUDE_CODE_DISABLE_COST_REPORTING"
+      ]
+    },
+    "1.0.44": {
+      "added": [
+        "CLAUDE_CODE_MAX_RETRIES",
+        "CLAUDE_CODE_OAUTH_TOKEN",
+        "IS_SANDBOX"
+      ]
+    },
+    "1.0.45": {
+      "removed": [
+        "DISABLE_NON_ESSENTIAL_MODEL_CALLS"
+      ]
+    },
+    "1.0.46": {
+      "removed": [
+        "FORCE_AUTO_BACKGROUND_TASKS",
+        "TMUX"
+      ]
+    },
+    "1.0.49": {
+      "added": [
+        "AWS_BEARER_TOKEN_BEDROCK",
+        "CHOKIDAR_INTERVAL",
+        "CHOKIDAR_USEPOLLING",
+        "CLAUDE_CODE_GIT_BASH_PATH",
+        "COMSPEC"
+      ]
+    },
+    "1.0.51": {
+      "removed": [
+        "CHOKIDAR_INTERVAL",
+        "CHOKIDAR_USEPOLLING"
+      ]
+    },
+    "1.0.52": {
+      "added": [
+        "CLAUDE_CODE_DISABLE_TERMINAL_TITLE"
+      ]
+    },
+    "1.0.53": {
+      "added": [
+        "CLAUDE_CODE_DISABLE_COMMAND_INJECTION_CHECK",
+        "MCP_SERVER_CONNECTION_BATCH_SIZE"
+      ]
+    },
+    "1.0.54": {
+      "added": [
+        "CHOKIDAR_INTERVAL",
+        "CHOKIDAR_USEPOLLING",
+        "MCP_OAUTH_CALLBACK_PORT"
+      ]
+    },
+    "1.0.57": {
+      "added": [
+        "CLAUDE_CODE_SUBAGENT_MODEL"
+      ]
+    },
+    "1.0.58": {
+      "added": [
+        "CLAUDE_CODE_BASH_PREFIX",
+        "DETAILED_PERMISSION_MESSAGES",
+        "DISABLE_DOCTOR_COMMAND",
+        "DISABLE_INSTALL_GITHUB_APP_COMMAND",
+        "DISABLE_LOGIN_COMMAND",
+        "DISABLE_LOGOUT_COMMAND",
+        "DISABLE_MIGRATE_INSTALLER_COMMAND",
+        "DISABLE_UPGRADE_COMMAND",
+        "GITHUB_REPOSITORY_ID"
+      ]
+    },
+    "1.0.59": {
+      "added": [
+        "CLAUDE_CODE_DISABLE_CHECKPOINTING",
+        "DISABLE_MICROCOMPACT"
+      ],
+      "removed": [
+        "CLAUDE_CODE_SUBAGENT_MODEL",
+        "IGNORE_TEST_WIN32"
+      ]
+    },
+    "1.0.60": {
+      "added": [
+        "CLAUDE_CODE_SHELL_PREFIX",
+        "CLAUDE_CODE_SUBAGENT_MODEL"
+      ],
+      "removed": [
+        "CLAUDE_CODE_BASH_PREFIX"
+      ]
+    },
+    "1.0.64": {
+      "added": [
+        "CLAUDE_FORCE_DISPLAY_SURVEY"
+      ]
+    },
+    "1.0.66": {
+      "removed": [
+        "DETAILED_PERMISSION_MESSAGES"
+      ]
+    },
+    "1.0.68": {
+      "added": [
+        "TELEPORT_HEADERS",
+        "TELEPORT_RESUME_URL"
+      ],
+      "removed": [
+        "CLAUDE_CODE_ENABLE_UNIFIED_READ_TOOL",
+        "COMSPEC"
+      ]
+    },
+    "1.0.69": {
+      "added": [
+        "VERTEX_REGION_CLAUDE_4_1_OPUS"
+      ]
+    },
+    "1.0.70": {
+      "added": [
+        "SWE_BENCH_INSTANCE_ID",
+        "SWE_BENCH_RUN_ID",
+        "SWE_BENCH_TASK_ID"
+      ],
+      "removed": [
+        "CLAUDE_CODE_DISABLE_CHECKPOINTING"
+      ]
+    },
+    "1.0.71": {
+      "added": [
+        "USE_API_CONTEXT_MANAGEMENT",
+        "V"
+      ]
+    },
+    "1.0.72": {
+      "removed": [
+        "ENABLE_BACKGROUND_TASKS"
+      ]
+    },
+    "1.0.77": {
+      "added": [
+        "CLAUDE_CODE_SESSION_ACCESS_TOKEN"
+      ]
+    },
+    "1.0.78": {
+      "added": [
+        "CLAUDE_CODE_WEBSOCKET_AUTH_FILE_DESCRIPTOR"
+      ]
+    },
+    "1.0.81": {
+      "added": [
+        "CLAUDE_CODE_DISABLE_AUTOCHECKPOINTING",
+        "ENABLE_PLUGINS"
+      ]
+    },
+    "1.0.85": {
+      "added": [
+        "GITHUB_ACTION_INPUTS",
+        "GITHUB_ACTION_REF",
+        "GITHUB_ACTION_REPOSITORY"
+      ]
+    },
+    "1.0.87": {
+      "added": [
+        "ANTHROPIC_DEFAULT_OPUS_MODEL",
+        "ANTHROPIC_DEFAULT_SONNET_MODEL",
+        "GITHUB_ACTION_PATH",
+        "GITHUB_REPOSITORY"
+      ],
+      "removed": [
+        "GITHUB_ACTION_REF",
+        "GITHUB_ACTION_REPOSITORY"
+      ]
+    },
+    "1.0.91": {
+      "added": [
+        "CLAUDE_DEBUG"
+      ]
+    },
+    "1.0.93": {
+      "added": [
+        "UV_THREADPOOL_SIZE"
+      ]
+    },
+    "1.0.98": {
+      "added": [
+        "ENABLE_SESSION_PERSISTENCE",
+        "SESSION_INGRESS_URL"
+      ]
+    },
+    "1.0.102": {
+      "added": [
+        "DISABLE_FEEDBACK_COMMAND"
+      ]
+    },
+    "1.0.106": {
+      "added": [
+        "TEST_ENABLE_SESSION_PERSISTENCE"
+      ],
+      "removed": [
+        "SESSION_INGRESS_URL"
+      ]
+    },
+    "1.0.107": {
+      "removed": [
+        "TEST_ENABLE_SESSION_PERSISTENCE"
+      ]
+    },
+    "1.0.108": {
+      "added": [
+        "DISABLE_AUTO_MIGRATE_TO_NATIVE"
+      ]
+    },
+    "1.0.109": {
+      "added": [
+        "CLAUDE_CODE_API_KEY_FILE_DESCRIPTOR",
+        "CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR",
+        "CLAUDE_CODE_TEST_FIXTURES_ROOT",
+        "N",
+        "TEST_ENABLE_SESSION_PERSISTENCE"
+      ]
+    },
+    "1.0.111": {
+      "added": [
+        "CLAUDE_CODE_DISABLE_CLAUDE_MDS"
+      ],
+      "removed": [
+        "BUN_INSTALL"
+      ]
+    },
+    "1.0.113": {
+      "added": [
+        "DISABLE_PROMPT_CACHING_HAIKU",
+        "DISABLE_PROMPT_CACHING_OPUS",
+        "DISABLE_PROMPT_CACHING_SONNET"
+      ]
+    },
+    "1.0.114": {
+      "added": [
+        "ANTHROPIC_DEFAULT_HAIKU_MODEL",
+        "DISABLE_INSTALLATION_CHECKS",
+        "TERM_PROGRAM_VERSION"
+      ]
+    },
+    "1.0.120": {
+      "added": [
+        "CLAUDE_CODE_CONTAINER_ID"
+      ]
+    },
+    "1.0.122": {
+      "added": [
+        "CLAUDE_CODE_DEBUG_LOGS_DIR",
+        "DEBUG_SDK",
+        "SLASH_COMMAND_TOOL_CHAR_BUDGET"
+      ],
+      "removed": [
+        "USE_LOCAL_OAUTH"
+      ]
+    },
+    "1.0.124": {
+      "added": [
+        "CLAUDE_BASH_NO_LOGIN",
+        "ENABLE_BASH_WRAPPER_MATCHING",
+        "USER"
+      ],
+      "removed": [
+        "ENABLE_SESSION_PERSISTENCE"
+      ]
+    },
+    "1.0.125": {
+      "added": [
+        "TMPDIR"
+      ]
+    },
+    "1.0.127": {
+      "removed": [
+        "CLAUDE_CODE_DISABLE_AUTOCHECKPOINTING"
+      ]
+    },
+    "1.0.128": {
+      "added": [
+        "CLAUDE_AGENT_SDK_VERSION",
+        "CLAUDE_CODE_DISABLE_ATTACHMENTS",
+        "CLAUDE_CODE_DISABLE_FILE_CHECKPOINTING"
+      ]
+    },
+    "2.0.0": {
+      "added": [
+        "CLAUDE_CODE_DISABLE_AUTOCHECKPOINTING",
+        "CLAUDE_CODE_ENABLE_TOKEN_USAGE_ATTACHMENT",
+        "VERTEX_REGION_CLAUDE_4_5_SONNET"
+      ]
+    },
+    "2.0.10": {
+      "added": [
+        "CLAUDE_CODE_OTEL_FLUSH_TIMEOUT_MS"
+      ]
+    },
+    "2.0.11": {
+      "added": [
+        "CLAUDE_CODE_FORCE_FULL_LOGO"
+      ]
+    },
+    "2.0.12": {
+      "removed": [
+        "ENABLE_PLUGINS"
+      ]
+    },
+    "2.0.14": {
+      "added": [
+        "CLAUDE_CODE_BASH_SANDBOX_SHOW_INDICATOR",
+        "XDG_DESKTOP_DIR",
+        "XDG_DOCUMENTS_DIR",
+        "XDG_DOWNLOAD_DIR"
+      ]
+    },
+    "2.0.15": {
+      "added": [
+        "APP_URL",
+        "AWS_LAMBDA_FUNCTION_NAME",
+        "AZURE_FUNCTIONS_ENVIRONMENT",
+        "FLY_APP_NAME",
+        "FLY_MACHINE_ID",
+        "GITLAB_CI",
+        "RAILWAY_ENVIRONMENT_NAME",
+        "RAILWAY_SERVICE_NAME",
+        "RENDER",
+        "WEBSITE_SKU"
+      ]
+    },
+    "2.0.17": {
+      "added": [
+        "VERTEX_REGION_CLAUDE_HAIKU_4_5"
+      ]
+    },
+    "2.0.18": {
+      "added": [
+        "ENABLE_ENHANCED_TELEMETRY_BETA",
+        "OTEL_EXPORTER_OTLP_TRACES_PROTOCOL",
+        "OTEL_LOG_MODEL_RESPONSE",
+        "OTEL_LOG_TOOL_CONTENT",
+        "OTEL_TRACES_EXPORT_INTERVAL",
+        "OTEL_TRACES_EXPORTER"
+      ]
+    },
+    "2.0.20": {
+      "added": [
+        "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE",
+        "CLAUDE_CODE_REMOTE",
+        "CLAUDE_CODE_REMOTE_ENVIRONMENT_TYPE",
+        "ENABLE_BASH_ENV_VAR_MATCHING"
+      ]
+    },
+    "2.0.22": {
+      "added": [
+        "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY"
+      ]
+    },
+    "2.0.23": {
+      "added": [
+        "CLAUDE_CODE_ADDITIONAL_PROTECTION"
+      ]
+    },
+    "2.0.24": {
+      "added": [
+        "CLAUDE_CODE_SESSION_ID"
+      ]
+    },
+    "2.0.25": {
+      "added": [
+        "USE_HAIKU_SESSION_MEMORY"
+      ]
+    },
+    "2.0.28": {
+      "added": [
+        "BUILDKITE",
+        "CF_PAGES",
+        "CIRCLECI",
+        "CLAUDE_CODE_TAGS",
+        "CLAUDE_CODE_USE_NATIVE_FILE_SEARCH",
+        "CODESPACES",
+        "DENO_DEPLOYMENT_ID",
+        "GITPOD_WORKSPACE_ID",
+        "KUBERNETES_SERVICE_HOST",
+        "PROJECT_DOMAIN",
+        "REPL_ID",
+        "REPL_SLUG",
+        "RIPGREP_NODE_PATH",
+        "SPACE_CREATOR_USER_ID"
+      ]
+    },
+    "2.0.30": {
+      "added": [
+        "CLAUDE_CODE_FORCE_HALLOWEEN",
+        "DISABLE_COMPACT",
+        "ENABLE_LSP_TOOL",
+        "USE_MCP_CLI_DIR",
+        "XDG_RUNTIME_DIR"
+      ]
+    },
+    "2.0.31": {
+      "added": [
+        "CLAUDE_CODE_PROFILE_STARTUP",
+        "CLAUDE_CODE_SYNTAX_HIGHLIGHT"
+      ]
+    },
+    "2.0.32": {
+      "added": [
+        "CLAUDE_CODE_MAX_TOOL_USE_CONCURRENCY"
+      ],
+      "removed": [
+        "CLAUDE_CODE_FORCE_HALLOWEEN"
+      ]
+    },
+    "2.0.34": {
+      "added": [
+        "ENABLE_EXPERIMENTAL_MCP_CLI"
+      ]
+    },
+    "2.0.35": {
+      "added": [
+        "CLAUDE_CODE_EXIT_AFTER_STOP_DELAY",
+        "FALLBACK_FOR_ALL_PRIMARY_MODELS"
+      ]
+    },
+    "2.0.36": {
+      "added": [
+        "API_MAX_INPUT_TOKENS",
+        "API_TARGET_INPUT_TOKENS",
+        "DISABLE_EXTRA_USAGE_COMMAND",
+        "USE_API_CLEAR_TOOL_RESULTS",
+        "USE_API_CLEAR_TOOL_USES"
+      ]
+    },
+    "2.0.41": {
+      "added": [
+        "CLAUDE_CODE_ENABLE_PROCESS_CLAUDE_RULES",
+        "CLAUDE_CODE_PLAN_V2_AGENT_COUNT",
+        "CLAUDE_CODE_PROFILE_QUERY",
+        "ENABLE_TOOL_RESULT_SIZE_LIMIT"
+      ]
+    },
+    "2.0.43": {
+      "added": [
+        "CLAUDE_CODE_ENABLE_SDK_FILE_CHECKPOINTING",
+        "ENABLE_STRUCTURED_OUTPUT",
+        "MAX_STRUCTURED_OUTPUT_RETRIES"
+      ]
+    },
+    "2.0.45": {
+      "added": [
+        "ANTHROPIC_FOUNDRY_API_KEY",
+        "ANTHROPIC_FOUNDRY_BASE_URL",
+        "ANTHROPIC_FOUNDRY_RESOURCE",
+        "AZURE_ADDITIONALLY_ALLOWED_TENANTS",
+        "AZURE_AUTHORITY_HOST",
+        "AZURE_CLIENT_CERTIFICATE_PASSWORD",
+        "AZURE_CLIENT_CERTIFICATE_PATH",
+        "AZURE_CLIENT_ID",
+        "AZURE_CLIENT_SECRET",
+        "AZURE_CLIENT_SEND_CERTIFICATE_CHAIN",
+        "AZURE_FEDERATED_TOKEN_FILE",
+        "AZURE_IDENTITY_DISABLE_MULTITENANTAUTH",
+        "AZURE_PASSWORD",
+        "AZURE_POD_IDENTITY_AUTHORITY_HOST",
+        "AZURE_REGIONAL_AUTHORITY_NAME",
+        "AZURE_TENANT_ID",
+        "AZURE_TOKEN_CREDENTIALS",
+        "AZURE_USERNAME",
+        "CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS",
+        "CLAUDE_CODE_PLAN_V2_EXPLORE_AGENT_COUNT",
+        "CLAUDE_CODE_SKIP_FOUNDRY_AUTH",
+        "CLAUDE_CODE_USE_FOUNDRY",
+        "ENABLE_CODE_GUIDE_SUBAGENT",
+        "P",
+        "S"
+      ],
+      "removed": [
+        "CLAUDE_CODE_DISABLE_AUTOCHECKPOINTING",
+        "ENABLE_STRUCTURED_OUTPUT"
+      ]
+    },
+    "2.0.46": {
+      "added": [
+        "CLAUDE_CODE_EFFORT_LEVEL"
+      ]
+    },
+    "2.0.47": {
+      "added": [
+        "CLAUDE_CODE_ALLOW_MCP_TOOLS_FOR_SUBAGENTS",
+        "ENABLE_OVERFLOW_TEST_TOOL"
+      ],
+      "removed": [
+        "__MINIMATCH_TESTING_PLATFORM__"
+      ]
+    },
+    "2.0.49": {
+      "added": [
+        "CLAUDE_CODE_ENABLE_ASK_USER_QUESTION_TOOL",
+        "CLAUDE_CODE_ENABLE_GROWTHBOOK",
+        "SRT_DEBUG"
+      ]
+    },
+    "2.0.50": {
+      "added": [
+        "ENABLE_MCP_CLI_ENDPOINT"
+      ],
+      "removed": [
+        "CLAUDE_CODE_DISABLE_FINE_GRAINED_TOOL_STREAMING"
+      ]
+    },
+    "2.0.52": {
+      "added": [
+        "CLAUDE_CODE_BUBBLEWRAP",
+        "CLAUDE_CODE_REMOTE_SESSION_ID",
+        "CLAUDE_ENV_FILE"
+      ]
+    },
+    "2.0.54": {
+      "removed": [
+        "ENABLE_OVERFLOW_TEST_TOOL"
+      ]
+    },
+    "2.0.55": {
+      "added": [
+        "CLAUDE_CODE_PROXY_RESOLVES_HOSTS"
+      ],
+      "removed": [
+        "USE_HAIKU_SESSION_MEMORY"
+      ]
+    },
+    "2.0.56": {
+      "added": [
+        "CLAUDE_CODE_DIAGNOSTICS_FILE"
+      ]
+    },
+    "2.0.59": {
+      "added": [
+        "CLAUDE_CODE_TEAMMATE_ID"
+      ],
+      "removed": [
+        "CLAUDE_CODE_ENABLE_GROWTHBOOK",
+        "DISABLE_MIGRATE_INSTALLER_COMMAND",
+        "ENABLE_TOOL_RESULT_SIZE_LIMIT"
+      ]
+    },
+    "2.0.60": {
+      "added": [
+        "CLAUDE_CODE_AGENT_COLOR",
+        "CLAUDE_CODE_AGENT_ID",
+        "CLAUDE_CODE_AGENT_NAME",
+        "CLAUDE_CODE_AGENT_TYPE",
+        "CLAUDE_CODE_TEAM_NAME"
+      ],
+      "removed": [
+        "CLAUDE_CODE_TEAMMATE_ID"
+      ]
+    },
+    "2.0.62": {
+      "added": [
+        "TMUX"
+      ]
+    },
+    "2.0.63": {
+      "added": [
+        "AWS_LAMBDA_BENCHMARK_MODE",
+        "AWS_LOGIN_CACHE_DIRECTORY",
+        "CLAUDE_CODE_TEAM_LEAD_ID"
+      ],
+      "removed": [
+        "CLAUDE_CODE_ENABLE_PROCESS_CLAUDE_RULES",
+        "OTEL_LOG_MODEL_RESPONSE"
+      ]
+    },
+    "2.0.65": {
+      "added": [
+        "CLAUDE_CODE_SHELL"
+      ],
+      "removed": [
+        "CLAUDE_CODE_SYNTAX_HIGHLIGHT"
+      ]
+    },
+    "2.0.66": {
+      "added": [
+        "CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION",
+        "COLORTERM"
+      ]
+    },
+    "2.0.70": {
+      "added": [
+        "BETA_TRACING_ENDPOINT",
+        "CLAUDE_CODE_PLAN_MODE_REQUIRED",
+        "CLAUDE_CODE_SKIP_PROMPT_HISTORY",
+        "CLAUDE_CODE_SYNTAX_HIGHLIGHT",
+        "DEMO_VERSION",
+        "ENABLE_BETA_TRACING_DETAILED",
+        "ENABLE_MCP_CLI",
+        "ENABLE_TOOL_SEARCH",
+        "ITERM_SESSION_ID"
+      ],
+      "removed": [
+        "TELEPORT_HEADERS",
+        "TELEPORT_RESUME_URL"
+      ]
+    },
+    "2.0.71": {
+      "added": [
+        "ANTHROPIC_BEDROCK_BASE_URL",
+        "CLAUDE_CODE_ENABLE_CFC",
+        "ENABLE_MCP_LARGE_OUTPUT_FILES",
+        "USERNAME"
+      ],
+      "removed": [
+        "CLAUDE_CODE_ENABLE_ASK_USER_QUESTION_TOOL"
+      ]
+    },
+    "2.0.73": {
+      "added": [
+        "CLAUDE_CODE_OTEL_HEADERS_HELPER_DEBOUNCE_MS",
+        "CLAUDE_CODE_PARENT_SESSION_ID",
+        "ENABLE_INCREMENTAL_TUI"
+      ]
+    },
+    "2.0.74": {
+      "removed": [
+        "CLAUDE_CODE_AGENT_COLOR",
+        "CLAUDE_CODE_ALLOW_MCP_TOOLS_FOR_SUBAGENTS",
+        "CLAUDE_CODE_PLAN_MODE_REQUIRED",
+        "CLAUDE_CODE_TEAM_LEAD_ID",
+        "ENABLE_LSP_TOOL",
+        "ITERM_SESSION_ID",
+        "TMUX"
+      ]
+    },
+    "2.0.77": {
+      "added": [
+        "CLAUDE_CODE_ACCESSIBILITY",
+        "CLAUDE_CODE_BLOCKING_LIMIT_OVERRIDE",
+        "CLAUDE_CODE_FILE_READ_MAX_OUTPUT_TOKENS",
+        "DISABLE_AUTO_COMPACT",
+        "MCP_REMOTE_SERVER_CONNECTION_BATCH_SIZE",
+        "MODIFIERS_NODE_PATH",
+        "TASK_MAX_OUTPUT_LENGTH",
+        "TMUX"
+      ],
+      "removed": [
+        "CLAUDE_CODE_PROFILE_QUERY"
+      ]
+    },
+    "2.1.0": {
+      "added": [
+        "ENABLE_RELEASE_CHANNELS"
+      ]
+    },
+    "2.1.2": {
+      "added": [
+        "CLAUDE_CODE_OAUTH_CLIENT_ID",
+        "CLAUDE_CODE_TASK_LIST_ID",
+        "FORCE_AUTOUPDATE_PLUGINS",
+        "MCP_CONNECTION_NONBLOCKING",
+        "PERMISSION_EXPLAINER_ENABLED"
+      ]
+    },
+    "2.1.3": {
+      "added": [
+        "CLAUDE_CODE_POST_COMPACT_MIN_MESSAGE_TOKENS"
+      ],
+      "removed": [
+        "CLAUDE_CODE_AGENT_NAME",
+        "CLAUDE_CODE_AGENT_TYPE",
+        "ENABLE_CODE_GUIDE_SUBAGENT",
+        "ENABLE_RELEASE_CHANNELS"
+      ]
+    },
+    "2.1.4": {
+      "added": [
+        "CLAUDE_CODE_DISABLE_BACKGROUND_TASKS"
+      ]
+    },
+    "2.1.5": {
+      "added": [
+        "CLAUDE_CODE_TMPDIR"
+      ]
+    },
+    "2.1.6": {
+      "added": [
+        "BITBUCKET_TOKEN",
+        "CLAUDE_CODE_ENVIRONMENT_RUNNER_VERSION",
+        "CLAUDE_CODE_LOOPY_MODE",
+        "GH_TOKEN",
+        "GITHUB_TOKEN",
+        "GITLAB_TOKEN",
+        "GL_TOKEN",
+        "SSH_AUTH_SOCK"
+      ],
+      "removed": [
+        "CLAUDE_CODE_POST_COMPACT_MIN_MESSAGE_TOKENS",
+        "ENABLE_BASH_ENV_VAR_MATCHING",
+        "ENABLE_BASH_WRAPPER_MATCHING"
+      ]
+    },
+    "2.1.7": {
+      "added": [
+        "CLAUDE_CODE_ENHANCED_TELEMETRY_BETA"
+      ],
+      "removed": [
+        "CLAUDE_CODE_AGENT_ID",
+        "CLAUDE_CODE_PARENT_SESSION_ID",
+        "CLAUDE_CODE_TEAM_NAME"
+      ]
+    },
+    "2.1.8": {
+      "added": [
+        "CLAUDE_CODE_API_BASE_URL",
+        "CLAUDE_CODE_TMUX_PREFIX",
+        "CLAUDE_CODE_TMUX_PREFIX_CONFLICTS",
+        "CLAUDE_CODE_TMUX_SESSION",
+        "SHELLOPTS",
+        "TMUX_PANE"
+      ]
+    },
+    "2.1.9": {
+      "added": [
+        "SESSION_INGRESS_URL"
+      ],
+      "removed": [
+        "CLAUDE_CODE_LOOPY_MODE"
+      ]
+    },
+    "2.1.10": {
+      "added": [
+        "CLAUDE_AGENT_SDK_MCP_NO_PREFIX",
+        "CLAUDE_CODE_PERFETTO_TRACE"
+      ],
+      "removed": [
+        "DEV"
+      ]
+    },
+    "2.1.14": {
+      "added": [
+        "CLAUDE_CODE_DISABLE_OFFICIAL_MARKETPLACE_AUTOINSTALL",
+        "CLAUDE_CODE_GLOB_HIDDEN",
+        "CLAUDE_CODE_GLOB_NO_IGNORE",
+        "CLAUDE_CODE_GLOB_TIMEOUT_SECONDS",
+        "CLAUDE_REPL_MODE",
+        "DISABLE_CLAUDE_CODE_SM_COMPACT",
+        "ENABLE_CLAUDE_CODE_SM_COMPACT",
+        "ENABLE_CLAUDEAI_MCP_SERVERS",
+        "RIPGREP_EMBEDDED"
+      ],
+      "removed": [
+        "BASH_DEFAULT_TIMEOUT_MS",
+        "BASH_MAX_TIMEOUT_MS",
+        "XDG_CACHE_HOME",
+        "XDG_DATA_HOME",
+        "XDG_DESKTOP_DIR",
+        "XDG_DOCUMENTS_DIR",
+        "XDG_DOWNLOAD_DIR",
+        "XDG_STATE_HOME"
+      ]
+    },
+    "2.1.15": {
+      "added": [
+        "CLAUDE_CODE_ATTRIBUTION_HEADER",
+        "CLAUDE_CODE_USE_COWORK_PLUGINS",
+        "CLAUDE_TMPDIR"
+      ],
+      "removed": [
+        "ENABLE_CLAUDEAI_MCP_SERVERS",
+        "ENABLE_INCREMENTAL_TUI"
+      ]
+    },
+    "2.1.16": {
+      "added": [
+        "CLAUDE_CODE_AGENT_SWARMS",
+        "CLAUDE_CODE_BASE_REF",
+        "CLAUDE_CODE_PLAN_MODE_INTERVIEW_PHASE",
+        "CLAUDE_CODE_PLAN_MODE_REQUIRED",
+        "ITERM_SESSION_ID"
+      ]
+    },
+    "2.1.19": {
+      "added": [
+        "CLAUDE_CODE_EMIT_TOOL_USE_SUMMARIES",
+        "CLAUDE_CODE_ENABLE_TASKS"
+      ],
+      "removed": [
+        "API_MAX_INPUT_TOKENS",
+        "API_TARGET_INPUT_TOKENS",
+        "BITBUCKET_TOKEN",
+        "GH_TOKEN",
+        "GITHUB_TOKEN",
+        "GITLAB_TOKEN",
+        "GL_TOKEN",
+        "SSH_AUTH_SOCK",
+        "USE_API_CLEAR_TOOL_RESULTS",
+        "USE_API_CLEAR_TOOL_USES"
+      ]
+    },
+    "2.1.20": {
+      "added": [
+        "CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD",
+        "OTEL_LOG_TOOL_DETAILS"
+      ]
+    },
+    "2.1.21": {
+      "added": [
+        "CLAUDE_CODE_DATADOG_FLUSH_INTERVAL_MS"
+      ]
+    },
+    "2.1.23": {
+      "added": [
+        "CLAUDE_CODE_DISABLE_EFFORT",
+        "CLAUDE_CODE_FORCE_GLOBAL_CACHE"
+      ]
+    },
+    "2.1.26": {
+      "added": [
+        "CLAUDE_CHROME_PERMISSION_MODE",
+        "CLAUDE_CODE_POST_FOR_SESSION_INGRESS",
+        "LC_TERMINAL",
+        "LOCAL_BRIDGE",
+        "USE_LOCAL_OAUTH",
+        "ZED_TERM"
+      ]
+    },
+    "2.1.27": {
+      "added": [
+        "CLAUDE_AGENT_SDK_DISABLE_BUILTIN_AGENTS",
+        "CLAUDE_CODE_EXIT_AFTER_FIRST_RENDER",
+        "CLAUDE_CODE_POST_FOR_SESSION_INGRESS_V2"
+      ],
+      "removed": [
+        "ALIYUN_REGION_ID",
+        "CF_PAGES_COMMIT_SHA",
+        "CLAUDE_CODE_POST_FOR_SESSION_INGRESS",
+        "COMMIT_REF",
+        "FLY_REGION",
+        "GCP_PROJECT",
+        "GITHUB_SHA",
+        "IBM_CLOUD_REGION",
+        "REGION_NAME",
+        "SENTRY_BAGGAGE",
+        "SENTRY_DSN",
+        "SENTRY_ENVIRONMENT",
+        "SENTRY_NAME",
+        "SENTRY_RELEASE",
+        "SENTRY_TRACE",
+        "SENTRY_TRACES_SAMPLE_RATE",
+        "SENTRY_USE_ENVIRONMENT",
+        "SHELLOPTS",
+        "TENCENTCLOUD_APPID",
+        "TENCENTCLOUD_REGION",
+        "TENCENTCLOUD_ZONE",
+        "VERCEL_BITBUCKET_COMMIT_SHA",
+        "VERCEL_GIT_COMMIT_SHA",
+        "VERCEL_GITHUB_COMMIT_SHA",
+        "VERCEL_GITLAB_COMMIT_SHA",
+        "VERCEL_REGION",
+        "ZEIT_BITBUCKET_COMMIT_SHA",
+        "ZEIT_GITHUB_COMMIT_SHA",
+        "ZEIT_GITLAB_COMMIT_SHA"
+      ]
+    },
+    "2.1.30": {
+      "added": [
+        "MCP_CLIENT_SECRET"
+      ],
+      "removed": [
+        "CLAUDE_CODE_DISABLE_EFFORT"
+      ]
+    },
+    "2.1.31": {
+      "added": [
+        "ANALYTICS_LOG_TOOL_DETAILS",
+        "CLAUDE_CODE_DISABLE_AUTO_MEMORY",
+        "CLAUDE_CODE_TST_NAMES_IN_MESSAGES"
+      ]
+    },
+    "2.1.32": {
+      "added": [
+        "CLAUDE_CODE_CUSTOM_OAUTH_URL",
+        "CLAUDE_CODE_EAGER_FLUSH",
+        "CLAUDE_CODE_ENVIRONMENT_KIND",
+        "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS",
+        "CLAUDE_CODE_INCLUDE_PARTIAL_MESSAGES",
+        "CLAUDE_CODE_IS_COWORK"
+      ],
+      "removed": [
+        "CLAUDE_CODE_AGENT_SWARMS"
+      ]
+    },
+    "2.1.33": {
+      "removed": [
+        "CLAUDE_CODE_ENVIRONMENT_KIND"
+      ]
+    },
+    "2.1.38": {
+      "added": [
+        "CLAUDE_CODE_ENVIRONMENT_KIND",
+        "CLAUDE_CODE_REMOTE_MEMORY_DIR",
+        "CLAUDE_CODE_SKIP_PRECOMPACT_LOAD",
+        "CLAUDE_CODE_SLOW_OPERATION_THRESHOLD_MS",
+        "CLAUDE_CODE_SNIPPET_SAVE",
+        "SYSTEM_OIDCREQUESTURI",
+        "USE_STAGING_OAUTH"
+      ]
+    },
+    "2.1.39": {
+      "added": [
+        "CLAUDE_AGENT_SDK_CLIENT_APP",
+        "CLAUDE_CODE_DISABLE_FAST_MODE"
+      ]
+    },
+    "2.1.40": {
+      "added": [
+        "CLAUDE_AFTER_LAST_COMPACT",
+        "CLAUDE_CODE_ENABLE_FINE_GRAINED_TOOL_STREAMING",
+        "CLAUDE_CODE_HOST_PLATFORM",
+        "CLAUDE_CODE_SAVE_HOOK_ADDITIONAL_CONTEXT",
+        "CLAUDE_CODE_SYNC_PLUGIN_INSTALL",
+        "CLAUDE_ENABLE_STREAM_WATCHDOG",
+        "CLAUDECODE"
+      ]
+    },
+    "2.1.41": {
+      "added": [
+        "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING",
+        "CLAUDE_CODE_DISABLE_THINKING",
+        "CLAUDE_CODE_SYNC_PLUGIN_INSTALL_TIMEOUT_MS"
+      ]
+    },
+    "2.1.42": {
+      "added": [
+        "CLAUDE_CODE_BIRTHDAY_HAT",
+        "CLAUDE_CODE_PLUGIN_CACHE_DIR",
+        "CLAUDE_CODE_RESUME_INTERRUPTED_TURN",
+        "ENABLE_PROMPT_CACHING_1H_BEDROCK"
+      ]
+    },
+    "2.1.45": {
+      "removed": [
+        "LC_TERMINAL",
+        "PERMISSION_EXPLAINER_ENABLED",
+        "VERTEX_REGION_CLAUDE_3_5_HAIKU",
+        "VERTEX_REGION_CLAUDE_3_5_SONNET",
+        "VERTEX_REGION_CLAUDE_3_7_SONNET",
+        "VERTEX_REGION_CLAUDE_4_0_OPUS",
+        "VERTEX_REGION_CLAUDE_4_0_SONNET",
+        "VERTEX_REGION_CLAUDE_4_1_OPUS",
+        "VERTEX_REGION_CLAUDE_4_5_SONNET",
+        "VERTEX_REGION_CLAUDE_HAIKU_4_5",
+        "ZDOTDIR"
+      ]
+    },
+    "2.1.47": {
+      "added": [
+        "CLAUDE_AUTO_BACKGROUND_TASKS",
+        "CLAUDE_CODE_ORGANIZATION_UUID",
+        "CLAUDE_CODE_USE_CCR_V2"
+      ]
+    },
+    "2.1.48": {
+      "added": [
+        "CLAUDE_CODE_SIMPLE"
+      ],
+      "removed": [
+        "CLAUDE_CODE_SESSION_ID",
+        "ENABLE_EXPERIMENTAL_MCP_CLI",
+        "ENABLE_MCP_CLI",
+        "ENABLE_MCP_CLI_ENDPOINT",
+        "USE_MCP_CLI_DIR"
+      ]
+    },
+    "2.1.50": {
+      "added": [
+        "CLAUDE_CODE_DISABLE_1M_CONTEXT",
+        "CLAUDE_CODE_REMOTE_SEND_KEEPALIVES",
+        "CLAUDE_CODE_STREAMING_TEXT"
+      ]
+    },
+    "2.1.51": {
+      "added": [
+        "CLAUDE_CODE_ACCOUNT_UUID",
+        "CLAUDE_CODE_PLUGIN_GIT_TIMEOUT_MS",
+        "CLAUDE_CODE_USER_EMAIL",
+        "CLAUDE_CODE_WORKER_EPOCH",
+        "SAFEUSER"
+      ],
+      "removed": [
+        "CLAUDE_BASH_NO_LOGIN"
+      ]
+    },
+    "2.1.53": {
+      "removed": [
+        "CLAUDE_CODE_BIRTHDAY_HAT"
+      ]
+    },
+    "2.1.59": {
+      "added": [
+        "AUDIO_CAPTURE_NODE_PATH",
+        "CLAUDE_CODE_OAUTH_REFRESH_TOKEN",
+        "CLAUDE_CODE_OAUTH_SCOPES",
+        "CLAUDE_CODE_PLUGIN_USE_ZIP_CACHE",
+        "P4PORT",
+        "VOICE_STREAM_BASE_URL"
+      ],
+      "removed": [
+        "CLAUDE_CODE_SNIPPET_SAVE"
+      ]
+    },
+    "2.1.63": {
+      "added": [
+        "CLAUDE_CODE_PLUGIN_SEED_DIR",
+        "ENABLE_CLAUDEAI_MCP_SERVERS"
+      ]
+    },
+    "2.1.64": {
+      "added": [
+        "CLAUDE_CODE_DISABLE_GIT_INSTRUCTIONS",
+        "CLAUDE_CODE_GB_BASE_URL",
+        "CLAUDE_CODE_SEARCH_HINTS_IN_LIST",
+        "CLAUDE_COWORK_MEMORY_PATH_OVERRIDE"
+      ],
+      "removed": [
+        "DISABLE_MICROCOMPACT"
+      ]
+    },
+    "2.1.66": {
+      "added": [
+        "DISABLE_MICROCOMPACT"
+      ],
+      "removed": [
+        "CLAUDE_CODE_DISABLE_GIT_INSTRUCTIONS",
+        "CLAUDE_CODE_GB_BASE_URL",
+        "CLAUDE_CODE_SEARCH_HINTS_IN_LIST",
+        "CLAUDE_COWORK_MEMORY_PATH_OVERRIDE"
+      ]
+    },
+    "2.1.68": {
+      "added": [
+        "CLAUDE_CODE_DISABLE_LEGACY_MODEL_REMAP"
+      ]
+    },
+    "2.1.69": {
+      "added": [
+        "CLAUDE_CODE_DISABLE_GIT_INSTRUCTIONS",
+        "CLAUDE_CODE_DISABLE_PRECOMPACT_SKIP",
+        "CLAUDE_CODE_GB_BASE_URL",
+        "CLAUDE_CODE_QUESTION_PREVIEW_FORMAT",
+        "CLAUDE_CODE_SEARCH_HINTS_IN_LIST",
+        "CLAUDE_CODE_STALL_TIMEOUT_MS_FOR_TESTING",
+        "CLAUDE_COWORK_MEMORY_PATH_OVERRIDE",
+        "CLI_WIDTH",
+        "VCR_RECORD"
+      ],
+      "removed": [
+        "CLAUDE_CODE_SKIP_PRECOMPACT_LOAD",
+        "CLAUDE_CODE_TST_NAMES_IN_MESSAGES",
+        "DISABLE_MICROCOMPACT"
+      ]
+    },
+    "2.1.70": {
+      "added": [
+        "CLAUDE_BRIDGE_USE_CCR_V2",
+        "CLAUDE_CODE_ALWAYS_ENABLE_EFFORT",
+        "CLAUDE_CODE_MCP_INSTR_DELTA"
+      ]
+    },
+    "2.1.71": {
+      "added": [
+        "CLAUDE_CODE_DEBUG_LOG_LEVEL",
+        "CLAUDE_CODE_TWO_STAGE_CLASSIFIER",
+        "EMBEDDED_SEARCH_TOOLS",
+        "TEAM_MEMORY_SYNC_URL"
+      ],
+      "removed": [
+        "RIPGREP_EMBEDDED",
+        "RIPGREP_NODE_PATH"
+      ]
+    },
+    "2.1.72": {
+      "added": [
+        "CLAUDE_CODE_BRIEF",
+        "CLAUDE_CODE_BRIEF_UPLOAD",
+        "CLAUDE_CODE_DISABLE_CRON",
+        "CLAUDE_CODE_DISABLE_VIRTUAL_SCROLL"
+      ]
+    },
+    "2.1.73": {
+      "added": [
+        "ANTHROPIC_UNIX_SOCKET"
+      ]
+    },
+    "2.1.74": {
+      "added": [
+        "CLAUDE_CODE_FRAME_TIMING_LOG",
+        "CLAUDE_CODE_SESSIONEND_HOOKS_TIMEOUT_MS"
+      ],
+      "removed": [
+        "CLAUDE_CODE_TWO_STAGE_CLASSIFIER"
+      ]
+    },
+    "2.1.75": {
+      "added": [
+        "CLAUDE_CODE_AUTO_COMPACT_WINDOW"
+      ],
+      "removed": [
+        "CLAUDECODE"
+      ]
+    },
+    "2.1.76": {
+      "added": [
+        "CLAUDE_CODE_ACCOUNT_TAGGED_ID",
+        "CLAUDE_CODE_SKIP_FAST_MODE_NETWORK_ERRORS",
+        "CLAUDE_CODE_WORKSPACE_HOST_PATHS"
+      ],
+      "removed": [
+        "CLAUDE_CODE_GB_BASE_URL"
+      ]
+    },
+    "2.1.77": {
+      "added": [
+        "CLAUDE_CODE_NEW_INIT",
+        "CLAUDE_COWORK_MEMORY_EXTRA_GUIDELINES",
+        "LC_TERMINAL"
+      ]
+    },
+    "2.1.78": {
+      "added": [
+        "ANTHROPIC_CUSTOM_MODEL_OPTION",
+        "ANTHROPIC_CUSTOM_MODEL_OPTION_DESCRIPTION",
+        "ANTHROPIC_CUSTOM_MODEL_OPTION_NAME",
+        "CLAUDE_CODE_EXTRA_METADATA"
+      ],
+      "removed": [
+        "CLAUDE_CODE_STREAMING_TEXT"
+      ]
+    },
+    "2.1.79": {
+      "added": [
+        "CLAUDE_CODE_SUBPROCESS_ENV_SCRUB"
+      ],
+      "removed": [
+        "MCP_CONNECTION_NONBLOCKING"
+      ]
+    },
+    "2.1.80": {
+      "added": [
+        "CCR_ENABLE_BUNDLE",
+        "CCR_FORCE_BUNDLE"
+      ]
+    }
+  },
+  "env_vars_docs": {
+    "__CFB": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "ALACRITTY_LOG": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "ANALYTICS_LOG_TOOL_DETAILS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "ANTHROPIC_API_KEY": {
+      "documented": true,
+      "doc_files": [
+        "authentication.md",
+        "env-vars.md",
+        "github-actions.md",
+        "gitlab-ci-cd.md",
+        "llm-gateway.md",
+        "remote-control.md",
+        "troubleshooting.md"
+      ],
+      "mentions": 29
+    },
+    "ANTHROPIC_AUTH_TOKEN": {
+      "documented": true,
+      "doc_files": [
+        "authentication.md",
+        "env-vars.md",
+        "llm-gateway.md"
+      ],
+      "mentions": 7
+    },
+    "ANTHROPIC_BASE_URL": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md",
+        "llm-gateway.md",
+        "mcp.md",
+        "server-managed-settings.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 12
+    },
+    "ANTHROPIC_BEDROCK_BASE_URL": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "llm-gateway.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 4
+    },
+    "ANTHROPIC_BETAS": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md"
+      ],
+      "mentions": 1
+    },
+    "ANTHROPIC_CUSTOM_HEADERS": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "env-vars.md"
+      ],
+      "mentions": 2
+    },
+    "ANTHROPIC_CUSTOM_MODEL_OPTION": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md",
+        "model-config.md"
+      ],
+      "mentions": 10
+    },
+    "ANTHROPIC_CUSTOM_MODEL_OPTION_DESCRIPTION": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "model-config.md"
+      ],
+      "mentions": 3
+    },
+    "ANTHROPIC_CUSTOM_MODEL_OPTION_NAME": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "model-config.md"
+      ],
+      "mentions": 3
+    },
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "env-vars.md",
+        "google-vertex-ai.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 12
+    },
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "env-vars.md",
+        "google-vertex-ai.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 13
+    },
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "env-vars.md",
+        "google-vertex-ai.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 9
+    },
+    "ANTHROPIC_FOUNDRY_API_KEY": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "microsoft-foundry.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 5
+    },
+    "ANTHROPIC_FOUNDRY_BASE_URL": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "microsoft-foundry.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 4
+    },
+    "ANTHROPIC_FOUNDRY_RESOURCE": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "microsoft-foundry.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 4
+    },
+    "ANTHROPIC_MODEL": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "desktop.md",
+        "env-vars.md",
+        "google-vertex-ai.md",
+        "model-config.md",
+        "settings.md"
+      ],
+      "mentions": 11
+    },
+    "ANTHROPIC_SMALL_FAST_MODEL": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "env-vars.md",
+        "model-config.md"
+      ],
+      "mentions": 5
+    },
+    "ANTHROPIC_SMALL_FAST_MODEL_AWS_REGION": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "env-vars.md"
+      ],
+      "mentions": 2
+    },
+    "ANTHROPIC_UNIX_SOCKET": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "ANTHROPIC_VERTEX_PROJECT_ID": {
+      "documented": true,
+      "doc_files": [
+        "github-actions.md",
+        "google-vertex-ai.md",
+        "llm-gateway.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 5
+    },
+    "API_TIMEOUT_MS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "APP_URL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "APPDATA": {
+      "documented": true,
+      "doc_files": [
+        "troubleshooting.md"
+      ],
+      "mentions": 1
+    },
+    "AUDIO_CAPTURE_NODE_PATH": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AWS_ACCESS_KEY_ID": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "gitlab-ci-cd.md"
+      ],
+      "mentions": 2
+    },
+    "AWS_BEARER_TOKEN_BEDROCK": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "env-vars.md"
+      ],
+      "mentions": 2
+    },
+    "AWS_DEFAULT_REGION": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AWS_EXECUTION_ENV": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AWS_LAMBDA_BENCHMARK_MODE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AWS_LAMBDA_FUNCTION_NAME": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AWS_LOGIN_CACHE_DIRECTORY": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AWS_PROFILE": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md"
+      ],
+      "mentions": 3
+    },
+    "AWS_REGION": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "env-vars.md",
+        "github-actions.md",
+        "gitlab-ci-cd.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 13
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "gitlab-ci-cd.md"
+      ],
+      "mentions": 2
+    },
+    "AWS_SESSION_TOKEN": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "gitlab-ci-cd.md"
+      ],
+      "mentions": 2
+    },
+    "AZURE_ADDITIONALLY_ALLOWED_TENANTS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AZURE_AUTHORITY_HOST": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AZURE_CLIENT_CERTIFICATE_PASSWORD": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AZURE_CLIENT_CERTIFICATE_PATH": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AZURE_CLIENT_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AZURE_CLIENT_SECRET": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AZURE_CLIENT_SEND_CERTIFICATE_CHAIN": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AZURE_FEDERATED_TOKEN_FILE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AZURE_FUNCTIONS_ENVIRONMENT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AZURE_IDENTITY_DISABLE_MULTITENANTAUTH": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AZURE_PASSWORD": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AZURE_POD_IDENTITY_AUTHORITY_HOST": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AZURE_REGIONAL_AUTHORITY_NAME": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AZURE_TENANT_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AZURE_TOKEN_CREDENTIALS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "AZURE_USERNAME": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "BASH_MAX_OUTPUT_LENGTH": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md"
+      ],
+      "mentions": 1
+    },
+    "BEDROCK_BASE_URL": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "llm-gateway.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 4
+    },
+    "BETA_TRACING_ENDPOINT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "BROWSER": {
+      "documented": true,
+      "doc_files": [
+        "troubleshooting.md"
+      ],
+      "mentions": 2
+    },
+    "BUILDKITE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "C": {
+      "documented": true,
+      "doc_files": [
+        "agent-teams.md",
+        "amazon-bedrock.md",
+        "analytics.md",
+        "authentication.md",
+        "best-practices.md",
+        "changelog.md",
+        "checkpointing.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md",
+        "code-review.md",
+        "commands.md",
+        "common-workflows.md",
+        "costs.md",
+        "data-usage.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "devcontainer.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "fast-mode.md",
+        "features-overview.md",
+        "github-actions.md",
+        "gitlab-ci-cd.md",
+        "google-vertex-ai.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "keybindings.md",
+        "legal-and-compliance.md",
+        "llm-gateway.md",
+        "mcp.md",
+        "memory.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "output-styles.md",
+        "overview.md",
+        "permissions.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "quickstart.md",
+        "remote-control.md",
+        "sandboxing.md",
+        "scheduled-tasks.md",
+        "security.md",
+        "server-managed-settings.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slack.md",
+        "statusline.md",
+        "sub-agents.md",
+        "terminal-config.md",
+        "third-party-integrations.md",
+        "tools-reference.md",
+        "troubleshooting.md",
+        "voice-dictation.md",
+        "vs-code.md",
+        "zero-data-retention.md"
+      ],
+      "mentions": 4748
+    },
+    "CCR_ENABLE_BUNDLE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CCR_FORCE_BUNDLE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CF_PAGES": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CHOKIDAR_INTERVAL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CHOKIDAR_USEPOLLING": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CIRCLECI": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUBBIT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_AFTER_LAST_COMPACT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_AGENT_SDK_CLIENT_APP": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_AGENT_SDK_DISABLE_BUILTIN_AGENTS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_AGENT_SDK_MCP_NO_PREFIX": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_AGENT_SDK_VERSION": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_AUTO_BACKGROUND_TASKS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "sub-agents.md"
+      ],
+      "mentions": 3
+    },
+    "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "tools-reference.md"
+      ],
+      "mentions": 2
+    },
+    "CLAUDE_BRIDGE_USE_CCR_V2": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CHROME_PERMISSION_MODE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_ACCESSIBILITY": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_ACCOUNT_TAGGED_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_ACCOUNT_UUID": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md"
+      ],
+      "mentions": 4
+    },
+    "CLAUDE_CODE_ACTION": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md",
+        "memory.md",
+        "skills.md"
+      ],
+      "mentions": 5
+    },
+    "CLAUDE_CODE_ADDITIONAL_PROTECTION": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_ALWAYS_ENABLE_EFFORT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_API_BASE_URL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_API_KEY_FILE_DESCRIPTOR": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_API_KEY_HELPER_TTL_MS": {
+      "documented": true,
+      "doc_files": [
+        "authentication.md",
+        "env-vars.md",
+        "llm-gateway.md"
+      ],
+      "mentions": 3
+    },
+    "CLAUDE_CODE_ATTRIBUTION_HEADER": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_AUTO_COMPACT_WINDOW": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md"
+      ],
+      "mentions": 1
+    },
+    "CLAUDE_CODE_AUTO_CONNECT_IDE": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md"
+      ],
+      "mentions": 1
+    },
+    "CLAUDE_CODE_BASE_REF": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_BASH_SANDBOX_SHOW_INDICATOR": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_BLOCKING_LIMIT_OVERRIDE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_BRIEF": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_BRIEF_UPLOAD": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_BUBBLEWRAP": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_CLIENT_CERT": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "network-config.md"
+      ],
+      "mentions": 2
+    },
+    "CLAUDE_CODE_CLIENT_KEY": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "network-config.md"
+      ],
+      "mentions": 4
+    },
+    "CLAUDE_CODE_CLIENT_KEY_PASSPHRASE": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "network-config.md"
+      ],
+      "mentions": 2
+    },
+    "CLAUDE_CODE_CONTAINER_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_CUSTOM_OAUTH_URL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_DATADOG_FLUSH_INTERVAL_MS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_DEBUG_LOG_LEVEL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_DEBUG_LOGS_DIR": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_DIAGNOSTICS_FILE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_DISABLE_1M_CONTEXT": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md",
+        "model-config.md"
+      ],
+      "mentions": 3
+    },
+    "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": {
+      "documented": true,
+      "doc_files": [
+        "common-workflows.md",
+        "env-vars.md",
+        "model-config.md"
+      ],
+      "mentions": 4
+    },
+    "CLAUDE_CODE_DISABLE_ATTACHMENTS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "memory.md"
+      ],
+      "mentions": 2
+    },
+    "CLAUDE_CODE_DISABLE_BACKGROUND_TASKS": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md",
+        "interactive-mode.md",
+        "sub-agents.md"
+      ],
+      "mentions": 4
+    },
+    "CLAUDE_CODE_DISABLE_CLAUDE_MDS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_DISABLE_COMMAND_INJECTION_CHECK": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_DISABLE_CRON": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md",
+        "scheduled-tasks.md"
+      ],
+      "mentions": 3
+    },
+    "CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md",
+        "llm-gateway.md"
+      ],
+      "mentions": 5
+    },
+    "CLAUDE_CODE_DISABLE_FAST_MODE": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "fast-mode.md"
+      ],
+      "mentions": 2
+    },
+    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": {
+      "documented": true,
+      "doc_files": [
+        "data-usage.md",
+        "env-vars.md"
+      ],
+      "mentions": 3
+    },
+    "CLAUDE_CODE_DISABLE_FILE_CHECKPOINTING": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_DISABLE_GIT_INSTRUCTIONS": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md",
+        "settings.md"
+      ],
+      "mentions": 4
+    },
+    "CLAUDE_CODE_DISABLE_LEGACY_MODEL_REMAP": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "data-usage.md",
+        "env-vars.md",
+        "remote-control.md"
+      ],
+      "mentions": 6
+    },
+    "CLAUDE_CODE_DISABLE_OFFICIAL_MARKETPLACE_AUTOINSTALL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_DISABLE_PRECOMPACT_SKIP": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_DISABLE_TERMINAL_TITLE": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md"
+      ],
+      "mentions": 3
+    },
+    "CLAUDE_CODE_DISABLE_THINKING": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_DISABLE_VIRTUAL_SCROLL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_DONT_INHERIT_ENV": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_EAGER_FLUSH": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_EFFORT_LEVEL": {
+      "documented": true,
+      "doc_files": [
+        "common-workflows.md",
+        "env-vars.md",
+        "model-config.md"
+      ],
+      "mentions": 3
+    },
+    "CLAUDE_CODE_EMIT_TOOL_USE_SUMMARIES": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_ENABLE_CFC": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_ENABLE_FINE_GRAINED_TOOL_STREAMING": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "interactive-mode.md"
+      ],
+      "mentions": 2
+    },
+    "CLAUDE_CODE_ENABLE_SDK_FILE_CHECKPOINTING": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_ENABLE_TASKS": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md"
+      ],
+      "mentions": 2
+    },
+    "CLAUDE_CODE_ENABLE_TELEMETRY": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "monitoring-usage.md",
+        "settings.md"
+      ],
+      "mentions": 12
+    },
+    "CLAUDE_CODE_ENABLE_TOKEN_USAGE_ATTACHMENT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_ENHANCED_TELEMETRY_BETA": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_ENTRYPOINT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_ENVIRONMENT_KIND": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_ENVIRONMENT_RUNNER_VERSION": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_EXIT_AFTER_FIRST_RENDER": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_EXIT_AFTER_STOP_DELAY": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md"
+      ],
+      "mentions": 2
+    },
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": {
+      "documented": true,
+      "doc_files": [
+        "agent-teams.md",
+        "costs.md",
+        "env-vars.md"
+      ],
+      "mentions": 5
+    },
+    "CLAUDE_CODE_EXTRA_BODY": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_EXTRA_METADATA": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_FILE_READ_MAX_OUTPUT_TOKENS": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md"
+      ],
+      "mentions": 2
+    },
+    "CLAUDE_CODE_FORCE_FULL_LOGO": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_FORCE_GLOBAL_CACHE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_FRAME_TIMING_LOG": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_GIT_BASH_PATH": {
+      "documented": true,
+      "doc_files": [
+        "setup.md",
+        "troubleshooting.md"
+      ],
+      "mentions": 2
+    },
+    "CLAUDE_CODE_GLOB_HIDDEN": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_GLOB_NO_IGNORE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_GLOB_TIMEOUT_SECONDS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_HOST_PLATFORM": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_IDE_HOST_OVERRIDE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md"
+      ],
+      "mentions": 1
+    },
+    "CLAUDE_CODE_IDE_SKIP_VALID_CHECK": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_INCLUDE_PARTIAL_MESSAGES": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_IS_COWORK": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md"
+      ],
+      "mentions": 2
+    },
+    "CLAUDE_CODE_MAX_RETRIES": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_MAX_TOOL_USE_CONCURRENCY": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_MCP_INSTR_DELTA": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_NEW_INIT": {
+      "documented": true,
+      "doc_files": [
+        "commands.md",
+        "env-vars.md",
+        "memory.md"
+      ],
+      "mentions": 3
+    },
+    "CLAUDE_CODE_OAUTH_CLIENT_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_OAUTH_REFRESH_TOKEN": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_OAUTH_SCOPES": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_OAUTH_TOKEN": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_ORGANIZATION_UUID": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md"
+      ],
+      "mentions": 4
+    },
+    "CLAUDE_CODE_OTEL_FLUSH_TIMEOUT_MS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_OTEL_HEADERS_HELPER_DEBOUNCE_MS": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "monitoring-usage.md"
+      ],
+      "mentions": 3
+    },
+    "CLAUDE_CODE_OTEL_SHUTDOWN_TIMEOUT_MS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_PERFETTO_TRACE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_PLAN_MODE_INTERVIEW_PHASE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_PLAN_MODE_REQUIRED": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md"
+      ],
+      "mentions": 1
+    },
+    "CLAUDE_CODE_PLAN_V2_AGENT_COUNT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_PLAN_V2_EXPLORE_AGENT_COUNT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_PLUGIN_CACHE_DIR": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md"
+      ],
+      "mentions": 1
+    },
+    "CLAUDE_CODE_PLUGIN_GIT_TIMEOUT_MS": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md",
+        "plugin-marketplaces.md"
+      ],
+      "mentions": 4
+    },
+    "CLAUDE_CODE_PLUGIN_SEED_DIR": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md",
+        "plugin-marketplaces.md"
+      ],
+      "mentions": 7
+    },
+    "CLAUDE_CODE_PLUGIN_USE_ZIP_CACHE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_POST_FOR_SESSION_INGRESS_V2": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_PROFILE_STARTUP": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_PROXY_RESOLVES_HOSTS": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md"
+      ],
+      "mentions": 2
+    },
+    "CLAUDE_CODE_QUESTION_PREVIEW_FORMAT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_REMOTE": {
+      "documented": true,
+      "doc_files": [
+        "claude-code-on-the-web.md",
+        "hooks.md"
+      ],
+      "mentions": 3
+    },
+    "CLAUDE_CODE_REMOTE_ENVIRONMENT_TYPE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_REMOTE_MEMORY_DIR": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_REMOTE_SEND_KEEPALIVES": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_REMOTE_SESSION_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_RESUME_INTERRUPTED_TURN": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_SAVE_HOOK_ADDITIONAL_CONTEXT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_SEARCH_HINTS_IN_LIST": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_SESSION_ACCESS_TOKEN": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_SESSIONEND_HOOKS_TIMEOUT_MS": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md",
+        "hooks.md"
+      ],
+      "mentions": 4
+    },
+    "CLAUDE_CODE_SHELL": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md"
+      ],
+      "mentions": 4
+    },
+    "CLAUDE_CODE_SHELL_PREFIX": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md"
+      ],
+      "mentions": 2
+    },
+    "CLAUDE_CODE_SIMPLE": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md"
+      ],
+      "mentions": 4
+    },
+    "CLAUDE_CODE_SKIP_BEDROCK_AUTH": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "llm-gateway.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 3
+    },
+    "CLAUDE_CODE_SKIP_FAST_MODE_NETWORK_ERRORS": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md"
+      ],
+      "mentions": 1
+    },
+    "CLAUDE_CODE_SKIP_FOUNDRY_AUTH": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 2
+    },
+    "CLAUDE_CODE_SKIP_PROMPT_HISTORY": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_SKIP_VERTEX_AUTH": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "llm-gateway.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 3
+    },
+    "CLAUDE_CODE_SLOW_OPERATION_THRESHOLD_MS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_SSE_PORT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_STALL_TIMEOUT_MS_FOR_TESTING": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_SUBAGENT_MODEL": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "model-config.md"
+      ],
+      "mentions": 2
+    },
+    "CLAUDE_CODE_SUBPROCESS_ENV_SCRUB": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_SYNC_PLUGIN_INSTALL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_SYNC_PLUGIN_INSTALL_TIMEOUT_MS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_SYNTAX_HIGHLIGHT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_TAGS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_TASK_LIST_ID": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "interactive-mode.md"
+      ],
+      "mentions": 2
+    },
+    "CLAUDE_CODE_TEST_FIXTURES_ROOT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_TMPDIR": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md"
+      ],
+      "mentions": 2
+    },
+    "CLAUDE_CODE_TMUX_PREFIX": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_TMUX_PREFIX_CONFLICTS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_TMUX_SESSION": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_USE_BEDROCK": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "authentication.md",
+        "data-usage.md",
+        "env-vars.md",
+        "llm-gateway.md",
+        "remote-control.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 10
+    },
+    "CLAUDE_CODE_USE_CCR_V2": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_USE_COWORK_PLUGINS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_USE_FOUNDRY": {
+      "documented": true,
+      "doc_files": [
+        "authentication.md",
+        "data-usage.md",
+        "env-vars.md",
+        "microsoft-foundry.md",
+        "remote-control.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 9
+    },
+    "CLAUDE_CODE_USE_NATIVE_FILE_SEARCH": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_USE_VERTEX": {
+      "documented": true,
+      "doc_files": [
+        "authentication.md",
+        "data-usage.md",
+        "env-vars.md",
+        "google-vertex-ai.md",
+        "llm-gateway.md",
+        "remote-control.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 10
+    },
+    "CLAUDE_CODE_USER_EMAIL": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md"
+      ],
+      "mentions": 4
+    },
+    "CLAUDE_CODE_WEBSOCKET_AUTH_FILE_DESCRIPTOR": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_WORKER_EPOCH": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CODE_WORKSPACE_HOST_PATHS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_CONFIG_DIR": {
+      "documented": true,
+      "doc_files": [
+        "authentication.md",
+        "desktop.md",
+        "env-vars.md"
+      ],
+      "mentions": 3
+    },
+    "CLAUDE_COWORK_MEMORY_EXTRA_GUIDELINES": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_COWORK_MEMORY_PATH_OVERRIDE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_DEBUG": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_ENABLE_STREAM_WATCHDOG": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_ENV_FILE": {
+      "documented": true,
+      "doc_files": [
+        "claude-code-on-the-web.md",
+        "env-vars.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "tools-reference.md"
+      ],
+      "mentions": 13
+    },
+    "CLAUDE_FORCE_DISPLAY_SURVEY": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_REPL_MODE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLAUDE_TMPDIR": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLI_WIDTH": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CLOUD_ML_REGION": {
+      "documented": true,
+      "doc_files": [
+        "github-actions.md",
+        "gitlab-ci-cd.md",
+        "google-vertex-ai.md",
+        "llm-gateway.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 11
+    },
+    "CLOUD_RUN_JOB": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CODESPACES": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "COLORTERM": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "COREPACK_ENABLE_AUTO_PIN": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "CURSOR_TRACE_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "DEBUG": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "claude-code-on-the-web.md",
+        "hooks.md"
+      ],
+      "mentions": 10
+    },
+    "DEBUG_AUTH": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "DEBUG_SDK": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "DEMO_VERSION": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "DENO_DEPLOYMENT_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "DETECT_GCP_RETRIES": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "DISABLE_AUTO_COMPACT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "DISABLE_AUTO_MIGRATE_TO_NATIVE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "DISABLE_AUTOUPDATER": {
+      "documented": true,
+      "doc_files": [
+        "discover-plugins.md",
+        "env-vars.md",
+        "setup.md"
+      ],
+      "mentions": 8
+    },
+    "DISABLE_BUG_COMMAND": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md"
+      ],
+      "mentions": 1
+    },
+    "DISABLE_CLAUDE_CODE_SM_COMPACT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "DISABLE_COMPACT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "DISABLE_COST_WARNINGS": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md"
+      ],
+      "mentions": 1
+    },
+    "DISABLE_DOCTOR_COMMAND": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "DISABLE_ERROR_REPORTING": {
+      "documented": true,
+      "doc_files": [
+        "data-usage.md",
+        "env-vars.md"
+      ],
+      "mentions": 4
+    },
+    "DISABLE_EXTRA_USAGE_COMMAND": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "DISABLE_FEEDBACK_COMMAND": {
+      "documented": true,
+      "doc_files": [
+        "data-usage.md",
+        "env-vars.md"
+      ],
+      "mentions": 4
+    },
+    "DISABLE_INSTALL_GITHUB_APP_COMMAND": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "DISABLE_INSTALLATION_CHECKS": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md"
+      ],
+      "mentions": 1
+    },
+    "DISABLE_INTERLEAVED_THINKING": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md"
+      ],
+      "mentions": 1
+    },
+    "DISABLE_LOGIN_COMMAND": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "DISABLE_LOGOUT_COMMAND": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "DISABLE_PROMPT_CACHING": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "env-vars.md",
+        "google-vertex-ai.md",
+        "model-config.md"
+      ],
+      "mentions": 12
+    },
+    "DISABLE_PROMPT_CACHING_HAIKU": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "model-config.md"
+      ],
+      "mentions": 2
+    },
+    "DISABLE_PROMPT_CACHING_OPUS": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "model-config.md"
+      ],
+      "mentions": 2
+    },
+    "DISABLE_PROMPT_CACHING_SONNET": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "model-config.md"
+      ],
+      "mentions": 2
+    },
+    "DISABLE_TELEMETRY": {
+      "documented": true,
+      "doc_files": [
+        "data-usage.md",
+        "env-vars.md",
+        "remote-control.md"
+      ],
+      "mentions": 7
+    },
+    "DISABLE_UPGRADE_COMMAND": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "DYNO": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "EDITOR": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "EMBEDDED_SEARCH_TOOLS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "ENABLE_BETA_TRACING_DETAILED": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "ENABLE_CLAUDE_CODE_SM_COMPACT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "ENABLE_CLAUDEAI_MCP_SERVERS": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md",
+        "mcp.md"
+      ],
+      "mentions": 4
+    },
+    "ENABLE_ENHANCED_TELEMETRY_BETA": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "ENABLE_MCP_LARGE_OUTPUT_FILES": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "ENABLE_PROMPT_CACHING_1H_BEDROCK": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "ENABLE_TOOL_SEARCH": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "costs.md",
+        "env-vars.md",
+        "mcp.md"
+      ],
+      "mentions": 8
+    },
+    "FALLBACK_FOR_ALL_PRIMARY_MODELS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "FLY_APP_NAME": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "FLY_MACHINE_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "FORCE_AUTOUPDATE_PLUGINS": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "discover-plugins.md",
+        "env-vars.md"
+      ],
+      "mentions": 4
+    },
+    "FORCE_CODE_TERMINAL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "FUNCTION_NAME": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "FUNCTION_TARGET": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GAE_MODULE_NAME": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GAE_SERVICE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GCE_METADATA_HOST": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GCE_METADATA_IP": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GCLOUD_PROJECT": {
+      "documented": true,
+      "doc_files": [
+        "google-vertex-ai.md"
+      ],
+      "mentions": 1
+    },
+    "GITHUB_ACTION_INPUTS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GITHUB_ACTION_PATH": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GITHUB_ACTIONS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GITHUB_ACTOR": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GITHUB_ACTOR_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GITHUB_EVENT_NAME": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GITHUB_REPOSITORY": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GITHUB_REPOSITORY_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GITHUB_REPOSITORY_OWNER": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GITHUB_REPOSITORY_OWNER_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GITLAB_CI": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GITPOD_WORKSPACE_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GNOME_TERMINAL_SERVICE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GOOGLE_APPLICATION_CREDENTIALS": {
+      "documented": true,
+      "doc_files": [
+        "google-vertex-ai.md"
+      ],
+      "mentions": 1
+    },
+    "GOOGLE_CLOUD_PROJECT": {
+      "documented": true,
+      "doc_files": [
+        "google-vertex-ai.md"
+      ],
+      "mentions": 1
+    },
+    "GOOGLE_CLOUD_QUOTA_PROJECT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GRACEFUL_FS_PLATFORM": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GRPC_DEFAULT_SSL_ROOTS_FILE_PATH": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GRPC_EXPERIMENTAL_ENABLE_OUTLIER_DETECTION": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GRPC_NODE_TRACE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GRPC_NODE_USE_ALTERNATIVE_RESOLVER": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GRPC_NODE_VERBOSITY": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GRPC_SSL_CIPHER_SUITES": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GRPC_TRACE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "GRPC_VERBOSITY": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "HOME": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "hooks.md",
+        "sandboxing.md",
+        "settings.md",
+        "troubleshooting.md"
+      ],
+      "mentions": 8
+    },
+    "HTTP_PROXY": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "network-config.md",
+        "third-party-integrations.md",
+        "troubleshooting.md"
+      ],
+      "mentions": 5
+    },
+    "HTTPS_PROXY": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "network-config.md",
+        "third-party-integrations.md",
+        "troubleshooting.md"
+      ],
+      "mentions": 12
+    },
+    "IS_DEMO": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md"
+      ],
+      "mentions": 2
+    },
+    "IS_SANDBOX": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "ITERM_SESSION_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "JEST_WORKER_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "K_CONFIGURATION": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "K_SERVICE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "KITTY_WINDOW_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "KONSOLE_VERSION": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "KUBERNETES_SERVICE_HOST": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "LC_TERMINAL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "LOCAL_BRIDGE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "LOCALAPPDATA": {
+      "documented": true,
+      "doc_files": [
+        "troubleshooting.md"
+      ],
+      "mentions": 1
+    },
+    "MAX_MCP_OUTPUT_TOKENS": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "mcp.md"
+      ],
+      "mentions": 4
+    },
+    "MAX_STRUCTURED_OUTPUT_RETRIES": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "MAX_THINKING_TOKENS": {
+      "documented": true,
+      "doc_files": [
+        "common-workflows.md",
+        "costs.md",
+        "desktop.md",
+        "env-vars.md",
+        "model-config.md"
+      ],
+      "mentions": 9
+    },
+    "MCP_CLIENT_SECRET": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "mcp.md"
+      ],
+      "mentions": 2
+    },
+    "MCP_OAUTH_CALLBACK_PORT": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md"
+      ],
+      "mentions": 1
+    },
+    "MCP_REMOTE_SERVER_CONNECTION_BATCH_SIZE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "MCP_SERVER_CONNECTION_BATCH_SIZE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "MCP_TIMEOUT": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "mcp.md"
+      ],
+      "mentions": 2
+    },
+    "MCP_TOOL_TIMEOUT": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md"
+      ],
+      "mentions": 1
+    },
+    "METADATA_SERVER_DETECTION": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "MODIFIERS_NODE_PATH": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "MSYSTEM": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "N": {
+      "documented": true,
+      "doc_files": [
+        "agent-teams.md",
+        "amazon-bedrock.md",
+        "analytics.md",
+        "authentication.md",
+        "best-practices.md",
+        "changelog.md",
+        "checkpointing.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md",
+        "code-review.md",
+        "commands.md",
+        "common-workflows.md",
+        "costs.md",
+        "data-usage.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "devcontainer.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "fast-mode.md",
+        "features-overview.md",
+        "github-actions.md",
+        "gitlab-ci-cd.md",
+        "google-vertex-ai.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "keybindings.md",
+        "llm-gateway.md",
+        "mcp.md",
+        "memory.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "output-styles.md",
+        "overview.md",
+        "permissions.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "quickstart.md",
+        "remote-control.md",
+        "sandboxing.md",
+        "scheduled-tasks.md",
+        "security.md",
+        "server-managed-settings.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slack.md",
+        "statusline.md",
+        "sub-agents.md",
+        "terminal-config.md",
+        "third-party-integrations.md",
+        "tools-reference.md",
+        "troubleshooting.md",
+        "voice-dictation.md",
+        "vs-code.md"
+      ],
+      "mentions": 1616
+    },
+    "NETLIFY": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "NO_PROXY": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "network-config.md"
+      ],
+      "mentions": 4
+    },
+    "NODE_DEBUG": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "NODE_EXTRA_CA_CERTS": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "network-config.md",
+        "troubleshooting.md"
+      ],
+      "mentions": 5
+    },
+    "NODE_OPTIONS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "NODE_V8_COVERAGE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "OSTYPE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "OTEL_EXPORTER_OTLP_ENDPOINT": {
+      "documented": true,
+      "doc_files": [
+        "monitoring-usage.md"
+      ],
+      "mentions": 6
+    },
+    "OTEL_EXPORTER_OTLP_HEADERS": {
+      "documented": true,
+      "doc_files": [
+        "monitoring-usage.md"
+      ],
+      "mentions": 3
+    },
+    "OTEL_EXPORTER_OTLP_INSECURE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "OTEL_EXPORTER_OTLP_LOGS_PROTOCOL": {
+      "documented": true,
+      "doc_files": [
+        "monitoring-usage.md"
+      ],
+      "mentions": 2
+    },
+    "OTEL_EXPORTER_OTLP_METRICS_PROTOCOL": {
+      "documented": true,
+      "doc_files": [
+        "monitoring-usage.md"
+      ],
+      "mentions": 2
+    },
+    "OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE": {
+      "documented": true,
+      "doc_files": [
+        "monitoring-usage.md"
+      ],
+      "mentions": 1
+    },
+    "OTEL_EXPORTER_OTLP_PROTOCOL": {
+      "documented": true,
+      "doc_files": [
+        "monitoring-usage.md"
+      ],
+      "mentions": 7
+    },
+    "OTEL_EXPORTER_OTLP_TRACES_PROTOCOL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "OTEL_EXPORTER_PROMETHEUS_HOST": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "OTEL_EXPORTER_PROMETHEUS_PORT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "OTEL_LOG_TOOL_CONTENT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "OTEL_LOG_TOOL_DETAILS": {
+      "documented": true,
+      "doc_files": [
+        "monitoring-usage.md"
+      ],
+      "mentions": 4
+    },
+    "OTEL_LOG_USER_PROMPTS": {
+      "documented": true,
+      "doc_files": [
+        "monitoring-usage.md"
+      ],
+      "mentions": 3
+    },
+    "OTEL_LOGS_EXPORT_INTERVAL": {
+      "documented": true,
+      "doc_files": [
+        "monitoring-usage.md"
+      ],
+      "mentions": 2
+    },
+    "OTEL_LOGS_EXPORTER": {
+      "documented": true,
+      "doc_files": [
+        "monitoring-usage.md"
+      ],
+      "mentions": 6
+    },
+    "OTEL_METRIC_EXPORT_INTERVAL": {
+      "documented": true,
+      "doc_files": [
+        "monitoring-usage.md"
+      ],
+      "mentions": 3
+    },
+    "OTEL_METRICS_EXPORTER": {
+      "documented": true,
+      "doc_files": [
+        "monitoring-usage.md",
+        "settings.md"
+      ],
+      "mentions": 10
+    },
+    "OTEL_TRACES_EXPORT_INTERVAL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "OTEL_TRACES_EXPORTER": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "P": {
+      "documented": true,
+      "doc_files": [
+        "agent-teams.md",
+        "amazon-bedrock.md",
+        "analytics.md",
+        "authentication.md",
+        "best-practices.md",
+        "changelog.md",
+        "checkpointing.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md",
+        "code-review.md",
+        "commands.md",
+        "common-workflows.md",
+        "costs.md",
+        "data-usage.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "devcontainer.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "fast-mode.md",
+        "features-overview.md",
+        "github-actions.md",
+        "gitlab-ci-cd.md",
+        "google-vertex-ai.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "keybindings.md",
+        "legal-and-compliance.md",
+        "llm-gateway.md",
+        "mcp.md",
+        "memory.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "output-styles.md",
+        "overview.md",
+        "permissions.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "quickstart.md",
+        "remote-control.md",
+        "sandboxing.md",
+        "scheduled-tasks.md",
+        "security.md",
+        "server-managed-settings.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slack.md",
+        "statusline.md",
+        "sub-agents.md",
+        "terminal-config.md",
+        "third-party-integrations.md",
+        "tools-reference.md",
+        "troubleshooting.md",
+        "voice-dictation.md",
+        "vs-code.md",
+        "zero-data-retention.md"
+      ],
+      "mentions": 2599
+    },
+    "P4PORT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "PATH": {
+      "documented": true,
+      "doc_files": [
+        "agent-teams.md",
+        "changelog.md",
+        "desktop.md",
+        "discover-plugins.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "mcp.md",
+        "plugins-reference.md",
+        "sandboxing.md",
+        "setup.md",
+        "troubleshooting.md"
+      ],
+      "mentions": 47
+    },
+    "PATHEXT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "PKG_CONFIG_PATH": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "PROJECT_DOMAIN": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "PWD": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "RAILWAY_ENVIRONMENT_NAME": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "RAILWAY_SERVICE_NAME": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "RENDER": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "REPL_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "REPL_SLUG": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "RUNNER_ENVIRONMENT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "RUNNER_OS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "S": {
+      "documented": true,
+      "doc_files": [
+        "agent-teams.md",
+        "amazon-bedrock.md",
+        "analytics.md",
+        "authentication.md",
+        "best-practices.md",
+        "changelog.md",
+        "checkpointing.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md",
+        "code-review.md",
+        "commands.md",
+        "common-workflows.md",
+        "costs.md",
+        "data-usage.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "devcontainer.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "fast-mode.md",
+        "features-overview.md",
+        "github-actions.md",
+        "gitlab-ci-cd.md",
+        "google-vertex-ai.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "keybindings.md",
+        "legal-and-compliance.md",
+        "llm-gateway.md",
+        "mcp.md",
+        "memory.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "output-styles.md",
+        "overview.md",
+        "permissions.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "quickstart.md",
+        "remote-control.md",
+        "sandboxing.md",
+        "scheduled-tasks.md",
+        "security.md",
+        "server-managed-settings.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slack.md",
+        "statusline.md",
+        "sub-agents.md",
+        "terminal-config.md",
+        "third-party-integrations.md",
+        "tools-reference.md",
+        "troubleshooting.md",
+        "voice-dictation.md",
+        "vs-code.md",
+        "zero-data-retention.md"
+      ],
+      "mentions": 3717
+    },
+    "SAFEUSER": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "SESSION_INGRESS_URL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "SESSIONNAME": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "SHARP_FORCE_GLOBAL_LIBVIPS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "SHARP_IGNORE_GLOBAL_LIBVIPS": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "SHELL": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md"
+      ],
+      "mentions": 4
+    },
+    "SLASH_COMMAND_TOOL_CHAR_BUDGET": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "skills.md"
+      ],
+      "mentions": 2
+    },
+    "SPACE_CREATOR_USER_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "SRT_DEBUG": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "SSH_CLIENT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "SSH_CONNECTION": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "SSH_TTY": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "STY": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "SWE_BENCH_INSTANCE_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "SWE_BENCH_RUN_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "SWE_BENCH_TASK_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "SYSTEM_OIDCREQUESTURI": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "SYSTEMROOT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "TASK_MAX_OUTPUT_LENGTH": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "TEAM_MEMORY_SYNC_URL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "TEMP": {
+      "documented": true,
+      "doc_files": [
+        "monitoring-usage.md"
+      ],
+      "mentions": 1
+    },
+    "TERM": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md"
+      ],
+      "mentions": 3
+    },
+    "TERM_PROGRAM": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "TERM_PROGRAM_VERSION": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "TERMINAL_EMULATOR": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "TERMINATOR_UUID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "TEST_ENABLE_SESSION_PERSISTENCE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "TEST_GRACEFUL_FS_GLOBAL_PATCH": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "TILIX_ID": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "TMPDIR": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md"
+      ],
+      "mentions": 2
+    },
+    "TMUX": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "TMUX_PANE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "UNDICI_NO_FG": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "USE_API_CONTEXT_MANAGEMENT": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "USE_BUILTIN_RIPGREP": {
+      "documented": true,
+      "doc_files": [
+        "env-vars.md",
+        "setup.md",
+        "troubleshooting.md"
+      ],
+      "mentions": 5
+    },
+    "USE_LOCAL_OAUTH": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "USE_STAGING_OAUTH": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "USER": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md",
+        "llm-gateway.md",
+        "monitoring-usage.md",
+        "setup.md",
+        "troubleshooting.md"
+      ],
+      "mentions": 15
+    },
+    "USERNAME": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "USERPROFILE": {
+      "documented": true,
+      "doc_files": [
+        "setup.md",
+        "troubleshooting.md"
+      ],
+      "mentions": 7
+    },
+    "UV_THREADPOOL_SIZE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "V": {
+      "documented": true,
+      "doc_files": [
+        "agent-teams.md",
+        "amazon-bedrock.md",
+        "analytics.md",
+        "authentication.md",
+        "best-practices.md",
+        "changelog.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "code-review.md",
+        "commands.md",
+        "common-workflows.md",
+        "costs.md",
+        "data-usage.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "devcontainer.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "fast-mode.md",
+        "github-actions.md",
+        "gitlab-ci-cd.md",
+        "google-vertex-ai.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "keybindings.md",
+        "legal-and-compliance.md",
+        "llm-gateway.md",
+        "mcp.md",
+        "memory.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "overview.md",
+        "permissions.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "quickstart.md",
+        "remote-control.md",
+        "sandboxing.md",
+        "security.md",
+        "server-managed-settings.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slack.md",
+        "statusline.md",
+        "sub-agents.md",
+        "terminal-config.md",
+        "third-party-integrations.md",
+        "tools-reference.md",
+        "troubleshooting.md",
+        "voice-dictation.md",
+        "vs-code.md",
+        "zero-data-retention.md"
+      ],
+      "mentions": 650
+    },
+    "VCR_RECORD": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "VERCEL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "VERTEX_BASE_URL": {
+      "documented": true,
+      "doc_files": [
+        "llm-gateway.md",
+        "third-party-integrations.md"
+      ],
+      "mentions": 3
+    },
+    "VISUAL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "VOICE_STREAM_BASE_URL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "VSCODE_GIT_ASKPASS_MAIN": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "VTE_VERSION": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "WEBSITE_SITE_NAME": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "WEBSITE_SKU": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "WS_NO_BUFFER_UTIL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "WS_NO_UTF_8_VALIDATE": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "WSL_DISTRO_NAME": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "WT_SESSION": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "XDG_CONFIG_HOME": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "XDG_RUNTIME_DIR": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "XTERM_VERSION": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "ZED_TERM": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    }
+  },
+  "docs_checked_at": "2026-03-19"
+}

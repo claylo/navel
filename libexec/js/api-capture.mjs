@@ -225,6 +225,19 @@ function startGateway() {
 }
 
 // ---------------------------------------------------------------------------
+// No-plugins directory
+// ---------------------------------------------------------------------------
+
+function createNoPluginsDir(baseDir) {
+  const dir = join(baseDir, 'no-plugins');
+  mkdirSync(join(dir, 'cache'), { recursive: true });
+  mkdirSync(join(dir, 'marketplaces'), { recursive: true });
+  writeFileSync(join(dir, 'installed_plugins.json'), '{"version":2,"plugins":{}}');
+  writeFileSync(join(dir, 'known_marketplaces.json'), '{}');
+  return dir;
+}
+
+// ---------------------------------------------------------------------------
 // Spawn Claude Code
 // ---------------------------------------------------------------------------
 
@@ -233,6 +246,9 @@ function spawnClaude(cliPath, port, { passthroughArgs, realAuth }) {
     ...process.env,
     ANTHROPIC_BASE_URL: `http://127.0.0.1:${port}`,
     NO_COLOR: '1',
+    DISABLE_PROMPT_CACHING: '1',
+    MAX_THINKING_TOKENS: '0',
+    CLAUDE_CODE_PLUGIN_CACHE_DIR: createNoPluginsDir(RAW_OUTPUT_DIR),
   };
 
   // In real-auth mode, keep the user's existing API key or session auth.
@@ -241,7 +257,7 @@ function spawnClaude(cliPath, port, { passthroughArgs, realAuth }) {
     env.ANTHROPIC_API_KEY = FAKE_API_KEY;
   }
 
-  const claudeArgs = [cliPath, '-p', 'hello'];
+  const claudeArgs = [cliPath, '-p'];
 
   claudeArgs.push('--no-session-persistence');
 
@@ -249,8 +265,16 @@ function spawnClaude(cliPath, port, { passthroughArgs, realAuth }) {
   mkdirSync(RAW_OUTPUT_DIR, { recursive: true });
   writeFileSync(emptyMcpConfig, '{"mcpServers":{}}');
   claudeArgs.push('--strict-mcp-config', '--mcp-config', emptyMcpConfig);
+  claudeArgs.push('--settings', '{}')
+  claudeArgs.push('--setting-sources', 'local')
+
+  const noPluginsDir = createNoPluginsDir(RAW_OUTPUT_DIR);
+  claudeArgs.push('--plugin-dir', noPluginsDir);
 
   claudeArgs.push(...passthroughArgs);
+
+  // prompt goes last
+  claudeArgs.push('hello');
 
   console.error(`  spawning: node ${claudeArgs.join(' ')}`);
 
