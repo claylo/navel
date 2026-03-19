@@ -2,9 +2,12 @@
 set -euo pipefail
 
 REPO_ROOT="${NAVEL_HOME:-$(cd "$(dirname "$0")/.." && pwd)}"
+# shellcheck source=_portable.sh
+. "$(dirname "$0")/_portable.sh"
 
 cd "${REPO_ROOT}/npm"
-mkdir -p "${REPO_ROOT}/reports"
+REPORTS_DIR="$(_reports_dir "$REPO_ROOT")"
+mkdir -p "$REPORTS_DIR"
 
 # Phase 1: Scan versions, build hooks history
 cache_dir="${REPO_ROOT}/npm/.cache/hooks"
@@ -93,12 +96,17 @@ jq -n \
   --argjson history "$history" \
   --argjson docs "$hooks_docs" \
   --arg date "$today" \
-  '{hooks: $hooks, hooks_history: $history, hooks_docs: $docs, docs_checked_at: $date}' > "${REPO_ROOT}/reports/hooks.json"
+  '{hooks: $hooks, hooks_history: $history, hooks_docs: $docs, docs_checked_at: $date}' > "${REPORTS_DIR}/hooks.json"
 
-# Revert if only the date changed (avoid noise commits)
-if git diff -- "${REPO_ROOT}/reports/hooks.json" | grep '^[+-]' | grep -v '^[+-][+-][+-]' | grep -qv 'docs_checked_at'; then
-  echo "Updated reports/hooks.json ($(echo "$hooks_json" | jq length) hooks, docs checked $today)"
+count=$(echo "$hooks_json" | jq length)
+# Revert if only the date changed (avoid noise commits) — tracked reports/ only
+if [[ "$REPORTS_DIR" == "${REPO_ROOT}/reports" ]]; then
+  if git diff -- "${REPORTS_DIR}/hooks.json" | grep '^[+-]' | grep -v '^[+-][+-][+-]' | grep -qv 'docs_checked_at'; then
+    echo "Updated reports/hooks.json ($count hooks, docs checked $today)"
+  else
+    git checkout -- "${REPORTS_DIR}/hooks.json" 2>/dev/null || true
+    echo "reports/hooks.json unchanged (docs checked $today)"
+  fi
 else
-  git checkout -- "${REPO_ROOT}/reports/hooks.json" 2>/dev/null || true
-  echo "reports/hooks.json unchanged (docs checked $today)"
+  echo "Wrote ${REPORTS_DIR}/hooks.json ($count hooks, docs checked $today)"
 fi
