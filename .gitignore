@@ -8,6 +8,8 @@ npm/versions/
 npm/.cache/
 # npm/versions.json and reports/*.json are committed data
 # only the downloaded version tarballs (npm/versions/) are ignored
+# local-reports/ is for local scanner runs (CI writes to reports/)
+local-reports/
 build/
 docs/
 logs/

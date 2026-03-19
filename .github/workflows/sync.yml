@@ -47,13 +47,16 @@ jobs:
       - name: Sync commands
         run: bin/navel commands sync
 
+      - name: Sync env vars
+        run: bin/navel env-vars sync
+
       - name: Sync docs
         run: bin/navel docs sync
 
       - name: Commit and push if changed
         run: |
           # Only proceed if data files changed — ignore README badge-only updates
-          data_files="npm/versions.json reports/commands.json reports/hooks.json reports/docs-changes.json reports/nav.json"
+          data_files="npm/versions.json reports/commands.json reports/hooks.json reports/env-vars.json reports/docs-changes.json reports/nav.json"
           if git diff --quiet -- $data_files; then
             echo "No data changes detected"
             exit 0

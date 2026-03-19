@@ -12,6 +12,20 @@ _stat_mtime() {
   esac
 }
 
+# Reports output directory
+# CI writes to reports/ (committed). Local writes to local-reports/ (gitignored).
+# Override with NAVEL_REPORTS_DIR for explicit control.
+_reports_dir() {
+  local repo_root="${1:-.}"
+  if [[ -n "${NAVEL_REPORTS_DIR:-}" ]]; then
+    echo "$NAVEL_REPORTS_DIR"
+  elif [[ "${CI:-}" == "true" ]]; then
+    echo "${repo_root}/reports"
+  else
+    echo "${repo_root}/local-reports"
+  fi
+}
+
 # SHA-256 checksum (stdin or file args, output: hash  filename)
 _sha256() {
   case "$_UNAME_S" in
