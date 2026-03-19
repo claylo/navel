@@ -34,7 +34,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 </details>
 
 <details>
-<summary>Commands (84)</summary>
+<summary>Commands (85)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -103,6 +103,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 | /resume | Resume a previous conversation | 2.0.0 | available | yes |
 | /review | Review a pull request | 2.0.0 | available | yes |
 | /rewind | — | 2.0.0 | available | yes |
+| /schedule | Create, update, list, or run scheduled remote agents (tri... | 2.1.80 | available | yes |
 | /security-review | Complete a security review of the pending changes on the ... | 2.0.0 | available | yes |
 | /session | — | 2.1.15 | available | yes |
 | /simplify | Review changed code for reuse, quality, and efficiency, t... | 2.1.63 | available | yes |
@@ -130,6 +131,7 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 
 | Version | Hooks | Commands |
 |---------|-------|----------|
+| 2.1.80 | — | +schedule |
 | 2.1.79 | — | +web-setup |
 | 2.1.78 | +StopFailure | — |
 | 2.1.77 | — | +branch |
@@ -174,4 +176,4 @@ Auto-generated tracking data for Claude Code versions, hooks, and commands.
 </details>
 
 ---
-*Last updated: 2026-03-18*
+*Last updated: 2026-03-19*
