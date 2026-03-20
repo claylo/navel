@@ -56,6 +56,7 @@
 ) = {
   block(
     width: 100%,
+    breakable: false,
     above: 1em,
     below: 1em,
     radius: 10pt,
