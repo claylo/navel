@@ -8,6 +8,11 @@ set -euo pipefail
 #   navel pdf prep         Render intermediates only (build/_md + build/_typ)
 #   navel pdf compile      Compile build/_typ → PDF (skips render)
 #   navel pdf clean        Remove PDF build artifacts
+#
+# Options:
+#   --print                Print-ready output: white background, alternating
+#                          verso/recto running headers. Default is screen mode
+#                          (cream background, consistent headers).
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
@@ -116,10 +121,18 @@ cmd_compile() {
 
   ensure_fonts
 
-  echo "==> Compiling PDF..."
+  local typst_inputs=()
+  if [[ "$PRINT_MODE" == "true" ]]; then
+    typst_inputs+=(--input print=true)
+    echo "==> Compiling PDF (print mode)..."
+  else
+    echo "==> Compiling PDF..."
+  fi
+
   typst compile \
     --root "$REPO_ROOT" \
     --font-path "$FONTS_DIR" \
+    "${typst_inputs[@]}" \
     "$PDF_DIR/main.typ" \
     "$BUILD_DIR/claude-code-docs.pdf"
 
@@ -135,10 +148,21 @@ cmd_build() {
   cmd_compile
 }
 
-case "${1:-}" in
+# ── Parse flags ────────────────────────────────────────────────────────
+
+PRINT_MODE="false"
+args=()
+for arg in "$@"; do
+  case "$arg" in
+    --print) PRINT_MODE="true" ;;
+    *)       args+=("$arg") ;;
+  esac
+done
+
+case "${args[0]:-}" in
   clean)   cmd_clean ;;
   prep)    cmd_prep ;;
   compile) cmd_compile ;;
   "")      cmd_build ;;
-  *)       die "usage: navel pdf [prep|compile|clean]" ;;
+  *)       die "usage: navel pdf [--print] [prep|compile|clean]" ;;
 esac

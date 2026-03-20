@@ -4,6 +4,7 @@
 // Fonts: Anthropic Sans + Anthropic Serif Display (downloaded at build time, embedded in PDF)
 
 #import "template.typ": *
+#import "@preview/in-dexter:0.7.2": *
 
 #show: claude-code-docs.with(
   title: "Claude Code",
@@ -29,8 +30,6 @@
 
 // ── Colophon ──────────────────────────────────────────────────────────
 
-#pagebreak()
-
 = Colophon
 
 This is an unofficial reference compiled from the
@@ -39,13 +38,13 @@ published by #link("https://anthropic.com")[Anthropic].
 
 It is not affiliated with or endorsed by Anthropic.
 
-== Source
+=== Source
 
 Documentation was fetched from `code.claude.com/docs` using the site's
 `llms.txt` index. Navigation structure was extracted from the site's
 embedded configuration. All content is copyright Anthropic, PBC.
 
-== Production
+=== Production
 
 Built with #link("https://github.com/claylo/navel")[navel], a toolkit
 for tracking Claude Code releases, commands, hooks, and documentation
@@ -55,9 +54,9 @@ The PDF rendering pipeline flattens MDX components to markdown, converts
 to #link("https://typst.app")[Typst] markup via
 #link("https://github.com/Mapaor/markdown2typst")[markdown2typst], and
 compiles with embedded Anthropic Sans Text and Anthropic Serif Display
-typefaces. Code is set in JetBrains Mono.
+typefaces. Code is set in #link("https://www.jetbrains.com/lp/mono/")[JetBrains Mono].
 
-== Made by
+=== Made by
 
 #link("https://github.com/claylo")[Clay Loveless] and
 #link("https://claude.ai")[Claude], working together in
@@ -65,3 +64,26 @@ typefaces. Code is set in JetBrains Mono.
 
 Source and build instructions:
 #link("https://github.com/claylo/navel")[github.com/claylo/navel]
+
+// ── Glossary ─────────────────────────────────────────────────────────
+
+#pagebreak()
+
+= Glossary
+
+#include "../build/_typ/pages/glossary.typ"
+
+// ── Index ────────────────────────────────────────────────────────────
+
+#pagebreak()
+
+= Index
+
+#columns(2)[
+  // Override heading style inside columns — no pagebreaks allowed
+  #show heading: it => {
+    set text(font: "Anthropic Sans Text", size: 12pt, fill: rgb("#6e6e6e"), weight: "semibold")
+    block(above: 0.8em, below: 0.4em, it.body)
+  }
+  #make-index(title: none)
+]
