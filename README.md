@@ -126,6 +126,20 @@ These markers don't change the prompt content—they're billing/performance hint
 - Version 2.1.27 dropped 29 env vars in one release—the Sentry-to-OpenTelemetry migration, visible as a bulk removal of `SENTRY_*` vars and cloud region detection strings
 - Suppressing plugins, MCP, and settings during capture reduces the prompt by ~18% (270 lines)—that's all injected by your local environment, not the base prompt
 
+## Offline documentation (PDF)
+
+navel can build offline copies of the Claude Code docs in two formats: a typeset **PDF** (with Anthropic brand fonts, glossary, and index) and a **Dash docset** (for instant search in Dash/Zeal/Velocity). You fetch your own copy of the docs and build locally—navel distributes the tooling, not the content.
+
+```bash
+navel docs sync   # fetch latest docs
+navel pdf         # build the PDF
+navel dash        # build the Dash docset
+```
+
+**Requires:** Node.js, `npm install`, plus Typst (PDF) or sqlite3 (Dash).
+
+For the full guide—dependencies, build steps, print mode, docset installation—see **[Building offline documentation](offline-docs.md)**.
+
 ## Traction
 
 [![Star History Chart](https://api.star-history.com/svg?repos=claylo/navel&type=Date)](https://star-history.com/#claylo/navel&Date)
