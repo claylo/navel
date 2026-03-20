@@ -142,7 +142,7 @@ For the full guideâ€”dependencies, build steps, print mode, docset installationâ
 
 ## Traction
 
-[![Star History Chart](https://api.star-history.com/svg?repos=claylo/navel&type=Date)](https://star-history.com/#claylo/navel&Date)
+[![Star History Chart](https://api.star-history.com/image?repos=claylo/navel&type=date&legend=top-left)](https://www.star-history.com/?repos=claylo%2Fnavel&type=date&legend=top-left)
 
 ## License
 
