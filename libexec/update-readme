@@ -5,6 +5,7 @@ REPO_ROOT="${NAVEL_HOME:-$(cd "$(dirname "$0")/.." && pwd)}"
 
 HOOKS_JSON="$REPO_ROOT/reports/hooks.json"
 COMMANDS_JSON="$REPO_ROOT/reports/commands.json"
+ENV_VARS_JSON="$REPO_ROOT/reports/env-vars.json"
 VERSIONS_JSON="$REPO_ROOT/npm/versions.json"
 ROOT_README="$REPO_ROOT/README.md"
 REPORTS_DIR="$REPO_ROOT/reports"
@@ -14,7 +15,7 @@ REPORTS_README="$REPORTS_DIR/README.md"
 # Preflight
 # ─────────────────────────────────────
 
-for f in "$HOOKS_JSON" "$COMMANDS_JSON" "$VERSIONS_JSON" "$ROOT_README"; do
+for f in "$HOOKS_JSON" "$COMMANDS_JSON" "$ENV_VARS_JSON" "$VERSIONS_JSON" "$ROOT_README"; do
   [[ -f "$f" ]] || { echo "error: required file not found: $f" >&2; exit 1; }
 done
 
@@ -66,16 +67,12 @@ truncate() {
 version_count=$(jq 'length' "$VERSIONS_JSON")
 hook_count=$(jq '.hooks | length' "$HOOKS_JSON")
 command_count=$(jq '.commands | length' "$COMMANDS_JSON")
+env_var_count=$(jq '.env_vars | length' "$ENV_VARS_JSON")
 
-# Use the latest docs_checked_at from either file
-hooks_date=$(jq -r '.docs_checked_at' "$HOOKS_JSON")
-commands_date=$(jq -r '.docs_checked_at' "$COMMANDS_JSON")
-# Pick the more recent date
-if [[ "$hooks_date" > "$commands_date" ]]; then
-  last_sync="$hooks_date"
-else
-  last_sync="$commands_date"
-fi
+# Use the latest docs_checked_at across all report files
+last_sync=$(jq -r -s '
+  [.[].docs_checked_at // ""] | map(select(. != "")) | sort | last
+' "$HOOKS_JSON" "$COMMANDS_JSON" "$ENV_VARS_JSON")
 
 last_sync_escaped=$(shield_escape "$last_sync")
 
@@ -86,6 +83,7 @@ last_sync_escaped=$(shield_escape "$last_sync")
 badges="![Versions](https://img.shields.io/badge/versions-${version_count}-blue?style=flat&logo=claude)"
 badges+=" ![Hooks](https://img.shields.io/badge/hooks-${hook_count}-green?style=flat&logo=claude)"
 badges+=" ![Commands](https://img.shields.io/badge/commands-${command_count}-orange?style=flat&logo=claude)"
+badges+=" ![Env vars](https://img.shields.io/badge/env_vars-${env_var_count}-purple?style=flat&logo=claude)"
 badges+=" ![Last sync](https://img.shields.io/badge/last_sync-${last_sync_escaped}-lightgrey?style=flat)"
 
 inject_section "badges" "$badges" "$ROOT_README"
@@ -99,7 +97,7 @@ echo "Updated badges in README.md"
   cat <<'HEADER'
 # navel reports
 
-Auto-generated tracking data for Claude Code versions, hooks, and commands.
+Auto-generated tracking data for Claude Code versions, hooks, commands, and environment variables.
 
 HEADER
 
@@ -180,21 +178,53 @@ HEADER
   echo '</details>'
   echo ''
 
+  # ── Env vars table ──
+  env_var_documented=$(jq '[.env_vars_docs | to_entries[] | select(.value.documented == true)] | length' "$ENV_VARS_JSON")
+  env_var_undocumented=$(jq '[.env_vars_docs | to_entries[] | select(.value.documented == false)] | length' "$ENV_VARS_JSON")
+
+  echo '<details>'
+  echo "<summary>Environment Variables (${env_var_count} tracked, ${env_var_documented} documented)</summary>"
+  echo ''
+  echo '| Variable | Since | Documented |'
+  echo '|----------|-------|------------|'
+
+  # Build a lookup: var -> first version it appeared
+  var_since=$(jq -r '
+    [.env_vars_history | to_entries[] | .key as $ver | (.value.added // [])[] | {var: ., ver: $ver}]
+    | group_by(.var)
+    | map({key: .[0].var, value: (map(.ver) | sort_by(split(".") | map(tonumber)) | first)})
+    | from_entries
+  ' "$ENV_VARS_JSON")
+
+  while IFS= read -r var; do
+    since=$(echo "$var_since" | jq -r --arg v "$var" '.[$v] // "—"')
+    documented=$(jq -r --arg v "$var" '.env_vars_docs[$v].documented' "$ENV_VARS_JSON")
+    if [[ "$documented" == "true" ]]; then
+      echo "| ${var} | ${since} | yes |"
+    else
+      echo "| **${var}** | ${since} | **no** |"
+    fi
+  done < <(jq -r '.env_vars[]' "$ENV_VARS_JSON")
+
+  echo ''
+  echo '</details>'
+  echo ''
+
   # ── Changelog table ──
   echo '<details>'
   echo '<summary>Changelog</summary>'
   echo ''
-  echo '| Version | Hooks | Commands |'
-  echo '|---------|-------|----------|'
+  echo '| Version | Hooks | Commands | Env vars |'
+  echo '|---------|-------|----------|----------|'
 
-  # Merge hooks_history and commands_history keys, reverse sort by version
+  # Merge all history keys, reverse sort by version
   all_versions=$(jq -r -s '
-    (.[0].hooks_history | keys) + (.[1].commands_history | keys)
+    (.[0].hooks_history | keys) + (.[1].commands_history | keys) + (.[2].env_vars_history | keys)
     | unique
     | sort_by(split(".") | map(tonumber))
     | reverse
     | .[]
-  ' "$HOOKS_JSON" "$COMMANDS_JSON")
+  ' "$HOOKS_JSON" "$COMMANDS_JSON" "$ENV_VARS_JSON")
 
   while IFS= read -r ver; do
     hooks_added=$(jq -r --arg v "$ver" '
@@ -203,9 +233,16 @@ HEADER
     cmds_added=$(jq -r --arg v "$ver" '
       .commands_history[$v].added // [] | map("+" + .) | join(", ")
     ' "$COMMANDS_JSON")
+    vars_summary=$(jq -r --arg v "$ver" '
+      .env_vars_history[$v] as $h |
+      (if ($h.added // [] | length) > 0 then "+\($h.added | length)" else null end) as $a |
+      (if ($h.removed // [] | length) > 0 then "-\($h.removed | length)" else null end) as $r |
+      [$a, $r] | map(select(. != null)) | join(", ")
+    ' "$ENV_VARS_JSON")
     [[ -z "$hooks_added" ]] && hooks_added="—"
     [[ -z "$cmds_added" ]] && cmds_added="—"
-    echo "| ${ver} | ${hooks_added} | ${cmds_added} |"
+    [[ -z "$vars_summary" ]] && vars_summary="—"
+    echo "| ${ver} | ${hooks_added} | ${cmds_added} | ${vars_summary} |"
   done <<< "$all_versions"
 
   echo ''
