@@ -61,6 +61,56 @@ markdown, converts to Typst via `markdown2typst`, applies Typst-specific
 transforms (callout styling, heading hierarchy, image localization), and
 generates page files in `build/_typ/`.
 
+**Optional: Want a glossary and an index?**
+
+Install [colophon](https://github.com/claylo/colophon), and then create a colophon config file in `build/.colophon.yaml`:
+
+```yaml
+# .colophon.yaml
+extract:
+  ngram_range: [1, 3]
+  stop_words:
+    source: iso
+    language: en
+  exclude_terms_match: contains
+  exclude_terms_case: insensitive
+  exclude_terms:
+    - Claude Code
+  known_terms:
+    - term: Remote Control
+    - term: Android Studio
+    - term: Amazon Bedrock
+      variants: [Bedrock, AWS Bedrock]
+    - term: Google Cloud
+      variants: [GCP]
+    - term: VS Code
+    - term: CLAUDE.md
+    - term: Google Chrome
+      variants: [Chrome]
+    - term: Zero Data Retention
+      variants: [ZDR]
+    - term: Google Vertex AI
+      variants: [Vertex]
+
+curate:
+  model: "opus[1m]"
+  max_terms: 450
+  candidates: colophon-candidates.yaml
+  claude_settings:
+    alwaysThinkingEnabled: true
+    effortLevel: high
+    fastMode: false
+```
+
+Then run colophon:
+
+```bash
+cd build
+colophon extract --dir ./_typ/pages
+colophon curate --full --candidates colophon-candidates.yaml
+colophon render -o _typ/pages --glossary --main-only
+```
+
 Also produces colophon data:
 
 - `build/colophon-terms.yaml` — glossary terms with definitions, aliases,
