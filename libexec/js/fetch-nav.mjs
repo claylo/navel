@@ -5,7 +5,7 @@
 // HTML. This script fetches the overview page, finds the tabs/groups/pages
 // structure, and writes it to build/_html/nav.json.
 //
-// Expects REPO_ROOT env var (set by libexec/dash).
+// Expects REPO_ROOT and NAVEL_HOME env vars (set by libexec/dash).
 
 import { writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
@@ -16,8 +16,9 @@ if (!REPO_ROOT) {
   console.error("error: REPO_ROOT not set (run via 'navel dash')");
   process.exit(1);
 }
+const NAVEL_HOME = process.env.NAVEL_HOME || REPO_ROOT;
 
-const reportsDir = join(REPO_ROOT, "reports");
+const reportsDir = join(NAVEL_HOME, "reports");
 if (!existsSync(reportsDir)) mkdirSync(reportsDir, { recursive: true });
 
 const DOCS_URL = "https://code.claude.com/docs/en/overview";

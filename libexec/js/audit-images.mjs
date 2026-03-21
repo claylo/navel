@@ -3,7 +3,7 @@
 // Checks <img src>, CSS url(), and @font-face — the same patterns
 // that localize-images.mjs rewrites.
 //
-// Expects REPO_ROOT env var (set by libexec/dash).
+// Expects REPO_ROOT and NAVEL_HOME env vars (set by libexec/dash).
 
 import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { basename, join } from "node:path";
@@ -13,8 +13,9 @@ if (!REPO_ROOT) {
   console.error("error: REPO_ROOT not set (run via 'navel dash')");
   process.exit(1);
 }
+const NAVEL_HOME = process.env.NAVEL_HOME || REPO_ROOT;
 
-const buildDir = join(REPO_ROOT, "build", "_html");
+const buildDir = join(NAVEL_HOME, "build", "_html");
 const allRefs = [];
 
 function addRef(slug, src, type, status) {

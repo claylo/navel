@@ -13,6 +13,7 @@ DEFAULT_MODEL="opus"
 # ─────────────────────────────────────
 
 die() { echo "error: $*" >&2; exit 1; }
+_require() { for c in "$@"; do command -v "$c" >/dev/null || die "$c not found in PATH"; done; }
 
 # Accept "2.1.63", "v2.1.63", or "latest" — normalize to "v2.1.63"
 normalize_version() {
@@ -359,14 +360,14 @@ case "${1:-}" in
   versions)      shift; cmd_versions "$@" ;;
   latest)        shift; cmd_latest "$@" ;;
   count)         shift; cmd_count "$@" ;;
-  capture)       shift; cmd_capture "$@" ;;
-  capture-all)   shift; cmd_capture_all "$@" ;;
-  capture-range) shift; cmd_capture_range "$@" ;;
+  capture)       _require node; shift; cmd_capture "$@" ;;
+  capture-all)   _require node; shift; cmd_capture_all "$@" ;;
+  capture-range) _require node; shift; cmd_capture_range "$@" ;;
   diff)          shift; cmd_diff "$@" ;;
   udiff)         shift; cmd_udiff "$@" ;;
   diff-all)      shift; cmd_diff_all "$@" ;;
-  inspect)       shift; cmd_inspect "$@" ;;
-  tools)         shift; cmd_tools "$@" ;;
+  inspect)       _require jq; shift; cmd_inspect "$@" ;;
+  tools)         _require jq; shift; cmd_tools "$@" ;;
   ls)            shift; cmd_ls "$@" ;;
   clean)         shift; cmd_clean "$@" ;;
   help|--help|-h) cmd_help ;;

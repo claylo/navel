@@ -4,7 +4,8 @@
 // Reads docs/*.md, renders via @mintlify/mdx + @mintlify/components,
 // writes HTML to build/_html/. Also copies CSS assets.
 //
-// Expects REPO_ROOT env var (set by libexec/dash).
+// Expects REPO_ROOT and NAVEL_HOME env vars (set by libexec/dash).
+// REPO_ROOT = install prefix (dash/assets, node_modules). NAVEL_HOME = data home (docs, reports, build).
 
 import {
   readFileSync,
@@ -33,9 +34,10 @@ if (!REPO_ROOT) {
   console.error("error: REPO_ROOT not set (run via 'navel dash')");
   process.exit(1);
 }
+const NAVEL_HOME = process.env.NAVEL_HOME || REPO_ROOT;
 
-const docsDir = join(REPO_ROOT, "docs");
-const buildDir = join(REPO_ROOT, "build", "_html");
+const docsDir = join(NAVEL_HOME, "docs");
+const buildDir = join(NAVEL_HOME, "build", "_html");
 const dashDir = join(REPO_ROOT, "dash");
 const assetsDir = join(REPO_ROOT, "assets");
 const dashAssetsDir = join(dashDir, "assets");
@@ -55,7 +57,7 @@ const components = await import(join(nm, "@mintlify/components/dist/index.js"));
 // Maps each slug to its group label, shown above the h1 on the real site.
 // Order matches the site navigation structure — controls Dash sidebar ordering.
 
-const navPath = join(REPO_ROOT, "reports", "nav.json");
+const navPath = join(NAVEL_HOME, "reports", "nav.json");
 if (!existsSync(navPath)) {
   console.error("error: reports/nav.json not found — run 'navel nav sync' first");
   process.exit(1);

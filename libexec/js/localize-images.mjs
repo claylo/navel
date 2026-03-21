@@ -5,7 +5,7 @@
 //   1. <img src="https://...">       — images in HTML (per-page, slug-prefixed)
 //   2. url(https://...) in HTML       — CSS mask-image icons from Mintlify (shared)
 //
-// Expects REPO_ROOT env var (set by libexec/dash).
+// Expects REPO_ROOT and NAVEL_HOME env vars (set by libexec/dash).
 
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from "node:fs";
 import { basename, join } from "node:path";
@@ -16,8 +16,9 @@ if (!REPO_ROOT) {
   console.error("error: REPO_ROOT not set (run via 'navel dash')");
   process.exit(1);
 }
+const NAVEL_HOME = process.env.NAVEL_HOME || REPO_ROOT;
 
-const buildDir = join(REPO_ROOT, "build", "_html");
+const buildDir = join(NAVEL_HOME, "build", "_html");
 const imgDir = join(buildDir, "images");
 const iconsDir = join(buildDir, "icons");
 // Ensure output dirs exist

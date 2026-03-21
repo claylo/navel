@@ -16,16 +16,27 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
-export REPO_ROOT
+NAVEL_HOME="${NAVEL_HOME:-$REPO_ROOT}"
+export REPO_ROOT NAVEL_HOME
 
 PDF_DIR="$REPO_ROOT/pdf"
-BUILD_TYPST="$REPO_ROOT/build/_typ"
-BUILD_MD="$REPO_ROOT/build/_md"
-BUILD_DIR="$REPO_ROOT/build"
-DOCS_DIR="$REPO_ROOT/docs"
-FONTS_DIR="$PDF_DIR/fonts"
+BUILD_TYPST="$NAVEL_HOME/build/_typ"
+BUILD_MD="$NAVEL_HOME/build/_md"
+BUILD_DIR="$NAVEL_HOME/build"
+DOCS_DIR="$NAVEL_HOME/docs"
+FONTS_DIR="$NAVEL_HOME/pdf/fonts"
 
 die() { echo "error: $*" >&2; exit 1; }
+
+# Copy Typst templates to NAVEL_HOME when running under Homebrew
+# (Cellar is read-only; Typst relative paths need templates alongside data)
+ensure_templates() {
+  if [[ "$NAVEL_HOME" != "$REPO_ROOT" ]]; then
+    mkdir -p "$NAVEL_HOME/pdf"
+    cp "$PDF_DIR/main.typ" "$PDF_DIR/template.typ" "$PDF_DIR/callouts.typ" "$NAVEL_HOME/pdf/"
+    [[ -d "$PDF_DIR/icons" ]] && cp -R "$PDF_DIR/icons" "$NAVEL_HOME/pdf/"
+  fi
+}
 
 cmd_clean() {
   echo "Cleaning PDF build artifacts..."
@@ -93,14 +104,15 @@ cmd_prep() {
   md_count=$(ls "$DOCS_DIR"/*.md 2>/dev/null | wc -l | tr -d ' ')
   [[ "$md_count" -gt 0 ]] || die "no .md files in docs/"
 
-  [[ -d "$REPO_ROOT/node_modules" ]] || die "node_modules missing — run 'npm install' at repo root"
+  [[ -d "$REPO_ROOT/node_modules" ]] || die "node_modules missing — run 'npm install' in $(cd "$REPO_ROOT" && pwd)"
 
   command -v node >/dev/null || die "node not found — install via: brew install node"
 
-  [[ -f "$REPO_ROOT/reports/nav.json" ]] || die "reports/nav.json missing — run 'navel docs sync' first"
+  [[ -f "$NAVEL_HOME/reports/nav.json" ]] || die "reports/nav.json missing — run 'navel docs sync' first"
 
   mkdir -p "$BUILD_TYPST"
 
+  ensure_templates
   ensure_fonts
 
   echo "==> Rendering intermediates from docs..."
@@ -119,6 +131,7 @@ cmd_compile() {
 
   command -v typst >/dev/null || die "typst not found — install via: brew install typst (or cargo install typst-cli)"
 
+  ensure_templates
   ensure_fonts
 
   local typst_inputs=()
@@ -130,10 +143,10 @@ cmd_compile() {
   fi
 
   typst compile \
-    --root "$REPO_ROOT" \
+    --root "$NAVEL_HOME" \
     --font-path "$FONTS_DIR" \
     "${typst_inputs[@]}" \
-    "$PDF_DIR/main.typ" \
+    "$NAVEL_HOME/pdf/main.typ" \
     "$BUILD_DIR/claude-code-docs.pdf"
 
   local pdf_size
