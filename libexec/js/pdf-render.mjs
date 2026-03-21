@@ -8,7 +8,8 @@
 // Writes individual .typ files to build/_typ/pages/ and a pages.typ
 // manifest that main.typ imports.
 //
-// Expects REPO_ROOT env var (set by libexec/pdf).
+// Expects REPO_ROOT and NAVEL_HOME env vars (set by libexec/pdf).
+// REPO_ROOT = install prefix (node_modules). NAVEL_HOME = data home (docs, reports, build).
 
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from "node:fs";
 import { basename, join } from "node:path";
@@ -20,11 +21,12 @@ if (!REPO_ROOT) {
   console.error("error: REPO_ROOT not set (run via 'navel pdf')");
   process.exit(1);
 }
+const NAVEL_HOME = process.env.NAVEL_HOME || REPO_ROOT;
 
-const docsDir = join(REPO_ROOT, "docs");
-const buildDir = join(REPO_ROOT, "build", "_typ");
+const docsDir = join(NAVEL_HOME, "docs");
+const buildDir = join(NAVEL_HOME, "build", "_typ");
 const pagesDir = join(buildDir, "pages");
-const mdOutDir = join(REPO_ROOT, "build", "_md");
+const mdOutDir = join(NAVEL_HOME, "build", "_md");
 const nm = join(REPO_ROOT, "node_modules");
 
 // ── Load markdown2typst ───────────────────────────────────────────────
@@ -33,7 +35,7 @@ const { markdown2typst } = await import(join(nm, "markdown2typst/dist/markdown2t
 
 // ── Load nav order ────────────────────────────────────────────────────
 
-const navPath = join(REPO_ROOT, "reports", "nav.json");
+const navPath = join(NAVEL_HOME, "reports", "nav.json");
 if (!existsSync(navPath)) {
   console.error("error: reports/nav.json not found — run 'navel docs sync' first");
   process.exit(1);

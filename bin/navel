@@ -35,6 +35,13 @@ DOCS_DIR="$NAVEL_HOME/docs"
 
 die() { echo "error: $*" >&2; exit 1; }
 
+# Check that required tools are in PATH before dispatching
+_require() {
+  for cmd in "$@"; do
+    command -v "$cmd" >/dev/null || die "$cmd not found in PATH"
+  done
+}
+
 # ─────────────────────────────────────
 # Inline commands
 # ─────────────────────────────────────
@@ -99,6 +106,7 @@ cmd_outdated() {
 }
 
 cmd_update() {
+  _require jq rg curl
   echo "==> Checking for updates..."
   cmd_outdated || true
   echo ""
@@ -395,32 +403,38 @@ EOF
 case "${1:-}" in
   prompts)   shift; exec "$LIBEXEC/prompts" "$@" ;;
   npm)
+    _require jq curl
     case "${2:-}" in
       sync) "$LIBEXEC/update-npm" ;;
       *)    die "usage: navel npm sync" ;;
     esac ;;
   hooks)
+    _require jq rg
     case "${2:-}" in
       sync) "$LIBEXEC/update-hooks-list" ;;
       *)    die "usage: navel hooks sync" ;;
     esac ;;
   commands)
+    _require jq rg
     case "${2:-}" in
       sync) "$LIBEXEC/update-commands-list" ;;
       *)    die "usage: navel commands sync" ;;
     esac ;;
   env-vars)
+    _require jq rg
     case "${2:-}" in
       sync) "$LIBEXEC/update-env-vars-list" ;;
       *)    die "usage: navel env-vars sync" ;;
     esac ;;
   docs)
+    _require jq curl
     case "${2:-}" in
       sync) "$LIBEXEC/update-docs" ;;
       diff) shift 2; cmd_docs_diff "$@" ;;
       *)    die "usage: navel docs {sync|diff}" ;;
     esac ;;
   nav)
+    _require node
     case "${2:-}" in
       sync) "$LIBEXEC/fetch-nav" ;;
       *)    die "usage: navel nav sync" ;;
@@ -430,6 +444,7 @@ case "${1:-}" in
   pdf)
     shift; exec "$LIBEXEC/pdf" "$@" ;;
   readme)
+    _require jq
     case "${2:-}" in
       sync) "$LIBEXEC/update-readme" ;;
       *)    die "usage: navel readme sync" ;;

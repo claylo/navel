@@ -9,13 +9,14 @@
 set -euo pipefail
 
 : "${REPO_ROOT:?REPO_ROOT not set (run via 'navel dash')}"
+: "${NAVEL_HOME:=$REPO_ROOT}"
 
-BUILD_HTML="$REPO_ROOT/build/_html"
-BUILD_DIR="$REPO_ROOT/build"
+BUILD_HTML="$NAVEL_HOME/build/_html"
+BUILD_DIR="$NAVEL_HOME/build"
 DASH_DIR="$REPO_ROOT/dash"
 
 # Determine version from latest cached npm version
-DOCS_VERSION=$(ls "$REPO_ROOT/npm/versions" 2>/dev/null | sort -V | tail -1 | sed 's/^v//')
+DOCS_VERSION=$(ls "$NAVEL_HOME/npm/versions" 2>/dev/null | sort -V | tail -1 | sed 's/^v//')
 : "${DOCS_VERSION:=unknown}"
 
 DOCSET="$BUILD_DIR/ClaudeCode.docset"
