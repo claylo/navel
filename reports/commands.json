@@ -1,6 +1,7 @@
 {
   "commands": [
     "add-dir",
+    "advisor",
     "agents",
     "batch",
     "branch",
@@ -80,14 +81,18 @@
     "theme",
     "think-back",
     "thinkback-play",
+    "ultraplan",
+    "ultrareview",
     "upgrade",
     "usage",
+    "version",
     "vim",
     "voice",
     "web-setup"
   ],
   "descriptions": {
     "add-dir": "Add a new working directory",
+    "advisor": "Configure the advisor model",
     "agents": "Manage agent configurations",
     "batch": "Research and plan a large-scale change, then execute it in parallel across 5–30 isolated worktree agents that each open a PR.",
     "bridge-kick": "Inject bridge failure states for manual recovery testing",
@@ -144,14 +149,17 @@
     "theme": "Change the theme",
     "think-back": "Your 2025 Claude Code Year in Review",
     "thinkback-play": "Play the thinkback animation",
+    "ultrareview": "~5–15 min · Cloud agent finds and verifies bugs in your branch",
     "upgrade": "Upgrade to Max for higher rate limits and more Opus",
     "usage": "Show plan usage limits",
+    "version": "Print the version this session is running (not what autoupdate downloaded)",
     "vim": "Toggle between Vim and Normal editing modes",
     "voice": "Toggle voice mode",
     "web-setup": "Setup Claude Code on the web (requires connecting your GitHub account)"
   },
   "status": {
     "add-dir": "available",
+    "advisor": "available",
     "agents": "available",
     "batch": "available",
     "branch": "available",
@@ -231,8 +239,11 @@
     "theme": "available",
     "think-back": "available",
     "thinkback-play": "available",
+    "ultraplan": "disabled",
+    "ultrareview": "available",
     "upgrade": "available",
     "usage": "available",
+    "version": "disabled",
     "vim": "available",
     "voice": "available",
     "web-setup": "available"
@@ -477,6 +488,14 @@
       "added": [
         "schedule"
       ]
+    },
+    "2.1.83": {
+      "added": [
+        "advisor",
+        "ultraplan",
+        "ultrareview",
+        "version"
+      ]
     }
   },
   "commands_docs": {
@@ -488,6 +507,11 @@
         "permissions.md"
       ],
       "mentions": 7
+    },
+    "advisor": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "agents": {
       "documented": true,
@@ -1374,6 +1398,16 @@
       "doc_files": [],
       "mentions": 0
     },
+    "ultraplan": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "ultrareview": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
     "upgrade": {
       "documented": true,
       "doc_files": [
@@ -1391,6 +1425,17 @@
         "vs-code.md"
       ],
       "mentions": 8
+    },
+    "version": {
+      "documented": true,
+      "doc_files": [
+        "desktop.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "statusline.md"
+      ],
+      "mentions": 24
     },
     "vim": {
       "documented": true,
@@ -1416,5 +1461,5 @@
       "mentions": 0
     }
   },
-  "docs_checked_at": "2026-03-19"
+  "docs_checked_at": "2026-03-24"
 }
