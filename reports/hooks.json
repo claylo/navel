@@ -1,8 +1,10 @@
 {
   "hooks": [
     "ConfigChange",
+    "CwdChanged",
     "Elicitation",
     "ElicitationResult",
+    "FileChanged",
     "InstructionsLoaded",
     "Notification",
     "PermissionRequest",
@@ -100,6 +102,12 @@
       "added": [
         "StopFailure"
       ]
+    },
+    "2.1.83": {
+      "added": [
+        "CwdChanged",
+        "FileChanged"
+      ]
     }
   },
   "hooks_docs": {
@@ -114,12 +122,22 @@
       ],
       "mentions": 22
     },
+    "CwdChanged": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
     "Elicitation": {
       "documented": false,
       "doc_files": [],
       "mentions": 0
     },
     "ElicitationResult": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "FileChanged": {
       "documented": false,
       "doc_files": [],
       "mentions": 0
@@ -337,5 +355,5 @@
       "mentions": 19
     }
   },
-  "docs_checked_at": "2026-03-18"
+  "docs_checked_at": "2026-03-24"
 }
