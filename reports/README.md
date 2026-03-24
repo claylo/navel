@@ -3,13 +3,15 @@
 Auto-generated tracking data for Claude Code versions, hooks, commands, and environment variables.
 
 <details>
-<summary>Hooks (23)</summary>
+<summary>Hooks (25)</summary>
 
 | Hook | Since | Documented |
 |------|-------|------------|
 | ConfigChange | 2.1.48 | yes |
+| **CwdChanged** | 2.1.83 | **no** |
 | **Elicitation** | 2.1.63 | **no** |
 | **ElicitationResult** | 2.1.63 | **no** |
+| **FileChanged** | 2.1.83 | **no** |
 | InstructionsLoaded | 2.1.64 | yes |
 | Notification | 2.0.0 | yes |
 | PermissionRequest | 2.0.45 | yes |
@@ -34,11 +36,12 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (85)</summary>
+<summary>Commands (89)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
 | /add-dir | Add a new working directory | 2.0.0 | available | yes |
+| **/advisor** | Configure the advisor model | 2.1.83 | available | **no** |
 | /agents | Manage agent configurations | 2.0.0 | available | yes |
 | /batch | Research and plan a large-scale change, then execute it i... | 2.1.63 | available | yes |
 | /branch | — | 2.1.77 | available | yes |
@@ -118,8 +121,11 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /theme | Change the theme | 2.0.73 | available | yes |
 | **/think-back** | Your 2025 Claude Code Year in Review | 2.0.66 | available | **no** |
 | **/thinkback-play** | Play the thinkback animation | 2.0.66 | available | **no** |
+| **/ultraplan** | — | 2.1.83 | *disabled* | **no** |
+| **/ultrareview** | ~5–15 min · Cloud agent finds and verifies bugs in your b... | 2.1.83 | available | **no** |
 | /upgrade | Upgrade to Max for higher rate limits and more Opus | 2.0.0 | available | yes |
 | /usage | Show plan usage limits | 2.0.0 | available | yes |
+| **/version** | Print the version this session is running (not what autou... | 2.1.83 | *disabled* | yes |
 | /vim | Toggle between Vim and Normal editing modes | 2.0.0 | available | yes |
 | /voice | Toggle voice mode | 2.1.59 | available | yes |
 | **/web-setup** | Setup Claude Code on the web (requires connecting your Gi... | 2.1.79 | available | **no** |
@@ -587,6 +593,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.83 | +CwdChanged, +FileChanged | +advisor, +ultraplan, +ultrareview, +version | — |
 | 2.1.80 | — | +schedule | +2 |
 | 2.1.79 | — | +web-setup | +1, -1 |
 | 2.1.78 | +StopFailure | — | +4, -1 |
@@ -778,4 +785,4 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 ---
-*Last updated: 2026-03-19*
+*Last updated: 2026-03-24*
