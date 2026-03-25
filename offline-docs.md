@@ -28,8 +28,9 @@ npm install          # install Node.js dependencies (first time only)
 
 ## PDF
 
-A typeset reference with table of contents, glossary, index, running
-headers, and Anthropic brand typography.
+A typeset reference with table of contents, running headers, colophon,
+and Anthropic brand typography. Glossary and index are available as
+opt-in extras via [colophon](https://github.com/claylo/colophon).
 
 ### Additional prerequisites
 
@@ -135,8 +136,15 @@ Produces a print-ready variant:
 - Alternating verso/recto running headers
 - Sections start on recto (odd) pages with blank verso inserts
 
-The `--print` flag works in any position (`navel pdf --print`, `navel pdf
-compile --print`, `navel pdf --print compile`).
+### Glossary and index
+
+If you have [colophon](https://github.com/claylo/colophon) installed, you
+can generate a glossary and alphabetized index. These are **not built by
+default** — pass `--with-colophon` to include them.
+
+Both `--print` and `--with-colophon` work in any position (`navel pdf
+--print`, `navel pdf compile --with-colophon`, `navel pdf --print
+--with-colophon compile`).
 
 ### What the PDF includes
 
@@ -145,7 +153,8 @@ compile --print`, `navel pdf --print compile`).
 - Callout blocks matching the site's Mintlify components
 - Code blocks in JetBrains Mono
 - Running headers with section-aware titles
-- Colophon, glossary, and alphabetized index
+- Colophon with build and attribution details
+- Glossary and alphabetized index (with `--with-colophon`)
 
 ### Template files
 

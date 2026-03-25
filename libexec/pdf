@@ -13,6 +13,8 @@ set -euo pipefail
 #   --print                Print-ready output: white background, alternating
 #                          verso/recto running headers. Default is screen mode
 #                          (cream background, consistent headers).
+#   --with-colophon        Include glossary and index (requires colophon
+#                          to have generated build/_typ/pages/glossary.typ).
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
@@ -135,9 +137,17 @@ cmd_compile() {
   ensure_fonts
 
   local typst_inputs=()
+  local mode_label=""
   if [[ "$PRINT_MODE" == "true" ]]; then
     typst_inputs+=(--input print=true)
-    echo "==> Compiling PDF (print mode)..."
+    mode_label="print"
+  fi
+  if [[ "$COLOPHON_MODE" == "true" ]]; then
+    typst_inputs+=(--input colophon=true)
+    mode_label="${mode_label:+$mode_label + }colophon"
+  fi
+  if [[ -n "$mode_label" ]]; then
+    echo "==> Compiling PDF ($mode_label)..."
   else
     echo "==> Compiling PDF..."
   fi
@@ -164,11 +174,13 @@ cmd_build() {
 # ── Parse flags ────────────────────────────────────────────────────────
 
 PRINT_MODE="false"
+COLOPHON_MODE="false"
 args=()
 for arg in "$@"; do
   case "$arg" in
-    --print) PRINT_MODE="true" ;;
-    *)       args+=("$arg") ;;
+    --print)          PRINT_MODE="true" ;;
+    --with-colophon)  COLOPHON_MODE="true" ;;
+    *)                args+=("$arg") ;;
   esac
 done
 
@@ -177,5 +189,5 @@ case "${args[0]:-}" in
   prep)    cmd_prep ;;
   compile) cmd_compile ;;
   "")      cmd_build ;;
-  *)       die "usage: navel pdf [--print] [prep|compile|clean]" ;;
+  *)       die "usage: navel pdf [--print] [--with-colophon] [prep|compile|clean]" ;;
 esac

@@ -6,6 +6,8 @@
 #import "template.typ": *
 #import "@preview/in-dexter:0.7.2": *
 
+#let colophon-mode = sys.inputs.at("colophon", default: "false") == "true"
+
 #show: claude-code-docs.with(
   title: "Claude Code",
   subtitle: "Documentation",
@@ -65,25 +67,23 @@ typefaces. Code is set in #link("https://www.jetbrains.com/lp/mono/")[JetBrains 
 Source and build instructions:
 #link("https://github.com/claylo/navel")[github.com/claylo/navel]
 
-// ── Glossary ─────────────────────────────────────────────────────────
+// ── Glossary + Index (opt-in: --input colophon=true) ─────────────────
+// Requires colophon (github.com/claylo/colophon) to generate
+// build/_typ/pages/glossary.typ and place #index markers in content.
 
-#pagebreak()
+#if colophon-mode {
+  pagebreak()
+  heading(level: 1)[Glossary]
+  include "../build/_typ/pages/glossary.typ"
 
-= Glossary
-
-#include "../build/_typ/pages/glossary.typ"
-
-// ── Index ────────────────────────────────────────────────────────────
-
-#pagebreak()
-
-= Index
-
-#columns(2)[
-  // Override heading style inside columns — no pagebreaks allowed
-  #show heading: it => {
-    set text(font: "Anthropic Sans Text", size: 12pt, fill: rgb("#6e6e6e"), weight: "semibold")
-    block(above: 0.8em, below: 0.4em, it.body)
-  }
-  #make-index(title: none)
-]
+  pagebreak()
+  heading(level: 1)[Index]
+  columns(2)[
+    // Override heading style inside columns — no pagebreaks allowed
+    #show heading: it => {
+      set text(font: "Anthropic Sans Text", size: 12pt, fill: rgb("#6e6e6e"), weight: "semibold")
+      block(above: 0.8em, below: 0.4em, it.body)
+    }
+    #make-index(title: none)
+  ]
+}
