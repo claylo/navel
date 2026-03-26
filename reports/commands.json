@@ -132,10 +132,13 @@
     "loop": "Run a prompt or slash command on a recurring interval (e.g. /loop 5m /foo, defaults to 10m)",
     "mcp": "Manage MCP servers",
     "memory": "Edit Claude memory files",
+    "output-style": "Deprecated: use /config to change output style",
     "plan": "Enable plan mode or view the current session plan",
     "pr-comments": "Get comments from a GitHub pull request",
     "privacy-settings": "View and update your privacy settings",
+    "rate-limit-options": "Show options when rate limit is reached",
     "reload-plugins": "Activate pending plugin changes in the current session",
+    "remote-env": "Configure the default remote environment for teleport sessions",
     "rename": "Rename the current conversation",
     "resume": "Resume a previous conversation",
     "review": "Review a pull request",
@@ -146,10 +149,10 @@
     "stats": "Show your Claude Code usage statistics and activity",
     "status": "Show Claude Code status including version, model, account, API connectivity, and tool statuses",
     "stickers": "Order Claude Code stickers",
+    "tag": "Toggle a searchable tag on the current session",
     "theme": "Change the theme",
     "think-back": "Your 2025 Claude Code Year in Review",
     "thinkback-play": "Play the thinkback animation",
-    "ultrareview": "~5–15 min · Cloud agent finds and verifies bugs in your branch",
     "upgrade": "Upgrade to Max for higher rate limits and more Opus",
     "usage": "Show plan usage limits",
     "version": "Print the version this session is running (not what autoupdate downloaded)",
@@ -1461,5 +1464,5 @@
       "mentions": 0
     }
   },
-  "docs_checked_at": "2026-03-24"
+  "docs_checked_at": "2026-03-26"
 }
