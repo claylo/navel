@@ -21,6 +21,7 @@
     "SubagentStart",
     "SubagentStop",
     "TaskCompleted",
+    "TaskCreated",
     "TeammateIdle",
     "UserPromptSubmit",
     "WorktreeCreate",
@@ -107,6 +108,11 @@
       "added": [
         "CwdChanged",
         "FileChanged"
+      ]
+    },
+    "2.1.84": {
+      "added": [
+        "TaskCreated"
       ]
     }
   },
@@ -313,6 +319,11 @@
       ],
       "mentions": 19
     },
+    "TaskCreated": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
     "TeammateIdle": {
       "documented": true,
       "doc_files": [
@@ -355,5 +366,5 @@
       "mentions": 19
     }
   },
-  "docs_checked_at": "2026-03-24"
+  "docs_checked_at": "2026-03-26"
 }
