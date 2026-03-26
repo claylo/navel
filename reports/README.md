@@ -3,7 +3,7 @@
 Auto-generated tracking data for Claude Code versions, hooks, commands, and environment variables.
 
 <details>
-<summary>Hooks (25)</summary>
+<summary>Hooks (26)</summary>
 
 | Hook | Since | Documented |
 |------|-------|------------|
@@ -28,6 +28,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | SubagentStart | 2.0.43 | yes |
 | SubagentStop | 2.0.0 | yes |
 | TaskCompleted | 2.1.33 | yes |
+| **TaskCreated** | 2.1.84 | **no** |
 | TeammateIdle | 2.1.33 | yes |
 | UserPromptSubmit | 2.0.0 | yes |
 | WorktreeCreate | 2.1.50 | yes |
@@ -90,18 +91,18 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /memory | Edit Claude memory files | 2.0.0 | available | yes |
 | /mobile | — | 2.0.72 | available | yes |
 | /model | — | 2.0.0 | available | yes |
-| /output-style | — | 2.0.0 | available | yes |
+| /output-style | Deprecated: use /config to change output style | 2.0.0 | available | yes |
 | /passes | — | 2.0.45 | available | yes |
 | /permissions | — | 2.0.0 | available | yes |
 | /plan | Enable plan mode or view the current session plan | 2.0.56 | available | yes |
 | /plugin | — | 2.0.12 | available | yes |
 | /pr-comments | Get comments from a GitHub pull request | 2.0.0 | available | yes |
 | /privacy-settings | View and update your privacy settings | 2.0.0 | available | yes |
-| **/rate-limit-options** | — | 2.0.43 | available | **no** |
+| **/rate-limit-options** | Show options when rate limit is reached | 2.0.43 | available | **no** |
 | /release-notes | — | 2.0.0 | available | yes |
 | /reload-plugins | Activate pending plugin changes in the current session | 2.1.64 | available | yes |
 | /remote-control | — | 2.1.51 | available | yes |
-| /remote-env | — | 2.0.47 | available | yes |
+| /remote-env | Configure the default remote environment for teleport ses... | 2.0.47 | available | yes |
 | /rename | Rename the current conversation | 2.0.41 | available | yes |
 | /resume | Resume a previous conversation | 2.0.0 | available | yes |
 | /review | Review a pull request | 2.0.0 | available | yes |
@@ -115,14 +116,14 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /status | Show Claude Code status including version, model, account... | 2.0.0 | available | yes |
 | /statusline | — | 2.0.0 | available | yes |
 | /stickers | Order Claude Code stickers | 2.0.32 | available | yes |
-| **/tag** | — | 2.0.65 | *disabled* | yes |
+| **/tag** | Toggle a searchable tag on the current session | 2.0.65 | *disabled* | yes |
 | /tasks | — | 2.0.45 | available | yes |
 | /terminal-setup | — | 2.0.0 | available | yes |
 | /theme | Change the theme | 2.0.73 | available | yes |
 | **/think-back** | Your 2025 Claude Code Year in Review | 2.0.66 | available | **no** |
 | **/thinkback-play** | Play the thinkback animation | 2.0.66 | available | **no** |
 | **/ultraplan** | — | 2.1.83 | *disabled* | **no** |
-| **/ultrareview** | ~5–15 min · Cloud agent finds and verifies bugs in your b... | 2.1.83 | available | **no** |
+| **/ultrareview** | — | 2.1.83 | available | **no** |
 | /upgrade | Upgrade to Max for higher rate limits and more Opus | 2.0.0 | available | yes |
 | /usage | Show plan usage limits | 2.0.0 | available | yes |
 | **/version** | Print the version this session is running (not what autou... | 2.1.83 | *disabled* | yes |
@@ -593,6 +594,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.84 | +TaskCreated | — | — |
 | 2.1.83 | +CwdChanged, +FileChanged | +advisor, +ultraplan, +ultrareview, +version | — |
 | 2.1.80 | — | +schedule | +2 |
 | 2.1.79 | — | +web-setup | +1, -1 |
@@ -785,4 +787,4 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 ---
-*Last updated: 2026-03-24*
+*Last updated: 2026-03-26*
