@@ -75,6 +75,175 @@ export function preprocessMdx(source) {
   return source.replace(/^export\s+const\s+\w+\s*=[\s\S]*?^};$/gm, "");
 }
 
+// ── Context window flattening ─────────────────────────────────────────
+// Extracts the EVENTS data from the ContextWindow React component and
+// replaces <ContextWindow /> with a static markdown representation.
+// Must run BEFORE preprocessMdx (which strips the export block).
+
+const CW_VIS_LABELS = {
+  hidden: "not visible in terminal",
+  brief: "one-liner in terminal",
+  full: "visible in terminal",
+};
+
+export function flattenContextWindow(source) {
+  if (!source.includes("<ContextWindow")) return source;
+
+  const events = parseContextWindowEvents(source);
+  if (!events.length) return source;
+
+  const md = renderContextWindowMarkdown(events);
+  return source.replace(/<ContextWindow\s*\/?>/, md);
+}
+
+export function parseContextWindowEvents(source) {
+  // Find the EVENTS array: useMemo(() => [...].filter(
+  const marker = "EVENTS = useMemo(() => [";
+  const start = source.indexOf(marker);
+  if (start === -1) return [];
+
+  const arrayStart = source.indexOf("[", start + marker.length - 1);
+
+  // Find matching close bracket via depth tracking
+  let depth = 0;
+  let arrayEnd = -1;
+  for (let i = arrayStart; i < source.length; i++) {
+    if (source[i] === "[") depth++;
+    else if (source[i] === "]") {
+      depth--;
+      if (depth === 0) { arrayEnd = i; break; }
+    }
+  }
+  if (arrayEnd === -1) return [];
+
+  const arrayContent = source.slice(arrayStart + 1, arrayEnd);
+
+  // Split into individual objects by tracking brace depth
+  const objects = [];
+  depth = 0;
+  let objStart = -1;
+  for (let i = 0; i < arrayContent.length; i++) {
+    if (arrayContent[i] === "{") {
+      if (depth === 0) objStart = i;
+      depth++;
+    } else if (arrayContent[i] === "}") {
+      depth--;
+      if (depth === 0 && objStart !== -1) {
+        objects.push(arrayContent.slice(objStart, i + 1));
+        objStart = -1;
+      }
+    }
+  }
+
+  return objects.map(parseContextWindowEvent).filter((e) => e !== null);
+}
+
+function parseContextWindowEvent(objStr) {
+  const t = matchFloat(objStr, "t");
+  if (t === null) return null;
+
+  return {
+    t,
+    kind: matchQuotedStr(objStr, "kind"),
+    label: matchQuotedStr(objStr, "label"),
+    tokens: matchInt(objStr, "tokens") || 0,
+    subTokens: matchInt(objStr, "subTokens") || 0,
+    vis: matchQuotedStr(objStr, "vis"),
+    desc: matchQuotedStr(objStr, "desc"),
+    tip: matchQuotedStr(objStr, "tip"),
+    link: matchQuotedStr(objStr, "link"),
+  };
+}
+
+function matchQuotedStr(s, name) {
+  // Single-quoted: label: 'System prompt'
+  let m = s.match(new RegExp(`${name}:\\s*'((?:[^'\\\\]|\\\\.)*)'`));
+  if (m) return m[1].replace(/\\'/g, "'");
+  // Double-quoted: desc: "Claude's notes..."
+  m = s.match(new RegExp(`${name}:\\s*"((?:[^"\\\\]|\\\\.)*)"`));
+  if (m) return m[1].replace(/\\"/g, '"');
+  return null;
+}
+
+function matchInt(s, name) {
+  const m = s.match(new RegExp(`${name}:\\s*(\\d+)`));
+  return m ? parseInt(m[1]) : null;
+}
+
+function matchFloat(s, name) {
+  const m = s.match(new RegExp(`${name}:\\s*([0-9.]+)`));
+  return m ? parseFloat(m[1]) : null;
+}
+
+const CW_STARTUP_END = 0.2;
+
+function renderContextWindowMarkdown(events) {
+  const fmt = (n) =>
+    n >= 1000
+      ? (n / 1000).toFixed(1).replace(/\.0$/, "") + "K"
+      : String(n);
+
+  // Group events by session phase using kind transitions
+  const phases = [];
+  let currentPhase = null;
+
+  for (const e of events) {
+    let phase;
+    if (e.t < CW_STARTUP_END) {
+      phase = "What loads at startup";
+    } else if (e.kind === "sub") {
+      phase = "Inside the subagent";
+    } else if (e.kind === "compact") {
+      phase = "Compaction";
+    } else if (e.kind === "user") {
+      phase = "You";
+    } else {
+      phase = "Claude works";
+    }
+
+    if (phase !== currentPhase) {
+      phases.push({ name: phase, events: [] });
+      currentPhase = phase;
+    }
+    phases[phases.length - 1].events.push(e);
+  }
+
+  const lines = [];
+  lines.push(
+    "The session below walks through a realistic flow with representative token counts.",
+    "Token values are illustrative — actual amounts vary with your CLAUDE.md size, MCP servers, and file lengths.",
+    "",
+  );
+
+  for (const phase of phases) {
+    lines.push(`### ${phase.name}`, "");
+    for (const e of phase.events) {
+      const tokenStr =
+        e.tokens > 0
+          ? `~${fmt(e.tokens)} tokens`
+          : e.subTokens > 0
+            ? `~${fmt(e.subTokens)} tokens (in subagent)`
+            : "";
+      const visStr = e.vis ? CW_VIS_LABELS[e.vis] || e.vis : "";
+      const meta = [e.kind, tokenStr, visStr].filter(Boolean).join(" · ");
+
+      lines.push(`- **${e.label}** — ${meta}`);
+      if (e.desc) {
+        lines.push(`  ${e.desc}`);
+      }
+      if (e.tip) {
+        lines.push(`  *Tip: ${e.tip}*`);
+      }
+      if (e.link) {
+        lines.push(`  [Learn more →](${e.link})`);
+      }
+      lines.push("");
+    }
+  }
+
+  return lines.join("\n");
+}
+
 // ── Changelog truncation + JSX escaping ────────────────────────────────
 
 const HTML_TAGS = new Set([

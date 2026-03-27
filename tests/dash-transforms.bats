@@ -318,6 +318,110 @@ $1
   [[ "$result" == "2.1.1,2.1.2,2.1.10" ]]
 }
 
+# ── Context window flattening ──────────────────────────────────────────
+
+@test "flattenContextWindow: extracts events and replaces tag" {
+  result=$(run_transform "
+    const { readFileSync } = await import('node:fs');
+    const src = readFileSync('$FIXTURES/context-window-sample.md', 'utf-8');
+    const out = T.flattenContextWindow(src);
+    console.log(out.includes('<ContextWindow') ? 'tag-present' : 'tag-replaced');
+  ")
+  [[ "$result" == "tag-replaced" ]]
+}
+
+@test "flattenContextWindow: generates phase headers" {
+  result=$(run_transform "
+    const src = (await import('node:fs')).readFileSync('$FIXTURES/context-window-sample.md', 'utf-8');
+    const out = T.flattenContextWindow(src);
+    console.log(out);
+  ")
+  [[ "$result" == *'### What loads at startup'* ]]
+  [[ "$result" == *'### You'* ]]
+  [[ "$result" == *'### Claude works'* ]]
+  [[ "$result" == *'### Inside the subagent'* ]]
+  [[ "$result" == *'### Compaction'* ]]
+}
+
+@test "flattenContextWindow: preserves event data" {
+  result=$(run_transform "
+    const src = (await import('node:fs')).readFileSync('$FIXTURES/context-window-sample.md', 'utf-8');
+    const out = T.flattenContextWindow(src);
+    console.log(out);
+  ")
+  # Labels
+  [[ "$result" == *'**System prompt**'* ]]
+  [[ "$result" == *'**Auto memory (MEMORY.md)**'* ]]
+  [[ "$result" == *'**Your prompt**'* ]]
+  # Token counts
+  [[ "$result" == *'~4.2K tokens'* ]]
+  [[ "$result" == *'~680 tokens'* ]]
+  # Visibility
+  [[ "$result" == *'not visible in terminal'* ]]
+  [[ "$result" == *'visible in terminal'* ]]
+  # Descriptions
+  [[ "$result" == *'Core instructions for behavior'* ]]
+}
+
+@test "flattenContextWindow: includes tips and links" {
+  result=$(run_transform "
+    const src = (await import('node:fs')).readFileSync('$FIXTURES/context-window-sample.md', 'utf-8');
+    const out = T.flattenContextWindow(src);
+    console.log(out);
+  ")
+  [[ "$result" == *'Tip: Keep it under 200 lines.'* ]]
+  [[ "$result" == *'[Learn more →](/en/memory#auto-memory)'* ]]
+}
+
+@test "flattenContextWindow: handles subTokens" {
+  result=$(run_transform "
+    const src = (await import('node:fs')).readFileSync('$FIXTURES/context-window-sample.md', 'utf-8');
+    const out = T.flattenContextWindow(src);
+    console.log(out);
+  ")
+  [[ "$result" == *'~900 tokens (in subagent)'* ]]
+}
+
+@test "flattenContextWindow: handles double-quoted strings with apostrophes" {
+  result=$(run_transform "
+    const src = (await import('node:fs')).readFileSync('$FIXTURES/context-window-sample.md', 'utf-8');
+    const out = T.flattenContextWindow(src);
+    console.log(out);
+  ")
+  [[ "$result" == *"Claude's notes"* ]]
+}
+
+@test "flattenContextWindow: no-op for files without ContextWindow" {
+  result=$(run_transform '
+    const src = "# Regular page\n\nSome content.";
+    const out = T.flattenContextWindow(src);
+    console.log(out === src ? "unchanged" : "modified");
+  ')
+  [[ "$result" == "unchanged" ]]
+}
+
+@test "flattenContextWindow: preserves surrounding content" {
+  result=$(run_transform "
+    const src = (await import('node:fs')).readFileSync('$FIXTURES/context-window-sample.md', 'utf-8');
+    const out = T.flattenContextWindow(src);
+    console.log(out);
+  ")
+  [[ "$result" == *'# Explore the context window'* ]]
+  [[ "$result" == *'## What the timeline shows'* ]]
+  [[ "$result" == *'Some prose here.'* ]]
+}
+
+@test "parseContextWindowEvents: returns correct count" {
+  result=$(run_transform "
+    const src = (await import('node:fs')).readFileSync('$FIXTURES/context-window-sample.md', 'utf-8');
+    const events = T.parseContextWindowEvents(src);
+    console.log(events.length);
+  ")
+  [[ "$result" == "6" ]]
+}
+
+# ── Version sorting ──────────────────────────────────────────────────────
+
 @test "semverSort: does not mutate input" {
   result=$(run_transform '
     const input = ["v2.0.0", "v1.0.0"];

@@ -24,6 +24,7 @@ import {
   extractTitle,
   injectDashAnchors,
   preprocessMdx,
+  flattenContextWindow,
   truncateChangelog,
   parseNavTabs,
   semverSort,
@@ -376,7 +377,12 @@ for (const file of files) {
       continue;
     }
 
-    // Preprocess: strip inline exports with hooks
+    // Flatten inline React components to static markdown before stripping
+    if (slug === "context-window") {
+      md = flattenContextWindow(md);
+    }
+
+    // Preprocess: strip inline exports
     md = preprocessMdx(md);
 
     // Truncate changelog to avoid MDX serializer overflow
