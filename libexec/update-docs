@@ -185,13 +185,17 @@ done
 # Update manifest
 cp "$NEW_MANIFEST" "$MANIFEST"
 
+# --- Reports directory (local-reports/ locally, reports/ in CI) ---
+REPORTS_DIR="$(_reports_dir "$REPO_ROOT")"
+export NAVEL_REPORTS_DIR="$REPORTS_DIR"
+mkdir -p "$REPORTS_DIR"
+
 # --- Fetch navigation structure ---
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 "$SCRIPT_DIR/fetch-nav"
 
 # --- Update docs-changes.json ---
-mkdir -p "${REPO_ROOT}/reports"
-DOCS_CHANGES="${REPO_ROOT}/reports/docs-changes.json"
+DOCS_CHANGES="${REPORTS_DIR}/docs-changes.json"
 latest_version=$(ls "${REPO_ROOT}/npm/versions" 2>/dev/null | sort -V | tail -1 | sed 's/^v//' || true)
 now=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 
