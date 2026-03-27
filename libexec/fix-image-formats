@@ -1,0 +1,129 @@
+#!/usr/bin/env node
+// fix-image-formats — Detect images whose actual format doesn't match their
+// file extension and rename them to the correct extension. CDNs commonly
+// serve WebP content at .png URLs.
+//
+// Also rewrites references in sibling HTML files so src="images/foo.png"
+// becomes src="images/foo.webp" after a rename.
+//
+// Usage:
+//   fix-image-formats <directory>
+//   fix-image-formats build/_html/images
+//
+// No external dependencies — detection via magic bytes, fix via rename.
+
+const { renameSync, readFileSync, writeFileSync, readdirSync, openSync, readSync, closeSync } = require("node:fs");
+const { join, extname, basename, dirname } = require("node:path");
+
+const dir = process.argv[2];
+if (!dir) {
+  console.error("usage: fix-image-formats <directory>");
+  process.exit(1);
+}
+
+// ── Magic byte signatures ──────────────────────────────────────────────
+
+const FORMAT_EXT = { png: ".png", jpeg: ".jpg", gif: ".gif", webp: ".webp" };
+
+function detectFormat(filePath) {
+  const buf = Buffer.alloc(12);
+  const fd = openSync(filePath, "r");
+  readSync(fd, buf, 0, 12, 0);
+  closeSync(fd);
+
+  if (buf[0] === 0x89 && buf[1] === 0x50 && buf[2] === 0x4e && buf[3] === 0x47) return "png";
+  if (buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff) return "jpeg";
+  if (buf[0] === 0x47 && buf[1] === 0x49 && buf[2] === 0x46 && buf[3] === 0x38) return "gif";
+  // RIFF....WEBP
+  if (buf[0] === 0x52 && buf[1] === 0x49 && buf[2] === 0x46 && buf[3] === 0x46 &&
+      buf[8] === 0x57 && buf[9] === 0x45 && buf[10] === 0x42 && buf[11] === 0x50) return "webp";
+  return null;
+}
+
+// ── Collect images ─────────────────────────────────────────────────────
+
+const IMAGE_EXTS = new Set([".png", ".jpg", ".jpeg", ".gif", ".webp"]);
+
+function collectImages(dirPath) {
+  const results = [];
+  for (const entry of readdirSync(dirPath, { withFileTypes: true })) {
+    const fullPath = join(dirPath, entry.name);
+    if (entry.isDirectory()) {
+      results.push(...collectImages(fullPath));
+    } else if (IMAGE_EXTS.has(extname(entry.name).toLowerCase())) {
+      results.push(fullPath);
+    }
+  }
+  return results;
+}
+
+// ── Scan and rename ────────────────────────────────────────────────────
+
+const images = collectImages(dir);
+if (images.length === 0) {
+  console.log("  No images found");
+  process.exit(0);
+}
+
+const renames = []; // { oldName, newName } for reference rewriting
+
+for (const img of images) {
+  const ext = extname(img).toLowerCase();
+  const actual = detectFormat(img);
+  if (!actual) continue;
+
+  const correctExt = FORMAT_EXT[actual];
+  if (ext === correctExt) continue;
+  // .jpg and .jpeg are both fine for JPEG
+  if (actual === "jpeg" && (ext === ".jpg" || ext === ".jpeg")) continue;
+
+  const newPath = img.slice(0, -ext.length) + correctExt;
+  const oldName = basename(img);
+  const newName = basename(newPath);
+
+  renameSync(img, newPath);
+  renames.push({ oldName, newName });
+  console.log(`  fix: ${oldName} -> ${newName} (was ${actual})`);
+}
+
+// ── Rewrite references in sibling files ─────────────────────────────────
+// Handles HTML (Dash), Typst (PDF), and Markdown references.
+
+if (renames.length > 0) {
+  const parentDir = dirname(dir);
+  const refFiles = collectRefFiles(parentDir);
+
+  let rewriteCount = 0;
+  for (const filePath of refFiles) {
+    let content = readFileSync(filePath, "utf-8");
+    let modified = false;
+
+    for (const { oldName, newName } of renames) {
+      if (content.includes(oldName)) {
+        content = content.replaceAll(oldName, newName);
+        modified = true;
+        rewriteCount++;
+      }
+    }
+
+    if (modified) writeFileSync(filePath, content);
+  }
+
+  console.log(`  Renamed ${renames.length} images, rewrote ${rewriteCount} references`);
+} else {
+  console.log(`  All ${images.length} images OK`);
+}
+
+function collectRefFiles(dirPath) {
+  const exts = new Set([".html", ".typ", ".md"]);
+  const results = [];
+  for (const entry of readdirSync(dirPath, { withFileTypes: true })) {
+    const fullPath = join(dirPath, entry.name);
+    if (entry.isDirectory()) {
+      results.push(...collectRefFiles(fullPath));
+    } else if (exts.has(extname(entry.name).toLowerCase())) {
+      results.push(fullPath);
+    }
+  }
+  return results;
+}

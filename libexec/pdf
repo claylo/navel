@@ -126,6 +126,10 @@ cmd_prep() {
   node "$SCRIPT_DIR/js/pdf-render.mjs"
 
   echo ""
+  echo "==> Fixing mismatched image formats..."
+  node "$SCRIPT_DIR/fix-image-formats" "$BUILD_TYPST/images"
+
+  echo ""
   echo "Prep complete. Intermediate files:"
   echo "  build/_md/    — clean markdown ($(ls "$BUILD_MD"/*.md 2>/dev/null | wc -l | tr -d ' ') files)"
   echo "  build/_typ/ — Typst markup (pages/ + pages.typ)"

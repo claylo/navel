@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# archive-docs — Submit changed documentation files to the Internet Archive
+# via the Save Page Now 2 (SPN2) API.
+#
+# Usage:
+#   archive-docs <file1.md> [file2.md ...]
+#   echo "overview.md quickstart.md" | xargs archive-docs
+#
+# Environment:
+#   IA_ACCESS_KEY    Internet Archive S3 access key (required)
+#   IA_SECRET_KEY    Internet Archive S3 secret key (required)
+#
+# SPN2 docs: https://docs.google.com/document/d/1Nsv52MvSjbLb2PCpHlat0gkzw0EvtSgpKHu4mk0MnrA
+#
+# Optimized for speed per SPN2 tips:
+#   - force_get=1        plain text files, no headless browser needed
+#   - js_behavior_timeout=0  no JS to execute
+#   - skip_first_archive=1   we don't need first-capture metadata
+
+BASE_URL="https://code.claude.com/docs/en"
+SPN2_URL="https://web.archive.org/save"
+
+die() { echo "error: $*" >&2; exit 1; }
+
+[[ -n "${IA_ACCESS_KEY:-}" ]] || die "IA_ACCESS_KEY not set"
+[[ -n "${IA_SECRET_KEY:-}" ]] || die "IA_SECRET_KEY not set"
+[[ $# -gt 0 ]] || die "usage: archive-docs <file1.md> [file2.md ...]"
+
+# SPN2 rate limit: 12 captures/minute for authenticated users
+DELAY=5  # seconds between requests (safe margin)
+
+submitted=0
+failed=0
+
+for file in "$@"; do
+  slug="${file%.md}"
+  url="${BASE_URL}/${slug}.md"
+
+  response=$(curl -s -X POST \
+    -H "Accept: application/json" \
+    -H "Authorization: LOW ${IA_ACCESS_KEY}:${IA_SECRET_KEY}" \
+    -d "url=${url}&force_get=1&js_behavior_timeout=0&skip_first_archive=1&if_not_archived_within=43200" \
+    "$SPN2_URL" 2>&1) || true
+
+  job_id=$(echo "$response" | jq -r '.job_id // empty' 2>/dev/null)
+
+  if [[ -n "$job_id" ]]; then
+    echo "  archived: ${slug}.md (job: ${job_id})"
+    submitted=$((submitted + 1))
+  else
+    error=$(echo "$response" | jq -r '.message // .status_ext // empty' 2>/dev/null)
+    echo "  skipped:  ${slug}.md (${error:-unknown response})"
+    failed=$((failed + 1))
+  fi
+
+  # Rate limit: don't hammer the API
+  if [[ $# -gt 1 ]]; then
+    sleep "$DELAY"
+  fi
+done
+
+echo ""
+echo "Archive: ${submitted} submitted, ${failed} skipped"
