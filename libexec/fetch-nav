@@ -11,6 +11,12 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export REPO_ROOT="${REPO_ROOT:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 
+# shellcheck source=_portable.sh
+. "$SCRIPT_DIR/_portable.sh"
+
+# Respect reports dir convention (local-reports/ locally, reports/ in CI)
+export NAVEL_REPORTS_DIR="${NAVEL_REPORTS_DIR:-$(_reports_dir "$REPO_ROOT")}"
+
 command -v node >/dev/null || { echo "error: node not found in PATH" >&2; exit 1; }
 
 node "$SCRIPT_DIR/js/fetch-nav.mjs"

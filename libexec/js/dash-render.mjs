@@ -57,9 +57,10 @@ const components = await import(join(nm, "@mintlify/components/dist/index.js"));
 // Maps each slug to its group label, shown above the h1 on the real site.
 // Order matches the site navigation structure — controls Dash sidebar ordering.
 
-const navPath = join(NAVEL_HOME, "reports", "nav.json");
+const reportsDir = process.env.NAVEL_REPORTS_DIR || join(NAVEL_HOME, "reports");
+const navPath = join(reportsDir, "nav.json");
 if (!existsSync(navPath)) {
-  console.error("error: reports/nav.json not found — run 'navel nav sync' first");
+  console.error(`error: nav.json not found in ${reportsDir} — run 'navel docs sync' first`);
   process.exit(1);
 }
 const { navMap: NAV_GROUP_MAP, navOrder: NAV_ORDER } = JSON.parse(readFileSync(navPath, "utf-8"));

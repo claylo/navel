@@ -1,19 +1,23 @@
 {
   "private": true,
-  "name": "navel",
+  "name": "navel-renderer",
+  "version": "0.0.1",
   "description": "Claude Code introspection toolkit — tracks commands, hooks, flags, docs, and builds docsets/PDFs.",
   "type": "commonjs",
   "overrides": {
-    "lodash-es": "4.17.23"
+    "lodash-es": "4.17.23",
+    "@mintlify/mdx": {
+      "@radix-ui/react-popover": "$@radix-ui/react-popover"
+    }
   },
   "dependencies": {
-    "@mintlify/components": "1.0.1",
-    "@mintlify/mdx": "3.0.4",
+    "@mintlify/components": "1.0.14",
+    "@mintlify/mdx": "4.0.0",
     "@radix-ui/react-popover": "1.1.15",
-    "@tailwindcss/cli": "^4.1.18",
+    "@tailwindcss/cli": "^4.2.2",
     "markdown2typst": "^0.1.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "tailwindcss": "^4.1.18"
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.2.2"
   }
 }

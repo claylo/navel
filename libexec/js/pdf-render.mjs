@@ -35,9 +35,10 @@ const { markdown2typst } = await import(join(nm, "markdown2typst/dist/markdown2t
 
 // ── Load nav order ────────────────────────────────────────────────────
 
-const navPath = join(NAVEL_HOME, "reports", "nav.json");
+const reportsDir = process.env.NAVEL_REPORTS_DIR || join(NAVEL_HOME, "reports");
+const navPath = join(reportsDir, "nav.json");
 if (!existsSync(navPath)) {
-  console.error("error: reports/nav.json not found — run 'navel docs sync' first");
+  console.error(`error: nav.json not found in ${reportsDir} — run 'navel docs sync' first`);
   process.exit(1);
 }
 const { navMap: NAV_GROUP_MAP, navOrder: NAV_ORDER } = JSON.parse(readFileSync(navPath, "utf-8"));

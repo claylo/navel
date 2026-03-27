@@ -19,7 +19,12 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 NAVEL_HOME="${NAVEL_HOME:-$REPO_ROOT}"
-export REPO_ROOT NAVEL_HOME
+
+# shellcheck source=_portable.sh
+. "$SCRIPT_DIR/_portable.sh"
+
+REPORTS_DIR="${NAVEL_REPORTS_DIR:-$(_reports_dir "$REPO_ROOT")}"
+export REPO_ROOT NAVEL_HOME NAVEL_REPORTS_DIR="$REPORTS_DIR"
 
 PDF_DIR="$REPO_ROOT/pdf"
 BUILD_TYPST="$NAVEL_HOME/build/_typ"
@@ -110,7 +115,7 @@ cmd_prep() {
 
   command -v node >/dev/null || die "node not found — install via: brew install node"
 
-  [[ -f "$NAVEL_HOME/reports/nav.json" ]] || die "reports/nav.json missing — run 'navel docs sync' first"
+  [[ -f "$REPORTS_DIR/nav.json" ]] || die "nav.json missing from $REPORTS_DIR — run 'navel docs sync' first"
 
   mkdir -p "$BUILD_TYPST"
 

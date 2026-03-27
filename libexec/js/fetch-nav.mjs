@@ -18,7 +18,7 @@ if (!REPO_ROOT) {
 }
 const NAVEL_HOME = process.env.NAVEL_HOME || REPO_ROOT;
 
-const reportsDir = join(NAVEL_HOME, "reports");
+const reportsDir = process.env.NAVEL_REPORTS_DIR || join(NAVEL_HOME, "reports");
 if (!existsSync(reportsDir)) mkdirSync(reportsDir, { recursive: true });
 
 const DOCS_URL = "https://code.claude.com/docs/en/overview";
