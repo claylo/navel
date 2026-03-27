@@ -14,6 +14,7 @@ setup() {
   # Copy fixture data
   cp "$FIXTURES/hooks.json" "$NAVEL_HOME/reports/"
   cp "$FIXTURES/commands.json" "$NAVEL_HOME/reports/"
+  cp "$FIXTURES/env-vars.json" "$NAVEL_HOME/reports/"
   cp "$FIXTURES/versions.json" "$NAVEL_HOME/npm/"
   cp "$FIXTURES/README-template.md" "$NAVEL_HOME/README.md"
 }

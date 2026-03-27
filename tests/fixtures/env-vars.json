@@ -1,0 +1,33 @@
+{
+  "env_vars": [
+    "ANTHROPIC_API_KEY",
+    "ANTHROPIC_MODEL"
+  ],
+  "env_vars_history": {
+    "2.0.0": {
+      "added": [
+        "ANTHROPIC_API_KEY"
+      ]
+    },
+    "2.0.5": {
+      "added": [
+        "ANTHROPIC_MODEL"
+      ]
+    }
+  },
+  "env_vars_docs": {
+    "ANTHROPIC_API_KEY": {
+      "documented": true,
+      "doc_files": [
+        "reference.md"
+      ],
+      "mentions": 2
+    },
+    "ANTHROPIC_MODEL": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    }
+  },
+  "docs_checked_at": "2026-02-28"
+}

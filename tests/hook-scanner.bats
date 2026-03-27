@@ -7,6 +7,7 @@ setup() {
   FIXTURES="$BATS_TEST_DIRNAME/fixtures"
   TMPDIR_ORIG="$(mktemp -d)"
   export NAVEL_HOME="$TMPDIR_ORIG"
+  export NAVEL_REPORTS_DIR="$NAVEL_HOME/reports"
 
   mkdir -p "$NAVEL_HOME/npm/versions"
   cp -R "$FIXTURES/npm/versions/v2.0.0" "$NAVEL_HOME/npm/versions/"

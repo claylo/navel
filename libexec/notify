@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Send notifications via Pushover.
+# Silent no-op when PUSHOVER_USER_KEY / PUSHOVER_APP_TOKEN are not set.
+#
+# Usage:
+#   notify "Title" "Message body"
+#   notify --title "Title" --message "Message body"
+#   echo "body" | notify --title "Title" --stdin
+
+die() { echo "error: $*" >&2; exit 1; }
+
+TITLE=""
+MESSAGE=""
+USE_STDIN=false
+PRIORITY=0
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --title)    TITLE="$2"; shift 2 ;;
+    --message)  MESSAGE="$2"; shift 2 ;;
+    --stdin)    USE_STDIN=true; shift ;;
+    --priority) PRIORITY="$2"; shift 2 ;;
+    -*)         die "unknown flag: $1" ;;
+    *)
+      if [[ -z "$TITLE" ]]; then
+        TITLE="$1"
+      elif [[ -z "$MESSAGE" ]]; then
+        MESSAGE="$1"
+      else
+        die "unexpected argument: $1"
+      fi
+      shift ;;
+  esac
+done
+
+if $USE_STDIN; then
+  MESSAGE=$(cat)
+fi
+
+[[ -n "$TITLE" ]]   || die "title required"
+[[ -n "$MESSAGE" ]] || die "message required"
+
+# Skip silently if Pushover credentials not configured
+if [[ -z "${PUSHOVER_USER_KEY:-}" || -z "${PUSHOVER_APP_TOKEN:-}" ]]; then
+  echo "notify: skipping (PUSHOVER_USER_KEY / PUSHOVER_APP_TOKEN not set)" >&2
+  exit 0
+fi
+
+# Pushover message limit is 1024 characters
+if [[ ${#MESSAGE} -gt 1024 ]]; then
+  MESSAGE="${MESSAGE:0:1021}..."
+fi
+
+curl -sf \
+  --form-string "token=${PUSHOVER_APP_TOKEN}" \
+  --form-string "user=${PUSHOVER_USER_KEY}" \
+  --form-string "title=${TITLE}" \
+  --form-string "message=${MESSAGE}" \
+  --form-string "priority=${PRIORITY}" \
+  https://api.pushover.net/1/messages.json >/dev/null
+
+echo "notify: sent '${TITLE}'"
