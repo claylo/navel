@@ -184,6 +184,85 @@ cmd_docs_diff() {
 }
 
 # ─────────────────────────────────────
+# Monitor
+# ─────────────────────────────────────
+
+cmd_monitor() {
+  _require node
+  local targets=("$@")
+
+  # Default: auto-detect available builds based on installed tools
+  if [[ ${#targets[@]} -eq 0 ]]; then
+    if [[ ! -d "$DOCS_DIR" ]] || ! ls "$DOCS_DIR"/*.md &>/dev/null; then
+      echo "No docs found — run 'navel update' first"
+      return 0
+    fi
+    command -v node >/dev/null && targets+=(dash)
+    command -v typst >/dev/null && targets+=(pdf)
+    if [[ ${#targets[@]} -eq 0 ]]; then
+      echo "No builds available to monitor (need: node for dash, typst for pdf)"
+      return 0
+    fi
+  fi
+
+  # Validate targets
+  for t in "${targets[@]}"; do
+    case "$t" in
+      dash|pdf) ;;
+      *) die "unknown monitor target: $t (expected: dash, pdf)" ;;
+    esac
+  done
+
+  local log_dir="$NAVEL_HOME/logs"
+  mkdir -p "$log_dir"
+  local logfile="$log_dir/monitor.log"
+  local timestamp
+  timestamp=$(date '+%Y-%m-%d %H:%M:%S')
+
+  local failures=0
+  local failed_targets=()
+  local fail_output=""
+
+  echo "=== monitor $timestamp ==="
+  echo "=== monitor $timestamp ===" >> "$logfile"
+
+  for target in "${targets[@]}"; do
+    echo "  $target: building..."
+
+    local output rc
+    output=$( "$LIBEXEC/$target" 2>&1 ) && rc=0 || rc=$?
+
+    if [[ $rc -eq 0 ]]; then
+      echo "  $target: OK"
+      echo "  $target: OK" >> "$logfile"
+    else
+      echo "  $target: FAILED (exit $rc)"
+      echo "  $target: FAILED (exit $rc)" >> "$logfile"
+      echo "$output" | tail -20 >> "$logfile"
+      failures=$((failures + 1))
+      failed_targets+=("$target")
+      fail_output+="--- $target (exit $rc) ---"$'\n'
+      fail_output+="$(echo "$output" | tail -20)"$'\n'
+    fi
+  done
+
+  if [[ $failures -gt 0 ]]; then
+    local title="navel: ${failures} build(s) failed"
+    if [[ $failures -eq 1 ]]; then
+      title="navel: ${failed_targets[0]} build failed"
+    fi
+    "$LIBEXEC/notify" "$title" "$fail_output"
+    echo ""
+    echo "$failures build(s) failed: ${failed_targets[*]}"
+    echo "Details: $logfile"
+    return 1
+  fi
+
+  echo ""
+  echo "All builds OK."
+}
+
+# ─────────────────────────────────────
 # Schedule
 # ─────────────────────────────────────
 
@@ -374,6 +453,9 @@ PDF:
   pdf compile                  Compile build/_typ → PDF (skips render)
   pdf clean                    Remove PDF build artifacts
 
+Monitor:
+  monitor [targets...]         Run builds and alert on failure (targets: dash, pdf)
+
 Reports:
   readme sync                  Regenerate README badges and reports
 
@@ -393,6 +475,8 @@ Options:
 
 Environment:
   NAVEL_HOME                   Data directory (default: ~/.navel or repo root)
+  PUSHOVER_USER_KEY            Pushover user key (for monitor alerts)
+  PUSHOVER_APP_TOKEN           Pushover app token (for monitor alerts)
 EOF
 }
 
@@ -452,6 +536,8 @@ case "${1:-}" in
   status)    cmd_status ;;
   outdated)  cmd_outdated ;;
   update)    cmd_update ;;
+  monitor)
+    shift; cmd_monitor "$@" ;;
   schedule)
     case "${2:-}" in
       install)   cmd_schedule_install ;;

@@ -47,6 +47,13 @@ navel env-vars sync                   # scan for environment variables
 navel status                          # dashboard
 navel outdated                        # your installed claude vs latest
 navel update                          # sync everything, capture new prompt
+
+navel monitor                         # build all available targets, alert on failure
+navel monitor dash pdf                # build specific targets
+
+navel schedule install                # hourly sync via launchd/systemd
+navel schedule status                 # check scheduler
+navel schedule uninstall              # remove scheduled sync
 ```
 
 Run `navel prompts help` for the full prompt subcommand list.
@@ -126,9 +133,16 @@ These markers don't change the prompt content—they're billing/performance hint
 - Version 2.1.27 dropped 29 env vars in one release—the Sentry-to-OpenTelemetry migration, visible as a bulk removal of `SENTRY_*` vars and cloud region detection strings
 - Suppressing plugins, MCP, and settings during capture reduces the prompt by ~18% (270 lines)—that's all injected by your local environment, not the base prompt
 
-## Offline documentation (PDF)
+## Offline documentation
 
 navel can build offline copies of the Claude Code docs in two formats: a typeset **PDF** (with Anthropic brand fonts, glossary, and index) and a **Dash docset** (for instant search in Dash/Zeal/Velocity). You fetch your own copy of the docs and build locally—navel distributes the tooling, not the content.
+
+<p>
+  <img src="assets/claude-code-docs-pdf.png" alt="Claude Code docs as a typeset PDF" height="500">
+  <img src="assets/claude-code-docs-in-dash.png" alt="Claude Code docs in Dash" height="500">
+</p>
+
+See a [sample PDF with glossary and index](colophon-sample.pdf).
 
 ```bash
 navel docs sync   # fetch latest docs
@@ -139,6 +153,39 @@ navel dash        # build the Dash docset
 **Requires:** Node.js, `npm install`, plus Typst (PDF) or sqlite3 (Dash).
 
 For the full guide—dependencies, build steps, print mode, docset installation—see **[Building offline documentation](offline-docs.md)**.
+
+## Automation
+
+navel ships with a scheduler (`launchd` on macOS, `systemd` on Linux) and a build monitor that sends [Pushover](https://pushover.net/) alerts on failure. Compose them however you want:
+
+```bash
+# Data sync only (the default schedule)
+navel update
+
+# Sync + monitor all available builds
+navel update && navel monitor
+
+# Sync + monitor just the Dash docset
+navel update && navel monitor dash
+
+# Sync + build everything
+navel update && navel monitor dash pdf
+
+# Monitor builds without syncing (test against cached data)
+navel monitor
+```
+
+`navel monitor` auto-detects which builds are available based on installed tools (node for Dash, typst for PDF). Explicit targets always run and fail loudly if prerequisites are missing.
+
+Install the hourly schedule with whatever chain you want:
+
+```bash
+navel schedule install       # installs hourly 'navel update'
+navel schedule status        # check if it's running
+navel schedule uninstall     # remove it
+```
+
+To get Pushover alerts, set `PUSHOVER_USER_KEY` and `PUSHOVER_APP_TOKEN` in your environment. Without them, `navel monitor` still runs builds and logs results to `$NAVEL_HOME/logs/monitor.log` — it just doesn't ping you.
 
 ## Traction
 
