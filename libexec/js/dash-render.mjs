@@ -25,6 +25,7 @@ import {
   injectDashAnchors,
   preprocessMdx,
   flattenContextWindow,
+  flattenUpdateComponents,
   truncateChangelog,
   parseNavTabs,
   semverSort,
@@ -81,6 +82,10 @@ const componentMap = {
       { className: "text-sm italic text-stone-500" },
       "(See MCP documentation for server details)",
     ),
+  // A/B test wrapper — render children (control path) for static builds
+  Experiment: ({ children }) => children || null,
+  // Interactive install configurator — the standard Tabs below cover the same content
+  InstallConfigurator: () => null,
 };
 
 // ── Tab switching script (inline, for static-rendered Mintlify Tabs) ───
@@ -385,8 +390,9 @@ for (const file of files) {
     // Preprocess: strip inline exports
     md = preprocessMdx(md);
 
-    // Truncate changelog to avoid MDX serializer overflow
+    // Changelog: flatten <Update> components to ## headers, then truncate
     if (slug === "changelog") {
+      md = flattenUpdateComponents(md);
       md = truncateChangelog(md);
     }
 

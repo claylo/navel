@@ -244,6 +244,24 @@ function renderContextWindowMarkdown(events) {
   return lines.join("\n");
 }
 
+// ── Mintlify <Update> flattening ───────────────────────────────────────
+// Converts <Update label="2.1.84" description="March 26, 2026"> ... </Update>
+// into ## 2.1.84 / *March 26, 2026* / content.
+// Must run BEFORE truncateChangelog (which needs ## headers to count versions)
+// and before escapeJsxAngleBrackets (which mangles the opening tags but
+// leaves orphaned </Update> closers that break the MDX parser).
+
+export function flattenUpdateComponents(md) {
+  // Opening tag → ## heading + date line
+  md = md.replace(
+    /<Update\s+label="([^"]*)"\s+description="([^"]*)"[^>]*>/g,
+    (_, label, desc) => `## ${label}\n\n*${desc}*\n`,
+  );
+  // Closing tag → empty
+  md = md.replace(/<\/Update>/g, "");
+  return md;
+}
+
 // ── Changelog truncation + JSX escaping ────────────────────────────────
 
 const HTML_TAGS = new Set([

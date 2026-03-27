@@ -15,6 +15,7 @@ docs/
 logs/
 prompts/versions/
 dist/
+record/
 
 node_modules/
 

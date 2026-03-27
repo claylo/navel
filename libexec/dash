@@ -65,6 +65,10 @@ cmd_build() {
   node "$SCRIPT_DIR/js/localize-images.mjs"
 
   echo ""
+  echo "==> Fixing mismatched image formats..."
+  node "$SCRIPT_DIR/fix-image-formats" "$BUILD_HTML/images"
+
+  echo ""
   echo "==> Assembling docset..."
   "$SCRIPT_DIR/build-docset"
 }

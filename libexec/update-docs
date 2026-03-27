@@ -246,6 +246,16 @@ if [[ $n_changed -gt 0 || $n_added -gt 0 || $n_removed -gt 0 ]]; then
     '{ts:$ts,version:$v,status:$status,changed:$nc,added:$na,removed:$nr}' >> "$SYNC_LOG"
 
   echo "  docs-changes.json updated (changes recorded)"
+
+  # --- Archive changed docs to the Wayback Machine ---
+  if [[ -n "${IA_ACCESS_KEY:-}" && -n "${IA_SECRET_KEY:-}" ]]; then
+    archive_files=("${changed[@]}" "${added[@]}")
+    if [[ ${#archive_files[@]} -gt 0 ]]; then
+      echo ""
+      echo "==> Archiving ${#archive_files[@]} changed docs to the Wayback Machine..."
+      "$SCRIPT_DIR/archive-docs" "${archive_files[@]}" || true
+    fi
+  fi
 else
   jq -nc --arg ts "$now" --arg v "$latest_version" --arg status "unchanged" \
     '{ts:$ts,version:$v,status:$status}' >> "$SYNC_LOG"

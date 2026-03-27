@@ -199,6 +199,63 @@ $1
   [[ "$result" == *'</code>'* ]]
 }
 
+# ── Update component flattening ────────────────────────────────────────
+
+@test "flattenUpdateComponents: converts Update tags to ## headers" {
+  result=$(run_transform "
+    const src = (await import('node:fs')).readFileSync('$FIXTURES/changelog-update-sample.md', 'utf-8');
+    const out = T.flattenUpdateComponents(src);
+    console.log(out);
+  ")
+  [[ "$result" == *'## 2.1.84'* ]]
+  [[ "$result" == *'## 2.1.83'* ]]
+  [[ "$result" == *'*March 26, 2026*'* ]]
+}
+
+@test "flattenUpdateComponents: strips closing tags" {
+  result=$(run_transform "
+    const src = (await import('node:fs')).readFileSync('$FIXTURES/changelog-update-sample.md', 'utf-8');
+    const out = T.flattenUpdateComponents(src);
+    console.log(out.includes('</Update>') ? 'has-closers' : 'clean');
+  ")
+  [[ "$result" == "clean" ]]
+}
+
+@test "flattenUpdateComponents: preserves content between tags" {
+  result=$(run_transform "
+    const src = (await import('node:fs')).readFileSync('$FIXTURES/changelog-update-sample.md', 'utf-8');
+    const out = T.flattenUpdateComponents(src);
+    console.log(out);
+  ")
+  [[ "$result" == *'Added PowerShell tool'* ]]
+  [[ "$result" == *'Added managed-settings.d/'* ]]
+}
+
+@test "flattenUpdateComponents + truncateChangelog: end-to-end" {
+  result=$(run_transform "
+    const src = (await import('node:fs')).readFileSync('$FIXTURES/changelog-update-sample.md', 'utf-8');
+    let out = T.flattenUpdateComponents(src);
+    out = T.truncateChangelog(out, 2);
+    const versions = out.match(/^## \d/gm) || [];
+    console.log(versions.length);
+    console.log(out.includes('earlier version') ? 'truncated' : 'full');
+  ")
+  [[ "$(echo "$result" | head -1)" == "2" ]]
+  [[ "$(echo "$result" | tail -1)" == "truncated" ]]
+}
+
+@test "flattenUpdateComponents + escapeJsx: no orphaned closers" {
+  result=$(run_transform "
+    const src = (await import('node:fs')).readFileSync('$FIXTURES/changelog-update-sample.md', 'utf-8');
+    let out = T.flattenUpdateComponents(src);
+    out = T.truncateChangelog(out, 10);
+    console.log(out.includes('</Update>') ? 'orphaned' : 'clean');
+    console.log((out.match(/&lt;Update/g) || []).length);
+  ")
+  [[ "$(echo "$result" | head -1)" == "clean" ]]
+  [[ "$(echo "$result" | tail -1)" == "0" ]]
+}
+
 # ── Changelog truncation ────────────────────────────────────────────────
 
 @test "truncateChangelog: truncates to N versions" {
