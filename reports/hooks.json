@@ -316,13 +316,14 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "computer-use.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
         "sub-agents.md",
         "tools-reference.md"
       ],
-      "mentions": 82
+      "mentions": 83
     },
     "StopFailure": {
       "documented": true,
