@@ -22,20 +22,18 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get update -qq && sudo apt-get install -y -qq jq ripgrep
 
-      - name: Restore npm cache
+      - name: Restore npm scan cache
         uses: actions/cache@v5
         with:
-          path: |
-            npm/versions
-            npm/.cache
-          key: navel-npm-${{ hashFiles('npm/versions.json') }}
-          restore-keys: navel-npm-
+          path: npm/.cache
+          key: navel-npm-cache-${{ hashFiles('npm/versions.json') }}
+          restore-keys: navel-npm-cache-
 
       - name: Restore docs cache
         uses: actions/cache@v5
         with:
           path: docs
-          key: navel-docs-${{ hashFiles('reports/docs-changes.json') }}
+          key: navel-docs-${{ github.run_id }}
           restore-keys: navel-docs-
 
       - name: Sync npm versions

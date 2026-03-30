@@ -18,15 +18,15 @@ history="{}"
 latest_vars=""
 
 while IFS= read -r version; do
-  dir="v${version}"
-  cli="versions/$dir/node_modules/@anthropic-ai/claude-code/cli.js"
-  [[ -f "$cli" ]] || continue
-
   cache_file="${cache_dir}/${version}.txt"
 
   if [[ -f "$cache_file" ]]; then
     vars=$(cat "$cache_file")
   else
+    dir="v${version}"
+    cli="versions/$dir/node_modules/@anthropic-ai/claude-code/cli.js"
+    [[ -f "$cli" ]] || continue
+
     vars=$(rg -o 'process\.env\.[A-Z_][A-Z0-9_]*' "$cli" 2>/dev/null \
       | sed 's/process\.env\.//' \
       | sort -u \
