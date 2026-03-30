@@ -116,6 +116,312 @@
       ]
     }
   },
-  "hooks_docs": {},
+  "hooks_docs": {
+    "ConfigChange": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md",
+        "security.md",
+        "server-managed-settings.md"
+      ],
+      "mentions": 24
+    },
+    "CwdChanged": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 25
+    },
+    "Elicitation": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "mcp.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 32
+    },
+    "ElicitationResult": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 16
+    },
+    "FileChanged": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 25
+    },
+    "InstructionsLoaded": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "memory.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 17
+    },
+    "Notification": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "channels-reference.md",
+        "common-workflows.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md",
+        "statusline.md",
+        "terminal-config.md"
+      ],
+      "mentions": 44
+    },
+    "PermissionRequest": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "channels-reference.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "permission-modes.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 40
+    },
+    "PostCompact": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 15
+    },
+    "PostToolUse": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "claude-directory.md",
+        "context-window.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "server-managed-settings.md",
+        "sub-agents.md",
+        "troubleshooting.md"
+      ],
+      "mentions": 71
+    },
+    "PostToolUseFailure": {
+      "documented": true,
+      "doc_files": [
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 19
+    },
+    "PreCompact": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 15
+    },
+    "PreToolUse": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "costs.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugins-reference.md",
+        "sub-agents.md",
+        "vs-code.md"
+      ],
+      "mentions": 81
+    },
+    "SessionEnd": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "env-vars.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 23
+    },
+    "SessionStart": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "claude-code-on-the-web.md",
+        "env-vars.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md",
+        "tools-reference.md"
+      ],
+      "mentions": 42
+    },
+    "Setup": {
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "claude-code-on-the-web.md",
+        "code-review.md",
+        "discover-plugins.md",
+        "github-actions.md",
+        "gitlab-ci-cd.md",
+        "google-vertex-ai.md",
+        "microsoft-foundry.md",
+        "platforms.md",
+        "remote-control.md",
+        "web-scheduled-tasks.md"
+      ],
+      "mentions": 23
+    },
+    "Stop": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md",
+        "sub-agents.md",
+        "tools-reference.md"
+      ],
+      "mentions": 82
+    },
+    "StopFailure": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 18
+    },
+    "SubagentStart": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md",
+        "sub-agents.md"
+      ],
+      "mentions": 20
+    },
+    "SubagentStop": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md",
+        "sub-agents.md"
+      ],
+      "mentions": 25
+    },
+    "TaskCompleted": {
+      "documented": true,
+      "doc_files": [
+        "agent-teams.md",
+        "changelog.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 20
+    },
+    "TaskCreated": {
+      "documented": true,
+      "doc_files": [
+        "agent-teams.md",
+        "changelog.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 19
+    },
+    "TeammateIdle": {
+      "documented": true,
+      "doc_files": [
+        "agent-teams.md",
+        "changelog.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 20
+    },
+    "UserPromptSubmit": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 24
+    },
+    "WorktreeCreate": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "claude-directory.md",
+        "common-workflows.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 28
+    },
+    "WorktreeRemove": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "common-workflows.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 20
+    }
+  },
   "docs_checked_at": "2026-03-30"
 }
