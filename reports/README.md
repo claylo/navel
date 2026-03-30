@@ -7,32 +7,32 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Hook | Since | Documented |
 |------|-------|------------|
-| **ConfigChange** | 2.1.48 | **no** |
-| **CwdChanged** | 2.1.83 | **no** |
-| **Elicitation** | 2.1.63 | **no** |
-| **ElicitationResult** | 2.1.63 | **no** |
-| **FileChanged** | 2.1.83 | **no** |
-| **InstructionsLoaded** | 2.1.64 | **no** |
-| **Notification** | 2.0.0 | **no** |
-| **PermissionRequest** | 2.0.45 | **no** |
-| **PostCompact** | 2.1.76 | **no** |
-| **PostToolUse** | 2.0.0 | **no** |
-| **PostToolUseFailure** | 2.0.56 | **no** |
-| **PreCompact** | 2.0.0 | **no** |
-| **PreToolUse** | 2.0.0 | **no** |
-| **SessionEnd** | 2.0.0 | **no** |
-| **SessionStart** | 2.0.0 | **no** |
-| **Setup** | 2.1.10 | **no** |
-| **Stop** | 2.0.0 | **no** |
-| **StopFailure** | 2.1.78 | **no** |
-| **SubagentStart** | 2.0.43 | **no** |
-| **SubagentStop** | 2.0.0 | **no** |
-| **TaskCompleted** | 2.1.33 | **no** |
-| **TaskCreated** | 2.1.84 | **no** |
-| **TeammateIdle** | 2.1.33 | **no** |
-| **UserPromptSubmit** | 2.0.0 | **no** |
-| **WorktreeCreate** | 2.1.50 | **no** |
-| **WorktreeRemove** | 2.1.50 | **no** |
+| ConfigChange | 2.1.48 | yes |
+| CwdChanged | 2.1.83 | yes |
+| Elicitation | 2.1.63 | yes |
+| ElicitationResult | 2.1.63 | yes |
+| FileChanged | 2.1.83 | yes |
+| InstructionsLoaded | 2.1.64 | yes |
+| Notification | 2.0.0 | yes |
+| PermissionRequest | 2.0.45 | yes |
+| PostCompact | 2.1.76 | yes |
+| PostToolUse | 2.0.0 | yes |
+| PostToolUseFailure | 2.0.56 | yes |
+| PreCompact | 2.0.0 | yes |
+| PreToolUse | 2.0.0 | yes |
+| SessionEnd | 2.0.0 | yes |
+| SessionStart | 2.0.0 | yes |
+| Setup | 2.1.10 | yes |
+| Stop | 2.0.0 | yes |
+| StopFailure | 2.1.78 | yes |
+| SubagentStart | 2.0.43 | yes |
+| SubagentStop | 2.0.0 | yes |
+| TaskCompleted | 2.1.33 | yes |
+| TaskCreated | 2.1.84 | yes |
+| TeammateIdle | 2.1.33 | yes |
+| UserPromptSubmit | 2.0.0 | yes |
+| WorktreeCreate | 2.1.50 | yes |
+| WorktreeRemove | 2.1.50 | yes |
 
 </details>
 
