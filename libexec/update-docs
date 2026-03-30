@@ -102,24 +102,27 @@ added=()
 removed=()
 
 if [[ -f "$MANIFEST" ]]; then
-  # Files whose hash changed
+  old_names=$(awk '{print $2}' "$MANIFEST" | sort)
+  new_names=$(awk '{print $2}' "$NEW_MANIFEST" | sort)
+
+  # Files present in both manifests but with different hashes
   while IFS= read -r filename; do
-    changed+=("$filename")
-  done < <(comm -13 <(sort -k2 "$MANIFEST") <(sort -k2 "$NEW_MANIFEST") | \
-           awk '{print $2}' | \
-           comm -12 - <(awk '{print $2}' "$MANIFEST" | sort))
+    old_hash=$(awk -v f="$filename" '$2 == f {print $1}' "$MANIFEST")
+    new_hash=$(awk -v f="$filename" '$2 == f {print $1}' "$NEW_MANIFEST")
+    if [[ "$old_hash" != "$new_hash" ]]; then
+      changed+=("$filename")
+    fi
+  done < <(comm -12 <(echo "$old_names") <(echo "$new_names"))
 
   # New files (in new manifest but not old)
   while IFS= read -r filename; do
     added+=("$filename")
-  done < <(comm -23 <(awk '{print $2}' "$NEW_MANIFEST" | sort) \
-                     <(awk '{print $2}' "$MANIFEST" | sort))
+  done < <(comm -23 <(echo "$new_names") <(echo "$old_names"))
 
   # Removed files (in old manifest but not new)
   while IFS= read -r filename; do
     removed+=("$filename")
-  done < <(comm -13 <(awk '{print $2}' "$NEW_MANIFEST" | sort) \
-                     <(awk '{print $2}' "$MANIFEST" | sort))
+  done < <(comm -13 <(echo "$new_names") <(echo "$old_names"))
 else
   # First run — everything is new
   while IFS= read -r filename; do

@@ -21,8 +21,12 @@ total=$(jq length "$NPM_DIR/versions.json")
 echo "Found $total versions"
 
 # Which versions still need downloading?
-# Check for package.json (not cli.js) — older versions lack cli.js
+# Skip if: package already on disk, OR scan caches exist (commands/hooks/env-vars).
+# Scan caches mean the scanners already extracted what they need — no cli.js required.
+# The latest version is always fetched so descriptions and flags stay current.
+latest=$(jq -r '.[]' "$NPM_DIR/versions.json" | sort -V | tail -1)
 skipped=0
+scan_cached=0
 need_fetch=()
 
 while IFS= read -r version; do
@@ -31,11 +35,19 @@ while IFS= read -r version; do
     skipped=$((skipped + 1))
     continue
   fi
+  # Scan caches cover this version — skip download (unless it's the latest,
+  # which update-commands-list needs on disk for descriptions and flags)
+  if [[ "$version" != "$latest" ]] && \
+     [[ -f "$NPM_DIR/.cache/commands/${version}.txt" ]] && \
+     [[ -f "$NPM_DIR/.cache/hooks/${version}.txt" ]]; then
+    scan_cached=$((scan_cached + 1))
+    continue
+  fi
   need_fetch+=("$version")
 done < <(jq -r '.[]' "$NPM_DIR/versions.json")
 
 to_fetch=${#need_fetch[@]}
-echo "Cached: $skipped  Needed: $to_fetch"
+echo "Cached: $skipped  Scan-cached: $scan_cached  Needed: $to_fetch"
 
 if [[ $to_fetch -eq 0 ]]; then
   echo "All versions cached."
