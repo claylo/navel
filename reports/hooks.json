@@ -7,7 +7,6 @@
     "FileChanged",
     "InstructionsLoaded",
     "Notification",
-    "PermissionDenied",
     "PermissionRequest",
     "PostCompact",
     "PostToolUse",
@@ -115,11 +114,6 @@
       "added": [
         "TaskCreated"
       ]
-    },
-    "2.1.88": {
-      "added": [
-        "PermissionDenied"
-      ]
     }
   },
   "hooks_docs": {
@@ -202,13 +196,6 @@
         "terminal-config.md"
       ],
       "mentions": 44
-    },
-    "PermissionDenied": {
-      "documented": true,
-      "doc_files": [
-        "changelog.md"
-      ],
-      "mentions": 1
     },
     "PermissionRequest": {
       "documented": true,
