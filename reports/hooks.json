@@ -204,9 +204,11 @@
       "mentions": 44
     },
     "PermissionDenied": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "changelog.md"
+      ],
+      "mentions": 1
     },
     "PermissionRequest": {
       "documented": true,
@@ -245,7 +247,7 @@
         "sub-agents.md",
         "troubleshooting.md"
       ],
-      "mentions": 71
+      "mentions": 72
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -279,7 +281,7 @@
         "sub-agents.md",
         "vs-code.md"
       ],
-      "mentions": 81
+      "mentions": 82
     },
     "SessionEnd": {
       "documented": true,
@@ -435,5 +437,5 @@
       "mentions": 20
     }
   },
-  "docs_checked_at": "2026-03-30"
+  "docs_checked_at": "2026-03-31"
 }
