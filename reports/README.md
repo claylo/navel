@@ -14,7 +14,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | FileChanged | 2.1.83 | yes |
 | InstructionsLoaded | 2.1.64 | yes |
 | Notification | 2.0.0 | yes |
-| **PermissionDenied** | 2.1.89 | **no** |
+| PermissionDenied | 2.1.89 | yes |
 | PermissionRequest | 2.0.45 | yes |
 | PostCompact | 2.1.76 | yes |
 | PostToolUse | 2.0.0 | yes |
