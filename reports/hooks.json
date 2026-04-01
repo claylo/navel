@@ -206,9 +206,13 @@
     "PermissionDenied": {
       "documented": true,
       "doc_files": [
-        "changelog.md"
+        "changelog.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "permissions.md",
+        "plugins-reference.md"
       ],
-      "mentions": 1
+      "mentions": 21
     },
     "PermissionRequest": {
       "documented": true,
@@ -281,7 +285,7 @@
         "sub-agents.md",
         "vs-code.md"
       ],
-      "mentions": 86
+      "mentions": 91
     },
     "SessionEnd": {
       "documented": true,
