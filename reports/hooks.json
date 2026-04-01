@@ -7,6 +7,7 @@
     "FileChanged",
     "InstructionsLoaded",
     "Notification",
+    "PermissionDenied",
     "PermissionRequest",
     "PostCompact",
     "PostToolUse",
@@ -114,6 +115,11 @@
       "added": [
         "TaskCreated"
       ]
+    },
+    "2.1.89": {
+      "added": [
+        "PermissionDenied"
+      ]
     }
   },
   "hooks_docs": {
@@ -196,6 +202,11 @@
         "terminal-config.md"
       ],
       "mentions": 44
+    },
+    "PermissionDenied": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "PermissionRequest": {
       "documented": true,
@@ -323,7 +334,7 @@
         "sub-agents.md",
         "tools-reference.md"
       ],
-      "mentions": 83
+      "mentions": 84
     },
     "StopFailure": {
       "documented": true,
@@ -424,5 +435,5 @@
       "mentions": 20
     }
   },
-  "docs_checked_at": "2026-03-31"
+  "docs_checked_at": "2026-04-01"
 }
