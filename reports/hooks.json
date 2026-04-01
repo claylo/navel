@@ -204,9 +204,11 @@
       "mentions": 44
     },
     "PermissionDenied": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "changelog.md"
+      ],
+      "mentions": 1
     },
     "PermissionRequest": {
       "documented": true,
@@ -245,7 +247,7 @@
         "sub-agents.md",
         "troubleshooting.md"
       ],
-      "mentions": 70
+      "mentions": 71
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -279,7 +281,7 @@
         "sub-agents.md",
         "vs-code.md"
       ],
-      "mentions": 84
+      "mentions": 86
     },
     "SessionEnd": {
       "documented": true,
@@ -388,7 +390,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 19
+      "mentions": 20
     },
     "TeammateIdle": {
       "documented": true,
