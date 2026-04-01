@@ -3,7 +3,7 @@
 Auto-generated tracking data for Claude Code versions, hooks, commands, and environment variables.
 
 <details>
-<summary>Hooks (26)</summary>
+<summary>Hooks (27)</summary>
 
 | Hook | Since | Documented |
 |------|-------|------------|
@@ -14,6 +14,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | FileChanged | 2.1.83 | yes |
 | InstructionsLoaded | 2.1.64 | yes |
 | Notification | 2.0.0 | yes |
+| **PermissionDenied** | 2.1.89 | **no** |
 | PermissionRequest | 2.0.45 | yes |
 | PostCompact | 2.1.76 | yes |
 | PostToolUse | 2.0.0 | yes |
@@ -594,6 +595,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.89 | +PermissionDenied | — | — |
 | 2.1.84 | +TaskCreated | — | — |
 | 2.1.83 | +CwdChanged, +FileChanged | +advisor, +ultraplan, +ultrareview, +version | — |
 | 2.1.80 | — | +schedule | +2 |
@@ -787,4 +789,4 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 ---
-*Last updated: 2026-03-31*
+*Last updated: 2026-04-01*
