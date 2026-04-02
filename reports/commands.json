@@ -52,13 +52,11 @@
     "memory",
     "mobile",
     "model",
-    "output-style",
     "passes",
     "permissions",
     "plan",
     "plugin",
     "powerup",
-    "pr-comments",
     "privacy-settings",
     "rate-limit-options",
     "release-notes",
@@ -85,6 +83,7 @@
     "think-back",
     "thinkback-play",
     "toggle-memory",
+    "ultraplan",
     "ultrareview",
     "upgrade",
     "usage",
@@ -137,10 +136,8 @@
     "loop": "Run a prompt or slash command on a recurring interval (e.g. /loop 5m /foo, defaults to 10m)",
     "mcp": "Manage MCP servers",
     "memory": "Edit Claude memory files",
-    "output-style": "Deprecated: use /config to change output style",
     "plan": "Enable plan mode or view the current session plan",
     "powerup": "Discover Claude Code features through quick interactive lessons",
-    "pr-comments": "Get comments from a GitHub pull request",
     "privacy-settings": "View and update your privacy settings",
     "rate-limit-options": "Show options when rate limit is reached",
     "reload-plugins": "Activate pending plugin changes in the current session",
@@ -220,13 +217,11 @@
     "memory": "available",
     "mobile": "available",
     "model": "available",
-    "output-style": "available",
     "passes": "available",
     "permissions": "available",
     "plan": "available",
     "plugin": "available",
     "powerup": "available",
-    "pr-comments": "available",
     "privacy-settings": "available",
     "rate-limit-options": "available",
     "release-notes": "available",
@@ -253,6 +248,7 @@
     "think-back": "available",
     "thinkback-play": "available",
     "toggle-memory": "disabled",
+    "ultraplan": "available",
     "ultrareview": "available",
     "upgrade": "available",
     "usage": "available",
@@ -520,6 +516,11 @@
       "added": [
         "powerup",
         "toggle-memory"
+      ]
+    },
+    "2.1.91": {
+      "added": [
+        "ultraplan"
       ]
     }
   },
@@ -1199,13 +1200,6 @@
       ],
       "mentions": 84
     },
-    "output-style": {
-      "documented": true,
-      "doc_files": [
-        "changelog.md"
-      ],
-      "mentions": 2
-    },
     "passes": {
       "documented": true,
       "doc_files": [
@@ -1295,14 +1289,6 @@
         "common-workflows.md"
       ],
       "mentions": 3
-    },
-    "pr-comments": {
-      "documented": true,
-      "doc_files": [
-        "changelog.md",
-        "commands.md"
-      ],
-      "mentions": 2
     },
     "privacy-settings": {
       "documented": true,
@@ -1599,6 +1585,11 @@
       "mentions": 0
     },
     "toggle-memory": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "ultraplan": {
       "documented": false,
       "doc_files": [],
       "mentions": 0
