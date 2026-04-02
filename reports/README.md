@@ -38,7 +38,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (92)</summary>
+<summary>Commands (91)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -94,13 +94,11 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /memory | Edit Claude memory files | 2.0.0 | available | yes |
 | /mobile | — | 2.0.72 | available | yes |
 | /model | — | 2.0.0 | available | yes |
-| /output-style | Deprecated: use /config to change output style | 2.0.0 | available | yes |
 | /passes | — | 2.0.45 | available | yes |
 | /permissions | — | 2.0.0 | available | yes |
 | /plan | Enable plan mode or view the current session plan | 2.0.56 | available | yes |
 | /plugin | — | 2.0.12 | available | yes |
 | /powerup | Discover Claude Code features through quick interactive l... | 2.1.90 | available | yes |
-| /pr-comments | Get comments from a GitHub pull request | 2.0.0 | available | yes |
 | /privacy-settings | View and update your privacy settings | 2.0.0 | available | yes |
 | **/rate-limit-options** | Show options when rate limit is reached | 2.0.43 | available | **no** |
 | /release-notes | — | 2.0.0 | available | yes |
@@ -127,6 +125,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/think-back** | Your 2025 Claude Code Year in Review | 2.0.66 | available | **no** |
 | **/thinkback-play** | Play the thinkback animation | 2.0.66 | available | **no** |
 | **/toggle-memory** | Toggle automemory off/on for this session | 2.1.90 | *disabled* | **no** |
+| **/ultraplan** | — | 2.1.83 | available | **no** |
 | **/ultrareview** | — | 2.1.83 | available | **no** |
 | /upgrade | Upgrade to Max for higher rate limits and more Opus | 2.0.0 | available | yes |
 | /usage | Show plan usage limits | 2.0.0 | available | yes |
@@ -598,6 +597,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.91 | — | +ultraplan | — |
 | 2.1.90 | — | +powerup, +toggle-memory | — |
 | 2.1.89 | +PermissionDenied | +autocompact, +buddy | — |
 | 2.1.84 | +TaskCreated | — | — |
