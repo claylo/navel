@@ -251,7 +251,7 @@
         "sub-agents.md",
         "troubleshooting.md"
       ],
-      "mentions": 71
+      "mentions": 72
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -285,7 +285,7 @@
         "sub-agents.md",
         "vs-code.md"
       ],
-      "mentions": 91
+      "mentions": 92
     },
     "SessionEnd": {
       "documented": true,
@@ -441,5 +441,5 @@
       "mentions": 20
     }
   },
-  "docs_checked_at": "2026-04-01"
+  "docs_checked_at": "2026-04-02"
 }
