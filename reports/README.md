@@ -38,18 +38,20 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (89)</summary>
+<summary>Commands (92)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
 | /add-dir | Add a new working directory | 2.0.0 | available | yes |
 | **/advisor** | Configure the advisor model | 2.1.83 | available | **no** |
 | /agents | Manage agent configurations | 2.0.0 | available | yes |
+| **/autocompact** | Configure the auto-compact window size | 2.1.89 | available | **no** |
 | /batch | Research and plan a large-scale change, then execute it i... | 2.1.63 | available | yes |
 | /branch | — | 2.1.77 | available | yes |
 | **/bridge-kick** | Inject bridge failure states for manual recovery testing | 2.1.76 | *disabled* | **no** |
 | **/brief** | Toggle brief-only mode | 2.1.72 | available | **no** |
 | /btw | Ask a quick side question without interrupting the main c... | 2.1.6 | available | yes |
+| /buddy | Hatch a coding companion · pet, off | 2.1.89 | available | yes |
 | /chrome | Claude in Chrome (Beta) settings | 2.0.71 | available | yes |
 | /claude-api | Build apps with the Claude API or Anthropic SDK.\nTRIGGER... | 2.1.69 | available | yes |
 | /claude-in-chrome | Automates your Chrome browser to interact with web pages ... | 2.1.7 | available | yes |
@@ -73,7 +75,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /fast | — | 2.1.36 | available | yes |
 | /feedback | Submit feedback about Claude Code | 2.0.0 | available | yes |
 | **/files** | List all files currently in context | 2.0.0 | *disabled* | yes |
-| **/heapdump** | Dump the JS heap to ~/Desktop | 2.1.71 | available | **no** |
+| /heapdump | Dump the JS heap to ~/Desktop | 2.1.71 | available | yes |
 | /help | Show help and available commands | 2.0.0 | available | yes |
 | /hooks | View hook configurations for tool events | 2.0.0 | available | yes |
 | /ide | Manage IDE integrations and show status | 2.0.0 | available | yes |
@@ -97,6 +99,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /permissions | — | 2.0.0 | available | yes |
 | /plan | Enable plan mode or view the current session plan | 2.0.56 | available | yes |
 | /plugin | — | 2.0.12 | available | yes |
+| /powerup | Discover Claude Code features through quick interactive l... | 2.1.90 | available | yes |
 | /pr-comments | Get comments from a GitHub pull request | 2.0.0 | available | yes |
 | /privacy-settings | View and update your privacy settings | 2.0.0 | available | yes |
 | **/rate-limit-options** | Show options when rate limit is reached | 2.0.43 | available | **no** |
@@ -123,14 +126,14 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /theme | Change the theme | 2.0.73 | available | yes |
 | **/think-back** | Your 2025 Claude Code Year in Review | 2.0.66 | available | **no** |
 | **/thinkback-play** | Play the thinkback animation | 2.0.66 | available | **no** |
-| **/ultraplan** | — | 2.1.83 | *disabled* | **no** |
+| **/toggle-memory** | Toggle automemory off/on for this session | 2.1.90 | *disabled* | **no** |
 | **/ultrareview** | — | 2.1.83 | available | **no** |
 | /upgrade | Upgrade to Max for higher rate limits and more Opus | 2.0.0 | available | yes |
 | /usage | Show plan usage limits | 2.0.0 | available | yes |
 | **/version** | Print the version this session is running (not what autou... | 2.1.83 | *disabled* | yes |
 | /vim | Toggle between Vim and Normal editing modes | 2.0.0 | available | yes |
 | /voice | Toggle voice mode | 2.1.59 | available | yes |
-| **/web-setup** | Setup Claude Code on the web (requires connecting your Gi... | 2.1.79 | available | **no** |
+| /web-setup | Setup Claude Code on the web (requires connecting your Gi... | 2.1.79 | available | yes |
 
 </details>
 
@@ -595,7 +598,8 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
-| 2.1.89 | +PermissionDenied | — | — |
+| 2.1.90 | — | +powerup, +toggle-memory | — |
+| 2.1.89 | +PermissionDenied | +autocompact, +buddy | — |
 | 2.1.84 | +TaskCreated | — | — |
 | 2.1.83 | +CwdChanged, +FileChanged | +advisor, +ultraplan, +ultrareview, +version | — |
 | 2.1.80 | — | +schedule | +2 |
