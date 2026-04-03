@@ -125,7 +125,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/think-back** | Your 2025 Claude Code Year in Review | 2.0.66 | available | **no** |
 | **/thinkback-play** | Play the thinkback animation | 2.0.66 | available | **no** |
 | **/toggle-memory** | Toggle automemory off/on for this session | 2.1.90 | *disabled* | **no** |
-| **/ultraplan** | — | 2.1.83 | available | **no** |
+| /ultraplan | — | 2.1.83 | available | yes |
 | **/ultrareview** | — | 2.1.83 | available | **no** |
 | /upgrade | Upgrade to Max for higher rate limits and more Opus | 2.0.0 | available | yes |
 | /usage | Show plan usage limits | 2.0.0 | available | yes |
