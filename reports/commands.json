@@ -559,7 +559,7 @@
         "skills.md",
         "sub-agents.md"
       ],
-      "mentions": 46
+      "mentions": 45
     },
     "autocompact": {
       "documented": false,
@@ -961,7 +961,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 230
+      "mentions": 229
     },
     "ide": {
       "documented": true,
@@ -1481,7 +1481,7 @@
         "sub-agents.md",
         "tools-reference.md"
       ],
-      "mentions": 115
+      "mentions": 114
     },
     "stats": {
       "documented": true,
