@@ -793,6 +793,7 @@
         "common-workflows.md",
         "computer-use.md",
         "desktop-quickstart.md",
+        "desktop-scheduled-tasks.md",
         "desktop.md",
         "how-claude-code-works.md",
         "overview.md",
@@ -801,13 +802,11 @@
         "quickstart.md",
         "remote-control.md",
         "sandboxing.md",
-        "scheduled-tasks.md",
         "setup.md",
         "troubleshooting.md",
-        "web-scheduled-tasks.md",
         "zero-data-retention.md"
       ],
-      "mentions": 66
+      "mentions": 54
     },
     "diff": {
       "documented": true,
@@ -1087,14 +1086,14 @@
         "changelog.md",
         "commands.md",
         "common-workflows.md",
-        "desktop.md",
+        "desktop-scheduled-tasks.md",
         "env-vars.md",
         "overview.md",
         "scheduled-tasks.md",
         "skills.md",
         "web-scheduled-tasks.md"
       ],
-      "mentions": 24
+      "mentions": 25
     },
     "mcp": {
       "documented": true,
@@ -1111,6 +1110,7 @@
         "computer-use.md",
         "context-window.md",
         "costs.md",
+        "desktop-scheduled-tasks.md",
         "desktop.md",
         "discover-plugins.md",
         "env-vars.md",
@@ -1339,9 +1339,10 @@
         "platforms.md",
         "remote-control.md",
         "security.md",
+        "ultraplan.md",
         "vs-code.md"
       ],
-      "mentions": 26
+      "mentions": 28
     },
     "remote-env": {
       "documented": true,
@@ -1408,7 +1409,7 @@
       "documented": true,
       "doc_files": [
         "commands.md",
-        "desktop.md",
+        "desktop-scheduled-tasks.md",
         "overview.md",
         "scheduled-tasks.md",
         "web-scheduled-tasks.md"
@@ -1551,9 +1552,10 @@
         "claude-code-on-the-web.md",
         "commands.md",
         "github-enterprise-server.md",
-        "interactive-mode.md"
+        "interactive-mode.md",
+        "ultraplan.md"
       ],
-      "mentions": 9
+      "mentions": 10
     },
     "terminal-setup": {
       "documented": true,
@@ -1590,9 +1592,15 @@
       "mentions": 0
     },
     "ultraplan": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "claude-code-on-the-web.md",
+        "commands.md",
+        "permission-modes.md",
+        "remote-control.md",
+        "ultraplan.md"
+      ],
+      "mentions": 9
     },
     "ultrareview": {
       "documented": false,
