@@ -639,7 +639,7 @@
         "changelog.md",
         "skills.md"
       ],
-      "mentions": 2
+      "mentions": 3
     },
     "claude-in-chrome": {
       "documented": true,
@@ -807,7 +807,7 @@
         "web-scheduled-tasks.md",
         "zero-data-retention.md"
       ],
-      "mentions": 62
+      "mentions": 63
     },
     "diff": {
       "documented": true,
@@ -901,7 +901,7 @@
         "troubleshooting.md",
         "zero-data-retention.md"
       ],
-      "mentions": 15
+      "mentions": 16
     },
     "files": {
       "documented": true,
