@@ -338,9 +338,10 @@
         "hooks.md",
         "plugins-reference.md",
         "sub-agents.md",
-        "tools-reference.md"
+        "tools-reference.md",
+        "ultraplan.md"
       ],
-      "mentions": 84
+      "mentions": 85
     },
     "StopFailure": {
       "documented": true,
@@ -441,5 +442,5 @@
       "mentions": 20
     }
   },
-  "docs_checked_at": "2026-04-02"
+  "docs_checked_at": "2026-04-03"
 }
