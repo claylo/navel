@@ -1279,7 +1279,7 @@
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 117
+      "mentions": 119
     },
     "powerup": {
       "documented": true,
@@ -1664,5 +1664,5 @@
       "mentions": 2
     }
   },
-  "docs_checked_at": "2026-04-02"
+  "docs_checked_at": "2026-04-03"
 }
