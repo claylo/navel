@@ -38,12 +38,12 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (91)</summary>
+<summary>Commands (92)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
 | /add-dir | Add a new working directory | 2.0.0 | available | yes |
-| **/advisor** | Configure the advisor model | 2.1.83 | available | **no** |
+| **/advisor** | Configure the Advisor Tool to consult a stronger model fo... | 2.1.83 | available | **no** |
 | /agents | Manage agent configurations | 2.0.0 | available | yes |
 | **/autocompact** | Configure the auto-compact window size | 2.1.89 | available | **no** |
 | /batch | Research and plan a large-scale change, then execute it i... | 2.1.63 | available | yes |
@@ -112,14 +112,16 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /schedule | Create, update, list, or run scheduled remote agents (tri... | 2.1.80 | available | yes |
 | /security-review | Complete a security review of the pending changes on the ... | 2.0.0 | available | yes |
 | /session | — | 2.1.15 | available | yes |
+| **/setup-bedrock** | Reconfigure AWS Bedrock authentication, region, or model ... | 2.1.92 | available | **no** |
 | /simplify | Review changed code for reuse, quality, and efficiency, t... | 2.1.63 | available | yes |
 | /skills | List available skills | 2.0.73 | available | yes |
 | /stats | Show your Claude Code usage statistics and activity | 2.0.63 | available | yes |
 | /status | Show Claude Code status including version, model, account... | 2.0.0 | available | yes |
 | /statusline | — | 2.0.0 | available | yes |
 | /stickers | Order Claude Code stickers | 2.0.32 | available | yes |
-| **/tag** | Toggle a searchable tag on the current session | 2.0.65 | *disabled* | yes |
+| **/stop-hook** | Set a session-only Stop hook with a quick prompt | 2.1.92 | *disabled* | **no** |
 | /tasks | — | 2.0.45 | available | yes |
+| /teleport | Resume a Claude Code session from claude.ai | 2.1.92 | available | yes |
 | /terminal-setup | — | 2.0.0 | available | yes |
 | /theme | Change the theme | 2.0.73 | available | yes |
 | **/think-back** | Your 2025 Claude Code Year in Review | 2.0.66 | available | **no** |
@@ -130,7 +132,6 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /upgrade | Upgrade to Max for higher rate limits and more Opus | 2.0.0 | available | yes |
 | /usage | Show plan usage limits | 2.0.0 | available | yes |
 | **/version** | Print the version this session is running (not what autou... | 2.1.83 | *disabled* | yes |
-| /vim | Toggle between Vim and Normal editing modes | 2.0.0 | available | yes |
 | /voice | Toggle voice mode | 2.1.59 | available | yes |
 | /web-setup | Setup Claude Code on the web (requires connecting your Gi... | 2.1.79 | available | yes |
 
@@ -597,6 +598,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.92 | — | +setup-bedrock, +stop-hook, +teleport | — |
 | 2.1.91 | — | +ultraplan | — |
 | 2.1.90 | — | +powerup, +toggle-memory | — |
 | 2.1.89 | +PermissionDenied | +autocompact, +buddy | — |
@@ -793,4 +795,4 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 ---
-*Last updated: 2026-04-03*
+*Last updated: 2026-04-04*
