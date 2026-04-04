@@ -76,6 +76,9 @@
     "hooks": "Reference",
     "plugins-reference": "Reference",
     "channels-reference": "Reference",
+    "whats-new/index": "What's New",
+    "whats-new/2026-w14": "What's New",
+    "whats-new/2026-w13": "What's New",
     "legal-and-compliance": "Resources"
   },
   "navOrder": [
@@ -155,6 +158,9 @@
     "hooks",
     "plugins-reference",
     "channels-reference",
+    "whats-new/index",
+    "whats-new/2026-w14",
+    "whats-new/2026-w13",
     "legal-and-compliance"
   ]
 }
