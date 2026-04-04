@@ -671,7 +671,7 @@
         "interactive-mode.md",
         "quickstart.md"
       ],
-      "mentions": 31
+      "mentions": 32
     },
     "color": {
       "documented": true,
@@ -746,7 +746,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 58
+      "mentions": 59
     },
     "context": {
       "documented": true,
@@ -780,7 +780,7 @@
         "costs.md",
         "statusline.md"
       ],
-      "mentions": 11
+      "mentions": 12
     },
     "debug": {
       "documented": true,
@@ -1319,7 +1319,7 @@
         "changelog.md",
         "commands.md"
       ],
-      "mentions": 2
+      "mentions": 3
     },
     "reload-plugins": {
       "documented": true,
