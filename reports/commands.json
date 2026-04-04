@@ -735,6 +735,7 @@
         "github-actions.md",
         "interactive-mode.md",
         "jetbrains.md",
+        "keybindings.md",
         "mcp.md",
         "monitoring-usage.md",
         "output-styles.md",
@@ -746,7 +747,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 59
+      "mentions": 61
     },
     "context": {
       "documented": true,
@@ -1250,7 +1251,7 @@
         "tools-reference.md",
         "troubleshooting.md"
       ],
-      "mentions": 93
+      "mentions": 95
     },
     "plan": {
       "documented": true,
@@ -1343,6 +1344,7 @@
         "commands.md",
         "data-usage.md",
         "desktop.md",
+        "env-vars.md",
         "how-claude-code-works.md",
         "overview.md",
         "permission-modes.md",
@@ -1353,7 +1355,7 @@
         "ultraplan.md",
         "vs-code.md"
       ],
-      "mentions": 28
+      "mentions": 30
     },
     "remote-env": {
       "documented": true,
@@ -1448,9 +1450,12 @@
       "mentions": 8
     },
     "setup-bedrock": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "amazon-bedrock.md",
+        "commands.md"
+      ],
+      "mentions": 2
     },
     "simplify": {
       "documented": true,
@@ -1494,11 +1499,12 @@
         "plugins-reference.md",
         "plugins.md",
         "scheduled-tasks.md",
+        "settings.md",
         "skills.md",
         "sub-agents.md",
         "tools-reference.md"
       ],
-      "mentions": 115
+      "mentions": 116
     },
     "stats": {
       "documented": true,
