@@ -70,14 +70,16 @@
     "schedule",
     "security-review",
     "session",
+    "setup-bedrock",
     "simplify",
     "skills",
     "stats",
     "status",
     "statusline",
     "stickers",
-    "tag",
+    "stop-hook",
     "tasks",
+    "teleport",
     "terminal-setup",
     "theme",
     "think-back",
@@ -88,13 +90,12 @@
     "upgrade",
     "usage",
     "version",
-    "vim",
     "voice",
     "web-setup"
   ],
   "descriptions": {
     "add-dir": "Add a new working directory",
-    "advisor": "Configure the advisor model",
+    "advisor": "Configure the Advisor Tool to consult a stronger model for guidance at key moments during a task",
     "agents": "Manage agent configurations",
     "autocompact": "Configure the auto-compact window size",
     "batch": "Research and plan a large-scale change, then execute it in parallel across 5–30 isolated worktree agents that each open a PR.",
@@ -147,12 +148,14 @@
     "review": "Review a pull request",
     "schedule": "Create, update, list, or run scheduled remote agents (triggers) that execute on a cron schedule.",
     "security-review": "Complete a security review of the pending changes on the current branch",
+    "setup-bedrock": "Reconfigure AWS Bedrock authentication, region, or model pins",
     "simplify": "Review changed code for reuse, quality, and efficiency, then fix any issues found.",
     "skills": "List available skills",
     "stats": "Show your Claude Code usage statistics and activity",
     "status": "Show Claude Code status including version, model, account, API connectivity, and tool statuses",
     "stickers": "Order Claude Code stickers",
-    "tag": "Toggle a searchable tag on the current session",
+    "stop-hook": "Set a session-only Stop hook with a quick prompt",
+    "teleport": "Resume a Claude Code session from claude.ai",
     "theme": "Change the theme",
     "think-back": "Your 2025 Claude Code Year in Review",
     "thinkback-play": "Play the thinkback animation",
@@ -160,7 +163,6 @@
     "upgrade": "Upgrade to Max for higher rate limits and more Opus",
     "usage": "Show plan usage limits",
     "version": "Print the version this session is running (not what autoupdate downloaded)",
-    "vim": "Toggle between Vim and Normal editing modes",
     "voice": "Toggle voice mode",
     "web-setup": "Setup Claude Code on the web (requires connecting your GitHub account)"
   },
@@ -235,14 +237,16 @@
     "schedule": "available",
     "security-review": "available",
     "session": "available",
+    "setup-bedrock": "available",
     "simplify": "available",
     "skills": "available",
     "stats": "available",
     "status": "available",
     "statusline": "available",
     "stickers": "available",
-    "tag": "disabled",
+    "stop-hook": "disabled",
     "tasks": "available",
+    "teleport": "available",
     "terminal-setup": "available",
     "theme": "available",
     "think-back": "available",
@@ -253,7 +257,6 @@
     "upgrade": "available",
     "usage": "available",
     "version": "disabled",
-    "vim": "available",
     "voice": "available",
     "web-setup": "available"
   },
@@ -521,6 +524,13 @@
     "2.1.91": {
       "added": [
         "ultraplan"
+      ]
+    },
+    "2.1.92": {
+      "added": [
+        "setup-bedrock",
+        "stop-hook",
+        "teleport"
       ]
     }
   },
@@ -1436,6 +1446,11 @@
       ],
       "mentions": 8
     },
+    "setup-bedrock": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
     "simplify": {
       "documented": true,
       "doc_files": [
@@ -1534,15 +1549,10 @@
       ],
       "mentions": 1
     },
-    "tag": {
-      "documented": true,
-      "doc_files": [
-        "changelog.md",
-        "github-actions.md",
-        "plugin-marketplaces.md",
-        "settings.md"
-      ],
-      "mentions": 8
+    "stop-hook": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "tasks": {
       "documented": true,
@@ -1556,6 +1566,15 @@
         "ultraplan.md"
       ],
       "mentions": 10
+    },
+    "teleport": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "claude-code-on-the-web.md",
+        "github-enterprise-server.md"
+      ],
+      "mentions": 4
     },
     "terminal-setup": {
       "documented": true,
@@ -1638,22 +1657,6 @@
       ],
       "mentions": 24
     },
-    "vim": {
-      "documented": true,
-      "doc_files": [
-        "changelog.md",
-        "claude-directory.md",
-        "commands.md",
-        "env-vars.md",
-        "fullscreen.md",
-        "interactive-mode.md",
-        "keybindings.md",
-        "settings.md",
-        "statusline.md",
-        "terminal-config.md"
-      ],
-      "mentions": 13
-    },
     "voice": {
       "documented": true,
       "doc_files": [
@@ -1672,5 +1675,5 @@
       "mentions": 2
     }
   },
-  "docs_checked_at": "2026-04-03"
+  "docs_checked_at": "2026-04-04"
 }
