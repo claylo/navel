@@ -1188,6 +1188,7 @@
     "model": {
       "documented": true,
       "doc_files": [
+        "agent-teams.md",
         "amazon-bedrock.md",
         "changelog.md",
         "commands.md",
@@ -1208,7 +1209,7 @@
         "sub-agents.md",
         "vs-code.md"
       ],
-      "mentions": 84
+      "mentions": 86
     },
     "passes": {
       "documented": true,
@@ -1465,6 +1466,7 @@
     "skills": {
       "documented": true,
       "doc_files": [
+        "agent-teams.md",
         "best-practices.md",
         "changelog.md",
         "claude-directory.md",
@@ -1496,7 +1498,7 @@
         "sub-agents.md",
         "tools-reference.md"
       ],
-      "mentions": 114
+      "mentions": 115
     },
     "stats": {
       "documented": true,
