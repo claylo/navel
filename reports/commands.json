@@ -4,6 +4,7 @@
     "advisor",
     "agents",
     "autocompact",
+    "autofix-pr",
     "batch",
     "branch",
     "bridge-kick",
@@ -79,6 +80,7 @@
     "stickers",
     "stop-hook",
     "tasks",
+    "team-onboarding",
     "teleport",
     "terminal-setup",
     "theme",
@@ -98,6 +100,7 @@
     "advisor": "Configure the Advisor Tool to consult a stronger model for guidance at key moments during a task",
     "agents": "Manage agent configurations",
     "autocompact": "Configure the auto-compact window size",
+    "autofix-pr": "Spawn a remote Claude Code session that monitors and autofixes the current PR",
     "batch": "Research and plan a large-scale change, then execute it in parallel across 5–30 isolated worktree agents that each open a PR.",
     "bridge-kick": "Inject bridge failure states for manual recovery testing",
     "brief": "Toggle brief-only mode",
@@ -134,7 +137,6 @@
     "install-slack-app": "Install the Claude Slack app",
     "keybindings": "Open or create your keybindings configuration file",
     "logout": "Sign out from your Anthropic account",
-    "loop": "Run a prompt or slash command on a recurring interval (e.g. /loop 5m /foo, defaults to 10m)",
     "mcp": "Manage MCP servers",
     "memory": "Edit Claude memory files",
     "plan": "Enable plan mode or view the current session plan",
@@ -155,6 +157,7 @@
     "status": "Show Claude Code status including version, model, account, API connectivity, and tool statuses",
     "stickers": "Order Claude Code stickers",
     "stop-hook": "Set a session-only Stop hook with a quick prompt",
+    "team-onboarding": "Help teammates ramp on Claude Code with a guide from your usage",
     "teleport": "Resume a Claude Code session from claude.ai",
     "theme": "Change the theme",
     "think-back": "Your 2025 Claude Code Year in Review",
@@ -171,6 +174,7 @@
     "advisor": "available",
     "agents": "available",
     "autocompact": "available",
+    "autofix-pr": "available",
     "batch": "available",
     "branch": "available",
     "bridge-kick": "disabled",
@@ -246,6 +250,7 @@
     "stickers": "available",
     "stop-hook": "disabled",
     "tasks": "available",
+    "team-onboarding": "available",
     "teleport": "available",
     "terminal-setup": "available",
     "theme": "available",
@@ -532,6 +537,12 @@
         "stop-hook",
         "teleport"
       ]
+    },
+    "2.1.94": {
+      "added": [
+        "autofix-pr",
+        "team-onboarding"
+      ]
     }
   },
   "commands_docs": {
@@ -572,6 +583,11 @@
       "mentions": 45
     },
     "autocompact": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "autofix-pr": {
       "documented": false,
       "doc_files": [],
       "mentions": 0
@@ -1575,6 +1591,11 @@
         "ultraplan.md"
       ],
       "mentions": 10
+    },
+    "team-onboarding": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "teleport": {
       "documented": true,
