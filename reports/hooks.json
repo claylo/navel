@@ -428,7 +428,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 28
+      "mentions": 29
     },
     "WorktreeRemove": {
       "documented": true,
@@ -442,5 +442,5 @@
       "mentions": 20
     }
   },
-  "docs_checked_at": "2026-04-04"
+  "docs_checked_at": "2026-04-07"
 }
