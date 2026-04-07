@@ -416,7 +416,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 24
+      "mentions": 25
     },
     "WorktreeCreate": {
       "documented": true,
