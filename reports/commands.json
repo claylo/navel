@@ -870,7 +870,7 @@
         "skills.md",
         "sub-agents.md"
       ],
-      "mentions": 19
+      "mentions": 20
     },
     "exit": {
       "documented": true,
@@ -1521,7 +1521,7 @@
         "sub-agents.md",
         "tools-reference.md"
       ],
-      "mentions": 116
+      "mentions": 117
     },
     "stats": {
       "documented": true,
