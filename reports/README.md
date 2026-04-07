@@ -38,7 +38,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (92)</summary>
+<summary>Commands (94)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -46,6 +46,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/advisor** | Configure the Advisor Tool to consult a stronger model fo... | 2.1.83 | available | **no** |
 | /agents | Manage agent configurations | 2.0.0 | available | yes |
 | **/autocompact** | Configure the auto-compact window size | 2.1.89 | available | **no** |
+| **/autofix-pr** | Spawn a remote Claude Code session that monitors and auto... | 2.1.94 | available | **no** |
 | /batch | Research and plan a large-scale change, then execute it i... | 2.1.63 | available | yes |
 | /branch | — | 2.1.77 | available | yes |
 | **/bridge-kick** | Inject bridge failure states for manual recovery testing | 2.1.76 | *disabled* | **no** |
@@ -89,7 +90,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/keybindings-help** | — | 2.1.20 | available | **no** |
 | /login | — | 2.0.0 | available | yes |
 | /logout | Sign out from your Anthropic account | 2.0.0 | available | yes |
-| /loop | Run a prompt or slash command on a recurring interval (e.... | 2.1.71 | available | yes |
+| /loop | — | 2.1.71 | available | yes |
 | /mcp | Manage MCP servers | 2.0.0 | available | yes |
 | /memory | Edit Claude memory files | 2.0.0 | available | yes |
 | /mobile | — | 2.0.72 | available | yes |
@@ -121,6 +122,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /stickers | Order Claude Code stickers | 2.0.32 | available | yes |
 | **/stop-hook** | Set a session-only Stop hook with a quick prompt | 2.1.92 | *disabled* | **no** |
 | /tasks | — | 2.0.45 | available | yes |
+| **/team-onboarding** | Help teammates ramp on Claude Code with a guide from your... | 2.1.94 | available | **no** |
 | /teleport | Resume a Claude Code session from claude.ai | 2.1.92 | available | yes |
 | /terminal-setup | — | 2.0.0 | available | yes |
 | /theme | Change the theme | 2.0.73 | available | yes |
@@ -598,6 +600,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.94 | — | +autofix-pr, +team-onboarding | — |
 | 2.1.92 | — | +setup-bedrock, +stop-hook, +teleport | — |
 | 2.1.91 | — | +ultraplan | — |
 | 2.1.90 | — | +powerup, +toggle-memory | — |
