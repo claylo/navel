@@ -1016,7 +1016,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 244
+      "mentions": 246
     },
     "ide": {
       "documented": true,
@@ -1311,7 +1311,7 @@
         "tools-reference.md",
         "troubleshooting.md"
       ],
-      "mentions": 106
+      "mentions": 110
     },
     "plan": {
       "documented": true,
