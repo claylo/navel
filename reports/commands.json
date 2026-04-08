@@ -793,23 +793,27 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "claude-directory.md",
         "commands.md",
         "costs.md",
         "statusline.md"
       ],
-      "mentions": 12
+      "mentions": 13
     },
     "debug": {
       "documented": true,
       "doc_files": [
         "changelog.md",
         "channels-reference.md",
+        "claude-directory.md",
         "commands.md",
         "env-vars.md",
         "features-overview.md",
+        "hooks-guide.md",
+        "hooks.md",
         "skills.md"
       ],
-      "mentions": 8
+      "mentions": 11
     },
     "desktop": {
       "documented": true,
@@ -988,7 +992,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 229
+      "mentions": 231
     },
     "ide": {
       "documented": true,
@@ -1089,7 +1093,7 @@
         "troubleshooting.md",
         "voice-dictation.md"
       ],
-      "mentions": 21
+      "mentions": 22
     },
     "logout": {
       "documented": true,
@@ -1268,7 +1272,7 @@
         "tools-reference.md",
         "troubleshooting.md"
       ],
-      "mentions": 95
+      "mentions": 96
     },
     "plan": {
       "documented": true,
@@ -1392,10 +1396,11 @@
         "commands.md",
         "common-workflows.md",
         "costs.md",
+        "hooks.md",
         "remote-control.md",
         "statusline.md"
       ],
-      "mentions": 19
+      "mentions": 20
     },
     "resume": {
       "documented": true,
@@ -1521,7 +1526,7 @@
         "sub-agents.md",
         "tools-reference.md"
       ],
-      "mentions": 117
+      "mentions": 118
     },
     "stats": {
       "documented": true,
