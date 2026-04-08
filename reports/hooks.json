@@ -249,9 +249,10 @@
         "plugins.md",
         "server-managed-settings.md",
         "sub-agents.md",
+        "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 72
+      "mentions": 75
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -283,9 +284,10 @@
         "permissions.md",
         "plugins-reference.md",
         "sub-agents.md",
+        "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 92
+      "mentions": 100
     },
     "SessionEnd": {
       "documented": true,
@@ -309,7 +311,7 @@
         "plugins-reference.md",
         "tools-reference.md"
       ],
-      "mentions": 42
+      "mentions": 41
     },
     "Setup": {
       "documented": true,
@@ -325,9 +327,10 @@
         "microsoft-foundry.md",
         "platforms.md",
         "remote-control.md",
+        "web-quickstart.md",
         "web-scheduled-tasks.md"
       ],
-      "mentions": 23
+      "mentions": 27
     },
     "Stop": {
       "documented": true,
@@ -338,10 +341,11 @@
         "hooks.md",
         "plugins-reference.md",
         "sub-agents.md",
+        "subagents.md",
         "tools-reference.md",
         "ultraplan.md"
       ],
-      "mentions": 86
+      "mentions": 90
     },
     "StopFailure": {
       "documented": true,
@@ -360,9 +364,10 @@
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
-        "sub-agents.md"
+        "sub-agents.md",
+        "subagents.md"
       ],
-      "mentions": 20
+      "mentions": 22
     },
     "SubagentStop": {
       "documented": true,
@@ -371,9 +376,10 @@
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
-        "sub-agents.md"
+        "sub-agents.md",
+        "subagents.md"
       ],
-      "mentions": 25
+      "mentions": 29
     },
     "TaskCompleted": {
       "documented": true,
@@ -442,5 +448,5 @@
       "mentions": 20
     }
   },
-  "docs_checked_at": "2026-04-07"
+  "docs_checked_at": "2026-04-08"
 }
