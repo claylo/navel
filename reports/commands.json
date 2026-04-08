@@ -855,7 +855,7 @@
         "web-quickstart.md",
         "zero-data-retention.md"
       ],
-      "mentions": 56
+      "mentions": 57
     },
     "diff": {
       "documented": true,
@@ -1417,7 +1417,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 34
+      "mentions": 35
     },
     "remote-env": {
       "documented": true,
