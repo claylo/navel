@@ -52,9 +52,8 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/bridge-kick** | Inject bridge failure states for manual recovery testing | 2.1.76 | *disabled* | **no** |
 | **/brief** | Toggle brief-only mode | 2.1.72 | available | **no** |
 | /btw | Ask a quick side question without interrupting the main c... | 2.1.6 | available | yes |
-| /buddy | Hatch a coding companion · pet, off | 2.1.89 | available | yes |
 | /chrome | Claude in Chrome (Beta) settings | 2.0.71 | available | yes |
-| /claude-api | Build apps with the Claude API or Anthropic SDK.\nTRIGGER... | 2.1.69 | available | yes |
+| /claude-api | Build Claude API / Anthropic SDK apps.\nTRIGGER when: cod... | 2.1.69 | available | yes |
 | /claude-in-chrome | Automates your Chrome browser to interact with web pages ... | 2.1.7 | available | yes |
 | /clear | Clear conversation history and free up context | 2.0.0 | available | yes |
 | /color | Set the prompt bar color for this session | 2.1.7 | available | yes |
@@ -69,6 +68,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /desktop | — | 2.1.42 | available | yes |
 | /diff | View uncommitted changes and per-turn diffs | 2.1.50 | available | yes |
 | /doctor | Diagnose and verify your Claude Code installation and set... | 2.0.0 | available | yes |
+| **/dream** | — | 2.1.97 | available | **no** |
 | /effort | Set effort level for model usage | 2.1.76 | available | yes |
 | /exit | — | 2.0.0 | available | yes |
 | /export | Export the current conversation to a file or clipboard | 2.0.0 | available | yes |
@@ -600,6 +600,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.97 | — | +dream | — |
 | 2.1.94 | — | +autofix-pr, +team-onboarding | — |
 | 2.1.92 | — | +setup-bedrock, +stop-hook, +teleport | — |
 | 2.1.91 | — | +ultraplan | — |
