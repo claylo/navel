@@ -10,7 +10,6 @@
     "bridge-kick",
     "brief",
     "btw",
-    "buddy",
     "chrome",
     "claude-api",
     "claude-in-chrome",
@@ -27,6 +26,7 @@
     "desktop",
     "diff",
     "doctor",
+    "dream",
     "effort",
     "exit",
     "export",
@@ -105,9 +105,8 @@
     "bridge-kick": "Inject bridge failure states for manual recovery testing",
     "brief": "Toggle brief-only mode",
     "btw": "Ask a quick side question without interrupting the main conversation",
-    "buddy": "Hatch a coding companion · pet, off",
     "chrome": "Claude in Chrome (Beta) settings",
-    "claude-api": "Build apps with the Claude API or Anthropic SDK.\\nTRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`/`claude_agent_sdk`, or user asks to use Claude API, Anthropic SDKs, or Agent SDK.\\nDO NOT TRIGGER when: code imports `openai`/other AI SDK, general programming, or ML/data-science tasks.",
+    "claude-api": "Build Claude API / Anthropic SDK apps.\\nTRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks to use the Claude API, Anthropic SDKs, or Managed Agents (`/v1/agents`, `/v1/sessions`); or asks to add a Claude feature (prompt caching, adaptive thinking, compaction, code_execution, batch, files API, citations, memory tool) or a Claude model (Opus/Sonnet/Haiku) to a Claude file.\\nDO NOT TRIGGER when: file imports `openai`/non-Anthropic SDK, filename signals another provider (`agent-openai.py`, `*-generic.py`), code is provider-neutral, or task is general programming/ML.",
     "claude-in-chrome": "Automates your Chrome browser to interact with web pages - clicking elements, filling forms, capturing screenshots, reading console logs, and navigating sites. Opens pages in new tabs within your existing Chrome session. Requires site-level permissions before executing (configured in the extension).",
     "clear": "Clear conversation history and free up context",
     "color": "Set the prompt bar color for this session",
@@ -180,7 +179,6 @@
     "bridge-kick": "disabled",
     "brief": "available",
     "btw": "available",
-    "buddy": "available",
     "chrome": "available",
     "claude-api": "available",
     "claude-in-chrome": "available",
@@ -197,6 +195,7 @@
     "desktop": "available",
     "diff": "available",
     "doctor": "available",
+    "dream": "available",
     "effort": "available",
     "exit": "available",
     "export": "available",
@@ -543,6 +542,11 @@
         "autofix-pr",
         "team-onboarding"
       ]
+    },
+    "2.1.97": {
+      "added": [
+        "dream"
+      ]
     }
   },
   "commands_docs": {
@@ -638,13 +642,6 @@
         "subagents.md"
       ],
       "mentions": 10
-    },
-    "buddy": {
-      "documented": true,
-      "doc_files": [
-        "changelog.md"
-      ],
-      "mentions": 1
     },
     "chrome": {
       "documented": true,
@@ -877,6 +874,11 @@
         "troubleshooting.md"
       ],
       "mentions": 14
+    },
+    "dream": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "effort": {
       "documented": true,
