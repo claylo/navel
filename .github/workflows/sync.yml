@@ -15,12 +15,26 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v6
 
-      - name: Install dependencies
+      - name: Install system dependencies
         run: sudo apt-get update -qq && sudo apt-get install -y -qq jq ripgrep
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Install typst
+        run: |
+          curl -fsSL https://typst.community/typst-install/install.sh | bash
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Restore npm scan cache
         uses: actions/cache@v5
@@ -55,11 +69,13 @@ jobs:
           IA_SECRET_KEY: ${{ secrets.IA_SECRET_KEY }}
 
       - name: Commit and push if changed
+        id: commit
         run: |
           # Only proceed if data files changed — ignore README badge-only updates
           data_files="npm/versions.json reports/commands.json reports/hooks.json reports/env-vars.json reports/docs-changes.json reports/nav.json"
           if git diff --quiet -- $data_files; then
             echo "No data changes detected"
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
@@ -73,3 +89,11 @@ jobs:
           libexec/build-sync-commit-msg
 
           git push origin main
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Verify docset and PDF builds
+        if: steps.commit.outputs.pushed == 'true'
+        run: bin/navel monitor
+        env:
+          PUSHOVER_USER_KEY: ${{ secrets.PUSHOVER_USER_KEY }}
+          PUSHOVER_APP_TOKEN: ${{ secrets.PUSHOVER_APP_TOKEN }}
