@@ -1227,7 +1227,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 91
+      "mentions": 94
     },
     "passes": {
       "documented": true,
@@ -1535,6 +1535,7 @@
     "status": {
       "documented": true,
       "doc_files": [
+        "amazon-bedrock.md",
         "authentication.md",
         "changelog.md",
         "commands.md",
@@ -1547,7 +1548,7 @@
         "third-party-integrations.md",
         "troubleshooting.md"
       ],
-      "mentions": 12
+      "mentions": 15
     },
     "statusline": {
       "documented": true,
@@ -1705,5 +1706,5 @@
       "mentions": 2
     }
   },
-  "docs_checked_at": "2026-04-07"
+  "docs_checked_at": "2026-04-08"
 }
