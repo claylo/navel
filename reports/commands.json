@@ -685,9 +685,10 @@
         "hooks-guide.md",
         "hooks.md",
         "interactive-mode.md",
-        "quickstart.md"
+        "quickstart.md",
+        "troubleshooting.md"
       ],
-      "mentions": 32
+      "mentions": 33
     },
     "color": {
       "documented": true,
@@ -733,7 +734,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 41
+      "mentions": 42
     },
     "config": {
       "documented": true,
@@ -798,7 +799,7 @@
         "costs.md",
         "statusline.md"
       ],
-      "mentions": 13
+      "mentions": 14
     },
     "debug": {
       "documented": true,
@@ -813,7 +814,7 @@
         "hooks.md",
         "skills.md"
       ],
-      "mentions": 11
+      "mentions": 12
     },
     "desktop": {
       "documented": true,
@@ -1165,7 +1166,7 @@
         "vs-code.md",
         "web-scheduled-tasks.md"
       ],
-      "mentions": 127
+      "mentions": 128
     },
     "memory": {
       "documented": true,
