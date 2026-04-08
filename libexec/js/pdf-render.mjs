@@ -538,7 +538,13 @@ function serializeNode(node) {
 
     case "codeBlock": {
       const lang = node.language || "";
-      return `\`\`\`${lang}\n${node.code}\n\`\`\``;
+      // Use enough backticks to avoid ambiguity with inner fences.
+      // Find the longest consecutive backtick run in the code content
+      // and use one more than that (minimum 3).
+      const maxTicks = (node.code.match(/`+/g) || [])
+        .reduce((max, m) => Math.max(max, m.length), 0);
+      const fence = "`".repeat(Math.max(3, maxTicks + 1));
+      return `${fence}${lang}\n${node.code}\n${fence}`;
     }
 
     case "codeGroup": {
@@ -598,15 +604,39 @@ function flattenComponents(md) {
   // Serialize AST → clean markdown
   out = serializeNodes(ast);
 
-  // Protect angle brackets inside inline code spans from the HTML
-  // tag stripper — `<arg>`, `<model>` etc. are placeholders, not tags.
-  out = out.replace(/`([^`\n]*)</g, (match) => match.replace(/</g, "\x00LT\x00").replace(/>/g, "\x00GT\x00"));
-
-  // Clean up any remaining HTML tags (e.g. <br/>, stray tags)
-  out = out.replace(/<\/?[a-zA-Z][^>]*>/g, "");
-
-  // Restore protected angle brackets
-  out = out.replace(/\x00LT\x00/g, "<").replace(/\x00GT\x00/g, ">");
+  // Clean up remaining HTML tags (e.g. <br/>, stray tags) but skip
+  // content inside code blocks and inline code spans where angle
+  // brackets are meaningful (`<arg>`, HTML in Python examples, etc.).
+  {
+    const lines = out.split("\n");
+    let inFence = false;
+    let fenceLen = 0;
+    out = lines.map(line => {
+      const trimmed = line.trim();
+      const fenceMatch = trimmed.match(/^(`{3,})/);
+      if (fenceMatch) {
+        const ticks = fenceMatch[1].length;
+        if (!inFence) {
+          inFence = true;
+          fenceLen = ticks;
+          return line;
+        } else if (ticks >= fenceLen && trimmed.replace(/`/g, "").trim() === "") {
+          inFence = false;
+          fenceLen = 0;
+          return line;
+        }
+      }
+      if (inFence) return line; // preserve HTML inside code blocks
+      // Protect inline code spans: `<arg>`, `<model>` etc.
+      let cleaned = line.replace(/`([^`\n]*)`/g, (m) =>
+        m.replace(/</g, "\x00LT\x00").replace(/>/g, "\x00GT\x00"));
+      // Strip remaining HTML tags in prose
+      cleaned = cleaned.replace(/<\/?[a-zA-Z][^>]*>/g, "");
+      // Restore protected angle brackets
+      cleaned = cleaned.replace(/\x00LT\x00/g, "<").replace(/\x00GT\x00/g, ">");
+      return cleaned;
+    }).join("\n");
+  }
 
   // Clean up excessive blank lines
   out = out.replace(/\n{4,}/g, "\n\n\n");
@@ -626,13 +656,29 @@ function unwrapLines(md) {
   const lines = md.split("\n");
   const result = [];
   let inFence = false;
+  let fenceLen = 0;
 
   for (const line of lines) {
     const trimmed = line.trim();
 
-    // Track code fences
-    if (trimmed.startsWith("```")) {
-      inFence = !inFence;
+    // Track code fences — match opening/closing by backtick count.
+    // A closing fence must have at least as many backticks as the
+    // opening fence and contain nothing else (CommonMark §4.5).
+    const fenceMatch = trimmed.match(/^(`{3,})/);
+    if (fenceMatch) {
+      const ticks = fenceMatch[1].length;
+      if (!inFence) {
+        inFence = true;
+        fenceLen = ticks;
+        result.push(line);
+        continue;
+      } else if (ticks >= fenceLen && trimmed.replace(/`/g, "").trim() === "") {
+        inFence = false;
+        fenceLen = 0;
+        result.push(line);
+        continue;
+      }
+      // Inner fence (fewer backticks or has trailing content) — pass through
       result.push(line);
       continue;
     }
@@ -770,6 +816,28 @@ for (const file of files) {
     // Extract title before conversion
     const title = extractTitle(md);
 
+    // Protect complex code spans from markdown2typst's broken backtick
+    // escaping. Double-backtick spans (`` content ``) containing inner
+    // backticks produce \` escapes that Typst can't parse. Replace with
+    // indexed placeholders that survive conversion as simple code spans,
+    // then restore with proper Typst multi-backtick raw text.
+    const rawSpanStore = [];
+    // Double-backtick code spans with inner backticks: `` !`cmd` ``
+    // CRITICAL: [^`\n] in content and [ ] (space only) for padding
+    // prevent matching across newlines or code fence boundaries.
+    md = md.replace(/`` *((?:[^`\n]|`(?!`))+?) *``/g, (match, content) => {
+      if (!content.includes("`")) return match;
+      const idx = rawSpanStore.length;
+      rawSpanStore.push(content.trim());
+      return `\`NAVEL_RAW_${idx}\``;
+    });
+    // Single-backtick code spans wrapping triple+ backticks: ` ```! `
+    md = md.replace(/` (```[^`\n]*?) `/g, (match, content) => {
+      const idx = rawSpanStore.length;
+      rawSpanStore.push(content.trim());
+      return `\`NAVEL_RAW_${idx}\``;
+    });
+
     // Convert markdown → Typst via markdown2typst
     let typstContent;
     try {
@@ -778,6 +846,20 @@ for (const file of files) {
       // If markdown2typst fails, fall back to raw content wrapped in raw block
       console.error(`  ! ${slug}: markdown2typst failed (${e.message}), using raw`);
       typstContent = `= ${title}\n\n${md}`;
+    }
+
+    // Restore protected raw text spans with proper Typst delimiters
+    if (rawSpanStore.length > 0) {
+      typstContent = typstContent.replace(/`NAVEL_RAW_(\d+)`/g, (_, idxStr) => {
+        const content = rawSpanStore[parseInt(idxStr)];
+        const maxTicks = (content.match(/`+/g) || [])
+          .reduce((max, m) => Math.max(max, m.length), 0);
+        const delimLen = Math.max(2, maxTicks + 1);
+        const delim = "`".repeat(delimLen);
+        // Typst needs space padding when content starts/ends with backtick
+        const pad = content.startsWith("`") || content.endsWith("`") ? " " : "";
+        return `${delim}${pad}${content}${pad}${delim}`;
+      });
     }
 
     // Rewrite internal /en/slug links to Typst cross-references
@@ -800,13 +882,47 @@ for (const file of files) {
     // empty table cells as [**] which is invalid Typst.
     typstContent = typstContent.replace(/\[\*\*\]/g, "[]");
 
-    // Fix inline raw text containing literal backticks — markdown2typst
-    // emits `Ctrl+\`` which Typst misparses (raw text doesn't process
-    // escapes). Convert to double-backtick delimiters: `Ctrl+\`` → ``Ctrl+` ``
-    // Only match when \` is immediately followed by ` (the closing delimiter).
-    typstContent = typstContent.replace(/`([^`\n]+?)\\``/g, (_, inner) => {
-      return "``" + inner + "` ``";
-    });
+    // Fix merged consecutive code blocks — markdown2typst sometimes
+    // joins closing/opening fences across block boundaries.
+    // Pattern 1: `` ` ```bash  (fence split into backtick fragments)
+    typstContent = typstContent.replace(/^`` ` ```(\w*)$/gm, "```\n\n```$1");
+    // Pattern 2: ```content between blocks```lang  (fences merged with
+    // intervening paragraph text)
+    typstContent = typstContent.replace(/^```(.+?)```(\w+)$/gm, "```\n\n$1\n\n```$2");
+
+    // Fix escaped backticks in raw text — markdown2typst uses \` for
+    // literal backticks inside raw text, but Typst treats raw text as
+    // literal (no escape processing). We scan each line for raw text
+    // spans containing \` and rebuild them with multi-backtick delimiters.
+    //
+    // Examples:
+    //   `Ctrl+\``         → ``Ctrl+` ``
+    //   `!\``command\``   → `` !`command` ``
+    //   `\`\`\`!`         → ```` ```! ````
+    if (typstContent.includes("\\`")) {
+      typstContent = typstContent.split("\n").map(line => {
+        if (!line.includes("\\`")) return line;
+        // Replace raw spans containing \` — match opening `, content
+        // with at least one \`, and closing `. Iterate since fixing one
+        // span may reveal another (adjacent spans can merge).
+        let prev;
+        do {
+          prev = line;
+          line = line.replace(/`([^`\n]*?\\`[^`\n]*?)`/g, (_, inner) => {
+            const unescaped = inner.replace(/\\`/g, "`");
+            const maxTicks = (unescaped.match(/`+/g) || [])
+              .reduce((max, m) => Math.max(max, m.length), 0);
+            const delimLen = Math.max(2, maxTicks + 1);
+            const delim = "`".repeat(delimLen);
+            // Typst multi-backtick raw text needs space padding when
+            // content starts or ends with a backtick
+            const pad = unescaped.startsWith("`") || unescaped.endsWith("`") ? " " : "";
+            return `${delim}${pad}${unescaped}${pad}${delim}`;
+          });
+        } while (line !== prev);
+        return line;
+      }).join("\n");
+    }
 
     // Convert callout blockquotes to gentle-clues admonitions.
     // markdown2typst renders our callouts as:
