@@ -46,7 +46,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/advisor** | Configure the Advisor Tool to consult a stronger model fo... | 2.1.83 | available | **no** |
 | /agents | Manage agent configurations | 2.0.0 | available | yes |
 | **/autocompact** | Configure the auto-compact window size | 2.1.89 | available | **no** |
-| **/autofix-pr** | Spawn a remote Claude Code session that monitors and auto... | 2.1.94 | available | **no** |
+| /autofix-pr | Spawn a remote Claude Code session that monitors and auto... | 2.1.94 | available | yes |
 | /batch | Research and plan a large-scale change, then execute it i... | 2.1.63 | available | yes |
 | /branch | — | 2.1.77 | available | yes |
 | **/bridge-kick** | Inject bridge failure states for manual recovery testing | 2.1.76 | *disabled* | **no** |
@@ -799,4 +799,4 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 ---
-*Last updated: 2026-04-08*
+*Last updated: 2026-04-09*
