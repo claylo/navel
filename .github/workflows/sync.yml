@@ -93,7 +93,7 @@ jobs:
 
       - name: Verify docset and PDF builds
         if: steps.commit.outputs.pushed == 'true'
-        run: bin/navel monitor
+        run: bin/navel monitor dash pdf
         env:
           PUSHOVER_USER_KEY: ${{ secrets.PUSHOVER_USER_KEY }}
           PUSHOVER_APP_TOKEN: ${{ secrets.PUSHOVER_APP_TOKEN }}
