@@ -72,6 +72,7 @@
     "security-review",
     "session",
     "setup-bedrock",
+    "setup-vertex",
     "simplify",
     "skills",
     "stats",
@@ -150,6 +151,7 @@
     "schedule": "Create, update, list, or run scheduled remote agents (triggers) that execute on a cron schedule.",
     "security-review": "Complete a security review of the pending changes on the current branch",
     "setup-bedrock": "Reconfigure AWS Bedrock authentication, region, or model pins",
+    "setup-vertex": "Reconfigure Google Vertex AI authentication, project, region, or model pins",
     "simplify": "Review changed code for reuse, quality, and efficiency, then fix any issues found.",
     "skills": "List available skills",
     "stats": "Show your Claude Code usage statistics and activity",
@@ -241,6 +243,7 @@
     "security-review": "available",
     "session": "available",
     "setup-bedrock": "available",
+    "setup-vertex": "available",
     "simplify": "available",
     "skills": "available",
     "stats": "available",
@@ -546,6 +549,11 @@
     "2.1.97": {
       "added": [
         "dream"
+      ]
+    },
+    "2.1.98": {
+      "added": [
+        "setup-vertex"
       ]
     }
   },
@@ -1522,6 +1530,11 @@
         "commands.md"
       ],
       "mentions": 2
+    },
+    "setup-vertex": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "simplify": {
       "documented": true,
