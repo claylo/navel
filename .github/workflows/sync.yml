@@ -18,6 +18,7 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v6
+      - uses: typst-community/setup-typst@v5
 
       - name: Install system dependencies
         run: sudo apt-get update -qq && sudo apt-get install -y -qq jq ripgrep
@@ -30,11 +31,6 @@ jobs:
 
       - name: Install npm dependencies
         run: npm ci
-
-      - name: Install typst
-        run: |
-          curl -fsSL https://typst.community/typst-install/install.sh | bash
-          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Restore npm scan cache
         uses: actions/cache@v5
