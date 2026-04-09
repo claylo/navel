@@ -38,7 +38,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (94)</summary>
+<summary>Commands (95)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -114,6 +114,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /security-review | Complete a security review of the pending changes on the ... | 2.0.0 | available | yes |
 | /session | — | 2.1.15 | available | yes |
 | /setup-bedrock | Reconfigure AWS Bedrock authentication, region, or model ... | 2.1.92 | available | yes |
+| **/setup-vertex** | Reconfigure Google Vertex AI authentication, project, reg... | 2.1.98 | available | **no** |
 | /simplify | Review changed code for reuse, quality, and efficiency, t... | 2.1.63 | available | yes |
 | /skills | List available skills | 2.0.73 | available | yes |
 | /stats | Show your Claude Code usage statistics and activity | 2.0.63 | available | yes |
@@ -600,6 +601,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.98 | — | +setup-vertex | — |
 | 2.1.97 | — | +dream | — |
 | 2.1.94 | — | +autofix-pr, +team-onboarding | — |
 | 2.1.92 | — | +setup-bedrock, +stop-hook, +teleport | — |
