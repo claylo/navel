@@ -764,7 +764,6 @@
         "github-actions.md",
         "interactive-mode.md",
         "jetbrains.md",
-        "keybindings.md",
         "mcp.md",
         "monitoring-usage.md",
         "output-styles.md",
@@ -776,7 +775,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 62
+      "mentions": 61
     },
     "context": {
       "documented": true,
@@ -788,13 +787,12 @@
         "context-window.md",
         "costs.md",
         "how-claude-code-works.md",
-        "keybindings.md",
         "skills.md",
         "slash-commands.md",
         "statusline.md",
         "voice-dictation.md"
       ],
-      "mentions": 31
+      "mentions": 28
     },
     "copy": {
       "documented": true,
@@ -873,10 +871,9 @@
         "commands.md",
         "env-vars.md",
         "how-claude-code-works.md",
-        "keybindings.md",
         "troubleshooting.md"
       ],
-      "mentions": 14
+      "mentions": 13
     },
     "dream": {
       "documented": false,
@@ -1094,10 +1091,9 @@
         "claude-directory.md",
         "commands.md",
         "interactive-mode.md",
-        "keybindings.md",
         "voice-dictation.md"
       ],
-      "mentions": 14
+      "mentions": 12
     },
     "keybindings-help": {
       "documented": false,
