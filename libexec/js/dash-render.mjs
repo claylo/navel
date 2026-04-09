@@ -25,6 +25,7 @@ import {
   injectDashAnchors,
   preprocessMdx,
   flattenContextWindow,
+  flattenClaudeDirectory,
   flattenUpdateComponents,
   truncateChangelog,
   parseNavTabs,
@@ -86,6 +87,8 @@ const componentMap = {
   Experiment: ({ children }) => children || null,
   // Interactive install configurator — the standard Tabs below cover the same content
   InstallConfigurator: () => null,
+  // ClaudeExplorer is flattened to static markdown in dash-transforms.mjs
+  // before MDX compilation — no componentMap stub needed.
 };
 
 // ── Tab switching script (inline, for static-rendered Mintlify Tabs) ───
@@ -385,6 +388,9 @@ for (const file of files) {
     // Flatten inline React components to static markdown before stripping
     if (slug === "context-window") {
       md = flattenContextWindow(md);
+    }
+    if (slug === "claude-directory") {
+      md = flattenClaudeDirectory(md);
     }
 
     // Preprocess: strip inline exports

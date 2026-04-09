@@ -343,3 +343,404 @@ export function semverSort(versions) {
     return 0;
   });
 }
+
+// ── Claude directory flattening ───────────────────────────────────────
+// Extracts the FILE_TREE data from the ClaudeExplorer React component and
+// replaces <ClaudeExplorer /> with a static markdown representation.
+// Must run BEFORE preprocessMdx (which strips the export block).
+
+export function flattenClaudeDirectory(source) {
+  if (!source.includes("FILE_TREE")) return source;
+
+  const commandsNote = cdParseCommandsNote(source);
+  const tree = cdParseTree(source);
+  if (!tree) return source;
+
+  const md = cdRenderMarkdown(tree, commandsNote);
+  return source.replace(/<ClaudeExplorer\s*\/?>/, md);
+}
+
+// ── Scanning utilities ────────────────────────────────────────────────
+
+// Find matching close brace/bracket, skipping template literals.
+// Only tracks backtick strings — single/double quotes are left untracked
+// because JSX text contains apostrophes that aren't string delimiters.
+// Braces inside quote-delimited strings in this data are always balanced,
+// so skipping them doesn't affect the count.
+function cdScanToClose(str, start, open, close) {
+  let depth = 0;
+  let inTmpl = false;
+  for (let i = start; i < str.length; i++) {
+    const ch = str[i];
+    if (inTmpl) {
+      if (ch === "\\") { i++; continue; }
+      if (ch === "`") inTmpl = false;
+      continue;
+    }
+    if (ch === "`") { inTmpl = true; continue; }
+    if (ch === open) depth++;
+    if (ch === close) { depth--; if (depth === 0) return i; }
+  }
+  return -1;
+}
+
+// Find matching </> for an already-opened <> fragment.
+function cdFindFragmentEnd(str, start) {
+  let depth = 1;
+  let i = start;
+  while (i < str.length) {
+    if (str[i] !== "<") { i++; continue; }
+    if (str[i + 1] === "/") {
+      if (str[i + 2] === ">") {
+        depth--;
+        if (depth === 0) return i;
+        i += 3; continue;
+      }
+      const gt = str.indexOf(">", i + 2);
+      i = gt !== -1 ? gt + 1 : i + 1;
+      continue;
+    }
+    if (str[i + 1] === ">") { depth++; i += 2; continue; }
+    if (/[A-Za-z]/.test(str[i + 1])) {
+      const gt = str.indexOf(">", i + 1);
+      i = gt !== -1 ? gt + 1 : i + 1;
+      continue;
+    }
+    i++;
+  }
+  return -1;
+}
+
+// Convert JSX helpers (<C>, <A>, fragments, expressions) to markdown.
+function cdJsxToMd(str) {
+  return str
+    .replace(/\{'\s*'\}/g, " ")
+    .replace(/\{'([^']*)'\}/g, "$1")
+    .replace(/<C>([\s\S]*?)<\/C>/g, "`$1`")
+    .replace(/<A\s+href="([^"]*)">([\s\S]*?)<\/A>/g, (_, href, text) => {
+      const dash = href.replace(
+        /^\/en\/([a-z0-9-]+)(#.*)?$/,
+        (__, slug, anchor) => `${slug}.html${anchor || ""}`,
+      );
+      return `[${text}](${dash})`;
+    })
+    .replace(/<>/g, "")
+    .replace(/<\/>/g, "")
+    .trim();
+}
+
+// Split array content by top-level commas, respecting template literals and JSX.
+// Only tracks backtick strings — apostrophes in JSX text aren't string delimiters.
+function cdSplitElements(content) {
+  const elems = [];
+  let inTmpl = false;
+  let jsxD = 0;
+  let braceD = 0;
+  let brackD = 0;
+  let start = 0;
+  for (let i = 0; i < content.length; i++) {
+    const ch = content[i];
+    if (inTmpl) {
+      if (ch === "\\") { i++; continue; }
+      if (ch === "`") inTmpl = false;
+      continue;
+    }
+    if (ch === "`") { inTmpl = true; continue; }
+    if (ch === "{") { braceD++; continue; }
+    if (ch === "}") { braceD--; continue; }
+    if (ch === "[") { brackD++; continue; }
+    if (ch === "]") { brackD--; continue; }
+    if (ch === "<") {
+      if (content[i + 1] === "/") {
+        jsxD--;
+        if (content[i + 2] === ">") { i += 2; continue; }
+        const gt = content.indexOf(">", i + 2);
+        if (gt !== -1) i = gt;
+        continue;
+      }
+      if (content[i + 1] === ">") { jsxD++; i++; continue; }
+      if (/[A-Z]/.test(content[i + 1])) {
+        jsxD++;
+        const gt = content.indexOf(">", i + 1);
+        if (gt !== -1) i = gt;
+        continue;
+      }
+      continue;
+    }
+    if (ch === "," && jsxD === 0 && braceD === 0 && brackD === 0) {
+      elems.push(content.slice(start, i).trim());
+      start = i + 1;
+    }
+  }
+  const last = content.slice(start).trim();
+  if (last) elems.push(last);
+  return elems.filter((e) => e.length > 0);
+}
+
+// Convert an array element (string literal or JSX fragment) to markdown.
+function cdElemToMd(elem) {
+  if (elem.startsWith("'")) {
+    const m = elem.match(/^'((?:[^'\\]|\\.)*)'$/);
+    return m ? m[1].replace(/\\'/g, "'") : elem;
+  }
+  if (elem.startsWith('"')) {
+    const m = elem.match(/^"((?:[^"\\]|\\.)*)"$/);
+    return m ? m[1].replace(/\\"/g, '"') : elem;
+  }
+  if (elem.startsWith("`")) {
+    const m = elem.match(/^`([\s\S]*)`$/);
+    return m ? m[1] : elem;
+  }
+  if (elem.startsWith("<>")) {
+    return cdJsxToMd(elem.slice(2).replace(/<\/>$/, ""));
+  }
+  return cdJsxToMd(elem);
+}
+
+// ── Field extractors ──────────────────────────────────────────────────
+
+function cdMatchStr(str, name) {
+  let m = str.match(new RegExp(`${name}:\\s*'((?:[^'\\\\]|\\\\.)*)'`));
+  if (m) return m[1].replace(/\\'/g, "'");
+  m = str.match(new RegExp(`${name}:\\s*"((?:[^"\\\\]|\\\\.)*)"`));
+  if (m) return m[1].replace(/\\"/g, '"');
+  return null;
+}
+
+function cdExtractText(str, name) {
+  const s = cdMatchStr(str, name);
+  if (s !== null) return s;
+
+  const re = new RegExp(`${name}:\\s*<>`);
+  const m = re.exec(str);
+  if (m) {
+    const fragStart = m.index + m[0].length;
+    const fragEnd = cdFindFragmentEnd(str, fragStart);
+    if (fragEnd !== -1) return cdJsxToMd(str.slice(fragStart, fragEnd));
+  }
+  return null;
+}
+
+function cdExtractArray(str, name) {
+  const re = new RegExp(`${name}:\\s*\\[`);
+  const m = re.exec(str);
+  if (!m) return null;
+
+  const openIdx = str.indexOf("[", m.index);
+  const closeIdx = cdScanToClose(str, openIdx, "[", "]");
+  if (closeIdx === -1) return null;
+
+  return cdSplitElements(str.slice(openIdx + 1, closeIdx)).map(cdElemToMd);
+}
+
+function cdExtractTemplate(str, name) {
+  const re = new RegExp(`${name}:\\s*\``);
+  const m = re.exec(str);
+  if (!m) return null;
+
+  const start = m.index + m[0].length;
+  for (let i = start; i < str.length; i++) {
+    if (str[i] === "\\") { i++; continue; }
+    if (str[i] === "`") return str.slice(start, i);
+  }
+  return null;
+}
+
+function cdExtractDesc(str) {
+  const m = str.match(/description:\s*/);
+  if (!m) return null;
+
+  const valStart = m.index + m[0].length;
+  if (str[valStart] === "[") {
+    const closeIdx = cdScanToClose(str, valStart, "[", "]");
+    if (closeIdx === -1) return null;
+    return cdSplitElements(str.slice(valStart + 1, closeIdx)).map(cdElemToMd);
+  }
+  return cdExtractText(str, "description");
+}
+
+// ── Tree parsing ──────────────────────────────────────────────────────
+
+function cdParseCommandsNote(source) {
+  const m = source.match(
+    /commandsNote\s*=\s*useMemo\(\(\)\s*=>\s*<>([\s\S]*?)<\/>,\s*\[\]/,
+  );
+  if (!m) return "";
+  return cdJsxToMd(m[1]);
+}
+
+function cdParseTree(source) {
+  const marker = "FILE_TREE = useMemo";
+  const start = source.indexOf(marker);
+  if (start === -1) return null;
+
+  const objOpen = source.indexOf("({", start);
+  if (objOpen === -1) return null;
+  const objStart = objOpen + 1;
+  const objEnd = cdScanToClose(source, objStart, "{", "}");
+  if (objEnd === -1) return null;
+
+  const treeStr = source.slice(objStart, objEnd + 1);
+
+  return {
+    project: cdExtractSection(treeStr, "project"),
+    global: cdExtractSection(treeStr, "global"),
+  };
+}
+
+function cdExtractSection(treeStr, name) {
+  const re = new RegExp(`${name}:\\s*\\{`);
+  const m = re.exec(treeStr);
+  if (!m) return null;
+
+  const braceStart = treeStr.indexOf("{", m.index);
+  const braceEnd = cdScanToClose(treeStr, braceStart, "{", "}");
+  if (braceEnd === -1) return null;
+
+  const sectionStr = treeStr.slice(braceStart, braceEnd + 1);
+  return {
+    label: cdMatchStr(sectionStr, "label"),
+    children: cdParseChildren(sectionStr),
+  };
+}
+
+function cdParseChildren(parentStr) {
+  const m = parentStr.match(/children:\s*\[/);
+  if (!m) return [];
+
+  const arrStart = parentStr.indexOf("[", m.index);
+  const arrEnd = cdScanToClose(parentStr, arrStart, "[", "]");
+  if (arrEnd === -1) return [];
+
+  const content = parentStr.slice(arrStart + 1, arrEnd).trim();
+  if (!content) return [];
+
+  const nodes = [];
+  let depth = 0;
+  let inTmpl = false;
+  let objStart = -1;
+  for (let i = 0; i < content.length; i++) {
+    const ch = content[i];
+    if (inTmpl) {
+      if (ch === "\\") { i++; continue; }
+      if (ch === "`") inTmpl = false;
+      continue;
+    }
+    if (ch === "`") { inTmpl = true; continue; }
+    if (ch === "{") {
+      if (depth === 0) objStart = i;
+      depth++;
+    } else if (ch === "}") {
+      depth--;
+      if (depth === 0 && objStart !== -1) {
+        nodes.push(content.slice(objStart, i + 1));
+        objStart = -1;
+      }
+    }
+  }
+
+  return nodes.map(cdParseNode);
+}
+
+function cdParseNode(nodeStr) {
+  // Strip children so field regexes don't match inside child nodes.
+  const cm = nodeStr.match(/children:\s*\[/);
+  const own = cm ? nodeStr.slice(0, cm.index) : nodeStr;
+
+  return {
+    label: cdMatchStr(own, "label") || "",
+    type: cdMatchStr(own, "type"),
+    icon: cdMatchStr(own, "icon"),
+    badge: cdMatchStr(own, "badge"),
+    autogen: /autogen:\s*true/.test(own),
+    hasNote: /note:\s*commandsNote/.test(own),
+    oneLiner: cdExtractText(own, "oneLiner"),
+    when: cdExtractText(own, "when"),
+    description: cdExtractDesc(own),
+    contains: cdExtractArray(own, "contains"),
+    tips: cdExtractArray(own, "tips"),
+    exampleIntro: cdExtractText(own, "exampleIntro"),
+    example: cdExtractTemplate(own, "example"),
+    docsLink: cdMatchStr(own, "docsLink"),
+    children: cdParseChildren(nodeStr),
+  };
+}
+
+// ── Rendering ─────────────────────────────────────────────────────────
+
+function cdRenderMarkdown(tree, commandsNote) {
+  const lines = [];
+
+  lines.push("## Project scope", "");
+  if (tree.project) {
+    for (const node of tree.project.children) {
+      cdRenderNode(lines, node, 0, commandsNote);
+    }
+  }
+
+  lines.push("## Global scope", "");
+  if (tree.global) {
+    for (const node of tree.global.children) {
+      cdRenderNode(lines, node, 0, commandsNote);
+    }
+  }
+
+  return lines.join("\n");
+}
+
+function cdRenderNode(lines, node, depth, commandsNote) {
+  const h = "#".repeat(Math.min(depth + 3, 6));
+  // Escape angle brackets so MDX doesn't treat <agent-name> as JSX
+  let heading = node.label.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  if (node.badge) heading += ` \`${node.badge}\``;
+  else if (node.autogen) heading += " `auto-generated`";
+  lines.push(`${h} ${heading}`, "");
+
+  if (node.oneLiner) lines.push(`*${node.oneLiner}*`, "");
+
+  if (node.hasNote && commandsNote) {
+    lines.push(`> **Note:** ${commandsNote}`, "");
+  }
+
+  if (node.when) lines.push(`**When:** ${node.when}`, "");
+
+  if (node.description) {
+    const descs = Array.isArray(node.description)
+      ? node.description
+      : [node.description];
+    for (const d of descs) lines.push(d, "");
+  }
+
+  if (node.contains && node.contains.length > 0) {
+    lines.push("**Configures:**");
+    for (const item of node.contains) lines.push(`- ${item}`);
+    lines.push("");
+  }
+
+  if (node.tips && node.tips.length > 0) {
+    lines.push("**Tips:**");
+    for (const tip of node.tips) lines.push(`- ${tip}`);
+    lines.push("");
+  }
+
+  if (node.example) {
+    if (node.exampleIntro) lines.push(node.exampleIntro, "");
+    const lang =
+      node.icon === "json" ? "json" : node.icon === "md" ? "markdown" : "";
+    lines.push("```" + lang, node.example, "```", "");
+  }
+
+  if (node.docsLink) {
+    const link = node.docsLink.replace(
+      /^\/en\/([a-z0-9-]+)(#.*)?$/,
+      (_, slug, anchor) => `${slug}.html${anchor || ""}`,
+    );
+    lines.push(`[Documentation →](${link})`, "");
+  }
+
+  if (node.children && node.children.length > 0) {
+    for (const child of node.children) {
+      cdRenderNode(lines, child, depth + 1, commandsNote);
+    }
+  }
+}

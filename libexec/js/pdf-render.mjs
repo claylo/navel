@@ -854,7 +854,9 @@ for (const file of files) {
         const content = rawSpanStore[parseInt(idxStr)];
         const maxTicks = (content.match(/`+/g) || [])
           .reduce((max, m) => Math.max(max, m.length), 0);
-        const delimLen = Math.max(2, maxTicks + 1);
+        // Typst inline raw needs 3+ backtick delimiters to contain backticks.
+        // 2-backtick `` is parsed as two empty single-backtick raw spans.
+        const delimLen = Math.max(3, maxTicks + 1);
         const delim = "`".repeat(delimLen);
         // Typst needs space padding when content starts/ends with backtick
         const pad = content.startsWith("`") || content.endsWith("`") ? " " : "";
@@ -908,11 +910,12 @@ for (const file of files) {
         let prev;
         do {
           prev = line;
-          line = line.replace(/`([^`\n]*?\\`[^`\n]*?)`/g, (_, inner) => {
+          line = line.replace(/`([^`\n]+?\\`[^`\n]*?)`/g, (_, inner) => {
             const unescaped = inner.replace(/\\`/g, "`");
             const maxTicks = (unescaped.match(/`+/g) || [])
               .reduce((max, m) => Math.max(max, m.length), 0);
-            const delimLen = Math.max(2, maxTicks + 1);
+            // Typst inline raw needs 3+ backtick delimiters to contain backticks.
+            const delimLen = Math.max(3, maxTicks + 1);
             const delim = "`".repeat(delimLen);
             // Typst multi-backtick raw text needs space padding when
             // content starts or ends with a backtick
