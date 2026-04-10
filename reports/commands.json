@@ -574,9 +574,10 @@
         "changelog.md",
         "commands.md",
         "permissions.md",
-        "statusline.md"
+        "statusline.md",
+        "tools-reference.md"
       ],
-      "mentions": 8
+      "mentions": 9
     },
     "advisor": {
       "documented": false,
@@ -1111,7 +1112,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 249
+      "mentions": 252
     },
     "ide": {
       "documented": true,
@@ -1398,7 +1399,7 @@
         "tools-reference.md",
         "troubleshooting.md"
       ],
-      "mentions": 111
+      "mentions": 112
     },
     "plan": {
       "documented": true,
@@ -1431,6 +1432,7 @@
         "discover-plugins.md",
         "github-enterprise-server.md",
         "jetbrains.md",
+        "monitoring-usage.md",
         "overview.md",
         "plugin-marketplaces.md",
         "plugins-reference.md",
@@ -1439,7 +1441,7 @@
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 119
+      "mentions": 121
     },
     "powerup": {
       "documented": true,
