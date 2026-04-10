@@ -48,7 +48,7 @@
     "keybindings-help",
     "login",
     "logout",
-    "loop",
+    "loops",
     "mcp",
     "memory",
     "mobile",
@@ -90,6 +90,7 @@
     "toggle-memory",
     "ultraplan",
     "ultrareview",
+    "update",
     "upgrade",
     "usage",
     "version",
@@ -107,7 +108,7 @@
     "brief": "Toggle brief-only mode",
     "btw": "Ask a quick side question without interrupting the main conversation",
     "chrome": "Claude in Chrome (Beta) settings",
-    "claude-api": "Build Claude API / Anthropic SDK apps.\\nTRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks to use the Claude API, Anthropic SDKs, or Managed Agents (`/v1/agents`, `/v1/sessions`); or asks to add a Claude feature (prompt caching, adaptive thinking, compaction, code_execution, batch, files API, citations, memory tool) or a Claude model (Opus/Sonnet/Haiku) to a Claude file.\\nDO NOT TRIGGER when: file imports `openai`/non-Anthropic SDK, filename signals another provider (`agent-openai.py`, `*-generic.py`), code is provider-neutral, or task is general programming/ML.",
+    "claude-api": "Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching.\\nTRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks to use the Claude API, Anthropic SDKs, or Managed Agents (`/v1/agents`, `/v1/sessions`); user asks to add, modify, debug, optimize, or improve a Claude feature (prompt caching, cache hit rate, adaptive thinking, compaction, code_execution, batch, files API, citations, memory tool) or a Claude model (Opus/Sonnet/Haiku) in a file; or user asks about prompt caching / cache hit rate / cache reads / cache creation in any project that uses the Anthropic SDK (even without mentioning Claude by name).\\nDO NOT TRIGGER when: file imports `openai`/non-Anthropic SDK, filename signals another provider (`agent-openai.py`, `*-generic.py`), code is provider-neutral, or task is general programming/ML.",
     "claude-in-chrome": "Automates your Chrome browser to interact with web pages - clicking elements, filling forms, capturing screenshots, reading console logs, and navigating sites. Opens pages in new tabs within your existing Chrome session. Requires site-level permissions before executing (configured in the extension).",
     "clear": "Clear conversation history and free up context",
     "color": "Set the prompt bar color for this session",
@@ -137,6 +138,7 @@
     "install-slack-app": "Install the Claude Slack app",
     "keybindings": "Open or create your keybindings configuration file",
     "logout": "Sign out from your Anthropic account",
+    "loops": "List, create, and delete recurring loops and stop-hooks",
     "mcp": "Manage MCP servers",
     "memory": "Edit Claude memory files",
     "plan": "Enable plan mode or view the current session plan",
@@ -164,6 +166,7 @@
     "think-back": "Your 2025 Claude Code Year in Review",
     "thinkback-play": "Play the thinkback animation",
     "toggle-memory": "Toggle automemory off/on for this session",
+    "update": "Switch to the latest version (conversation continues)",
     "upgrade": "Upgrade to Max for higher rate limits and more Opus",
     "usage": "Show plan usage limits",
     "version": "Print the version this session is running (not what autoupdate downloaded)",
@@ -219,7 +222,7 @@
     "keybindings-help": "available",
     "login": "available",
     "logout": "available",
-    "loop": "available",
+    "loops": "disabled",
     "mcp": "available",
     "memory": "available",
     "mobile": "available",
@@ -261,6 +264,7 @@
     "toggle-memory": "disabled",
     "ultraplan": "available",
     "ultrareview": "available",
+    "update": "disabled",
     "upgrade": "available",
     "usage": "available",
     "version": "disabled",
@@ -554,6 +558,12 @@
     "2.1.98": {
       "added": [
         "setup-vertex"
+      ]
+    },
+    "2.1.101": {
+      "added": [
+        "loops",
+        "update"
       ]
     }
   },
@@ -1225,21 +1235,10 @@
       ],
       "mentions": 11
     },
-    "loop": {
-      "documented": true,
-      "doc_files": [
-        "changelog.md",
-        "commands.md",
-        "common-workflows.md",
-        "desktop-scheduled-tasks.md",
-        "env-vars.md",
-        "overview.md",
-        "scheduled-tasks.md",
-        "skills.md",
-        "slash-commands.md",
-        "web-scheduled-tasks.md"
-      ],
-      "mentions": 34
+    "loops": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "mcp": {
       "documented": true,
@@ -1805,6 +1804,14 @@
       "documented": false,
       "doc_files": [],
       "mentions": 0
+    },
+    "update": {
+      "documented": true,
+      "doc_files": [
+        "data-usage.md",
+        "plugin-marketplaces.md"
+      ],
+      "mentions": 2
     },
     "upgrade": {
       "documented": true,
