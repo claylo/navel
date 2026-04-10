@@ -252,7 +252,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 75
+      "mentions": 76
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -287,7 +287,7 @@
         "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 100
+      "mentions": 101
     },
     "SessionEnd": {
       "documented": true,
@@ -298,7 +298,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 23
+      "mentions": 24
     },
     "SessionStart": {
       "documented": true,
@@ -311,7 +311,7 @@
         "plugins-reference.md",
         "tools-reference.md"
       ],
-      "mentions": 41
+      "mentions": 42
     },
     "Setup": {
       "documented": true,
@@ -344,7 +344,7 @@
         "tools-reference.md",
         "ultraplan.md"
       ],
-      "mentions": 93
+      "mentions": 94
     },
     "StopFailure": {
       "documented": true,
@@ -354,7 +354,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 18
+      "mentions": 19
     },
     "SubagentStart": {
       "documented": true,
@@ -421,7 +421,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 25
+      "mentions": 27
     },
     "WorktreeCreate": {
       "documented": true,
