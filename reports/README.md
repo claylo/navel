@@ -38,7 +38,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (95)</summary>
+<summary>Commands (96)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -53,7 +53,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/brief** | Toggle brief-only mode | 2.1.72 | available | **no** |
 | /btw | Ask a quick side question without interrupting the main c... | 2.1.6 | available | yes |
 | /chrome | Claude in Chrome (Beta) settings | 2.0.71 | available | yes |
-| /claude-api | Build Claude API / Anthropic SDK apps.\nTRIGGER when: cod... | 2.1.69 | available | yes |
+| /claude-api | Build, debug, and optimize Claude API / Anthropic SDK app... | 2.1.69 | available | yes |
 | /claude-in-chrome | Automates your Chrome browser to interact with web pages ... | 2.1.7 | available | yes |
 | /clear | Clear conversation history and free up context | 2.0.0 | available | yes |
 | /color | Set the prompt bar color for this session | 2.1.7 | available | yes |
@@ -90,7 +90,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/keybindings-help** | — | 2.1.20 | available | **no** |
 | /login | — | 2.0.0 | available | yes |
 | /logout | Sign out from your Anthropic account | 2.0.0 | available | yes |
-| /loop | — | 2.1.71 | available | yes |
+| **/loops** | List, create, and delete recurring loops and stop-hooks | 2.1.101 | *disabled* | **no** |
 | /mcp | Manage MCP servers | 2.0.0 | available | yes |
 | /memory | Edit Claude memory files | 2.0.0 | available | yes |
 | /mobile | — | 2.0.72 | available | yes |
@@ -132,6 +132,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/toggle-memory** | Toggle automemory off/on for this session | 2.1.90 | *disabled* | **no** |
 | /ultraplan | — | 2.1.83 | available | yes |
 | **/ultrareview** | — | 2.1.83 | available | **no** |
+| **/update** | Switch to the latest version (conversation continues) | 2.1.101 | *disabled* | yes |
 | /upgrade | Upgrade to Max for higher rate limits and more Opus | 2.0.0 | available | yes |
 | /usage | Show plan usage limits | 2.0.0 | available | yes |
 | **/version** | Print the version this session is running (not what autou... | 2.1.83 | *disabled* | yes |
@@ -601,6 +602,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.101 | — | +loops, +update | — |
 | 2.1.98 | — | +setup-vertex | — |
 | 2.1.97 | — | +dream | — |
 | 2.1.94 | — | +autofix-pr, +team-onboarding | — |
