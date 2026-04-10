@@ -176,7 +176,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 25
+      "mentions": 26
     },
     "InstructionsLoaded": {
       "documented": true,
@@ -323,14 +323,13 @@
         "discover-plugins.md",
         "github-actions.md",
         "gitlab-ci-cd.md",
-        "google-vertex-ai.md",
         "microsoft-foundry.md",
         "platforms.md",
         "remote-control.md",
         "web-quickstart.md",
         "web-scheduled-tasks.md"
       ],
-      "mentions": 27
+      "mentions": 25
     },
     "Stop": {
       "documented": true,
@@ -345,7 +344,7 @@
         "tools-reference.md",
         "ultraplan.md"
       ],
-      "mentions": 91
+      "mentions": 93
     },
     "StopFailure": {
       "documented": true,
@@ -379,7 +378,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 30
+      "mentions": 31
     },
     "TaskCompleted": {
       "documented": true,
@@ -448,5 +447,5 @@
       "mentions": 20
     }
   },
-  "docs_checked_at": "2026-04-09"
+  "docs_checked_at": "2026-04-10"
 }
