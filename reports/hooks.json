@@ -201,7 +201,7 @@
         "statusline.md",
         "terminal-config.md"
       ],
-      "mentions": 44
+      "mentions": 45
     },
     "PermissionDenied": {
       "documented": true,
@@ -252,7 +252,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 76
+      "mentions": 77
     },
     "PostToolUseFailure": {
       "documented": true,
