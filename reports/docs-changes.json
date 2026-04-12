@@ -1,6 +1,37 @@
 {
   "changes": [
     {
+      "date": "2026-04-12T09:38:16Z",
+      "version_at_time": "2.1.104",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "commands.md",
+        "costs.md",
+        "env-vars.md",
+        "google-vertex-ai.md",
+        "hooks.md",
+        "mcp.md",
+        "memory.md",
+        "microsoft-foundry.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "permissions.md",
+        "settings.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md",
+        "third-party-integrations.md",
+        "tools-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-10T22:16:18Z",
       "version_at_time": "2.1.104",
       "files_changed": [
@@ -2593,32 +2624,6 @@
       "version_at_time": "2.1.89",
       "files_changed": [
         "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-03-31T23:10:10Z",
-      "version_at_time": "2.1.87",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "cli-reference.md",
-        "commands.md",
-        "discover-plugins.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "mcp.md",
-        "memory.md",
-        "permissions.md",
-        "sandboxing.md",
-        "server-managed-settings.md",
-        "settings.md",
-        "sub-agents.md",
-        "tools-reference.md"
       ],
       "files_added": [
         ""
