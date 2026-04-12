@@ -159,6 +159,39 @@ SCRIPT
   [[ "$output" == *"1 build(s) failed: dash"* ]]
 }
 
+@test "monitor: real notify survives fail_output starting with dashes" {
+  # Regression: bin/navel cmd_monitor used to call notify positionally:
+  #   "$LIBEXEC/notify" "$title" "$fail_output"
+  # fail_output always starts with "--- <target> (exit N) ---", which matched
+  # notify's `-*)` case → die "unknown flag: ---" → exit 1.
+  # With set -e, monitor then died before printing its summary and the CI
+  # Pushover alert was never sent. Uses the REAL notify (already copied
+  # into MOCK_LIBEXEC in setup); with no creds it should silently skip.
+  mock_build pdf 1 "typst compile error"
+
+  # NOTE: `set -euo pipefail` here mirrors bin/navel's real strict mode.
+  # Without it, notify failures wouldn't abort the script and the bug would
+  # be invisible in the test harness (as it has been historically).
+  run bash -c '
+    set -euo pipefail
+    export NAVEL_HOME='"$NAVEL_HOME"'
+    export LIBEXEC='"$MOCK_LIBEXEC"'
+    source '"$REPO_ROOT"'/libexec/_portable.sh
+    DOCS_DIR="$NAVEL_HOME/docs"
+    die() { echo "error: $*" >&2; exit 1; }
+    _require() { true; }
+    '"$(sed -n '/^cmd_monitor/,/^}/p' "$REPO_ROOT/bin/navel")"'
+    cmd_monitor pdf
+  '
+  echo "$output"
+  [[ $status -ne 0 ]]
+  [[ "$output" == *"pdf: FAILED"* ]]
+  # Regression guards — all must hold after the fix:
+  [[ "$output" != *"unknown flag: ---"* ]]       # notify must not die on dash-prefixed body
+  [[ "$output" == *"1 build(s) failed: pdf"* ]]  # summary line must reach stdout
+  [[ "$output" == *"Details: "* ]]               # details line must reach stdout
+}
+
 @test "monitor: logs failure output" {
   mock_build pdf 1 "error: typst not found"
 
@@ -180,11 +213,21 @@ SCRIPT
 @test "monitor: calls notify on failure" {
   mock_build dash 1 "render failed"
 
-  # Replace notify with a spy
+  # Replace notify with a spy that mirrors the real flag-based API:
+  # --title <T> and --stdin (body read from stdin).
   cat > "$MOCK_LIBEXEC/notify" <<'SPY'
 #!/usr/bin/env bash
-echo "$1" > "$NAVEL_HOME/logs/notify-title.txt"
-echo "$2" > "$NAVEL_HOME/logs/notify-body.txt"
+title=""
+body=""
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --title) title="$2"; shift 2 ;;
+    --stdin) body=$(cat); shift ;;
+    *)       shift ;;
+  esac
+done
+echo "$title" > "$NAVEL_HOME/logs/notify-title.txt"
+echo "$body"  > "$NAVEL_HOME/logs/notify-body.txt"
 SPY
   chmod +x "$MOCK_LIBEXEC/notify"
 
@@ -252,7 +295,13 @@ SPY
 
   cat > "$MOCK_LIBEXEC/notify" <<'SPY'
 #!/usr/bin/env bash
-echo "$1" > "$NAVEL_HOME/logs/notify-title.txt"
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --title) echo "$2" > "$NAVEL_HOME/logs/notify-title.txt"; shift 2 ;;
+    --stdin) cat > /dev/null; shift ;;
+    *)       shift ;;
+  esac
+done
 SPY
   chmod +x "$MOCK_LIBEXEC/notify"
 
