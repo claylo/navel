@@ -251,7 +251,18 @@ cmd_monitor() {
     if [[ $failures -eq 1 ]]; then
       title="navel: ${failed_targets[0]} build failed"
     fi
-    "$LIBEXEC/notify" "$title" "$fail_output"
+
+    # Send alert. Pipe body via --stdin so content (which starts with
+    # "--- target (exit N) ---") can't be misparsed as a flag. Wrap in
+    # `if !` so a notify failure — parse error, bad creds, network — can't
+    # abort monitor under `set -euo pipefail`: we still need the summary
+    # printed and the build-failure exit code surfaced to CI.
+    if ! printf '%s' "$fail_output" \
+        | "$LIBEXEC/notify" --title "$title" --stdin 2>&1 \
+        | tee -a "$logfile"; then
+      echo "  notify: FAILED (alert not sent — see $logfile)" | tee -a "$logfile" >&2
+    fi
+
     echo ""
     echo "$failures build(s) failed: ${failed_targets[*]}"
     echo "Details: $logfile"
