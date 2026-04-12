@@ -796,6 +796,11 @@ for (const file of files) {
       continue;
     }
 
+    // Strip MDX boilerplate (<AgentInstructions>, export blocks) BEFORE
+    // truncateChangelog runs escapeJsxAngleBrackets — once unknown tags
+    // become &lt;&gt; entities, the strip inside flattenComponents misses.
+    md = preprocessMdx(md);
+
     // Truncate changelog to keep PDF reasonable
     if (slug === "changelog") {
       md = truncateChangelog(md);
