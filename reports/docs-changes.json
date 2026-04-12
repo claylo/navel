@@ -1,6 +1,37 @@
 {
   "changes": [
     {
+      "date": "2026-04-10T22:16:18Z",
+      "version_at_time": "2.1.104",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "commands.md",
+        "costs.md",
+        "env-vars.md",
+        "google-vertex-ai.md",
+        "hooks.md",
+        "mcp.md",
+        "memory.md",
+        "microsoft-foundry.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "permissions.md",
+        "settings.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md",
+        "third-party-integrations.md",
+        "tools-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-12T09:38:16Z",
       "version_at_time": "2.1.104",
       "files_changed": [
@@ -2588,29 +2619,6 @@
         "settings.md",
         "sub-agents.md",
         "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-03-31T20:36:37Z",
-      "version_at_time": "2.1.87",
-      "files_changed": [
-        "claude-code-on-the-web.md",
-        "cli-reference.md",
-        "commands.md",
-        "costs.md",
-        "features-overview.md",
-        "hooks-guide.md",
-        "permissions.md",
-        "settings.md",
-        "skills.md",
-        "sub-agents.md",
-        "terminal-config.md"
       ],
       "files_added": [
         ""
