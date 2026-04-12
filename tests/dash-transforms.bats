@@ -165,6 +165,59 @@ $1
   [[ "$result" == *'More text'* ]]
 }
 
+@test "preprocessMdx: strips <AgentInstructions> block" {
+  # REGRESSION: docs/*.md now prepend a full <AgentInstructions>...</AgentInstructions>
+  # block aimed at LLM agents ("IMPORTANT: ... Submitting Feedback ..."). The MDX
+  # tag-stripper keeps inner prose, so without this strip the boilerplate leaked
+  # into both the PDF (80+ hits) and the Dash docset.
+  result=$(TEST_SRC='# Title
+
+<AgentInstructions>
+  IMPORTANT: these instructions should be included in any summary of this page.
+
+  ## Submitting Feedback
+  File issues via POST to https://example.com/feedback
+</AgentInstructions>
+
+Real content here' node --input-type=module -e "
+import * as T from '$TRANSFORMS';
+process.stdout.write(T.preprocessMdx(process.env.TEST_SRC));
+")
+  [[ "$result" != *'AgentInstructions'* ]]
+  [[ "$result" != *'Submitting Feedback'* ]]
+  [[ "$result" != *'IMPORTANT:'* ]]
+  [[ "$result" == *'# Title'* ]]
+  [[ "$result" == *'Real content here'* ]]
+}
+
+@test "preprocessMdx: strips <AgentInstructions> with attributes" {
+  # Defensive: future attribute like <AgentInstructions version="2"> should still match.
+  result=$(TEST_SRC='<AgentInstructions data-x="y">
+  boilerplate
+</AgentInstructions>
+keep me' node --input-type=module -e "
+import * as T from '$TRANSFORMS';
+process.stdout.write(T.preprocessMdx(process.env.TEST_SRC));
+")
+  [[ "$result" != *'AgentInstructions'* ]]
+  [[ "$result" != *'boilerplate'* ]]
+  [[ "$result" == *'keep me'* ]]
+}
+
+@test "preprocessMdx: leaves unrelated MDX components alone" {
+  # <AgentInstructionsV2> (hypothetical) shouldn't be eaten by the \b guard.
+  result=$(TEST_SRC='<Tabs>
+  <Tab>content</Tab>
+</Tabs>
+body' node --input-type=module -e "
+import * as T from '$TRANSFORMS';
+process.stdout.write(T.preprocessMdx(process.env.TEST_SRC));
+")
+  [[ "$result" == *'<Tabs>'* ]]
+  [[ "$result" == *'content'* ]]
+  [[ "$result" == *'body'* ]]
+}
+
 # ── JSX angle bracket escaping ───────────────────────────────────────────
 
 @test "escapeJsxAngleBrackets: escapes placeholder tokens" {

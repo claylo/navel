@@ -72,7 +72,17 @@ export function injectDashAnchors(html) {
 // ── MDX preprocessing ──────────────────────────────────────────────────
 
 export function preprocessMdx(source) {
-  return source.replace(/^export\s+const\s+\w+\s*=[\s\S]*?^};$/gm, "");
+  return source
+    // Strip inline exports emitted by some MDX pages:
+    //   export const NAME = { ... };
+    .replace(/^export\s+const\s+\w+\s*=[\s\S]*?^};$/gm, "")
+    // Strip the <AgentInstructions>...</AgentInstructions> boilerplate block
+    // the docs source now prepends to nearly every page — instructions aimed
+    // at LLM agents reading the page, not human readers. Without this, the
+    // inner prose ("IMPORTANT: ... Submitting Feedback ...") leaks into the
+    // PDF (MDX tag stripper preserves inner text) and the Dash docset.
+    // Trailing \n? absorbs the blank line the block usually sits on.
+    .replace(/<AgentInstructions\b[^>]*>[\s\S]*?<\/AgentInstructions>\n?/g, "");
 }
 
 // ── Context window flattening ─────────────────────────────────────────
