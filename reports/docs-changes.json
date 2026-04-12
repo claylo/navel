@@ -32,6 +32,37 @@
       ]
     },
     {
+      "date": "2026-04-10T22:16:18Z",
+      "version_at_time": "2.1.104",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "commands.md",
+        "costs.md",
+        "env-vars.md",
+        "google-vertex-ai.md",
+        "hooks.md",
+        "mcp.md",
+        "memory.md",
+        "microsoft-foundry.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "permissions.md",
+        "settings.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md",
+        "third-party-integrations.md",
+        "tools-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-12T07:59:48Z",
       "version_at_time": "2.1.104",
       "files_changed": [
@@ -2500,45 +2531,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-03-30T20:32:40Z",
-      "version_at_time": "2.1.87",
-      "files_changed": [
-        "claude-code-on-the-web.md",
-        "code-review.md",
-        "commands.md",
-        "common-workflows.md",
-        "computer-use.md",
-        "context-window.md",
-        "costs.md",
-        "data-usage.md",
-        "desktop-quickstart.md",
-        "desktop.md",
-        "devcontainer.md",
-        "discover-plugins.md",
-        "env-vars.md",
-        "network-config.md",
-        "output-styles.md",
-        "overview.md",
-        "permission-modes.md",
-        "permissions.md",
-        "platforms.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "plugins.md",
-        "quickstart.md",
-        "remote-control.md",
-        "sandboxing.md",
-        "scheduled-tasks.md",
-        "security.md"
-      ],
-      "files_added": [
-        "github-enterprise-server.md"
       ],
       "files_removed": [
         ""
