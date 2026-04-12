@@ -82,7 +82,15 @@ export function preprocessMdx(source) {
     // inner prose ("IMPORTANT: ... Submitting Feedback ...") leaks into the
     // PDF (MDX tag stripper preserves inner text) and the Dash docset.
     // Trailing \n? absorbs the blank line the block usually sits on.
-    .replace(/<AgentInstructions\b[^>]*>[\s\S]*?<\/AgentInstructions>\n?/g, "");
+    .replace(/<AgentInstructions\b[^>]*>[\s\S]*?<\/AgentInstructions>\n?/g, "")
+    // Strip self-closing <Experiment ... treatment={<OtherComponent .../>} />.
+    // Experiment is a runtime A/B test wrapper that only makes sense in the
+    // live site. The nested JSX expression defeats the generic HTML-tag
+    // stripper (which stops at the first > and would leave "} />" dangling),
+    // so we remove the whole tag here at the markdown stage. The regex
+    // tolerates any simple attributes before the `{…}` expression and a
+    // single level of JSX nesting inside the expression.
+    .replace(/<Experiment\b[^{>]*\{[^}]*\}\s*\/>\n?/g, "");
 }
 
 // ── Context window flattening ─────────────────────────────────────────

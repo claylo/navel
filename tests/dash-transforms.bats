@@ -218,6 +218,37 @@ process.stdout.write(T.preprocessMdx(process.env.TEST_SRC));
   [[ "$result" == *'body'* ]]
 }
 
+@test "preprocessMdx: strips <Experiment> with nested JSX expression" {
+  # REGRESSION: quickstart page had:
+  #   <Experiment flag="..." treatment={<InstallConfigurator />} />
+  # The generic HTML-tag stripper stops at the first > (inside the nested
+  # JSX expression), leaving "} />" dangling in the PDF intro on page 11.
+  result=$(TEST_SRC='intro
+
+<Experiment flag="quickstart-install-configurator" treatment={<InstallConfigurator />} />
+
+## Before you begin' node --input-type=module -e "
+import * as T from '$TRANSFORMS';
+process.stdout.write(T.preprocessMdx(process.env.TEST_SRC));
+")
+  [[ "$result" != *'Experiment'* ]]
+  [[ "$result" != *'InstallConfigurator'* ]]
+  [[ "$result" != *'} />'* ]]
+  [[ "$result" == *'intro'* ]]
+  [[ "$result" == *'Before you begin'* ]]
+}
+
+@test "preprocessMdx: strips <Experiment> with component-attribute treatment" {
+  # Second live pattern: <ContactSalesCard surface="..." /> as the treatment.
+  result=$(TEST_SRC='<Experiment flag="docs-contact-sales-cta" treatment={<ContactSalesCard surface="bedrock" />} />' node --input-type=module -e "
+import * as T from '$TRANSFORMS';
+process.stdout.write(T.preprocessMdx(process.env.TEST_SRC));
+")
+  [[ "$result" != *'Experiment'* ]]
+  [[ "$result" != *'ContactSalesCard'* ]]
+  [[ "$result" != *'} />'* ]]
+}
+
 # ── JSX angle bracket escaping ───────────────────────────────────────────
 
 @test "escapeJsxAngleBrackets: escapes placeholder tokens" {
