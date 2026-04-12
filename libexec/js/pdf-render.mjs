@@ -15,6 +15,7 @@ import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from 
 import { basename, join } from "node:path";
 import { execSync } from "node:child_process";
 import { preprocessMdx, truncateChangelog, parseNavTabs } from "./dash-transforms.mjs";
+import { fixEscapedBackticks } from "./typst-fixups.mjs";
 
 const REPO_ROOT = process.env.REPO_ROOT;
 if (!REPO_ROOT) {
@@ -892,40 +893,9 @@ for (const file of files) {
     // intervening paragraph text)
     typstContent = typstContent.replace(/^```(.+?)```(\w+)$/gm, "```\n\n$1\n\n```$2");
 
-    // Fix escaped backticks in raw text — markdown2typst uses \` for
-    // literal backticks inside raw text, but Typst treats raw text as
-    // literal (no escape processing). We scan each line for raw text
-    // spans containing \` and rebuild them with multi-backtick delimiters.
-    //
-    // Examples:
-    //   `Ctrl+\``         → ``Ctrl+` ``
-    //   `!\``command\``   → `` !`command` ``
-    //   `\`\`\`!`         → ```` ```! ````
-    if (typstContent.includes("\\`")) {
-      typstContent = typstContent.split("\n").map(line => {
-        if (!line.includes("\\`")) return line;
-        // Replace raw spans containing \` — match opening `, content
-        // with at least one \`, and closing `. Iterate since fixing one
-        // span may reveal another (adjacent spans can merge).
-        let prev;
-        do {
-          prev = line;
-          line = line.replace(/`([^`\n]+?\\`[^`\n]*?)`/g, (_, inner) => {
-            const unescaped = inner.replace(/\\`/g, "`");
-            const maxTicks = (unescaped.match(/`+/g) || [])
-              .reduce((max, m) => Math.max(max, m.length), 0);
-            // Typst inline raw needs 3+ backtick delimiters to contain backticks.
-            const delimLen = Math.max(3, maxTicks + 1);
-            const delim = "`".repeat(delimLen);
-            // Typst multi-backtick raw text needs space padding when
-            // content starts or ends with a backtick
-            const pad = unescaped.startsWith("`") || unescaped.endsWith("`") ? " " : "";
-            return `${delim}${pad}${unescaped}${pad}${delim}`;
-          });
-        } while (line !== prev);
-        return line;
-      }).join("\n");
-    }
+    // Fix escaped backticks in raw text that markdown2typst emits as \`
+    // but Typst parses literally. See libexec/js/typst-fixups.mjs.
+    typstContent = fixEscapedBackticks(typstContent);
 
     // Convert callout blockquotes to gentle-clues admonitions.
     // markdown2typst renders our callouts as:
