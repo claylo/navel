@@ -1,6 +1,37 @@
 {
   "changes": [
     {
+      "date": "2026-04-12T07:59:48Z",
+      "version_at_time": "2.1.104",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "commands.md",
+        "costs.md",
+        "env-vars.md",
+        "google-vertex-ai.md",
+        "hooks.md",
+        "mcp.md",
+        "memory.md",
+        "microsoft-foundry.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "permissions.md",
+        "settings.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md",
+        "third-party-integrations.md",
+        "tools-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-11T11:13:23Z",
       "version_at_time": "2.1.104",
       "files_changed": [
@@ -2487,25 +2518,6 @@
       "version_at_time": "2.1.87",
       "files_changed": [
         "model-config.md",
-        "web-scheduled-tasks.md",
-        "zero-data-retention.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-03-30T18:57:38Z",
-      "version_at_time": "2.1.87",
-      "files_changed": [
-        "cli-reference.md",
-        "desktop.md",
-        "devcontainer.md",
-        "permission-modes.md",
-        "vs-code.md",
         "web-scheduled-tasks.md",
         "zero-data-retention.md"
       ],
