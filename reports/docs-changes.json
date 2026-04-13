@@ -1,6 +1,28 @@
 {
   "changes": [
     {
+      "date": "2026-04-13T17:58:45Z",
+      "version_at_time": "2.1.104",
+      "files_changed": [
+        "commands.md",
+        "common-workflows.md",
+        "env-vars.md",
+        "hooks.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "permissions.md",
+        "settings.md",
+        "ultraplan.md",
+        "web-quickstart.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-12T09:38:16Z",
       "version_at_time": "2.1.104",
       "files_changed": [
@@ -2704,19 +2726,6 @@
         "scheduled-tasks.md",
         "sub-agents.md",
         "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-02T02:10:30Z",
-      "version_at_time": "2.1.90",
-      "files_changed": [
-        "output-styles.md"
       ],
       "files_added": [
         ""
