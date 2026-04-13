@@ -1,6 +1,23 @@
 {
   "changes": [
     {
+      "date": "2026-04-13T22:08:38Z",
+      "version_at_time": "2.1.105",
+      "files_changed": [
+        "changelog.md",
+        "overview.md",
+        "quickstart.md",
+        "setup.md",
+        "terminal-config.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-13T20:16:09Z",
       "version_at_time": "2.1.105",
       "files_changed": [
@@ -2695,36 +2712,6 @@
         "quickstart.md",
         "setup.md",
         "sub-agents.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-02T15:27:56Z",
-      "version_at_time": "2.1.90",
-      "files_changed": [
-        "analytics.md",
-        "chrome.md",
-        "claude-code-on-the-web.md",
-        "code-review.md",
-        "desktop-quickstart.md",
-        "desktop.md",
-        "fast-mode.md",
-        "fullscreen.md",
-        "github-enterprise-server.md",
-        "interactive-mode.md",
-        "keybindings.md",
-        "overview.md",
-        "quickstart.md",
-        "setup.md",
-        "skills.md",
-        "slack.md",
-        "statusline.md",
-        "troubleshooting.md"
       ],
       "files_added": [
         ""
