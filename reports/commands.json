@@ -647,7 +647,7 @@
         "common-workflows.md",
         "statusline.md"
       ],
-      "mentions": 6
+      "mentions": 7
     },
     "bridge-kick": {
       "documented": false,
@@ -803,7 +803,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 63
+      "mentions": 64
     },
     "context": {
       "documented": true,
@@ -903,7 +903,7 @@
         "keybindings.md",
         "troubleshooting.md"
       ],
-      "mentions": 14
+      "mentions": 15
     },
     "dream": {
       "documented": false,
@@ -1081,7 +1081,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 9
+      "mentions": 10
     },
     "hooks": {
       "documented": true,
@@ -1364,7 +1364,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 103
+      "mentions": 104
     },
     "passes": {
       "documented": true,
@@ -1559,7 +1559,7 @@
         "hooks.md",
         "quickstart.md"
       ],
-      "mentions": 39
+      "mentions": 40
     },
     "review": {
       "documented": true,
