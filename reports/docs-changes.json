@@ -1,6 +1,26 @@
 {
   "changes": [
     {
+      "date": "2026-04-13T19:11:50Z",
+      "version_at_time": "2.1.104",
+      "files_changed": [
+        "discover-plugins.md",
+        "mcp.md",
+        "network-config.md",
+        "permissions.md",
+        "sub-agents.md",
+        "subagents.md",
+        "tools-reference.md",
+        "troubleshooting.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-13T17:58:45Z",
       "version_at_time": "2.1.104",
       "files_changed": [
@@ -2702,30 +2722,6 @@
         "github-actions.md",
         "google-vertex-ai.md",
         "model-config.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-02T06:19:10Z",
-      "version_at_time": "2.1.90",
-      "files_changed": [
-        "cli-reference.md",
-        "commands.md",
-        "computer-use.md",
-        "discover-plugins.md",
-        "fullscreen.md",
-        "how-claude-code-works.md",
-        "network-config.md",
-        "permissions.md",
-        "plugins.md",
-        "scheduled-tasks.md",
-        "sub-agents.md",
-        "tools-reference.md"
       ],
       "files_added": [
         ""
