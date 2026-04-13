@@ -60,6 +60,7 @@
     "powerup",
     "privacy-settings",
     "rate-limit-options",
+    "recap",
     "release-notes",
     "reload-plugins",
     "remote-control",
@@ -85,8 +86,6 @@
     "teleport",
     "terminal-setup",
     "theme",
-    "think-back",
-    "thinkback-play",
     "toggle-memory",
     "ultraplan",
     "ultrareview",
@@ -145,6 +144,7 @@
     "powerup": "Discover Claude Code features through quick interactive lessons",
     "privacy-settings": "View and update your privacy settings",
     "rate-limit-options": "Show options when rate limit is reached",
+    "recap": "Generate a one-line session recap now",
     "reload-plugins": "Activate pending plugin changes in the current session",
     "remote-env": "Configure the default remote environment for teleport sessions",
     "rename": "Rename the current conversation",
@@ -163,8 +163,6 @@
     "team-onboarding": "Help teammates ramp on Claude Code with a guide from your usage",
     "teleport": "Resume a Claude Code session from claude.ai",
     "theme": "Change the theme",
-    "think-back": "Your 2025 Claude Code Year in Review",
-    "thinkback-play": "Play the thinkback animation",
     "toggle-memory": "Toggle automemory off/on for this session",
     "update": "Switch to the latest version (conversation continues)",
     "upgrade": "Upgrade to Max for higher rate limits and more Opus",
@@ -234,6 +232,7 @@
     "powerup": "available",
     "privacy-settings": "available",
     "rate-limit-options": "available",
+    "recap": "available",
     "release-notes": "available",
     "reload-plugins": "available",
     "remote-control": "available",
@@ -259,8 +258,6 @@
     "teleport": "available",
     "terminal-setup": "available",
     "theme": "available",
-    "think-back": "available",
-    "thinkback-play": "available",
     "toggle-memory": "disabled",
     "ultraplan": "available",
     "ultrareview": "available",
@@ -564,6 +561,11 @@
       "added": [
         "loops",
         "update"
+      ]
+    },
+    "2.1.105": {
+      "added": [
+        "recap"
       ]
     }
   },
@@ -1468,6 +1470,11 @@
       "doc_files": [],
       "mentions": 0
     },
+    "recap": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
     "release-notes": {
       "documented": true,
       "doc_files": [
@@ -1782,16 +1789,6 @@
         "interactive-mode.md"
       ],
       "mentions": 5
-    },
-    "think-back": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
-    },
-    "thinkback-play": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
     },
     "toggle-memory": {
       "documented": false,
