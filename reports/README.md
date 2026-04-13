@@ -38,7 +38,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (96)</summary>
+<summary>Commands (95)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -102,6 +102,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /powerup | Discover Claude Code features through quick interactive l... | 2.1.90 | available | yes |
 | /privacy-settings | View and update your privacy settings | 2.0.0 | available | yes |
 | **/rate-limit-options** | Show options when rate limit is reached | 2.0.43 | available | **no** |
+| **/recap** | Generate a one-line session recap now | 2.1.105 | available | **no** |
 | /release-notes | — | 2.0.0 | available | yes |
 | /reload-plugins | Activate pending plugin changes in the current session | 2.1.64 | available | yes |
 | /remote-control | — | 2.1.51 | available | yes |
@@ -127,8 +128,6 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /teleport | Resume a Claude Code session from claude.ai | 2.1.92 | available | yes |
 | /terminal-setup | — | 2.0.0 | available | yes |
 | /theme | Change the theme | 2.0.73 | available | yes |
-| **/think-back** | Your 2025 Claude Code Year in Review | 2.0.66 | available | **no** |
-| **/thinkback-play** | Play the thinkback animation | 2.0.66 | available | **no** |
 | **/toggle-memory** | Toggle automemory off/on for this session | 2.1.90 | *disabled* | **no** |
 | /ultraplan | — | 2.1.83 | available | yes |
 | **/ultrareview** | — | 2.1.83 | available | **no** |
@@ -602,6 +601,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.105 | — | +recap | — |
 | 2.1.101 | — | +loops, +update | — |
 | 2.1.98 | — | +setup-vertex | — |
 | 2.1.97 | — | +dream | — |
