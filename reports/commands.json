@@ -1535,7 +1535,7 @@
         "remote-control.md",
         "statusline.md"
       ],
-      "mentions": 21
+      "mentions": 22
     },
     "resume": {
       "documented": true,
@@ -1750,9 +1750,10 @@
     "team-onboarding": {
       "documented": true,
       "doc_files": [
-        "changelog.md"
+        "changelog.md",
+        "commands.md"
       ],
-      "mentions": 1
+      "mentions": 2
     },
     "teleport": {
       "documented": true,
