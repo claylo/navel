@@ -123,7 +123,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /stickers | Order Claude Code stickers | 2.0.32 | available | yes |
 | **/stop-hook** | Set a session-only Stop hook with a quick prompt | 2.1.92 | *disabled* | **no** |
 | /tasks | — | 2.0.45 | available | yes |
-| **/team-onboarding** | Help teammates ramp on Claude Code with a guide from your... | 2.1.94 | available | **no** |
+| /team-onboarding | Help teammates ramp on Claude Code with a guide from your... | 2.1.94 | available | yes |
 | /teleport | Resume a Claude Code session from claude.ai | 2.1.92 | available | yes |
 | /terminal-setup | — | 2.0.0 | available | yes |
 | /theme | Change the theme | 2.0.73 | available | yes |
@@ -803,4 +803,4 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 ---
-*Last updated: 2026-04-10*
+*Last updated: 2026-04-13*
