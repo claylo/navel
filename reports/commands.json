@@ -682,12 +682,13 @@
         "computer-use.md",
         "desktop.md",
         "how-claude-code-works.md",
+        "network-config.md",
         "overview.md",
         "platforms.md",
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 24
+      "mentions": 25
     },
     "claude-api": {
       "documented": true,
@@ -1118,7 +1119,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 252
+      "mentions": 254
     },
     "ide": {
       "documented": true,
@@ -1166,7 +1167,7 @@
         "setup.md",
         "troubleshooting.md"
       ],
-      "mentions": 38
+      "mentions": 39
     },
     "install-github-app": {
       "documented": true,
@@ -1447,7 +1448,7 @@
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 121
+      "mentions": 122
     },
     "powerup": {
       "documented": true,
