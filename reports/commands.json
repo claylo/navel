@@ -577,7 +577,7 @@
         "statusline.md",
         "tools-reference.md"
       ],
-      "mentions": 9
+      "mentions": 10
     },
     "advisor": {
       "documented": false,
@@ -624,14 +624,18 @@
     "batch": {
       "documented": true,
       "doc_files": [
+        "amazon-bedrock.md",
         "changelog.md",
         "commands.md",
         "features-overview.md",
+        "google-vertex-ai.md",
+        "microsoft-foundry.md",
         "quickstart.md",
         "skills.md",
-        "slash-commands.md"
+        "slash-commands.md",
+        "third-party-integrations.md"
       ],
-      "mentions": 6
+      "mentions": 10
     },
     "branch": {
       "documented": true,
@@ -663,7 +667,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 10
+      "mentions": 11
     },
     "chrome": {
       "documented": true,
@@ -796,7 +800,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 62
+      "mentions": 63
     },
     "context": {
       "documented": true,
@@ -814,7 +818,7 @@
         "statusline.md",
         "voice-dictation.md"
       ],
-      "mentions": 31
+      "mentions": 32
     },
     "copy": {
       "documented": true,
@@ -1145,9 +1149,10 @@
     "insights": {
       "documented": true,
       "doc_files": [
+        "changelog.md",
         "commands.md"
       ],
-      "mentions": 1
+      "mentions": 2
     },
     "install": {
       "documented": true,
@@ -1189,7 +1194,7 @@
         "keybindings.md",
         "voice-dictation.md"
       ],
-      "mentions": 15
+      "mentions": 16
     },
     "keybindings-help": {
       "documented": false,
@@ -1218,7 +1223,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 27
+      "mentions": 28
     },
     "logout": {
       "documented": true,
@@ -1283,7 +1288,7 @@
         "vs-code.md",
         "web-scheduled-tasks.md"
       ],
-      "mentions": 136
+      "mentions": 137
     },
     "memory": {
       "documented": true,
@@ -1432,7 +1437,6 @@
         "discover-plugins.md",
         "github-enterprise-server.md",
         "jetbrains.md",
-        "monitoring-usage.md",
         "overview.md",
         "plugin-marketplaces.md",
         "plugins-reference.md",
@@ -1507,7 +1511,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 38
+      "mentions": 39
     },
     "remote-env": {
       "documented": true,
@@ -1531,7 +1535,7 @@
         "remote-control.md",
         "statusline.md"
       ],
-      "mentions": 20
+      "mentions": 21
     },
     "resume": {
       "documented": true,
@@ -1547,7 +1551,7 @@
         "hooks.md",
         "quickstart.md"
       ],
-      "mentions": 38
+      "mentions": 39
     },
     "review": {
       "documented": true,
@@ -1744,9 +1748,11 @@
       "mentions": 10
     },
     "team-onboarding": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "changelog.md"
+      ],
+      "mentions": 1
     },
     "teleport": {
       "documented": true,
@@ -1794,13 +1800,14 @@
     "ultraplan": {
       "documented": true,
       "doc_files": [
+        "changelog.md",
         "claude-code-on-the-web.md",
         "commands.md",
         "permission-modes.md",
         "remote-control.md",
         "ultraplan.md"
       ],
-      "mentions": 9
+      "mentions": 10
     },
     "ultrareview": {
       "documented": false,
@@ -1867,5 +1874,5 @@
       "mentions": 15
     }
   },
-  "docs_checked_at": "2026-04-10"
+  "docs_checked_at": "2026-04-13"
 }
