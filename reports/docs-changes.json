@@ -1,6 +1,26 @@
 {
   "changes": [
     {
+      "date": "2026-04-13T20:16:09Z",
+      "version_at_time": "2.1.105",
+      "files_changed": [
+        "discover-plugins.md",
+        "mcp.md",
+        "network-config.md",
+        "permissions.md",
+        "sub-agents.md",
+        "subagents.md",
+        "tools-reference.md",
+        "troubleshooting.md"
+      ],
+      "files_added": [
+        "2026-w15.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-13T19:11:50Z",
       "version_at_time": "2.1.104",
       "files_changed": [
@@ -2705,23 +2725,6 @@
         "slack.md",
         "statusline.md",
         "troubleshooting.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-02T07:09:12Z",
-      "version_at_time": "2.1.90",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "cli-reference.md",
-        "github-actions.md",
-        "google-vertex-ai.md",
-        "model-config.md"
       ],
       "files_added": [
         ""

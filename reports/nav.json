@@ -107,6 +107,7 @@
     "agent-sdk/python": "SDK references",
     "agent-sdk/migration-guide": "SDK references",
     "whats-new/index": "What's New",
+    "whats-new/2026-w15": "What's New",
     "whats-new/2026-w14": "What's New",
     "whats-new/2026-w13": "What's New",
     "legal-and-compliance": "Resources"
@@ -219,6 +220,7 @@
     "agent-sdk/python",
     "agent-sdk/migration-guide",
     "whats-new/index",
+    "whats-new/2026-w15",
     "whats-new/2026-w14",
     "whats-new/2026-w13",
     "legal-and-compliance"
