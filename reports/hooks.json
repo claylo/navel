@@ -336,6 +336,7 @@
       "doc_files": [
         "changelog.md",
         "computer-use.md",
+        "desktop.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
@@ -344,7 +345,7 @@
         "tools-reference.md",
         "ultraplan.md"
       ],
-      "mentions": 94
+      "mentions": 95
     },
     "StopFailure": {
       "documented": true,
