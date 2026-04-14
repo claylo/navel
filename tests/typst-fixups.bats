@@ -2,6 +2,7 @@
 
 # Tests for libexec/js/typst-fixups.mjs
 # Exercises: fixEscapedBackticks (repair of markdown2typst \` escape output)
+#            escapeSlashBeforeStrongClose (repair of *content/* → /* comment)
 
 FIXUPS="$BATS_TEST_DIRNAME/../libexec/js/typst-fixups.mjs"
 
@@ -11,6 +12,13 @@ run_fixup() {
   TYPST_INPUT="$1" node --input-type=module -e "
 import { fixEscapedBackticks } from '$FIXUPS';
 process.stdout.write(fixEscapedBackticks(process.env.TYPST_INPUT));
+"
+}
+
+run_slash_fixup() {
+  TYPST_INPUT="$1" node --input-type=module -e "
+import { escapeSlashBeforeStrongClose } from '$FIXUPS';
+process.stdout.write(escapeSlashBeforeStrongClose(process.env.TYPST_INPUT));
 "
 }
 
@@ -98,4 +106,55 @@ process.stdout.write(fixEscapedBackticks(process.env.TYPST_INPUT));
   # Second line has odd parity (3 backticks) — rewritten
   [[ "$result" == *'foo`bar'* ]]
   [[ "$result" != *'foo\`bar'* ]]
+}
+
+# ── escapeSlashBeforeStrongClose ──────────────────────────────────────────
+
+@test "escapeSlashBeforeStrongClose: line with no /* passes through" {
+  input='Press *Cmd+P* to open palette'
+  result=$(run_slash_fixup "$input")
+  [[ "$result" == "$input" ]]
+}
+
+@test "escapeSlashBeforeStrongClose: rewrites *content/* with escape" {
+  # REGRESSION: 2026-04-14 PDF build failure. Source markdown **Cmd+/**
+  # converts to Typst *Cmd+/* which Typst misreads as *Cmd+ followed by
+  # /* (block-comment open) — "unclosed delimiter" error.
+  input='Press *Cmd+/* on macOS'
+  result=$(run_slash_fixup "$input")
+  [[ "$result" == 'Press *Cmd+\/* on macOS' ]]
+}
+
+@test "escapeSlashBeforeStrongClose: rewrites multiple strong spans on one line" {
+  input='Press *Cmd+/* on macOS or *Ctrl+/* on Windows'
+  result=$(run_slash_fixup "$input")
+  [[ "$result" == 'Press *Cmd+\/* on macOS or *Ctrl+\/* on Windows' ]]
+}
+
+@test "escapeSlashBeforeStrongClose: leaves /* inside fenced code untouched" {
+  # Code fences contain raw text — /* is intentional (e.g. C-style comment,
+  # JSON path glob). Touching it would corrupt sample code.
+  input=$'Before fence\n```\n/* legit comment */\n```\nAfter fence'
+  result=$(run_slash_fixup "$input")
+  [[ "$result" == "$input" ]]
+}
+
+@test "escapeSlashBeforeStrongClose: only fixes the strong-text *content/* pattern" {
+  # *foo* (no slash) and bare /* in prose without strong markers — neither
+  # matches; both pass through untouched. This documents the fix's scope.
+  input='Use *foo* normally and bare /* prose */ stays as-is'
+  result=$(run_slash_fixup "$input")
+  [[ "$result" == "$input" ]]
+}
+
+@test "escapeSlashBeforeStrongClose: rewritten line compiles with typst" {
+  if ! command -v typst >/dev/null; then
+    skip "typst not installed"
+  fi
+  input='Press *Cmd+/* on macOS or *Ctrl+/* on Windows'
+  tmpdir=$(mktemp -d)
+  printf '%s\n' "$(run_slash_fixup "$input")" > "$tmpdir/t.typ"
+  run typst compile "$tmpdir/t.typ" "$tmpdir/t.pdf"
+  rm -rf "$tmpdir"
+  [[ $status -eq 0 ]]
 }

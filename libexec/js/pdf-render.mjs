@@ -15,7 +15,7 @@ import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from 
 import { basename, join } from "node:path";
 import { execSync } from "node:child_process";
 import { preprocessMdx, truncateChangelog, parseNavTabs } from "./dash-transforms.mjs";
-import { fixEscapedBackticks } from "./typst-fixups.mjs";
+import { fixEscapedBackticks, escapeSlashBeforeStrongClose } from "./typst-fixups.mjs";
 
 const REPO_ROOT = process.env.REPO_ROOT;
 if (!REPO_ROOT) {
@@ -901,6 +901,10 @@ for (const file of files) {
     // Fix escaped backticks in raw text that markdown2typst emits as \`
     // but Typst parses literally. See libexec/js/typst-fixups.mjs.
     typstContent = fixEscapedBackticks(typstContent);
+
+    // Escape `/` before a strong-emphasis close so `*content/*` doesn't
+    // open a Typst block comment. See libexec/js/typst-fixups.mjs.
+    typstContent = escapeSlashBeforeStrongClose(typstContent);
 
     // Convert callout blockquotes to gentle-clues admonitions.
     // markdown2typst renders our callouts as:
