@@ -271,7 +271,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 16
+      "mentions": 17
     },
     "PreToolUse": {
       "documented": true,
@@ -447,5 +447,5 @@
       "mentions": 20
     }
   },
-  "docs_checked_at": "2026-04-13"
+  "docs_checked_at": "2026-04-14"
 }
