@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "date": "2026-04-14T16:44:29Z",
+      "version_at_time": "2.1.107",
+      "files_changed": [
+        "claude-code-on-the-web.md",
+        "claude-directory.md",
+        "commands.md",
+        "common-workflows.md",
+        "desktop-scheduled-tasks.md",
+        "desktop.md",
+        "env-vars.md",
+        "github-enterprise-server.md",
+        "overview.md",
+        "platforms.md",
+        "plugins.md",
+        "remote-control.md",
+        "scheduled-tasks.md",
+        "settings.md",
+        "web-quickstart.md"
+      ],
+      "files_added": [
+        "routines.md"
+      ],
+      "files_removed": [
+        "web-scheduled-tasks.md"
+      ]
+    },
+    {
       "date": "2026-04-14T08:33:41Z",
       "version_at_time": "2.1.107",
       "files_changed": [
@@ -2767,20 +2794,6 @@
       "files_added": [
         "desktop-scheduled-tasks.md",
         "ultraplan.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-03T17:35:47Z",
-      "version_at_time": "1.0.128",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "desktop-quickstart.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
