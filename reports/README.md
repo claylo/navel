@@ -101,7 +101,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /powerup | Discover Claude Code features through quick interactive l... | 2.1.90 | available | yes |
 | /privacy-settings | View and update your privacy settings | 2.0.0 | available | yes |
 | **/rate-limit-options** | Show options when rate limit is reached | 2.0.43 | available | **no** |
-| **/recap** | Generate a one-line session recap now | 2.1.105 | available | **no** |
+| /recap | Generate a one-line session recap now | 2.1.105 | available | yes |
 | /release-notes | — | 2.0.0 | available | yes |
 | /reload-plugins | Activate pending plugin changes in the current session | 2.1.64 | available | yes |
 | /remote-control | — | 2.1.51 | available | yes |
