@@ -1210,6 +1210,7 @@
         "plugins-reference.md",
         "plugins.md",
         "remote-control.md",
+        "routines.md",
         "scheduled-tasks.md",
         "server-managed-settings.md",
         "settings.md",
@@ -1218,8 +1219,7 @@
         "third-party-integrations.md",
         "tools-reference.md",
         "troubleshooting.md",
-        "vs-code.md",
-        "web-scheduled-tasks.md"
+        "vs-code.md"
       ],
       "mentions": 137
     },
@@ -1490,7 +1490,7 @@
         "hooks.md",
         "quickstart.md"
       ],
-      "mentions": 40
+      "mentions": 41
     },
     "review": {
       "documented": true,
@@ -1521,9 +1521,9 @@
         "commands.md",
         "desktop-scheduled-tasks.md",
         "overview.md",
+        "routines.md",
         "scheduled-tasks.md",
-        "web-quickstart.md",
-        "web-scheduled-tasks.md"
+        "web-quickstart.md"
       ],
       "mentions": 15
     },
@@ -1544,9 +1544,10 @@
         "hooks-guide.md",
         "hooks.md",
         "remote-control.md",
+        "routines.md",
         "vs-code.md"
       ],
-      "mentions": 9
+      "mentions": 10
     },
     "setup-bedrock": {
       "documented": true,
@@ -1606,6 +1607,7 @@
         "plugin-marketplaces.md",
         "plugins-reference.md",
         "plugins.md",
+        "routines.md",
         "settings.md",
         "skills.md",
         "slash-commands.md",
@@ -1613,7 +1615,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 149
+      "mentions": 150
     },
     "stats": {
       "documented": true,
@@ -1771,9 +1773,10 @@
         "changelog.md",
         "code-review.md",
         "commands.md",
+        "routines.md",
         "vs-code.md"
       ],
-      "mentions": 9
+      "mentions": 10
     },
     "version": {
       "documented": true,
@@ -1801,10 +1804,10 @@
       "doc_files": [
         "claude-code-on-the-web.md",
         "commands.md",
-        "web-quickstart.md",
-        "web-scheduled-tasks.md"
+        "routines.md",
+        "web-quickstart.md"
       ],
-      "mentions": 15
+      "mentions": 16
     }
   },
   "docs_checked_at": "2026-04-14"
