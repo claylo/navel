@@ -974,7 +974,6 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
-        "chrome.md",
         "commands.md",
         "data-usage.md",
         "env-vars.md",
@@ -984,7 +983,7 @@
         "troubleshooting.md",
         "zero-data-retention.md"
       ],
-      "mentions": 18
+      "mentions": 16
     },
     "files": {
       "documented": true,
