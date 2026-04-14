@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-04-14T21:02:04Z",
+      "version_at_time": "2.1.108",
+      "files_changed": [
+        "desktop-quickstart.md",
+        "desktop.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-14T20:15:23Z",
       "version_at_time": "2.1.108",
       "files_changed": [
@@ -2889,19 +2903,6 @@
       "files_changed": [
         "agent-teams.md",
         "sub-agents.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-03T23:00:24Z",
-      "version_at_time": "2.1.91",
-      "files_changed": [
-        "legal-and-compliance.md"
       ],
       "files_added": [
         ""
