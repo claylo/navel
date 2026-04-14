@@ -4,6 +4,19 @@
       "date": "2026-04-14T06:26:45Z",
       "version_at_time": "2.1.107",
       "files_changed": [
+        "structured-outputs.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-04-14T06:26:45Z",
+      "version_at_time": "2.1.107",
+      "files_changed": [
         "changelog.md",
         "chrome.md",
         "costs.md",
@@ -2769,27 +2782,6 @@
         "desktop.md",
         "memory.md",
         "permissions.md",
-        "sandboxing.md",
-        "settings.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-03T01:18:59Z",
-      "version_at_time": "2.1.91",
-      "files_changed": [
-        "changelog.md",
-        "computer-use.md",
-        "desktop.md",
-        "mcp.md",
-        "platforms.md",
-        "plugins-reference.md",
-        "plugins.md",
         "sandboxing.md",
         "settings.md"
       ],
