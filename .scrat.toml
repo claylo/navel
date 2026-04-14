@@ -4,12 +4,3 @@ type = "generic"    # bash project — version bump and publish are manual
 [commands]
 test = "bats tests/"
 
-[hooks]
-pre_ship = [
-    "sync: ~/source/claylo/release-stuff/scripts/verify-release {repo}/v{version}.md",
-    "sync: lychee ~/source/claylo/claylo/projects/{repo}/v{version}.md --config ~/source/claylo/claylo/lychee.toml",
-]
-post_release = [
-    "sync: ~/source/claylo/release-stuff/scripts/draft-flip {repo}/v{version}.md",
-    "sync: ~/source/claylo/release-stuff/scripts/site-build-verify",
-]
