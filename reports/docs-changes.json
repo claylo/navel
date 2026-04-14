@@ -1,6 +1,22 @@
 {
   "changes": [
     {
+      "date": "2026-04-14T06:26:45Z",
+      "version_at_time": "2.1.107",
+      "files_changed": [
+        "changelog.md",
+        "chrome.md",
+        "costs.md",
+        "troubleshooting.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-14T02:07:34Z",
       "version_at_time": "2.1.105",
       "files_changed": [
@@ -2776,19 +2792,6 @@
         "plugins.md",
         "sandboxing.md",
         "settings.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-02T23:53:56Z",
-      "version_at_time": "2.1.91",
-      "files_changed": [
-        "plugin-marketplaces.md"
       ],
       "files_added": [
         ""
