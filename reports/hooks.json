@@ -326,8 +326,8 @@
         "microsoft-foundry.md",
         "platforms.md",
         "remote-control.md",
-        "web-quickstart.md",
-        "web-scheduled-tasks.md"
+        "routines.md",
+        "web-quickstart.md"
       ],
       "mentions": 25
     },
