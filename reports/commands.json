@@ -11,7 +11,6 @@
     "brief",
     "btw",
     "chrome",
-    "claude-api",
     "claude-in-chrome",
     "clear",
     "color",
@@ -107,9 +106,8 @@
     "brief": "Toggle brief-only mode",
     "btw": "Ask a quick side question without interrupting the main conversation",
     "chrome": "Claude in Chrome (Beta) settings",
-    "claude-api": "Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching.\\nTRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks to use the Claude API, Anthropic SDKs, or Managed Agents (`/v1/agents`, `/v1/sessions`); user asks to add, modify, debug, optimize, or improve a Claude feature (prompt caching, cache hit rate, adaptive thinking, compaction, code_execution, batch, files API, citations, memory tool) or a Claude model (Opus/Sonnet/Haiku) in a file; or user asks about prompt caching / cache hit rate / cache reads / cache creation in any project that uses the Anthropic SDK (even without mentioning Claude by name).\\nDO NOT TRIGGER when: file imports `openai`/non-Anthropic SDK, filename signals another provider (`agent-openai.py`, `*-generic.py`), code is provider-neutral, or task is general programming/ML.",
     "claude-in-chrome": "Automates your Chrome browser to interact with web pages - clicking elements, filling forms, capturing screenshots, reading console logs, and navigating sites. Opens pages in new tabs within your existing Chrome session. Requires site-level permissions before executing (configured in the extension).",
-    "clear": "Clear conversation history and free up context",
+    "clear": "Start fresh: discard the current conversation and context",
     "color": "Set the prompt bar color for this session",
     "commit": "Create a git commit",
     "commit-push-pr": "Commit, push, and open a PR",
@@ -183,7 +181,6 @@
     "brief": "available",
     "btw": "available",
     "chrome": "available",
-    "claude-api": "available",
     "claude-in-chrome": "available",
     "clear": "available",
     "color": "available",
@@ -689,16 +686,6 @@
         "vs-code.md"
       ],
       "mentions": 25
-    },
-    "claude-api": {
-      "documented": true,
-      "doc_files": [
-        "changelog.md",
-        "commands.md",
-        "skills.md",
-        "slash-commands.md"
-      ],
-      "mentions": 7
     },
     "claude-in-chrome": {
       "documented": true,
