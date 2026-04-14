@@ -772,7 +772,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 46
+      "mentions": 47
     },
     "config": {
       "documented": true,
@@ -903,7 +903,7 @@
         "keybindings.md",
         "troubleshooting.md"
       ],
-      "mentions": 15
+      "mentions": 16
     },
     "dream": {
       "documented": false,
@@ -1114,12 +1114,13 @@
         "settings.md",
         "skills.md",
         "slash-commands.md",
+        "statusline.md",
         "sub-agents.md",
         "subagents.md",
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 254
+      "mentions": 255
     },
     "ide": {
       "documented": true,
@@ -1440,6 +1441,7 @@
         "discover-plugins.md",
         "github-enterprise-server.md",
         "jetbrains.md",
+        "monitoring-usage.md",
         "overview.md",
         "plugin-marketplaces.md",
         "plugins-reference.md",
@@ -1448,7 +1450,7 @@
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 122
+      "mentions": 124
     },
     "powerup": {
       "documented": true,
@@ -1682,7 +1684,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 147
+      "mentions": 149
     },
     "stats": {
       "documented": true,
@@ -1706,10 +1708,11 @@
         "remote-control.md",
         "server-managed-settings.md",
         "settings.md",
+        "statusline.md",
         "third-party-integrations.md",
         "troubleshooting.md"
       ],
-      "mentions": 15
+      "mentions": 16
     },
     "statusline": {
       "documented": true,
@@ -1721,6 +1724,7 @@
         "env-vars.md",
         "fast-mode.md",
         "model-config.md",
+        "plugins-reference.md",
         "settings.md",
         "statusline.md",
         "sub-agents.md",
@@ -1728,7 +1732,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 30
+      "mentions": 31
     },
     "stickers": {
       "documented": true,
@@ -1751,9 +1755,10 @@
         "commands.md",
         "github-enterprise-server.md",
         "interactive-mode.md",
+        "statusline.md",
         "ultraplan.md"
       ],
-      "mentions": 10
+      "mentions": 11
     },
     "team-onboarding": {
       "documented": true,
@@ -1873,5 +1878,5 @@
       "mentions": 15
     }
   },
-  "docs_checked_at": "2026-04-13"
+  "docs_checked_at": "2026-04-14"
 }
