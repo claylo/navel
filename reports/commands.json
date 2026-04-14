@@ -790,7 +790,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 64
+      "mentions": 65
     },
     "context": {
       "documented": true,
@@ -970,7 +970,7 @@
         "troubleshooting.md",
         "zero-data-retention.md"
       ],
-      "mentions": 16
+      "mentions": 17
     },
     "files": {
       "documented": true,
@@ -1052,6 +1052,7 @@
       "documented": true,
       "doc_files": [
         "best-practices.md",
+        "changelog.md",
         "commands.md",
         "env-vars.md",
         "how-claude-code-works.md",
@@ -1059,7 +1060,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 10
+      "mentions": 11
     },
     "init-verifiers": {
       "documented": false,
@@ -1143,7 +1144,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 28
+      "mentions": 29
     },
     "logout": {
       "documented": true,
@@ -1281,7 +1282,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 104
+      "mentions": 105
     },
     "passes": {
       "documented": true,
@@ -1390,9 +1391,11 @@
       "mentions": 0
     },
     "recap": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "changelog.md"
+      ],
+      "mentions": 1
     },
     "release-notes": {
       "documented": true,
@@ -1461,7 +1464,7 @@
         "remote-control.md",
         "statusline.md"
       ],
-      "mentions": 22
+      "mentions": 23
     },
     "resume": {
       "documented": true,
@@ -1477,15 +1480,16 @@
         "hooks.md",
         "quickstart.md"
       ],
-      "mentions": 41
+      "mentions": 42
     },
     "review": {
       "documented": true,
       "doc_files": [
+        "changelog.md",
         "cli-reference.md",
         "commands.md"
       ],
-      "mentions": 2
+      "mentions": 3
     },
     "rewind": {
       "documented": true,
@@ -1499,7 +1503,7 @@
         "costs.md",
         "env-vars.md"
       ],
-      "mentions": 12
+      "mentions": 13
     },
     "schedule": {
       "documented": true,
@@ -1521,7 +1525,7 @@
         "claude-directory.md",
         "commands.md"
       ],
-      "mentions": 3
+      "mentions": 4
     },
     "session": {
       "documented": true,
