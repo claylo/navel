@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-04-14T08:33:41Z",
+      "version_at_time": "2.1.107",
+      "files_changed": [
+        "structured-outputs.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-14T06:26:45Z",
       "version_at_time": "2.1.107",
       "files_changed": [
@@ -2765,25 +2778,6 @@
       "files_changed": [
         "amazon-bedrock.md",
         "desktop-quickstart.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-03T02:58:29Z",
-      "version_at_time": "2.1.91",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "best-practices.md",
-        "desktop.md",
-        "memory.md",
-        "permissions.md",
-        "sandboxing.md",
-        "settings.md"
       ],
       "files_added": [
         ""
