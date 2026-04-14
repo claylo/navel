@@ -38,7 +38,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (95)</summary>
+<summary>Commands (94)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -53,9 +53,8 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/brief** | Toggle brief-only mode | 2.1.72 | available | **no** |
 | /btw | Ask a quick side question without interrupting the main c... | 2.1.6 | available | yes |
 | /chrome | Claude in Chrome (Beta) settings | 2.0.71 | available | yes |
-| /claude-api | Build, debug, and optimize Claude API / Anthropic SDK app... | 2.1.69 | available | yes |
 | /claude-in-chrome | Automates your Chrome browser to interact with web pages ... | 2.1.7 | available | yes |
-| /clear | Clear conversation history and free up context | 2.0.0 | available | yes |
+| /clear | Start fresh: discard the current conversation and context | 2.0.0 | available | yes |
 | /color | Set the prompt bar color for this session | 2.1.7 | available | yes |
 | /commit | Create a git commit | 2.1.51 | available | yes |
 | /commit-push-pr | Commit, push, and open a PR | 2.1.51 | available | yes |
