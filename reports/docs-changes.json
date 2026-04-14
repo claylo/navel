@@ -1,6 +1,32 @@
 {
   "changes": [
     {
+      "date": "2026-04-13T23:37:15Z",
+      "version_at_time": "2.1.105",
+      "files_changed": [
+        "commands.md",
+        "env-vars.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "keybindings.md",
+        "memory.md",
+        "monitoring-usage.md",
+        "permissions.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "skills.md",
+        "slash-commands.md",
+        "statusline.md",
+        "tools-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-13T22:08:38Z",
       "version_at_time": "2.1.105",
       "files_changed": [
@@ -2688,30 +2714,6 @@
         "sandboxing.md",
         "settings.md",
         "setup.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-02T17:04:04Z",
-      "version_at_time": "2.1.90",
-      "files_changed": [
-        "claude-directory.md",
-        "commands.md",
-        "common-workflows.md",
-        "env-vars.md",
-        "monitoring-usage.md",
-        "overview.md",
-        "permission-modes.md",
-        "permissions.md",
-        "plugin-marketplaces.md",
-        "quickstart.md",
-        "setup.md",
-        "sub-agents.md"
       ],
       "files_added": [
         ""
