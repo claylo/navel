@@ -662,11 +662,12 @@
         "best-practices.md",
         "changelog.md",
         "commands.md",
+        "desktop.md",
         "interactive-mode.md",
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 11
+      "mentions": 12
     },
     "chrome": {
       "documented": true,
@@ -869,7 +870,7 @@
         "web-quickstart.md",
         "zero-data-retention.md"
       ],
-      "mentions": 57
+      "mentions": 58
     },
     "diff": {
       "documented": true,
