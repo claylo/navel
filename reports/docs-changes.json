@@ -1,6 +1,81 @@
 {
   "changes": [
     {
+      "date": "2026-04-14T20:15:23Z",
+      "version_at_time": "2.1.108",
+      "files_changed": [
+        "agent-teams.md",
+        "amazon-bedrock.md",
+        "authentication.md",
+        "best-practices.md",
+        "changelog.md",
+        "channels-reference.md",
+        "channels.md",
+        "checkpointing.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "code-review.md",
+        "common-workflows.md",
+        "computer-use.md",
+        "costs.md",
+        "desktop.md",
+        "discover-plugins.md",
+        "fast-mode.md",
+        "fullscreen.md",
+        "github-actions.md",
+        "github-enterprise-server.md",
+        "gitlab-ci-cd.md",
+        "google-vertex-ai.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "keybindings.md",
+        "llm-gateway.md",
+        "mcp.md",
+        "memory.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "output-styles.md",
+        "overview.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "quickstart.md",
+        "remote-control.md",
+        "routines.md",
+        "sandboxing.md",
+        "scheduled-tasks.md",
+        "server-managed-settings.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slash-commands.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md",
+        "terminal-config.md",
+        "third-party-integrations.md",
+        "tools-reference.md",
+        "troubleshooting.md",
+        "voice-dictation.md",
+        "vs-code.md",
+        "web-quickstart.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-14T19:32:00Z",
       "version_at_time": "2.1.108",
       "files_changed": [
@@ -2827,21 +2902,6 @@
       "version_at_time": "2.1.91",
       "files_changed": [
         "legal-and-compliance.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-03T19:34:20Z",
-      "version_at_time": "2.1.91",
-      "files_changed": [
-        "headless.md",
-        "permission-modes.md",
-        "vs-code.md"
       ],
       "files_added": [
         ""
