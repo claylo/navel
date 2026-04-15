@@ -38,7 +38,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (94)</summary>
+<summary>Commands (96)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -75,6 +75,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /fast | — | 2.1.36 | available | yes |
 | /feedback | Submit feedback about Claude Code | 2.0.0 | available | yes |
 | **/files** | List all files currently in context | 2.0.0 | *disabled* | yes |
+| /focus | Toggle focus view (show only your prompt, a tool summary,... | 2.1.110 | available | yes |
 | /heapdump | Dump the JS heap to ~/Desktop | 2.1.71 | available | yes |
 | /help | Show help and available commands | 2.0.0 | available | yes |
 | /hooks | View hook configurations for tool events | 2.0.0 | available | yes |
@@ -128,6 +129,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /terminal-setup | — | 2.0.0 | available | yes |
 | /theme | Change the theme | 2.0.73 | available | yes |
 | **/toggle-memory** | Toggle automemory off/on for this session | 2.1.90 | *disabled* | **no** |
+| **/tui** | Set the terminal UI renderer (default | fullscreen) | 2.1.110 | available | **no** |
 | /ultraplan | — | 2.1.83 | available | yes |
 | **/ultrareview** | — | 2.1.83 | available | **no** |
 | **/update** | Switch to the latest version (conversation continues) | 2.1.101 | *disabled* | yes |
@@ -600,6 +602,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.110 | — | +focus, +tui | — |
 | 2.1.105 | — | +recap | — |
 | 2.1.101 | — | +loops, +update | — |
 | 2.1.98 | — | +setup-vertex | — |
