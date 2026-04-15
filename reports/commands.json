@@ -641,12 +641,13 @@
         "features-overview.md",
         "google-vertex-ai.md",
         "microsoft-foundry.md",
+        "overview.md",
         "quickstart.md",
         "skills.md",
         "slash-commands.md",
         "third-party-integrations.md"
       ],
-      "mentions": 10
+      "mentions": 11
     },
     "branch": {
       "documented": true,
@@ -882,7 +883,7 @@
         "web-quickstart.md",
         "zero-data-retention.md"
       ],
-      "mentions": 58
+      "mentions": 60
     },
     "diff": {
       "documented": true,
@@ -1105,7 +1106,7 @@
         "setup.md",
         "troubleshooting.md"
       ],
-      "mentions": 39
+      "mentions": 42
     },
     "install-github-app": {
       "documented": true,
@@ -1387,7 +1388,7 @@
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 124
+      "mentions": 125
     },
     "powerup": {
       "documented": true,
@@ -1779,9 +1780,10 @@
         "changelog.md",
         "commands.md",
         "env-vars.md",
+        "overview.md",
         "quickstart.md"
       ],
-      "mentions": 8
+      "mentions": 9
     },
     "usage": {
       "documented": true,
