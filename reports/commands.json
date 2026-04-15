@@ -1244,7 +1244,7 @@
         "troubleshooting.md",
         "web-quickstart.md"
       ],
-      "mentions": 86
+      "mentions": 87
     },
     "mobile": {
       "documented": true,
@@ -1768,7 +1768,7 @@
         "routines.md",
         "vs-code.md"
       ],
-      "mentions": 10
+      "mentions": 11
     },
     "version": {
       "documented": true,
@@ -1802,5 +1802,5 @@
       "mentions": 16
     }
   },
-  "docs_checked_at": "2026-04-14"
+  "docs_checked_at": "2026-04-15"
 }
