@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-04-15T16:22:22Z",
+      "version_at_time": "2.1.109",
+      "files_changed": [
+        "claude-code-on-the-web.md",
+        "env-vars.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-15T14:06:18Z",
       "version_at_time": "2.1.109",
       "files_changed": [
@@ -2876,23 +2890,6 @@
       "version_at_time": "2.1.94",
       "files_changed": [
         "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-07T19:10:00Z",
-      "version_at_time": "2.1.92",
-      "files_changed": [
-        "code-review.md",
-        "env-vars.md",
-        "hooks.md",
-        "troubleshooting.md",
-        "vs-code.md"
       ],
       "files_added": [
         ""
