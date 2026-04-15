@@ -1,6 +1,25 @@
 {
   "changes": [
     {
+      "date": "2026-04-15T21:57:14Z",
+      "version_at_time": "2.1.110",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "google-vertex-ai.md",
+        "microsoft-foundry.md",
+        "overview.md",
+        "quickstart.md",
+        "third-party-integrations.md",
+        "web-quickstart.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-15T18:15:04Z",
       "version_at_time": "2.1.109",
       "files_changed": [
@@ -2874,23 +2893,6 @@
         "plugins.md",
         "troubleshooting.md",
         "ultraplan.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-07T23:13:34Z",
-      "version_at_time": "2.1.94",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "env-vars.md",
-        "interactive-mode.md",
-        "keybindings.md",
-        "model-config.md"
       ],
       "files_added": [
         ""
