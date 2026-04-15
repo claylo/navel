@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-04-15T14:06:18Z",
+      "version_at_time": "2.1.109",
+      "files_changed": [
+        "env-vars.md",
+        "settings.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-15T07:25:45Z",
       "version_at_time": "2.1.109",
       "files_changed": [
@@ -2879,33 +2893,6 @@
         "hooks.md",
         "troubleshooting.md",
         "vs-code.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-04T16:55:51Z",
-      "version_at_time": "2.1.92",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "cli-reference.md",
-        "commands.md",
-        "data-usage.md",
-        "env-vars.md",
-        "interactive-mode.md",
-        "keybindings.md",
-        "mcp.md",
-        "permissions.md",
-        "remote-control.md",
-        "server-managed-settings.md",
-        "settings.md",
-        "skills.md",
-        "terminal-config.md",
-        "troubleshooting.md"
       ],
       "files_added": [
         ""
