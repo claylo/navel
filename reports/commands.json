@@ -33,6 +33,7 @@
     "fast",
     "feedback",
     "files",
+    "focus",
     "heapdump",
     "help",
     "hooks",
@@ -86,6 +87,7 @@
     "terminal-setup",
     "theme",
     "toggle-memory",
+    "tui",
     "ultraplan",
     "ultrareview",
     "update",
@@ -124,6 +126,7 @@
     "extra-usage": "Configure extra usage to keep working when limits are hit",
     "feedback": "Submit feedback about Claude Code",
     "files": "List all files currently in context",
+    "focus": "Toggle focus view (show only your prompt, a tool summary, and the final response)",
     "heapdump": "Dump the JS heap to ~/Desktop",
     "help": "Show help and available commands",
     "hooks": "View hook configurations for tool events",
@@ -162,6 +165,7 @@
     "teleport": "Resume a Claude Code session from claude.ai",
     "theme": "Change the theme",
     "toggle-memory": "Toggle automemory off/on for this session",
+    "tui": "Set the terminal UI renderer (default | fullscreen)",
     "update": "Switch to the latest version (conversation continues)",
     "upgrade": "Upgrade to Max for higher rate limits and more Opus",
     "usage": "Show plan usage limits",
@@ -203,6 +207,7 @@
     "fast": "available",
     "feedback": "available",
     "files": "disabled",
+    "focus": "available",
     "heapdump": "available",
     "help": "available",
     "hooks": "available",
@@ -256,6 +261,7 @@
     "terminal-setup": "available",
     "theme": "available",
     "toggle-memory": "disabled",
+    "tui": "available",
     "ultraplan": "available",
     "ultrareview": "available",
     "update": "disabled",
@@ -563,6 +569,12 @@
     "2.1.105": {
       "added": [
         "recap"
+      ]
+    },
+    "2.1.110": {
+      "added": [
+        "focus",
+        "tui"
       ]
     }
   },
@@ -980,6 +992,13 @@
         "slash-commands.md"
       ],
       "mentions": 6
+    },
+    "focus": {
+      "documented": true,
+      "doc_files": [
+        "settings.md"
+      ],
+      "mentions": 1
     },
     "heapdump": {
       "documented": true,
@@ -1720,6 +1739,11 @@
       "mentions": 5
     },
     "toggle-memory": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "tui": {
       "documented": false,
       "doc_files": [],
       "mentions": 0
