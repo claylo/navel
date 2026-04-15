@@ -1,6 +1,23 @@
 {
   "changes": [
     {
+      "date": "2026-04-15T00:49:59Z",
+      "version_at_time": "2.1.108",
+      "files_changed": [
+        "overview.md",
+        "plugins-reference.md",
+        "quickstart.md",
+        "routines.md",
+        "setup.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-14T21:02:04Z",
       "version_at_time": "2.1.108",
       "files_changed": [
@@ -2892,20 +2909,6 @@
         "2026-w13.md",
         "2026-w14.md",
         "index.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-04T02:46:35Z",
-      "version_at_time": "2.1.92",
-      "files_changed": [
-        "changelog.md",
-        "env-vars.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
