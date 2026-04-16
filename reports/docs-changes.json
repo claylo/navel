@@ -1,6 +1,40 @@
 {
   "changes": [
     {
+      "date": "2026-04-16T17:22:15Z",
+      "version_at_time": "2.1.111",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "cli-reference.md",
+        "commands.md",
+        "common-workflows.md",
+        "desktop.md",
+        "env-vars.md",
+        "fast-mode.md",
+        "github-actions.md",
+        "google-vertex-ai.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "permission-modes.md",
+        "plugins-reference.md",
+        "settings.md",
+        "skills.md",
+        "slash-commands.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md",
+        "vs-code.md"
+      ],
+      "files_added": [
+        "plugin-dependencies.md",
+        "ultrareview.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-16T15:56:59Z",
       "version_at_time": "2.1.111",
       "files_changed": [
@@ -2861,55 +2895,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-08T18:24:58Z",
-      "version_at_time": "2.1.96",
-      "files_changed": [
-        "claude-code-on-the-web.md",
-        "cli-reference.md",
-        "commands.md",
-        "data-usage.md",
-        "desktop.md",
-        "devcontainer.md",
-        "env-vars.md",
-        "github-actions.md",
-        "github-enterprise-server.md",
-        "gitlab-ci-cd.md",
-        "headless.md",
-        "legal-and-compliance.md",
-        "overview.md",
-        "slack.md",
-        "ultraplan.md",
-        "web-scheduled-tasks.md"
-      ],
-      "files_added": [
-        "agent-loop.md",
-        "claude-code-features.md",
-        "cost-tracking.md",
-        "custom-tools.md",
-        "file-checkpointing.md",
-        "hosting.md",
-        "migration-guide.md",
-        "modifying-system-prompts.md",
-        "python.md",
-        "secure-deployment.md",
-        "sessions.md",
-        "slash-commands.md",
-        "streaming-output.md",
-        "streaming-vs-single-mode.md",
-        "structured-outputs.md",
-        "subagents.md",
-        "todo-tracking.md",
-        "tool-search.md",
-        "typescript-v2-preview.md",
-        "typescript.md",
-        "user-input.md",
-        "web-quickstart.md"
       ],
       "files_removed": [
         ""
