@@ -1,6 +1,37 @@
 {
   "changes": [
     {
+      "date": "2026-04-16T15:56:59Z",
+      "version_at_time": "2.1.111",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "cli-reference.md",
+        "commands.md",
+        "common-workflows.md",
+        "desktop.md",
+        "env-vars.md",
+        "fast-mode.md",
+        "github-actions.md",
+        "google-vertex-ai.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "permission-modes.md",
+        "settings.md",
+        "skills.md",
+        "slash-commands.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md"
+      ],
+      "files_added": [
+        "ultrareview.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-16T15:29:16Z",
       "version_at_time": "2.1.111",
       "files_changed": [
@@ -2879,25 +2910,6 @@
         "typescript.md",
         "user-input.md",
         "web-quickstart.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-08T17:24:37Z",
-      "version_at_time": "2.1.96",
-      "files_changed": [
-        "claude-directory.md",
-        "data-usage.md",
-        "how-claude-code-works.md",
-        "mcp.md",
-        "settings.md",
-        "skills.md",
-        "troubleshooting.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
