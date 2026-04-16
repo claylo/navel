@@ -1796,10 +1796,11 @@
         "changelog.md",
         "code-review.md",
         "commands.md",
+        "costs.md",
         "routines.md",
         "vs-code.md"
       ],
-      "mentions": 11
+      "mentions": 12
     },
     "version": {
       "documented": true,
