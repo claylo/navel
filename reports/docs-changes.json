@@ -16,6 +16,21 @@
       ]
     },
     {
+      "date": "2026-04-16T02:10:10Z",
+      "version_at_time": "2.1.110",
+      "files_changed": [
+        "changelog.md",
+        "costs.md",
+        "statusline.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-16T00:43:46Z",
       "version_at_time": "2.1.110",
       "files_changed": [
@@ -2864,20 +2879,6 @@
         "authentication.md",
         "setup.md",
         "statusline.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-08T13:00:17Z",
-      "version_at_time": "2.1.96",
-      "files_changed": [
-        "changelog.md",
-        "fast-mode.md"
       ],
       "files_added": [
         ""
