@@ -1,6 +1,41 @@
 {
   "changes": [
     {
+      "date": "2026-04-16T19:30:59Z",
+      "version_at_time": "2.1.112",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "cli-reference.md",
+        "commands.md",
+        "common-workflows.md",
+        "desktop.md",
+        "env-vars.md",
+        "fast-mode.md",
+        "github-actions.md",
+        "google-vertex-ai.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "permission-modes.md",
+        "plugins-reference.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slash-commands.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md",
+        "vs-code.md"
+      ],
+      "files_added": [
+        "plugin-dependencies.md",
+        "ultrareview.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-16T18:15:06Z",
       "version_at_time": "2.1.111",
       "files_changed": [
@@ -2901,20 +2936,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-08T20:13:38Z",
-      "version_at_time": "2.1.96",
-      "files_changed": [
-        "skills.md",
-        "slash-commands.md"
-      ],
-      "files_added": [
-        "observability.md"
       ],
       "files_removed": [
         ""
