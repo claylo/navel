@@ -38,7 +38,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (96)</summary>
+<summary>Commands (97)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -54,7 +54,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /btw | Ask a quick side question without interrupting the main c... | 2.1.6 | available | yes |
 | /chrome | Claude in Chrome (Beta) settings | 2.0.71 | available | yes |
 | /claude-in-chrome | Automates your Chrome browser to interact with web pages ... | 2.1.7 | available | yes |
-| /clear | Start fresh: discard the current conversation and context | 2.0.0 | available | yes |
+| /clear | Start a new session with empty context; previous session ... | 2.0.0 | available | yes |
 | /color | Set the prompt bar color for this session | 2.1.7 | available | yes |
 | /commit | Create a git commit | 2.1.51 | available | yes |
 | /commit-push-pr | Commit, push, and open a PR | 2.1.51 | available | yes |
@@ -88,6 +88,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /install-slack-app | Install the Claude Slack app | 2.0.62 | available | yes |
 | /keybindings | Open or create your keybindings configuration file | 2.1.6 | available | yes |
 | **/keybindings-help** | — | 2.1.20 | available | **no** |
+| **/less-permission-prompts** | Scan your transcripts for common read-only Bash and MCP t... | 2.1.111 | available | **no** |
 | /login | — | 2.0.0 | available | yes |
 | /logout | Sign out from your Anthropic account | 2.0.0 | available | yes |
 | **/loops** | List, create, and delete recurring loops and stop-hooks | 2.1.101 | *disabled* | **no** |
@@ -111,7 +112,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /resume | Resume a previous conversation | 2.0.0 | available | yes |
 | /review | Review a pull request | 2.0.0 | available | yes |
 | /rewind | — | 2.0.0 | available | yes |
-| /schedule | Create, update, list, or run scheduled remote agents (tri... | 2.1.80 | available | yes |
+| /schedule | — | 2.1.80 | available | yes |
 | /security-review | Complete a security review of the pending changes on the ... | 2.0.0 | available | yes |
 | /session | — | 2.1.15 | available | yes |
 | /setup-bedrock | Reconfigure AWS Bedrock authentication, region, or model ... | 2.1.92 | available | yes |
@@ -602,6 +603,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.111 | — | +less-permission-prompts | — |
 | 2.1.110 | — | +focus, +tui | — |
 | 2.1.105 | — | +recap | — |
 | 2.1.101 | — | +loops, +update | — |
