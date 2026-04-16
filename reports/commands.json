@@ -620,9 +620,11 @@
       "mentions": 65
     },
     "autocompact": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "changelog.md"
+      ],
+      "mentions": 1
     },
     "autofix-pr": {
       "documented": true,
@@ -804,7 +806,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 65
+      "mentions": 67
     },
     "context": {
       "documented": true,
@@ -822,7 +824,7 @@
         "statusline.md",
         "voice-dictation.md"
       ],
-      "mentions": 32
+      "mentions": 33
     },
     "copy": {
       "documented": true,
@@ -904,7 +906,7 @@
         "keybindings.md",
         "troubleshooting.md"
       ],
-      "mentions": 16
+      "mentions": 17
     },
     "dream": {
       "documented": false,
@@ -936,7 +938,7 @@
         "commands.md",
         "quickstart.md"
       ],
-      "mentions": 4
+      "mentions": 5
     },
     "export": {
       "documented": true,
@@ -997,9 +999,10 @@
     "focus": {
       "documented": true,
       "doc_files": [
+        "changelog.md",
         "settings.md"
       ],
-      "mentions": 1
+      "mentions": 2
     },
     "heapdump": {
       "documented": true,
@@ -1388,7 +1391,7 @@
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 125
+      "mentions": 127
     },
     "powerup": {
       "documented": true,
@@ -1436,7 +1439,7 @@
         "mcp.md",
         "plugins.md"
       ],
-      "mentions": 12
+      "mentions": 13
     },
     "remote-control": {
       "documented": true,
@@ -1485,7 +1488,7 @@
         "remote-control.md",
         "statusline.md"
       ],
-      "mentions": 23
+      "mentions": 24
     },
     "resume": {
       "documented": true,
@@ -1627,7 +1630,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 150
+      "mentions": 151
     },
     "stats": {
       "documented": true,
@@ -1745,9 +1748,11 @@
       "mentions": 0
     },
     "tui": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "changelog.md"
+      ],
+      "mentions": 2
     },
     "ultraplan": {
       "documented": true,
@@ -1828,5 +1833,5 @@
       "mentions": 16
     }
   },
-  "docs_checked_at": "2026-04-15"
+  "docs_checked_at": "2026-04-16"
 }
