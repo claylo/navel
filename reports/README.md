@@ -45,7 +45,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /add-dir | Add a new working directory | 2.0.0 | available | yes |
 | **/advisor** | Configure the Advisor Tool to consult a stronger model fo... | 2.1.83 | available | **no** |
 | /agents | Manage agent configurations | 2.0.0 | available | yes |
-| /autocompact | Configure the auto-compact window size | 2.1.89 | available | yes |
+| **/autocompact** | Configure the auto-compact window size | 2.1.89 | available | **no** |
 | /autofix-pr | Spawn a remote Claude Code session that monitors and auto... | 2.1.94 | available | yes |
 | /batch | Research and plan a large-scale change, then execute it i... | 2.1.63 | available | yes |
 | /branch | — | 2.1.77 | available | yes |
@@ -88,7 +88,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /install-slack-app | Install the Claude Slack app | 2.0.62 | available | yes |
 | /keybindings | Open or create your keybindings configuration file | 2.1.6 | available | yes |
 | **/keybindings-help** | — | 2.1.20 | available | **no** |
-| **/less-permission-prompts** | Scan your transcripts for common read-only Bash and MCP t... | 2.1.111 | available | **no** |
+| /less-permission-prompts | Scan your transcripts for common read-only Bash and MCP t... | 2.1.111 | available | yes |
 | /login | — | 2.0.0 | available | yes |
 | /logout | Sign out from your Anthropic account | 2.0.0 | available | yes |
 | **/loops** | List, create, and delete recurring loops and stop-hooks | 2.1.101 | *disabled* | **no** |
@@ -132,7 +132,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/toggle-memory** | Toggle automemory off/on for this session | 2.1.90 | *disabled* | **no** |
 | /tui | Set the terminal UI renderer (default | fullscreen) | 2.1.110 | available | yes |
 | /ultraplan | — | 2.1.83 | available | yes |
-| **/ultrareview** | — | 2.1.83 | available | **no** |
+| /ultrareview | — | 2.1.83 | available | yes |
 | **/update** | Switch to the latest version (conversation continues) | 2.1.101 | *disabled* | yes |
 | /upgrade | Upgrade to Max for higher rate limits and more Opus | 2.0.0 | available | yes |
 | /usage | Show plan usage limits | 2.0.0 | available | yes |
