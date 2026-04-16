@@ -46,6 +46,7 @@
     "install-slack-app",
     "keybindings",
     "keybindings-help",
+    "less-permission-prompts",
     "login",
     "logout",
     "loops",
@@ -109,7 +110,7 @@
     "btw": "Ask a quick side question without interrupting the main conversation",
     "chrome": "Claude in Chrome (Beta) settings",
     "claude-in-chrome": "Automates your Chrome browser to interact with web pages - clicking elements, filling forms, capturing screenshots, reading console logs, and navigating sites. Opens pages in new tabs within your existing Chrome session. Requires site-level permissions before executing (configured in the extension).",
-    "clear": "Start fresh: discard the current conversation and context",
+    "clear": "Start a new session with empty context; previous session stays on disk (resumable with /resume)",
     "color": "Set the prompt bar color for this session",
     "commit": "Create a git commit",
     "commit-push-pr": "Commit, push, and open a PR",
@@ -137,6 +138,7 @@
     "install-github-app": "Set up Claude GitHub Actions for a repository",
     "install-slack-app": "Install the Claude Slack app",
     "keybindings": "Open or create your keybindings configuration file",
+    "less-permission-prompts": "Scan your transcripts for common read-only Bash and MCP tool calls, then add a prioritized allowlist to project .claude/settings.json to reduce permission prompts.",
     "logout": "Sign out from your Anthropic account",
     "loops": "List, create, and delete recurring loops and stop-hooks",
     "mcp": "Manage MCP servers",
@@ -151,7 +153,6 @@
     "rename": "Rename the current conversation",
     "resume": "Resume a previous conversation",
     "review": "Review a pull request",
-    "schedule": "Create, update, list, or run scheduled remote agents (triggers) that execute on a cron schedule.",
     "security-review": "Complete a security review of the pending changes on the current branch",
     "setup-bedrock": "Reconfigure AWS Bedrock authentication, region, or model pins",
     "setup-vertex": "Reconfigure Google Vertex AI authentication, project, region, or model pins",
@@ -220,6 +221,7 @@
     "install-slack-app": "available",
     "keybindings": "available",
     "keybindings-help": "available",
+    "less-permission-prompts": "available",
     "login": "available",
     "logout": "available",
     "loops": "disabled",
@@ -575,6 +577,11 @@
       "added": [
         "focus",
         "tui"
+      ]
+    },
+    "2.1.111": {
+      "added": [
+        "less-permission-prompts"
       ]
     }
   },
@@ -1142,6 +1149,11 @@
       "mentions": 16
     },
     "keybindings-help": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
+    "less-permission-prompts": {
       "documented": false,
       "doc_files": [],
       "mentions": 0
