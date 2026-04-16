@@ -627,11 +627,9 @@
       "mentions": 65
     },
     "autocompact": {
-      "documented": true,
-      "doc_files": [
-        "changelog.md"
-      ],
-      "mentions": 1
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "autofix-pr": {
       "documented": true,
@@ -726,13 +724,15 @@
         "commands.md",
         "costs.md",
         "env-vars.md",
+        "errors.md",
         "hooks-guide.md",
         "hooks.md",
         "interactive-mode.md",
         "quickstart.md",
+        "remote-control.md",
         "troubleshooting.md"
       ],
-      "mentions": 34
+      "mentions": 39
     },
     "color": {
       "documented": true,
@@ -747,12 +747,13 @@
     "commit": {
       "documented": true,
       "doc_files": [
+        "changelog.md",
         "headless.md",
         "settings.md",
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 7
+      "mentions": 8
     },
     "commit-push-pr": {
       "documented": true,
@@ -773,16 +774,19 @@
         "costs.md",
         "desktop.md",
         "env-vars.md",
+        "errors.md",
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
         "memory.md",
+        "monitoring-usage.md",
+        "remote-control.md",
         "skills.md",
         "slash-commands.md",
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 47
+      "mentions": 56
     },
     "config": {
       "documented": true,
@@ -813,7 +817,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 67
+      "mentions": 79
     },
     "context": {
       "documented": true,
@@ -824,14 +828,16 @@
         "commands.md",
         "context-window.md",
         "costs.md",
+        "errors.md",
         "how-claude-code-works.md",
         "keybindings.md",
+        "remote-control.md",
         "skills.md",
         "slash-commands.md",
         "statusline.md",
         "voice-dictation.md"
       ],
-      "mentions": 33
+      "mentions": 38
     },
     "copy": {
       "documented": true,
@@ -848,9 +854,10 @@
         "claude-directory.md",
         "commands.md",
         "costs.md",
+        "remote-control.md",
         "statusline.md"
       ],
-      "mentions": 14
+      "mentions": 15
     },
     "debug": {
       "documented": true,
@@ -880,6 +887,7 @@
         "desktop-quickstart.md",
         "desktop-scheduled-tasks.md",
         "desktop.md",
+        "errors.md",
         "how-claude-code-works.md",
         "overview.md",
         "permission-modes.md",
@@ -892,15 +900,16 @@
         "web-quickstart.md",
         "zero-data-retention.md"
       ],
-      "mentions": 60
+      "mentions": 62
     },
     "diff": {
       "documented": true,
       "doc_files": [
         "commands.md",
+        "permissions.md",
         "plugins-reference.md"
       ],
-      "mentions": 2
+      "mentions": 3
     },
     "doctor": {
       "documented": true,
@@ -909,11 +918,13 @@
         "claude-directory.md",
         "commands.md",
         "env-vars.md",
+        "errors.md",
         "how-claude-code-works.md",
         "keybindings.md",
+        "plugin-dependencies.md",
         "troubleshooting.md"
       ],
-      "mentions": 17
+      "mentions": 20
     },
     "dream": {
       "documented": false,
@@ -928,6 +939,7 @@
         "common-workflows.md",
         "costs.md",
         "env-vars.md",
+        "errors.md",
         "model-config.md",
         "plugins-reference.md",
         "settings.md",
@@ -936,16 +948,17 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 24
+      "mentions": 30
     },
     "exit": {
       "documented": true,
       "doc_files": [
         "changelog.md",
         "commands.md",
-        "quickstart.md"
+        "quickstart.md",
+        "remote-control.md"
       ],
-      "mentions": 5
+      "mentions": 6
     },
     "export": {
       "documented": true,
@@ -963,9 +976,11 @@
       "doc_files": [
         "changelog.md",
         "commands.md",
-        "env-vars.md"
+        "env-vars.md",
+        "errors.md",
+        "ultrareview.md"
       ],
-      "mentions": 3
+      "mentions": 5
     },
     "fast": {
       "documented": true,
@@ -987,13 +1002,14 @@
         "commands.md",
         "data-usage.md",
         "env-vars.md",
+        "errors.md",
         "fullscreen.md",
         "permission-modes.md",
         "security.md",
         "troubleshooting.md",
         "zero-data-retention.md"
       ],
-      "mentions": 17
+      "mentions": 20
     },
     "files": {
       "documented": true,
@@ -1007,16 +1023,20 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "commands.md",
+        "fullscreen.md",
         "settings.md"
       ],
-      "mentions": 2
+      "mentions": 4
     },
     "heapdump": {
       "documented": true,
       "doc_files": [
-        "changelog.md"
+        "changelog.md",
+        "commands.md",
+        "troubleshooting.md"
       ],
-      "mentions": 1
+      "mentions": 3
     },
     "help": {
       "documented": true,
@@ -1044,6 +1064,7 @@
         "costs.md",
         "desktop.md",
         "env-vars.md",
+        "errors.md",
         "features-overview.md",
         "hooks-guide.md",
         "hooks.md",
@@ -1067,7 +1088,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 255
+      "mentions": 256
     },
     "ide": {
       "documented": true,
@@ -1086,12 +1107,13 @@
         "changelog.md",
         "commands.md",
         "env-vars.md",
+        "headless.md",
         "how-claude-code-works.md",
         "memory.md",
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 11
+      "mentions": 12
     },
     "init-verifiers": {
       "documented": false,
@@ -1154,9 +1176,12 @@
       "mentions": 0
     },
     "less-permission-prompts": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "commands.md"
+      ],
+      "mentions": 2
     },
     "login": {
       "documented": true,
@@ -1168,6 +1193,7 @@
         "commands.md",
         "costs.md",
         "env-vars.md",
+        "errors.md",
         "google-vertex-ai.md",
         "hooks.md",
         "microsoft-foundry.md",
@@ -1176,11 +1202,12 @@
         "skills.md",
         "slash-commands.md",
         "troubleshooting.md",
+        "ultrareview.md",
         "voice-dictation.md",
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 29
+      "mentions": 41
     },
     "logout": {
       "documented": true,
@@ -1189,6 +1216,7 @@
         "authentication.md",
         "commands.md",
         "env-vars.md",
+        "errors.md",
         "google-vertex-ai.md",
         "hooks-guide.md",
         "hooks.md",
@@ -1196,7 +1224,7 @@
         "remote-control.md",
         "troubleshooting.md"
       ],
-      "mentions": 11
+      "mentions": 13
     },
     "loops": {
       "documented": false,
@@ -1223,6 +1251,7 @@
         "desktop.md",
         "discover-plugins.md",
         "env-vars.md",
+        "errors.md",
         "features-overview.md",
         "hooks.md",
         "how-claude-code-works.md",
@@ -1245,7 +1274,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 137
+      "mentions": 142
     },
     "memory": {
       "documented": true,
@@ -1259,6 +1288,7 @@
         "costs.md",
         "desktop.md",
         "env-vars.md",
+        "errors.md",
         "features-overview.md",
         "github-actions.md",
         "hooks-guide.md",
@@ -1279,7 +1309,7 @@
         "troubleshooting.md",
         "web-quickstart.md"
       ],
-      "mentions": 87
+      "mentions": 88
     },
     "mobile": {
       "documented": true,
@@ -1302,6 +1332,7 @@
         "common-workflows.md",
         "costs.md",
         "env-vars.md",
+        "errors.md",
         "fast-mode.md",
         "github-actions.md",
         "hooks-guide.md",
@@ -1309,6 +1340,7 @@
         "how-claude-code-works.md",
         "model-config.md",
         "monitoring-usage.md",
+        "permission-modes.md",
         "plugins-reference.md",
         "settings.md",
         "skills.md",
@@ -1318,7 +1350,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 105
+      "mentions": 116
     },
     "passes": {
       "documented": true,
@@ -1339,6 +1371,7 @@
         "commands.md",
         "common-workflows.md",
         "desktop.md",
+        "headless.md",
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
@@ -1361,7 +1394,7 @@
         "tools-reference.md",
         "troubleshooting.md"
       ],
-      "mentions": 112
+      "mentions": 120
     },
     "plan": {
       "documented": true,
@@ -1393,17 +1426,20 @@
         "desktop.md",
         "discover-plugins.md",
         "github-enterprise-server.md",
+        "headless.md",
         "jetbrains.md",
         "monitoring-usage.md",
         "overview.md",
+        "plugin-dependencies.md",
         "plugin-marketplaces.md",
         "plugins-reference.md",
         "plugins.md",
         "quickstart.md",
+        "remote-control.md",
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 127
+      "mentions": 132
     },
     "powerup": {
       "documented": true,
@@ -1429,9 +1465,12 @@
     "recap": {
       "documented": true,
       "doc_files": [
-        "changelog.md"
+        "changelog.md",
+        "commands.md",
+        "interactive-mode.md",
+        "remote-control.md"
       ],
-      "mentions": 1
+      "mentions": 4
     },
     "release-notes": {
       "documented": true,
@@ -1449,9 +1488,10 @@
         "commands.md",
         "discover-plugins.md",
         "mcp.md",
-        "plugins.md"
+        "plugins.md",
+        "remote-control.md"
       ],
-      "mentions": 13
+      "mentions": 14
     },
     "remote-control": {
       "documented": true,
@@ -1512,20 +1552,26 @@
         "common-workflows.md",
         "costs.md",
         "env-vars.md",
+        "errors.md",
         "hooks-guide.md",
         "hooks.md",
-        "quickstart.md"
+        "how-claude-code-works.md",
+        "quickstart.md",
+        "remote-control.md"
       ],
-      "mentions": 42
+      "mentions": 49
     },
     "review": {
       "documented": true,
       "doc_files": [
         "changelog.md",
         "cli-reference.md",
-        "commands.md"
+        "commands.md",
+        "skills.md",
+        "slash-commands.md",
+        "ultrareview.md"
       ],
-      "mentions": 3
+      "mentions": 8
     },
     "rewind": {
       "documented": true,
@@ -1537,9 +1583,10 @@
         "commands.md",
         "common-workflows.md",
         "costs.md",
-        "env-vars.md"
+        "env-vars.md",
+        "errors.md"
       ],
-      "mentions": 13
+      "mentions": 16
     },
     "schedule": {
       "documented": true,
@@ -1559,9 +1606,11 @@
       "doc_files": [
         "changelog.md",
         "claude-directory.md",
-        "commands.md"
+        "commands.md",
+        "skills.md",
+        "slash-commands.md"
       ],
-      "mentions": 4
+      "mentions": 6
     },
     "session": {
       "documented": true,
@@ -1580,17 +1629,19 @@
       "documented": true,
       "doc_files": [
         "amazon-bedrock.md",
+        "changelog.md",
         "commands.md"
       ],
-      "mentions": 2
+      "mentions": 3
     },
     "setup-vertex": {
       "documented": true,
       "doc_files": [
+        "changelog.md",
         "commands.md",
         "google-vertex-ai.md"
       ],
-      "mentions": 2
+      "mentions": 3
     },
     "simplify": {
       "documented": true,
@@ -1642,7 +1693,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 151
+      "mentions": 153
     },
     "stats": {
       "documented": true,
@@ -1659,9 +1710,12 @@
         "amazon-bedrock.md",
         "authentication.md",
         "changelog.md",
+        "claude-code-on-the-web.md",
         "commands.md",
         "computer-use.md",
         "env-vars.md",
+        "errors.md",
+        "headless.md",
         "model-config.md",
         "remote-control.md",
         "server-managed-settings.md",
@@ -1670,7 +1724,7 @@
         "third-party-integrations.md",
         "troubleshooting.md"
       ],
-      "mentions": 16
+      "mentions": 26
     },
     "statusline": {
       "documented": true,
@@ -1680,6 +1734,7 @@
         "commands.md",
         "costs.md",
         "env-vars.md",
+        "errors.md",
         "fast-mode.md",
         "model-config.md",
         "plugins-reference.md",
@@ -1690,7 +1745,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 31
+      "mentions": 32
     },
     "stickers": {
       "documented": true,
@@ -1714,9 +1769,10 @@
         "github-enterprise-server.md",
         "interactive-mode.md",
         "statusline.md",
-        "ultraplan.md"
+        "ultraplan.md",
+        "ultrareview.md"
       ],
-      "mentions": 11
+      "mentions": 12
     },
     "team-onboarding": {
       "documented": true,
@@ -1750,9 +1806,10 @@
       "doc_files": [
         "changelog.md",
         "commands.md",
-        "interactive-mode.md"
+        "interactive-mode.md",
+        "terminal-config.md"
       ],
-      "mentions": 5
+      "mentions": 7
     },
     "toggle-memory": {
       "documented": false,
@@ -1762,9 +1819,14 @@
     "tui": {
       "documented": true,
       "doc_files": [
-        "changelog.md"
+        "changelog.md",
+        "commands.md",
+        "env-vars.md",
+        "fullscreen.md",
+        "settings.md",
+        "terminal-config.md"
       ],
-      "mentions": 2
+      "mentions": 10
     },
     "ultraplan": {
       "documented": true,
@@ -1774,14 +1836,21 @@
         "commands.md",
         "permission-modes.md",
         "remote-control.md",
-        "ultraplan.md"
+        "ultraplan.md",
+        "ultrareview.md"
       ],
-      "mentions": 10
+      "mentions": 12
     },
     "ultrareview": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "claude-code-on-the-web.md",
+        "commands.md",
+        "ultraplan.md",
+        "ultrareview.md"
+      ],
+      "mentions": 12
     },
     "update": {
       "documented": true,
@@ -1809,21 +1878,23 @@
         "code-review.md",
         "commands.md",
         "costs.md",
+        "errors.md",
         "routines.md",
         "vs-code.md"
       ],
-      "mentions": 12
+      "mentions": 14
     },
     "version": {
       "documented": true,
       "doc_files": [
         "desktop.md",
+        "plugin-dependencies.md",
         "plugin-marketplaces.md",
         "plugins-reference.md",
         "plugins.md",
         "statusline.md"
       ],
-      "mentions": 24
+      "mentions": 33
     },
     "voice": {
       "documented": true,
@@ -1843,7 +1914,7 @@
         "routines.md",
         "web-quickstart.md"
       ],
-      "mentions": 16
+      "mentions": 17
     }
   },
   "docs_checked_at": "2026-04-16"
