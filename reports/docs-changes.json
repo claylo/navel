@@ -1,6 +1,65 @@
 {
   "changes": [
     {
+      "date": "2026-04-16T21:00:42Z",
+      "version_at_time": "2.1.112",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md",
+        "commands.md",
+        "common-workflows.md",
+        "desktop-scheduled-tasks.md",
+        "desktop.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "fast-mode.md",
+        "fullscreen.md",
+        "github-actions.md",
+        "google-vertex-ai.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "keybindings.md",
+        "mcp.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "remote-control.md",
+        "routines.md",
+        "scheduled-tasks.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slash-commands.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md",
+        "terminal-config.md",
+        "tools-reference.md",
+        "troubleshooting.md",
+        "ultraplan.md",
+        "vs-code.md",
+        "web-quickstart.md"
+      ],
+      "files_added": [
+        "errors.md",
+        "plugin-dependencies.md",
+        "ultrareview.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-16T19:41:15Z",
       "version_at_time": "2.1.112",
       "files_changed": [
@@ -2928,33 +2987,6 @@
       "version_at_time": "2.1.97",
       "files_changed": [
         "keybindings.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-09T03:14:47Z",
-      "version_at_time": "2.1.97",
-      "files_changed": [
-        "desktop.md",
-        "env-vars.md",
-        "fullscreen.md",
-        "headless.md",
-        "how-claude-code-works.md",
-        "interactive-mode.md",
-        "mcp.md",
-        "monitoring-usage.md",
-        "overview.md",
-        "permission-modes.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md"
       ],
       "files_added": [
         ""
