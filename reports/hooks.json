@@ -224,7 +224,7 @@
         "permission-modes.md",
         "plugins-reference.md"
       ],
-      "mentions": 40
+      "mentions": 41
     },
     "PostCompact": {
       "documented": true,
@@ -287,7 +287,7 @@
         "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 103
+      "mentions": 104
     },
     "SessionEnd": {
       "documented": true,
@@ -448,5 +448,5 @@
       "mentions": 20
     }
   },
-  "docs_checked_at": "2026-04-14"
+  "docs_checked_at": "2026-04-16"
 }
