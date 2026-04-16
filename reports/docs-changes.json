@@ -1,6 +1,46 @@
 {
   "changes": [
     {
+      "date": "2026-04-16T19:41:15Z",
+      "version_at_time": "2.1.112",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md",
+        "commands.md",
+        "common-workflows.md",
+        "desktop.md",
+        "env-vars.md",
+        "fast-mode.md",
+        "github-actions.md",
+        "google-vertex-ai.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "permission-modes.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "routines.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slash-commands.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md",
+        "tools-reference.md",
+        "vs-code.md",
+        "web-quickstart.md"
+      ],
+      "files_added": [
+        "plugin-dependencies.md",
+        "ultrareview.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-16T19:30:59Z",
       "version_at_time": "2.1.112",
       "files_changed": [
@@ -2915,24 +2955,6 @@
         "statusline.md",
         "sub-agents.md",
         "subagents.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-08T23:11:27Z",
-      "version_at_time": "2.1.97",
-      "files_changed": [
-        "changelog.md",
-        "claude-code-on-the-web.md",
-        "commands.md",
-        "skills.md",
-        "slash-commands.md",
-        "troubleshooting.md"
       ],
       "files_added": [
         ""
