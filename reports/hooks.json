@@ -198,10 +198,11 @@
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
+        "remote-control.md",
         "statusline.md",
         "terminal-config.md"
       ],
-      "mentions": 45
+      "mentions": 46
     },
     "PermissionDenied": {
       "documented": true,
@@ -311,7 +312,7 @@
         "plugins-reference.md",
         "tools-reference.md"
       ],
-      "mentions": 42
+      "mentions": 44
     },
     "Setup": {
       "documented": true,
@@ -329,7 +330,7 @@
         "routines.md",
         "web-quickstart.md"
       ],
-      "mentions": 25
+      "mentions": 24
     },
     "Stop": {
       "documented": true,
@@ -343,9 +344,10 @@
         "sub-agents.md",
         "subagents.md",
         "tools-reference.md",
-        "ultraplan.md"
+        "ultraplan.md",
+        "ultrareview.md"
       ],
-      "mentions": 95
+      "mentions": 96
     },
     "StopFailure": {
       "documented": true,
