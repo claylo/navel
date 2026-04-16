@@ -45,7 +45,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /add-dir | Add a new working directory | 2.0.0 | available | yes |
 | **/advisor** | Configure the Advisor Tool to consult a stronger model fo... | 2.1.83 | available | **no** |
 | /agents | Manage agent configurations | 2.0.0 | available | yes |
-| **/autocompact** | Configure the auto-compact window size | 2.1.89 | available | **no** |
+| /autocompact | Configure the auto-compact window size | 2.1.89 | available | yes |
 | /autofix-pr | Spawn a remote Claude Code session that monitors and auto... | 2.1.94 | available | yes |
 | /batch | Research and plan a large-scale change, then execute it i... | 2.1.63 | available | yes |
 | /branch | — | 2.1.77 | available | yes |
@@ -129,7 +129,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /terminal-setup | — | 2.0.0 | available | yes |
 | /theme | Change the theme | 2.0.73 | available | yes |
 | **/toggle-memory** | Toggle automemory off/on for this session | 2.1.90 | *disabled* | **no** |
-| **/tui** | Set the terminal UI renderer (default | fullscreen) | 2.1.110 | available | **no** |
+| /tui | Set the terminal UI renderer (default | fullscreen) | 2.1.110 | available | yes |
 | /ultraplan | — | 2.1.83 | available | yes |
 | **/ultrareview** | — | 2.1.83 | available | **no** |
 | **/update** | Switch to the latest version (conversation continues) | 2.1.101 | *disabled* | yes |
@@ -805,4 +805,4 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 ---
-*Last updated: 2026-04-15*
+*Last updated: 2026-04-16*
