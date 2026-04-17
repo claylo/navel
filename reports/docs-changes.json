@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-04-17T19:54:27Z",
+      "version_at_time": "2.1.113",
+      "files_changed": [
+        "setup.md",
+        "troubleshooting.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-17T15:48:22Z",
       "version_at_time": "2.1.112",
       "files_changed": [
@@ -2974,20 +2988,6 @@
         "slash-commands.md",
         "voice-dictation.md",
         "vs-code.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-09T14:17:21Z",
-      "version_at_time": "2.1.97",
-      "files_changed": [
-        "keybindings.md",
-        "remote-control.md"
       ],
       "files_added": [
         ""
