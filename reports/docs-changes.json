@@ -15,6 +15,20 @@
       ]
     },
     {
+      "date": "2026-04-17T21:52:11Z",
+      "version_at_time": "2.1.113",
+      "files_changed": [
+        "changelog.md",
+        "hooks.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-17T19:54:27Z",
       "version_at_time": "2.1.113",
       "files_changed": [
@@ -2924,37 +2938,6 @@
     {
       "date": "2026-04-09T16:51:25Z",
       "version_at_time": "2.1.98",
-      "files_changed": [
-        "authentication.md",
-        "checkpointing.md",
-        "claude-code-on-the-web.md",
-        "cli-reference.md",
-        "commands.md",
-        "env-vars.md",
-        "features-overview.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "interactive-mode.md",
-        "jetbrains.md",
-        "keybindings.md",
-        "monitoring-usage.md",
-        "remote-control.md",
-        "scheduled-tasks.md",
-        "skills.md",
-        "slash-commands.md",
-        "voice-dictation.md",
-        "vs-code.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-09T16:51:25Z",
-      "version_at_time": "2.1.97",
       "files_changed": [
         "authentication.md",
         "checkpointing.md",
