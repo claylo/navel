@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-04-18T15:11:28Z",
+      "version_at_time": "2.1.114",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-18T01:25:33Z",
       "version_at_time": "2.1.114",
       "files_changed": [
@@ -2882,45 +2895,6 @@
         "sub-agents.md",
         "subagents.md",
         "third-party-integrations.md",
-        "voice-dictation.md",
-        "vs-code.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-09T20:14:09Z",
-      "version_at_time": "2.1.98",
-      "files_changed": [
-        "authentication.md",
-        "changelog.md",
-        "checkpointing.md",
-        "claude-code-on-the-web.md",
-        "cli-reference.md",
-        "commands.md",
-        "common-workflows.md",
-        "desktop.md",
-        "discover-plugins.md",
-        "env-vars.md",
-        "features-overview.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "interactive-mode.md",
-        "jetbrains.md",
-        "keybindings.md",
-        "monitoring-usage.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "plugins.md",
-        "remote-control.md",
-        "scheduled-tasks.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md",
         "voice-dictation.md",
         "vs-code.md"
       ],
