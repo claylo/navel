@@ -341,13 +341,14 @@
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
+        "scheduled-tasks.md",
         "sub-agents.md",
         "subagents.md",
         "tools-reference.md",
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 96
+      "mentions": 97
     },
     "StopFailure": {
       "documented": true,
@@ -450,5 +451,5 @@
       "mentions": 20
     }
   },
-  "docs_checked_at": "2026-04-16"
+  "docs_checked_at": "2026-04-18"
 }
