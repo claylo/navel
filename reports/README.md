@@ -42,103 +42,103 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
-| /add-dir | Add a new working directory | 2.0.0 | available | yes |
-| **/advisor** | Configure the Advisor Tool to consult a stronger model fo... | 2.1.83 | available | **no** |
-| /agents | Manage agent configurations | 2.0.0 | available | yes |
-| **/autocompact** | Configure the auto-compact window size | 2.1.89 | available | **no** |
-| /autofix-pr | Spawn a remote Claude Code session that monitors and auto... | 2.1.94 | available | yes |
-| /batch | Research and plan a large-scale change, then execute it i... | 2.1.63 | available | yes |
+| /add-dir | — | 2.0.0 | available | yes |
+| **/advisor** | — | 2.1.83 | available | **no** |
+| /agents | — | 2.0.0 | available | yes |
+| **/autocompact** | — | 2.1.89 | available | **no** |
+| /autofix-pr | — | 2.1.94 | available | yes |
+| /batch | — | 2.1.63 | available | yes |
 | /branch | — | 2.1.77 | available | yes |
-| **/bridge-kick** | Inject bridge failure states for manual recovery testing | 2.1.76 | *disabled* | **no** |
-| **/brief** | Toggle brief-only mode | 2.1.72 | available | **no** |
-| /btw | Ask a quick side question without interrupting the main c... | 2.1.6 | available | yes |
-| /chrome | Claude in Chrome (Beta) settings | 2.0.71 | available | yes |
-| /claude-in-chrome | Automates your Chrome browser to interact with web pages ... | 2.1.7 | available | yes |
-| /clear | Start a new session with empty context; previous session ... | 2.0.0 | available | yes |
-| /color | Set the prompt bar color for this session | 2.1.7 | available | yes |
-| /commit | Create a git commit | 2.1.51 | available | yes |
-| /commit-push-pr | Commit, push, and open a PR | 2.1.51 | available | yes |
-| /compact | Clear conversation history but keep a summary in context.... | 2.0.0 | available | yes |
-| /config | Open config panel | 2.0.0 | available | yes |
-| /context | Visualize current context usage as a colored grid | 2.0.0 | available | yes |
-| /copy | Copy Claude's last response to clipboard (or /copy N for ... | 2.1.20 | available | yes |
-| /cost | Show the total cost and duration of the current session | 2.0.0 | available | yes |
-| /debug | Enable debug logging for this session and help diagnose i... | 2.1.30 | available | yes |
+| **/bridge-kick** | — | 2.1.76 | available | **no** |
+| **/brief** | — | 2.1.72 | available | **no** |
+| /btw | — | 2.1.6 | available | yes |
+| /chrome | — | 2.0.71 | available | yes |
+| /claude-in-chrome | — | 2.1.7 | available | yes |
+| /clear | — | 2.0.0 | available | yes |
+| /color | — | 2.1.7 | available | yes |
+| /commit | — | 2.1.51 | available | yes |
+| /commit-push-pr | — | 2.1.51 | available | yes |
+| /compact | — | 2.0.0 | available | yes |
+| /config | — | 2.0.0 | available | yes |
+| /context | — | 2.0.0 | available | yes |
+| /copy | — | 2.1.20 | available | yes |
+| /cost | — | 2.0.0 | available | yes |
+| /debug | — | 2.1.30 | available | yes |
 | /desktop | — | 2.1.42 | available | yes |
-| /diff | View uncommitted changes and per-turn diffs | 2.1.50 | available | yes |
-| /doctor | Diagnose and verify your Claude Code installation and set... | 2.0.0 | available | yes |
+| /diff | — | 2.1.50 | available | yes |
+| /doctor | — | 2.0.0 | available | yes |
 | **/dream** | — | 2.1.97 | available | **no** |
-| /effort | Set effort level for model usage | 2.1.76 | available | yes |
+| /effort | — | 2.1.76 | available | yes |
 | /exit | — | 2.0.0 | available | yes |
-| /export | Export the current conversation to a file or clipboard | 2.0.0 | available | yes |
-| /extra-usage | Configure extra usage to keep working when limits are hit | 2.0.36 | available | yes |
+| /export | — | 2.0.0 | available | yes |
+| /extra-usage | — | 2.0.36 | available | yes |
 | /fast | — | 2.1.36 | available | yes |
-| /feedback | Submit feedback about Claude Code | 2.0.0 | available | yes |
-| **/files** | List all files currently in context | 2.0.0 | *disabled* | yes |
-| /focus | Toggle focus view (show only your prompt, a tool summary,... | 2.1.110 | available | yes |
-| /heapdump | Dump the JS heap to ~/Desktop | 2.1.71 | available | yes |
-| /help | Show help and available commands | 2.0.0 | available | yes |
-| /hooks | View hook configurations for tool events | 2.0.0 | available | yes |
-| /ide | Manage IDE integrations and show status | 2.0.0 | available | yes |
+| /feedback | — | 2.0.0 | available | yes |
+| /files | — | 2.0.0 | available | yes |
+| /focus | — | 2.1.110 | available | yes |
+| /heapdump | — | 2.1.71 | available | yes |
+| /help | — | 2.0.0 | available | yes |
+| /hooks | — | 2.0.0 | available | yes |
+| /ide | — | 2.0.0 | available | yes |
 | /init | — | 2.0.0 | available | yes |
-| **/init-verifiers** | Create verifier skill(s) for automated verification of co... | 2.1.51 | available | **no** |
-| /insights | Generate a report analyzing your Claude Code sessions | 2.1.30 | available | yes |
-| /install | Install Claude Code native build | 2.0.0 | available | yes |
-| /install-github-app | Set up Claude GitHub Actions for a repository | 2.0.0 | available | yes |
-| /install-slack-app | Install the Claude Slack app | 2.0.62 | available | yes |
-| /keybindings | Open or create your keybindings configuration file | 2.1.6 | available | yes |
+| **/init-verifiers** | — | 2.1.51 | available | **no** |
+| /insights | — | 2.1.30 | available | yes |
+| /install | — | 2.0.0 | available | yes |
+| /install-github-app | — | 2.0.0 | available | yes |
+| /install-slack-app | — | 2.0.62 | available | yes |
+| /keybindings | — | 2.1.6 | available | yes |
 | **/keybindings-help** | — | 2.1.20 | available | **no** |
-| /less-permission-prompts | Scan your transcripts for common read-only Bash and MCP t... | 2.1.111 | available | yes |
+| /less-permission-prompts | — | 2.1.111 | available | yes |
 | /login | — | 2.0.0 | available | yes |
-| /logout | Sign out from your Anthropic account | 2.0.0 | available | yes |
-| **/loops** | List, create, and delete recurring loops and stop-hooks | 2.1.101 | *disabled* | **no** |
-| /mcp | Manage MCP servers | 2.0.0 | available | yes |
-| /memory | Edit Claude memory files | 2.0.0 | available | yes |
+| /logout | — | 2.0.0 | available | yes |
+| **/loops** | — | 2.1.101 | available | **no** |
+| /mcp | — | 2.0.0 | available | yes |
+| /memory | — | 2.0.0 | available | yes |
 | /mobile | — | 2.0.72 | available | yes |
 | /model | — | 2.0.0 | available | yes |
 | /passes | — | 2.0.45 | available | yes |
 | /permissions | — | 2.0.0 | available | yes |
-| /plan | Enable plan mode or view the current session plan | 2.0.56 | available | yes |
+| /plan | — | 2.0.56 | available | yes |
 | /plugin | — | 2.0.12 | available | yes |
-| /powerup | Discover Claude Code features through quick interactive l... | 2.1.90 | available | yes |
-| /privacy-settings | View and update your privacy settings | 2.0.0 | available | yes |
-| **/rate-limit-options** | Show options when rate limit is reached | 2.0.43 | available | **no** |
-| /recap | Generate a one-line session recap now | 2.1.105 | available | yes |
+| /powerup | — | 2.1.90 | available | yes |
+| /privacy-settings | — | 2.0.0 | available | yes |
+| **/rate-limit-options** | — | 2.0.43 | available | **no** |
+| /recap | — | 2.1.105 | available | yes |
 | /release-notes | — | 2.0.0 | available | yes |
-| /reload-plugins | Activate pending plugin changes in the current session | 2.1.64 | available | yes |
+| /reload-plugins | — | 2.1.64 | available | yes |
 | /remote-control | — | 2.1.51 | available | yes |
-| /remote-env | Configure the default remote environment for teleport ses... | 2.0.47 | available | yes |
-| /rename | Rename the current conversation | 2.0.41 | available | yes |
-| /resume | Resume a previous conversation | 2.0.0 | available | yes |
-| /review | Review a pull request | 2.0.0 | available | yes |
+| /remote-env | — | 2.0.47 | available | yes |
+| /rename | — | 2.0.41 | available | yes |
+| /resume | — | 2.0.0 | available | yes |
+| /review | — | 2.0.0 | available | yes |
 | /rewind | — | 2.0.0 | available | yes |
 | /schedule | — | 2.1.80 | available | yes |
-| /security-review | Complete a security review of the pending changes on the ... | 2.0.0 | available | yes |
+| /security-review | — | 2.0.0 | available | yes |
 | /session | — | 2.1.15 | available | yes |
-| /setup-bedrock | Reconfigure AWS Bedrock authentication, region, or model ... | 2.1.92 | available | yes |
-| /setup-vertex | Reconfigure Google Vertex AI authentication, project, reg... | 2.1.98 | available | yes |
-| /simplify | Review changed code for reuse, quality, and efficiency, t... | 2.1.63 | available | yes |
-| /skills | List available skills | 2.0.73 | available | yes |
-| /stats | Show your Claude Code usage statistics and activity | 2.0.63 | available | yes |
-| /status | Show Claude Code status including version, model, account... | 2.0.0 | available | yes |
+| /setup-bedrock | — | 2.1.92 | available | yes |
+| /setup-vertex | — | 2.1.98 | available | yes |
+| /simplify | — | 2.1.63 | available | yes |
+| /skills | — | 2.0.73 | available | yes |
+| /stats | — | 2.0.63 | available | yes |
+| /status | — | 2.0.0 | available | yes |
 | /statusline | — | 2.0.0 | available | yes |
-| /stickers | Order Claude Code stickers | 2.0.32 | available | yes |
-| **/stop-hook** | Set a session-only Stop hook with a quick prompt | 2.1.92 | *disabled* | **no** |
+| /stickers | — | 2.0.32 | available | yes |
+| **/stop-hook** | — | 2.1.92 | available | **no** |
 | /tasks | — | 2.0.45 | available | yes |
-| /team-onboarding | Help teammates ramp on Claude Code with a guide from your... | 2.1.94 | available | yes |
-| /teleport | Resume a Claude Code session from claude.ai | 2.1.92 | available | yes |
+| /team-onboarding | — | 2.1.94 | available | yes |
+| /teleport | — | 2.1.92 | available | yes |
 | /terminal-setup | — | 2.0.0 | available | yes |
-| /theme | Change the theme | 2.0.73 | available | yes |
-| **/toggle-memory** | Toggle automemory off/on for this session | 2.1.90 | *disabled* | **no** |
-| /tui | Set the terminal UI renderer (default | fullscreen) | 2.1.110 | available | yes |
+| /theme | — | 2.0.73 | available | yes |
+| **/toggle-memory** | — | 2.1.90 | available | **no** |
+| /tui | — | 2.1.110 | available | yes |
 | /ultraplan | — | 2.1.83 | available | yes |
 | /ultrareview | — | 2.1.83 | available | yes |
-| **/update** | Switch to the latest version (conversation continues) | 2.1.101 | *disabled* | yes |
-| /upgrade | Upgrade to Max for higher rate limits and more Opus | 2.0.0 | available | yes |
-| /usage | Show plan usage limits | 2.0.0 | available | yes |
-| **/version** | Print the version this session is running (not what autou... | 2.1.83 | *disabled* | yes |
-| /voice | Toggle voice mode | 2.1.59 | available | yes |
-| /web-setup | Setup Claude Code on the web (requires connecting your Gi... | 2.1.79 | available | yes |
+| /update | — | 2.1.101 | available | yes |
+| /upgrade | — | 2.0.0 | available | yes |
+| /usage | — | 2.0.0 | available | yes |
+| /version | — | 2.1.83 | available | yes |
+| /voice | — | 2.1.59 | available | yes |
+| /web-setup | — | 2.1.79 | available | yes |
 
 </details>
 
@@ -807,4 +807,4 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 ---
-*Last updated: 2026-04-18*
+*Last updated: 2026-04-20*
