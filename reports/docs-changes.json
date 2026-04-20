@@ -1,6 +1,22 @@
 {
   "changes": [
     {
+      "date": "2026-04-20T22:36:59Z",
+      "version_at_time": "2.1.116",
+      "files_changed": [
+        "changelog.md",
+        "commands.md",
+        "interactive-mode.md",
+        "terminal-config.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-20T22:00:12Z",
       "version_at_time": "2.1.116",
       "files_changed": [
@@ -2665,21 +2681,6 @@
         "permissions.md",
         "tools-reference.md",
         "troubleshooting.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-10T17:14:54Z",
-      "version_at_time": "2.1.100",
-      "files_changed": [
-        "commands.md",
-        "scheduled-tasks.md",
-        "server-managed-settings.md"
       ],
       "files_added": [
         ""
