@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-04-20T20:37:02Z",
+      "version_at_time": "2.1.116",
+      "files_changed": [
+        "commands.md",
+        "interactive-mode.md",
+        "terminal-config.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-20T20:12:11Z",
       "version_at_time": "2.1.116",
       "files_changed": [
@@ -2660,19 +2675,6 @@
     },
     {
       "date": "2026-04-10T14:07:56Z",
-      "version_at_time": "2.1.100",
-      "files_changed": [
-        "python.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-10T06:31:18Z",
       "version_at_time": "2.1.100",
       "files_changed": [
         "python.md"
