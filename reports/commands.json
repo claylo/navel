@@ -98,181 +98,8 @@
     "voice",
     "web-setup"
   ],
-  "descriptions": {
-    "add-dir": "Add a new working directory",
-    "advisor": "Configure the Advisor Tool to consult a stronger model for guidance at key moments during a task",
-    "agents": "Manage agent configurations",
-    "autocompact": "Configure the auto-compact window size",
-    "autofix-pr": "Spawn a remote Claude Code session that monitors and autofixes the current PR",
-    "batch": "Research and plan a large-scale change, then execute it in parallel across 5–30 isolated worktree agents that each open a PR.",
-    "bridge-kick": "Inject bridge failure states for manual recovery testing",
-    "brief": "Toggle brief-only mode",
-    "btw": "Ask a quick side question without interrupting the main conversation",
-    "chrome": "Claude in Chrome (Beta) settings",
-    "claude-in-chrome": "Automates your Chrome browser to interact with web pages - clicking elements, filling forms, capturing screenshots, reading console logs, and navigating sites. Opens pages in new tabs within your existing Chrome session. Requires site-level permissions before executing (configured in the extension).",
-    "clear": "Start a new session with empty context; previous session stays on disk (resumable with /resume)",
-    "color": "Set the prompt bar color for this session",
-    "commit": "Create a git commit",
-    "commit-push-pr": "Commit, push, and open a PR",
-    "compact": "Clear conversation history but keep a summary in context. Optional: /compact [instructions for summarization]",
-    "config": "Open config panel",
-    "context": "Visualize current context usage as a colored grid",
-    "copy": "Copy Claude's last response to clipboard (or /copy N for the Nth-latest)",
-    "cost": "Show the total cost and duration of the current session",
-    "debug": "Enable debug logging for this session and help diagnose issues",
-    "diff": "View uncommitted changes and per-turn diffs",
-    "doctor": "Diagnose and verify your Claude Code installation and settings",
-    "effort": "Set effort level for model usage",
-    "export": "Export the current conversation to a file or clipboard",
-    "extra-usage": "Configure extra usage to keep working when limits are hit",
-    "feedback": "Submit feedback about Claude Code",
-    "files": "List all files currently in context",
-    "focus": "Toggle focus view (show only your prompt, a tool summary, and the final response)",
-    "heapdump": "Dump the JS heap to ~/Desktop",
-    "help": "Show help and available commands",
-    "hooks": "View hook configurations for tool events",
-    "ide": "Manage IDE integrations and show status",
-    "init-verifiers": "Create verifier skill(s) for automated verification of code changes",
-    "insights": "Generate a report analyzing your Claude Code sessions",
-    "install": "Install Claude Code native build",
-    "install-github-app": "Set up Claude GitHub Actions for a repository",
-    "install-slack-app": "Install the Claude Slack app",
-    "keybindings": "Open or create your keybindings configuration file",
-    "less-permission-prompts": "Scan your transcripts for common read-only Bash and MCP tool calls, then add a prioritized allowlist to project .claude/settings.json to reduce permission prompts.",
-    "logout": "Sign out from your Anthropic account",
-    "loops": "List, create, and delete recurring loops and stop-hooks",
-    "mcp": "Manage MCP servers",
-    "memory": "Edit Claude memory files",
-    "plan": "Enable plan mode or view the current session plan",
-    "powerup": "Discover Claude Code features through quick interactive lessons",
-    "privacy-settings": "View and update your privacy settings",
-    "rate-limit-options": "Show options when rate limit is reached",
-    "recap": "Generate a one-line session recap now",
-    "reload-plugins": "Activate pending plugin changes in the current session",
-    "remote-env": "Configure the default remote environment for teleport sessions",
-    "rename": "Rename the current conversation",
-    "resume": "Resume a previous conversation",
-    "review": "Review a pull request",
-    "security-review": "Complete a security review of the pending changes on the current branch",
-    "setup-bedrock": "Reconfigure AWS Bedrock authentication, region, or model pins",
-    "setup-vertex": "Reconfigure Google Vertex AI authentication, project, region, or model pins",
-    "simplify": "Review changed code for reuse, quality, and efficiency, then fix any issues found.",
-    "skills": "List available skills",
-    "stats": "Show your Claude Code usage statistics and activity",
-    "status": "Show Claude Code status including version, model, account, API connectivity, and tool statuses",
-    "stickers": "Order Claude Code stickers",
-    "stop-hook": "Set a session-only Stop hook with a quick prompt",
-    "team-onboarding": "Help teammates ramp on Claude Code with a guide from your usage",
-    "teleport": "Resume a Claude Code session from claude.ai",
-    "theme": "Change the theme",
-    "toggle-memory": "Toggle automemory off/on for this session",
-    "tui": "Set the terminal UI renderer (default | fullscreen)",
-    "update": "Switch to the latest version (conversation continues)",
-    "upgrade": "Upgrade to Max for higher rate limits and more Opus",
-    "usage": "Show plan usage limits",
-    "version": "Print the version this session is running (not what autoupdate downloaded)",
-    "voice": "Toggle voice mode",
-    "web-setup": "Setup Claude Code on the web (requires connecting your GitHub account)"
-  },
-  "status": {
-    "add-dir": "available",
-    "advisor": "available",
-    "agents": "available",
-    "autocompact": "available",
-    "autofix-pr": "available",
-    "batch": "available",
-    "branch": "available",
-    "bridge-kick": "disabled",
-    "brief": "available",
-    "btw": "available",
-    "chrome": "available",
-    "claude-in-chrome": "available",
-    "clear": "available",
-    "color": "available",
-    "commit": "available",
-    "commit-push-pr": "available",
-    "compact": "available",
-    "config": "available",
-    "context": "available",
-    "copy": "available",
-    "cost": "available",
-    "debug": "available",
-    "desktop": "available",
-    "diff": "available",
-    "doctor": "available",
-    "dream": "available",
-    "effort": "available",
-    "exit": "available",
-    "export": "available",
-    "extra-usage": "available",
-    "fast": "available",
-    "feedback": "available",
-    "files": "disabled",
-    "focus": "available",
-    "heapdump": "available",
-    "help": "available",
-    "hooks": "available",
-    "ide": "available",
-    "init": "available",
-    "init-verifiers": "available",
-    "insights": "available",
-    "install": "available",
-    "install-github-app": "available",
-    "install-slack-app": "available",
-    "keybindings": "available",
-    "keybindings-help": "available",
-    "less-permission-prompts": "available",
-    "login": "available",
-    "logout": "available",
-    "loops": "disabled",
-    "mcp": "available",
-    "memory": "available",
-    "mobile": "available",
-    "model": "available",
-    "passes": "available",
-    "permissions": "available",
-    "plan": "available",
-    "plugin": "available",
-    "powerup": "available",
-    "privacy-settings": "available",
-    "rate-limit-options": "available",
-    "recap": "available",
-    "release-notes": "available",
-    "reload-plugins": "available",
-    "remote-control": "available",
-    "remote-env": "available",
-    "rename": "available",
-    "resume": "available",
-    "review": "available",
-    "rewind": "available",
-    "schedule": "available",
-    "security-review": "available",
-    "session": "available",
-    "setup-bedrock": "available",
-    "setup-vertex": "available",
-    "simplify": "available",
-    "skills": "available",
-    "stats": "available",
-    "status": "available",
-    "statusline": "available",
-    "stickers": "available",
-    "stop-hook": "disabled",
-    "tasks": "available",
-    "team-onboarding": "available",
-    "teleport": "available",
-    "terminal-setup": "available",
-    "theme": "available",
-    "toggle-memory": "disabled",
-    "tui": "available",
-    "ultraplan": "available",
-    "ultrareview": "available",
-    "update": "disabled",
-    "upgrade": "available",
-    "usage": "available",
-    "version": "disabled",
-    "voice": "available",
-    "web-setup": "available"
-  },
+  "descriptions": {},
+  "status": {},
   "commands_history": {
     "2.0.0": {
       "added": [
@@ -845,7 +672,7 @@
         "changelog.md",
         "commands.md"
       ],
-      "mentions": 6
+      "mentions": 7
     },
     "cost": {
       "documented": true,
@@ -948,7 +775,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 30
+      "mentions": 31
     },
     "exit": {
       "documented": true,
@@ -978,9 +805,10 @@
         "commands.md",
         "env-vars.md",
         "errors.md",
+        "remote-control.md",
         "ultrareview.md"
       ],
-      "mentions": 5
+      "mentions": 7
     },
     "fast": {
       "documented": true,
@@ -1126,7 +954,7 @@
         "changelog.md",
         "commands.md"
       ],
-      "mentions": 2
+      "mentions": 3
     },
     "install": {
       "documented": true,
@@ -1138,7 +966,7 @@
         "setup.md",
         "troubleshooting.md"
       ],
-      "mentions": 42
+      "mentions": 41
     },
     "install-github-app": {
       "documented": true,
@@ -1178,10 +1006,9 @@
     "less-permission-prompts": {
       "documented": true,
       "doc_files": [
-        "changelog.md",
-        "commands.md"
+        "changelog.md"
       ],
-      "mentions": 2
+      "mentions": 1
     },
     "login": {
       "documented": true,
@@ -1850,7 +1677,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 12
+      "mentions": 13
     },
     "update": {
       "documented": true,
@@ -1917,5 +1744,5 @@
       "mentions": 17
     }
   },
-  "docs_checked_at": "2026-04-16"
+  "docs_checked_at": "2026-04-20"
 }
