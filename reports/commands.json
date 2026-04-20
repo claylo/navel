@@ -916,7 +916,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 256
+      "mentions": 258
     },
     "ide": {
       "documented": true,
