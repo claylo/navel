@@ -213,7 +213,7 @@
         "permissions.md",
         "plugins-reference.md"
       ],
-      "mentions": 21
+      "mentions": 19
     },
     "PermissionRequest": {
       "documented": true,
@@ -312,7 +312,7 @@
         "plugins-reference.md",
         "tools-reference.md"
       ],
-      "mentions": 44
+      "mentions": 46
     },
     "Setup": {
       "documented": true,
@@ -451,5 +451,5 @@
       "mentions": 20
     }
   },
-  "docs_checked_at": "2026-04-18"
+  "docs_checked_at": "2026-04-20"
 }
