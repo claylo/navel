@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-04-20T20:12:11Z",
+      "version_at_time": "2.1.116",
+      "files_changed": [
+        "env-vars.md",
+        "hooks-guide.md",
+        "hooks.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-20T18:30:17Z",
       "version_at_time": "2.1.114",
       "files_changed": [
@@ -2661,23 +2676,6 @@
       "version_at_time": "2.1.100",
       "files_changed": [
         "python.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-10T06:31:18Z",
-      "version_at_time": "2.1.100",
-      "files_changed": [
-        "discover-plugins.md",
-        "overview.md",
-        "quickstart.md",
-        "setup.md",
-        "troubleshooting.md"
       ],
       "files_added": [
         ""
