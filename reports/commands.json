@@ -917,7 +917,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 257
+      "mentions": 263
     },
     "ide": {
       "documented": true,
@@ -1103,7 +1103,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 142
+      "mentions": 145
     },
     "memory": {
       "documented": true,
@@ -1138,7 +1138,7 @@
         "troubleshooting.md",
         "web-quickstart.md"
       ],
-      "mentions": 88
+      "mentions": 90
     },
     "mobile": {
       "documented": true,
@@ -1223,7 +1223,7 @@
         "tools-reference.md",
         "troubleshooting.md"
       ],
-      "mentions": 120
+      "mentions": 122
     },
     "plan": {
       "documented": true,
@@ -1522,7 +1522,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 153
+      "mentions": 155
     },
     "stats": {
       "documented": true,
