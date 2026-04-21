@@ -278,6 +278,7 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "claude-directory.md",
         "costs.md",
         "hooks-guide.md",
         "hooks.md",
@@ -288,31 +289,33 @@
         "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 104
+      "mentions": 105
     },
     "SessionEnd": {
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "claude-directory.md",
         "env-vars.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 24
+      "mentions": 25
     },
     "SessionStart": {
       "documented": true,
       "doc_files": [
         "changelog.md",
         "claude-code-on-the-web.md",
+        "claude-directory.md",
         "env-vars.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
         "tools-reference.md"
       ],
-      "mentions": 46
+      "mentions": 47
     },
     "Setup": {
       "documented": true,
