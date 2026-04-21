@@ -1,6 +1,27 @@
 {
   "changes": [
     {
+      "date": "2026-04-21T02:49:15Z",
+      "version_at_time": "2.1.116",
+      "files_changed": [
+        "best-practices.md",
+        "claude-directory.md",
+        "commands.md",
+        "common-workflows.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md",
+        "vs-code.md",
+        "zero-data-retention.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-21T02:52:42Z",
       "version_at_time": "2.1.116",
       "files_changed": [
@@ -2656,29 +2677,6 @@
         "subagents.md",
         "third-party-integrations.md",
         "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-10T21:11:46Z",
-      "version_at_time": "2.1.101",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "third-party-integrations.md"
       ],
       "files_added": [
         ""
