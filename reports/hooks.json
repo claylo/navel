@@ -245,6 +245,7 @@
         "context-window.md",
         "hooks-guide.md",
         "hooks.md",
+        "monitoring-usage.md",
         "plugin-marketplaces.md",
         "plugins-reference.md",
         "plugins.md",
@@ -253,7 +254,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 77
+      "mentions": 78
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -262,7 +263,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 19
+      "mentions": 20
     },
     "PreCompact": {
       "documented": true,
@@ -282,6 +283,7 @@
         "costs.md",
         "hooks-guide.md",
         "hooks.md",
+        "monitoring-usage.md",
         "permission-modes.md",
         "permissions.md",
         "plugins-reference.md",
@@ -289,7 +291,7 @@
         "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 105
+      "mentions": 110
     },
     "SessionEnd": {
       "documented": true,
