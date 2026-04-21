@@ -613,7 +613,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 56
+      "mentions": 58
     },
     "config": {
       "documented": true,
@@ -822,7 +822,7 @@
         "monitoring-usage.md",
         "settings.md"
       ],
-      "mentions": 18
+      "mentions": 22
     },
     "feedback": {
       "documented": true,
@@ -1015,6 +1015,7 @@
     "login": {
       "documented": true,
       "doc_files": [
+        "admin-setup.md",
         "amazon-bedrock.md",
         "authentication.md",
         "changelog.md",
@@ -1026,6 +1027,7 @@
         "google-vertex-ai.md",
         "hooks.md",
         "microsoft-foundry.md",
+        "monitoring-usage.md",
         "quickstart.md",
         "remote-control.md",
         "skills.md",
@@ -1036,11 +1038,12 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 41
+      "mentions": 44
     },
     "logout": {
       "documented": true,
       "doc_files": [
+        "admin-setup.md",
         "amazon-bedrock.md",
         "authentication.md",
         "commands.md",
@@ -1050,10 +1053,11 @@
         "hooks-guide.md",
         "hooks.md",
         "microsoft-foundry.md",
+        "monitoring-usage.md",
         "remote-control.md",
         "troubleshooting.md"
       ],
-      "mentions": 13
+      "mentions": 16
     },
     "loops": {
       "documented": false,
@@ -1063,6 +1067,7 @@
     "mcp": {
       "documented": true,
       "doc_files": [
+        "admin-setup.md",
         "best-practices.md",
         "changelog.md",
         "channels-reference.md",
@@ -1103,11 +1108,12 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 145
+      "mentions": 146
     },
     "memory": {
       "documented": true,
       "doc_files": [
+        "admin-setup.md",
         "best-practices.md",
         "changelog.md",
         "claude-directory.md",
@@ -1138,7 +1144,7 @@
         "troubleshooting.md",
         "web-quickstart.md"
       ],
-      "mentions": 90
+      "mentions": 91
     },
     "mobile": {
       "documented": true,
@@ -1179,7 +1185,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 116
+      "mentions": 119
     },
     "passes": {
       "documented": true,
@@ -1191,6 +1197,7 @@
     "permissions": {
       "documented": true,
       "doc_files": [
+        "admin-setup.md",
         "agent-teams.md",
         "analytics.md",
         "best-practices.md",
@@ -1223,7 +1230,7 @@
         "tools-reference.md",
         "troubleshooting.md"
       ],
-      "mentions": 122
+      "mentions": 125
     },
     "plan": {
       "documented": true,
@@ -1235,6 +1242,7 @@
         "desktop.md",
         "hooks.md",
         "interactive-mode.md",
+        "monitoring-usage.md",
         "permission-modes.md",
         "permissions.md",
         "settings.md",
@@ -1242,7 +1250,7 @@
         "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 24
+      "mentions": 25
     },
     "plugin": {
       "documented": true,
@@ -1256,6 +1264,7 @@
         "discover-plugins.md",
         "github-enterprise-server.md",
         "headless.md",
+        "hooks.md",
         "jetbrains.md",
         "monitoring-usage.md",
         "overview.md",
@@ -1268,7 +1277,7 @@
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 133
+      "mentions": 134
     },
     "powerup": {
       "documented": true,
@@ -1317,10 +1326,11 @@
         "commands.md",
         "discover-plugins.md",
         "mcp.md",
+        "plugin-dependencies.md",
         "plugins.md",
         "remote-control.md"
       ],
-      "mentions": 15
+      "mentions": 16
     },
     "remote-control": {
       "documented": true,
@@ -1385,10 +1395,11 @@
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
+        "monitoring-usage.md",
         "quickstart.md",
         "remote-control.md"
       ],
-      "mentions": 51
+      "mentions": 52
     },
     "review": {
       "documented": true,
@@ -1536,6 +1547,7 @@
     "status": {
       "documented": true,
       "doc_files": [
+        "admin-setup.md",
         "amazon-bedrock.md",
         "authentication.md",
         "changelog.md",
@@ -1546,6 +1558,7 @@
         "errors.md",
         "headless.md",
         "model-config.md",
+        "monitoring-usage.md",
         "remote-control.md",
         "server-managed-settings.md",
         "settings.md",
@@ -1553,7 +1566,7 @@
         "third-party-integrations.md",
         "troubleshooting.md"
       ],
-      "mentions": 26
+      "mentions": 28
     },
     "statusline": {
       "documented": true,
