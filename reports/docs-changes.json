@@ -1,6 +1,31 @@
 {
   "changes": [
     {
+      "date": "2026-04-21T23:02:16Z",
+      "version_at_time": "2.1.117",
+      "files_changed": [
+        "data-usage.md",
+        "interactive-mode.md",
+        "network-config.md",
+        "overview.md",
+        "permissions.md",
+        "plugins-reference.md",
+        "quickstart.md",
+        "settings.md",
+        "skills.md",
+        "slash-commands.md",
+        "sub-agents.md",
+        "subagents.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        "admin-setup.md",
+        "session-storage.md"
+      ]
+    },
+    {
       "date": "2026-04-21T18:52:15Z",
       "version_at_time": "2.1.116",
       "files_changed": [
@@ -2487,37 +2512,6 @@
     },
     {
       "date": "2026-04-11T04:43:44Z",
-      "version_at_time": "2.1.101",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-10T22:16:18Z",
       "version_at_time": "2.1.101",
       "files_changed": [
         "amazon-bedrock.md",
