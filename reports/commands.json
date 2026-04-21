@@ -722,12 +722,13 @@
         "quickstart.md",
         "remote-control.md",
         "sandboxing.md",
+        "settings.md",
         "setup.md",
         "troubleshooting.md",
         "web-quickstart.md",
         "zero-data-retention.md"
       ],
-      "mentions": 62
+      "mentions": 63
     },
     "diff": {
       "documented": true,
