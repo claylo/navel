@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-04-21T09:02:11Z",
+      "version_at_time": "2.1.116",
+      "files_changed": [
+        "commands.md",
+        "ultrareview.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-21T02:49:15Z",
       "version_at_time": "2.1.116",
       "files_changed": [
@@ -2625,37 +2639,6 @@
     },
     {
       "date": "2026-04-10T22:16:18Z",
-      "version_at_time": "2.1.101",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-10T22:08:44Z",
       "version_at_time": "2.1.101",
       "files_changed": [
         "amazon-bedrock.md",
