@@ -202,7 +202,7 @@
         "statusline.md",
         "terminal-config.md"
       ],
-      "mentions": 46
+      "mentions": 49
     },
     "PermissionDenied": {
       "documented": true,
@@ -451,5 +451,5 @@
       "mentions": 20
     }
   },
-  "docs_checked_at": "2026-04-20"
+  "docs_checked_at": "2026-04-21"
 }
