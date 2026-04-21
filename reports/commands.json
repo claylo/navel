@@ -491,7 +491,7 @@
         "common-workflows.md",
         "statusline.md"
       ],
-      "mentions": 7
+      "mentions": 8
     },
     "bridge-kick": {
       "documented": false,
@@ -644,7 +644,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 79
+      "mentions": 81
     },
     "context": {
       "documented": true,
@@ -751,7 +751,7 @@
         "plugin-dependencies.md",
         "troubleshooting.md"
       ],
-      "mentions": 20
+      "mentions": 21
     },
     "dream": {
       "documented": false,
@@ -916,7 +916,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 258
+      "mentions": 257
     },
     "ide": {
       "documented": true,
@@ -994,9 +994,10 @@
         "fullscreen.md",
         "interactive-mode.md",
         "keybindings.md",
+        "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 16
+      "mentions": 19
     },
     "keybindings-help": {
       "documented": false,
@@ -1266,7 +1267,7 @@
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 132
+      "mentions": 133
     },
     "powerup": {
       "documented": true,
@@ -1318,7 +1319,7 @@
         "plugins.md",
         "remote-control.md"
       ],
-      "mentions": 14
+      "mentions": 15
     },
     "remote-control": {
       "documented": true,
@@ -1386,7 +1387,7 @@
         "quickstart.md",
         "remote-control.md"
       ],
-      "mentions": 49
+      "mentions": 51
     },
     "review": {
       "documented": true,
@@ -1626,7 +1627,7 @@
         "interactive-mode.md",
         "terminal-config.md"
       ],
-      "mentions": 7
+      "mentions": 9
     },
     "theme": {
       "documented": true,
@@ -1653,7 +1654,7 @@
         "settings.md",
         "terminal-config.md"
       ],
-      "mentions": 10
+      "mentions": 11
     },
     "ultraplan": {
       "documented": true,
@@ -1682,10 +1683,11 @@
     "update": {
       "documented": true,
       "doc_files": [
+        "changelog.md",
         "data-usage.md",
         "plugin-marketplaces.md"
       ],
-      "mentions": 2
+      "mentions": 3
     },
     "upgrade": {
       "documented": true,
@@ -1744,5 +1746,5 @@
       "mentions": 17
     }
   },
-  "docs_checked_at": "2026-04-20"
+  "docs_checked_at": "2026-04-21"
 }
