@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-04-21T01:34:57Z",
+      "version_at_time": "2.1.116",
+      "files_changed": [
+        "desktop.md",
+        "settings.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-20T22:36:59Z",
       "version_at_time": "2.1.116",
       "files_changed": [
@@ -2661,25 +2675,6 @@
         "google-vertex-ai.md",
         "microsoft-foundry.md",
         "third-party-integrations.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-10T18:40:12Z",
-      "version_at_time": "2.1.101",
-      "files_changed": [
-        "computer-use.md",
-        "hooks-guide.md",
-        "monitoring-usage.md",
-        "permissions.md",
-        "scheduled-tasks.md",
-        "tools-reference.md",
-        "troubleshooting.md"
       ],
       "files_added": [
         ""
