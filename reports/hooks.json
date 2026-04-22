@@ -207,10 +207,10 @@
     "PermissionDenied": {
       "documented": true,
       "doc_files": [
+        "auto-mode-config.md",
         "changelog.md",
         "hooks-guide.md",
         "hooks.md",
-        "permissions.md",
         "plugins-reference.md"
       ],
       "mentions": 19
