@@ -279,8 +279,8 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
-        "claude-directory.md",
         "costs.md",
+        "debug-your-config.md",
         "hooks-guide.md",
         "hooks.md",
         "monitoring-usage.md",
@@ -297,7 +297,7 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
-        "claude-directory.md",
+        "debug-your-config.md",
         "env-vars.md",
         "hooks-guide.md",
         "hooks.md",
@@ -310,7 +310,7 @@
       "doc_files": [
         "changelog.md",
         "claude-code-on-the-web.md",
-        "claude-directory.md",
+        "debug-your-config.md",
         "env-vars.md",
         "hooks-guide.md",
         "hooks.md",
@@ -456,5 +456,5 @@
       "mentions": 20
     }
   },
-  "docs_checked_at": "2026-04-21"
+  "docs_checked_at": "2026-04-22"
 }
