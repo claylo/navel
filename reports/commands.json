@@ -887,6 +887,7 @@
       "documented": true,
       "doc_files": [
         "agent-teams.md",
+        "auto-mode-config.md",
         "best-practices.md",
         "changelog.md",
         "chrome.md",
@@ -907,7 +908,6 @@
         "memory.md",
         "overview.md",
         "permission-modes.md",
-        "permissions.md",
         "plugin-marketplaces.md",
         "plugins-reference.md",
         "plugins.md",
@@ -1117,6 +1117,7 @@
     "memory": {
       "documented": true,
       "doc_files": [
+        "auto-mode-config.md",
         "best-practices.md",
         "changelog.md",
         "claude-directory.md",
@@ -1203,6 +1204,7 @@
       "doc_files": [
         "agent-teams.md",
         "analytics.md",
+        "auto-mode-config.md",
         "best-practices.md",
         "changelog.md",
         "claude-directory.md",
@@ -1235,7 +1237,7 @@
         "tools-reference.md",
         "troubleshooting.md"
       ],
-      "mentions": 124
+      "mentions": 121
     },
     "plan": {
       "documented": true,
@@ -1730,9 +1732,10 @@
         "costs.md",
         "errors.md",
         "routines.md",
+        "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 14
+      "mentions": 15
     },
     "version": {
       "documented": true,
@@ -1751,10 +1754,12 @@
       "doc_files": [
         "changelog.md",
         "commands.md",
+        "interactive-mode.md",
+        "keybindings.md",
         "settings.md",
         "voice-dictation.md"
       ],
-      "mentions": 17
+      "mentions": 31
     },
     "web-setup": {
       "documented": true,
