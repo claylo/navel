@@ -435,9 +435,9 @@
         "best-practices.md",
         "changelog.md",
         "claude-code-on-the-web.md",
-        "claude-directory.md",
         "commands.md",
         "common-workflows.md",
+        "debug-your-config.md",
         "hooks.md",
         "how-claude-code-works.md",
         "permission-modes.md",
@@ -654,7 +654,9 @@
         "commands.md",
         "context-window.md",
         "costs.md",
+        "debug-your-config.md",
         "errors.md",
+        "hooks.md",
         "how-claude-code-works.md",
         "keybindings.md",
         "remote-control.md",
@@ -663,7 +665,7 @@
         "statusline.md",
         "voice-dictation.md"
       ],
-      "mentions": 39
+      "mentions": 40
     },
     "copy": {
       "documented": true,
@@ -742,16 +744,17 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
-        "claude-directory.md",
         "commands.md",
+        "debug-your-config.md",
         "env-vars.md",
         "errors.md",
+        "hooks.md",
         "how-claude-code-works.md",
         "keybindings.md",
         "plugin-dependencies.md",
         "troubleshooting.md"
       ],
-      "mentions": 21
+      "mentions": 25
     },
     "dream": {
       "documented": false,
@@ -890,6 +893,7 @@
         "commands.md",
         "common-workflows.md",
         "costs.md",
+        "debug-your-config.md",
         "desktop.md",
         "env-vars.md",
         "errors.md",
@@ -916,7 +920,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 263
+      "mentions": 270
     },
     "ide": {
       "documented": true,
@@ -1077,6 +1081,7 @@
         "computer-use.md",
         "context-window.md",
         "costs.md",
+        "debug-your-config.md",
         "desktop-scheduled-tasks.md",
         "desktop.md",
         "discover-plugins.md",
@@ -1104,7 +1109,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 145
+      "mentions": 152
     },
     "memory": {
       "documented": true,
@@ -1116,6 +1121,7 @@
         "commands.md",
         "context-window.md",
         "costs.md",
+        "debug-your-config.md",
         "desktop.md",
         "env-vars.md",
         "errors.md",
@@ -1139,7 +1145,7 @@
         "troubleshooting.md",
         "web-quickstart.md"
       ],
-      "mentions": 91
+      "mentions": 94
     },
     "mobile": {
       "documented": true,
@@ -1201,6 +1207,7 @@
         "commands.md",
         "common-workflows.md",
         "data-usage.md",
+        "debug-your-config.md",
         "desktop.md",
         "headless.md",
         "hooks-guide.md",
@@ -1225,7 +1232,7 @@
         "tools-reference.md",
         "troubleshooting.md"
       ],
-      "mentions": 123
+      "mentions": 124
     },
     "plan": {
       "documented": true,
@@ -1500,6 +1507,7 @@
         "commands.md",
         "context-window.md",
         "costs.md",
+        "debug-your-config.md",
         "desktop-quickstart.md",
         "desktop.md",
         "env-vars.md",
@@ -1528,7 +1536,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 157
+      "mentions": 158
     },
     "stats": {
       "documented": true,
@@ -1548,6 +1556,7 @@
         "claude-code-on-the-web.md",
         "commands.md",
         "computer-use.md",
+        "debug-your-config.md",
         "env-vars.md",
         "errors.md",
         "headless.md",
@@ -1560,7 +1569,7 @@
         "third-party-integrations.md",
         "troubleshooting.md"
       ],
-      "mentions": 27
+      "mentions": 29
     },
     "statusline": {
       "documented": true,
