@@ -612,7 +612,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 58
+      "mentions": 59
     },
     "config": {
       "documented": true,
@@ -663,7 +663,7 @@
         "statusline.md",
         "voice-dictation.md"
       ],
-      "mentions": 38
+      "mentions": 39
     },
     "copy": {
       "documented": true,
@@ -775,7 +775,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 31
+      "mentions": 32
     },
     "exit": {
       "documented": true,
@@ -1036,7 +1036,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 43
+      "mentions": 45
     },
     "logout": {
       "documented": true,
@@ -1180,7 +1180,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 119
+      "mentions": 120
     },
     "passes": {
       "documented": true,
@@ -1394,7 +1394,7 @@
         "quickstart.md",
         "remote-control.md"
       ],
-      "mentions": 52
+      "mentions": 53
     },
     "review": {
       "documented": true,
@@ -1608,7 +1608,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 12
+      "mentions": 13
     },
     "team-onboarding": {
       "documented": true,
