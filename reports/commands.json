@@ -476,12 +476,11 @@
         "google-vertex-ai.md",
         "microsoft-foundry.md",
         "overview.md",
-        "quickstart.md",
         "skills.md",
         "slash-commands.md",
         "third-party-integrations.md"
       ],
-      "mentions": 11
+      "mentions": 10
     },
     "branch": {
       "documented": true,
@@ -644,7 +643,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 81
+      "mentions": 80
     },
     "context": {
       "documented": true,
@@ -728,7 +727,7 @@
         "web-quickstart.md",
         "zero-data-retention.md"
       ],
-      "mentions": 63
+      "mentions": 61
     },
     "diff": {
       "documented": true,
@@ -1015,7 +1014,6 @@
     "login": {
       "documented": true,
       "doc_files": [
-        "admin-setup.md",
         "amazon-bedrock.md",
         "authentication.md",
         "changelog.md",
@@ -1038,12 +1036,11 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 44
+      "mentions": 43
     },
     "logout": {
       "documented": true,
       "doc_files": [
-        "admin-setup.md",
         "amazon-bedrock.md",
         "authentication.md",
         "commands.md",
@@ -1057,7 +1054,7 @@
         "remote-control.md",
         "troubleshooting.md"
       ],
-      "mentions": 16
+      "mentions": 15
     },
     "loops": {
       "documented": false,
@@ -1067,7 +1064,6 @@
     "mcp": {
       "documented": true,
       "doc_files": [
-        "admin-setup.md",
         "best-practices.md",
         "changelog.md",
         "channels-reference.md",
@@ -1108,12 +1104,11 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 146
+      "mentions": 145
     },
     "memory": {
       "documented": true,
       "doc_files": [
-        "admin-setup.md",
         "best-practices.md",
         "changelog.md",
         "claude-directory.md",
@@ -1197,7 +1192,6 @@
     "permissions": {
       "documented": true,
       "doc_files": [
-        "admin-setup.md",
         "agent-teams.md",
         "analytics.md",
         "best-practices.md",
@@ -1206,6 +1200,7 @@
         "cli-reference.md",
         "commands.md",
         "common-workflows.md",
+        "data-usage.md",
         "desktop.md",
         "headless.md",
         "hooks-guide.md",
@@ -1230,7 +1225,7 @@
         "tools-reference.md",
         "troubleshooting.md"
       ],
-      "mentions": 125
+      "mentions": 123
     },
     "plan": {
       "documented": true,
@@ -1533,7 +1528,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 155
+      "mentions": 157
     },
     "stats": {
       "documented": true,
@@ -1547,7 +1542,6 @@
     "status": {
       "documented": true,
       "doc_files": [
-        "admin-setup.md",
         "amazon-bedrock.md",
         "authentication.md",
         "changelog.md",
@@ -1566,7 +1560,7 @@
         "third-party-integrations.md",
         "troubleshooting.md"
       ],
-      "mentions": 28
+      "mentions": 27
     },
     "statusline": {
       "documented": true,
@@ -1760,5 +1754,5 @@
       "mentions": 17
     }
   },
-  "docs_checked_at": "2026-04-21"
+  "docs_checked_at": "2026-04-22"
 }
