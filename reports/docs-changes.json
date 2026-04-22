@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "date": "2026-04-22T06:13:38Z",
+      "version_at_time": "2.1.117",
+      "files_changed": [
+        "claude-directory.md",
+        "hooks.md",
+        "memory.md",
+        "settings.md",
+        "skills.md",
+        "slash-commands.md"
+      ],
+      "files_added": [
+        "debug-your-config.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-22T02:16:40Z",
       "version_at_time": "2.1.117",
       "files_changed": [
@@ -2385,37 +2403,6 @@
     },
     {
       "date": "2026-04-11T11:13:23Z",
-      "version_at_time": "2.1.101",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-10T22:16:18Z",
       "version_at_time": "2.1.101",
       "files_changed": [
         "amazon-bedrock.md",
