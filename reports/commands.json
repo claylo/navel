@@ -422,7 +422,7 @@
         "statusline.md",
         "tools-reference.md"
       ],
-      "mentions": 10
+      "mentions": 11
     },
     "advisor": {
       "documented": false,
@@ -568,7 +568,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 7
+      "mentions": 8
     },
     "commit": {
       "documented": true,
@@ -685,7 +685,7 @@
         "remote-control.md",
         "statusline.md"
       ],
-      "mentions": 15
+      "mentions": 16
     },
     "debug": {
       "documented": true,
@@ -755,7 +755,7 @@
         "plugin-dependencies.md",
         "troubleshooting.md"
       ],
-      "mentions": 25
+      "mentions": 26
     },
     "dream": {
       "documented": false,
@@ -1042,7 +1042,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 45
+      "mentions": 47
     },
     "logout": {
       "documented": true,
@@ -1112,7 +1112,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 156
+      "mentions": 157
     },
     "memory": {
       "documented": true,
@@ -1190,7 +1190,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 122
+      "mentions": 124
     },
     "passes": {
       "documented": true,
@@ -1284,7 +1284,7 @@
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 134
+      "mentions": 136
     },
     "powerup": {
       "documented": true,
@@ -1550,7 +1550,7 @@
         "commands.md",
         "costs.md"
       ],
-      "mentions": 8
+      "mentions": 9
     },
     "status": {
       "documented": true,
@@ -1660,7 +1660,7 @@
         "interactive-mode.md",
         "terminal-config.md"
       ],
-      "mentions": 7
+      "mentions": 8
     },
     "toggle-memory": {
       "documented": false,
@@ -1735,7 +1735,7 @@
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 15
+      "mentions": 16
     },
     "version": {
       "documented": true,
@@ -1772,5 +1772,5 @@
       "mentions": 17
     }
   },
-  "docs_checked_at": "2026-04-22"
+  "docs_checked_at": "2026-04-23"
 }
