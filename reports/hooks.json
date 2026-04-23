@@ -213,7 +213,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 19
+      "mentions": 21
     },
     "PermissionRequest": {
       "documented": true,
@@ -243,6 +243,7 @@
         "changelog.md",
         "claude-directory.md",
         "context-window.md",
+        "features-overview.md",
         "hooks-guide.md",
         "hooks.md",
         "monitoring-usage.md",
@@ -254,7 +255,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 78
+      "mentions": 83
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -281,6 +282,7 @@
         "changelog.md",
         "costs.md",
         "debug-your-config.md",
+        "features-overview.md",
         "hooks-guide.md",
         "hooks.md",
         "monitoring-usage.md",
@@ -291,7 +293,7 @@
         "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 110
+      "mentions": 111
     },
     "SessionEnd": {
       "documented": true,
@@ -312,12 +314,13 @@
         "claude-code-on-the-web.md",
         "debug-your-config.md",
         "env-vars.md",
+        "features-overview.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
         "tools-reference.md"
       ],
-      "mentions": 47
+      "mentions": 49
     },
     "Setup": {
       "documented": true,
@@ -329,13 +332,14 @@
         "discover-plugins.md",
         "github-actions.md",
         "gitlab-ci-cd.md",
+        "hooks.md",
         "microsoft-foundry.md",
         "platforms.md",
         "remote-control.md",
         "routines.md",
         "web-quickstart.md"
       ],
-      "mentions": 24
+      "mentions": 26
     },
     "Stop": {
       "documented": true,
@@ -353,7 +357,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 98
+      "mentions": 99
     },
     "StopFailure": {
       "documented": true,
