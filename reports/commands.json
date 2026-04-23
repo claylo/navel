@@ -417,12 +417,14 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "cli-reference.md",
         "commands.md",
+        "common-workflows.md",
         "permissions.md",
         "statusline.md",
         "tools-reference.md"
       ],
-      "mentions": 11
+      "mentions": 14
     },
     "advisor": {
       "documented": false,
@@ -679,13 +681,10 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
-        "claude-directory.md",
         "commands.md",
-        "costs.md",
-        "remote-control.md",
         "statusline.md"
       ],
-      "mentions": 16
+      "mentions": 9
     },
     "debug": {
       "documented": true,
@@ -755,7 +754,7 @@
         "plugin-dependencies.md",
         "troubleshooting.md"
       ],
-      "mentions": 26
+      "mentions": 27
     },
     "dream": {
       "documented": false,
@@ -922,7 +921,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 270
+      "mentions": 273
     },
     "ide": {
       "documented": true,
@@ -1020,6 +1019,7 @@
     "login": {
       "documented": true,
       "doc_files": [
+        "admin-setup.md",
         "amazon-bedrock.md",
         "authentication.md",
         "changelog.md",
@@ -1042,11 +1042,12 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 47
+      "mentions": 48
     },
     "logout": {
       "documented": true,
       "doc_files": [
+        "admin-setup.md",
         "amazon-bedrock.md",
         "authentication.md",
         "commands.md",
@@ -1060,7 +1061,7 @@
         "remote-control.md",
         "troubleshooting.md"
       ],
-      "mentions": 15
+      "mentions": 16
     },
     "loops": {
       "documented": false,
@@ -1070,6 +1071,7 @@
     "mcp": {
       "documented": true,
       "doc_files": [
+        "admin-setup.md",
         "best-practices.md",
         "changelog.md",
         "channels-reference.md",
@@ -1112,11 +1114,12 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 157
+      "mentions": 160
     },
     "memory": {
       "documented": true,
       "doc_files": [
+        "admin-setup.md",
         "auto-mode-config.md",
         "best-practices.md",
         "changelog.md",
@@ -1149,7 +1152,7 @@
         "troubleshooting.md",
         "web-quickstart.md"
       ],
-      "mentions": 94
+      "mentions": 95
     },
     "mobile": {
       "documented": true,
@@ -1202,6 +1205,7 @@
     "permissions": {
       "documented": true,
       "doc_files": [
+        "admin-setup.md",
         "agent-teams.md",
         "analytics.md",
         "auto-mode-config.md",
@@ -1237,7 +1241,7 @@
         "tools-reference.md",
         "troubleshooting.md"
       ],
-      "mentions": 121
+      "mentions": 124
     },
     "plan": {
       "documented": true,
@@ -1284,7 +1288,7 @@
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 136
+      "mentions": 140
     },
     "powerup": {
       "documented": true,
@@ -1362,7 +1366,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 39
+      "mentions": 40
     },
     "remote-env": {
       "documented": true,
@@ -1446,7 +1450,7 @@
         "scheduled-tasks.md",
         "web-quickstart.md"
       ],
-      "mentions": 15
+      "mentions": 17
     },
     "security-review": {
       "documented": true,
@@ -1547,14 +1551,14 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
-        "commands.md",
-        "costs.md"
+        "commands.md"
       ],
       "mentions": 9
     },
     "status": {
       "documented": true,
       "doc_files": [
+        "admin-setup.md",
         "amazon-bedrock.md",
         "authentication.md",
         "changelog.md",
@@ -1574,7 +1578,7 @@
         "third-party-integrations.md",
         "troubleshooting.md"
       ],
-      "mentions": 29
+      "mentions": 30
     },
     "statusline": {
       "documented": true,
@@ -1656,11 +1660,13 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "claude-directory.md",
         "commands.md",
         "interactive-mode.md",
+        "plugins-reference.md",
         "terminal-config.md"
       ],
-      "mentions": 8
+      "mentions": 14
     },
     "toggle-memory": {
       "documented": false,
@@ -1727,15 +1733,17 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "claude-directory.md",
         "code-review.md",
         "commands.md",
         "costs.md",
         "errors.md",
+        "remote-control.md",
         "routines.md",
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 16
+      "mentions": 25
     },
     "version": {
       "documented": true,
@@ -1747,7 +1755,7 @@
         "plugins.md",
         "statusline.md"
       ],
-      "mentions": 33
+      "mentions": 44
     },
     "voice": {
       "documented": true,
