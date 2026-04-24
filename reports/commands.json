@@ -490,9 +490,12 @@
         "changelog.md",
         "commands.md",
         "common-workflows.md",
-        "statusline.md"
+        "env-vars.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md"
       ],
-      "mentions": 8
+      "mentions": 11
     },
     "bridge-kick": {
       "documented": false,
@@ -1193,7 +1196,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 124
+      "mentions": 126
     },
     "passes": {
       "documented": true,
@@ -1780,5 +1783,5 @@
       "mentions": 17
     }
   },
-  "docs_checked_at": "2026-04-23"
+  "docs_checked_at": "2026-04-24"
 }
