@@ -255,16 +255,17 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 83
+      "mentions": 85
     },
     "PostToolUseFailure": {
       "documented": true,
       "doc_files": [
+        "changelog.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 20
+      "mentions": 21
     },
     "PreCompact": {
       "documented": true,
@@ -293,7 +294,7 @@
         "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 111
+      "mentions": 112
     },
     "SessionEnd": {
       "documented": true,
@@ -460,5 +461,5 @@
       "mentions": 20
     }
   },
-  "docs_checked_at": "2026-04-23"
+  "docs_checked_at": "2026-04-24"
 }
