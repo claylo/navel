@@ -779,10 +779,11 @@
         "settings.md",
         "skills.md",
         "slash-commands.md",
+        "statusline.md",
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 36
+      "mentions": 39
     },
     "exit": {
       "documented": true,
@@ -1095,6 +1096,7 @@
         "env-vars.md",
         "errors.md",
         "features-overview.md",
+        "google-vertex-ai.md",
         "hooks.md",
         "how-claude-code-works.md",
         "interactive-mode.md",
@@ -1117,7 +1119,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 160
+      "mentions": 161
     },
     "memory": {
       "documented": true,
