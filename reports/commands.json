@@ -453,7 +453,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 65
+      "mentions": 66
     },
     "autocompact": {
       "documented": false,
@@ -648,7 +648,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 80
+      "mentions": 81
     },
     "context": {
       "documented": true,
@@ -757,7 +757,7 @@
         "plugin-dependencies.md",
         "troubleshooting.md"
       ],
-      "mentions": 27
+      "mentions": 29
     },
     "dream": {
       "documented": false,
@@ -803,7 +803,7 @@
         "hooks.md",
         "tools-reference.md"
       ],
-      "mentions": 7
+      "mentions": 8
     },
     "extra-usage": {
       "documented": true,
@@ -1264,7 +1264,7 @@
         "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 25
+      "mentions": 26
     },
     "plugin": {
       "documented": true,
@@ -1344,7 +1344,7 @@
         "plugins.md",
         "remote-control.md"
       ],
-      "mentions": 16
+      "mentions": 17
     },
     "remote-control": {
       "documented": true,
@@ -1548,7 +1548,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 158
+      "mentions": 159
     },
     "stats": {
       "documented": true,
@@ -1581,7 +1581,7 @@
         "third-party-integrations.md",
         "troubleshooting.md"
       ],
-      "mentions": 30
+      "mentions": 31
     },
     "statusline": {
       "documented": true,
@@ -1746,7 +1746,7 @@
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 25
+      "mentions": 26
     },
     "version": {
       "documented": true,
