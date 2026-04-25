@@ -40,30 +40,30 @@ while IFS= read -r version; do
     cmds=$(cat "$cache_file")
   else
     dir="v${version}"
-    cli="versions/$dir/node_modules/@anthropic-ai/claude-code/cli.js"
-    [[ -f "$cli" ]] || continue
+    pkg_dir="versions/$dir/node_modules/@anthropic-ai/claude-code"
+    source_file=$(_scannable_source "$pkg_dir") || continue
 
     # Extract commands from all registration patterns
     cmds=$(
       {
         # Pattern 1: type before name
-        rg -o 'type:"(local|local-jsx|prompt)",name:"[a-z][-a-z_]*"' "$cli" 2>/dev/null \
+        rg -o 'type:"(local|local-jsx|prompt)",name:"[a-z][-a-z_]*"' "$source_file" 2>/dev/null \
           | sed 's/.*name:"//;s/"//'
 
         # Pattern 2: name before type (within same ; delimited statement)
-        rg -o 'name:"[a-z][-a-z_]*"[^;]*type:"(local|local-jsx|prompt)"' "$cli" 2>/dev/null \
+        rg -o 'name:"[a-z][-a-z_]*"[^;]*type:"(local|local-jsx|prompt)"' "$source_file" 2>/dev/null \
           | sed 's/name:"//;s/".*//'
 
         # Pattern 3: name-first with isEnabled (command marker)
-        rg -o '\{name:"[a-z][-a-z_]*"[^;]*isEnabled' "$cli" 2>/dev/null \
+        rg -o '\{name:"[a-z][-a-z_]*"[^;]*isEnabled' "$source_file" 2>/dev/null \
           | sed 's/{name:"//;s/".*//'
 
         # Pattern 4: name + progressMessage (skill-like builtins e.g. statusline)
-        rg -o 'name:"[a-z][-a-z_]*",progressMessage:' "$cli" 2>/dev/null \
+        rg -o 'name:"[a-z][-a-z_]*",progressMessage:' "$source_file" 2>/dev/null \
           | sed 's/name:"//;s/".*//'
 
         # Pattern 5: skill-registered commands (name+description+async)
-        rg -o 'name:"[a-z][-a-z_]*",description:"[^"]*"[^;]*async ' "$cli" 2>/dev/null \
+        rg -o 'name:"[a-z][-a-z_]*",description:"[^"]*"[^;]*async ' "$source_file" 2>/dev/null \
           | sed 's/name:"//;s/".*//'
       } \
       | grep -v '^mcp__' \
@@ -73,7 +73,7 @@ while IFS= read -r version; do
 
     # Bulk filter: find ALL private command names in one rg pass
     if [[ -n "$cmds" ]]; then
-      private_cmds=$(rg -o 'name:"[a-z][-a-z_]*"[^;]*private:!0' "$cli" 2>/dev/null \
+      private_cmds=$(rg -o 'name:"[a-z][-a-z_]*"[^;]*private:!0' "$source_file" 2>/dev/null \
         | sed 's/name:"//;s/".*//' | sort -u || true)
       if [[ -n "$private_cmds" ]]; then
         cmds=$(comm -23 \
@@ -84,6 +84,7 @@ while IFS= read -r version; do
     fi
 
     echo "$cmds" > "$cache_file"
+    [[ "$source_file" != *.js ]] && rm -f "$source_file"
   fi
 
   if [[ -n "$cmds" ]]; then
@@ -113,12 +114,13 @@ cmds_json=$(echo "$latest_cmds" | tr ' ' '\n' | grep -v '^$' | sort | jq -R . | 
 
 # Extract descriptions from latest version only — build as JSONL then assemble
 latest_version=$(jq -r '.[] | select(split(".")[0] | tonumber >= 2)' versions.json | sort -V | tail -1)
-latest_cli="versions/v${latest_version}/node_modules/@anthropic-ai/claude-code/cli.js"
+latest_pkg="versions/v${latest_version}/node_modules/@anthropic-ai/claude-code"
+latest_source=$(_scannable_source "$latest_pkg") || latest_source=""
 desc_tmp=$(mktemp)
 
-if [[ -f "$latest_cli" ]]; then
+if [[ -n "$latest_source" ]]; then
   # Extract all name:"...",description:"..." pairs in one rg pass
-  rg -o 'name:"[a-z][-a-z_]*",description:"[^"]*"' "$latest_cli" 2>/dev/null \
+  rg -o 'name:"[a-z][-a-z_]*",description:"[^"]*"' "$latest_source" 2>/dev/null \
     | sed 's/name:"//;s/",description:"/\t/;s/"$//' \
     | sort -t$'\t' -k1,1 -u \
     > "$desc_tmp" || true
@@ -172,14 +174,14 @@ flags_cache_dir="${REPO_ROOT}/npm/.cache/flags"
 mkdir -p "$flags_cache_dir"
 
 cmd_status="{}"
-if [[ -f "$latest_cli" ]]; then
+if [[ -n "$latest_source" ]]; then
   flags_cache="${flags_cache_dir}/${latest_version}.tsv"
 
   if [[ -f "$flags_cache" ]]; then
     flag_funcs=$(cut -f1 "$flags_cache" | paste -sd'|' - || true)
   else
     # Extract wrapper→flag mappings and cache them
-    rg -o 'function [A-Za-z0-9_]+\(\)\{return (e8|r2)\("tengu_[a-z_]+"' "$latest_cli" 2>/dev/null \
+    rg -o 'function [A-Za-z0-9_]+\(\)\{return (e8|r2)\("tengu_[a-z_]+"' "$latest_source" 2>/dev/null \
       | while read -r line; do
           func=$(echo "$line" | sed 's/function //;s/(.*//')
           flag=$(echo "$line" | grep -o '"tengu_[a-z_]*"' | tr -d '"')
@@ -191,10 +193,10 @@ if [[ -f "$latest_cli" ]]; then
   cmd_status=$(
     while IFS= read -r cmd; do
       # Extract isEnabled body — try simple arrow first, then block form
-      enabled=$(rg -o "name:\"${cmd}\"[^;]*isEnabled:\(\)=>[^,}]*" "$latest_cli" 2>/dev/null \
+      enabled=$(rg -o "name:\"${cmd}\"[^;]*isEnabled:\(\)=>[^,}]*" "$latest_source" 2>/dev/null \
         | head -1 | sed 's/.*isEnabled://' || true)
       if [[ -z "$enabled" ]]; then
-        enabled=$(rg -o "name:\"${cmd}\"[^;]*isEnabled:\(\)=>\{[^}]*\}" "$latest_cli" 2>/dev/null \
+        enabled=$(rg -o "name:\"${cmd}\"[^;]*isEnabled:\(\)=>\{[^}]*\}" "$latest_source" 2>/dev/null \
           | head -1 | sed 's/.*isEnabled://' || true)
       fi
 
@@ -263,6 +265,9 @@ jq -n \
   --argjson docs "$cmds_docs" \
   --arg date "$today" \
   '{commands: $commands, descriptions: $descriptions, status: $status, commands_history: $history, commands_docs: $docs, docs_checked_at: $date}' > "${REPORTS_DIR}/commands.json"
+
+# Clean up strings dump for binary versions
+[[ -n "${latest_source:-}" && "$latest_source" != *.js ]] && rm -f "$latest_source"
 
 count=$(echo "$cmds_json" | jq length)
 # Revert if only the date changed (avoid noise commits) — tracked reports/ only

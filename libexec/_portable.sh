@@ -47,3 +47,25 @@ _find_claude_binary() {
   platform_dir=$(ls -d "$pkg_dir/node_modules/@anthropic-ai"/claude-code-* 2>/dev/null | head -1)
   [[ -n "$platform_dir" ]] && echo "$platform_dir/claude"
 }
+
+# Returns a file path suitable for scanning with rg/grep.
+# For cli.js versions: returns cli.js directly.
+# For binary versions: dumps strings -a to a temp file.
+# Caller must clean up temp files (path won't end in .js).
+_scannable_source() {
+  local pkg_dir="$1"
+  if [[ -f "$pkg_dir/cli.js" ]]; then
+    echo "$pkg_dir/cli.js"
+    return 0
+  fi
+  local binary
+  binary=$(_find_claude_binary "$pkg_dir")
+  if [[ -n "$binary" && -f "$binary" ]]; then
+    local tmp
+    tmp=$(mktemp)
+    strings -a "$binary" > "$tmp" 2>/dev/null
+    echo "$tmp"
+    return 0
+  fi
+  return 1
+}
