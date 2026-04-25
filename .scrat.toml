@@ -4,3 +4,5 @@ type = "node"    # bash project — version bump and publish are manual
 [commands]
 test = "bats tests/"
 
+[ship]
+no_publish = true
