@@ -1,111 +1,12 @@
 {
   "changes": [
     {
-      "date": "2026-04-25T02:56:21Z",
+      "date": "2026-04-25T14:24:07Z",
       "version_at_time": "2.1.120",
       "files_changed": [
-        "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-25T00:20:54Z",
-      "version_at_time": "2.1.120",
-      "files_changed": [
-        "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-24T17:21:01Z",
-      "version_at_time": "2.1.119",
-      "files_changed": [
         "agent-teams.md",
-        "claude-directory.md",
-        "cli-reference.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "monitoring-usage.md",
-        "permission-modes.md",
-        "plugin-dependencies.md",
-        "settings.md",
-        "statusline.md",
-        "terminal-config.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-24T05:37:40Z",
-      "version_at_time": "2.1.119",
-      "files_changed": [
         "amazon-bedrock.md",
-        "google-vertex-ai.md",
-        "microsoft-foundry.md",
-        "third-party-integrations.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-23T23:56:44Z",
-      "version_at_time": "2.1.119",
-      "files_changed": [
-        "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-23T23:17:42Z",
-      "version_at_time": "2.1.119",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "commands.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "microsoft-foundry.md",
-        "sub-agents.md",
-        "subagents.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-23T18:19:36Z",
-      "version_at_time": "2.1.118",
-      "files_changed": [
-        "agent-teams.md",
-        "auto-mode-config.md",
+        "changelog.md",
         "claude-directory.md",
         "cli-reference.md",
         "commands.md",
@@ -113,93 +14,46 @@
         "costs.md",
         "data-usage.md",
         "desktop-scheduled-tasks.md",
+        "desktop.md",
         "env-vars.md",
+        "errors.md",
         "features-overview.md",
+        "google-vertex-ai.md",
         "hooks-guide.md",
         "hooks.md",
         "interactive-mode.md",
         "keybindings.md",
+        "mcp.md",
+        "memory.md",
+        "microsoft-foundry.md",
         "model-config.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "overview.md",
         "permission-modes.md",
         "permissions.md",
         "plugin-dependencies.md",
         "plugin-marketplaces.md",
         "plugins-reference.md",
         "plugins.md",
+        "quickstart.md",
         "remote-control.md",
         "routines.md",
         "scheduled-tasks.md",
+        "server-managed-settings.md",
         "settings.md",
         "setup.md",
         "statusline.md",
-        "terminal-config.md"
+        "sub-agents.md",
+        "subagents.md",
+        "terminal-config.md",
+        "third-party-integrations.md",
+        "tools-reference.md",
+        "voice-dictation.md",
+        "vs-code.md"
       ],
       "files_added": [
-        "admin-setup.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-23T02:59:09Z",
-      "version_at_time": "2.1.118",
-      "files_changed": [
-        "overview.md",
-        "quickstart.md",
-        "setup.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-23T01:19:35Z",
-      "version_at_time": "2.1.118",
-      "files_changed": [
-        "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-22T23:14:47Z",
-      "version_at_time": "2.1.117",
-      "files_changed": [
-        "changelog.md",
-        "hooks.md",
-        "network-config.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-22T21:16:45Z",
-      "version_at_time": "2.1.117",
-      "files_changed": [
-        "commands.md",
-        "desktop.md",
-        "google-vertex-ai.md",
-        "interactive-mode.md",
-        "keybindings.md",
-        "permission-modes.md",
-        "permissions.md",
-        "server-managed-settings.md",
-        "settings.md",
-        "voice-dictation.md"
-      ],
-      "files_added": [
+        "admin-setup.md",
         "auto-mode-config.md"
       ],
       "files_removed": [
@@ -207,445 +61,46 @@
       ]
     },
     {
-      "date": "2026-04-22T20:07:17Z",
-      "version_at_time": "2.1.117",
+      "date": "2026-04-22T01:32:25Z",
+      "version_at_time": "2.1.114",
       "files_changed": [
+        "best-practices.md",
+        "changelog.md",
         "claude-directory.md",
+        "commands.md",
         "common-workflows.md",
-        "errors.md",
-        "model-config.md",
-        "monitoring-usage.md",
-        "permissions.md",
-        "plugin-dependencies.md",
-        "plugin-marketplaces.md",
-        "settings.md",
-        "sub-agents.md",
-        "subagents.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-22T19:27:00Z",
-      "version_at_time": "2.1.117",
-      "files_changed": [
-        "errors.md",
-        "mcp.md",
-        "memory.md",
-        "remote-control.md",
-        "vs-code.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-22T08:12:08Z",
-      "version_at_time": "2.1.117",
-      "files_changed": [
-        "claude-directory.md",
-        "hooks.md",
-        "memory.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md"
-      ],
-      "files_added": [
-        "debug-your-config.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-22T06:13:38Z",
-      "version_at_time": "2.1.117",
-      "files_changed": [
-        "claude-directory.md",
-        "hooks.md",
-        "memory.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md"
-      ],
-      "files_added": [
-        "debug-your-config.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-22T02:16:40Z",
-      "version_at_time": "2.1.117",
-      "files_changed": [
-        "claude-directory.md",
-        "hooks.md",
-        "memory.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md"
-      ],
-      "files_added": [
-        "debug-your-config.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-22T06:13:38Z",
-      "version_at_time": "2.1.117",
-      "files_changed": [
-        "claude-directory.md",
-        "hooks.md",
-        "memory.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md"
-      ],
-      "files_added": [
-        "debug-your-config.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-22T05:13:39Z",
-      "version_at_time": "2.1.117",
-      "files_changed": [
-        "claude-directory.md",
-        "hooks.md",
-        "memory.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md"
-      ],
-      "files_added": [
-        "debug-your-config.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-22T02:16:40Z",
-      "version_at_time": "2.1.117",
-      "files_changed": [
-        "claude-directory.md",
-        "hooks.md",
-        "memory.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md"
-      ],
-      "files_added": [
-        "debug-your-config.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-22T02:16:40Z",
-      "version_at_time": "2.1.117",
-      "files_changed": [
-        "claude-directory.md",
-        "hooks.md",
-        "memory.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md"
-      ],
-      "files_added": [
-        "debug-your-config.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-22T00:46:08Z",
-      "version_at_time": "2.1.117",
-      "files_changed": [
-        "claude-directory.md",
-        "hooks.md",
-        "memory.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md"
-      ],
-      "files_added": [
-        "debug-your-config.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-22T00:11:49Z",
-      "version_at_time": "2.1.117",
-      "files_changed": [
-        "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-21T23:02:16Z",
-      "version_at_time": "2.1.117",
-      "files_changed": [
         "data-usage.md",
-        "interactive-mode.md",
-        "network-config.md",
-        "overview.md",
-        "permissions.md",
-        "plugins-reference.md",
-        "quickstart.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md",
-        "sub-agents.md",
-        "subagents.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        "admin-setup.md",
-        "session-storage.md"
-      ]
-    },
-    {
-      "date": "2026-04-21T18:52:15Z",
-      "version_at_time": "2.1.116",
-      "files_changed": [
-        "common-workflows.md",
+        "desktop.md",
         "env-vars.md",
         "hooks-guide.md",
         "hooks.md",
         "interactive-mode.md",
         "mcp.md",
+        "memory.md",
         "monitoring-usage.md",
         "network-config.md",
+        "overview.md",
         "permissions.md",
         "plugin-dependencies.md",
         "plugin-marketplaces.md",
         "plugins-reference.md",
+        "quickstart.md",
         "sandboxing.md",
         "settings.md",
         "setup.md",
         "skills.md",
         "slash-commands.md",
+        "statusline.md",
         "sub-agents.md",
         "subagents.md",
         "terminal-config.md",
-        "troubleshooting.md"
-      ],
-      "files_added": [
-        "admin-setup.md",
-        "session-storage.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-21T09:02:11Z",
-      "version_at_time": "2.1.116",
-      "files_changed": [
-        "commands.md",
-        "ultrareview.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-21T02:49:15Z",
-      "version_at_time": "2.1.116",
-      "files_changed": [
-        "best-practices.md",
-        "claude-directory.md",
-        "commands.md",
-        "common-workflows.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
+        "troubleshooting.md",
+        "ultrareview.md",
         "vs-code.md",
         "zero-data-retention.md"
       ],
       "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-21T02:52:42Z",
-      "version_at_time": "2.1.116",
-      "files_changed": [
-        "best-practices.md",
-        "claude-directory.md",
-        "commands.md",
-        "common-workflows.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "vs-code.md",
-        "zero-data-retention.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-21T01:34:57Z",
-      "version_at_time": "2.1.116",
-      "files_changed": [
-        "desktop.md",
-        "settings.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-20T22:36:59Z",
-      "version_at_time": "2.1.116",
-      "files_changed": [
-        "changelog.md",
-        "commands.md",
-        "interactive-mode.md",
-        "terminal-config.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-20T22:36:59Z",
-      "version_at_time": "2.1.116",
-      "files_changed": [
-        "changelog.md",
-        "commands.md",
-        "interactive-mode.md",
-        "terminal-config.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-20T22:00:12Z",
-      "version_at_time": "2.1.116",
-      "files_changed": [
-        "commands.md",
-        "interactive-mode.md",
-        "terminal-config.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-20T20:37:02Z",
-      "version_at_time": "2.1.116",
-      "files_changed": [
-        "commands.md",
-        "interactive-mode.md",
-        "terminal-config.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-20T20:12:11Z",
-      "version_at_time": "2.1.116",
-      "files_changed": [
-        "env-vars.md",
-        "hooks-guide.md",
-        "hooks.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-20T18:30:17Z",
-      "version_at_time": "2.1.114",
-      "files_changed": [
-        "env-vars.md",
-        "hooks-guide.md",
-        "hooks.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-20T18:15:25Z",
-      "version_at_time": "2.1.114",
-      "files_changed": [
-        "hooks-guide.md",
-        "hooks.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-20T17:12:56Z",
-      "version_at_time": "2.1.114",
-      "files_changed": [
-        "setup.md"
-      ],
-      "files_added": [
-        ""
+        "debug-your-config.md"
       ],
       "files_removed": [
         ""
@@ -675,78 +130,13 @@
       ]
     },
     {
-      "date": "2026-04-18T15:11:28Z",
-      "version_at_time": "2.1.114",
-      "files_changed": [
-        "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-18T01:25:33Z",
+      "date": "2026-04-18T00:24:17Z",
       "version_at_time": "2.1.114",
       "files_changed": [
         "changelog.md",
-        "hooks.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-17T21:52:11Z",
-      "version_at_time": "2.1.114",
-      "files_changed": [
-        "changelog.md",
-        "hooks.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-17T21:52:11Z",
-      "version_at_time": "2.1.113",
-      "files_changed": [
-        "changelog.md",
-        "hooks.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-17T21:52:11Z",
-      "version_at_time": "2.1.113",
-      "files_changed": [
-        "changelog.md",
-        "hooks.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-17T19:54:27Z",
-      "version_at_time": "2.1.113",
-      "files_changed": [
+        "hooks.md",
+        "model-config.md",
+        "routines.md",
         "setup.md",
         "troubleshooting.md"
       ],
@@ -758,35 +148,7 @@
       ]
     },
     {
-      "date": "2026-04-17T15:48:22Z",
-      "version_at_time": "2.1.112",
-      "files_changed": [
-        "model-config.md",
-        "routines.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-16T21:21:20Z",
-      "version_at_time": "2.1.112",
-      "files_changed": [
-        "desktop-quickstart.md",
-        "desktop.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-16T21:00:42Z",
+      "date": "2026-04-16T22:05:20Z",
       "version_at_time": "2.1.112",
       "files_changed": [
         "amazon-bedrock.md",
@@ -795,13 +157,12 @@
         "cli-reference.md",
         "commands.md",
         "common-workflows.md",
+        "desktop-quickstart.md",
         "desktop-scheduled-tasks.md",
         "desktop.md",
         "discover-plugins.md",
         "env-vars.md",
-        "fast-mode.md",
         "fullscreen.md",
-        "github-actions.md",
         "google-vertex-ai.md",
         "headless.md",
         "hooks-guide.md",
@@ -810,7 +171,6 @@
         "interactive-mode.md",
         "keybindings.md",
         "mcp.md",
-        "microsoft-foundry.md",
         "model-config.md",
         "monitoring-usage.md",
         "permission-modes.md",
@@ -825,129 +185,18 @@
         "setup.md",
         "skills.md",
         "slash-commands.md",
-        "statusline.md",
         "sub-agents.md",
         "subagents.md",
         "terminal-config.md",
         "tools-reference.md",
         "troubleshooting.md",
         "ultraplan.md",
+        "ultrareview.md",
         "vs-code.md",
         "web-quickstart.md"
       ],
       "files_added": [
-        "errors.md",
-        "plugin-dependencies.md",
-        "ultrareview.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-16T19:41:15Z",
-      "version_at_time": "2.1.112",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "claude-code-on-the-web.md",
-        "cli-reference.md",
-        "commands.md",
-        "common-workflows.md",
-        "desktop.md",
-        "env-vars.md",
-        "fast-mode.md",
-        "github-actions.md",
-        "google-vertex-ai.md",
-        "microsoft-foundry.md",
-        "model-config.md",
-        "permission-modes.md",
-        "plugins-reference.md",
-        "plugins.md",
-        "routines.md",
-        "settings.md",
-        "setup.md",
-        "skills.md",
-        "slash-commands.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "tools-reference.md",
-        "vs-code.md",
-        "web-quickstart.md"
-      ],
-      "files_added": [
-        "plugin-dependencies.md",
-        "ultrareview.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-16T19:30:59Z",
-      "version_at_time": "2.1.112",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "cli-reference.md",
-        "commands.md",
-        "common-workflows.md",
-        "desktop.md",
-        "env-vars.md",
-        "fast-mode.md",
-        "github-actions.md",
-        "google-vertex-ai.md",
-        "microsoft-foundry.md",
-        "model-config.md",
-        "permission-modes.md",
-        "plugins-reference.md",
-        "settings.md",
-        "setup.md",
-        "skills.md",
-        "slash-commands.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "vs-code.md"
-      ],
-      "files_added": [
-        "plugin-dependencies.md",
-        "ultrareview.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-16T18:15:06Z",
-      "version_at_time": "2.1.111",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "cli-reference.md",
-        "commands.md",
-        "common-workflows.md",
-        "desktop.md",
-        "env-vars.md",
-        "fast-mode.md",
-        "github-actions.md",
-        "google-vertex-ai.md",
-        "microsoft-foundry.md",
-        "model-config.md",
-        "permission-modes.md",
-        "plugins-reference.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "vs-code.md"
-      ],
-      "files_added": [
-        "plugin-dependencies.md",
-        "ultrareview.md"
+        "errors.md"
       ],
       "files_removed": [
         ""
@@ -988,101 +237,10 @@
       ]
     },
     {
-      "date": "2026-04-16T15:56:59Z",
-      "version_at_time": "2.1.111",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "cli-reference.md",
-        "commands.md",
-        "common-workflows.md",
-        "desktop.md",
-        "env-vars.md",
-        "fast-mode.md",
-        "github-actions.md",
-        "google-vertex-ai.md",
-        "microsoft-foundry.md",
-        "model-config.md",
-        "permission-modes.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md"
-      ],
-      "files_added": [
-        "ultrareview.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-16T15:29:16Z",
-      "version_at_time": "2.1.111",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "cli-reference.md",
-        "commands.md",
-        "common-workflows.md",
-        "desktop.md",
-        "env-vars.md",
-        "fast-mode.md",
-        "github-actions.md",
-        "google-vertex-ai.md",
-        "microsoft-foundry.md",
-        "model-config.md",
-        "permission-modes.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md"
-      ],
-      "files_added": [
-        "ultrareview.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-16T02:10:10Z",
+      "date": "2026-04-16T12:47:23Z",
       "version_at_time": "2.1.110",
       "files_changed": [
         "changelog.md",
-        "costs.md",
-        "statusline.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-16T02:10:10Z",
-      "version_at_time": "2.1.110",
-      "files_changed": [
-        "changelog.md",
-        "costs.md",
-        "statusline.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-16T00:43:46Z",
-      "version_at_time": "2.1.110",
-      "files_changed": [
         "costs.md",
         "statusline.md"
       ],
@@ -1097,24 +255,17 @@
       "date": "2026-04-15T22:23:34Z",
       "version_at_time": "2.1.110",
       "files_changed": [
-        "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-15T21:57:14Z",
-      "version_at_time": "2.1.110",
-      "files_changed": [
         "amazon-bedrock.md",
+        "changelog.md",
+        "claude-code-on-the-web.md",
+        "code-review.md",
+        "env-vars.md",
         "google-vertex-ai.md",
+        "jetbrains.md",
         "microsoft-foundry.md",
         "overview.md",
         "quickstart.md",
+        "settings.md",
         "third-party-integrations.md",
         "web-quickstart.md"
       ],
@@ -1126,49 +277,7 @@
       ]
     },
     {
-      "date": "2026-04-15T18:15:04Z",
-      "version_at_time": "2.1.109",
-      "files_changed": [
-        "code-review.md",
-        "jetbrains.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-15T16:22:22Z",
-      "version_at_time": "2.1.109",
-      "files_changed": [
-        "claude-code-on-the-web.md",
-        "env-vars.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-15T14:06:18Z",
-      "version_at_time": "2.1.109",
-      "files_changed": [
-        "env-vars.md",
-        "settings.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-15T07:25:45Z",
+      "date": "2026-04-15T08:28:33Z",
       "version_at_time": "2.1.109",
       "files_changed": [
         "changelog.md",
@@ -1214,21 +323,7 @@
       ]
     },
     {
-      "date": "2026-04-14T21:02:04Z",
-      "version_at_time": "2.1.108",
-      "files_changed": [
-        "desktop-quickstart.md",
-        "desktop.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-14T20:15:23Z",
+      "date": "2026-04-14T20:11:17Z",
       "version_at_time": "2.1.108",
       "files_changed": [
         "agent-teams.md",
@@ -1303,152 +398,8 @@
       ]
     },
     {
-      "date": "2026-04-14T19:32:00Z",
-      "version_at_time": "2.1.108",
-      "files_changed": [
-        "agent-teams.md",
-        "amazon-bedrock.md",
-        "authentication.md",
-        "best-practices.md",
-        "changelog.md",
-        "channels-reference.md",
-        "channels.md",
-        "checkpointing.md",
-        "chrome.md",
-        "claude-code-on-the-web.md",
-        "code-review.md",
-        "common-workflows.md",
-        "computer-use.md",
-        "costs.md",
-        "desktop.md",
-        "discover-plugins.md",
-        "fast-mode.md",
-        "fullscreen.md",
-        "github-actions.md",
-        "github-enterprise-server.md",
-        "gitlab-ci-cd.md",
-        "google-vertex-ai.md",
-        "headless.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "how-claude-code-works.md",
-        "interactive-mode.md",
-        "jetbrains.md",
-        "keybindings.md",
-        "llm-gateway.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "model-config.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "output-styles.md",
-        "overview.md",
-        "permission-modes.md",
-        "permissions.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "plugins.md",
-        "quickstart.md",
-        "remote-control.md",
-        "routines.md",
-        "sandboxing.md",
-        "scheduled-tasks.md",
-        "server-managed-settings.md",
-        "settings.md",
-        "setup.md",
-        "skills.md",
-        "slash-commands.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "terminal-config.md",
-        "third-party-integrations.md",
-        "tools-reference.md",
-        "troubleshooting.md",
-        "voice-dictation.md",
-        "vs-code.md",
-        "web-quickstart.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-14T16:44:29Z",
+      "date": "2026-04-14T17:08:23Z",
       "version_at_time": "2.1.107",
-      "files_changed": [
-        "claude-code-on-the-web.md",
-        "claude-directory.md",
-        "commands.md",
-        "common-workflows.md",
-        "desktop-scheduled-tasks.md",
-        "desktop.md",
-        "env-vars.md",
-        "github-enterprise-server.md",
-        "overview.md",
-        "platforms.md",
-        "plugins.md",
-        "remote-control.md",
-        "scheduled-tasks.md",
-        "settings.md",
-        "web-quickstart.md"
-      ],
-      "files_added": [
-        "routines.md"
-      ],
-      "files_removed": [
-        "web-scheduled-tasks.md"
-      ]
-    },
-    {
-      "date": "2026-04-14T08:33:41Z",
-      "version_at_time": "2.1.107",
-      "files_changed": [
-        "structured-outputs.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-14T06:26:45Z",
-      "version_at_time": "2.1.107",
-      "files_changed": [
-        "structured-outputs.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-14T06:26:45Z",
-      "version_at_time": "2.1.107",
-      "files_changed": [
-        "changelog.md",
-        "chrome.md",
-        "costs.md",
-        "troubleshooting.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-14T02:07:34Z",
-      "version_at_time": "2.1.105",
       "files_changed": [
         "agent-teams.md",
         "amazon-bedrock.md",
@@ -1459,6 +410,135 @@
         "channels-reference.md",
         "channels.md",
         "checkpointing.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "claude-directory.md",
+        "cli-reference.md",
+        "code-review.md",
+        "commands.md",
+        "common-workflows.md",
+        "computer-use.md",
+        "context-window.md",
+        "costs.md",
+        "data-usage.md",
+        "desktop-quickstart.md",
+        "desktop-scheduled-tasks.md",
+        "desktop.md",
+        "devcontainer.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "fast-mode.md",
+        "features-overview.md",
+        "fullscreen.md",
+        "github-actions.md",
+        "github-enterprise-server.md",
+        "gitlab-ci-cd.md",
+        "google-vertex-ai.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "keybindings.md",
+        "legal-and-compliance.md",
+        "llm-gateway.md",
+        "mcp.md",
+        "memory.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "output-styles.md",
+        "overview.md",
+        "permission-modes.md",
+        "permissions.md",
+        "platforms.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "quickstart.md",
+        "remote-control.md",
+        "sandboxing.md",
+        "scheduled-tasks.md",
+        "security.md",
+        "server-managed-settings.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slack.md",
+        "slash-commands.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md",
+        "terminal-config.md",
+        "third-party-integrations.md",
+        "tools-reference.md",
+        "troubleshooting.md",
+        "ultraplan.md",
+        "voice-dictation.md",
+        "vs-code.md",
+        "web-quickstart.md",
+        "zero-data-retention.md"
+      ],
+      "files_added": [
+        "2026-w15.md",
+        "routines.md"
+      ],
+      "files_removed": [
+        "web-scheduled-tasks.md"
+      ]
+    },
+    {
+      "date": "2026-04-10T22:16:18Z",
+      "version_at_time": "2.1.101",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "commands.md",
+        "computer-use.md",
+        "costs.md",
+        "env-vars.md",
+        "google-vertex-ai.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "mcp.md",
+        "memory.md",
+        "microsoft-foundry.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "permissions.md",
+        "scheduled-tasks.md",
+        "server-managed-settings.md",
+        "settings.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md",
+        "third-party-integrations.md",
+        "tools-reference.md",
+        "troubleshooting.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-04-10T10:01:21Z",
+      "version_at_time": "2.1.100",
+      "files_changed": [
+        "agent-teams.md",
+        "amazon-bedrock.md",
+        "analytics.md",
+        "authentication.md",
+        "best-practices.md",
+        "changelog.md",
+        "channels-reference.md",
+        "channels.md",
+        "checkpointing.md",
+        "chrome.md",
         "claude-code-on-the-web.md",
         "claude-directory.md",
         "cli-reference.md",
@@ -1538,132 +618,356 @@
       ]
     },
     {
-      "date": "2026-04-13T23:37:15Z",
-      "version_at_time": "2.1.105",
+      "date": "2026-04-09T20:58:05Z",
+      "version_at_time": "2.1.98",
       "files_changed": [
-        "commands.md",
-        "env-vars.md",
-        "hooks.md",
-        "interactive-mode.md",
-        "keybindings.md",
-        "memory.md",
-        "monitoring-usage.md",
-        "permissions.md",
-        "plugins-reference.md",
-        "plugins.md",
-        "skills.md",
-        "slash-commands.md",
-        "statusline.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-13T22:08:38Z",
-      "version_at_time": "2.1.105",
-      "files_changed": [
+        "amazon-bedrock.md",
+        "authentication.md",
         "changelog.md",
-        "overview.md",
-        "quickstart.md",
-        "setup.md",
-        "terminal-config.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-13T20:16:09Z",
-      "version_at_time": "2.1.105",
-      "files_changed": [
-        "discover-plugins.md",
-        "mcp.md",
-        "network-config.md",
-        "permissions.md",
-        "sub-agents.md",
-        "subagents.md",
-        "tools-reference.md",
-        "troubleshooting.md"
-      ],
-      "files_added": [
-        "2026-w15.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-13T19:11:50Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
-        "discover-plugins.md",
-        "mcp.md",
-        "network-config.md",
-        "permissions.md",
-        "sub-agents.md",
-        "subagents.md",
-        "tools-reference.md",
-        "troubleshooting.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-13T17:58:45Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
+        "checkpointing.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md",
         "commands.md",
         "common-workflows.md",
+        "context-window.md",
+        "costs.md",
+        "desktop.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "features-overview.md",
+        "google-vertex-ai.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "mcp.md",
+        "memory.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "output-styles.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "remote-control.md",
+        "scheduled-tasks.md",
+        "settings.md",
+        "skills.md",
+        "slash-commands.md",
+        "sub-agents.md",
+        "subagents.md",
+        "third-party-integrations.md",
+        "voice-dictation.md",
+        "vs-code.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-04-09T14:17:21Z",
+      "version_at_time": "2.1.97",
+      "files_changed": [
+        "desktop.md",
+        "env-vars.md",
+        "fullscreen.md",
+        "headless.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "mcp.md",
+        "monitoring-usage.md",
+        "overview.md",
+        "permission-modes.md",
+        "permissions.md",
+        "remote-control.md",
+        "settings.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-04-08T23:30:31Z",
+      "version_at_time": "2.1.97",
+      "files_changed": [
+        "claude-code-on-the-web.md",
+        "commands.md",
+        "skills.md",
+        "slash-commands.md",
+        "troubleshooting.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-04-08T22:30:23Z",
+      "version_at_time": "2.1.97",
+      "files_changed": [
+        "authentication.md",
+        "changelog.md",
+        "claude-code-on-the-web.md",
+        "claude-directory.md",
+        "cli-reference.md",
+        "commands.md",
+        "data-usage.md",
+        "desktop.md",
+        "devcontainer.md",
+        "env-vars.md",
+        "github-actions.md",
+        "github-enterprise-server.md",
+        "gitlab-ci-cd.md",
+        "headless.md",
+        "how-claude-code-works.md",
+        "legal-and-compliance.md",
+        "mcp.md",
+        "overview.md",
+        "platforms.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slack.md",
+        "statusline.md",
+        "troubleshooting.md",
+        "ultraplan.md",
+        "web-scheduled-tasks.md"
+      ],
+      "files_added": [
+        "agent-loop.md",
+        "claude-code-features.md",
+        "cost-tracking.md",
+        "custom-tools.md",
+        "file-checkpointing.md",
+        "hosting.md",
+        "migration-guide.md",
+        "modifying-system-prompts.md",
+        "observability.md",
+        "python.md",
+        "secure-deployment.md",
+        "sessions.md",
+        "slash-commands.md",
+        "streaming-output.md",
+        "streaming-vs-single-mode.md",
+        "structured-outputs.md",
+        "subagents.md",
+        "todo-tracking.md",
+        "tool-search.md",
+        "typescript-v2-preview.md",
+        "typescript.md",
+        "user-input.md",
+        "web-quickstart.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-04-08T13:11:54Z",
+      "version_at_time": "2.1.96",
+      "files_changed": [
+        "changelog.md",
+        "claude-directory.md",
+        "common-workflows.md",
+        "context-window.md",
+        "data-usage.md",
+        "fast-mode.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "keybindings.md",
+        "model-config.md",
+        "output-styles.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "troubleshooting.md",
+        "ultraplan.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-04-07T22:24:20Z",
+      "version_at_time": "2.1.94",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "code-review.md",
         "env-vars.md",
         "hooks.md",
         "model-config.md",
-        "monitoring-usage.md",
+        "troubleshooting.md",
+        "vs-code.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-04-07T00:22:40Z",
+      "version_at_time": "2.1.92",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "cli-reference.md",
+        "commands.md",
+        "data-usage.md",
+        "env-vars.md",
+        "interactive-mode.md",
+        "keybindings.md",
+        "mcp.md",
         "permissions.md",
+        "remote-control.md",
+        "server-managed-settings.md",
         "settings.md",
+        "skills.md",
+        "terminal-config.md",
+        "troubleshooting.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-04-04T03:27:30Z",
+      "version_at_time": "2.1.92",
+      "files_changed": [
+        "agent-teams.md",
+        "changelog.md",
+        "common-workflows.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "env-vars.md",
+        "headless.md",
+        "legal-and-compliance.md",
+        "overview.md",
+        "permission-modes.md",
+        "platforms.md",
+        "remote-control.md",
+        "scheduled-tasks.md",
+        "sub-agents.md",
         "ultraplan.md",
-        "web-quickstart.md"
+        "vs-code.md",
+        "web-scheduled-tasks.md"
       ],
       "files_added": [
-        ""
+        "2026-w13.md",
+        "2026-w14.md",
+        "desktop-scheduled-tasks.md",
+        "index.md"
       ],
       "files_removed": [
         ""
       ]
     },
     {
-      "date": "2026-04-12T09:38:16Z",
-      "version_at_time": "2.1.104",
+      "date": "2026-04-03T18:21:33Z",
+      "version_at_time": "2.1.91",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "analytics.md",
+        "best-practices.md",
+        "changelog.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "claude-directory.md",
+        "cli-reference.md",
+        "code-review.md",
+        "commands.md",
+        "common-workflows.md",
+        "computer-use.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "fast-mode.md",
+        "fullscreen.md",
+        "github-actions.md",
+        "github-enterprise-server.md",
+        "google-vertex-ai.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "keybindings.md",
+        "mcp.md",
+        "memory.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "output-styles.md",
+        "overview.md",
+        "permission-modes.md",
+        "permissions.md",
+        "platforms.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "quickstart.md",
+        "remote-control.md",
+        "sandboxing.md",
+        "scheduled-tasks.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slack.md",
+        "statusline.md",
+        "sub-agents.md",
+        "tools-reference.md",
+        "troubleshooting.md"
+      ],
+      "files_added": [
+        "ultraplan.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-04-01T00:18:35Z",
+      "version_at_time": "2.1.89",
       "files_changed": [
         "amazon-bedrock.md",
         "changelog.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md",
         "commands.md",
         "costs.md",
+        "discover-plugins.md",
         "env-vars.md",
+        "features-overview.md",
         "google-vertex-ai.md",
-        "hooks.md",
+        "hooks-guide.md",
+        "interactive-mode.md",
         "mcp.md",
         "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
         "permissions.md",
+        "sandboxing.md",
+        "server-managed-settings.md",
         "settings.md",
-        "statusline.md",
+        "skills.md",
         "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
+        "terminal-config.md",
         "tools-reference.md"
       ],
       "files_added": [
@@ -1674,28 +978,95 @@
       ]
     },
     {
-      "date": "2026-04-10T22:16:18Z",
-      "version_at_time": "2.1.104",
+      "date": "2026-03-31T07:25:54Z",
+      "version_at_time": "2.1.88",
       "files_changed": [
-        "amazon-bedrock.md",
+        "agent-teams.md",
         "changelog.md",
-        "commands.md",
-        "costs.md",
+        "claude-code-on-the-web.md",
+        "code-review.md",
+        "desktop.md",
         "env-vars.md",
-        "google-vertex-ai.md",
         "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
         "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
+        "terminal-config.md"
+      ],
+      "files_added": [
+        "fullscreen.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-03-30T20:32:40Z",
+      "version_at_time": "2.1.87",
+      "files_changed": [
+        "changelog.md",
+        "channels-reference.md",
+        "channels.md",
+        "checkpointing.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "claude-directory.md",
+        "cli-reference.md",
+        "code-review.md",
+        "commands.md",
+        "common-workflows.md",
+        "context-window.md",
+        "costs.md",
+        "data-usage.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "devcontainer.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "model-config.md",
+        "network-config.md",
+        "output-styles.md",
+        "overview.md",
+        "permission-modes.md",
+        "permissions.md",
+        "platforms.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "quickstart.md",
+        "remote-control.md",
+        "sandboxing.md",
+        "scheduled-tasks.md",
+        "security.md",
+        "settings.md",
+        "voice-dictation.md",
+        "vs-code.md",
+        "web-scheduled-tasks.md",
+        "zero-data-retention.md"
+      ],
+      "files_added": [
+        "computer-use.md",
+        "github-enterprise-server.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
+      "date": "2026-03-28T17:00:16Z",
+      "version_at_time": "2.1.87",
+      "files_changed": [
+        "data-usage.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "devcontainer.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "hooks-guide.md",
+        "keybindings.md",
+        "legal-and-compliance.md",
+        "llm-gateway.md",
+        "mcp.md",
+        "skills.md",
+        "slack.md"
       ],
       "files_added": [
         ""
@@ -1705,682 +1076,118 @@
       ]
     },
     {
-      "date": "2026-04-10T22:16:18Z",
-      "version_at_time": "2.1.104",
+      "date": "2026-03-27T23:10:27Z",
+      "version_at_time": "2.1.86",
       "files_changed": [
-        "amazon-bedrock.md",
+        "agent-teams.md",
         "changelog.md",
+        "channels-reference.md",
+        "cli-reference.md",
+        "code-review.md",
         "commands.md",
+        "common-workflows.md",
+        "context-window.md",
         "costs.md",
+        "data-usage.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "devcontainer.md",
+        "discover-plugins.md",
         "env-vars.md",
-        "google-vertex-ai.md",
+        "hooks-guide.md",
         "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "keybindings.md",
+        "legal-and-compliance.md",
+        "llm-gateway.md",
         "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
         "monitoring-usage.md",
         "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
+        "output-styles.md",
+        "settings.md"
       ],
       "files_added": [
-        ""
+        "claude-directory.md"
       ],
       "files_removed": [
         ""
       ]
     },
     {
-      "date": "2026-04-10T22:16:18Z",
-      "version_at_time": "2.1.104",
+      "date": "2026-03-27T00:13:11Z",
+      "version_at_time": "2.1.84",
       "files_changed": [
+        "agent-teams.md",
         "amazon-bedrock.md",
+        "analytics.md",
+        "authentication.md",
+        "best-practices.md",
         "changelog.md",
+        "channels-reference.md",
+        "channels.md",
+        "checkpointing.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md",
+        "code-review.md",
         "commands.md",
+        "common-workflows.md",
         "costs.md",
+        "data-usage.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "devcontainer.md",
+        "discover-plugins.md",
         "env-vars.md",
-        "google-vertex-ai.md",
+        "features-overview.md",
+        "github-actions.md",
+        "hooks-guide.md",
         "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "keybindings.md",
+        "legal-and-compliance.md",
+        "llm-gateway.md",
         "mcp.md",
         "memory.md",
         "microsoft-foundry.md",
+        "model-config.md",
         "monitoring-usage.md",
         "network-config.md",
+        "output-styles.md",
+        "overview.md",
+        "permission-modes.md",
         "permissions.md",
+        "platforms.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "quickstart.md",
+        "remote-control.md",
+        "sandboxing.md",
+        "scheduled-tasks.md",
+        "security.md",
+        "server-managed-settings.md",
         "settings.md",
+        "setup.md",
+        "skills.md",
+        "slack.md",
         "statusline.md",
         "sub-agents.md",
-        "subagents.md",
+        "terminal-config.md",
         "third-party-integrations.md",
-        "tools-reference.md"
+        "tools-reference.md",
+        "troubleshooting.md",
+        "voice-dictation.md",
+        "vs-code.md",
+        "web-scheduled-tasks.md",
+        "zero-data-retention.md"
       ],
       "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-12T09:38:16Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-10T22:16:18Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-12T09:38:16Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-10T22:16:18Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-12T09:38:16Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-12T09:38:16Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-10T22:16:18Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-12T09:38:16Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-10T22:16:18Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-10T22:16:18Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-10T22:16:18Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-12T07:59:48Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-11T11:13:23Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-10T22:16:18Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-11T11:13:23Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-11T11:13:23Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-10T22:16:18Z",
-      "version_at_time": "2.1.104",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-11T11:13:23Z",
-      "version_at_time": "2.1.101",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-10T22:16:18Z",
-      "version_at_time": "2.1.101",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-10T22:16:18Z",
-      "version_at_time": "2.1.101",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
+        "context-window.md"
       ],
       "files_removed": [
         ""
