@@ -10,6 +10,7 @@ set -euo pipefail
 #   chore(commands): sync claude code data (v2.1.72) — +review, +code-review
 #   chore(hooks): sync claude code data (v2.1.72) — +PreEdit
 #   chore(docs): sync claude code data (v2.1.72) — 3 updated, 1 added
+#   chore(prompts): sync claude code data (v2.1.72) — 1 new prompt diff(s)
 #   chore(readme): sync claude code data (v2.1.72)
 #
 # Outputs a summary to stdout for use as the PR body.
@@ -125,6 +126,20 @@ if ! git diff --quiet -- reports/docs-changes.json reports/nav.json 2>/dev/null;
 fi
 commit_scope "docs" "$doc_detail" \
   reports/docs-changes.json reports/nav.json
+
+# ── prompts scope ─────────────────────────────────────────────────────
+
+prompt_detail=""
+if ! git diff --quiet -- prompts/diffs/ reports/prompt-diffs.json 2>/dev/null; then
+  new_diffs=$(git diff --name-only -- prompts/diffs/ 2>/dev/null | wc -l | tr -d ' ')
+  if [[ "$new_diffs" -gt 0 ]]; then
+    prompt_detail="${new_diffs} new prompt diff(s)"
+  else
+    prompt_detail="report updated"
+  fi
+fi
+commit_scope "prompts" "$prompt_detail" \
+  prompts/diffs/ reports/prompt-diffs.json
 
 # ── readme scope (catch-all for both READMEs) ────────────────────────
 
