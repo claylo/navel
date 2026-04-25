@@ -127,7 +127,7 @@ cmd_prep() {
 
   echo ""
   echo "==> Fixing mismatched image formats..."
-  node "$SCRIPT_DIR/fix-image-formats" "$BUILD_TYPST/images"
+  node "$SCRIPT_DIR/fix-image-formats" "$BUILD_TYPST/images" || echo "  (non-fatal — continuing)"
 
   echo ""
   echo "Prep complete. Intermediate files:"

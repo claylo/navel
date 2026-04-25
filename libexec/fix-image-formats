@@ -59,17 +59,31 @@ function collectImages(dirPath) {
 
 // ── Scan and rename ────────────────────────────────────────────────────
 
-const images = collectImages(dir);
+let images;
+try {
+  images = collectImages(dir);
+} catch (e) {
+  console.log(`  Skipping — directory not readable: ${e.message}`);
+  process.exit(0);
+}
 if (images.length === 0) {
   console.log("  No images found");
   process.exit(0);
 }
 
 const renames = []; // { oldName, newName } for reference rewriting
+let skipped = 0;
 
 for (const img of images) {
   const ext = extname(img).toLowerCase();
-  const actual = detectFormat(img);
+  let actual;
+  try {
+    actual = detectFormat(img);
+  } catch (e) {
+    console.log(`  skip: ${basename(img)} — ${e.message}`);
+    skipped++;
+    continue;
+  }
   if (!actual) continue;
 
   const correctExt = FORMAT_EXT[actual];
@@ -81,7 +95,13 @@ for (const img of images) {
   const oldName = basename(img);
   const newName = basename(newPath);
 
-  renameSync(img, newPath);
+  try {
+    renameSync(img, newPath);
+  } catch (e) {
+    console.log(`  skip: ${oldName} — rename failed: ${e.message}`);
+    skipped++;
+    continue;
+  }
   renames.push({ oldName, newName });
   console.log(`  fix: ${oldName} -> ${newName} (was ${actual})`);
 }
@@ -109,9 +129,13 @@ if (renames.length > 0) {
     if (modified) writeFileSync(filePath, content);
   }
 
-  console.log(`  Renamed ${renames.length} images, rewrote ${rewriteCount} references`);
+  const parts = [`Renamed ${renames.length} images, rewrote ${rewriteCount} references`];
+  if (skipped > 0) parts.push(`${skipped} skipped`);
+  console.log(`  ${parts.join(", ")}`);
 } else {
-  console.log(`  All ${images.length} images OK`);
+  const parts = [`All ${images.length} images OK`];
+  if (skipped > 0) parts.push(`${skipped} skipped`);
+  console.log(`  ${parts.join(", ")}`);
 }
 
 function collectRefFiles(dirPath) {
