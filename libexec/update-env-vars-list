@@ -24,14 +24,15 @@ while IFS= read -r version; do
     vars=$(cat "$cache_file")
   else
     dir="v${version}"
-    cli="versions/$dir/node_modules/@anthropic-ai/claude-code/cli.js"
-    [[ -f "$cli" ]] || continue
+    pkg_dir="versions/$dir/node_modules/@anthropic-ai/claude-code"
+    source_file=$(_scannable_source "$pkg_dir") || continue
 
-    vars=$(rg -o 'process\.env\.[A-Z_][A-Z0-9_]*' "$cli" 2>/dev/null \
+    vars=$(rg -o 'process\.env\.[A-Z_][A-Z0-9_]*' "$source_file" 2>/dev/null \
       | sed 's/process\.env\.//' \
       | sort -u \
       | tr '\n' ' ' || true)
     echo "$vars" > "$cache_file"
+    [[ "$source_file" != *.js ]] && rm -f "$source_file"
   fi
 
   if [[ -n "$vars" ]]; then

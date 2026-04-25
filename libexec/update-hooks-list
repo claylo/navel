@@ -24,14 +24,15 @@ while IFS= read -r version; do
     hooks=$(cat "$cache_file")
   else
     dir="v${version}"
-    cli="versions/$dir/node_modules/@anthropic-ai/claude-code/cli.js"
-    [[ -f "$cli" ]] || continue
+    pkg_dir="versions/$dir/node_modules/@anthropic-ai/claude-code"
+    source_file=$(_scannable_source "$pkg_dir") || continue
 
-    hooks=$(rg -o '[A-Za-z]+:\{summary:"[^"]*"' "$cli" 2>/dev/null \
+    hooks=$(rg -o '[A-Za-z]+:\{summary:"[^"]*"' "$source_file" 2>/dev/null \
       | sed 's/:{summary:.*//' \
-      | sort \
+      | sort -u \
       | tr '\n' ' ' || true)
     echo "$hooks" > "$cache_file"
+    [[ "$source_file" != *.js ]] && rm -f "$source_file"
   fi
 
   if [[ -n "$hooks" ]]; then
