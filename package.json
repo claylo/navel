@@ -14,10 +14,10 @@
     "@mintlify/components": "1.0.16",
     "@mintlify/mdx": "4.0.0",
     "@radix-ui/react-popover": "1.1.15",
-    "@tailwindcss/cli": "^4.2.2",
+    "@tailwindcss/cli": "^4.2.4",
     "markdown2typst": "^0.1.4",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.2.4"
   }
 }
