@@ -9,6 +9,9 @@ TARBALL_DIR="$NPM_DIR/tarballs"
 PARALLEL_MAX="${NAVEL_PARALLEL_MAX:-16}"
 PARALLEL_THRESHOLD="${NAVEL_PARALLEL_THRESHOLD:-10}"
 
+# shellcheck source=_portable.sh
+. "$(dirname "$0")/_portable.sh"
+
 mkdir -p "$NPM_DIR"
 
 # Fetch all versions from npm registry
@@ -64,7 +67,16 @@ fetch_sequential() {
     mkdir -p "$pkg_dir"
     if curl -sfL "$REGISTRY/$PACKAGE/-/claude-code-${version}.tgz" \
          | tar xz -C "$pkg_dir" --strip-components=1; then
-      echo "ok"
+      if _is_binary_version "$version"; then
+        echo -n "ok, installing binary... "
+        if (cd "$pkg_dir" && npm install --ignore-scripts 2>/dev/null); then
+          echo "ok"
+        else
+          echo "binary install failed"
+        fi
+      else
+        echo "ok"
+      fi
       fetched=$((fetched + 1))
     else
       echo "failed"
@@ -106,7 +118,15 @@ fetch_parallel() {
       mkdir -p "$pkg_dir"
       if tar xz -C "$pkg_dir" --strip-components=1 -f "$tarball" 2>/dev/null; then
         rm -rf "$(dirname "$tarball")"
-        echo "  v${ver} ok"
+        if _is_binary_version "$ver"; then
+          if (cd "$pkg_dir" && npm install --ignore-scripts 2>/dev/null); then
+            echo "  v${ver} ok (binary)"
+          else
+            echo "  v${ver} ok (binary install failed)"
+          fi
+        else
+          echo "  v${ver} ok"
+        fi
       else
         rm -rf "$NPM_DIR/versions/v${ver}" "$(dirname "$tarball")"
         echo "  v${ver} FAILED" >&2
