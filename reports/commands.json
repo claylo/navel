@@ -453,7 +453,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 67
+      "mentions": 66
     },
     "autocompact": {
       "documented": false,
@@ -1293,7 +1293,7 @@
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 141
+      "mentions": 140
     },
     "powerup": {
       "documented": true,
@@ -1442,7 +1442,7 @@
         "env-vars.md",
         "errors.md"
       ],
-      "mentions": 17
+      "mentions": 16
     },
     "schedule": {
       "documented": true,
@@ -1712,7 +1712,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 14
+      "mentions": 13
     },
     "update": {
       "documented": true,
@@ -1748,12 +1748,11 @@
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 27
+      "mentions": 26
     },
     "version": {
       "documented": true,
       "doc_files": [
-        "changelog.md",
         "desktop.md",
         "plugin-dependencies.md",
         "plugin-marketplaces.md",
@@ -1761,7 +1760,7 @@
         "plugins.md",
         "statusline.md"
       ],
-      "mentions": 45
+      "mentions": 44
     },
     "voice": {
       "documented": true,
