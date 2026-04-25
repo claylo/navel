@@ -5,24 +5,46 @@ Tracks commands, hooks, feature flags, and documentation across Claude Code rele
 ## Architecture
 
 - `bin/navel` — CLI dispatcher (subcommands: update, commands sync, hooks sync, docs sync, etc.)
-- `libexec/update-commands-list` — scans minified cli.js for slash commands, classifies status, cross-references docs
+- `libexec/_portable.sh` — shared helpers: platform detection, binary-era support, reports dir
+- `libexec/update-commands-list` — scans for slash commands, classifies status, cross-references docs
 - `libexec/update-hooks-list` — scans for hook registrations
+- `libexec/update-env-vars-list` — scans for environment variable references
 - `libexec/update-docs` — parallel fetch of docs from code.claude.com with SHA256 manifest
 - `libexec/update-readme` — generates badges and reports/README.md
-- `libexec/update-npm` — fetches new npm versions
+- `libexec/update-npm` — fetches new npm versions, installs platform packages for binary-era versions
+- `libexec/prompts` — prompt capture gateway and diff generation
 - `reports/commands.json` — canonical output: commands, descriptions, status, history, docs coverage
 - `reports/hooks.json` — canonical output: hooks, history, docs coverage
 - `npm/.cache/commands/` — cached per-version command extraction (avoids re-scanning old versions)
 - `npm/.cache/hooks/` — cached per-version hook extraction
 - `npm/.cache/flags/` — cached per-version feature flag wrapper→flag_name mappings
+- `prompts/diffs/` — committed unified diffs between consecutive system prompt captures
 - `docs/adr/` — architectural decision records
 - `tests/` — bats tests (`just test`)
 
-## Key Patterns: Resolving Minified cli.js
+## Key Patterns: Scanning Claude Code Source
 
-Claude Code ships as a single minified `cli.js` (~12MB). Function names are mangled
-every build, but **string literals survive minification**. This is the foundation of
-all scanning.
+### Two eras of packaging
+
+- **cli.js era (v0.2.33–v2.1.112):** Claude Code ships as a single minified `cli.js` (~12MB).
+- **Binary era (v2.1.113+):** Claude Code ships as a Bun-compiled native binary (~195MB Mach-O).
+
+The cutover is hardcoded in `_portable.sh` as `BINARY_CUTOVER="2.1.113"`. The
+`_scannable_source()` helper abstracts this: for cli.js versions it returns the JS file
+directly; for binary versions it runs `strings -a` to extract string literals into a temp
+file. Either way, the caller gets a path that `rg`/`grep` can scan with identical patterns.
+
+**`strings -a` is critical.** The default `strings` on macOS skips non-standard Mach-O
+sections. Bun embeds JS source in a `__bun` section (segment `__BUN`) which is ~133MB of
+the binary. Without `-a`, zero application strings are found.
+
+**Binary versions produce duplicates.** Bun embeds source twice (source + bytecode), so
+scanners must dedup with `sort -u`.
+
+### String literals survive both minification and compilation
+
+Function names are mangled every build, but **string literals survive**. This is the
+foundation of all scanning — it works identically against cli.js and `strings -a` output.
 
 ### Command Registration (5 patterns)
 
@@ -88,10 +110,18 @@ If Anthropic introduces a **new command registration pattern**, the scanner will
 commands and the count will drop. The regression detection in `update-commands-list`
 should catch this. To fix:
 
-1. Find the new command in cli.js: `rg -o '.{0,30}name:"NEW_CMD".{0,200}' cli.js`
+1. Find the new command in the scannable source: `rg -o '.{0,30}name:"NEW_CMD".{0,200}' <source>`
 2. Identify the registration structure
 3. Add a new `rg` pattern to the extraction section
 4. Clear the cache for the affected version: `rm npm/.cache/commands/{version}.txt`
+
+If Anthropic changes binary packaging (different compiler, stripped strings, encrypted
+bundles), `_scannable_source` will return an empty or useless temp file. The regression
+detection (command count drop) should still catch it. To investigate:
+
+1. Check what `strings -a` produces: `strings -a <binary> | wc -l`
+2. Look for known strings: `strings -a <binary> | grep 'name:"help"'`
+3. If strings are gone, a new extraction method is needed — update `_scannable_source`
 
 ## Version Sorting
 
