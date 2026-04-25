@@ -1158,9 +1158,10 @@
         "changelog.md",
         "commands.md",
         "jetbrains.md",
+        "terminal-config.md",
         "vs-code.md"
       ],
-      "mentions": 6
+      "mentions": 7
     },
     "init": {
       "documented": true,
@@ -1873,7 +1874,7 @@
         "plugins-reference.md",
         "terminal-config.md"
       ],
-      "mentions": 14
+      "mentions": 15
     },
     "toggle-memory": {
       "documented": false,
