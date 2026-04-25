@@ -1,6 +1,23 @@
 {
   "changes": [
     {
+      "date": "2026-04-25T18:48:33Z",
+      "version_at_time": "2.1.120",
+      "files_changed": [
+        "desktop-quickstart.md",
+        "desktop-scheduled-tasks.md",
+        "desktop.md",
+        "routines.md",
+        "terminal-config.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-25T14:24:07Z",
       "version_at_time": "2.1.120",
       "files_changed": [
