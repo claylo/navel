@@ -1,0 +1,259 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$REPO_ROOT"
+
+# shellcheck source=../libexec/_portable.sh
+. libexec/_portable.sh
+
+usage() {
+  cat <<'EOF'
+Usage: by-the-numbers [--json] [--markdown] [--compare <tag>]
+
+Counts navel's tracked metrics from the current working tree.
+
+  --compare <tag>  Show a comparison table against a previous release tag.
+                   Defaults to the most recent git tag if omitted.
+  --json           Output as JSON (includes both current and compare values
+                   when --compare is active).
+  --markdown       Output as a GitHub-flavored Markdown table.
+
+Examples:
+  scripts/by-the-numbers
+  scripts/by-the-numbers --compare v1.3.0
+  scripts/by-the-numbers --compare v1.3.0 --json
+  scripts/by-the-numbers --markdown
+EOF
+  exit 0
+}
+
+# --- metric collection ---
+
+collect_current() {
+  local reports
+  reports=$(_reports_dir "$REPO_ROOT")
+
+  _versions=$(jq 'length' npm/versions.json)
+  _commands=$(jq '.commands | length' "$reports/commands.json")
+  _hooks=$(jq '.hooks | length' "$reports/hooks.json")
+  _env_vars=$(jq '.env_vars | length' "$reports/env-vars.json")
+  _doc_pages=$(jq '.navOrder | length' "$reports/nav.json")
+  _tests=$(grep -r -c '@test' tests/*.bats | awk -F: '{sum += $2} END {print sum}')
+  _captures=$(ls -d prompts/versions/v* 2>/dev/null | wc -l | tr -d ' ')
+  _diffs=$(ls prompts/diffs/*.diff 2>/dev/null | wc -l | tr -d ' ')
+  _bash_lines=$(find bin/ libexec/ -maxdepth 1 -type f \( -name '*.sh' -o ! -name '*.*' \) \
+    -exec cat {} + 2>/dev/null | wc -l | tr -d ' ')
+}
+
+collect_at_tag() {
+  local tag="$1"
+
+  _old_versions=$(git show "$tag:npm/versions.json" | jq 'length')
+  _old_commands=$(git show "$tag:reports/commands.json" | jq '.commands | length')
+  _old_hooks=$(git show "$tag:reports/hooks.json" | jq '.hooks | length')
+  _old_env_vars=$(git show "$tag:reports/env-vars.json" | jq '.env_vars | length')
+  _old_doc_pages=$(git show "$tag:reports/nav.json" | jq '.navOrder | length')
+
+  _old_tests=0
+  while IFS= read -r f; do
+    local n
+    n=$(git show "$tag:$f" | grep -c '@test' || true)
+    _old_tests=$(( _old_tests + n ))
+  done < <(git ls-tree -r --name-only "$tag" tests/ | grep '\.bats$')
+
+  _old_captures=$(git ls-tree -r --name-only "$tag" -- prompts/versions/ 2>/dev/null \
+    | grep -c 'captured-payload' 2>/dev/null || true)
+  _old_captures=${_old_captures:-0}
+  _old_diffs=$(git ls-tree -r --name-only "$tag" -- prompts/diffs/ 2>/dev/null \
+    | grep -c '\.diff$' 2>/dev/null || true)
+  _old_diffs=${_old_diffs:-0}
+
+  _old_bash_lines=0
+  while IFS= read -r f; do
+    local n
+    n=$(git show "$tag:$f" | wc -l | tr -d ' ')
+    _old_bash_lines=$(( _old_bash_lines + n ))
+  done < <(git ls-tree -r --name-only "$tag" bin/ libexec/ \
+    | grep -E '(\.sh$|^(bin|libexec)/[^/]+$)' | grep -v '\.(js|mjs|json)$')
+}
+
+# --- output ---
+
+fmt() { printf "%'d" "$1"; }
+
+delta() {
+  local old="$1" new="$2"
+  local d=$(( new - old ))
+  if (( d > 0 )); then printf "+%'d" "$d"
+  elif (( d < 0 )); then printf "%'d" "$d"
+  else printf "—"
+  fi
+}
+
+print_table() {
+  local tag="$1"
+  printf '%-25s  %8s  %8s  %8s\n' "" "$tag" "now" "Δ"
+  printf '%-25s  %8s  %8s  %8s\n' "─────────────────────────" "────────" "────────" "────────"
+  printf '%-25s  %8s  %8s  %8s\n' "npm versions tracked"     "$(fmt "$_old_versions")"  "$(fmt "$_versions")"  "$(delta "$_old_versions" "$_versions")"
+  printf '%-25s  %8s  %8s  %8s\n' "Slash commands"           "$(fmt "$_old_commands")"   "$(fmt "$_commands")"  "$(delta "$_old_commands" "$_commands")"
+  printf '%-25s  %8s  %8s  %8s\n' "Hook events"              "$(fmt "$_old_hooks")"      "$(fmt "$_hooks")"     "$(delta "$_old_hooks" "$_hooks")"
+  printf '%-25s  %8s  %8s  %8s\n' "Environment variables"    "$(fmt "$_old_env_vars")"   "$(fmt "$_env_vars")"  "$(delta "$_old_env_vars" "$_env_vars")"
+  printf '%-25s  %8s  %8s  %8s\n' "Doc pages synced"         "$(fmt "$_old_doc_pages")"  "$(fmt "$_doc_pages")" "$(delta "$_old_doc_pages" "$_doc_pages")"
+  printf '%-25s  %8s  %8s  %8s\n' "Bats tests"              "$(fmt "$_old_tests")"       "$(fmt "$_tests")"     "$(delta "$_old_tests" "$_tests")"
+
+  local old_cap_display old_diff_display
+  if (( _old_captures == 0 )); then old_cap_display="—"; else old_cap_display=$(fmt "$_old_captures"); fi
+  if (( _old_diffs == 0 )); then old_diff_display="—"; else old_diff_display=$(fmt "$_old_diffs"); fi
+
+  printf '%-25s  %8s  %8s  %8s\n' "Prompt captures"   "$old_cap_display"  "$(fmt "$_captures")"    "$(delta "$_old_captures" "$_captures")"
+  printf '%-25s  %8s  %8s  %8s\n' "Prompt diffs"      "$old_diff_display" "$(fmt "$_diffs")"       "$(delta "$_old_diffs" "$_diffs")"
+  printf '%-25s  %8s  %8s  %8s\n' "Lines of bash"     "$(fmt "$_old_bash_lines")" "$(fmt "$_bash_lines")" "$(delta "$_old_bash_lines" "$_bash_lines")"
+}
+
+print_json() {
+  local tag="$1"
+  jq -n \
+    --arg tag "$tag" \
+    --argjson versions "$_versions" \
+    --argjson commands "$_commands" \
+    --argjson hooks "$_hooks" \
+    --argjson env_vars "$_env_vars" \
+    --argjson doc_pages "$_doc_pages" \
+    --argjson tests "$_tests" \
+    --argjson captures "$_captures" \
+    --argjson diffs "$_diffs" \
+    --argjson bash_lines "$_bash_lines" \
+    --argjson old_versions "$_old_versions" \
+    --argjson old_commands "$_old_commands" \
+    --argjson old_hooks "$_old_hooks" \
+    --argjson old_env_vars "$_old_env_vars" \
+    --argjson old_doc_pages "$_old_doc_pages" \
+    --argjson old_tests "$_old_tests" \
+    --argjson old_captures "$_old_captures" \
+    --argjson old_diffs "$_old_diffs" \
+    --argjson old_bash_lines "$_old_bash_lines" \
+    '{
+      compare_tag: $tag,
+      current: {
+        npm_versions: $versions, slash_commands: $commands, hook_events: $hooks,
+        env_vars: $env_vars, doc_pages: $doc_pages, bats_tests: $tests,
+        prompt_captures: $captures, prompt_diffs: $diffs, bash_lines: $bash_lines
+      },
+      previous: {
+        npm_versions: $old_versions, slash_commands: $old_commands, hook_events: $old_hooks,
+        env_vars: $old_env_vars, doc_pages: $old_doc_pages, bats_tests: $old_tests,
+        prompt_captures: $old_captures, prompt_diffs: $old_diffs, bash_lines: $old_bash_lines
+      }
+    }'
+}
+
+md_row() {
+  local label="$1" old="$2" new="$3"
+  printf '| %s | %s | %s |\n' "$label" "$old" "$new"
+}
+
+md_old_or_dash() {
+  local val="$1"
+  if (( val == 0 )); then printf '—'; else fmt "$val"; fi
+}
+
+print_markdown() {
+  local tag="$1"
+  printf '| | %s | %s |\n' "$tag" "v1.4.0"
+  printf '|---|---:|---:|\n'
+  md_row "npm versions tracked"  "$(fmt "$_old_versions")"  "$(fmt "$_versions")"
+  md_row "Slash commands"        "$(fmt "$_old_commands")"   "$(fmt "$_commands")"
+  md_row "Hook events"           "$(fmt "$_old_hooks")"      "$(fmt "$_hooks")"
+  md_row "Environment variables" "$(fmt "$_old_env_vars")"   "$(fmt "$_env_vars")"
+  md_row "Doc pages synced"      "$(fmt "$_old_doc_pages")"  "$(fmt "$_doc_pages")"
+  md_row "Bats tests"            "$(fmt "$_old_tests")"      "$(fmt "$_tests")"
+  md_row "Prompt captures"       "$(md_old_or_dash "$_old_captures")" "$(fmt "$_captures")"
+  md_row "Prompt diffs"          "$(md_old_or_dash "$_old_diffs")"    "$(fmt "$_diffs")"
+  md_row "Lines of bash"         "$(fmt "$_old_bash_lines")" "$(fmt "$_bash_lines")"
+}
+
+print_markdown_current() {
+  printf '| | current |\n'
+  printf '|---|---:|\n'
+  printf '| %s | %s |\n' "npm versions tracked"  "$(fmt "$_versions")"
+  printf '| %s | %s |\n' "Slash commands"        "$(fmt "$_commands")"
+  printf '| %s | %s |\n' "Hook events"           "$(fmt "$_hooks")"
+  printf '| %s | %s |\n' "Environment variables"  "$(fmt "$_env_vars")"
+  printf '| %s | %s |\n' "Doc pages synced"       "$(fmt "$_doc_pages")"
+  printf '| %s | %s |\n' "Bats tests"            "$(fmt "$_tests")"
+  printf '| %s | %s |\n' "Prompt captures"       "$(fmt "$_captures")"
+  printf '| %s | %s |\n' "Prompt diffs"          "$(fmt "$_diffs")"
+  printf '| %s | %s |\n' "Lines of bash"         "$(fmt "$_bash_lines")"
+}
+
+print_current_only() {
+  printf '%-25s  %8s\n' "npm versions tracked"  "$(fmt "$_versions")"
+  printf '%-25s  %8s\n' "Slash commands"        "$(fmt "$_commands")"
+  printf '%-25s  %8s\n' "Hook events"           "$(fmt "$_hooks")"
+  printf '%-25s  %8s\n' "Environment variables"  "$(fmt "$_env_vars")"
+  printf '%-25s  %8s\n' "Doc pages synced"       "$(fmt "$_doc_pages")"
+  printf '%-25s  %8s\n' "Bats tests"            "$(fmt "$_tests")"
+  printf '%-25s  %8s\n' "Prompt captures"       "$(fmt "$_captures")"
+  printf '%-25s  %8s\n' "Prompt diffs"          "$(fmt "$_diffs")"
+  printf '%-25s  %8s\n' "Lines of bash"         "$(fmt "$_bash_lines")"
+}
+
+print_current_json() {
+  jq -n \
+    --argjson versions "$_versions" \
+    --argjson commands "$_commands" \
+    --argjson hooks "$_hooks" \
+    --argjson env_vars "$_env_vars" \
+    --argjson doc_pages "$_doc_pages" \
+    --argjson tests "$_tests" \
+    --argjson captures "$_captures" \
+    --argjson diffs "$_diffs" \
+    --argjson bash_lines "$_bash_lines" \
+    '{
+      npm_versions: $versions, slash_commands: $commands, hook_events: $hooks,
+      env_vars: $env_vars, doc_pages: $doc_pages, bats_tests: $tests,
+      prompt_captures: $captures, prompt_diffs: $diffs, bash_lines: $bash_lines
+    }'
+}
+
+# --- main ---
+
+json=false
+markdown=false
+compare_tag=""
+
+while (( $# )); do
+  case "$1" in
+    --json) json=true; shift ;;
+    --markdown) markdown=true; shift ;;
+    --compare) compare_tag="${2:-}"; shift 2 ;;
+    -h|--help) usage ;;
+    *) echo "Unknown option: $1" >&2; usage ;;
+  esac
+done
+
+if [[ -z "$compare_tag" ]]; then
+  compare_tag=$(git tag -l 'v*' --sort=-version:refname | head -1)
+fi
+
+collect_current
+
+if [[ -n "$compare_tag" ]] && git rev-parse "$compare_tag" &>/dev/null; then
+  collect_at_tag "$compare_tag"
+  if $json; then
+    print_json "$compare_tag"
+  elif $markdown; then
+    print_markdown "$compare_tag"
+  else
+    print_table "$compare_tag"
+  fi
+else
+  if $json; then
+    print_current_json
+  elif $markdown; then
+    print_markdown_current
+  else
+    print_current_only
+  fi
+fi
