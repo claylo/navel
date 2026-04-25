@@ -5,6 +5,8 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_ROOT="${NAVEL_HOME:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 JS_DIR="$SCRIPT_DIR/js"
 NPM_CACHE="${CLAUDE_NPM_CACHE:-$REPO_ROOT/npm}"
+# shellcheck source=_portable.sh
+. "$SCRIPT_DIR/_portable.sh"
 PROMPTS_DIR="$REPO_ROOT/prompts/versions"
 DEFAULT_MODEL="opus"
 
@@ -26,14 +28,19 @@ normalize_version() {
 }
 
 cli_path() {
-  echo "$NPM_CACHE/versions/$1/node_modules/@anthropic-ai/claude-code/cli.js"
+  local pkg_dir="$NPM_CACHE/versions/$1/node_modules/@anthropic-ai/claude-code"
+  if [[ -f "$pkg_dir/cli.js" ]]; then
+    echo "$pkg_dir/cli.js"
+    return
+  fi
+  _find_claude_binary "$pkg_dir"
 }
 
 require_cli() {
   local v="$1"
   local cli
   cli=$(cli_path "$v")
-  [[ -f "$cli" ]] || die "cli.js not found for $v"
+  [[ -n "$cli" && -f "$cli" ]] || die "CLI not found for $v (need cli.js or installed binary)"
   echo "$cli"
 }
 
@@ -133,8 +140,8 @@ cmd_capture_all() {
     fi
     local cli
     cli=$(cli_path "$v")
-    if [[ ! -f "$cli" ]]; then
-      echo "[$i/$total] $v — cli.js not found, skipping"
+    if [[ -z "$cli" || ! -f "$cli" ]]; then
+      echo "[$i/$total] $v — CLI not found, skipping"
       continue
     fi
     echo -n "[$i/$total] $v — capturing... "
@@ -168,7 +175,7 @@ cmd_capture_range() {
         local cli
         cli=$(cli_path "$v")
         mkdir -p "$PROMPTS_DIR/$v"
-        if [[ -f "$cli" ]] && CAPTURE_RAW_DIR="$PROMPTS_DIR/$v" node "$JS_DIR/api-capture.mjs" "$cli" -- --model "$model" > "$PROMPTS_DIR/$v/capture.md" 2>/dev/null; then
+        if [[ -n "$cli" && -f "$cli" ]] && CAPTURE_RAW_DIR="$PROMPTS_DIR/$v" node "$JS_DIR/api-capture.mjs" "$cli" -- --model "$model" > "$PROMPTS_DIR/$v/capture.md" 2>/dev/null; then
           echo "ok"
         else
           echo "failed"

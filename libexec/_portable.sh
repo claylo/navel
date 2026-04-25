@@ -33,3 +33,17 @@ _sha256() {
     *)      sha256sum "$@" ;;
   esac
 }
+
+# Native binary cutover — versions >= this ship as platform binaries, not cli.js
+BINARY_CUTOVER="2.1.113"
+
+_is_binary_version() {
+  [[ "$(printf '%s\n' "$BINARY_CUTOVER" "$1" | sort -V | head -1)" == "$BINARY_CUTOVER" ]]
+}
+
+_find_claude_binary() {
+  local pkg_dir="$1"
+  local platform_dir
+  platform_dir=$(ls -d "$pkg_dir/node_modules/@anthropic-ai"/claude-code-* 2>/dev/null | head -1)
+  [[ -n "$platform_dir" ]] && echo "$platform_dir/claude"
+}

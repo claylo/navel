@@ -275,30 +275,30 @@ function spawnClaude(cliPath, port, { passthroughArgs, realAuth, mode }) {
     env.ANTHROPIC_API_KEY = FAKE_API_KEY;
   }
 
-  const claudeArgs = [cliPath, '-p'];
-
-  claudeArgs.push('--no-session-persistence');
+  const isJavaScript = cliPath.endsWith('.js');
+  const claudeFlags = ['-p', '--no-session-persistence'];
 
   if (isClean) {
     const emptyMcpConfig = join(RAW_OUTPUT_DIR, 'empty-mcp.json');
     mkdirSync(RAW_OUTPUT_DIR, { recursive: true });
     writeFileSync(emptyMcpConfig, '{"mcpServers":{}}');
-    claudeArgs.push('--strict-mcp-config', '--mcp-config', emptyMcpConfig);
-    claudeArgs.push('--settings', '{}');
-    claudeArgs.push('--setting-sources', 'local');
+    claudeFlags.push('--strict-mcp-config', '--mcp-config', emptyMcpConfig);
+    claudeFlags.push('--settings', '{}');
+    claudeFlags.push('--setting-sources', 'local');
 
     const noPluginsDir = createNoPluginsDir(RAW_OUTPUT_DIR);
-    claudeArgs.push('--plugin-dir', noPluginsDir);
+    claudeFlags.push('--plugin-dir', noPluginsDir);
   }
 
-  claudeArgs.push(...passthroughArgs);
+  claudeFlags.push(...passthroughArgs);
+  claudeFlags.push('hello');
 
-  // prompt goes last
-  claudeArgs.push('hello');
+  const exe = isJavaScript ? process.execPath : cliPath;
+  const args = isJavaScript ? [cliPath, ...claudeFlags] : claudeFlags;
 
-  console.error(`  spawning: node ${claudeArgs.join(' ')}`);
+  console.error(`  spawning: ${exe} ${args.join(' ')}`);
 
-  const proc = spawn(process.execPath, claudeArgs, {
+  const proc = spawn(exe, args, {
     env,
     stdio: ['pipe', 'pipe', 'pipe'],
   });
@@ -424,8 +424,8 @@ async function main() {
   const { cliPath, passthroughArgs, realAuth, mode } = parseArgs(process.argv);
   if (!cliPath || !existsSync(cliPath)) {
     console.error(
-      'Path to cli.js is required.\n' +
-      'Usage: node api-capture.mjs [--real-auth] [--full | --full-prompt-caching] <path-to-cli.js> [-- claude-code-flags...]',
+      'Path to Claude Code CLI (cli.js or native binary) is required.\n' +
+      'Usage: node api-capture.mjs [--real-auth] [--full | --full-prompt-caching] <path-to-cli> [-- claude-code-flags...]',
     );
     process.exit(1);
   }
