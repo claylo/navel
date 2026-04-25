@@ -453,7 +453,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 66
+      "mentions": 67
     },
     "autocompact": {
       "documented": false,
@@ -1293,7 +1293,7 @@
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 140
+      "mentions": 141
     },
     "powerup": {
       "documented": true,
@@ -1442,7 +1442,7 @@
         "env-vars.md",
         "errors.md"
       ],
-      "mentions": 16
+      "mentions": 17
     },
     "schedule": {
       "documented": true,
@@ -1712,7 +1712,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 13
+      "mentions": 14
     },
     "update": {
       "documented": true,
@@ -1748,11 +1748,12 @@
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 26
+      "mentions": 27
     },
     "version": {
       "documented": true,
       "doc_files": [
+        "changelog.md",
         "desktop.md",
         "plugin-dependencies.md",
         "plugin-marketplaces.md",
@@ -1760,7 +1761,7 @@
         "plugins.md",
         "statusline.md"
       ],
-      "mentions": 44
+      "mentions": 45
     },
     "voice": {
       "documented": true,
@@ -1785,5 +1786,5 @@
       "mentions": 17
     }
   },
-  "docs_checked_at": "2026-04-24"
+  "docs_checked_at": "2026-04-25"
 }
