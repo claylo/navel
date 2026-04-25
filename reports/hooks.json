@@ -10,6 +10,7 @@
     "PermissionDenied",
     "PermissionRequest",
     "PostCompact",
+    "PostToolBatch",
     "PostToolUse",
     "PostToolUseFailure",
     "PreCompact",
@@ -24,6 +25,7 @@
     "TaskCompleted",
     "TaskCreated",
     "TeammateIdle",
+    "UserPromptExpansion",
     "UserPromptSubmit",
     "WorktreeCreate",
     "WorktreeRemove"
@@ -119,6 +121,16 @@
     "2.1.89": {
       "added": [
         "PermissionDenied"
+      ]
+    },
+    "2.1.116": {
+      "added": [
+        "UserPromptExpansion"
+      ]
+    },
+    "2.1.118": {
+      "added": [
+        "PostToolBatch"
       ]
     }
   },
@@ -236,6 +248,15 @@
         "plugins-reference.md"
       ],
       "mentions": 15
+    },
+    "PostToolBatch": {
+      "documented": true,
+      "doc_files": [
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 20
     },
     "PostToolUse": {
       "documented": true,
@@ -427,6 +448,15 @@
       ],
       "mentions": 20
     },
+    "UserPromptExpansion": {
+      "documented": true,
+      "doc_files": [
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md"
+      ],
+      "mentions": 20
+    },
     "UserPromptSubmit": {
       "documented": true,
       "doc_files": [
@@ -461,5 +491,5 @@
       "mentions": 20
     }
   },
-  "docs_checked_at": "2026-04-24"
+  "docs_checked_at": "2026-04-25"
 }
