@@ -1,0 +1,28 @@
+--- v2.1.63
++++ v2.1.66
+@@ -147,19 +147,22 @@
+ These insights should be included in the conversation, not in the codebase. You should generally focus on interesting insights that are specific to the codebase or the code you just wrote, rather than general programming concepts.
+ 
+ gitStatus: This is the git status at the start of the conversation. Note that this status is a snapshot in time, and will not update during the conversation.
+-Current branch: feat/prompt-diffs
++Current branch: refactor/claude-binary
+ 
+ Main branch (you will usually use this for PRs): main
+ 
+ Status:
+-(clean)
++M libexec/_portable.sh
++ M libexec/js/api-capture.mjs
++ M libexec/prompts
++ M libexec/update-npm
+ 
+ Recent commits:
+-e49f396 refactor: support native binary CLI for v2.1.113+ (#57)
+ 458d164 chore(commands): sync claude code data (v2.1.120) — metadata updated
+ 202c56a chore(readme): sync claude code data (v2.1.120)
+ 6f5426e chore(docs): sync claude code data (v2.1.120) — 1 docs changed
+ 1f8c60f chore(commands): sync claude code data (v2.1.120) — metadata updated
++61939e0 chore(docs): sync claude code data (v2.1.120) — 1 docs changed
+ 
+ ---
+ 
