@@ -3,7 +3,7 @@
 Auto-generated tracking data for Claude Code versions, hooks, commands, and environment variables.
 
 <details>
-<summary>Hooks (27)</summary>
+<summary>Hooks (29)</summary>
 
 | Hook | Since | Documented |
 |------|-------|------------|
@@ -17,6 +17,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | PermissionDenied | 2.1.89 | yes |
 | PermissionRequest | 2.0.45 | yes |
 | PostCompact | 2.1.76 | yes |
+| PostToolBatch | 2.1.118 | yes |
 | PostToolUse | 2.0.0 | yes |
 | PostToolUseFailure | 2.0.56 | yes |
 | PreCompact | 2.0.0 | yes |
@@ -31,6 +32,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | TaskCompleted | 2.1.33 | yes |
 | TaskCreated | 2.1.84 | yes |
 | TeammateIdle | 2.1.33 | yes |
+| UserPromptExpansion | 2.1.116 | yes |
 | UserPromptSubmit | 2.0.0 | yes |
 | WorktreeCreate | 2.1.50 | yes |
 | WorktreeRemove | 2.1.50 | yes |
@@ -603,6 +605,8 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.118 | +PostToolBatch | — | — |
+| 2.1.116 | +UserPromptExpansion | — | — |
 | 2.1.111 | — | +less-permission-prompts | — |
 | 2.1.110 | — | +focus, +tui | — |
 | 2.1.105 | — | +recap | — |
