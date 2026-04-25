@@ -1,0 +1,998 @@
+## [1.4.0] - 2026-04-25
+
+### 🚀 Features
+
+- *(prompts)* Add system prompt diff generation and reporting (#58)
+- *(scanners)* Scan Bun-compiled binaries via strings -a (#61)
+
+### 🐛 Bug Fixes
+
+- *(monitor)* Make image format fixing non-fatal (#60)
+
+### 🚜 Refactor
+
+- Support native binary CLI for v2.1.113+ (#57)
+
+### ⚙️ Miscellaneous Tasks
+
+- *(commands)* Sync claude code data (v2.1.108) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.108) — metadata updated
+- *(docs)* Sync claude code data (v2.1.108) — 5 docs changed
+- *(npm)* Sync claude code data (v2.1.109) — 2.1.108 → 2.1.109
+- *(readme)* Sync claude code data (v2.1.109)
+- *(docs)* Sync claude code data (v2.1.109) — 3 docs changed
+- *(docs)* Sync claude code data (v2.1.109) — 2 docs changed
+- *(docs)* Sync claude code data (v2.1.109) — 2 docs changed
+- *(docs)* Sync claude code data (v2.1.109) — 2 docs changed
+- *(commands)* Sync claude code data (v2.1.109) — metadata updated
+- *(readme)* Sync claude code data (v2.1.109)
+- *(npm)* Sync claude code data (v2.1.110) — 2.1.109 → 2.1.110
+- *(commands)* Sync claude code data (v2.1.110) — +focus, +tui
+- *(readme)* Sync claude code data (v2.1.110)
+- *(docs)* Sync claude code data (v2.1.110) — 7 docs changed
+- *(commands)* Sync claude code data (v2.1.110) — +focus, +tui
+- *(docs)* Sync claude code data (v2.1.110) — 1 docs changed
+- *(commands)* Sync claude code data (v2.1.110) — +focus, +tui
+- *(hooks)* Sync claude code data (v2.1.110) — metadata updated
+- *(readme)* Sync claude code data (v2.1.110)
+- *(docs)* Sync claude code data (v2.1.110) — 2 docs changed
+- *(docs)* Sync claude code data (v2.1.110) — 3 docs changed
+- *(docs)* Sync claude code data (v2.1.110) — 3 docs changed
+- *(commands)* Sync claude code data (v2.1.110) — +focus, +tui
+- *(npm)* Sync claude code data (v2.1.111) — 2.1.110 → 2.1.111
+- *(commands)* Sync claude code data (v2.1.111) — +less-permission-prompts
+- *(docs)* Sync claude code data (v2.1.111) — 19 docs changed
+- *(readme)* Sync claude code data (v2.1.111)
+- *(docs)* Sync claude code data (v2.1.111) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.111) — 21 docs changed
+- *(docs)* Sync claude code data (v2.1.111) — 21 docs changed
+- *(npm)* Sync claude code data (v2.1.112) — 2.1.111 → 2.1.112
+- *(docs)* Sync claude code data (v2.1.112) — 22 docs changed
+- *(readme)* Sync claude code data (v2.1.112)
+- *(docs)* Sync claude code data (v2.1.112) — 27 docs changed
+- *(docs)* Sync claude code data (v2.1.112) — 45 docs changed
+- *(commands)* Sync claude code data (v2.1.112) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.112) — metadata updated
+- *(docs)* Sync claude code data (v2.1.112) — 2 docs changed
+- *(readme)* Sync claude code data (v2.1.112)
+- *(docs)* Sync claude code data (v2.1.112) — 2 docs changed
+- *(npm)* Sync claude code data (v2.1.113) — 2.1.112 → 2.1.113
+- *(readme)* Sync claude code data (v2.1.113)
+- *(docs)* Sync claude code data (v2.1.113) — 2 docs changed
+- *(docs)* Sync claude code data (v2.1.113) — 2 docs changed
+- *(docs)* Sync claude code data (v2.1.113) — 2 docs changed
+- *(npm)* Sync claude code data (v2.1.114) — 2.1.113 → 2.1.114
+- *(docs)* Sync claude code data (v2.1.114) — 2 docs changed
+- *(readme)* Sync claude code data (v2.1.114)
+- *(docs)* Sync claude code data (v2.1.114) — 2 docs changed
+- *(docs)* Sync claude code data (v2.1.114) — 1 docs changed
+- *(docs)* Sync claude code data (v2.1.114) — 11 docs changed
+- *(hooks)* Sync claude code data (v2.1.114) — metadata updated
+- *(readme)* Sync claude code data (v2.1.114)
+- Add dependabot-issues workflow (#56)
+- *(docs)* Sync claude code data (v2.1.114) — 1 docs changed
+- *(commands)* Sync claude code data (v2.1.114) — metadata updated
+- *(docs)* Sync claude code data (v2.1.114) — 2 docs changed
+- *(readme)* Sync claude code data (v2.1.114)
+- *(docs)* Sync claude code data (v2.1.114) — 3 docs changed
+- *(npm)* Sync claude code data (v2.1.116) — 2.1.114 → 2.1.116
+- *(docs)* Sync claude code data (v2.1.116) — 3 docs changed
+- *(readme)* Sync claude code data (v2.1.116)
+- *(commands)* Sync claude code data (v2.1.116) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.116) — metadata updated
+- *(docs)* Sync claude code data (v2.1.116) — 3 docs changed
+- *(docs)* Sync claude code data (v2.1.116) — 3 docs changed
+- *(docs)* Sync claude code data (v2.1.116) — 4 docs changed
+- *(docs)* Sync claude code data (v2.1.116) — 4 docs changed
+- *(commands)* Sync claude code data (v2.1.116) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.116) — metadata updated
+- *(docs)* Sync claude code data (v2.1.116) — 2 docs changed
+- *(readme)* Sync claude code data (v2.1.116)
+- *(commands)* Sync claude code data (v2.1.116) — metadata updated
+- *(docs)* Sync claude code data (v2.1.116) — 9 docs changed
+- *(docs)* Sync claude code data (v2.1.116) — 9 docs changed
+- *(commands)* Sync claude code data (v2.1.116) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.116) — metadata updated
+- *(docs)* Sync claude code data (v2.1.116) — 2 docs changed
+- *(docs)* Sync claude code data (v2.1.116) — 21 docs changed
+- *(commands)* Sync claude code data (v2.1.116) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.116) — metadata updated
+- *(npm)* Sync claude code data (v2.1.117) — 2.1.116 → 2.1.117
+- *(readme)* Sync claude code data (v2.1.117)
+- *(docs)* Sync claude code data (v2.1.117) — 12 docs changed
+- *(commands)* Sync claude code data (v2.1.117) — metadata updated
+- *(docs)* Sync claude code data (v2.1.117) — 1 docs changed
+- *(readme)* Sync claude code data (v2.1.117)
+- *(commands)* Sync claude code data (v2.1.117) — metadata updated
+- *(docs)* Sync claude code data (v2.1.117) — 6 docs changed
+- *(docs)* Sync claude code data (v2.1.117) — 6 docs changed
+- *(docs)* Sync claude code data (v2.1.117) — 6 docs changed
+- *(docs)* Sync claude code data (v2.1.117) — 6 docs changed
+- *(docs)* Sync claude code data (v2.1.117) — 6 docs changed
+- *(docs)* Sync claude code data (v2.1.117) — 6 docs changed
+- *(docs)* Sync claude code data (v2.1.117) — 6 docs changed
+- *(docs)* Sync claude code data (v2.1.117) — 6 docs changed
+- *(commands)* Sync claude code data (v2.1.117) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.117) — metadata updated
+- *(docs)* Sync claude code data (v2.1.117) — 5 docs changed
+- *(docs)* Sync claude code data (v2.1.117) — 11 docs changed
+- *(commands)* Sync claude code data (v2.1.117) — metadata updated
+- *(docs)* Sync claude code data (v2.1.117) — 10 docs changed
+- *(commands)* Sync claude code data (v2.1.117) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.117) — metadata updated
+- *(docs)* Sync claude code data (v2.1.117) — 3 docs changed
+- *(npm)* Sync claude code data (v2.1.118) — 2.1.117 → 2.1.118
+- *(readme)* Sync claude code data (v2.1.118)
+- *(docs)* Sync claude code data (v2.1.118) — 1 docs changed
+- *(commands)* Sync claude code data (v2.1.118) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.118) — metadata updated
+- *(docs)* Sync claude code data (v2.1.118) — 3 docs changed
+- *(readme)* Sync claude code data (v2.1.118)
+- *(docs)* Sync claude code data (v2.1.118) — 29 docs changed
+- *(commands)* Sync claude code data (v2.1.118) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.118) — metadata updated
+- *(npm)* Sync claude code data (v2.1.119) — 2.1.118 → 2.1.119
+- *(readme)* Sync claude code data (v2.1.119)
+- *(docs)* Sync claude code data (v2.1.119) — 7 docs changed
+- *(commands)* Sync claude code data (v2.1.119) — metadata updated
+- *(docs)* Sync claude code data (v2.1.119) — 1 docs changed
+- *(readme)* Sync claude code data (v2.1.119)
+- *(commands)* Sync claude code data (v2.1.119) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.119) — metadata updated
+- *(docs)* Sync claude code data (v2.1.119) — 4 docs changed
+- *(docs)* Sync claude code data (v2.1.119) — 14 docs changed
+- *(commands)* Sync claude code data (v2.1.119) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.119) — metadata updated
+- *(npm)* Sync claude code data (v2.1.120) — 2.1.119 → 2.1.120
+- *(readme)* Sync claude code data (v2.1.120)
+- *(docs)* Sync claude code data (v2.1.120) — 1 docs changed
+- *(commands)* Sync claude code data (v2.1.120) — metadata updated
+- *(docs)* Sync claude code data (v2.1.120) — 1 docs changed
+- *(readme)* Sync claude code data (v2.1.120)
+- *(commands)* Sync claude code data (v2.1.120) — metadata updated
+- *(ci)* Add prompt diff tracking to sync workflow (#59)
+- *(hooks)* Sync claude code data (v2.1.120) — metadata updated
+- *(readme)* Sync claude code data (v2.1.120)
+- True-up committed reports after binary-era scanning (#62)
+- *(npm)* Update deps for docs generation (#63)
+- *(npm)* Add dependabot overrides (#64)
+- *(docs)* Sync claude code data (v2.1.120) — 5 docs changed
+- Add by-the-numbers script for release notes (#65)
+## [1.3.0] - 2026-04-14
+
+### 🚀 Features
+
+- *(dash)* Flatten ClaudeExplorer to static markdown (#48)
+
+### 🐛 Bug Fixes
+
+- *(sync)* Stop false-positive hourly doc commits (#44)
+- *(sync)* Skip npm downloads for scan-cached versions, fix manifest diff (#45)
+- *(pdf)* Resolve Typst compilation failures from nested code fences and backtick handling (#46)
+- *(pdf)* Escape slash before strong close in Typst output (#54)
+
+### ⚙️ Miscellaneous Tasks
+
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- *(npm)* Sync claude code data (v2.1.86) — 2.1.85 → 2.1.86
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(readme)* Sync claude code data (v2.1.86)
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.86) — 61 docs changed
+- *(npm)* Sync claude code data (v2.1.87) — 2.1.86 → 2.1.87
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(readme)* Sync claude code data (v2.1.87)
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 61 docs changed
+- *(hooks)* Sync claude code data (v2.1.87) — metadata updated
+- *(docs)* Sync claude code data (v2.1.87) — 1 docs changed
+- *(readme)* Sync claude code data (v2.1.87)
+- *(hooks)* Sync claude code data (v2.1.87) — metadata updated
+- *(readme)* Sync claude code data (v2.1.87)
+- *(docs)* Sync claude code data (v2.1.87) — 21 docs changed
+- *(hooks)* Sync claude code data (v2.1.87) — metadata updated
+- *(docs)* Sync claude code data (v2.1.87) — 7 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 3 docs changed
+- *(docs)* Sync claude code data (v2.1.87) — 27 docs changed
+- *(npm)* Sync claude code data (v2.1.88) — 2.1.87 → 2.1.88
+- *(hooks)* Sync claude code data (v2.1.88) — +PermissionDenied
+- *(docs)* Sync claude code data (v2.1.88) — 1 docs changed
+- *(readme)* Sync claude code data (v2.1.88)
+- *(docs)* Sync claude code data (v2.1.88) — 1 docs changed
+- *(hooks)* Sync claude code data (v2.1.88) — +PermissionDenied
+- *(docs)* Sync claude code data (v2.1.88) — 5 docs changed
+- *(readme)* Sync claude code data (v2.1.88)
+- *(hooks)* Sync claude code data (v2.1.88) — +PermissionDenied
+- *(docs)* Sync claude code data (v2.1.88) — 2 docs changed
+- *(npm)* Sync claude code data (v2.1.87) — 2.1.88 → 2.1.87
+- *(hooks)* Sync claude code data (v2.1.87) — metadata updated
+- *(readme)* Sync claude code data (v2.1.87)
+- *(docs)* Sync claude code data (v2.1.87) — 3 docs changed
+- *(hooks)* Sync claude code data (v2.1.87) — metadata updated
+- *(docs)* Sync claude code data (v2.1.87) — 11 docs changed
+- *(hooks)* Sync claude code data (v2.1.87) — metadata updated
+- *(docs)* Sync claude code data (v2.1.87) — 14 docs changed
+- *(npm)* Sync claude code data (v2.1.89) — 2.1.87 → 2.1.89
+- *(hooks)* Sync claude code data (v2.1.89) — +PermissionDenied
+- *(readme)* Sync claude code data (v2.1.89)
+- *(docs)* Sync claude code data (v2.1.89) — 1 docs changed
+- *(hooks)* Sync claude code data (v2.1.89) — +PermissionDenied
+- *(docs)* Sync claude code data (v2.1.89) — 1 docs changed
+- *(readme)* Sync claude code data (v2.1.89)
+- *(docs)* Sync claude code data (v2.1.89) — 4 docs changed
+- *(docs)* Sync claude code data (v2.1.89) — 11 docs changed
+- *(hooks)* Sync claude code data (v2.1.89) — +PermissionDenied
+- *(docs)* Sync claude code data (v2.1.89) — 1 docs changed
+- *(npm)* Sync claude code data (v2.1.90) — 2.1.89 → 2.1.90
+- *(readme)* Sync claude code data (v2.1.90)
+- *(docs)* Sync claude code data (v2.1.90) — 3 docs changed
+- *(hooks)* Sync claude code data (v2.1.90) — metadata updated
+- *(docs)* Sync claude code data (v2.1.90) — 1 docs changed
+- *(readme)* Sync claude code data (v2.1.90)
+- *(docs)* Sync claude code data (v2.1.90) — 12 docs changed
+- *(docs)* Sync claude code data (v2.1.90) — 5 docs changed
+- *(docs)* Sync claude code data (v2.1.90) — 18 docs changed
+- *(docs)* Sync claude code data (v2.1.90) — 12 docs changed
+- *(commands)* Sync claude code data (v2.1.90) — +powerup, +toggle-memory
+- *(docs)* Sync claude code data (v2.1.90) — 4 docs changed
+- *(readme)* Sync claude code data (v2.1.90)
+- *(npm)* Sync claude code data (v2.1.91) — 2.1.90 → 2.1.91
+- *(commands)* Sync claude code data (v2.1.91) — +ultraplan
+- *(readme)* Sync claude code data (v2.1.91)
+- *(docs)* Sync claude code data (v2.1.91) — 1 docs changed
+- *(commands)* Sync claude code data (v2.1.91) — +ultraplan
+- *(docs)* Sync claude code data (v2.1.91) — 9 docs changed
+- *(readme)* Sync claude code data (v2.1.91)
+- *(commands)* Sync claude code data (v2.1.91) — +ultraplan
+- *(docs)* Sync claude code data (v2.1.91) — 7 docs changed
+- *(commands)* Sync claude code data (v2.1.91) — +ultraplan
+- *(commands)* Sync claude code data (v2.1.91) — +ultraplan
+- *(docs)* Sync claude code data (v2.1.91) — 2 docs changed
+- *(readme)* Sync claude code data (v2.1.91)
+- *(commands)* Sync claude code data (v2.1.91) — +ultraplan
+- *(docs)* Sync claude code data (v2.1.91) — 11 docs changed
+- *(readme)* Sync claude code data (v2.1.91)
+- *(commands)* Sync claude code data (v2.1.91) — +ultraplan
+- *(hooks)* Sync claude code data (v2.1.91) — metadata updated
+- *(docs)* Sync claude code data (v2.1.91) — 3 docs changed
+- *(readme)* Sync claude code data (v2.1.91)
+- *(commands)* Sync claude code data (v2.1.91) — +ultraplan
+- *(docs)* Sync claude code data (v2.1.91) — 1 docs changed
+- *(npm)* Sync claude code data (v2.1.92) — 2.1.91 → 2.1.92
+- *(commands)* Sync claude code data (v2.1.92) — +setup-bedrock, +stop-hook, +teleport
+- *(docs)* Sync claude code data (v2.1.92) — 2 docs changed
+- *(readme)* Sync claude code data (v2.1.92)
+- *(commands)* Sync claude code data (v2.1.92) — +setup-bedrock, +stop-hook, +teleport
+- *(docs)* Sync claude code data (v2.1.92) — 2 docs changed
+- *(commands)* Sync claude code data (v2.1.92) — +setup-bedrock, +stop-hook, +teleport
+- *(hooks)* Sync claude code data (v2.1.92) — metadata updated
+- *(docs)* Sync claude code data (v2.1.92) — 1 docs changed
+- *(docs)* Sync claude code data (v2.1.92) — 15 docs changed
+- *(commands)* Sync claude code data (v2.1.92) — +setup-bedrock, +stop-hook, +teleport
+- *(readme)* Sync claude code data (v2.1.92)
+- *(docs)* Sync claude code data (v2.1.92) — 5 docs changed
+- *(commands)* Sync claude code data (v2.1.92) — +setup-bedrock, +stop-hook, +teleport
+- *(hooks)* Sync claude code data (v2.1.92) — metadata updated
+- *(readme)* Sync claude code data (v2.1.92)
+- *(npm)* Sync claude code data (v2.1.94) — 2.1.92 → 2.1.94
+- *(commands)* Sync claude code data (v2.1.94) — +autofix-pr, +team-onboarding
+- *(readme)* Sync claude code data (v2.1.94)
+- *(docs)* Sync claude code data (v2.1.94) — 1 docs changed
+- *(commands)* Sync claude code data (v2.1.94) — +autofix-pr, +team-onboarding
+- *(hooks)* Sync claude code data (v2.1.94) — metadata updated
+- *(docs)* Sync claude code data (v2.1.94) — 5 docs changed
+- *(commands)* Sync claude code data (v2.1.94) — +autofix-pr, +team-onboarding
+- *(docs)* Sync claude code data (v2.1.94) — 13 docs changed
+- *(readme)* Sync claude code data (v2.1.94)
+- *(commands)* Sync claude code data (v2.1.94) — +autofix-pr, +team-onboarding
+- *(docs)* Sync claude code data (v2.1.94) — 4 docs changed
+- *(docs)* Sync claude code data (v2.1.94) — 4 docs changed
+- *(npm)* Sync claude code data (v2.1.96) — 2.1.94 → 2.1.96
+- *(readme)* Sync claude code data (v2.1.96)
+- *(docs)* Sync claude code data (v2.1.96) — 2 docs changed
+- *(sync)* Run navel monitor after doc syncs for Pushover failure alerts (#47)
+- *(docs)* Sync claude code data (v2.1.96) — 3 docs changed
+- *(docs)* Sync claude code data (v2.1.96) — 7 docs changed
+- *(commands)* Sync claude code data (v2.1.96) — metadata updated
+- *(docs)* Sync claude code data (v2.1.96) — 16 docs changed
+- *(commands)* Sync claude code data (v2.1.96) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.96) — metadata updated
+- *(docs)* Sync claude code data (v2.1.96) — 2 docs changed
+- *(commands)* Sync claude code data (v2.1.96) — metadata updated
+- *(docs)* Sync claude code data (v2.1.96) — 2 docs changed
+- *(commands)* Sync claude code data (v2.1.96) — metadata updated
+- *(npm)* Sync claude code data (v2.1.97) — 2.1.96 → 2.1.97
+- *(commands)* Sync claude code data (v2.1.97) — +dream
+- *(readme)* Sync claude code data (v2.1.97)
+- *(docs)* Sync claude code data (v2.1.97) — 6 docs changed
+- *(commands)* Sync claude code data (v2.1.97) — +dream
+- *(hooks)* Sync claude code data (v2.1.97) — metadata updated
+- *(readme)* Sync claude code data (v2.1.97)
+- *(docs)* Sync claude code data (v2.1.97) — 15 docs changed
+- *(commands)* Sync claude code data (v2.1.97) — +dream
+- *(docs)* Sync claude code data (v2.1.97) — 1 docs changed
+- Monitor pdf and dash builds (#49)
+- *(commands)* Sync claude code data (v2.1.97) — +dream
+- *(docs)* Sync claude code data (v2.1.97) — 2 docs changed
+- *(docs)* Sync claude code data (v2.1.97) — 2 docs changed
+- *(docs)* Sync claude code data (v2.1.97) — 15 docs changed
+- *(docs)* Sync claude code data (v2.1.97) — 19 docs changed
+- *(npm)* Sync claude code data (v2.1.98) — 2.1.97 → 2.1.98
+- *(commands)* Sync claude code data (v2.1.98) — +setup-vertex
+- *(docs)* Sync claude code data (v2.1.98) — 19 docs changed
+- *(readme)* Sync claude code data (v2.1.98)
+- *(docs)* Sync claude code data (v2.1.98) — 20 docs changed
+- *(docs)* Sync claude code data (v2.1.98) — 27 docs changed
+- *(docs)* Sync claude code data (v2.1.98) — 38 docs changed
+- *(docs)* Sync claude code data (v2.1.98) — 38 docs changed
+- Install typst correctly
+- *(docs)* Sync claude code data (v2.1.98) — 80 docs changed
+- *(commands)* Sync claude code data (v2.1.98) — +setup-vertex
+- *(hooks)* Sync claude code data (v2.1.98) — metadata updated
+- *(docs)* Sync claude code data (v2.1.98) — 80 docs changed
+- *(readme)* Sync claude code data (v2.1.98)
+- *(hooks)* Sync claude code data (v2.1.98) — metadata updated
+- *(npm)* Sync claude code data (v2.1.100) — 2.1.98 → 2.1.100
+- *(readme)* Sync claude code data (v2.1.100)
+- *(docs)* Sync claude code data (v2.1.100) — 5 docs changed
+- *(docs)* Sync claude code data (v2.1.100) — 1 docs changed
+- *(docs)* Sync claude code data (v2.1.100) — 1 docs changed
+- *(docs)* Sync claude code data (v2.1.100) — 3 docs changed
+- *(commands)* Sync claude code data (v2.1.100) — metadata updated
+- *(docs)* Sync claude code data (v2.1.100) — 5 docs changed
+- *(npm)* Sync claude code data (v2.1.101) — 2.1.100 → 2.1.101
+- *(commands)* Sync claude code data (v2.1.101) — +loops, +update
+- *(docs)* Sync claude code data (v2.1.101) — 7 docs changed
+- *(readme)* Sync claude code data (v2.1.101)
+- *(commands)* Sync claude code data (v2.1.101) — +loops, +update
+- *(hooks)* Sync claude code data (v2.1.101) — metadata updated
+- *(docs)* Sync claude code data (v2.1.101) — 5 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 11 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.101) — 19 docs changed
+- *(npm)* Sync claude code data (v2.1.104) — 2.1.101 → 2.1.104
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(readme)* Sync claude code data (v2.1.104)
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- Fix navel monitor alerts (#50)
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- Fix pdf build on lines ending in literal backslash (#51)
+- Strip <AgentInstructions> block from every doc page (#52)
+- Strip <Experiment> wrapper so nested JSX doesn't leak into PDF (#53)
+- *(docs)* Sync claude code data (v2.1.104) — 19 docs changed
+- *(commands)* Sync claude code data (v2.1.104) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.104) — metadata updated
+- *(readme)* Sync claude code data (v2.1.104)
+- *(docs)* Sync claude code data (v2.1.104) — 10 docs changed
+- *(commands)* Sync claude code data (v2.1.104) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.104) — metadata updated
+- *(docs)* Sync claude code data (v2.1.104) — 8 docs changed
+- *(npm)* Sync claude code data (v2.1.105) — 2.1.104 → 2.1.105
+- *(commands)* Sync claude code data (v2.1.105) — +recap
+- *(docs)* Sync claude code data (v2.1.105) — 8 docs changed
+- *(readme)* Sync claude code data (v2.1.105)
+- *(commands)* Sync claude code data (v2.1.105) — +recap
+- *(docs)* Sync claude code data (v2.1.105) — 5 docs changed
+- *(commands)* Sync claude code data (v2.1.105) — +recap
+- *(hooks)* Sync claude code data (v2.1.105) — metadata updated
+- *(docs)* Sync claude code data (v2.1.105) — 14 docs changed
+- *(commands)* Sync claude code data (v2.1.105) — +recap
+- *(hooks)* Sync claude code data (v2.1.105) — metadata updated
+- *(readme)* Sync claude code data (v2.1.105)
+- *(docs)* Sync claude code data (v2.1.105) — 79 docs changed
+- *(commands)* Sync claude code data (v2.1.105) — +recap
+- *(npm)* Sync claude code data (v2.1.107) — 2.1.105 → 2.1.107
+- *(readme)* Sync claude code data (v2.1.107)
+- *(docs)* Sync claude code data (v2.1.107) — 4 docs changed
+- *(commands)* Sync claude code data (v2.1.107) — metadata updated
+- *(docs)* Sync claude code data (v2.1.107) — 1 docs changed
+- *(docs)* Sync claude code data (v2.1.107) — 1 docs changed
+- *(docs)* Sync claude code data (v2.1.107) — 15 docs changed
+- *(commands)* Sync claude code data (v2.1.107) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.107) — metadata updated
+- *(npm)* Sync claude code data (v2.1.108) — 2.1.107 → 2.1.108
+- *(commands)* Sync claude code data (v2.1.108) — metadata updated
+- *(docs)* Sync claude code data (v2.1.108) — 63 docs changed
+- *(readme)* Sync claude code data (v2.1.108)
+- *(docs)* Sync claude code data (v2.1.108) — 63 docs changed
+- *(commands)* Sync claude code data (v2.1.108) — metadata updated
+- *(docs)* Sync claude code data (v2.1.108) — 2 docs changed
+- *(readme)* Sync claude code data (v2.1.108)
+- *(docs)* Sync claude code data (v2.1.108) — 2 docs changed
+- Remove broken release hooks
+## [1.2.0] - 2026-03-27
+
+### 🚀 Features
+
+- *(dash)* Flatten MDX components, fix image formats, archive docs (#42)
+- Add build failure monitoring with Pushover alerts, fix test suite (#43)
+
+### ⚙️ Miscellaneous Tasks
+
+- *(npm)* Sync claude code data (v2.1.84) — 2.1.83 → 2.1.84
+- *(commands)* Sync claude code data (v2.1.84) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.84) — +TaskCreated
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(readme)* Sync claude code data (v2.1.84)
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.84) — 61 docs changed
+- *(npm)* Sync claude code data (v2.1.85) — 2.1.84 → 2.1.85
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- *(readme)* Sync claude code data (v2.1.85)
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- Add dependabot config and colophon sample output (#40)
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- Route docs-changes.json and nav.json through _reports_dir, upgrade npm deps (#41)
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.85) — 61 docs changed
+## [1.1.0] - 2026-03-25
+
+### 🚀 Features
+
+- Add Dash docset pipeline for offline Claude Code docs (#16)
+- Add PDF generation pipeline (`navel pdf`) (#21)
+- Split `navel pdf` into prep/compile steps (#30)
+- *(capture)* Suppress plugins in API capture + add env vars report (#31)
+- *(capture)* Add --full and --full-prompt-caching capture modes (#33)
+- *(reports)* Add env vars to reports README and badges (#34)
+- *(pdf)* Book-quality running headers, title page, and print mode (#35)
+- *(pdf)* Make glossary and index opt-in via --with-colophon (#38)
+
+### 🐛 Bug Fixes
+
+- Replace claude-code-action with deterministic bash in sync workflow (#4)
+- Stop docs sync from creating hourly commit noise (#13)
+- Localize all remote resources in Dash docset (#20)
+- Sync workflow — skip known versions, push directly, fix commit coverage (#26)
+- Revert update-npm optimization, restore npm Actions cache (#28)
+- Suppress date-only noise in reports, use publication dates for docs (#29)
+- *(reports)* Write to local-reports/ outside CI to avoid merge conflicts (#32)
+- Homebrew-compatible path resolution and dependency checks (#37)
+
+### 📚 Documentation
+
+- Document offline doc generation (#36)
+- Add detail to offline-docs for index and glossary
+- Fix traction chart
+
+### ⚙️ Miscellaneous Tasks
+
+- Sync claude code data (v2.1.71) (#3)
+- Fix semver sort in sync workflow (#5)
+- Sync claude code data (v2.1.71) (#6)
+- Sync claude code data (v2.1.71) (#7)
+- Sync claude code data (v2.1.71) (#10)
+- Fix merge style for sync (#12)
+- Sync claude code data (v2.1.71) (#14)
+- Sync claude code data (v2.1.71) (#15)
+- Sync claude code data (v2.1.71) (#17)
+- Update gitignore
+- Sync claude code data (v2.1.71) (#18)
+- Sync claude code data (v2.1.71) (#19)
+- Fix attempts commit ignored paths (#22)
+- Cleanup sync errors, remove old package.json (#23)
+- Sync claude code data (v2.1.72) (#24)
+- Sync claude code data (v2.1.72) (#25)
+- Fix lodash dependabot alert (#27)
+- *(commands)* Sync claude code data (v2.1.72) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.72) — metadata updated
+- *(readme)* Sync claude code data (v2.1.72)
+- *(docs)* Sync claude code data (v2.1.72) — 7 docs changed
+- *(docs)* Sync claude code data (v2.1.72) — 7 docs changed
+- *(commands)* Sync claude code data (v2.1.72) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.72) — metadata updated
+- *(docs)* Sync claude code data (v2.1.72) — 35 docs changed
+- *(readme)* Sync claude code data (v2.1.72)
+- *(commands)* Sync claude code data (v2.1.72) — +brief
+- *(hooks)* Sync claude code data (v2.1.72) — metadata updated
+- *(readme)* Sync claude code data (v2.1.72)
+- *(docs)* Sync claude code data (v2.1.72) — 30 docs changed
+- *(docs)* Sync claude code data (v2.1.72) — 30 docs changed
+- *(docs)* Sync claude code data (v2.1.72) — 30 docs changed
+- *(docs)* Sync claude code data (v2.1.72) — 30 docs changed
+- *(docs)* Sync claude code data (v2.1.72) — 30 docs changed
+- *(docs)* Sync claude code data (v2.1.72) — 30 docs changed
+- *(docs)* Sync claude code data (v2.1.72) — 30 docs changed
+- *(docs)* Sync claude code data (v2.1.72) — 30 docs changed
+- *(docs)* Sync claude code data (v2.1.72) — 30 docs changed
+- *(docs)* Sync claude code data (v2.1.72) — 30 docs changed
+- *(docs)* Sync claude code data (v2.1.72) — 30 docs changed
+- *(docs)* Sync claude code data (v2.1.72) — 30 docs changed
+- *(docs)* Sync claude code data (v2.1.72) — 30 docs changed
+- *(docs)* Sync claude code data (v2.1.72) — 30 docs changed
+- *(docs)* Sync claude code data (v2.1.72) — 30 docs changed
+- *(docs)* Sync claude code data (v2.1.72) — 30 docs changed
+- *(npm)* Sync claude code data (v2.1.73) — 2.1.72 → 2.1.73
+- *(docs)* Sync claude code data (v2.1.73) — 30 docs changed
+- *(readme)* Sync claude code data (v2.1.73)
+- *(docs)* Sync claude code data (v2.1.73) — 30 docs changed
+- *(docs)* Sync claude code data (v2.1.73) — 30 docs changed
+- *(docs)* Sync claude code data (v2.1.73) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.73) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.73) — 61 docs changed
+- *(npm)* Sync claude code data (v2.1.74) — 2.1.73 → 2.1.74
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(readme)* Sync claude code data (v2.1.74)
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.74) — 61 docs changed
+- *(npm)* Sync claude code data (v2.1.75) — 2.1.74 → 2.1.75
+- *(docs)* Sync claude code data (v2.1.75) — 61 docs changed
+- *(readme)* Sync claude code data (v2.1.75)
+- *(docs)* Sync claude code data (v2.1.75) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.75) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.75) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.75) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.75) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.75) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.75) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.75) — 61 docs changed
+- *(docs)* Update with claude code data (v2.1.75)
+- *(commands)* Sync claude code data (v2.1.76) — +bridge-kick, +effort
+- *(hooks)* Sync claude code data (v2.1.76) — +PostCompact
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(readme)* Sync claude code data (v2.1.76)
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.76) — 61 docs changed
+- *(npm)* Sync claude code data (v2.1.77) — 2.1.76 → 2.1.77
+- *(commands)* Sync claude code data (v2.1.77) — +branch
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(readme)* Sync claude code data (v2.1.77)
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.77) — 61 docs changed
+- *(npm)* Sync claude code data (v2.1.78) — 2.1.77 → 2.1.78
+- *(hooks)* Sync claude code data (v2.1.78) — +StopFailure
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(readme)* Sync claude code data (v2.1.78)
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(reports)* Sync claude code data (v2.1.78)
+- *(commands)* Sync claude code data (v2.1.78) — metadata updated
+- *(hooks)* Sync claude code data (v2.1.78) — +StopFailure
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(readme)* Sync claude code data (v2.1.78)
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.78) — 61 docs changed
+- *(npm)* Sync claude code data (v2.1.79) — 2.1.78 → 2.1.79
+- *(commands)* Sync claude code data (v2.1.79) — +web-setup
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(readme)* Sync claude code data (v2.1.79)
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.79) — 61 docs changed
+- *(npm)* Sync claude code data (v2.1.80) — 2.1.79 → 2.1.80
+- *(commands)* Sync claude code data (v2.1.80) — +schedule
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(readme)* Sync claude code data (v2.1.80)
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.80) — 61 docs changed
+- *(npm)* Sync claude code data (v2.1.81) — 2.1.80 → 2.1.81
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(readme)* Sync claude code data (v2.1.81)
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.81) — 61 docs changed
+- *(npm)* Sync claude code data (v2.1.83) — 2.1.81 → 2.1.83
+- *(commands)* Sync claude code data (v2.1.83) — +advisor, +ultraplan, +ultrareview, +version
+- *(hooks)* Sync claude code data (v2.1.83) — +CwdChanged, +FileChanged
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(readme)* Sync claude code data (v2.1.83)
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+- *(docs)* Sync claude code data (v2.1.83) — 61 docs changed
+## [1.0.0] - 2026-03-06
+
+### 🚀 Features
+
+- Navel — introspection toolkit for Claude Code internals (#2)
+
+### ⚙️ Miscellaneous Tasks
+
+- Initial commit
