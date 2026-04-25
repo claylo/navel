@@ -1,5 +1,5 @@
 [project]
-type = "generic"    # bash project — version bump and publish are manual
+type = "node"    # bash project — version bump and publish are manual
 
 [commands]
 test = "bats tests/"
