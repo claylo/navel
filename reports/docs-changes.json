@@ -1,6 +1,22 @@
 {
   "changes": [
     {
+      "date": "2026-04-26T01:36:14Z",
+      "version_at_time": "2.1.120",
+      "files_changed": [
+        "chrome.md",
+        "commands.md",
+        "skills.md",
+        "slash-commands.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-25T18:48:33Z",
       "version_at_time": "2.1.120",
       "files_changed": [
