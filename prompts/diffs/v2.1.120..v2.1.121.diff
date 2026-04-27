@@ -1,0 +1,16 @@
+--- v2.1.120
++++ v2.1.121
+@@ -231,10 +231,11 @@
+ Main branch (you will usually use this for PRs): main
+ 
+ Status:
+-(clean)
++M npm/versions.json
++ M reports/docs-changes.json
+ 
+ Recent commits:
+-7cf8e0e chore(ci): add prompt diff tracking to sync workflow (#59)
++8e7cd7b chore(docs): sync claude code data (v2.1.120) — 4 docs changed
+ 
+ ---
+ 
