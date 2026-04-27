@@ -1311,6 +1311,7 @@
         "debug-your-config.md",
         "desktop-scheduled-tasks.md",
         "desktop.md",
+        "devcontainer.md",
         "discover-plugins.md",
         "env-vars.md",
         "errors.md",
@@ -1338,7 +1339,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 161
+      "mentions": 162
     },
     "memory": {
       "documented": true,
@@ -1988,5 +1989,5 @@
       "mentions": 17
     }
   },
-  "docs_checked_at": "2026-04-25"
+  "docs_checked_at": "2026-04-27"
 }
