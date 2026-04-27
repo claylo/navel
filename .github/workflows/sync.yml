@@ -17,14 +17,18 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
-      - uses: actions/checkout@v6
-      - uses: typst-community/setup-typst@v5
-
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Install system dependencies
         run: sudo apt-get update -qq && sudo apt-get install -y -qq jq ripgrep
 
+      - uses: cargo-bins/cargo-binstall@dc19f1e48450eefe5a29b8da6c6b00a87d730b37 # v1.18.1
+      - name: Install typst
+        run: |
+          cargo binstall --no-confirm typst-cli
+          typst --version
+
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
         with:
           node-version: 24
           cache: npm
@@ -33,21 +37,21 @@ jobs:
         run: npm ci
 
       - name: Restore npm scan cache
-        uses: actions/cache@v5
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: npm/.cache
           key: navel-npm-cache-${{ hashFiles('npm/versions.json') }}
           restore-keys: navel-npm-cache-
 
       - name: Restore docs cache
-        uses: actions/cache@v5
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: docs
           key: navel-docs-${{ github.run_id }}
           restore-keys: navel-docs-
 
       - name: Restore prompt captures cache
-        uses: actions/cache@v5
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: prompts/versions
           key: navel-captures-${{ hashFiles('npm/versions.json') }}
@@ -90,8 +94,17 @@ jobs:
         id: commit
         run: |
           # Only proceed if data files changed — ignore README badge-only updates
-          data_files="npm/versions.json reports/commands.json reports/hooks.json reports/env-vars.json reports/docs-changes.json reports/nav.json reports/prompt-diffs.json prompts/diffs/"
-          if git diff --quiet -- $data_files; then
+          data_files=(
+            npm/versions.json
+            reports/commands.json
+            reports/hooks.json
+            reports/env-vars.json
+            reports/docs-changes.json
+            reports/nav.json
+            reports/prompt-diffs.json
+            prompts/diffs/
+          )
+          if git diff --quiet -- "${data_files[@]}"; then
             echo "No data changes detected"
             echo "pushed=false" >> "$GITHUB_OUTPUT"
             exit 0
