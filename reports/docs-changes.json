@@ -1,6 +1,23 @@
 {
   "changes": [
     {
+      "date": "2026-04-27T19:01:19Z",
+      "version_at_time": "2.1.121",
+      "files_changed": [
+        "devcontainer.md",
+        "network-config.md",
+        "permission-modes.md",
+        "sandboxing.md",
+        "security.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-26T01:36:14Z",
       "version_at_time": "2.1.120",
       "files_changed": [
