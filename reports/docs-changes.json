@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-04-28T16:19:27Z",
+      "version_at_time": "2.1.121",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        "champion-kit.md",
+        "communications-kit.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-28T15:51:30Z",
       "version_at_time": "2.1.121",
       "files_changed": [
