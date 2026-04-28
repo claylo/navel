@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-04-28T15:51:30Z",
+      "version_at_time": "2.1.121",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        "glossary.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-28T05:51:10Z",
       "version_at_time": "2.1.121",
       "files_changed": [
