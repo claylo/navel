@@ -95,7 +95,7 @@ while IFS= read -r vdir; do
   latest_descriptions=$(jq '[.tools[] | {key: .name, value: .description}] | from_entries' "$payload")
   latest_schemas=$(jq '[.tools[] | {key: .name, value: .input_schema}] | from_entries' "$payload")
 
-done < <(ls -d "$PROMPTS_DIR"/v* 2>/dev/null | xargs -I{} basename {} | sort -V)
+done < <(for d in "$PROMPTS_DIR"/v*/; do [[ -d "$d" ]] && basename "$d"; done 2>/dev/null | sort -V)
 
 if [[ -n "$latest_tools" ]]; then
   tools_json=$(echo "$latest_tools" | tr ' ' '\n' | grep -v '^$' | sort | jq -R . | jq -s .)

@@ -34,6 +34,7 @@ teardown() {
   [[ "$keys" == *"tools"* ]]
   [[ "$keys" == *"tools_descriptions"* ]]
   [[ "$keys" == *"tools_history"* ]]
+  [[ "$keys" == *"tools_docs"* ]]
   [[ "$keys" == *"tools_schemas"* ]]
 }
 
@@ -101,6 +102,8 @@ teardown() {
   run bash "$BATS_TEST_DIRNAME/../libexec/update-tools-list"
   [ "$status" -eq 0 ]
   [[ "$output" == *"Warning"* ]]
+  count=$(jq '.tools | length' "$NAVEL_HOME/reports/tools.json")
+  [ "$count" -gt 0 ]
 }
 
 # ── Dispatcher integration ───────────────────────────────────────────
