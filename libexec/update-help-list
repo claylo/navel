@@ -1,0 +1,321 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_ROOT="${NAVEL_HOME:-$(cd "$(dirname "$0")/.." && pwd)}"
+# shellcheck source=_portable.sh
+. "$(dirname "$0")/_portable.sh"
+
+cd "${REPO_ROOT}/npm"
+REPORTS_DIR="$(_reports_dir "$REPO_ROOT")"
+mkdir -p "$REPORTS_DIR"
+
+MAX_DEPTH=5
+TIMEOUT_SECS=5
+
+cache_dir="${REPO_ROOT}/npm/.cache/help"
+mkdir -p "$cache_dir"
+
+# ── Helpers ────────────────────────────────────────────────────────────
+
+# Parse option names from help text.
+# Input: raw --help output on stdin
+# Output: sorted, one option per line (e.g. "--add-dir", "-c", "--continue")
+_parse_options() {
+  local in_options=false
+  while IFS= read -r line; do
+    if [[ "$line" =~ ^Options: ]]; then
+      in_options=true
+      continue
+    fi
+    if $in_options; then
+      # Blank line or new section ends Options
+      if [[ -z "$line" || ( "$line" =~ ^[A-Z] && ! "$line" =~ ^[[:space:]] ) ]]; then
+        in_options=false
+        continue
+      fi
+      # Extract flags: matches -x or --long-name patterns
+      echo "$line" | grep -oE '(--?[a-zA-Z][-a-zA-Z0-9]*)' || true
+    fi
+  done | sort -u
+}
+
+# Parse subcommand names from help text.
+# Input: raw --help output on stdin
+# Output: one subcommand name per line, skipping "help"
+_parse_subcommands() {
+  local in_commands=false
+  while IFS= read -r line; do
+    if [[ "$line" =~ ^Commands: ]]; then
+      in_commands=true
+      continue
+    fi
+    if $in_commands; then
+      # Blank line or new section ends Commands
+      if [[ -z "$line" || ( "$line" =~ ^[A-Z] && ! "$line" =~ ^[[:space:]] ) ]]; then
+        in_commands=false
+        continue
+      fi
+      # Extract first word (command name), handle "name|alias" by taking first
+      local name
+      name=$(echo "$line" | sed 's/^[[:space:]]*//' | awk '{print $1}' | cut -d'|' -f1)
+      # Skip "help" (Commander.js auto-generated)
+      if [[ -n "$name" && "$name" != "help" ]]; then
+        echo "$name"
+      fi
+    fi
+  done | sort -u
+}
+
+# Recursively capture help for a command and its subcommands.
+# Args: exe_cmd cmd_prefix depth
+# Output: JSON tree on stdout
+_capture_help_tree() {
+  local exe_cmd="$1"    # e.g. "node /path/cli.js" or "/path/claude"
+  local cmd_prefix="$2" # e.g. "" or "mcp" or "mcp add"
+  local depth="$3"
+
+  local full_cmd="claude"
+  [[ -n "$cmd_prefix" ]] && full_cmd="claude $cmd_prefix"
+
+  # Build the actual command to run
+  local help_args="$cmd_prefix --help"
+  help_args=$(echo "$help_args" | sed 's/^[[:space:]]*//')
+
+  local help_text
+  # shellcheck disable=SC2086
+  help_text=$(_timeout "$TIMEOUT_SECS" $exe_cmd $help_args 2>&1) || {
+    # Timeout or error — return minimal node
+    jq -n --arg cmd "$full_cmd" \
+      '{command: $cmd, text: "", options: [], subcommands: {}}'
+    return 0
+  }
+
+  # Parse options and subcommands
+  local options_json
+  options_json=$(echo "$help_text" | _parse_options | jq -R . | jq -s '.')
+  local subcmd_names
+  subcmd_names=$(echo "$help_text" | _parse_subcommands)
+
+  # Build subcommands tree (recurse if under depth limit)
+  local subcmds_json="{}"
+  if [[ -n "$subcmd_names" && "$depth" -lt "$MAX_DEPTH" ]]; then
+    while IFS= read -r subcmd; do
+      [[ -z "$subcmd" ]] && continue
+      local sub_prefix
+      if [[ -n "$cmd_prefix" ]]; then
+        sub_prefix="$cmd_prefix $subcmd"
+      else
+        sub_prefix="$subcmd"
+      fi
+      local sub_tree
+      sub_tree=$(_capture_help_tree "$exe_cmd" "$sub_prefix" $((depth + 1)))
+      subcmds_json=$(echo "$subcmds_json" | jq --arg k "$subcmd" --argjson v "$sub_tree" '. + {($k): $v}')
+    done <<< "$subcmd_names"
+  fi
+
+  # Assemble node
+  jq -n \
+    --arg cmd "$full_cmd" \
+    --arg text "$help_text" \
+    --argjson opts "$options_json" \
+    --argjson subs "$subcmds_json" \
+    '{command: $cmd, text: $text, options: $opts, subcommands: $subs}'
+}
+
+# Strip "text" fields from a help tree, keeping only options and subcommands.
+# Used for the report (raw text stays in cache only).
+_strip_text() {
+  jq 'def strip: {options, subcommands: (.subcommands | map_values(strip))}; {claude: (. | strip)}'
+}
+
+# Flatten a help tree into a list of (dotpath, options[], subcommand_names[]) tuples.
+# Used for diffing between versions.
+# Output: JSONL with {path, options, subcommands} per node.
+_flatten_tree() {
+  jq -c '
+    def flatten(prefix):
+      {path: prefix, options: .options, subcommands: (.subcommands | keys)}
+      , (.subcommands | to_entries[] | .key as $k | .value | flatten(prefix + "." + $k));
+    flatten("claude")
+  '
+}
+
+# ── Phase 1: Capture help per version ─────────────────────────────────
+
+prev_flat=""
+history="{}"
+latest_tree=""
+
+while IFS= read -r version; do
+  cache_file="${cache_dir}/${version}.json"
+
+  if [[ -f "$cache_file" ]]; then
+    tree=$(cat "$cache_file")
+  else
+    dir="v${version}"
+    pkg_dir="versions/$dir/node_modules/@anthropic-ai/claude-code"
+
+    # Resolve executable — mock-claude for testing, real binary otherwise
+    exe_cmd=""
+    if [[ "${NAVEL_HELP_USE_MOCK:-}" == "1" && -x "$pkg_dir/mock-claude" ]]; then
+      exe_cmd="$pkg_dir/mock-claude"
+    else
+      exe_cmd=$(_resolve_claude_exe "$pkg_dir") || {
+        echo "  $version: skipped (no executable found)"
+        continue
+      }
+    fi
+
+    echo "  $version: capturing help..."
+    tree=$(_capture_help_tree "$exe_cmd" "" 0)
+
+    echo "$tree" > "$cache_file"
+  fi
+
+  # Flatten for diffing
+  curr_flat=$(echo "$tree" | _flatten_tree)
+
+  if [[ -n "$prev_flat" ]]; then
+    # Diff: find added/removed options and subcommands per path
+    added_opts="{}"
+    removed_opts="{}"
+    added_subs="{}"
+    removed_subs="{}"
+
+    # Get all paths from both versions
+    all_paths=$(printf '%s\n%s' "$prev_flat" "$curr_flat" | jq -r '.path' | sort -u)
+
+    while IFS= read -r path; do
+      [[ -z "$path" ]] && continue
+      prev_opts=$(echo "$prev_flat" | jq -r --arg p "$path" 'select(.path == $p) | .options[]' 2>/dev/null | sort -u)
+      curr_opts=$(echo "$curr_flat" | jq -r --arg p "$path" 'select(.path == $p) | .options[]' 2>/dev/null | sort -u)
+      prev_subs=$(echo "$prev_flat" | jq -r --arg p "$path" 'select(.path == $p) | .subcommands[]' 2>/dev/null | sort -u)
+      curr_subs=$(echo "$curr_flat" | jq -r --arg p "$path" 'select(.path == $p) | .subcommands[]' 2>/dev/null | sort -u)
+
+      new_opts=$(comm -23 <(echo "$curr_opts") <(echo "$prev_opts") | grep -v '^$' || true)
+      del_opts=$(comm -23 <(echo "$prev_opts") <(echo "$curr_opts") | grep -v '^$' || true)
+      new_subs=$(comm -23 <(echo "$curr_subs") <(echo "$prev_subs") | grep -v '^$' || true)
+      del_subs=$(comm -23 <(echo "$prev_subs") <(echo "$curr_subs") | grep -v '^$' || true)
+
+      if [[ -n "$new_opts" ]]; then
+        arr=$(echo "$new_opts" | jq -R . | jq -s .)
+        added_opts=$(echo "$added_opts" | jq --arg p "$path" --argjson a "$arr" '. + {($p): $a}')
+      fi
+      if [[ -n "$del_opts" ]]; then
+        arr=$(echo "$del_opts" | jq -R . | jq -s .)
+        removed_opts=$(echo "$removed_opts" | jq --arg p "$path" --argjson a "$arr" '. + {($p): $a}')
+      fi
+      if [[ -n "$new_subs" ]]; then
+        arr=$(echo "$new_subs" | jq -R . | jq -s .)
+        added_subs=$(echo "$added_subs" | jq --arg p "$path" --argjson a "$arr" '. + {($p): $a}')
+      fi
+      if [[ -n "$del_subs" ]]; then
+        arr=$(echo "$del_subs" | jq -R . | jq -s .)
+        removed_subs=$(echo "$removed_subs" | jq --arg p "$path" --argjson a "$arr" '. + {($p): $a}')
+      fi
+    done <<< "$all_paths"
+
+    # Only record version if something changed
+    has_changes=false
+    for obj in "$added_opts" "$removed_opts" "$added_subs" "$removed_subs"; do
+      if [[ "$obj" != "{}" ]]; then
+        has_changes=true
+        break
+      fi
+    done
+
+    if $has_changes; then
+      version_entry=$(jq -n \
+        --argjson ao "$added_opts" \
+        --argjson ro "$removed_opts" \
+        --argjson as "$added_subs" \
+        --argjson rs "$removed_subs" \
+        '{added_options: $ao, removed_options: $ro, added_subcommands: $as, removed_subcommands: $rs}')
+      history=$(echo "$history" | jq --arg v "$version" --argjson e "$version_entry" '. + {($v): $e}')
+    fi
+  else
+    # First version — everything is "added"
+    first_entry=$(echo "$curr_flat" | jq -s '
+      {
+        added_options: (reduce .[] as $n ({}; . + {($n.path): $n.options})),
+        removed_options: {},
+        added_subcommands: (reduce .[] as $n ({}; . + {($n.path): $n.subcommands})),
+        removed_subcommands: {}
+      }
+    ')
+    history=$(echo "$history" | jq --arg v "$version" --argjson e "$first_entry" '. + {($v): $e}')
+  fi
+
+  prev_flat="$curr_flat"
+  latest_tree="$tree"
+done < <(jq -r '.[] | select(split(".")[0] | tonumber >= 2)' versions.json | sort -V)
+
+# Build the report "help" key — latest tree with text stripped
+if [[ -n "$latest_tree" ]]; then
+  help_json=$(echo "$latest_tree" | _strip_text)
+else
+  help_json='{"claude": {"options": [], "subcommands": {}}}'
+fi
+
+# ── Phase 2: Docs cross-reference (top-level options only) ────────────
+
+docs_dir="${REPO_ROOT}/docs"
+today=$(date +%Y-%m-%d)
+
+latest_options=$(echo "$help_json" | jq -r '.claude.options[]' 2>/dev/null)
+
+if [[ -d "$docs_dir" ]] && ls "$docs_dir"/*.md &>/dev/null; then
+  all_docs=$(mktemp)
+  for md in "$docs_dir"/*.md; do
+    fname=$(basename "$md")
+    sed "s|^|${fname}:|" "$md"
+  done > "$all_docs"
+
+  help_docs=$(
+    while IFS= read -r opt; do
+      [[ -z "$opt" ]] && continue
+      # Use fixed-string grep with -- to prevent options like --print being treated as flags
+      mentions=$(grep -cF -- "$opt" "$all_docs" 2>/dev/null || true)
+      mentions=${mentions:-0}
+      if [[ "$mentions" -gt 0 ]]; then
+        files_json=$(grep -F -- "$opt" "$all_docs" 2>/dev/null \
+          | cut -d: -f1 | sort -u | jq -R . | jq -s .)
+        jq -n --arg o "$opt" --argjson f "$files_json" --argjson m "$mentions" \
+          '{($o): {documented: true, doc_files: $f, mentions: $m}}'
+      else
+        jq -n --arg o "$opt" \
+          '{($o): {documented: false, doc_files: [], mentions: 0}}'
+      fi
+    done <<< "$latest_options" | jq -s 'add // {}'
+  )
+
+  rm -f "$all_docs"
+else
+  echo "Warning: no docs found at $docs_dir — skipping docs scan"
+  help_docs="{}"
+fi
+
+# ── Write report ──────────────────────────────────────────────────────
+
+jq -n \
+  --argjson help "$help_json" \
+  --argjson history "$history" \
+  --argjson docs "$help_docs" \
+  --arg date "$today" \
+  '{help: $help, help_history: $history, help_docs: $docs, docs_checked_at: $date}' > "${REPORTS_DIR}/help.json"
+
+# Count for summary
+opt_count=$(echo "$help_json" | jq '.claude.options | length')
+sub_count=$(echo "$help_json" | jq '.claude.subcommands | keys | length')
+
+# Noise-commit prevention
+if [[ "$REPORTS_DIR" == "${REPO_ROOT}/reports" ]] && git -C "$REPO_ROOT" rev-parse --git-dir &>/dev/null; then
+  if git -C "$REPO_ROOT" diff -- "${REPORTS_DIR}/help.json" | grep '^[+-]' | grep -v '^[+-][+-][+-]' | grep -qv 'docs_checked_at'; then
+    echo "Updated reports/help.json ($opt_count options, $sub_count subcommands, docs checked $today)"
+  else
+    git -C "$REPO_ROOT" checkout -- "${REPORTS_DIR}/help.json" 2>/dev/null || true
+    echo "reports/help.json unchanged (docs checked $today)"
+  fi
+else
+  echo "Wrote ${REPORTS_DIR}/help.json ($opt_count options, $sub_count subcommands, docs checked $today)"
+fi
