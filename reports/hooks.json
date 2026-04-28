@@ -276,7 +276,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 85
+      "mentions": 86
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -491,5 +491,5 @@
       "mentions": 20
     }
   },
-  "docs_checked_at": "2026-04-25"
+  "docs_checked_at": "2026-04-28"
 }
