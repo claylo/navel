@@ -453,6 +453,11 @@ Sync:
   tools sync                   Extract tool definitions from prompt captures
   docs sync                    Fetch Claude Code documentation
 
+Search:
+  search <pattern>             Search for string across all cached versions
+  search --since VER <pat>     Search versions >= VER
+  search --json <pattern>      Output results as JSON
+
 Docs:
   docs diff [date]             Show docs changes from latest (or specific) sync
 
@@ -567,6 +572,9 @@ case "${1:-}" in
       status)    cmd_schedule_status ;;
       *)         die "usage: navel schedule {install|uninstall|status}" ;;
     esac ;;
+  search)
+    _require jq rg
+    shift; exec "$LIBEXEC/search" "$@" ;;
   help|--help|-h) cmd_help ;;
   --version|-V)  echo "navel ${VERSION}"; exit 0 ;;
   "")        cmd_help ;;

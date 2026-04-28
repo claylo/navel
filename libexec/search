@@ -1,0 +1,114 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_ROOT="${NAVEL_HOME:-$(cd "$(dirname "$0")/.." && pwd)}"
+# shellcheck source=_portable.sh
+. "$(dirname "$0")/_portable.sh"
+
+cd "${REPO_ROOT}/npm"
+
+usage() {
+  cat <<EOF
+usage: navel search [--since VERSION] <pattern>
+
+Search for a string literal or regex across all cached npm versions.
+Reports presence/absence per version.
+
+Options:
+  --since VERSION   Only search versions >= VERSION
+  --context N       Show N chars of context around match (default: 0)
+  --json            Output as JSON instead of table
+  -h, --help        Show this help
+EOF
+  exit "${1:-1}"
+}
+
+since=""
+context=0
+json_output=false
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --since)  since="$2"; shift 2 ;;
+    --context)
+      [[ "$2" =~ ^[0-9]+$ ]] || { echo "--context requires a non-negative integer" >&2; usage; }
+      context="$2"; shift 2 ;;
+    --json)   json_output=true; shift ;;
+    -h|--help) usage 0 ;;
+    -*)       echo "unknown option: $1" >&2; usage ;;
+    *)        break ;;
+  esac
+done
+
+pattern="${1:-}"
+[[ -z "$pattern" ]] && usage
+
+strings_cache="${REPO_ROOT}/npm/.cache/strings"
+mkdir -p "$strings_cache"
+
+results="[]"
+first_seen=""
+last_seen=""
+match_count=0
+total=0
+
+while IFS= read -r version; do
+  # --since filtering
+  if [[ -n "$since" ]]; then
+    if [[ "$(printf '%s\n' "$since" "$version" | sort -V | head -1)" != "$since" ]]; then
+      continue
+    fi
+  fi
+
+  dir="v${version}"
+  pkg_dir="versions/$dir/node_modules/@anthropic-ai/claude-code"
+  source_file=$(_cached_scannable_source "$pkg_dir" "$strings_cache" "$version") || continue
+  total=$((total + 1))
+
+  if rg -q "$pattern" "$source_file" 2>/dev/null; then
+    found=true
+    match_count=$((match_count + 1))
+    [[ -z "$first_seen" ]] && first_seen="$version"
+    last_seen="$version"
+
+    if [[ "$context" -gt 0 ]]; then
+      snippet=$(rg -o --regexp ".{0,${context}}${pattern}.{0,${context}}" "$source_file" 2>/dev/null | head -1)
+    else
+      snippet=""
+    fi
+  else
+    found=false
+    snippet=""
+  fi
+
+  if [[ "$json_output" == true ]]; then
+    results=$(echo "$results" | jq \
+      --arg v "$version" --argjson f "$found" --arg s "$snippet" \
+      '. + [{"version": $v, "found": $f, "snippet": $s}]')
+  else
+    if [[ "$found" == true ]]; then
+      if [[ -n "$snippet" ]]; then
+        printf "  %-12s  ✓  %s\n" "$version" "$snippet"
+      else
+        printf "  %-12s  ✓\n" "$version"
+      fi
+    else
+      printf "  %-12s  ·\n" "$version"
+    fi
+  fi
+done < <(jq -r '.[]' versions.json | sort -V)
+
+if [[ "$json_output" == true ]]; then
+  echo "$results" | jq --arg p "$pattern" --arg fs "$first_seen" --arg ls "$last_seen" \
+    --argjson mc "$match_count" --argjson t "$total" \
+    '{pattern: $p, first_seen: $fs, last_seen: $ls, matched: $mc, scanned: $t, versions: .}'
+else
+  echo ""
+  if [[ "$match_count" -gt 0 ]]; then
+    echo "  Pattern: $pattern"
+    echo "  Found in $match_count / $total versions (first: $first_seen, last: $last_seen)"
+  else
+    echo "  Pattern: $pattern"
+    echo "  Not found in any of $total scanned versions"
+  fi
+fi
