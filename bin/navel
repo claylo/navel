@@ -562,7 +562,7 @@ case "${1:-}" in
       *)         die "usage: navel schedule {install|uninstall|status}" ;;
     esac ;;
   search)
-    _require rg
+    _require jq rg
     shift; exec "$LIBEXEC/search" "$@" ;;
   help|--help|-h) cmd_help ;;
   --version|-V)  echo "navel ${VERSION}"; exit 0 ;;

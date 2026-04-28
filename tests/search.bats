@@ -82,7 +82,24 @@ teardown() {
   [[ "$output" == *"Pattern"* ]]
 }
 
-@test "search: navel search --help shows usage" {
+@test "search: navel search --help shows usage and exits 0" {
   run bash "$BATS_TEST_DIRNAME/../bin/navel" search --help
+  [ "$status" -eq 0 ]
   [[ "$output" == *"usage"* ]]
+}
+
+# ── --json and --context flags ───────────────────────────────────────
+
+@test "search: --json outputs valid JSON with expected keys" {
+  run bash "$BATS_TEST_DIRNAME/../libexec/search" --json "PreToolUse"
+  [ "$status" -eq 0 ]
+  echo "$output" | jq -e '.pattern and .versions' >/dev/null
+  matched=$(echo "$output" | jq '.matched')
+  [ "$matched" -gt 0 ]
+}
+
+@test "search: --context shows snippet in output" {
+  run bash "$BATS_TEST_DIRNAME/../libexec/search" --context 10 "PreToolUse"
+  [ "$status" -eq 0 ]
+  [[ "$output" == *"PreToolUse"* ]]
 }
