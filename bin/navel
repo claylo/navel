@@ -556,6 +556,9 @@ case "${1:-}" in
       status)    cmd_schedule_status ;;
       *)         die "usage: navel schedule {install|uninstall|status}" ;;
     esac ;;
+  search)
+    _require rg
+    shift; exec "$LIBEXEC/search" "$@" ;;
   help|--help|-h) cmd_help ;;
   --version|-V)  echo "navel ${VERSION}"; exit 0 ;;
   "")        cmd_help ;;
