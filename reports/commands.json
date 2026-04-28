@@ -687,6 +687,7 @@
         "changelog.md",
         "commands.md",
         "features-overview.md",
+        "glossary.md",
         "google-vertex-ai.md",
         "microsoft-foundry.md",
         "overview.md",
@@ -694,7 +695,7 @@
         "slash-commands.md",
         "third-party-integrations.md"
       ],
-      "mentions": 10
+      "mentions": 11
     },
     "bg": {
       "documented": false,
@@ -773,6 +774,7 @@
         "costs.md",
         "env-vars.md",
         "errors.md",
+        "glossary.md",
         "hooks-guide.md",
         "hooks.md",
         "interactive-mode.md",
@@ -780,7 +782,7 @@
         "remote-control.md",
         "troubleshooting.md"
       ],
-      "mentions": 39
+      "mentions": 41
     },
     "color": {
       "documented": true,
@@ -823,6 +825,7 @@
         "desktop.md",
         "env-vars.md",
         "errors.md",
+        "glossary.md",
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
@@ -834,7 +837,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 60
+      "mentions": 62
     },
     "config": {
       "documented": true,
@@ -878,6 +881,7 @@
         "costs.md",
         "debug-your-config.md",
         "errors.md",
+        "glossary.md",
         "hooks.md",
         "how-claude-code-works.md",
         "keybindings.md",
@@ -887,7 +891,7 @@
         "statusline.md",
         "voice-dictation.md"
       ],
-      "mentions": 41
+      "mentions": 42
     },
     "copy": {
       "documented": true,
@@ -912,13 +916,14 @@
         "commands.md",
         "env-vars.md",
         "features-overview.md",
+        "glossary.md",
         "hooks-guide.md",
         "hooks.md",
         "monitoring-usage.md",
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 16
+      "mentions": 17
     },
     "desktop": {
       "documented": true,
@@ -933,6 +938,7 @@
         "desktop-scheduled-tasks.md",
         "desktop.md",
         "errors.md",
+        "glossary.md",
         "how-claude-code-works.md",
         "overview.md",
         "permission-modes.md",
@@ -946,7 +952,7 @@
         "web-quickstart.md",
         "zero-data-retention.md"
       ],
-      "mentions": 61
+      "mentions": 62
     },
     "diff": {
       "documented": true,
@@ -1130,6 +1136,7 @@
         "env-vars.md",
         "errors.md",
         "features-overview.md",
+        "glossary.md",
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
@@ -1151,7 +1158,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 273
+      "mentions": 274
     },
     "ide": {
       "documented": true,
@@ -1317,6 +1324,7 @@
         "env-vars.md",
         "errors.md",
         "features-overview.md",
+        "glossary.md",
         "google-vertex-ai.md",
         "hooks.md",
         "how-claude-code-works.md",
@@ -1340,7 +1348,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 163
+      "mentions": 166
     },
     "memory": {
       "documented": true,
@@ -1360,6 +1368,7 @@
         "errors.md",
         "features-overview.md",
         "github-actions.md",
+        "glossary.md",
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
@@ -1378,7 +1387,7 @@
         "troubleshooting.md",
         "web-quickstart.md"
       ],
-      "mentions": 95
+      "mentions": 98
     },
     "mobile": {
       "documented": true,
@@ -1404,6 +1413,7 @@
         "errors.md",
         "fast-mode.md",
         "github-actions.md",
+        "glossary.md",
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
@@ -1419,7 +1429,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 126
+      "mentions": 127
     },
     "passes": {
       "documented": true,
@@ -1444,6 +1454,7 @@
         "data-usage.md",
         "debug-your-config.md",
         "desktop.md",
+        "glossary.md",
         "headless.md",
         "hooks-guide.md",
         "hooks.md",
@@ -1467,7 +1478,7 @@
         "tools-reference.md",
         "troubleshooting.md"
       ],
-      "mentions": 124
+      "mentions": 125
     },
     "plan": {
       "documented": true,
@@ -1477,6 +1488,7 @@
         "commands.md",
         "common-workflows.md",
         "desktop.md",
+        "glossary.md",
         "hooks.md",
         "interactive-mode.md",
         "monitoring-usage.md",
@@ -1487,7 +1499,7 @@
         "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 26
+      "mentions": 28
     },
     "plugin": {
       "documented": true,
@@ -1586,6 +1598,7 @@
         "data-usage.md",
         "desktop.md",
         "env-vars.md",
+        "glossary.md",
         "how-claude-code-works.md",
         "overview.md",
         "permission-modes.md",
@@ -1597,7 +1610,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 40
+      "mentions": 41
     },
     "remote-env": {
       "documented": true,
@@ -1634,6 +1647,7 @@
         "costs.md",
         "env-vars.md",
         "errors.md",
+        "glossary.md",
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
@@ -1641,7 +1655,7 @@
         "quickstart.md",
         "remote-control.md"
       ],
-      "mentions": 54
+      "mentions": 55
     },
     "review": {
       "documented": true,
@@ -1666,9 +1680,10 @@
         "common-workflows.md",
         "costs.md",
         "env-vars.md",
-        "errors.md"
+        "errors.md",
+        "glossary.md"
       ],
-      "mentions": 17
+      "mentions": 18
     },
     "security-review": {
       "documented": true,
@@ -1718,10 +1733,11 @@
         "changelog.md",
         "commands.md",
         "features-overview.md",
+        "glossary.md",
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 7
+      "mentions": 8
     },
     "skills": {
       "documented": true,
@@ -1740,6 +1756,7 @@
         "env-vars.md",
         "features-overview.md",
         "github-actions.md",
+        "glossary.md",
         "headless.md",
         "hooks-guide.md",
         "hooks.md",
@@ -1763,7 +1780,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 161
+      "mentions": 165
     },
     "status": {
       "documented": true,
@@ -1852,9 +1869,10 @@
       "doc_files": [
         "changelog.md",
         "claude-code-on-the-web.md",
-        "commands.md"
+        "commands.md",
+        "glossary.md"
       ],
-      "mentions": 3
+      "mentions": 4
     },
     "terminal-setup": {
       "documented": true,
