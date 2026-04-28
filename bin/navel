@@ -448,6 +448,11 @@ Sync:
   env-vars sync                Scan cached versions for environment variables
   docs sync                    Fetch Claude Code documentation
 
+Search:
+  search <pattern>             Search for string across all cached versions
+  search --since VER <pat>     Search versions >= VER
+  search --json <pattern>      Output results as JSON
+
 Docs:
   docs diff [date]             Show docs changes from latest (or specific) sync
 
