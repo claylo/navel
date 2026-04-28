@@ -9,15 +9,19 @@ Tracks commands, hooks, feature flags, and documentation across Claude Code rele
 - `libexec/update-commands-list` — scans for slash commands, classifies status, cross-references docs
 - `libexec/update-hooks-list` — scans for hook registrations
 - `libexec/update-env-vars-list` — scans for environment variable references
+- `libexec/update-tools-list` — extracts tool definitions from prompt captures, tracks adds/removes/modifications
+- `libexec/search` — cross-version string search across cached npm versions
 - `libexec/update-docs` — parallel fetch of docs from code.claude.com with SHA256 manifest
 - `libexec/update-readme` — generates badges and reports/README.md
 - `libexec/update-npm` — fetches new npm versions, installs platform packages for binary-era versions
 - `libexec/prompts` — prompt capture gateway and diff generation
 - `reports/commands.json` — canonical output: commands, descriptions, status, history, docs coverage
 - `reports/hooks.json` — canonical output: hooks, history, docs coverage
+- `reports/tools.json` — canonical output: tools, descriptions, schemas, history, docs coverage
 - `npm/.cache/commands/` — cached per-version command extraction (avoids re-scanning old versions)
 - `npm/.cache/hooks/` — cached per-version hook extraction
 - `npm/.cache/flags/` — cached per-version feature flag wrapper→flag_name mappings
+- `npm/.cache/strings/` — cached `strings -a` output for binary-era versions (used by search)
 - `prompts/diffs/` — committed unified diffs between consecutive system prompt captures
 - `docs/adr/` — architectural decision records
 - `tests/` — bats tests (`just test`)
