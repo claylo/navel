@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-04-28T05:51:10Z",
+      "version_at_time": "2.1.121",
+      "files_changed": [
+        "server-managed-settings.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-28T05:00:11Z",
       "version_at_time": "2.1.121",
       "files_changed": [
