@@ -450,6 +450,7 @@ Sync:
   hooks sync                   Scan cached versions for hook events
   commands sync                Scan cached versions for bundled slash commands
   env-vars sync                Scan cached versions for environment variables
+  tools sync                   Extract tool definitions from prompt captures
   docs sync                    Fetch Claude Code documentation
 
 Docs:
