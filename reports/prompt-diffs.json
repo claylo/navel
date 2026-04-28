@@ -1,12 +1,17 @@
 {
   "captures": [
     "v2.1.120",
-    "v2.1.121"
+    "v2.1.121",
+    "v2.1.122"
   ],
   "diffs": {
     "v2.1.120..v2.1.121": {
       "lines_added": 3,
       "lines_removed": 2
+    },
+    "v2.1.121..v2.1.122": {
+      "lines_added": 265,
+      "lines_removed": 174
     }
   },
   "unchanged": [],
