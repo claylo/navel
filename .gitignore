@@ -24,3 +24,6 @@ pdf/fonts/
 
 # Local-only scripts (not part of the navel toolkit)
 bin/publish-docset
+
+# Scratch notes (brainstorms, spikes, not for version control)
+scratch/

@@ -25,14 +25,22 @@ latest_schemas="{}"
 while IFS= read -r vdir; do
   version="${vdir#v}"
   payload="${PROMPTS_DIR}/${vdir}/captured-payload.json"
-  [[ -f "$payload" ]] || continue
+  payload_full="${PROMPTS_DIR}/${vdir}/captured-payload-full.json"
+  [[ -f "$payload" || -f "$payload_full" ]] || continue
 
-  # Extract sorted tool names
-  tools=$(jq -r '[.tools | sort_by(.name) | .[].name] | join(" ")' "$payload" 2>/dev/null) || continue
+  # Union tools from clean + full captures, filter mcp__* prefixed tools
+  tools=""
+  schemas="{}"
+  for pf in "$payload" "$payload_full"; do
+    [[ -f "$pf" ]] || continue
+    pf_tools=$(jq -r '[.tools[] | select(.name | startswith("mcp__") | not) | .name] | join(" ")' "$pf" 2>/dev/null) || continue
+    pf_schemas=$(jq '[.tools[] | select(.name | startswith("mcp__") | not) | {key: .name, value: .input_schema}] | from_entries' "$pf" 2>/dev/null) || continue
+    if [[ -n "$pf_tools" ]]; then
+      tools=$(echo "$tools $pf_tools" | tr ' ' '\n' | grep -v '^$' | sort -u | tr '\n' ' ')
+      schemas=$(echo "$schemas" "$pf_schemas" | jq -s '.[0] * .[1]')
+    fi
+  done
   [[ -z "$tools" ]] && continue
-
-  # Extract schemas keyed by tool name (for modification detection)
-  schemas=$(jq '[.tools[] | {key: .name, value: .input_schema}] | from_entries' "$payload" 2>/dev/null) || continue
 
   # Detect additions
   added=$(comm -23 \
@@ -91,9 +99,16 @@ while IFS= read -r vdir; do
   prev_schemas="$schemas"
   latest_tools="$tools"
 
-  # Extract descriptions and schemas from latest
-  latest_descriptions=$(jq '[.tools[] | {key: .name, value: .description}] | from_entries' "$payload")
-  latest_schemas=$(jq '[.tools[] | {key: .name, value: .input_schema}] | from_entries' "$payload")
+  # Extract descriptions and schemas from latest (union clean + full, filter mcp__)
+  latest_descriptions="{}"
+  latest_schemas="{}"
+  for pf in "$payload" "$payload_full"; do
+    [[ -f "$pf" ]] || continue
+    pf_desc=$(jq '[.tools[] | select(.name | startswith("mcp__") | not) | {key: .name, value: .description}] | from_entries' "$pf" 2>/dev/null) || continue
+    pf_sch=$(jq '[.tools[] | select(.name | startswith("mcp__") | not) | {key: .name, value: .input_schema}] | from_entries' "$pf" 2>/dev/null) || continue
+    latest_descriptions=$(echo "$latest_descriptions" "$pf_desc" | jq -s '.[0] * .[1]')
+    latest_schemas=$(echo "$latest_schemas" "$pf_sch" | jq -s '.[0] * .[1]')
+  done
 
 done < <(for d in "$PROMPTS_DIR"/v*/; do [[ -d "$d" ]] && basename "$d"; done 2>/dev/null | sort -V)
 

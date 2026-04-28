@@ -17,7 +17,10 @@ Reports presence/absence per version.
 Options:
   --since VERSION   Only search versions >= VERSION
   --context N       Show N chars of context around match (default: 0)
+  -A N              Show N lines after match
+  -B N              Show N lines before match
   --json            Output as JSON instead of table
+  -i                Case-insensitive search
   -h, --help        Show this help
 EOF
   exit "${1:-1}"
@@ -25,15 +28,25 @@ EOF
 
 since=""
 context=0
+after_lines=0
+before_lines=0
 json_output=false
+case_insensitive=false
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    --since)  since="$2"; shift 2 ;;
+    --since)  since="${2#v}"; shift 2 ;;
     --context)
       [[ "$2" =~ ^[0-9]+$ ]] || { echo "--context requires a non-negative integer" >&2; usage; }
       context="$2"; shift 2 ;;
+    -A)
+      [[ "$2" =~ ^[0-9]+$ ]] || { echo "-A requires a non-negative integer" >&2; usage; }
+      after_lines="$2"; shift 2 ;;
+    -B)
+      [[ "$2" =~ ^[0-9]+$ ]] || { echo "-B requires a non-negative integer" >&2; usage; }
+      before_lines="$2"; shift 2 ;;
     --json)   json_output=true; shift ;;
+    -i)       case_insensitive=true; shift ;;
     -h|--help) usage 0 ;;
     -*)       echo "unknown option: $1" >&2; usage ;;
     *)        break ;;
@@ -45,6 +58,15 @@ pattern="${1:-}"
 
 strings_cache="${REPO_ROOT}/npm/.cache/strings"
 mkdir -p "$strings_cache"
+
+rg_flags=()
+$case_insensitive && rg_flags+=(-i)
+line_context=false
+if [[ "$after_lines" -gt 0 || "$before_lines" -gt 0 ]]; then
+  line_context=true
+  [[ "$before_lines" -gt 0 ]] && rg_flags+=(-B "$before_lines")
+  [[ "$after_lines" -gt 0 ]] && rg_flags+=(-A "$after_lines")
+fi
 
 results="[]"
 first_seen=""
@@ -65,14 +87,19 @@ while IFS= read -r version; do
   source_file=$(_cached_scannable_source "$pkg_dir" "$strings_cache" "$version") || continue
   total=$((total + 1))
 
-  if rg -q "$pattern" "$source_file" 2>/dev/null; then
+  if rg -q "${rg_flags[@]}" "$pattern" "$source_file" 2>/dev/null; then
     found=true
     match_count=$((match_count + 1))
     [[ -z "$first_seen" ]] && first_seen="$version"
     last_seen="$version"
 
-    if [[ "$context" -gt 0 ]]; then
-      snippet=$(rg -o --regexp ".{0,${context}}${pattern}.{0,${context}}" "$source_file" 2>/dev/null | head -1)
+    if [[ "$line_context" == true ]]; then
+      # -A/-B: show all matches with line context
+      # Use awk to dedup entire match groups (binary-era versions duplicate everything)
+      snippet=$(rg "${rg_flags[@]}" "$pattern" "$source_file" 2>/dev/null \
+        | awk '!seen[$0]++')
+    elif [[ "$context" -gt 0 ]]; then
+      snippet=$(rg -o "${rg_flags[@]}" --regexp ".{0,${context}}${pattern}.{0,${context}}" "$source_file" 2>/dev/null | head -1)
     else
       snippet=""
     fi
@@ -87,7 +114,11 @@ while IFS= read -r version; do
       '. + [{"version": $v, "found": $f, "snippet": $s}]')
   else
     if [[ "$found" == true ]]; then
-      if [[ -n "$snippet" ]]; then
+      if [[ "$line_context" == true && -n "$snippet" ]]; then
+        printf "  %-12s  ✓\n" "$version"
+        echo "$snippet" | sed 's/^/    /'
+        echo ""
+      elif [[ -n "$snippet" ]]; then
         printf "  %-12s  ✓  %s\n" "$version" "$snippet"
       else
         printf "  %-12s  ✓\n" "$version"

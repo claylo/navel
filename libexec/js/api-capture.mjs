@@ -406,11 +406,15 @@ function formatOutput(payload, version, mode) {
 // Save raw payload
 // ---------------------------------------------------------------------------
 
-function saveRawPayload(payload) {
+function saveRawPayload(payload, mode) {
+  const filename = mode === 'clean'
+    ? 'captured-payload.json'
+    : 'captured-payload-full.json';
+  const outFile = join(RAW_OUTPUT_DIR, filename);
   try {
     mkdirSync(RAW_OUTPUT_DIR, { recursive: true });
-    writeFileSync(RAW_OUTPUT_FILE, JSON.stringify(payload, null, 2));
-    console.error(`  raw payload: ${RAW_OUTPUT_FILE}`);
+    writeFileSync(outFile, JSON.stringify(payload, null, 2));
+    console.error(`  raw payload: ${outFile}`);
   } catch (e) {
     console.error(`  warning: could not save raw payload: ${e.message}`);
   }
@@ -467,7 +471,7 @@ async function main() {
   proc.kill('SIGTERM');
   server.close();
 
-  saveRawPayload(payload);
+  saveRawPayload(payload, mode);
 
   const md = formatOutput(payload, version, mode);
   process.stdout.write(md);
