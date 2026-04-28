@@ -95,9 +95,9 @@ while IFS= read -r version; do
 
     if [[ "$line_context" == true ]]; then
       # -A/-B: show all matches with line context
-      # Use awk to dedup entire match groups (binary-era versions duplicate everything)
+      # Dedup is a safety net for pre-cropped cache files; new caches are already deduped.
       snippet=$(rg "${rg_flags[@]}" "$pattern" "$source_file" 2>/dev/null \
-        | awk '!seen[$0]++')
+        | awk '{ if (seen[$0]++ == 0) print }')
     elif [[ "$context" -gt 0 ]]; then
       snippet=$(rg -o "${rg_flags[@]}" --regexp ".{0,${context}}${pattern}.{0,${context}}" "$source_file" 2>/dev/null | head -1)
     else
