@@ -434,6 +434,64 @@ cmd_schedule_status() {
 }
 
 # ─────────────────────────────────────
+# Cache management
+# ─────────────────────────────────────
+
+cmd_cache_rebuild() {
+  local rebuild_strings=false
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      --strings) rebuild_strings=true; shift ;;
+      *) die "unknown option: $1" ;;
+    esac
+  done
+
+  if [[ "$rebuild_strings" == true ]]; then
+    _cache_rebuild_strings
+  else
+    # Default: rebuild all cache types
+    _cache_rebuild_strings
+  fi
+}
+
+_cache_rebuild_strings() {
+  local strings_cache="$NPM_CACHE/.cache/strings"
+  if [[ ! -d "$strings_cache" ]]; then
+    echo "No strings cache to rebuild."
+    return 0
+  fi
+
+  local count=0 total=0 saved=0
+  for cache_file in "$strings_cache"/*.txt; do
+    [[ -f "$cache_file" ]] || continue
+    total=$((total + 1))
+    local version
+    version=$(basename "$cache_file" .txt)
+    local pkg_dir="$NPM_CACHE/versions/v${version}/node_modules/@anthropic-ai/claude-code"
+    local binary
+    binary=$(_find_claude_binary "$pkg_dir")
+
+    if [[ -z "$binary" || ! -f "$binary" ]]; then
+      echo "  $version: skipped (binary not found)"
+      continue
+    fi
+
+    local old_lines new_lines
+    old_lines=$(wc -l < "$cache_file" | tr -d ' ')
+    strings -a "$binary" 2>/dev/null | awk '{ if (seen[$0]++ == 0) print }' > "${cache_file}.tmp"
+    mv "${cache_file}.tmp" "$cache_file"
+    new_lines=$(wc -l < "$cache_file" | tr -d ' ')
+    local diff=$((old_lines - new_lines))
+    saved=$((saved + diff))
+    count=$((count + 1))
+    printf "  %-12s  %s → %s lines (-%s)\n" "$version" "$old_lines" "$new_lines" "$diff"
+  done
+
+  echo ""
+  echo "Rebuilt $count / $total cache files, removed $saved duplicate lines total."
+}
+
+# ─────────────────────────────────────
 # Help
 # ─────────────────────────────────────
 
@@ -457,6 +515,10 @@ Search:
   search <pattern>             Search for string across all cached versions
   search --since VER <pat>     Search versions >= VER
   search --json <pattern>      Output results as JSON
+
+Cache:
+  cache rebuild                Rebuild all cache files (dedup strings output)
+  cache rebuild --strings      Rebuild strings cache only
 
 Docs:
   docs diff [date]             Show docs changes from latest (or specific) sync
@@ -571,6 +633,11 @@ case "${1:-}" in
       uninstall) cmd_schedule_uninstall ;;
       status)    cmd_schedule_status ;;
       *)         die "usage: navel schedule {install|uninstall|status}" ;;
+    esac ;;
+  cache)
+    case "${2:-}" in
+      rebuild) shift 2; cmd_cache_rebuild "$@" ;;
+      *)       die "usage: navel cache rebuild [--strings]" ;;
     esac ;;
   search)
     _require jq rg

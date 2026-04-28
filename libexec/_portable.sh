@@ -50,7 +50,9 @@ _find_claude_binary() {
 
 # Returns a file path suitable for scanning with rg/grep.
 # For cli.js versions: returns cli.js directly.
-# For binary versions: dumps strings -a to a temp file.
+# For binary versions: dumps strings -a to a temp file, deduped.
+# Bun embeds JS source twice (source + bytecode), so strings -a produces
+# ~51% duplicate lines. Order-preserving dedup keeps context meaningful.
 # Caller must clean up temp files (path won't end in .js).
 _scannable_source() {
   local pkg_dir="$1"
@@ -63,7 +65,7 @@ _scannable_source() {
   if [[ -n "$binary" && -f "$binary" ]]; then
     local tmp
     tmp=$(mktemp)
-    strings -a "$binary" > "$tmp" 2>/dev/null
+    strings -a "$binary" 2>/dev/null | awk '{ if (seen[$0]++ == 0) print }' > "$tmp"
     echo "$tmp"
     return 0
   fi
@@ -74,6 +76,7 @@ _scannable_source() {
 # Args: pkg_dir cache_dir version
 # For cli.js: returns cli.js directly (no cache needed).
 # For binaries: returns cached strings file at cache_dir/version.txt.
+# Output is deduped (order-preserving) to remove bytecode duplicates (~51% savings).
 _cached_scannable_source() {
   local pkg_dir="$1" cache_dir="$2" version="$3"
   if [[ -f "$pkg_dir/cli.js" ]]; then
@@ -89,7 +92,7 @@ _cached_scannable_source() {
   binary=$(_find_claude_binary "$pkg_dir")
   if [[ -n "$binary" && -f "$binary" ]]; then
     mkdir -p "$cache_dir"
-    strings -a "$binary" > "$cache_file" 2>/dev/null
+    strings -a "$binary" 2>/dev/null | awk '{ if (seen[$0]++ == 0) print }' > "$cache_file"
     echo "$cache_file"
     return 0
   fi
