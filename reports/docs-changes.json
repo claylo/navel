@@ -1,6 +1,47 @@
 {
   "changes": [
     {
+      "date": "2026-04-28T05:00:11Z",
+      "version_at_time": "2.1.121",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md",
+        "data-usage.md",
+        "env-vars.md",
+        "fullscreen.md",
+        "google-vertex-ai.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "legal-and-compliance.md",
+        "mcp.md",
+        "monitoring-usage.md",
+        "overview.md",
+        "plugin-dependencies.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "quickstart.md",
+        "security.md",
+        "setup.md",
+        "skills.md",
+        "slash-commands.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md",
+        "terminal-config.md",
+        "tools-reference.md",
+        "troubleshooting.md",
+        "ultrareview.md",
+        "voice-dictation.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-28T01:33:04Z",
       "version_at_time": "2.1.121",
       "files_changed": [
