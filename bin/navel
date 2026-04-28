@@ -14,8 +14,9 @@ REAL_DIR="$(cd "$(dirname "$REAL_SELF")" && pwd)"
 
 if [[ -d "$REAL_DIR/../libexec" && -f "$REAL_DIR/../libexec/prompts" ]]; then
   # Repo checkout: libexec/ is a sibling of bin/
-  NAVEL_HOME="$(cd "$REAL_DIR/.." && pwd)"
-  LIBEXEC="$NAVEL_HOME/libexec"
+  # Respect NAVEL_HOME if already set (e.g. test environments)
+  NAVEL_HOME="${NAVEL_HOME:-$(cd "$REAL_DIR/.." && pwd)}"
+  LIBEXEC="$(cd "$REAL_DIR/.." && pwd)/libexec"
 elif [[ -d "$REAL_DIR/../libexec/navel" ]]; then
   # Homebrew: libexec/navel/ is the installed prefix
   NAVEL_HOME="${NAVEL_HOME:-$HOME/.navel}"
@@ -124,6 +125,9 @@ cmd_update() {
   echo ""
   echo "==> Syncing env vars..."
   "$LIBEXEC/update-env-vars-list"
+  echo ""
+  echo "==> Syncing tools..."
+  "$LIBEXEC/update-tools-list"
   echo ""
   echo "==> Updating README..."
   "$LIBEXEC/update-readme"
@@ -538,6 +542,12 @@ case "${1:-}" in
     shift; exec "$LIBEXEC/dash" "$@" ;;
   pdf)
     shift; exec "$LIBEXEC/pdf" "$@" ;;
+  tools)
+    _require jq
+    case "${2:-}" in
+      sync) "$LIBEXEC/update-tools-list" ;;
+      *)    die "usage: navel tools sync" ;;
+    esac ;;
   readme)
     _require jq
     case "${2:-}" in
