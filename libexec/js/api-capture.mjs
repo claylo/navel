@@ -264,6 +264,16 @@ function spawnClaude(cliPath, port, { passthroughArgs, realAuth, mode }) {
     env.DISABLE_PROMPT_CACHING = '1';
   }
 
+  // Enable all optional tools so the capture includes the full tool set.
+  // Each env var unlocks tools that are off by default in this context.
+  env.CLAUDE_CODE_USE_POWERSHELL_TOOL = '1';  // PowerShell tool (opt-in on macOS/Linux)
+  env.ENABLE_LSP_TOOL = '1';                  // LSP code intelligence tool
+  env.CLAUDE_CODE_ENABLE_TASKS = '1';         // TaskCreate/Get/List/Update (non-interactive mode)
+  // Force all tools upfront — tool search defers most tools from the initial payload.
+  // Setting to 'auto:100' keeps ToolSearch itself available while loading all tools
+  // upfront (100% of context = never actually defer).
+  env.ENABLE_TOOL_SEARCH = 'auto:100';
+
   if (isClean) {
     env.MAX_THINKING_TOKENS = '0';
     env.CLAUDE_CODE_PLUGIN_CACHE_DIR = createNoPluginsDir(RAW_OUTPUT_DIR);
