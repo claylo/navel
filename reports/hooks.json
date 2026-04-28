@@ -273,10 +273,9 @@
         "plugins.md",
         "server-managed-settings.md",
         "sub-agents.md",
-        "subagents.md",
-        "troubleshooting.md"
+        "subagents.md"
       ],
-      "mentions": 89
+      "mentions": 88
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -334,7 +333,6 @@
       "doc_files": [
         "changelog.md",
         "claude-code-on-the-web.md",
-        "debug-your-config.md",
         "env-vars.md",
         "features-overview.md",
         "hooks-guide.md",
@@ -342,7 +340,7 @@
         "plugins-reference.md",
         "tools-reference.md"
       ],
-      "mentions": 51
+      "mentions": 50
     },
     "Setup": {
       "documented": true,
