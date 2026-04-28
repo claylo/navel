@@ -1175,8 +1175,10 @@
       "documented": true,
       "doc_files": [
         "best-practices.md",
+        "champion-kit.md",
         "changelog.md",
         "commands.md",
+        "communications-kit.md",
         "env-vars.md",
         "headless.md",
         "how-claude-code-works.md",
@@ -1184,7 +1186,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 12
+      "mentions": 24
     },
     "init-verifiers": {
       "documented": false,
@@ -1203,13 +1205,14 @@
       "documented": true,
       "doc_files": [
         "claude-code-on-the-web.md",
+        "communications-kit.md",
         "gitlab-ci-cd.md",
         "overview.md",
         "quickstart.md",
         "setup.md",
         "troubleshooting.md"
       ],
-      "mentions": 41
+      "mentions": 45
     },
     "install-github-app": {
       "documented": true,
@@ -1356,6 +1359,7 @@
         "admin-setup.md",
         "auto-mode-config.md",
         "best-practices.md",
+        "champion-kit.md",
         "changelog.md",
         "claude-directory.md",
         "code-review.md",
@@ -1387,7 +1391,7 @@
         "troubleshooting.md",
         "web-quickstart.md"
       ],
-      "mentions": 98
+      "mentions": 100
     },
     "mobile": {
       "documented": true,
@@ -1408,6 +1412,7 @@
         "claude-code-on-the-web.md",
         "commands.md",
         "common-workflows.md",
+        "communications-kit.md",
         "costs.md",
         "env-vars.md",
         "errors.md",
@@ -1429,7 +1434,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 127
+      "mentions": 128
     },
     "passes": {
       "documented": true,
@@ -1446,11 +1451,13 @@
         "analytics.md",
         "auto-mode-config.md",
         "best-practices.md",
+        "champion-kit.md",
         "changelog.md",
         "claude-directory.md",
         "cli-reference.md",
         "commands.md",
         "common-workflows.md",
+        "communications-kit.md",
         "data-usage.md",
         "debug-your-config.md",
         "desktop.md",
@@ -1478,15 +1485,17 @@
         "tools-reference.md",
         "troubleshooting.md"
       ],
-      "mentions": 125
+      "mentions": 127
     },
     "plan": {
       "documented": true,
       "doc_files": [
+        "champion-kit.md",
         "changelog.md",
         "cli-reference.md",
         "commands.md",
         "common-workflows.md",
+        "communications-kit.md",
         "desktop.md",
         "glossary.md",
         "hooks.md",
@@ -1499,7 +1508,7 @@
         "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 28
+      "mentions": 31
     },
     "plugin": {
       "documented": true,
@@ -1509,6 +1518,7 @@
         "channels-reference.md",
         "channels.md",
         "commands.md",
+        "communications-kit.md",
         "desktop.md",
         "discover-plugins.md",
         "github-enterprise-server.md",
@@ -1526,7 +1536,7 @@
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 141
+      "mentions": 143
     },
     "powerup": {
       "documented": true,
@@ -1678,12 +1688,13 @@
         "checkpointing.md",
         "commands.md",
         "common-workflows.md",
+        "communications-kit.md",
         "costs.md",
         "env-vars.md",
         "errors.md",
         "glossary.md"
       ],
-      "mentions": 18
+      "mentions": 21
     },
     "security-review": {
       "documented": true,
@@ -1744,10 +1755,12 @@
       "doc_files": [
         "agent-teams.md",
         "best-practices.md",
+        "champion-kit.md",
         "changelog.md",
         "claude-code-on-the-web.md",
         "claude-directory.md",
         "commands.md",
+        "communications-kit.md",
         "context-window.md",
         "costs.md",
         "debug-your-config.md",
@@ -1780,7 +1793,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 165
+      "mentions": 168
     },
     "status": {
       "documented": true,
@@ -1859,10 +1872,11 @@
     "team-onboarding": {
       "documented": true,
       "doc_files": [
+        "champion-kit.md",
         "changelog.md",
         "commands.md"
       ],
-      "mentions": 2
+      "mentions": 3
     },
     "teleport": {
       "documented": true,
