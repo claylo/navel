@@ -98,3 +98,42 @@ _cached_scannable_source() {
   fi
   return 1
 }
+
+# Portable timeout: timeout (Linux) → gtimeout (Homebrew) → bash fallback
+_timeout() {
+  local secs="$1"; shift
+  if command -v timeout &>/dev/null; then
+    timeout "$secs" "$@"
+  elif command -v gtimeout &>/dev/null; then
+    gtimeout "$secs" "$@"
+  else
+    "$@" &
+    local pid=$!
+    ( sleep "$secs" && kill "$pid" 2>/dev/null ) &
+    local watchdog=$!
+    wait "$pid" 2>/dev/null
+    local rc=$?
+    kill "$watchdog" 2>/dev/null
+    wait "$watchdog" 2>/dev/null
+    return "$rc"
+  fi
+}
+
+# Returns the executable command for a given package dir.
+# cli.js era: "node /path/to/cli.js"
+# Binary era: "/path/to/claude"
+# Prints nothing and returns 1 if neither found.
+_resolve_claude_exe() {
+  local pkg_dir="$1"
+  if [[ -f "$pkg_dir/cli.js" ]]; then
+    echo "node $pkg_dir/cli.js"
+    return 0
+  fi
+  local binary
+  binary=$(_find_claude_binary "$pkg_dir")
+  if [[ -n "$binary" && -x "$binary" ]]; then
+    echo "$binary"
+    return 0
+  fi
+  return 1
+}
