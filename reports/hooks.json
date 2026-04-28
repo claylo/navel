@@ -366,7 +366,9 @@
     "Stop": {
       "documented": true,
       "doc_files": [
+        "champion-kit.md",
         "changelog.md",
+        "communications-kit.md",
         "computer-use.md",
         "desktop.md",
         "hooks-guide.md",
@@ -379,7 +381,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 99
+      "mentions": 107
     },
     "StopFailure": {
       "documented": true,
