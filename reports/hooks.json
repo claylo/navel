@@ -256,7 +256,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 20
+      "mentions": 21
     },
     "PostToolUse": {
       "documented": true,
@@ -276,7 +276,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 86
+      "mentions": 89
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -286,7 +286,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 21
+      "mentions": 22
     },
     "PreCompact": {
       "documented": true,
@@ -315,7 +315,7 @@
         "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 115
+      "mentions": 116
     },
     "SessionEnd": {
       "documented": true,
@@ -342,7 +342,7 @@
         "plugins-reference.md",
         "tools-reference.md"
       ],
-      "mentions": 49
+      "mentions": 51
     },
     "Setup": {
       "documented": true,
@@ -403,7 +403,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 22
+      "mentions": 23
     },
     "SubagentStop": {
       "documented": true,
@@ -457,7 +457,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 20
+      "mentions": 21
     },
     "UserPromptSubmit": {
       "documented": true,
@@ -467,7 +467,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 27
+      "mentions": 29
     },
     "WorktreeCreate": {
       "documented": true,
