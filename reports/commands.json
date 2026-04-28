@@ -1276,7 +1276,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 48
+      "mentions": 49
     },
     "logout": {
       "documented": true,
@@ -1391,7 +1391,7 @@
         "troubleshooting.md",
         "web-quickstart.md"
       ],
-      "mentions": 100
+      "mentions": 101
     },
     "mobile": {
       "documented": true,
@@ -1665,7 +1665,7 @@
         "quickstart.md",
         "remote-control.md"
       ],
-      "mentions": 55
+      "mentions": 56
     },
     "review": {
       "documented": true,
