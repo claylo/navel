@@ -713,7 +713,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 11
+      "mentions": 12
     },
     "bridge-kick": {
       "documented": false,
@@ -752,7 +752,7 @@
         "network-config.md",
         "overview.md",
         "platforms.md",
-        "troubleshooting.md",
+        "troubleshoot-install.md",
         "vs-code.md"
       ],
       "mentions": 25
@@ -948,7 +948,7 @@
         "sandboxing.md",
         "settings.md",
         "setup.md",
-        "troubleshooting.md",
+        "troubleshoot-install.md",
         "web-quickstart.md",
         "zero-data-retention.md"
       ],
@@ -977,7 +977,7 @@
         "plugin-dependencies.md",
         "troubleshooting.md"
       ],
-      "mentions": 29
+      "mentions": 30
     },
     "dream": {
       "documented": false,
@@ -1062,10 +1062,11 @@
         "fullscreen.md",
         "permission-modes.md",
         "security.md",
+        "troubleshoot-install.md",
         "troubleshooting.md",
         "zero-data-retention.md"
       ],
-      "mentions": 20
+      "mentions": 21
     },
     "fewer-permission-prompts": {
       "documented": true,
@@ -1210,9 +1211,9 @@
         "overview.md",
         "quickstart.md",
         "setup.md",
-        "troubleshooting.md"
+        "troubleshoot-install.md"
       ],
-      "mentions": 45
+      "mentions": 47
     },
     "install-github-app": {
       "documented": true,
@@ -1270,7 +1271,7 @@
         "remote-control.md",
         "skills.md",
         "slash-commands.md",
-        "troubleshooting.md",
+        "troubleshoot-install.md",
         "ultrareview.md",
         "voice-dictation.md",
         "vs-code.md",
@@ -1293,7 +1294,7 @@
         "microsoft-foundry.md",
         "monitoring-usage.md",
         "remote-control.md",
-        "troubleshooting.md"
+        "troubleshoot-install.md"
       ],
       "mentions": 16
     },
@@ -1348,7 +1349,6 @@
         "subagents.md",
         "third-party-integrations.md",
         "tools-reference.md",
-        "troubleshooting.md",
         "vs-code.md"
       ],
       "mentions": 166
@@ -1388,10 +1388,9 @@
         "sub-agents.md",
         "subagents.md",
         "third-party-integrations.md",
-        "troubleshooting.md",
         "web-quickstart.md"
       ],
-      "mentions": 101
+      "mentions": 99
     },
     "mobile": {
       "documented": true,
@@ -1431,10 +1430,9 @@
         "slash-commands.md",
         "statusline.md",
         "sub-agents.md",
-        "subagents.md",
-        "troubleshooting.md"
+        "subagents.md"
       ],
-      "mentions": 128
+      "mentions": 125
     },
     "passes": {
       "documented": true,
@@ -1482,10 +1480,9 @@
         "slash-commands.md",
         "sub-agents.md",
         "subagents.md",
-        "tools-reference.md",
-        "troubleshooting.md"
+        "tools-reference.md"
       ],
-      "mentions": 127
+      "mentions": 126
     },
     "plan": {
       "documented": true,
@@ -1533,10 +1530,9 @@
         "plugins.md",
         "quickstart.md",
         "remote-control.md",
-        "settings.md",
-        "troubleshooting.md"
+        "settings.md"
       ],
-      "mentions": 143
+      "mentions": 142
     },
     "powerup": {
       "documented": true,
@@ -1665,7 +1661,7 @@
         "quickstart.md",
         "remote-control.md"
       ],
-      "mentions": 56
+      "mentions": 57
     },
     "review": {
       "documented": true,
@@ -1816,7 +1812,7 @@
         "settings.md",
         "statusline.md",
         "third-party-integrations.md",
-        "troubleshooting.md"
+        "troubleshoot-install.md"
       ],
       "mentions": 31
     },
