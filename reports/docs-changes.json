@@ -1,6 +1,31 @@
 {
   "changes": [
     {
+      "date": "2026-04-28T22:15:11Z",
+      "version_at_time": "2.1.122",
+      "files_changed": [
+        "admin-setup.md",
+        "authentication.md",
+        "changelog.md",
+        "commands.md",
+        "debug-your-config.md",
+        "errors.md",
+        "jetbrains.md",
+        "overview.md",
+        "quickstart.md",
+        "sandboxing.md",
+        "settings.md",
+        "setup.md",
+        "troubleshooting.md"
+      ],
+      "files_added": [
+        "troubleshoot-install.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-28T17:13:16Z",
       "version_at_time": "2.1.121",
       "files_changed": [
