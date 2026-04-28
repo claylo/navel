@@ -129,6 +129,9 @@ cmd_update() {
   echo "==> Syncing tools..."
   "$LIBEXEC/update-tools-list"
   echo ""
+  echo "==> Syncing help text..."
+  "$LIBEXEC/update-help-list"
+  echo ""
   echo "==> Updating README..."
   "$LIBEXEC/update-readme"
   echo ""
@@ -509,6 +512,7 @@ Sync:
   commands sync                Scan cached versions for bundled slash commands
   env-vars sync                Scan cached versions for environment variables
   tools sync                   Extract tool definitions from prompt captures
+  help sync                    Capture --help output across versions
   docs sync                    Fetch Claude Code documentation
 
 Search:
@@ -642,7 +646,12 @@ case "${1:-}" in
   search)
     _require jq rg
     shift; exec "$LIBEXEC/search" "$@" ;;
-  help|--help|-h) cmd_help ;;
+  help)
+    case "${2:-}" in
+      sync) _require jq; "$LIBEXEC/update-help-list" ;;
+      *)    cmd_help ;;
+    esac ;;
+  --help|-h) cmd_help ;;
   --version|-V)  echo "navel ${VERSION}"; exit 0 ;;
   "")        cmd_help ;;
   *)         die "unknown command: $1 (try: navel help)" ;;
