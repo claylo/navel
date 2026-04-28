@@ -893,9 +893,10 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
-        "commands.md"
+        "commands.md",
+        "terminal-config.md"
       ],
-      "mentions": 8
+      "mentions": 9
     },
     "daemon": {
       "documented": false,
@@ -1339,7 +1340,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 162
+      "mentions": 163
     },
     "memory": {
       "documented": true,
@@ -1863,7 +1864,7 @@
         "interactive-mode.md",
         "terminal-config.md"
       ],
-      "mentions": 10
+      "mentions": 11
     },
     "theme": {
       "documented": true,
@@ -1912,11 +1913,12 @@
       "doc_files": [
         "changelog.md",
         "claude-code-on-the-web.md",
+        "cli-reference.md",
         "commands.md",
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 14
+      "mentions": 17
     },
     "update": {
       "documented": true,
@@ -1965,7 +1967,7 @@
         "plugins.md",
         "statusline.md"
       ],
-      "mentions": 45
+      "mentions": 47
     },
     "voice": {
       "documented": true,
