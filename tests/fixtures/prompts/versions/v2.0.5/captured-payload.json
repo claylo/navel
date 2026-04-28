@@ -1,0 +1,68 @@
+{
+  "model": "claude-sonnet-4-20250514",
+  "stream": true,
+  "max_tokens": 16384,
+  "system": [{"type": "text", "text": "You are Claude Code."}],
+  "messages": [],
+  "tools": [
+    {
+      "name": "Agent",
+      "description": "Launch a new agent to handle complex tasks.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "prompt": {"type": "string"},
+          "subagent_type": {"type": "string"}
+        },
+        "required": ["prompt"]
+      }
+    },
+    {
+      "name": "Bash",
+      "description": "Executes a given bash command.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "command": {"type": "string", "description": "The command to execute"},
+          "run_in_background": {"type": "boolean", "description": "Run in background"}
+        },
+        "required": ["command"]
+      }
+    },
+    {
+      "name": "Edit",
+      "description": "Performs exact string replacements in files.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "file_path": {"type": "string"},
+          "old_string": {"type": "string"},
+          "new_string": {"type": "string"}
+        },
+        "required": ["file_path", "old_string", "new_string"]
+      }
+    },
+    {
+      "name": "Read",
+      "description": "Reads a file from the local filesystem.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "file_path": {"type": "string", "description": "The absolute path to the file"}
+        },
+        "required": ["file_path"]
+      }
+    },
+    {
+      "name": "TodoWrite",
+      "description": "Create and manage a structured task list.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "todos": {"type": "array"}
+        },
+        "required": ["todos"]
+      }
+    }
+  ]
+}

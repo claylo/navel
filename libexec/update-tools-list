@@ -1,0 +1,182 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_ROOT="${NAVEL_HOME:-$(cd "$(dirname "$0")/.." && pwd)}"
+# shellcheck source=_portable.sh
+. "$(dirname "$0")/_portable.sh"
+
+PROMPTS_DIR="${REPO_ROOT}/prompts/versions"
+REPORTS_DIR="$(_reports_dir "$REPO_ROOT")"
+mkdir -p "$REPORTS_DIR"
+
+if [[ ! -d "$PROMPTS_DIR" ]]; then
+  echo "No prompt captures found at $PROMPTS_DIR"
+  exit 1
+fi
+
+# Phase 1: Iterate captured versions, extract tools, build history
+prev_tools=""
+prev_schemas="{}"
+history="{}"
+latest_tools=""
+latest_descriptions="{}"
+latest_schemas="{}"
+
+while IFS= read -r vdir; do
+  version="${vdir#v}"
+  payload="${PROMPTS_DIR}/${vdir}/captured-payload.json"
+  payload_full="${PROMPTS_DIR}/${vdir}/captured-payload-full.json"
+  [[ -f "$payload" || -f "$payload_full" ]] || continue
+
+  # Union tools from clean + full captures, filter mcp__* prefixed tools
+  tools=""
+  schemas="{}"
+  for pf in "$payload" "$payload_full"; do
+    [[ -f "$pf" ]] || continue
+    pf_tools=$(jq -r '[.tools[] | select(.name | startswith("mcp__") | not) | .name] | join(" ")' "$pf" 2>/dev/null) || continue
+    pf_schemas=$(jq '[.tools[] | select(.name | startswith("mcp__") | not) | {key: .name, value: .input_schema}] | from_entries' "$pf" 2>/dev/null) || continue
+    if [[ -n "$pf_tools" ]]; then
+      tools=$(echo "$tools $pf_tools" | tr ' ' '\n' | grep -v '^$' | sort -u | tr '\n' ' ')
+      schemas=$(echo "$schemas" "$pf_schemas" | jq -s '.[0] * .[1]')
+    fi
+  done
+  [[ -z "$tools" ]] && continue
+
+  # Detect additions
+  added=$(comm -23 \
+    <(echo "$tools" | tr ' ' '\n' | grep -v '^$' | sort) \
+    <(echo "$prev_tools" | tr ' ' '\n' | grep -v '^$' | sort))
+
+  # Detect removals
+  removed=$(comm -13 \
+    <(echo "$tools" | tr ' ' '\n' | grep -v '^$' | sort) \
+    <(echo "$prev_tools" | tr ' ' '\n' | grep -v '^$' | sort))
+
+  # Detect modifications (same tool name, different schema)
+  modified=""
+  if [[ -n "$prev_tools" ]]; then
+    common=$(comm -12 \
+      <(echo "$tools" | tr ' ' '\n' | grep -v '^$' | sort) \
+      <(echo "$prev_tools" | tr ' ' '\n' | grep -v '^$' | sort))
+    while IFS= read -r tool; do
+      [[ -z "$tool" ]] && continue
+      cur_schema=$(echo "$schemas" | jq --arg t "$tool" '.[$t] // empty' 2>/dev/null)
+      old_schema=$(echo "$prev_schemas" | jq --arg t "$tool" '.[$t] // empty' 2>/dev/null)
+      if [[ -n "$cur_schema" && -n "$old_schema" && "$cur_schema" != "$old_schema" ]]; then
+        modified="${modified}${tool}"$'\n'
+      fi
+    done <<< "$common"
+  fi
+
+  # Build history entry if anything changed
+  version_entry="{}"
+  has_changes=false
+
+  if [[ -n "$added" ]]; then
+    added_json=$(echo "$added" | jq -R . | jq -s .)
+    version_entry=$(echo "$version_entry" | jq --argjson a "$added_json" '. + {added: $a}')
+    has_changes=true
+  fi
+  if [[ -n "$removed" ]]; then
+    removed_json=$(echo "$removed" | jq -R . | jq -s .)
+    version_entry=$(echo "$version_entry" | jq --argjson r "$removed_json" '. + {removed: $r}')
+    has_changes=true
+  fi
+  if [[ -n "$modified" ]]; then
+    modified_clean=$(echo "$modified" | grep -v '^$' || true)
+    if [[ -n "$modified_clean" ]]; then
+      modified_json=$(echo "$modified_clean" | jq -R . | jq -s .)
+      version_entry=$(echo "$version_entry" | jq --argjson m "$modified_json" '. + {modified: $m}')
+      has_changes=true
+    fi
+  fi
+
+  if [[ "$has_changes" == true ]]; then
+    history=$(echo "$history" | jq --arg v "$version" --argjson e "$version_entry" '. + {($v): $e}')
+  fi
+
+  prev_tools="$tools"
+  prev_schemas="$schemas"
+  latest_tools="$tools"
+
+  # Extract descriptions and schemas from latest (union clean + full, filter mcp__)
+  latest_descriptions="{}"
+  latest_schemas="{}"
+  for pf in "$payload" "$payload_full"; do
+    [[ -f "$pf" ]] || continue
+    pf_desc=$(jq '[.tools[] | select(.name | startswith("mcp__") | not) | {key: .name, value: .description}] | from_entries' "$pf" 2>/dev/null) || continue
+    pf_sch=$(jq '[.tools[] | select(.name | startswith("mcp__") | not) | {key: .name, value: .input_schema}] | from_entries' "$pf" 2>/dev/null) || continue
+    latest_descriptions=$(echo "$latest_descriptions" "$pf_desc" | jq -s '.[0] * .[1]')
+    latest_schemas=$(echo "$latest_schemas" "$pf_sch" | jq -s '.[0] * .[1]')
+  done
+
+done < <(for d in "$PROMPTS_DIR"/v*/; do [[ -d "$d" ]] && basename "$d"; done 2>/dev/null | sort -V)
+
+if [[ -n "$latest_tools" ]]; then
+  tools_json=$(echo "$latest_tools" | tr ' ' '\n' | grep -v '^$' | sort | jq -R . | jq -s .)
+else
+  tools_json='[]'
+fi
+
+# Phase 2: Scan docs for tool documentation
+docs_dir="${REPO_ROOT}/docs"
+today=$(date +%Y-%m-%d)
+
+if [[ -d "$docs_dir" ]] && ls "$docs_dir"/*.md &>/dev/null; then
+  all_docs=$(mktemp)
+  for md in "$docs_dir"/*.md; do
+    fname=$(basename "$md")
+    sed "s|^|${fname}:|" "$md"
+  done > "$all_docs"
+
+  tools_docs=$(
+    while IFS= read -r tool; do
+      mentions=$(grep -c "$tool" "$all_docs" 2>/dev/null || true)
+      mentions=${mentions:-0}
+      if [[ "$mentions" -gt 0 ]]; then
+        files_json=$(grep "$tool" "$all_docs" 2>/dev/null \
+          | cut -d: -f1 | sort -u | jq -R . | jq -s .)
+        jq -n --arg t "$tool" --argjson f "$files_json" --argjson m "$mentions" \
+          '{($t): {documented: true, doc_files: $f, mentions: $m}}'
+      else
+        jq -n --arg t "$tool" \
+          '{($t): {documented: false, doc_files: [], mentions: 0}}'
+      fi
+    done < <(echo "$tools_json" | jq -r '.[]') | jq -s 'add // {}'
+  )
+
+  rm -f "$all_docs"
+else
+  echo "Warning: no docs found at $docs_dir — skipping docs scan"
+  tools_docs="{}"
+fi
+
+# Write tools.json
+jq -n \
+  --argjson tools "$tools_json" \
+  --argjson descriptions "$latest_descriptions" \
+  --argjson schemas "$latest_schemas" \
+  --argjson history "$history" \
+  --argjson docs "$tools_docs" \
+  --arg date "$today" \
+  '{
+    tools: $tools,
+    tools_descriptions: $descriptions,
+    tools_schemas: $schemas,
+    tools_history: $history,
+    tools_docs: $docs,
+    docs_checked_at: $date
+  }' > "${REPORTS_DIR}/tools.json"
+
+count=$(echo "$tools_json" | jq length)
+
+if [[ "$REPORTS_DIR" == "${REPO_ROOT}/reports" ]]; then
+  if git diff -- "${REPORTS_DIR}/tools.json" | grep '^[+-]' | grep -v '^[+-][+-][+-]' | grep -qv 'docs_checked_at'; then
+    echo "Updated reports/tools.json ($count tools, docs checked $today)"
+  else
+    git checkout -- "${REPORTS_DIR}/tools.json" 2>/dev/null || true
+    echo "reports/tools.json unchanged (docs checked $today)"
+  fi
+else
+  echo "Wrote ${REPORTS_DIR}/tools.json ($count tools, docs checked $today)"
+fi

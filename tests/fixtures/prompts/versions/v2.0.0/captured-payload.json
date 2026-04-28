@@ -1,0 +1,44 @@
+{
+  "model": "claude-sonnet-4-20250514",
+  "stream": true,
+  "max_tokens": 16384,
+  "system": [{"type": "text", "text": "You are Claude Code."}],
+  "messages": [],
+  "tools": [
+    {
+      "name": "Bash",
+      "description": "Executes a given bash command.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "command": {"type": "string", "description": "The command to execute"}
+        },
+        "required": ["command"]
+      }
+    },
+    {
+      "name": "Read",
+      "description": "Reads a file from the local filesystem.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "file_path": {"type": "string", "description": "The absolute path to the file"}
+        },
+        "required": ["file_path"]
+      }
+    },
+    {
+      "name": "Edit",
+      "description": "Performs exact string replacements in files.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "file_path": {"type": "string"},
+          "old_string": {"type": "string"},
+          "new_string": {"type": "string"}
+        },
+        "required": ["file_path", "old_string", "new_string"]
+      }
+    }
+  ]
+}

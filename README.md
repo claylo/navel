@@ -14,6 +14,8 @@ And the name? Exactly what you think it is: a whole lot of navel-gazing. The Cla
 - **Captures the full system prompt** sent to the API on first message—the entire `messages.create()` payload including tool definitions
 - **Tracks hook events** across versions and cross-references them against official documentation (spoiler: some hooks exist in code but have zero docs)
 - **Tracks environment variables**—every `process.env.*` reference across every version, with add/remove history and docs coverage
+- **Tracks tool definitions** from prompt captures—additions, removals, and schema changes across versions
+- **Searches across versions**—find when a string literal first appeared, disappeared, or changed
 - **Syncs official docs** from code.claude.com with change detection and diffing
 - **Diffs everything**—prompts between versions, docs between syncs
 
@@ -43,6 +45,12 @@ navel docs diff                       # show what changed in the last sync
 navel hooks sync                      # scan for hook events + check docs coverage
 navel commands sync                   # scan for bundled slash commands
 navel env-vars sync                   # scan for environment variables
+navel tools sync                      # extract tool defs from prompt captures
+
+navel search "EnterWorktree"          # search string across all cached versions
+navel search --since 2.1.100 "Agent"  # search from a specific version onward
+navel search -i -A 3 -B 1 "pattern"  # case-insensitive with line context
+navel search --json "TodoWrite"       # output as JSON (first_seen, last_seen, etc.)
 
 navel status                          # dashboard
 navel outdated                        # your installed claude vs latest
@@ -73,6 +81,7 @@ Run `navel prompts help` for the full prompt subcommand list.
 | `reports/hooks.json` | Hook events, history, and docs coverage |
 | `reports/commands.json` | Bundled slash commands, history, and docs coverage |
 | `reports/env-vars.json` | Environment variables, add/remove history, and docs coverage |
+| `reports/tools.json` | Tool definitions, schemas, history, and docs coverage |
 | `reports/docs-changes.json` | Documentation change log across syncs |
 | `prompts/versions/` | Captured system prompts and raw payloads |
 | `docs/` | Official documentation from code.claude.com |
@@ -124,14 +133,33 @@ In the captured markdown, cache markers show up as annotations on system block h
 
 These markers don't change the prompt content—they're billing/performance hints. That's why `--full` suppresses them (cleaner output) and `--full-prompt-caching` preserves them (if you're investigating caching behavior).
 
-## Interesting findings
+## Searching beyond the system prompt
 
-- All 23 hook events are now documented—but that wasn't always the case. `Elicitation`, `ElicitationResult`, `PostCompact`, and `StopFailure` all shipped with zero docs and got backfilled later. The env vars report shows the same pattern at a much larger scale.
-- The system prompt is 100% client-side—auth method doesn't change it, there's no server-side injection (theoretically possible, not observed)
-- Tool definitions change more frequently than you'd expect between minor versions
-- **448 environment variables** are referenced in the latest cli.js—only ~33% are documented. The rest are a mix of Claude Code internals (`CLAUDE_CODE_*`, `DISABLE_*`), bundled dependency knobs (gRPC, OTEL, Azure SDK), and platform detection vars
-- Version 2.1.27 dropped 29 env vars in one release—the Sentry-to-OpenTelemetry migration, visible as a bulk removal of `SENTRY_*` vars and cloud region detection strings
-- Suppressing plugins, MCP, and settings during capture reduces the prompt by ~18% (270 lines)—that's all injected by your local environment, not the base prompt
+Prompt captures only show what's in the first API call. But Claude Code also injects **runtime messages**—system reminders, task nags, behavioral nudges—that are spliced into later turns by the harness. These string literals survive minification and binary compilation, so `navel search` finds them even though they never appear in a prompt capture.
+
+```bash
+# Find a runtime-injected instruction across all versions
+navel search -i --since 2.0.0 'make sure that you NEVER'
+
+# See surrounding context to understand what the instruction is about
+navel search -i --since 2.0.0 -A 5 -B 2 'make sure that you NEVER'
+```
+
+This particular string is a TodoWrite nag—a `system-reminder` the harness injects mid-conversation telling the model to use TodoWrite more, then instructs it to hide the reminder from the user. It's a runtime injection, not part of any system prompt block.
+
+The same technique finds feature flag names, error messages, internal configuration strings, and anything else that's a string literal in the source—whether or not it's user-facing.
+
+**Search patterns.** `navel search` passes the pattern directly to [ripgrep](https://github.com/BurntSushi/ripgrep), so you get full regex syntax: `'name:"[a-z]+"'` for character classes, `'foo|bar'` for alternation, `'flag_\w+'` for word boundaries, `'(?:pre|post)ToolUse'` for non-capturing groups. Literal special characters need escaping: `'\$\{env'` to match `${env`. Use `-i` for case-insensitive, `-A N` / `-B N` for line context (like grep).
+
+**Context modes.** `--context N` shows N characters around the first match on one line—good for quick identification. `-A N` / `-B N` show lines before and after *every* match in the version—better for reading full strings in situ. Binary-era versions (v2.1.113+) contain duplicates because Bun embeds source twice (source + bytecode), so you'll see repeated matches; template literals with interpolated variables also appear in both their pre-evaluated and post-evaluated forms.
+
+For example, the TodoWrite nag above has shipped in 146 of the 175 releases between v2.0.0 and v2.1.121. Using `-A` reveals both variants—the TodoWrite version and a Task tools version—along with the harness code that injects them mid-conversation:
+
+```bash
+navel search -i --since 2.0.0 -A 3 'make sure that you NEVER'
+```
+
+This is a runtime injection that instructs the model to hide the reminder from the user—the kind of string that reads like prompt injection but ships as a product feature. `navel search` finds it because it's a string literal in the source; no prompt capture would ever surface it.
 
 ## Offline documentation
 

@@ -69,3 +69,29 @@ _scannable_source() {
   fi
   return 1
 }
+
+# Like _scannable_source but caches strings -a output for binary versions.
+# Args: pkg_dir cache_dir version
+# For cli.js: returns cli.js directly (no cache needed).
+# For binaries: returns cached strings file at cache_dir/version.txt.
+_cached_scannable_source() {
+  local pkg_dir="$1" cache_dir="$2" version="$3"
+  if [[ -f "$pkg_dir/cli.js" ]]; then
+    echo "$pkg_dir/cli.js"
+    return 0
+  fi
+  local cache_file="${cache_dir}/${version}.txt"
+  if [[ -f "$cache_file" ]]; then
+    echo "$cache_file"
+    return 0
+  fi
+  local binary
+  binary=$(_find_claude_binary "$pkg_dir")
+  if [[ -n "$binary" && -f "$binary" ]]; then
+    mkdir -p "$cache_dir"
+    strings -a "$binary" > "$cache_file" 2>/dev/null
+    echo "$cache_file"
+    return 0
+  fi
+  return 1
+}
