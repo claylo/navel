@@ -214,7 +214,7 @@
         "statusline.md",
         "terminal-config.md"
       ],
-      "mentions": 49
+      "mentions": 50
     },
     "PermissionDenied": {
       "documented": true,
@@ -333,6 +333,7 @@
       "doc_files": [
         "changelog.md",
         "claude-code-on-the-web.md",
+        "cli-reference.md",
         "env-vars.md",
         "features-overview.md",
         "hooks-guide.md",
@@ -340,7 +341,7 @@
         "plugins-reference.md",
         "tools-reference.md"
       ],
-      "mentions": 50
+      "mentions": 55
     },
     "Setup": {
       "documented": true,
@@ -348,18 +349,22 @@
         "amazon-bedrock.md",
         "changelog.md",
         "claude-code-on-the-web.md",
+        "cli-reference.md",
         "code-review.md",
         "discover-plugins.md",
+        "env-vars.md",
         "github-actions.md",
         "gitlab-ci-cd.md",
+        "hooks-guide.md",
         "hooks.md",
         "microsoft-foundry.md",
         "platforms.md",
+        "plugins-reference.md",
         "remote-control.md",
         "routines.md",
         "web-quickstart.md"
       ],
-      "mentions": 26
+      "mentions": 50
     },
     "Stop": {
       "documented": true,
@@ -491,5 +496,5 @@
       "mentions": 20
     }
   },
-  "docs_checked_at": "2026-04-28"
+  "docs_checked_at": "2026-04-29"
 }
