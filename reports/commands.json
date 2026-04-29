@@ -774,15 +774,17 @@
         "costs.md",
         "env-vars.md",
         "errors.md",
+        "fullscreen.md",
         "glossary.md",
         "hooks-guide.md",
         "hooks.md",
         "interactive-mode.md",
+        "keybindings.md",
         "quickstart.md",
         "remote-control.md",
         "troubleshooting.md"
       ],
-      "mentions": 41
+      "mentions": 44
     },
     "color": {
       "documented": true,
@@ -1355,7 +1357,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 166
+      "mentions": 167
     },
     "memory": {
       "documented": true,
@@ -1665,7 +1667,7 @@
         "quickstart.md",
         "remote-control.md"
       ],
-      "mentions": 57
+      "mentions": 58
     },
     "review": {
       "documented": true,
