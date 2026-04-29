@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-04-29T00:23:30Z",
+      "version_at_time": "2.1.122",
+      "files_changed": [
+        "fullscreen.md",
+        "hooks-guide.md",
+        "monitoring-usage.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-28T23:09:11Z",
       "version_at_time": "2.1.122",
       "files_changed": [
