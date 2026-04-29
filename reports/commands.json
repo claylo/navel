@@ -1129,6 +1129,7 @@
         "chrome.md",
         "claude-code-on-the-web.md",
         "claude-directory.md",
+        "cli-reference.md",
         "commands.md",
         "common-workflows.md",
         "costs.md",
@@ -1159,7 +1160,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 274
+      "mentions": 279
     },
     "ide": {
       "documented": true,
@@ -1178,16 +1179,19 @@
         "best-practices.md",
         "champion-kit.md",
         "changelog.md",
+        "cli-reference.md",
         "commands.md",
         "communications-kit.md",
         "env-vars.md",
         "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
         "how-claude-code-works.md",
         "memory.md",
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 24
+      "mentions": 30
     },
     "init-verifiers": {
       "documented": false,
@@ -1889,10 +1893,11 @@
       "doc_files": [
         "changelog.md",
         "commands.md",
+        "fullscreen.md",
         "interactive-mode.md",
         "terminal-config.md"
       ],
-      "mentions": 11
+      "mentions": 12
     },
     "theme": {
       "documented": true,
@@ -2020,5 +2025,5 @@
       "mentions": 17
     }
   },
-  "docs_checked_at": "2026-04-28"
+  "docs_checked_at": "2026-04-29"
 }
