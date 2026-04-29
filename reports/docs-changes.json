@@ -1,6 +1,27 @@
 {
   "changes": [
     {
+      "date": "2026-04-29T03:04:13Z",
+      "version_at_time": "2.1.123",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "claude-directory.md",
+        "common-workflows.md",
+        "env-vars.md",
+        "fullscreen.md",
+        "keybindings.md",
+        "mcp.md",
+        "monitoring-usage.md",
+        "statusline.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-29T01:35:58Z",
       "version_at_time": "2.1.122",
       "files_changed": [
