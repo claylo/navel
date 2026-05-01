@@ -1162,7 +1162,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 279
+      "mentions": 280
     },
     "ide": {
       "documented": true,
@@ -1357,7 +1357,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 167
+      "mentions": 168
     },
     "memory": {
       "documented": true,
