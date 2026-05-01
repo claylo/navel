@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-05-01T00:23:25Z",
+      "version_at_time": "2.1.126",
+      "files_changed": [
+        "auto-mode-config.md",
+        "memory.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-04-29T21:12:55Z",
       "version_at_time": "2.1.123",
       "files_changed": [
