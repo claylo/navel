@@ -1,6 +1,43 @@
 {
   "changes": [
     {
+      "date": "2026-05-01T05:16:58Z",
+      "version_at_time": "2.1.126",
+      "files_changed": [
+        "analytics.md",
+        "authentication.md",
+        "claude-directory.md",
+        "cli-reference.md",
+        "commands.md",
+        "data-usage.md",
+        "env-vars.md",
+        "fullscreen.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "keybindings.md",
+        "llm-gateway.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "permission-modes.md",
+        "permissions.md",
+        "settings.md",
+        "setup.md",
+        "sub-agents.md",
+        "subagents.md",
+        "terminal-config.md",
+        "tools-reference.md",
+        "troubleshoot-install.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-01T02:32:11Z",
       "version_at_time": "2.1.126",
       "files_changed": [
