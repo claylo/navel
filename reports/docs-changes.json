@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-01T22:14:13Z",
+      "version_at_time": "2.1.126",
+      "files_changed": [
+        "plugins-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-01T18:15:16Z",
       "version_at_time": "2.1.126",
       "files_changed": [
