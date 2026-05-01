@@ -211,10 +211,11 @@
         "hooks.md",
         "plugins-reference.md",
         "remote-control.md",
+        "settings.md",
         "statusline.md",
         "terminal-config.md"
       ],
-      "mentions": 50
+      "mentions": 51
     },
     "PermissionDenied": {
       "documented": true,
@@ -496,5 +497,5 @@
       "mentions": 20
     }
   },
-  "docs_checked_at": "2026-04-29"
+  "docs_checked_at": "2026-05-01"
 }
