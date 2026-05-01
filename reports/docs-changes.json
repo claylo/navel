@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-01T07:49:21Z",
+      "version_at_time": "2.1.126",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-01T05:16:58Z",
       "version_at_time": "2.1.126",
       "files_changed": [
