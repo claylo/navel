@@ -656,7 +656,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 68
+      "mentions": 65
     },
     "autocompact": {
       "documented": false,
@@ -870,7 +870,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 81
+      "mentions": 82
     },
     "context": {
       "documented": true,
@@ -1068,7 +1068,7 @@
         "troubleshooting.md",
         "zero-data-retention.md"
       ],
-      "mentions": 21
+      "mentions": 22
     },
     "fewer-permission-prompts": {
       "documented": true,
@@ -1427,6 +1427,7 @@
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
+        "llm-gateway.md",
         "model-config.md",
         "monitoring-usage.md",
         "permission-modes.md",
@@ -1438,7 +1439,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 126
+      "mentions": 127
     },
     "passes": {
       "documented": true,
@@ -1488,7 +1489,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 126
+      "mentions": 127
     },
     "plan": {
       "documented": true,
@@ -1795,7 +1796,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 168
+      "mentions": 165
     },
     "status": {
       "documented": true,
