@@ -1438,7 +1438,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 125
+      "mentions": 126
     },
     "passes": {
       "documented": true,
@@ -1538,7 +1538,7 @@
         "remote-control.md",
         "settings.md"
       ],
-      "mentions": 142
+      "mentions": 143
     },
     "powerup": {
       "documented": true,
@@ -1622,7 +1622,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 41
+      "mentions": 42
     },
     "remote-env": {
       "documented": true,
@@ -2027,5 +2027,5 @@
       "mentions": 17
     }
   },
-  "docs_checked_at": "2026-04-29"
+  "docs_checked_at": "2026-05-01"
 }
