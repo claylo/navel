@@ -1,6 +1,51 @@
 {
   "changes": [
     {
+      "date": "2026-05-02T18:14:04Z",
+      "version_at_time": "2.1.126",
+      "files_changed": [
+        "agent-teams.md",
+        "best-practices.md",
+        "checkpointing.md",
+        "claude-directory.md",
+        "cli-reference.md",
+        "code-review.md",
+        "commands.md",
+        "common-workflows.md",
+        "costs.md",
+        "desktop.md",
+        "errors.md",
+        "github-actions.md",
+        "gitlab-ci-cd.md",
+        "glossary.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "legal-and-compliance.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "overview.md",
+        "permission-modes.md",
+        "remote-control.md",
+        "sessions.md",
+        "settings.md",
+        "skills.md",
+        "slash-commands.md",
+        "sub-agents.md",
+        "subagents.md",
+        "tools-reference.md",
+        "vs-code.md",
+        "zero-data-retention.md"
+      ],
+      "files_added": [
+        "deep-links.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-02T01:35:41Z",
       "version_at_time": "2.1.126",
       "files_changed": [
