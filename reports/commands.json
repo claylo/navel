@@ -622,8 +622,8 @@
         "changelog.md",
         "cli-reference.md",
         "commands.md",
-        "common-workflows.md",
         "permissions.md",
+        "sessions.md",
         "statusline.md",
         "tools-reference.md"
       ],
@@ -641,7 +641,6 @@
         "changelog.md",
         "claude-code-on-the-web.md",
         "commands.md",
-        "common-workflows.md",
         "debug-your-config.md",
         "hooks.md",
         "how-claude-code-works.md",
@@ -656,7 +655,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 65
+      "mentions": 64
     },
     "autocompact": {
       "documented": false,
@@ -707,13 +706,14 @@
       "doc_files": [
         "changelog.md",
         "commands.md",
-        "common-workflows.md",
         "env-vars.md",
+        "how-claude-code-works.md",
+        "sessions.md",
         "statusline.md",
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 12
+      "mentions": 16
     },
     "bridge-kick": {
       "documented": false,
@@ -782,9 +782,10 @@
         "keybindings.md",
         "quickstart.md",
         "remote-control.md",
+        "sessions.md",
         "troubleshooting.md"
       ],
-      "mentions": 44
+      "mentions": 46
     },
     "color": {
       "documented": true,
@@ -834,12 +835,13 @@
         "memory.md",
         "monitoring-usage.md",
         "remote-control.md",
+        "sessions.md",
         "skills.md",
         "slash-commands.md",
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 62
+      "mentions": 63
     },
     "config": {
       "documented": true,
@@ -850,7 +852,6 @@
         "claude-code-on-the-web.md",
         "claude-directory.md",
         "commands.md",
-        "common-workflows.md",
         "costs.md",
         "desktop.md",
         "env-vars.md",
@@ -860,6 +861,7 @@
         "jetbrains.md",
         "keybindings.md",
         "mcp.md",
+        "model-config.md",
         "monitoring-usage.md",
         "output-styles.md",
         "plugin-marketplaces.md",
@@ -870,7 +872,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 82
+      "mentions": 81
     },
     "context": {
       "documented": true,
@@ -888,12 +890,13 @@
         "how-claude-code-works.md",
         "keybindings.md",
         "remote-control.md",
+        "sessions.md",
         "skills.md",
         "slash-commands.md",
         "statusline.md",
         "voice-dictation.md"
       ],
-      "mentions": 42
+      "mentions": 43
     },
     "copy": {
       "documented": true,
@@ -934,7 +937,6 @@
         "claude-code-on-the-web.md",
         "claude-directory.md",
         "commands.md",
-        "common-workflows.md",
         "computer-use.md",
         "desktop-quickstart.md",
         "desktop-scheduled-tasks.md",
@@ -948,6 +950,7 @@
         "quickstart.md",
         "remote-control.md",
         "sandboxing.md",
+        "sessions.md",
         "settings.md",
         "setup.md",
         "troubleshoot-install.md",
@@ -991,7 +994,6 @@
       "doc_files": [
         "changelog.md",
         "commands.md",
-        "common-workflows.md",
         "costs.md",
         "env-vars.md",
         "errors.md",
@@ -1005,7 +1007,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 39
+      "mentions": 38
     },
     "exit": {
       "documented": true,
@@ -1024,9 +1026,10 @@
         "changelog.md",
         "commands.md",
         "hooks.md",
+        "sessions.md",
         "tools-reference.md"
       ],
-      "mentions": 8
+      "mentions": 9
     },
     "extra-usage": {
       "documented": true,
@@ -1133,7 +1136,6 @@
         "claude-directory.md",
         "cli-reference.md",
         "commands.md",
-        "common-workflows.md",
         "costs.md",
         "debug-your-config.md",
         "desktop.md",
@@ -1162,7 +1164,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 280
+      "mentions": 270
     },
     "ide": {
       "documented": true,
@@ -1275,15 +1277,13 @@
         "monitoring-usage.md",
         "quickstart.md",
         "remote-control.md",
-        "skills.md",
-        "slash-commands.md",
         "troubleshoot-install.md",
         "ultrareview.md",
         "voice-dictation.md",
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 49
+      "mentions": 47
     },
     "logout": {
       "documented": true,
@@ -1416,7 +1416,6 @@
         "changelog.md",
         "claude-code-on-the-web.md",
         "commands.md",
-        "common-workflows.md",
         "communications-kit.md",
         "costs.md",
         "env-vars.md",
@@ -1439,7 +1438,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 127
+      "mentions": 126
     },
     "passes": {
       "documented": true,
@@ -1461,7 +1460,6 @@
         "claude-directory.md",
         "cli-reference.md",
         "commands.md",
-        "common-workflows.md",
         "communications-kit.md",
         "data-usage.md",
         "debug-your-config.md",
@@ -1498,7 +1496,6 @@
         "changelog.md",
         "cli-reference.md",
         "commands.md",
-        "common-workflows.md",
         "communications-kit.md",
         "desktop.md",
         "glossary.md",
@@ -1641,13 +1638,14 @@
         "changelog.md",
         "cli-reference.md",
         "commands.md",
-        "common-workflows.md",
         "costs.md",
         "hooks.md",
+        "permission-modes.md",
         "remote-control.md",
+        "sessions.md",
         "statusline.md"
       ],
-      "mentions": 24
+      "mentions": 22
     },
     "resume": {
       "documented": true,
@@ -1666,9 +1664,10 @@
         "how-claude-code-works.md",
         "monitoring-usage.md",
         "quickstart.md",
-        "remote-control.md"
+        "remote-control.md",
+        "sessions.md"
       ],
-      "mentions": 58
+      "mentions": 59
     },
     "review": {
       "documented": true,
@@ -1690,12 +1689,12 @@
         "changelog.md",
         "checkpointing.md",
         "commands.md",
-        "common-workflows.md",
         "communications-kit.md",
         "costs.md",
         "env-vars.md",
         "errors.md",
-        "glossary.md"
+        "glossary.md",
+        "sessions.md"
       ],
       "mentions": 21
     },
@@ -1767,6 +1766,7 @@
         "context-window.md",
         "costs.md",
         "debug-your-config.md",
+        "deep-links.md",
         "desktop-quickstart.md",
         "desktop.md",
         "env-vars.md",
@@ -1796,7 +1796,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 165
+      "mentions": 166
     },
     "status": {
       "documented": true,
@@ -2028,5 +2028,5 @@
       "mentions": 17
     }
   },
-  "docs_checked_at": "2026-05-01"
+  "docs_checked_at": "2026-05-02"
 }
