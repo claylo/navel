@@ -215,7 +215,7 @@
         "statusline.md",
         "terminal-config.md"
       ],
-      "mentions": 51
+      "mentions": 44
     },
     "PermissionDenied": {
       "documented": true,
@@ -478,24 +478,22 @@
       "doc_files": [
         "changelog.md",
         "claude-directory.md",
-        "common-workflows.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 29
+      "mentions": 27
     },
     "WorktreeRemove": {
       "documented": true,
       "doc_files": [
         "changelog.md",
-        "common-workflows.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 20
+      "mentions": 19
     }
   },
-  "docs_checked_at": "2026-05-01"
+  "docs_checked_at": "2026-05-02"
 }
