@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-05-04T14:45:21Z",
+      "version_at_time": "2.1.126",
+      "files_changed": [
+        "terminal-config.md",
+        "troubleshoot-install.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-04T13:24:12Z",
       "version_at_time": "2.1.126",
       "files_changed": [
