@@ -239,7 +239,7 @@
         "permission-modes.md",
         "plugins-reference.md"
       ],
-      "mentions": 42
+      "mentions": 43
     },
     "PostCompact": {
       "documented": true,
@@ -258,7 +258,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 21
+      "mentions": 23
     },
     "PostToolUse": {
       "documented": true,
@@ -277,7 +277,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 88
+      "mentions": 91
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -287,7 +287,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 22
+      "mentions": 23
     },
     "PreCompact": {
       "documented": true,
@@ -316,7 +316,7 @@
         "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 117
+      "mentions": 120
     },
     "SessionEnd": {
       "documented": true,
@@ -431,7 +431,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 20
+      "mentions": 21
     },
     "TaskCreated": {
       "documented": true,
@@ -442,7 +442,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 20
+      "mentions": 21
     },
     "TeammateIdle": {
       "documented": true,
@@ -462,7 +462,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 21
+      "mentions": 23
     },
     "UserPromptSubmit": {
       "documented": true,
@@ -472,7 +472,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 29
+      "mentions": 31
     },
     "WorktreeCreate": {
       "documented": true,
