@@ -119,7 +119,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /rewind | — | 2.0.0 | available | yes |
 | /security-review | Complete a security review of the pending changes on the ... | 2.0.0 | available | yes |
 | /session | — | 2.1.15 | available | yes |
-| /setup-bedrock | Reconfigure AWS Bedrock authentication, region, or model ... | 2.1.92 | available | yes |
+| /setup-bedrock | Reconfigure Amazon Bedrock authentication, region, or mod... | 2.1.92 | available | yes |
 | /setup-vertex | Reconfigure Google Vertex AI authentication, project, reg... | 2.1.98 | available | yes |
 | /simplify | Review changed code for reuse, quality, and efficiency, t... | 2.1.63 | available | yes |
 | /skills | List available skills | 2.0.73 | available | yes |
