@@ -1,0 +1,42 @@
+--- v2.1.126
++++ v2.1.128
+@@ -230,10 +230,11 @@
+ Main branch (you will usually use this for PRs): main
+ 
+ Status:
+-(clean)
++M npm/versions.json
++ M reports/commands.json
+ 
+ Recent commits:
+-9251f4c chore(readme): sync claude code data (v2.1.126)
++9bff73e chore(commands): sync claude code data (v2.1.126) — metadata updated
+ 
+ ---
+ 
+@@ -992,6 +993,7 @@
+ - This tool can only read files, not directories. To list files in a directory, use the registered shell tool.
+ - You will regularly be asked to read screenshots. If the user provides a path to a screenshot, ALWAYS use this tool to view the file at the path. This tool will work with all temporary file paths.
+ - If you read a file that exists but has empty contents you will receive a system reminder warning in place of file contents.
++- Do NOT re-read a file you just edited to verify — Edit/Write would have errored if the change failed, and the harness tracks file state for you.
+ 
+ **Parameters:**
+ - `file_path` (string, required) — The absolute path to the file to read
+@@ -1010,7 +1012,7 @@
+ - update: POST /v1/code/triggers/{trigger_id} (requires body, partial update)
+ - run: POST /v1/code/triggers/{trigger_id}/run (optional body)
+ 
+-The response is the raw JSON from the API.
++The response is the raw JSON from the API. For create/update, a summary line is appended with the server-parsed run time and the routine's claude.ai URL — relay both to the user so they can confirm the time is right and know where the result will appear.
+ 
+ **Parameters:**
+ - `action` (string, required)
+@@ -1350,7 +1352,7 @@
+   - Web search is only available in the US
+ 
+ IMPORTANT - Use the correct year in search queries:
+-  - The current month is April 2026. You MUST use this year when searching for recent information, documentation, or current events.
++  - The current month is May 2026. You MUST use this year when searching for recent information, documentation, or current events.
+   - Example: If the user asks for "latest React docs", search for "React documentation" with the current year, NOT last year
+ 
+ 
