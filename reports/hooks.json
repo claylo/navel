@@ -385,7 +385,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 108
+      "mentions": 110
     },
     "StopFailure": {
       "documented": true,
@@ -419,7 +419,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 32
+      "mentions": 34
     },
     "TaskCompleted": {
       "documented": true,
@@ -495,5 +495,5 @@
       "mentions": 19
     }
   },
-  "docs_checked_at": "2026-05-02"
+  "docs_checked_at": "2026-05-04"
 }
