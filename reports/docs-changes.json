@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "date": "2026-05-04T23:19:58Z",
+      "version_at_time": "2.1.128",
+      "files_changed": [
+        "changelog.md",
+        "hooks.md",
+        "sub-agents.md",
+        "subagents.md",
+        "voice-dictation.md",
+        "vs-code.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-04T21:22:27Z",
       "version_at_time": "2.1.128",
       "files_changed": [
