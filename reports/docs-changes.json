@@ -1,6 +1,23 @@
 {
   "changes": [
     {
+      "date": "2026-05-04T05:09:11Z",
+      "version_at_time": "2.1.126",
+      "files_changed": [
+        "discover-plugins.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "memory.md",
+        "settings.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-02T18:14:04Z",
       "version_at_time": "2.1.126",
       "files_changed": [
