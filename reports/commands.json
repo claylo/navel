@@ -156,7 +156,7 @@
     "resume": "Resume a previous conversation",
     "review": "Review a pull request",
     "security-review": "Complete a security review of the pending changes on the current branch",
-    "setup-bedrock": "Reconfigure AWS Bedrock authentication, region, or model pins",
+    "setup-bedrock": "Reconfigure Amazon Bedrock authentication, region, or model pins",
     "setup-vertex": "Reconfigure Google Vertex AI authentication, project, region, or model pins",
     "simplify": "Review changed code for reuse, quality, and efficiency, then fix any issues found.",
     "skills": "List available skills",
