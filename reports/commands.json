@@ -1939,10 +1939,11 @@
         "commands.md",
         "permission-modes.md",
         "remote-control.md",
+        "terminal-config.md",
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 12
+      "mentions": 13
     },
     "ultrareview": {
       "documented": true,
@@ -1987,10 +1988,11 @@
         "errors.md",
         "remote-control.md",
         "routines.md",
+        "terminal-config.md",
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 30
+      "mentions": 31
     },
     "version": {
       "documented": true,
@@ -2028,5 +2030,5 @@
       "mentions": 17
     }
   },
-  "docs_checked_at": "2026-05-02"
+  "docs_checked_at": "2026-05-04"
 }
