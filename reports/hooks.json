@@ -235,10 +235,11 @@
         "channels-reference.md",
         "hooks-guide.md",
         "hooks.md",
+        "monitoring-usage.md",
         "permission-modes.md",
         "plugins-reference.md"
       ],
-      "mentions": 41
+      "mentions": 42
     },
     "PostCompact": {
       "documented": true,
@@ -315,7 +316,7 @@
         "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 116
+      "mentions": 117
     },
     "SessionEnd": {
       "documented": true,
