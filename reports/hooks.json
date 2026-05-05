@@ -341,9 +341,10 @@
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
-        "tools-reference.md"
+        "tools-reference.md",
+        "web-quickstart.md"
       ],
-      "mentions": 55
+      "mentions": 57
     },
     "Setup": {
       "documented": true,
@@ -496,5 +497,5 @@
       "mentions": 19
     }
   },
-  "docs_checked_at": "2026-05-04"
+  "docs_checked_at": "2026-05-05"
 }
