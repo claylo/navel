@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-05T00:23:30Z",
+      "version_at_time": "2.1.128",
+      "files_changed": [
+        "features-overview.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-04T23:19:58Z",
       "version_at_time": "2.1.128",
       "files_changed": [
