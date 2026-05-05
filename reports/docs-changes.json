@@ -1,6 +1,22 @@
 {
   "changes": [
     {
+      "date": "2026-05-05T21:21:16Z",
+      "version_at_time": "2.1.129",
+      "files_changed": [
+        "commands.md",
+        "desktop.md",
+        "hooks.md",
+        "settings.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-05T15:33:41Z",
       "version_at_time": "2.1.128",
       "files_changed": [
