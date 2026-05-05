@@ -795,7 +795,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 8
+      "mentions": 9
     },
     "commit": {
       "documented": true,
@@ -841,7 +841,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 63
+      "mentions": 64
     },
     "config": {
       "documented": true,
@@ -872,7 +872,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 81
+      "mentions": 82
     },
     "context": {
       "documented": true,
@@ -1017,7 +1017,7 @@
         "quickstart.md",
         "remote-control.md"
       ],
-      "mentions": 6
+      "mentions": 7
     },
     "export": {
       "documented": true,
@@ -1054,7 +1054,7 @@
         "monitoring-usage.md",
         "settings.md"
       ],
-      "mentions": 22
+      "mentions": 23
     },
     "feedback": {
       "documented": true,
@@ -1164,7 +1164,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 270
+      "mentions": 272
     },
     "ide": {
       "documented": true,
@@ -1250,9 +1250,10 @@
         "interactive-mode.md",
         "keybindings.md",
         "terminal-config.md",
-        "voice-dictation.md"
+        "voice-dictation.md",
+        "vs-code.md"
       ],
-      "mentions": 19
+      "mentions": 20
     },
     "keybindings-help": {
       "documented": false,
@@ -1357,7 +1358,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 168
+      "mentions": 169
     },
     "memory": {
       "documented": true,
@@ -1438,7 +1439,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 126
+      "mentions": 129
     },
     "passes": {
       "documented": true,
@@ -1536,7 +1537,7 @@
         "remote-control.md",
         "settings.md"
       ],
-      "mentions": 143
+      "mentions": 145
     },
     "powerup": {
       "documented": true,
@@ -1639,7 +1640,6 @@
         "cli-reference.md",
         "commands.md",
         "costs.md",
-        "hooks.md",
         "permission-modes.md",
         "remote-control.md",
         "sessions.md",
@@ -2030,5 +2030,5 @@
       "mentions": 17
     }
   },
-  "docs_checked_at": "2026-05-04"
+  "docs_checked_at": "2026-05-05"
 }
