@@ -958,7 +958,7 @@
         "web-quickstart.md",
         "zero-data-retention.md"
       ],
-      "mentions": 62
+      "mentions": 63
     },
     "diff": {
       "documented": true,
@@ -1579,9 +1579,10 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
-        "commands.md"
+        "commands.md",
+        "network-config.md"
       ],
-      "mentions": 3
+      "mentions": 4
     },
     "reload-plugins": {
       "documented": true,
