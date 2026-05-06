@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-05-06T14:47:32Z",
+      "version_at_time": "2.1.131",
+      "files_changed": [
+        "cli-reference.md",
+        "settings.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-06T08:10:23Z",
       "version_at_time": "2.1.131",
       "files_changed": [
