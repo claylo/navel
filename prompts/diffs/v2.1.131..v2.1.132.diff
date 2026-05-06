@@ -1,0 +1,34 @@
+--- v2.1.131
++++ v2.1.132
+@@ -230,10 +230,11 @@
+ Main branch (you will usually use this for PRs): main
+ 
+ Status:
+-M reports/docs-changes.json
++M npm/versions.json
++ M reports/commands.json
+ 
+ Recent commits:
+-ea71ef2 chore(readme): sync claude code data (v2.1.131)
++01da1e3 chore(docs): sync claude code data (v2.1.131) — 1 docs changed
+ 
+ ---
+ 
+@@ -479,7 +480,7 @@
+ - `command` (string, required) — The command to execute
+ - `timeout` (number) — Optional timeout in milliseconds (max 600000)
+ - `description` (string) — Clear, concise description of what this command does in active voice. Never use words like "complex" or "risk" in the description - just describe what it does.
+-- `run_in_background` (boolean) — Set to true to run this command in the background. Use Read to read the output later.
++- `run_in_background` (boolean) — Set to true to run this command in the background.
+ - `dangerouslyDisableSandbox` (boolean) — Set this to true to dangerously override sandbox mode and run commands without sandboxing.
+ 
+ ### CronCreate
+@@ -959,7 +960,7 @@
+ - `command` (string, required) — The PowerShell command to execute
+ - `timeout` (number) — Optional timeout in milliseconds (max 600000)
+ - `description` (string) — Clear, concise description of what this command does in active voice.
+-- `run_in_background` (boolean) — Set to true to run this command in the background. Use Read to read the output later.
++- `run_in_background` (boolean) — Set to true to run this command in the background.
+ - `dangerouslyDisableSandbox` (boolean) — Set this to true to dangerously override sandbox mode and run commands without sandboxing.
+ 
+ ### PushNotification
