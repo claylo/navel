@@ -1,6 +1,34 @@
 {
   "changes": [
     {
+      "date": "2026-05-06T15:26:12Z",
+      "version_at_time": "2.1.131",
+      "files_changed": [
+        "cli-reference.md",
+        "commands.md",
+        "env-vars.md",
+        "features-overview.md",
+        "headless.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "llm-gateway.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slash-commands.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-06T14:47:32Z",
       "version_at_time": "2.1.131",
       "files_changed": [
