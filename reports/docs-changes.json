@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-06T16:25:55Z",
+      "version_at_time": "2.1.131",
+      "files_changed": [
+        "setup.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-06T15:26:12Z",
       "version_at_time": "2.1.131",
       "files_changed": [
