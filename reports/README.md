@@ -40,7 +40,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (98)</summary>
+<summary>Commands (100)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -81,6 +81,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /fewer-permission-prompts | Scan your transcripts for common read-only Bash and MCP t... | 2.1.113 | available | yes |
 | /focus | Toggle focus view (show only your prompt, a tool summary,... | 2.1.110 | available | yes |
 | /fork | Spawn a background agent that inherits the full conversation | 2.1.8 | available | yes |
+| **/goal** | Set a goal \u2014 keep working until the condition is met | 2.1.132 | *disabled* | **no** |
 | /heapdump | Dump the JS heap to ~/Desktop | 2.1.71 | available | yes |
 | /help | Show help and available commands | 2.0.0 | available | yes |
 | /hooks | View hook configurations for tool events | 2.0.0 | available | yes |
@@ -107,6 +108,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /powerup | Discover Claude Code features through quick interactive l... | 2.1.90 | available | yes |
 | /privacy-settings | View and update your privacy settings | 2.0.0 | available | yes |
 | **/pro-trial-expired** | Options shown when the Pro plan Claude Code trial has ended | 2.1.118 | available | **no** |
+| /radio | Listen to Claude FM lo-fi radio | 2.1.132 | available | yes |
 | **/rate-limit-options** | Show options when rate limit is reached | 2.0.43 | available | **no** |
 | /recap | Generate a one-line session recap now | 2.1.105 | available | yes |
 | /release-notes | — | 2.0.0 | available | yes |
@@ -741,6 +743,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.132 | — | +goal, +radio | — |
 | 2.1.120 | — | — | +5 |
 | 2.1.119 | — | +autocompact, +background, +bg, +daemon, +stop | +17, -1 |
 | 2.1.118 | +PostToolBatch | +pro-trial-expired | +3 |
