@@ -1376,7 +1376,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 172
+      "mentions": 173
     },
     "memory": {
       "documented": true,
@@ -1434,6 +1434,7 @@
         "amazon-bedrock.md",
         "changelog.md",
         "claude-code-on-the-web.md",
+        "cli-reference.md",
         "commands.md",
         "communications-kit.md",
         "costs.md",
@@ -1457,7 +1458,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 132
+      "mentions": 133
     },
     "passes": {
       "documented": true,
@@ -1744,6 +1745,7 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "claude-code-on-the-web.md",
         "code-review.md",
         "hooks-guide.md",
         "hooks.md",
@@ -1751,7 +1753,7 @@
         "routines.md",
         "vs-code.md"
       ],
-      "mentions": 10
+      "mentions": 11
     },
     "setup-bedrock": {
       "documented": true,
