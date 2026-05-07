@@ -1,6 +1,23 @@
 {
   "changes": [
     {
+      "date": "2026-05-07T16:16:11Z",
+      "version_at_time": "2.1.132",
+      "files_changed": [
+        "env-vars.md",
+        "google-vertex-ai.md",
+        "mcp.md",
+        "output-styles.md",
+        "settings.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-07T14:57:00Z",
       "version_at_time": "2.1.132",
       "files_changed": [
