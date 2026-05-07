@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "date": "2026-05-07T09:52:43Z",
+      "version_at_time": "2.1.132",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md",
+        "env-vars.md",
+        "mcp.md",
+        "settings.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-07T04:15:01Z",
       "version_at_time": "2.1.132",
       "files_changed": [
