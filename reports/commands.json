@@ -797,7 +797,7 @@
         "sessions.md",
         "troubleshooting.md"
       ],
-      "mentions": 49
+      "mentions": 50
     },
     "color": {
       "documented": true,
@@ -1182,7 +1182,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 272
+      "mentions": 273
     },
     "ide": {
       "documented": true,
@@ -1961,7 +1961,7 @@
         "settings.md",
         "terminal-config.md"
       ],
-      "mentions": 12
+      "mentions": 13
     },
     "ultraplan": {
       "documented": true,
