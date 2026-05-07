@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "date": "2026-05-07T04:15:01Z",
+      "version_at_time": "2.1.132",
+      "files_changed": [
+        "env-vars.md",
+        "fullscreen.md",
+        "interactive-mode.md",
+        "model-config.md",
+        "statusline.md",
+        "terminal-config.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-06T23:59:35Z",
       "version_at_time": "2.1.132",
       "files_changed": [
