@@ -932,6 +932,7 @@
         "channels-reference.md",
         "claude-directory.md",
         "commands.md",
+        "debug-your-config.md",
         "env-vars.md",
         "features-overview.md",
         "glossary.md",
@@ -941,7 +942,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 17
+      "mentions": 18
     },
     "desktop": {
       "documented": true,
@@ -1302,7 +1303,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 48
+      "mentions": 49
     },
     "logout": {
       "documented": true,
@@ -1321,7 +1322,7 @@
         "remote-control.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 16
+      "mentions": 17
     },
     "loops": {
       "documented": false,
@@ -1376,7 +1377,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 173
+      "mentions": 174
     },
     "memory": {
       "documented": true,
@@ -1854,7 +1855,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 33
+      "mentions": 34
     },
     "statusline": {
       "documented": true,
