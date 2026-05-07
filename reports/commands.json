@@ -1020,7 +1020,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 39
+      "mentions": 40
     },
     "exit": {
       "documented": true,
@@ -1054,7 +1054,7 @@
         "remote-control.md",
         "ultrareview.md"
       ],
-      "mentions": 7
+      "mentions": 8
     },
     "fast": {
       "documented": true,
@@ -1302,7 +1302,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 47
+      "mentions": 48
     },
     "logout": {
       "documented": true,
@@ -1376,7 +1376,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 171
+      "mentions": 172
     },
     "memory": {
       "documented": true,
@@ -1852,7 +1852,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 32
+      "mentions": 33
     },
     "statusline": {
       "documented": true,
@@ -1932,7 +1932,7 @@
         "interactive-mode.md",
         "terminal-config.md"
       ],
-      "mentions": 12
+      "mentions": 13
     },
     "theme": {
       "documented": true,
@@ -1961,7 +1961,7 @@
         "settings.md",
         "terminal-config.md"
       ],
-      "mentions": 11
+      "mentions": 12
     },
     "ultraplan": {
       "documented": true,
@@ -2007,7 +2007,7 @@
         "overview.md",
         "quickstart.md"
       ],
-      "mentions": 9
+      "mentions": 10
     },
     "usage": {
       "documented": true,
@@ -2024,7 +2024,7 @@
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 31
+      "mentions": 32
     },
     "version": {
       "documented": true,
@@ -2062,5 +2062,5 @@
       "mentions": 17
     }
   },
-  "docs_checked_at": "2026-05-06"
+  "docs_checked_at": "2026-05-07"
 }
