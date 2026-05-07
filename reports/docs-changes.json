@@ -1,6 +1,23 @@
 {
   "changes": [
     {
+      "date": "2026-05-07T22:20:47Z",
+      "version_at_time": "2.1.133",
+      "files_changed": [
+        "authentication.md",
+        "claude-code-on-the-web.md",
+        "debug-your-config.md",
+        "errors.md",
+        "routines.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-07T17:05:37Z",
       "version_at_time": "2.1.132",
       "files_changed": [
