@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "date": "2026-05-08T16:30:44Z",
+      "version_at_time": "2.1.133",
+      "files_changed": [
+        "agent-teams.md",
+        "commands.md",
+        "monitoring-usage.md",
+        "routines.md",
+        "terminal-config.md",
+        "vs-code.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-08T05:41:02Z",
       "version_at_time": "2.1.133",
       "files_changed": [
