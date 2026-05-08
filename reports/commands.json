@@ -698,11 +698,10 @@
         "commands.md",
         "features-overview.md",
         "glossary.md",
-        "overview.md",
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 7
+      "mentions": 6
     },
     "bg": {
       "documented": false,
@@ -1007,6 +1006,7 @@
         "costs.md",
         "env-vars.md",
         "errors.md",
+        "hooks.md",
         "model-config.md",
         "monitoring-usage.md",
         "plugins-reference.md",
@@ -1017,7 +1017,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 41
+      "mentions": 42
     },
     "exit": {
       "documented": true,
@@ -1179,7 +1179,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 273
+      "mentions": 274
     },
     "ide": {
       "documented": true,
@@ -1236,7 +1236,7 @@
         "setup.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 48
+      "mentions": 42
     },
     "install-github-app": {
       "documented": true,
@@ -1549,13 +1549,12 @@
         "plugin-marketplaces.md",
         "plugins-reference.md",
         "plugins.md",
-        "quickstart.md",
         "remote-control.md",
         "settings.md",
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 149
+      "mentions": 147
     },
     "powerup": {
       "documented": true,
@@ -1579,12 +1578,9 @@
       "mentions": 0
     },
     "radio": {
-      "documented": true,
-      "doc_files": [
-        "overview.md",
-        "quickstart.md"
-      ],
-      "mentions": 2
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "rate-limit-options": {
       "documented": false,
@@ -1826,7 +1822,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 170
+      "mentions": 173
     },
     "status": {
       "documented": true,
@@ -1863,6 +1859,7 @@
         "env-vars.md",
         "errors.md",
         "fast-mode.md",
+        "hooks.md",
         "model-config.md",
         "plugins-reference.md",
         "settings.md",
@@ -1872,7 +1869,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 32
+      "mentions": 33
     },
     "stickers": {
       "documented": true,
@@ -2002,11 +1999,9 @@
       "doc_files": [
         "changelog.md",
         "commands.md",
-        "env-vars.md",
-        "overview.md",
-        "quickstart.md"
+        "env-vars.md"
       ],
-      "mentions": 10
+      "mentions": 8
     },
     "usage": {
       "documented": true,
