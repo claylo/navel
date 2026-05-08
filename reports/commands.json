@@ -667,7 +667,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 65
+      "mentions": 66
     },
     "autocompact": {
       "documented": false,
@@ -720,7 +720,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 17
+      "mentions": 18
     },
     "bridge-kick": {
       "documented": false,
@@ -743,7 +743,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 12
+      "mentions": 13
     },
     "chrome": {
       "documented": true,
@@ -792,7 +792,7 @@
         "sessions.md",
         "troubleshooting.md"
       ],
-      "mentions": 50
+      "mentions": 51
     },
     "color": {
       "documented": true,
@@ -849,7 +849,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 67
+      "mentions": 68
     },
     "config": {
       "documented": true,
@@ -904,7 +904,7 @@
         "statusline.md",
         "voice-dictation.md"
       ],
-      "mentions": 44
+      "mentions": 45
     },
     "copy": {
       "documented": true,
@@ -937,7 +937,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 18
+      "mentions": 19
     },
     "desktop": {
       "documented": true,
@@ -975,7 +975,7 @@
         "permissions.md",
         "plugins-reference.md"
       ],
-      "mentions": 3
+      "mentions": 4
     },
     "doctor": {
       "documented": true,
@@ -991,7 +991,7 @@
         "plugin-dependencies.md",
         "troubleshooting.md"
       ],
-      "mentions": 30
+      "mentions": 31
     },
     "dream": {
       "documented": false,
@@ -1017,7 +1017,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 42
+      "mentions": 43
     },
     "exit": {
       "documented": true,
@@ -1081,7 +1081,7 @@
         "troubleshooting.md",
         "zero-data-retention.md"
       ],
-      "mentions": 22
+      "mentions": 23
     },
     "fewer-permission-prompts": {
       "documented": true,
@@ -1210,7 +1210,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 31
+      "mentions": 32
     },
     "init-verifiers": {
       "documented": false,
@@ -1373,7 +1373,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 174
+      "mentions": 175
     },
     "memory": {
       "documented": true,
@@ -1412,7 +1412,7 @@
         "third-party-integrations.md",
         "web-quickstart.md"
       ],
-      "mentions": 101
+      "mentions": 102
     },
     "mobile": {
       "documented": true,
@@ -1455,7 +1455,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 133
+      "mentions": 134
     },
     "passes": {
       "documented": true,
@@ -1503,7 +1503,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 127
+      "mentions": 128
     },
     "plan": {
       "documented": true,
@@ -1525,7 +1525,7 @@
         "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 31
+      "mentions": 32
     },
     "plugin": {
       "documented": true,
@@ -1646,7 +1646,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 43
+      "mentions": 44
     },
     "remote-env": {
       "documented": true,
@@ -1692,7 +1692,7 @@
         "remote-control.md",
         "sessions.md"
       ],
-      "mentions": 60
+      "mentions": 61
     },
     "review": {
       "documented": true,
@@ -1704,7 +1704,7 @@
         "slash-commands.md",
         "ultrareview.md"
       ],
-      "mentions": 8
+      "mentions": 9
     },
     "rewind": {
       "documented": true,
@@ -1721,7 +1721,7 @@
         "glossary.md",
         "sessions.md"
       ],
-      "mentions": 21
+      "mentions": 22
     },
     "security-review": {
       "documented": true,
@@ -1732,7 +1732,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 6
+      "mentions": 7
     },
     "session": {
       "documented": true,
@@ -1776,7 +1776,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 8
+      "mentions": 9
     },
     "skills": {
       "documented": true,
@@ -1917,7 +1917,7 @@
         "commands.md",
         "glossary.md"
       ],
-      "mentions": 4
+      "mentions": 5
     },
     "terminal-setup": {
       "documented": true,
