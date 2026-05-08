@@ -108,7 +108,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /powerup | Discover Claude Code features through quick interactive l... | 2.1.90 | available | yes |
 | /privacy-settings | View and update your privacy settings | 2.0.0 | available | yes |
 | **/pro-trial-expired** | Options shown when the Pro plan Claude Code trial has ended | 2.1.118 | available | **no** |
-| /radio | Listen to Claude FM lo-fi radio | 2.1.132 | available | yes |
+| **/radio** | Listen to Claude FM lo-fi radio | 2.1.132 | available | **no** |
 | **/rate-limit-options** | Show options when rate limit is reached | 2.0.43 | available | **no** |
 | /recap | Generate a one-line session recap now | 2.1.105 | available | yes |
 | /release-notes | — | 2.0.0 | available | yes |
