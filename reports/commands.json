@@ -112,7 +112,7 @@
     "bridge-kick": "Inject bridge failure states for manual recovery testing",
     "brief": "Toggle brief-only mode",
     "btw": "Ask a quick side question without interrupting the main conversation",
-    "chrome": "Claude in Chrome (Beta) settings",
+    "chrome": "Claude in Chrome (beta) settings",
     "claude-in-chrome": "Automates your Chrome browser to interact with web pages - clicking elements, filling forms, capturing screenshots, reading console logs, and navigating sites. Opens pages in new tabs within your existing Chrome session. Requires site-level permissions before executing (configured in the extension).",
     "clear": "Start a new session with empty context; previous session stays on disk (resumable with /resume)",
     "color": "Set the prompt bar color for this session",
@@ -216,7 +216,7 @@
     "fewer-permission-prompts": "available",
     "focus": "available",
     "fork": "available",
-    "goal": "disabled",
+    "goal": "available",
     "heapdump": "available",
     "help": "available",
     "hooks": "available",
@@ -880,7 +880,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 83
+      "mentions": 85
     },
     "context": {
       "documented": true,
