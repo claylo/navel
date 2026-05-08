@@ -56,7 +56,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/bridge-kick** | Inject bridge failure states for manual recovery testing | 2.1.76 | *disabled* | **no** |
 | **/brief** | Toggle brief-only mode | 2.1.72 | available | **no** |
 | /btw | Ask a quick side question without interrupting the main c... | 2.1.6 | available | yes |
-| /chrome | Claude in Chrome (Beta) settings | 2.0.71 | available | yes |
+| /chrome | Claude in Chrome (beta) settings | 2.0.71 | available | yes |
 | /claude-in-chrome | Automates your Chrome browser to interact with web pages ... | 2.1.7 | available | yes |
 | /clear | Start a new session with empty context; previous session ... | 2.0.0 | available | yes |
 | /color | Set the prompt bar color for this session | 2.1.7 | available | yes |
@@ -81,7 +81,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /fewer-permission-prompts | Scan your transcripts for common read-only Bash and MCP t... | 2.1.113 | available | yes |
 | /focus | Toggle focus view (show only your prompt, a tool summary,... | 2.1.110 | available | yes |
 | /fork | Spawn a background agent that inherits the full conversation | 2.1.8 | available | yes |
-| **/goal** | Set a goal \u2014 keep working until the condition is met | 2.1.132 | *disabled* | **no** |
+| **/goal** | Set a goal \u2014 keep working until the condition is met | 2.1.132 | available | **no** |
 | /heapdump | Dump the JS heap to ~/Desktop | 2.1.71 | available | yes |
 | /help | Show help and available commands | 2.0.0 | available | yes |
 | /hooks | View hook configurations for tool events | 2.0.0 | available | yes |
