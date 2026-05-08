@@ -694,19 +694,15 @@
     "batch": {
       "documented": true,
       "doc_files": [
-        "amazon-bedrock.md",
         "changelog.md",
         "commands.md",
         "features-overview.md",
         "glossary.md",
-        "google-vertex-ai.md",
-        "microsoft-foundry.md",
         "overview.md",
         "skills.md",
-        "slash-commands.md",
-        "third-party-integrations.md"
+        "slash-commands.md"
       ],
-      "mentions": 11
+      "mentions": 7
     },
     "bg": {
       "documented": false,
@@ -1021,7 +1017,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 40
+      "mentions": 41
     },
     "exit": {
       "documented": true,
@@ -1214,7 +1210,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 30
+      "mentions": 31
     },
     "init-verifiers": {
       "documented": false,
@@ -2065,5 +2061,5 @@
       "mentions": 17
     }
   },
-  "docs_checked_at": "2026-05-07"
+  "docs_checked_at": "2026-05-08"
 }
