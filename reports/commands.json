@@ -720,7 +720,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 18
+      "mentions": 19
     },
     "bridge-kick": {
       "documented": false,
@@ -792,7 +792,7 @@
         "sessions.md",
         "troubleshooting.md"
       ],
-      "mentions": 51
+      "mentions": 54
     },
     "color": {
       "documented": true,
@@ -943,6 +943,7 @@
       "documented": true,
       "doc_files": [
         "best-practices.md",
+        "changelog.md",
         "claude-code-on-the-web.md",
         "claude-directory.md",
         "commands.md",
@@ -966,7 +967,7 @@
         "web-quickstart.md",
         "zero-data-retention.md"
       ],
-      "mentions": 63
+      "mentions": 64
     },
     "diff": {
       "documented": true,
@@ -991,7 +992,7 @@
         "plugin-dependencies.md",
         "troubleshooting.md"
       ],
-      "mentions": 31
+      "mentions": 32
     },
     "dream": {
       "documented": false,
@@ -1223,7 +1224,7 @@
         "changelog.md",
         "commands.md"
       ],
-      "mentions": 3
+      "mentions": 4
     },
     "install": {
       "documented": true,
@@ -1241,12 +1242,13 @@
     "install-github-app": {
       "documented": true,
       "doc_files": [
+        "changelog.md",
         "commands.md",
         "env-vars.md",
         "github-actions.md",
         "github-enterprise-server.md"
       ],
-      "mentions": 7
+      "mentions": 8
     },
     "install-slack-app": {
       "documented": true,
@@ -1373,7 +1375,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 175
+      "mentions": 176
     },
     "memory": {
       "documented": true,
@@ -1604,7 +1606,7 @@
         "commands.md",
         "network-config.md"
       ],
-      "mentions": 4
+      "mentions": 5
     },
     "reload-plugins": {
       "documented": true,
@@ -1692,7 +1694,7 @@
         "remote-control.md",
         "sessions.md"
       ],
-      "mentions": 61
+      "mentions": 64
     },
     "review": {
       "documented": true,
@@ -1822,7 +1824,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 173
+      "mentions": 174
     },
     "status": {
       "documented": true,
@@ -1928,7 +1930,7 @@
         "interactive-mode.md",
         "terminal-config.md"
       ],
-      "mentions": 13
+      "mentions": 14
     },
     "theme": {
       "documented": true,
@@ -2018,7 +2020,7 @@
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 32
+      "mentions": 33
     },
     "version": {
       "documented": true,
@@ -2048,12 +2050,13 @@
     "web-setup": {
       "documented": true,
       "doc_files": [
+        "changelog.md",
         "claude-code-on-the-web.md",
         "commands.md",
         "routines.md",
         "web-quickstart.md"
       ],
-      "mentions": 17
+      "mentions": 18
     }
   },
   "docs_checked_at": "2026-05-08"
