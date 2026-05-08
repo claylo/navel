@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-08T05:41:02Z",
+      "version_at_time": "2.1.133",
+      "files_changed": [
+        "desktop.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-08T01:36:21Z",
       "version_at_time": "2.1.133",
       "files_changed": [
