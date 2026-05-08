@@ -277,7 +277,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 91
+      "mentions": 92
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -316,7 +316,7 @@
         "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 120
+      "mentions": 121
     },
     "SessionEnd": {
       "documented": true,
@@ -387,7 +387,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 110
+      "mentions": 111
     },
     "StopFailure": {
       "documented": true,
@@ -421,7 +421,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 34
+      "mentions": 35
     },
     "TaskCompleted": {
       "documented": true,
@@ -497,5 +497,5 @@
       "mentions": 19
     }
   },
-  "docs_checked_at": "2026-05-05"
+  "docs_checked_at": "2026-05-08"
 }
