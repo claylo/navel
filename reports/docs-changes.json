@@ -1,6 +1,28 @@
 {
   "changes": [
     {
+      "date": "2026-05-08T01:36:21Z",
+      "version_at_time": "2.1.133",
+      "files_changed": [
+        "cli-reference.md",
+        "env-vars.md",
+        "features-overview.md",
+        "hooks.md",
+        "overview.md",
+        "plugins.md",
+        "quickstart.md",
+        "settings.md",
+        "sub-agents.md",
+        "subagents.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-08T00:23:50Z",
       "version_at_time": "2.1.133",
       "files_changed": [
