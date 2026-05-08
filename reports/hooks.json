@@ -344,7 +344,7 @@
         "tools-reference.md",
         "web-quickstart.md"
       ],
-      "mentions": 57
+      "mentions": 58
     },
     "Setup": {
       "documented": true,
@@ -387,7 +387,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 111
+      "mentions": 112
     },
     "StopFailure": {
       "documented": true,
@@ -473,7 +473,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 31
+      "mentions": 32
     },
     "WorktreeCreate": {
       "documented": true,
