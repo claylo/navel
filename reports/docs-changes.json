@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-05-09T03:04:00Z",
+      "version_at_time": "2.1.137",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        "2026-w18.md",
+        "2026-w19.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-09T00:19:34Z",
       "version_at_time": "2.1.137",
       "files_changed": [
