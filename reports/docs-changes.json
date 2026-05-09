@@ -1,6 +1,30 @@
 {
   "changes": [
     {
+      "date": "2026-05-09T04:53:47Z",
+      "version_at_time": "2.1.137",
+      "files_changed": [
+        "auto-mode-config.md",
+        "commands.md",
+        "env-vars.md",
+        "errors.md",
+        "interactive-mode.md",
+        "mcp.md",
+        "permissions.md",
+        "plugins-reference.md",
+        "routines.md",
+        "security.md",
+        "server-managed-settings.md",
+        "settings.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-09T03:04:00Z",
       "version_at_time": "2.1.137",
       "files_changed": [
