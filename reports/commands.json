@@ -1505,7 +1505,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 128
+      "mentions": 129
     },
     "plan": {
       "documented": true,
@@ -1580,9 +1580,11 @@
       "mentions": 0
     },
     "radio": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "commands.md"
+      ],
+      "mentions": 1
     },
     "rate-limit-options": {
       "documented": false,
@@ -1824,7 +1826,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 174
+      "mentions": 173
     },
     "status": {
       "documented": true,
@@ -2059,5 +2061,5 @@
       "mentions": 18
     }
   },
-  "docs_checked_at": "2026-05-08"
+  "docs_checked_at": "2026-05-09"
 }
