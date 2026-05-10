@@ -849,7 +849,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 68
+      "mentions": 70
     },
     "config": {
       "documented": true,
@@ -2061,5 +2061,5 @@
       "mentions": 18
     }
   },
-  "docs_checked_at": "2026-05-09"
+  "docs_checked_at": "2026-05-10"
 }
