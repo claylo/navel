@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-05-10T23:08:15Z",
+      "version_at_time": "2.1.138",
+      "files_changed": [
+        "settings.md",
+        "skills.md",
+        "slash-commands.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-10T17:21:08Z",
       "version_at_time": "2.1.138",
       "files_changed": [
