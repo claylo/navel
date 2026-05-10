@@ -316,7 +316,7 @@
         "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 121
+      "mentions": 123
     },
     "SessionEnd": {
       "documented": true,
@@ -497,5 +497,5 @@
       "mentions": 19
     }
   },
-  "docs_checked_at": "2026-05-08"
+  "docs_checked_at": "2026-05-10"
 }
