@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-10T17:21:08Z",
+      "version_at_time": "2.1.138",
+      "files_changed": [
+        "hooks-guide.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-10T04:22:27Z",
       "version_at_time": "2.1.138",
       "files_changed": [
