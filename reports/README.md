@@ -40,7 +40,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (100)</summary>
+<summary>Commands (101)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -119,6 +119,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /resume | Resume a previous conversation | 2.0.0 | available | yes |
 | /review | Review a pull request | 2.0.0 | available | yes |
 | /rewind | — | 2.0.0 | available | yes |
+| **/scroll-speed** | Adjust mouse wheel scroll speed | 2.1.139 | available | **no** |
 | /security-review | Complete a security review of the pending changes on the ... | 2.0.0 | available | yes |
 | /session | — | 2.1.15 | available | yes |
 | /setup-bedrock | Reconfigure Amazon Bedrock authentication, region, or mod... | 2.1.92 | available | yes |
@@ -743,6 +744,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.139 | — | +scroll-speed | — |
 | 2.1.132 | — | +goal, +radio | — |
 | 2.1.120 | — | — | +5 |
 | 2.1.119 | — | +autocompact, +background, +bg, +daemon, +stop | +17, -1 |
