@@ -51,7 +51,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /autofix-pr | Monitor and autofix any issues with the current PR | 2.1.94 | available | yes |
 | /background | — | 2.1.119 | available | yes |
 | /batch | Research and plan a large-scale change, then execute it i... | 2.1.63 | available | yes |
-| **/bg** |  | 2.1.119 | available | **no** |
+| /bg |  | 2.1.119 | available | yes |
 | /branch | — | 2.1.77 | available | yes |
 | **/bridge-kick** | Inject bridge failure states for manual recovery testing | 2.1.76 | *disabled* | **no** |
 | **/brief** | Toggle brief-only mode | 2.1.72 | available | **no** |
@@ -66,7 +66,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /config | Open config panel | 2.0.0 | available | yes |
 | /context | Visualize current context usage as a colored grid | 2.0.0 | available | yes |
 | /copy | Copy Claude's last response to clipboard (or /copy N for ... | 2.1.20 | available | yes |
-| **/daemon** | Manage background services: assistants, scheduled tasks, ... | 2.1.119 | available | **no** |
+| /daemon | Manage background services: assistants, scheduled tasks, ... | 2.1.119 | available | yes |
 | /debug | Enable debug logging for this session and help diagnose i... | 2.1.30 | available | yes |
 | /desktop | — | 2.1.42 | available | yes |
 | /diff | View uncommitted changes and per-turn diffs | 2.1.50 | available | yes |
@@ -129,7 +129,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /status | Show Claude Code status including version, model, account... | 2.0.0 | available | yes |
 | /statusline | — | 2.0.0 | available | yes |
 | /stickers | Order Claude Code stickers | 2.0.32 | available | yes |
-| **/stop** | Stop this background session; transcript and worktree are... | 2.1.119 | available | **no** |
+| /stop | Stop this background session; transcript and worktree are... | 2.1.119 | available | yes |
 | /tasks | — | 2.0.45 | available | yes |
 | /team-onboarding | Help teammates ramp on Claude Code with a guide from your... | 2.1.94 | available | yes |
 | /teleport | Resume a Claude Code session from claude.ai | 2.1.92 | available | yes |
