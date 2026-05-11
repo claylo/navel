@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-05-11T21:30:23Z",
+      "version_at_time": "2.1.139",
+      "files_changed": [
+        "agent-view.md",
+        "commands.md"
+      ],
+      "files_added": [
+        "agents.md",
+        "worktrees.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-11T19:34:57Z",
       "version_at_time": "2.1.139",
       "files_changed": [
