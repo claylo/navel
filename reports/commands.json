@@ -657,6 +657,8 @@
     "agents": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
+        "agents.md",
         "best-practices.md",
         "changelog.md",
         "claude-code-on-the-web.md",
@@ -672,9 +674,10 @@
         "skills.md",
         "slash-commands.md",
         "sub-agents.md",
-        "subagents.md"
+        "subagents.md",
+        "worktrees.md"
       ],
-      "mentions": 65
+      "mentions": 70
     },
     "autocompact": {
       "documented": false,
@@ -701,11 +704,12 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 12
+      "mentions": 13
     },
     "batch": {
       "documented": true,
       "doc_files": [
+        "agents.md",
         "changelog.md",
         "claude-platform-on-aws.md",
         "commands.md",
@@ -714,7 +718,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 7
+      "mentions": 9
     },
     "bg": {
       "documented": true,
@@ -961,6 +965,7 @@
     "desktop": {
       "documented": true,
       "doc_files": [
+        "agents.md",
         "best-practices.md",
         "changelog.md",
         "claude-code-on-the-web.md",
@@ -984,9 +989,10 @@
         "setup.md",
         "troubleshoot-install.md",
         "web-quickstart.md",
+        "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 64
+      "mentions": 68
     },
     "diff": {
       "documented": true,
@@ -1208,9 +1214,10 @@
         "sub-agents.md",
         "subagents.md",
         "terminal-config.md",
-        "tools-reference.md"
+        "tools-reference.md",
+        "worktrees.md"
       ],
-      "mentions": 282
+      "mentions": 287
     },
     "ide": {
       "documented": true,
@@ -1364,6 +1371,7 @@
       "documented": true,
       "doc_files": [
         "admin-setup.md",
+        "agents.md",
         "best-practices.md",
         "changelog.md",
         "channels-reference.md",
@@ -1408,7 +1416,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 178
+      "mentions": 179
     },
     "memory": {
       "documented": true,
@@ -1940,6 +1948,7 @@
       "documented": true,
       "doc_files": [
         "agent-teams.md",
+        "agents.md",
         "changelog.md",
         "claude-code-on-the-web.md",
         "claude-directory.md",
@@ -1951,7 +1960,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 15
+      "mentions": 17
     },
     "team-onboarding": {
       "documented": true,
