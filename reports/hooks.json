@@ -372,8 +372,11 @@
     "Stop": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "champion-kit.md",
         "changelog.md",
+        "cli-reference.md",
+        "commands.md",
         "communications-kit.md",
         "computer-use.md",
         "desktop.md",
@@ -388,7 +391,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 113
+      "mentions": 118
     },
     "StopFailure": {
       "documented": true,
