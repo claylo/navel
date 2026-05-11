@@ -377,6 +377,7 @@
         "communications-kit.md",
         "computer-use.md",
         "desktop.md",
+        "glossary.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
@@ -387,7 +388,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 112
+      "mentions": 113
     },
     "StopFailure": {
       "documented": true,
@@ -497,5 +498,5 @@
       "mentions": 19
     }
   },
-  "docs_checked_at": "2026-05-10"
+  "docs_checked_at": "2026-05-11"
 }
