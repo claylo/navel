@@ -213,9 +213,10 @@
         "remote-control.md",
         "settings.md",
         "statusline.md",
-        "terminal-config.md"
+        "terminal-config.md",
+        "tools-reference.md"
       ],
-      "mentions": 44
+      "mentions": 45
     },
     "PermissionDenied": {
       "documented": true,
@@ -277,7 +278,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 92
+      "mentions": 95
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -314,9 +315,10 @@
         "plugins-reference.md",
         "sub-agents.md",
         "subagents.md",
+        "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 123
+      "mentions": 124
     },
     "SessionEnd": {
       "documented": true,
@@ -344,7 +346,7 @@
         "tools-reference.md",
         "web-quickstart.md"
       ],
-      "mentions": 58
+      "mentions": 59
     },
     "Setup": {
       "documented": true,
@@ -352,6 +354,7 @@
         "amazon-bedrock.md",
         "changelog.md",
         "claude-code-on-the-web.md",
+        "claude-platform-on-aws.md",
         "cli-reference.md",
         "code-review.md",
         "discover-plugins.md",
@@ -367,7 +370,7 @@
         "routines.md",
         "web-quickstart.md"
       ],
-      "mentions": 50
+      "mentions": 51
     },
     "Stop": {
       "documented": true,
@@ -381,6 +384,7 @@
         "computer-use.md",
         "desktop.md",
         "glossary.md",
+        "goal.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
@@ -391,7 +395,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 118
+      "mentions": 125
     },
     "StopFailure": {
       "documented": true,
