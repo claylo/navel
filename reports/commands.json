@@ -693,11 +693,16 @@
     "background": {
       "documented": true,
       "doc_files": [
+        "admin-setup.md",
+        "agent-view.md",
+        "commands.md",
+        "env-vars.md",
         "plugins-reference.md",
+        "settings.md",
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 7
+      "mentions": 12
     },
     "batch": {
       "documented": true,
@@ -712,9 +717,12 @@
       "mentions": 6
     },
     "bg": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "agent-view.md",
+        "commands.md"
+      ],
+      "mentions": 3
     },
     "branch": {
       "documented": true,
@@ -924,9 +932,11 @@
       "mentions": 9
     },
     "daemon": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "agent-view.md"
+      ],
+      "mentions": 2
     },
     "debug": {
       "documented": true,
@@ -1034,12 +1044,13 @@
     "exit": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "changelog.md",
         "commands.md",
         "quickstart.md",
         "remote-control.md"
       ],
-      "mentions": 7
+      "mentions": 9
     },
     "export": {
       "documented": true,
@@ -1482,6 +1493,7 @@
       "doc_files": [
         "admin-setup.md",
         "agent-teams.md",
+        "agent-view.md",
         "analytics.md",
         "auto-mode-config.md",
         "best-practices.md",
@@ -1516,7 +1528,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 129
+      "mentions": 131
     },
     "plan": {
       "documented": true,
@@ -1802,6 +1814,7 @@
       "documented": true,
       "doc_files": [
         "agent-teams.md",
+        "agent-view.md",
         "best-practices.md",
         "champion-kit.md",
         "changelog.md",
@@ -1842,7 +1855,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 175
+      "mentions": 177
     },
     "status": {
       "documented": true,
@@ -1899,9 +1912,12 @@
       "mentions": 1
     },
     "stop": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "agent-view.md",
+        "commands.md"
+      ],
+      "mentions": 2
     },
     "tasks": {
       "documented": true,
