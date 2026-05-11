@@ -81,7 +81,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /fewer-permission-prompts | Scan your transcripts for common read-only Bash and MCP t... | 2.1.113 | available | yes |
 | /focus | Toggle focus view (show only your prompt, a tool summary,... | 2.1.110 | available | yes |
 | /fork | Spawn a background agent that inherits the full conversation | 2.1.8 | available | yes |
-| **/goal** | Set a goal \u2014 keep working until the condition is met | 2.1.132 | available | **no** |
+| /goal | Set a goal \u2014 keep working until the condition is met | 2.1.132 | available | yes |
 | /heapdump | Dump the JS heap to ~/Desktop | 2.1.71 | available | yes |
 | /help | Show help and available commands | 2.0.0 | available | yes |
 | /hooks | View hook configurations for tool events | 2.0.0 | available | yes |
@@ -119,7 +119,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /resume | Resume a previous conversation | 2.0.0 | available | yes |
 | /review | Review a pull request | 2.0.0 | available | yes |
 | /rewind | — | 2.0.0 | available | yes |
-| **/scroll-speed** | Adjust mouse wheel scroll speed | 2.1.139 | available | **no** |
+| /scroll-speed | Adjust mouse wheel scroll speed | 2.1.139 | available | yes |
 | /security-review | Complete a security review of the pending changes on the ... | 2.0.0 | available | yes |
 | /session | — | 2.1.15 | available | yes |
 | /setup-bedrock | Reconfigure Amazon Bedrock authentication, region, or mod... | 2.1.92 | available | yes |
