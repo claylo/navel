@@ -1,6 +1,36 @@
 {
   "changes": [
     {
+      "date": "2026-05-11T23:01:35Z",
+      "version_at_time": "2.1.139",
+      "files_changed": [
+        "agent-view.md",
+        "commands.md",
+        "env-vars.md",
+        "fullscreen.md",
+        "glossary.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "llm-gateway.md",
+        "mcp.md",
+        "memory.md",
+        "monitoring-usage.md",
+        "output-styles.md",
+        "permission-modes.md",
+        "plugins-reference.md",
+        "quickstart.md",
+        "settings.md",
+        "vs-code.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-11T21:30:23Z",
       "version_at_time": "2.1.139",
       "files_changed": [
