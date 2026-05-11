@@ -75,6 +75,7 @@
     "resume",
     "review",
     "rewind",
+    "scroll-speed",
     "security-review",
     "session",
     "setup-bedrock",
@@ -159,6 +160,7 @@
     "remote-env": "Configure the default remote environment for teleport sessions",
     "resume": "Resume a previous conversation",
     "review": "Review a pull request",
+    "scroll-speed": "Adjust mouse wheel scroll speed",
     "security-review": "Complete a security review of the pending changes on the current branch",
     "setup-bedrock": "Reconfigure Amazon Bedrock authentication, region, or model pins",
     "setup-vertex": "Reconfigure Google Vertex AI authentication, project, region, or model pins",
@@ -254,6 +256,7 @@
     "resume": "available",
     "review": "available",
     "rewind": "available",
+    "scroll-speed": "available",
     "security-review": "available",
     "session": "available",
     "setup-bedrock": "available",
@@ -624,6 +627,11 @@
       "added": [
         "goal",
         "radio"
+      ]
+    },
+    "2.1.139": {
+      "added": [
+        "scroll-speed"
       ]
     }
   },
@@ -1729,6 +1737,11 @@
         "sessions.md"
       ],
       "mentions": 22
+    },
+    "scroll-speed": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "security-review": {
       "documented": true,
