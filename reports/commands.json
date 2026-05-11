@@ -990,9 +990,12 @@
         "how-claude-code-works.md",
         "keybindings.md",
         "plugin-dependencies.md",
+        "settings.md",
+        "skills.md",
+        "slash-commands.md",
         "troubleshooting.md"
       ],
-      "mentions": 32
+      "mentions": 35
     },
     "dream": {
       "documented": false,
@@ -1826,7 +1829,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 173
+      "mentions": 175
     },
     "status": {
       "documented": true,
@@ -2061,5 +2064,5 @@
       "mentions": 18
     }
   },
-  "docs_checked_at": "2026-05-10"
+  "docs_checked_at": "2026-05-11"
 }
