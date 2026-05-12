@@ -902,7 +902,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 86
+      "mentions": 88
     },
     "context": {
       "documented": true,
@@ -1501,7 +1501,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 137
+      "mentions": 139
     },
     "passes": {
       "documented": true,
