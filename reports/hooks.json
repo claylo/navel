@@ -216,7 +216,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 45
+      "mentions": 46
     },
     "PermissionDenied": {
       "documented": true,
@@ -318,7 +318,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 125
+      "mentions": 126
     },
     "SessionEnd": {
       "documented": true,
@@ -387,6 +387,7 @@
         "goal.md",
         "hooks-guide.md",
         "hooks.md",
+        "interactive-mode.md",
         "plugins-reference.md",
         "scheduled-tasks.md",
         "sub-agents.md",
@@ -395,7 +396,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 125
+      "mentions": 126
     },
     "StopFailure": {
       "documented": true,
