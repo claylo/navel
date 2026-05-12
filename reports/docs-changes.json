@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-05-12T19:34:44Z",
+      "version_at_time": "2.1.139",
+      "files_changed": [
+        "agent-teams.md",
+        "settings.md",
+        "tools-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-12T18:36:07Z",
       "version_at_time": "2.1.139",
       "files_changed": [
@@ -2254,27 +2269,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-03-31T07:25:54Z",
-      "version_at_time": "2.1.88",
-      "files_changed": [
-        "agent-teams.md",
-        "changelog.md",
-        "claude-code-on-the-web.md",
-        "code-review.md",
-        "desktop.md",
-        "env-vars.md",
-        "hooks.md",
-        "sub-agents.md",
-        "terminal-config.md"
-      ],
-      "files_added": [
-        "fullscreen.md"
       ],
       "files_removed": [
         ""
