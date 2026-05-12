@@ -1590,6 +1590,7 @@
         "headless.md",
         "hooks.md",
         "jetbrains.md",
+        "mcp.md",
         "monitoring-usage.md",
         "overview.md",
         "plugin-dependencies.md",
@@ -1601,7 +1602,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 148
+      "mentions": 149
     },
     "powerup": {
       "documented": true,
@@ -1668,7 +1669,7 @@
         "plugins.md",
         "remote-control.md"
       ],
-      "mentions": 18
+      "mentions": 19
     },
     "remote-control": {
       "documented": true,
