@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-05-12T20:29:38Z",
+      "version_at_time": "2.1.140",
+      "files_changed": [
+        "mcp.md",
+        "security.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-12T19:34:44Z",
       "version_at_time": "2.1.139",
       "files_changed": [
@@ -2235,40 +2249,6 @@
       ],
       "files_added": [
         "ultraplan.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-01T00:18:35Z",
-      "version_at_time": "2.1.89",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "claude-code-on-the-web.md",
-        "cli-reference.md",
-        "commands.md",
-        "costs.md",
-        "discover-plugins.md",
-        "env-vars.md",
-        "features-overview.md",
-        "google-vertex-ai.md",
-        "hooks-guide.md",
-        "interactive-mode.md",
-        "mcp.md",
-        "memory.md",
-        "permissions.md",
-        "sandboxing.md",
-        "server-managed-settings.md",
-        "settings.md",
-        "skills.md",
-        "sub-agents.md",
-        "terminal-config.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
