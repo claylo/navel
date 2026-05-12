@@ -1417,7 +1417,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 179
+      "mentions": 180
     },
     "memory": {
       "documented": true,
@@ -1499,7 +1499,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 136
+      "mentions": 137
     },
     "passes": {
       "documented": true,
@@ -1548,7 +1548,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 141
+      "mentions": 142
     },
     "plan": {
       "documented": true,
@@ -1570,7 +1570,7 @@
         "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 35
+      "mentions": 36
     },
     "plugin": {
       "documented": true,
