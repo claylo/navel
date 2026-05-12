@@ -278,7 +278,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 95
+      "mentions": 96
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -318,7 +318,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 124
+      "mentions": 125
     },
     "SessionEnd": {
       "documented": true,
@@ -507,5 +507,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-05-11"
+  "docs_checked_at": "2026-05-12"
 }
