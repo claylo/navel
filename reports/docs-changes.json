@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-05-12T21:27:16Z",
+      "version_at_time": "2.1.140",
+      "files_changed": [
+        "agent-view.md",
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-12T20:29:38Z",
       "version_at_time": "2.1.140",
       "files_changed": [
@@ -2186,69 +2200,6 @@
         "2026-w14.md",
         "desktop-scheduled-tasks.md",
         "index.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-03T18:21:33Z",
-      "version_at_time": "2.1.91",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "analytics.md",
-        "best-practices.md",
-        "changelog.md",
-        "chrome.md",
-        "claude-code-on-the-web.md",
-        "claude-directory.md",
-        "cli-reference.md",
-        "code-review.md",
-        "commands.md",
-        "common-workflows.md",
-        "computer-use.md",
-        "desktop-quickstart.md",
-        "desktop.md",
-        "discover-plugins.md",
-        "env-vars.md",
-        "fast-mode.md",
-        "fullscreen.md",
-        "github-actions.md",
-        "github-enterprise-server.md",
-        "google-vertex-ai.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "how-claude-code-works.md",
-        "interactive-mode.md",
-        "keybindings.md",
-        "mcp.md",
-        "memory.md",
-        "model-config.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "output-styles.md",
-        "overview.md",
-        "permission-modes.md",
-        "permissions.md",
-        "platforms.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "plugins.md",
-        "quickstart.md",
-        "remote-control.md",
-        "sandboxing.md",
-        "scheduled-tasks.md",
-        "settings.md",
-        "setup.md",
-        "skills.md",
-        "slack.md",
-        "statusline.md",
-        "sub-agents.md",
-        "tools-reference.md",
-        "troubleshooting.md"
-      ],
-      "files_added": [
-        "ultraplan.md"
       ],
       "files_removed": [
         ""
