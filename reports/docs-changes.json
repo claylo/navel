@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-12T15:33:14Z",
+      "version_at_time": "2.1.139",
+      "files_changed": [
+        "routines.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-12T14:56:35Z",
       "version_at_time": "2.1.139",
       "files_changed": [
@@ -2294,31 +2307,6 @@
       "files_added": [
         "computer-use.md",
         "github-enterprise-server.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-03-28T17:00:16Z",
-      "version_at_time": "2.1.87",
-      "files_changed": [
-        "data-usage.md",
-        "desktop-quickstart.md",
-        "desktop.md",
-        "devcontainer.md",
-        "discover-plugins.md",
-        "env-vars.md",
-        "hooks-guide.md",
-        "keybindings.md",
-        "legal-and-compliance.md",
-        "llm-gateway.md",
-        "mcp.md",
-        "skills.md",
-        "slack.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
