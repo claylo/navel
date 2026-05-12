@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-12T14:56:35Z",
+      "version_at_time": "2.1.139",
+      "files_changed": [
+        "plugins.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-12T01:32:42Z",
       "version_at_time": "2.1.139",
       "files_changed": [
@@ -2306,46 +2319,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-03-27T23:10:27Z",
-      "version_at_time": "2.1.86",
-      "files_changed": [
-        "agent-teams.md",
-        "changelog.md",
-        "channels-reference.md",
-        "cli-reference.md",
-        "code-review.md",
-        "commands.md",
-        "common-workflows.md",
-        "context-window.md",
-        "costs.md",
-        "data-usage.md",
-        "desktop-quickstart.md",
-        "desktop.md",
-        "devcontainer.md",
-        "discover-plugins.md",
-        "env-vars.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "how-claude-code-works.md",
-        "interactive-mode.md",
-        "jetbrains.md",
-        "keybindings.md",
-        "legal-and-compliance.md",
-        "llm-gateway.md",
-        "mcp.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "output-styles.md",
-        "settings.md"
-      ],
-      "files_added": [
-        "claude-directory.md"
       ],
       "files_removed": [
         ""
