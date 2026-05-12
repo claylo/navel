@@ -1,6 +1,26 @@
 {
   "changes": [
     {
+      "date": "2026-05-12T18:36:07Z",
+      "version_at_time": "2.1.139",
+      "files_changed": [
+        "cli-reference.md",
+        "data-usage.md",
+        "env-vars.md",
+        "fast-mode.md",
+        "monitoring-usage.md",
+        "output-styles.md",
+        "permissions.md",
+        "sandboxing.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-12T15:33:14Z",
       "version_at_time": "2.1.139",
       "files_changed": [
@@ -2255,58 +2275,6 @@
       ],
       "files_added": [
         "fullscreen.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-03-30T20:32:40Z",
-      "version_at_time": "2.1.87",
-      "files_changed": [
-        "changelog.md",
-        "channels-reference.md",
-        "channels.md",
-        "checkpointing.md",
-        "chrome.md",
-        "claude-code-on-the-web.md",
-        "claude-directory.md",
-        "cli-reference.md",
-        "code-review.md",
-        "commands.md",
-        "common-workflows.md",
-        "context-window.md",
-        "costs.md",
-        "data-usage.md",
-        "desktop-quickstart.md",
-        "desktop.md",
-        "devcontainer.md",
-        "discover-plugins.md",
-        "env-vars.md",
-        "model-config.md",
-        "network-config.md",
-        "output-styles.md",
-        "overview.md",
-        "permission-modes.md",
-        "permissions.md",
-        "platforms.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "plugins.md",
-        "quickstart.md",
-        "remote-control.md",
-        "sandboxing.md",
-        "scheduled-tasks.md",
-        "security.md",
-        "settings.md",
-        "voice-dictation.md",
-        "vs-code.md",
-        "web-scheduled-tasks.md",
-        "zero-data-retention.md"
-      ],
-      "files_added": [
-        "computer-use.md",
-        "github-enterprise-server.md"
       ],
       "files_removed": [
         ""
