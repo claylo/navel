@@ -1,6 +1,30 @@
 {
   "changes": [
     {
+      "date": "2026-05-12T23:24:19Z",
+      "version_at_time": "2.1.140",
+      "files_changed": [
+        "agent-view.md",
+        "claude-code-on-the-web.md",
+        "commands.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "fast-mode.md",
+        "goal.md",
+        "permissions.md",
+        "plugins-reference.md",
+        "settings.md",
+        "web-quickstart.md",
+        "worktrees.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-12T21:27:16Z",
       "version_at_time": "2.1.140",
       "files_changed": [
@@ -2168,38 +2192,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-04T03:27:30Z",
-      "version_at_time": "2.1.92",
-      "files_changed": [
-        "agent-teams.md",
-        "changelog.md",
-        "common-workflows.md",
-        "desktop-quickstart.md",
-        "desktop.md",
-        "env-vars.md",
-        "headless.md",
-        "legal-and-compliance.md",
-        "overview.md",
-        "permission-modes.md",
-        "platforms.md",
-        "remote-control.md",
-        "scheduled-tasks.md",
-        "sub-agents.md",
-        "ultraplan.md",
-        "vs-code.md",
-        "web-scheduled-tasks.md"
-      ],
-      "files_added": [
-        "2026-w13.md",
-        "2026-w14.md",
-        "desktop-scheduled-tasks.md",
-        "index.md"
       ],
       "files_removed": [
         ""
