@@ -1,6 +1,29 @@
 {
   "changes": [
     {
+      "date": "2026-05-12T00:25:05Z",
+      "version_at_time": "2.1.139",
+      "files_changed": [
+        "channels-reference.md",
+        "channels.md",
+        "claude-directory.md",
+        "env-vars.md",
+        "google-vertex-ai.md",
+        "interactive-mode.md",
+        "mcp.md",
+        "model-config.md",
+        "permission-modes.md",
+        "permissions.md",
+        "quickstart.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-11T23:01:35Z",
       "version_at_time": "2.1.139",
       "files_changed": [
