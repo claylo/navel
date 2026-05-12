@@ -1090,12 +1090,13 @@
         "amazon-bedrock.md",
         "changelog.md",
         "commands.md",
+        "env-vars.md",
         "fast-mode.md",
         "google-vertex-ai.md",
         "monitoring-usage.md",
         "settings.md"
       ],
-      "mentions": 23
+      "mentions": 26
     },
     "feedback": {
       "documented": true,
@@ -1428,6 +1429,7 @@
         "champion-kit.md",
         "changelog.md",
         "claude-directory.md",
+        "cli-reference.md",
         "code-review.md",
         "commands.md",
         "context-window.md",
@@ -1456,7 +1458,7 @@
         "third-party-integrations.md",
         "web-quickstart.md"
       ],
-      "mentions": 103
+      "mentions": 104
     },
     "mobile": {
       "documented": true,
@@ -1800,11 +1802,12 @@
         "code-review.md",
         "hooks-guide.md",
         "hooks.md",
+        "monitoring-usage.md",
         "remote-control.md",
         "routines.md",
         "vs-code.md"
       ],
-      "mentions": 11
+      "mentions": 13
     },
     "setup-bedrock": {
       "documented": true,
