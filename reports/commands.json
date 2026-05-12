@@ -726,7 +726,7 @@
         "agent-view.md",
         "commands.md"
       ],
-      "mentions": 3
+      "mentions": 4
     },
     "branch": {
       "documented": true,
@@ -876,6 +876,7 @@
       "documented": true,
       "doc_files": [
         "agent-teams.md",
+        "agent-view.md",
         "authentication.md",
         "changelog.md",
         "claude-code-on-the-web.md",
@@ -901,7 +902,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 85
+      "mentions": 86
     },
     "context": {
       "documented": true,
@@ -1455,7 +1456,7 @@
         "third-party-integrations.md",
         "web-quickstart.md"
       ],
-      "mentions": 102
+      "mentions": 103
     },
     "mobile": {
       "documented": true,
@@ -1547,7 +1548,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 140
+      "mentions": 141
     },
     "plan": {
       "documented": true,
@@ -1774,9 +1775,11 @@
     "scroll-speed": {
       "documented": true,
       "doc_files": [
-        "changelog.md"
+        "changelog.md",
+        "commands.md",
+        "fullscreen.md"
       ],
-      "mentions": 1
+      "mentions": 3
     },
     "security-review": {
       "documented": true,
@@ -1878,7 +1881,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 179
+      "mentions": 180
     },
     "status": {
       "documented": true,
@@ -2120,5 +2123,5 @@
       "mentions": 18
     }
   },
-  "docs_checked_at": "2026-05-11"
+  "docs_checked_at": "2026-05-12"
 }
