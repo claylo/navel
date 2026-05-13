@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-13T18:37:13Z",
+      "version_at_time": "2.1.140",
+      "files_changed": [
+        "fast-mode.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-13T17:43:18Z",
       "version_at_time": "2.1.140",
       "files_changed": [
@@ -2095,23 +2108,6 @@
         "statusline.md",
         "sub-agents.md",
         "subagents.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-08T23:30:31Z",
-      "version_at_time": "2.1.97",
-      "files_changed": [
-        "claude-code-on-the-web.md",
-        "commands.md",
-        "skills.md",
-        "slash-commands.md",
-        "troubleshooting.md"
       ],
       "files_added": [
         ""
