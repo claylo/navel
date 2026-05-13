@@ -726,7 +726,7 @@
         "agent-view.md",
         "commands.md"
       ],
-      "mentions": 4
+      "mentions": 5
     },
     "branch": {
       "documented": true,
@@ -1016,12 +1016,13 @@
         "how-claude-code-works.md",
         "keybindings.md",
         "plugin-dependencies.md",
+        "plugins-reference.md",
         "settings.md",
         "skills.md",
         "slash-commands.md",
         "troubleshooting.md"
       ],
-      "mentions": 36
+      "mentions": 37
     },
     "dream": {
       "documented": false,
@@ -1474,6 +1475,7 @@
       "documented": true,
       "doc_files": [
         "agent-teams.md",
+        "agent-view.md",
         "amazon-bedrock.md",
         "changelog.md",
         "claude-code-on-the-web.md",
@@ -1501,7 +1503,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 139
+      "mentions": 142
     },
     "passes": {
       "documented": true,
@@ -1602,7 +1604,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 150
+      "mentions": 151
     },
     "powerup": {
       "documented": true,
@@ -1955,6 +1957,7 @@
       "documented": true,
       "doc_files": [
         "agent-teams.md",
+        "agent-view.md",
         "agents.md",
         "changelog.md",
         "claude-code-on-the-web.md",
@@ -1967,7 +1970,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 17
+      "mentions": 18
     },
     "team-onboarding": {
       "documented": true,
@@ -2127,5 +2130,5 @@
       "mentions": 18
     }
   },
-  "docs_checked_at": "2026-05-12"
+  "docs_checked_at": "2026-05-13"
 }
