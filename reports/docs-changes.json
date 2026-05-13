@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-05-13T16:48:30Z",
+      "version_at_time": "2.1.140",
+      "files_changed": [
+        "commands.md",
+        "ultrareview.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-13T01:22:27Z",
       "version_at_time": "2.1.140",
       "files_changed": [
@@ -2147,35 +2161,6 @@
         "typescript.md",
         "user-input.md",
         "web-quickstart.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-08T13:11:54Z",
-      "version_at_time": "2.1.96",
-      "files_changed": [
-        "changelog.md",
-        "claude-directory.md",
-        "common-workflows.md",
-        "context-window.md",
-        "data-usage.md",
-        "fast-mode.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "how-claude-code-works.md",
-        "interactive-mode.md",
-        "keybindings.md",
-        "model-config.md",
-        "output-styles.md",
-        "plugins-reference.md",
-        "plugins.md",
-        "troubleshooting.md",
-        "ultraplan.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
