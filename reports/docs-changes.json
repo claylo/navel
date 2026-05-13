@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-05-13T01:22:27Z",
+      "version_at_time": "2.1.140",
+      "files_changed": [
+        "claude-code-on-the-web.md",
+        "model-config.md",
+        "server-managed-settings.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-13T00:27:03Z",
       "version_at_time": "2.1.140",
       "files_changed": [
@@ -2158,26 +2173,6 @@
         "plugins.md",
         "troubleshooting.md",
         "ultraplan.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-07T22:24:20Z",
-      "version_at_time": "2.1.94",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "code-review.md",
-        "env-vars.md",
-        "hooks.md",
-        "model-config.md",
-        "troubleshooting.md",
-        "vs-code.md"
       ],
       "files_added": [
         ""
