@@ -768,6 +768,7 @@
     "chrome": {
       "documented": true,
       "doc_files": [
+        "admin-setup.md",
         "best-practices.md",
         "changelog.md",
         "chrome.md",
@@ -782,7 +783,7 @@
         "troubleshoot-install.md",
         "vs-code.md"
       ],
-      "mentions": 25
+      "mentions": 26
     },
     "claude-in-chrome": {
       "documented": true,
@@ -1676,6 +1677,7 @@
     "remote-control": {
       "documented": true,
       "doc_files": [
+        "admin-setup.md",
         "authentication.md",
         "changelog.md",
         "channels.md",
@@ -1700,7 +1702,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 46
+      "mentions": 47
     },
     "remote-env": {
       "documented": true,
