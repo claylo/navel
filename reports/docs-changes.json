@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-13T21:32:19Z",
+      "version_at_time": "2.1.140",
+      "files_changed": [
+        "admin-setup.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-13T19:36:41Z",
       "version_at_time": "2.1.140",
       "files_changed": [
@@ -2045,55 +2058,6 @@
         "web-quickstart.md",
         "web-scheduled-tasks.md",
         "zero-data-retention.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-09T20:58:05Z",
-      "version_at_time": "2.1.98",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "authentication.md",
-        "changelog.md",
-        "checkpointing.md",
-        "claude-code-on-the-web.md",
-        "cli-reference.md",
-        "commands.md",
-        "common-workflows.md",
-        "context-window.md",
-        "costs.md",
-        "desktop.md",
-        "discover-plugins.md",
-        "env-vars.md",
-        "features-overview.md",
-        "google-vertex-ai.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "interactive-mode.md",
-        "jetbrains.md",
-        "mcp.md",
-        "memory.md",
-        "model-config.md",
-        "monitoring-usage.md",
-        "output-styles.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "plugins.md",
-        "remote-control.md",
-        "scheduled-tasks.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "voice-dictation.md",
-        "vs-code.md"
       ],
       "files_added": [
         ""
