@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-05-13T19:36:41Z",
+      "version_at_time": "2.1.140",
+      "files_changed": [
+        "memory.md",
+        "output-styles.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-13T18:37:13Z",
       "version_at_time": "2.1.140",
       "files_changed": [
@@ -2080,34 +2094,6 @@
         "third-party-integrations.md",
         "voice-dictation.md",
         "vs-code.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-09T14:17:21Z",
-      "version_at_time": "2.1.97",
-      "files_changed": [
-        "desktop.md",
-        "env-vars.md",
-        "fullscreen.md",
-        "headless.md",
-        "how-claude-code-works.md",
-        "interactive-mode.md",
-        "mcp.md",
-        "monitoring-usage.md",
-        "overview.md",
-        "permission-modes.md",
-        "permissions.md",
-        "remote-control.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md"
       ],
       "files_added": [
         ""
