@@ -677,7 +677,7 @@
         "subagents.md",
         "worktrees.md"
       ],
-      "mentions": 70
+      "mentions": 72
     },
     "autocompact": {
       "documented": false,
@@ -980,6 +980,7 @@
         "desktop.md",
         "errors.md",
         "glossary.md",
+        "goal.md",
         "how-claude-code-works.md",
         "overview.md",
         "permission-modes.md",
@@ -995,7 +996,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 68
+      "mentions": 69
     },
     "diff": {
       "documented": true,
@@ -1760,9 +1761,11 @@
         "commands.md",
         "skills.md",
         "slash-commands.md",
+        "sub-agents.md",
+        "subagents.md",
         "ultrareview.md"
       ],
-      "mentions": 9
+      "mentions": 13
     },
     "rewind": {
       "documented": true,
