@@ -216,7 +216,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 46
+      "mentions": 48
     },
     "PermissionDenied": {
       "documented": true,
@@ -278,7 +278,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 96
+      "mentions": 97
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -483,7 +483,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 32
+      "mentions": 35
     },
     "WorktreeCreate": {
       "documented": true,
