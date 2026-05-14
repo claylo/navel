@@ -727,7 +727,7 @@
         "changelog.md",
         "commands.md"
       ],
-      "mentions": 6
+      "mentions": 7
     },
     "branch": {
       "documented": true,
