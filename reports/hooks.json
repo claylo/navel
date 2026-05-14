@@ -357,6 +357,7 @@
         "claude-platform-on-aws.md",
         "cli-reference.md",
         "code-review.md",
+        "desktop-changelog.md",
         "discover-plugins.md",
         "env-vars.md",
         "github-actions.md",
@@ -370,7 +371,7 @@
         "routines.md",
         "web-quickstart.md"
       ],
-      "mentions": 51
+      "mentions": 52
     },
     "Stop": {
       "documented": true,
