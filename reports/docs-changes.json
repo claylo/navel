@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-13T23:29:37Z",
+      "version_at_time": "2.1.141",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-13T22:18:42Z",
       "version_at_time": "2.1.140",
       "files_changed": [
@@ -1953,42 +1966,6 @@
       ],
       "files_removed": [
         "web-scheduled-tasks.md"
-      ]
-    },
-    {
-      "date": "2026-04-10T22:16:18Z",
-      "version_at_time": "2.1.101",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "commands.md",
-        "computer-use.md",
-        "costs.md",
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permissions.md",
-        "scheduled-tasks.md",
-        "server-managed-settings.md",
-        "settings.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md",
-        "troubleshooting.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
       ]
     }
   ]
