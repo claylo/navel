@@ -1,6 +1,25 @@
 {
   "changes": [
     {
+      "date": "2026-05-14T14:52:40Z",
+      "version_at_time": "2.1.141",
+      "files_changed": [
+        "agent-view.md",
+        "desktop-scheduled-tasks.md",
+        "desktop.md",
+        "goal.md",
+        "remote-control.md",
+        "sub-agents.md",
+        "subagents.md"
+      ],
+      "files_added": [
+        "desktop-changelog.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-14T06:15:02Z",
       "version_at_time": "2.1.141",
       "files_changed": [
@@ -1806,81 +1825,6 @@
       "files_changed": [
         "desktop-quickstart.md",
         "desktop.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-14T20:11:17Z",
-      "version_at_time": "2.1.108",
-      "files_changed": [
-        "agent-teams.md",
-        "amazon-bedrock.md",
-        "authentication.md",
-        "best-practices.md",
-        "changelog.md",
-        "channels-reference.md",
-        "channels.md",
-        "checkpointing.md",
-        "chrome.md",
-        "claude-code-on-the-web.md",
-        "code-review.md",
-        "common-workflows.md",
-        "computer-use.md",
-        "costs.md",
-        "desktop.md",
-        "discover-plugins.md",
-        "fast-mode.md",
-        "fullscreen.md",
-        "github-actions.md",
-        "github-enterprise-server.md",
-        "gitlab-ci-cd.md",
-        "google-vertex-ai.md",
-        "headless.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "how-claude-code-works.md",
-        "interactive-mode.md",
-        "jetbrains.md",
-        "keybindings.md",
-        "llm-gateway.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "model-config.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "output-styles.md",
-        "overview.md",
-        "permission-modes.md",
-        "permissions.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "plugins.md",
-        "quickstart.md",
-        "remote-control.md",
-        "routines.md",
-        "sandboxing.md",
-        "scheduled-tasks.md",
-        "server-managed-settings.md",
-        "settings.md",
-        "setup.md",
-        "skills.md",
-        "slash-commands.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "terminal-config.md",
-        "third-party-integrations.md",
-        "tools-reference.md",
-        "troubleshooting.md",
-        "voice-dictation.md",
-        "vs-code.md",
-        "web-quickstart.md"
       ],
       "files_added": [
         ""
