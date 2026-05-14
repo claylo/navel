@@ -240,7 +240,7 @@
         "permission-modes.md",
         "plugins-reference.md"
       ],
-      "mentions": 43
+      "mentions": 44
     },
     "PostCompact": {
       "documented": true,
@@ -508,5 +508,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-05-12"
+  "docs_checked_at": "2026-05-14"
 }
