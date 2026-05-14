@@ -1376,6 +1376,7 @@
       "documented": true,
       "doc_files": [
         "admin-setup.md",
+        "agent-view.md",
         "agents.md",
         "best-practices.md",
         "changelog.md",
@@ -1421,7 +1422,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 182
+      "mentions": 183
     },
     "memory": {
       "documented": true,
@@ -1554,7 +1555,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 142
+      "mentions": 143
     },
     "plan": {
       "documented": true,
