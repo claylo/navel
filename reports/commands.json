@@ -724,9 +724,10 @@
       "documented": true,
       "doc_files": [
         "agent-view.md",
+        "changelog.md",
         "commands.md"
       ],
-      "mentions": 5
+      "mentions": 6
     },
     "branch": {
       "documented": true,
@@ -1023,7 +1024,7 @@
         "slash-commands.md",
         "troubleshooting.md"
       ],
-      "mentions": 37
+      "mentions": 38
     },
     "dream": {
       "documented": false,
@@ -1115,7 +1116,7 @@
         "troubleshooting.md",
         "zero-data-retention.md"
       ],
-      "mentions": 23
+      "mentions": 25
     },
     "fewer-permission-prompts": {
       "documented": true,
@@ -1343,7 +1344,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 50
+      "mentions": 51
     },
     "logout": {
       "documented": true,
@@ -1420,7 +1421,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 181
+      "mentions": 182
     },
     "memory": {
       "documented": true,
@@ -1504,7 +1505,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 142
+      "mentions": 143
     },
     "passes": {
       "documented": true,
@@ -2032,7 +2033,7 @@
         "settings.md",
         "terminal-config.md"
       ],
-      "mentions": 13
+      "mentions": 14
     },
     "ultraplan": {
       "documented": true,
@@ -2132,5 +2133,5 @@
       "mentions": 18
     }
   },
-  "docs_checked_at": "2026-05-13"
+  "docs_checked_at": "2026-05-14"
 }
