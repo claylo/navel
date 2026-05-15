@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "date": "2026-05-15T22:13:06Z",
+      "version_at_time": "2.1.143",
+      "files_changed": [
+        "claude-directory.md",
+        "data-usage.md",
+        "env-vars.md",
+        "errors.md",
+        "google-vertex-ai.md",
+        "mcp.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-15T18:13:54Z",
       "version_at_time": "2.1.142",
       "files_changed": [
@@ -1745,24 +1763,6 @@
         "scheduled-tasks.md",
         "settings.md",
         "ultrareview.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-18T00:24:17Z",
-      "version_at_time": "2.1.114",
-      "files_changed": [
-        "changelog.md",
-        "hooks.md",
-        "model-config.md",
-        "routines.md",
-        "setup.md",
-        "troubleshooting.md"
       ],
       "files_added": [
         ""
