@@ -1097,10 +1097,11 @@
         "env-vars.md",
         "fast-mode.md",
         "google-vertex-ai.md",
+        "microsoft-foundry.md",
         "monitoring-usage.md",
         "settings.md"
       ],
-      "mentions": 26
+      "mentions": 29
     },
     "feedback": {
       "documented": true,
