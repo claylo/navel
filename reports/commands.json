@@ -963,7 +963,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 19
+      "mentions": 20
     },
     "desktop": {
       "documented": true,
@@ -1158,7 +1158,7 @@
         "hooks.md",
         "scheduled-tasks.md"
       ],
-      "mentions": 22
+      "mentions": 23
     },
     "heapdump": {
       "documented": true,
@@ -1911,6 +1911,7 @@
         "env-vars.md",
         "errors.md",
         "headless.md",
+        "hooks.md",
         "model-config.md",
         "monitoring-usage.md",
         "remote-control.md",
@@ -1920,7 +1921,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 37
+      "mentions": 39
     },
     "statusline": {
       "documented": true,
@@ -2092,13 +2093,14 @@
         "commands.md",
         "costs.md",
         "errors.md",
+        "hooks.md",
         "remote-control.md",
         "routines.md",
         "terminal-config.md",
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 33
+      "mentions": 34
     },
     "version": {
       "documented": true,
