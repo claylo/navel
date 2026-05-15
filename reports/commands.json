@@ -1507,7 +1507,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 143
+      "mentions": 145
     },
     "passes": {
       "documented": true,
@@ -1608,7 +1608,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 151
+      "mentions": 153
     },
     "powerup": {
       "documented": true,
@@ -2134,8 +2134,8 @@
         "routines.md",
         "web-quickstart.md"
       ],
-      "mentions": 18
+      "mentions": 19
     }
   },
-  "docs_checked_at": "2026-05-14"
+  "docs_checked_at": "2026-05-15"
 }
