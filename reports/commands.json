@@ -1107,6 +1107,7 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "claude-directory.md",
         "commands.md",
         "data-usage.md",
         "env-vars.md",
@@ -1118,7 +1119,7 @@
         "troubleshooting.md",
         "zero-data-retention.md"
       ],
-      "mentions": 25
+      "mentions": 27
     },
     "fewer-permission-prompts": {
       "documented": true,
