@@ -1,6 +1,22 @@
 {
   "changes": [
     {
+      "date": "2026-05-15T18:13:54Z",
+      "version_at_time": "2.1.142",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "env-vars.md",
+        "google-vertex-ai.md",
+        "microsoft-foundry.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-15T11:36:01Z",
       "version_at_time": "2.1.142",
       "files_changed": [
@@ -1750,61 +1766,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-16T22:05:20Z",
-      "version_at_time": "2.1.112",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "claude-code-on-the-web.md",
-        "cli-reference.md",
-        "commands.md",
-        "common-workflows.md",
-        "desktop-quickstart.md",
-        "desktop-scheduled-tasks.md",
-        "desktop.md",
-        "discover-plugins.md",
-        "env-vars.md",
-        "fullscreen.md",
-        "google-vertex-ai.md",
-        "headless.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "how-claude-code-works.md",
-        "interactive-mode.md",
-        "keybindings.md",
-        "mcp.md",
-        "model-config.md",
-        "monitoring-usage.md",
-        "permission-modes.md",
-        "permissions.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "plugins.md",
-        "remote-control.md",
-        "routines.md",
-        "scheduled-tasks.md",
-        "settings.md",
-        "setup.md",
-        "skills.md",
-        "slash-commands.md",
-        "sub-agents.md",
-        "subagents.md",
-        "terminal-config.md",
-        "tools-reference.md",
-        "troubleshooting.md",
-        "ultraplan.md",
-        "ultrareview.md",
-        "vs-code.md",
-        "web-quickstart.md"
-      ],
-      "files_added": [
-        "errors.md"
       ],
       "files_removed": [
         ""
