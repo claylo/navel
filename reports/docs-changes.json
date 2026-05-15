@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-15T23:20:46Z",
+      "version_at_time": "2.1.143",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-15T22:13:06Z",
       "version_at_time": "2.1.143",
       "files_changed": [
@@ -1743,29 +1756,6 @@
       ],
       "files_added": [
         "debug-your-config.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-18T15:35:38Z",
-      "version_at_time": "2.1.114",
-      "files_changed": [
-        "changelog.md",
-        "commands.md",
-        "fullscreen.md",
-        "interactive-mode.md",
-        "keybindings.md",
-        "permissions.md",
-        "remote-control.md",
-        "sandboxing.md",
-        "scheduled-tasks.md",
-        "settings.md",
-        "ultrareview.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
