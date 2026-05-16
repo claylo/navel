@@ -727,7 +727,7 @@
         "changelog.md",
         "commands.md"
       ],
-      "mentions": 7
+      "mentions": 11
     },
     "branch": {
       "documented": true,
@@ -1160,7 +1160,7 @@
         "hooks.md",
         "scheduled-tasks.md"
       ],
-      "mentions": 23
+      "mentions": 24
     },
     "heapdump": {
       "documented": true,
@@ -1610,7 +1610,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 153
+      "mentions": 154
     },
     "powerup": {
       "documented": true,
@@ -2141,5 +2141,5 @@
       "mentions": 19
     }
   },
-  "docs_checked_at": "2026-05-15"
+  "docs_checked_at": "2026-05-16"
 }
