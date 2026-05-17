@@ -1,6 +1,22 @@
 {
   "changes": [
     {
+      "date": "2026-05-17T00:13:43Z",
+      "version_at_time": "2.1.143",
+      "files_changed": [
+        "microsoft-foundry.md",
+        "model-config.md",
+        "skills.md",
+        "slash-commands.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-15T23:20:46Z",
       "version_at_time": "2.1.143",
       "files_changed": [
@@ -1710,52 +1726,6 @@
       "files_added": [
         "admin-setup.md",
         "auto-mode-config.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-22T01:32:25Z",
-      "version_at_time": "2.1.114",
-      "files_changed": [
-        "best-practices.md",
-        "changelog.md",
-        "claude-directory.md",
-        "commands.md",
-        "common-workflows.md",
-        "data-usage.md",
-        "desktop.md",
-        "env-vars.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "interactive-mode.md",
-        "mcp.md",
-        "memory.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "overview.md",
-        "permissions.md",
-        "plugin-dependencies.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "quickstart.md",
-        "sandboxing.md",
-        "settings.md",
-        "setup.md",
-        "skills.md",
-        "slash-commands.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "terminal-config.md",
-        "troubleshooting.md",
-        "ultrareview.md",
-        "vs-code.md",
-        "zero-data-retention.md"
-      ],
-      "files_added": [
-        "debug-your-config.md"
       ],
       "files_removed": [
         ""
