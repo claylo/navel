@@ -1,0 +1,28 @@
+--- v2.1.143
++++ v2.1.144
+@@ -233,10 +233,12 @@
+ Main branch (you will usually use this for PRs): main
+ 
+ Status:
+-(clean)
++M npm/versions.json
++ M reports/commands.json
++ M reports/docs-changes.json
+ 
+ Recent commits:
+-95a670b chore(readme): sync claude code data (v2.1.143)
++b2200f3 chore(readme): sync claude code data (v2.1.143)
+ 
+ ---
+ 
+@@ -517,6 +519,10 @@
+ 
+ Jobs live only in this Claude session — nothing is written to disk, and the job is gone when Claude exits.
+ 
++## Not for live watching
++
++CronCreate re-runs a prompt at fixed wall-clock intervals. To watch a log file, process, or command output and be notified the moment something changes, use the Monitor tool instead — Monitor streams events as they happen; cron polls on a schedule.
++
+ ## Runtime behavior
+ 
+ Jobs only fire while the REPL is idle (not mid-query). The scheduler adds a small deterministic jitter on top of whatever you pick: recurring tasks fire up to 10% of their period late (max 15 min); one-shot tasks landing on :00 or :30 fire up to 90 s early. Picking an off-minute is still the bigger lever.
