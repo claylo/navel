@@ -664,6 +664,7 @@
         "claude-code-on-the-web.md",
         "commands.md",
         "debug-your-config.md",
+        "desktop.md",
         "how-claude-code-works.md",
         "permission-modes.md",
         "permissions.md",
@@ -677,7 +678,7 @@
         "subagents.md",
         "worktrees.md"
       ],
-      "mentions": 72
+      "mentions": 73
     },
     "autocompact": {
       "documented": false,
@@ -904,7 +905,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 89
+      "mentions": 90
     },
     "context": {
       "documented": true,
@@ -1013,6 +1014,7 @@
         "changelog.md",
         "commands.md",
         "debug-your-config.md",
+        "desktop.md",
         "env-vars.md",
         "errors.md",
         "hooks.md",
@@ -1025,7 +1027,7 @@
         "slash-commands.md",
         "troubleshooting.md"
       ],
-      "mentions": 38
+      "mentions": 39
     },
     "dream": {
       "documented": false,
@@ -1558,7 +1560,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 143
+      "mentions": 144
     },
     "plan": {
       "documented": true,
@@ -2141,5 +2143,5 @@
       "mentions": 19
     }
   },
-  "docs_checked_at": "2026-05-16"
+  "docs_checked_at": "2026-05-18"
 }
