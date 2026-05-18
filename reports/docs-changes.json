@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "date": "2026-05-18T19:27:06Z",
+      "version_at_time": "2.1.143",
+      "files_changed": [
+        "debug-your-config.md",
+        "features-overview.md",
+        "skills.md",
+        "slash-commands.md",
+        "sub-agents.md",
+        "subagents.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-18T18:32:21Z",
       "version_at_time": "2.1.143",
       "files_changed": [
@@ -1656,22 +1674,6 @@
         "permission-modes.md",
         "sandboxing.md",
         "security.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-26T01:36:14Z",
-      "version_at_time": "2.1.120",
-      "files_changed": [
-        "chrome.md",
-        "commands.md",
-        "skills.md",
-        "slash-commands.md"
       ],
       "files_added": [
         ""
