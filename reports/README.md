@@ -142,7 +142,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/update** | Switch to the latest version (conversation continues) | 2.1.101 | *disabled* | yes |
 | /upgrade | Upgrade to Max for higher rate limits and more Opus | 2.0.0 | available | yes |
 | /usage | — | 2.0.0 | available | yes |
-| **/usage-credits** | Configure usage credits to keep working when you hit a limit | 2.1.144 | available | **no** |
+| /usage-credits | Configure usage credits to keep working when you hit a limit | 2.1.144 | available | yes |
 | **/version** | Print the version this session is running (not what autou... | 2.1.83 | *disabled* | yes |
 | /voice | Toggle voice mode | 2.1.59 | available | yes |
 | /web-setup | Setup Claude Code on the web (requires connecting your Gi... | 2.1.79 | available | yes |
