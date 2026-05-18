@@ -40,7 +40,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (101)</summary>
+<summary>Commands (102)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -75,9 +75,9 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /effort | Set effort level for model usage | 2.1.76 | available | yes |
 | /exit | — | 2.0.0 | available | yes |
 | /export | Export the current conversation to a file or clipboard | 2.0.0 | available | yes |
-| /extra-usage | Configure extra usage to keep working when limits are hit | 2.0.36 | available | yes |
+| /extra-usage | Renamed to /usage-credits | 2.0.36 | available | yes |
 | /fast | — | 2.1.36 | available | yes |
-| /feedback | Submit feedback about Claude Code | 2.0.0 | available | yes |
+| /feedback | Submit feedback, report a bug, or share your conversation | 2.0.0 | available | yes |
 | /fewer-permission-prompts | Scan your transcripts for common read-only Bash and MCP t... | 2.1.113 | available | yes |
 | /focus | Toggle focus view (show only your prompt, a tool summary,... | 2.1.110 | available | yes |
 | /fork | Spawn a background agent that inherits the full conversation | 2.1.8 | available | yes |
@@ -142,6 +142,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/update** | Switch to the latest version (conversation continues) | 2.1.101 | *disabled* | yes |
 | /upgrade | Upgrade to Max for higher rate limits and more Opus | 2.0.0 | available | yes |
 | /usage | — | 2.0.0 | available | yes |
+| **/usage-credits** | Configure usage credits to keep working when you hit a limit | 2.1.144 | available | **no** |
 | **/version** | Print the version this session is running (not what autou... | 2.1.83 | *disabled* | yes |
 | /voice | Toggle voice mode | 2.1.59 | available | yes |
 | /web-setup | Setup Claude Code on the web (requires connecting your Gi... | 2.1.79 | available | yes |
@@ -744,6 +745,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.144 | — | +usage-credits | — |
 | 2.1.139 | — | +scroll-speed | — |
 | 2.1.132 | — | +goal, +radio | — |
 | 2.1.120 | — | — | +5 |
