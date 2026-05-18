@@ -1090,13 +1090,9 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
-        "commands.md",
-        "env-vars.md",
-        "errors.md",
-        "remote-control.md",
-        "ultrareview.md"
+        "commands.md"
       ],
-      "mentions": 8
+      "mentions": 4
     },
     "fast": {
       "documented": true,
@@ -1519,7 +1515,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 145
+      "mentions": 146
     },
     "passes": {
       "documented": true,
@@ -2115,9 +2111,15 @@
       "mentions": 34
     },
     "usage-credits": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "commands.md",
+        "env-vars.md",
+        "errors.md",
+        "remote-control.md",
+        "ultrareview.md"
+      ],
+      "mentions": 5
     },
     "version": {
       "documented": true,
