@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-18T17:45:00Z",
+      "version_at_time": "2.1.143",
+      "files_changed": [
+        "statusline.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-17T00:13:43Z",
       "version_at_time": "2.1.143",
       "files_changed": [
@@ -1666,66 +1679,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-25T14:24:07Z",
-      "version_at_time": "2.1.120",
-      "files_changed": [
-        "agent-teams.md",
-        "amazon-bedrock.md",
-        "changelog.md",
-        "claude-directory.md",
-        "cli-reference.md",
-        "commands.md",
-        "common-workflows.md",
-        "costs.md",
-        "data-usage.md",
-        "desktop-scheduled-tasks.md",
-        "desktop.md",
-        "env-vars.md",
-        "errors.md",
-        "features-overview.md",
-        "google-vertex-ai.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "interactive-mode.md",
-        "keybindings.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "model-config.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "overview.md",
-        "permission-modes.md",
-        "permissions.md",
-        "plugin-dependencies.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "plugins.md",
-        "quickstart.md",
-        "remote-control.md",
-        "routines.md",
-        "scheduled-tasks.md",
-        "server-managed-settings.md",
-        "settings.md",
-        "setup.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "terminal-config.md",
-        "third-party-integrations.md",
-        "tools-reference.md",
-        "voice-dictation.md",
-        "vs-code.md"
-      ],
-      "files_added": [
-        "admin-setup.md",
-        "auto-mode-config.md"
       ],
       "files_removed": [
         ""
