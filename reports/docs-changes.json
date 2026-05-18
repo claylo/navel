@@ -1,6 +1,36 @@
 {
   "changes": [
     {
+      "date": "2026-05-18T23:24:46Z",
+      "version_at_time": "2.1.144",
+      "files_changed": [
+        "agent-view.md",
+        "cli-reference.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "errors.md",
+        "fast-mode.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "mcp.md",
+        "model-config.md",
+        "permission-modes.md",
+        "plugin-dependencies.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "settings.md",
+        "sub-agents.md",
+        "subagents.md",
+        "tools-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-18T22:21:36Z",
       "version_at_time": "2.1.144",
       "files_changed": [
@@ -1643,47 +1673,6 @@
       "version_at_time": "2.1.121",
       "files_changed": [
         "server-managed-settings.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-28T05:00:11Z",
-      "version_at_time": "2.1.121",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "claude-code-on-the-web.md",
-        "cli-reference.md",
-        "data-usage.md",
-        "env-vars.md",
-        "fullscreen.md",
-        "google-vertex-ai.md",
-        "hooks.md",
-        "interactive-mode.md",
-        "legal-and-compliance.md",
-        "mcp.md",
-        "monitoring-usage.md",
-        "overview.md",
-        "plugin-dependencies.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "quickstart.md",
-        "security.md",
-        "setup.md",
-        "skills.md",
-        "slash-commands.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "terminal-config.md",
-        "tools-reference.md",
-        "troubleshooting.md",
-        "ultrareview.md",
-        "voice-dictation.md"
       ],
       "files_added": [
         ""
