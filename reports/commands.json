@@ -98,6 +98,7 @@
     "update",
     "upgrade",
     "usage",
+    "usage-credits",
     "version",
     "voice",
     "web-setup"
@@ -129,8 +130,8 @@
     "doctor": "Diagnose and verify your Claude Code installation and settings",
     "effort": "Set effort level for model usage",
     "export": "Export the current conversation to a file or clipboard",
-    "extra-usage": "Configure extra usage to keep working when limits are hit",
-    "feedback": "Submit feedback about Claude Code",
+    "extra-usage": "Renamed to /usage-credits",
+    "feedback": "Submit feedback, report a bug, or share your conversation",
     "fewer-permission-prompts": "Scan your transcripts for common read-only Bash and MCP tool calls, then add a prioritized allowlist to project .claude/settings.json to reduce permission prompts.",
     "focus": "Toggle focus view (show only your prompt, a tool summary, and the final response)",
     "fork": "Spawn a background agent that inherits the full conversation",
@@ -176,6 +177,7 @@
     "tui": "Set the terminal UI renderer (default | fullscreen)",
     "update": "Switch to the latest version (conversation continues)",
     "upgrade": "Upgrade to Max for higher rate limits and more Opus",
+    "usage-credits": "Configure usage credits to keep working when you hit a limit",
     "version": "Print the version this session is running (not what autoupdate downloaded)",
     "voice": "Toggle voice mode",
     "web-setup": "Setup Claude Code on the web (requires connecting your GitHub account)"
@@ -279,6 +281,7 @@
     "update": "disabled",
     "upgrade": "available",
     "usage": "available",
+    "usage-credits": "available",
     "version": "disabled",
     "voice": "available",
     "web-setup": "available"
@@ -632,6 +635,11 @@
     "2.1.139": {
       "added": [
         "scroll-speed"
+      ]
+    },
+    "2.1.144": {
+      "added": [
+        "usage-credits"
       ]
     }
   },
@@ -1467,7 +1475,7 @@
         "third-party-integrations.md",
         "web-quickstart.md"
       ],
-      "mentions": 105
+      "mentions": 107
     },
     "mobile": {
       "documented": true,
@@ -1898,7 +1906,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 182
+      "mentions": 184
     },
     "status": {
       "documented": true,
@@ -2105,6 +2113,11 @@
         "vs-code.md"
       ],
       "mentions": 34
+    },
+    "usage-credits": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "version": {
       "documented": true,
