@@ -1,6 +1,22 @@
 {
   "changes": [
     {
+      "date": "2026-05-18T21:28:21Z",
+      "version_at_time": "2.1.144",
+      "files_changed": [
+        "env-vars.md",
+        "jetbrains.md",
+        "permissions.md",
+        "vs-code.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-18T20:32:43Z",
       "version_at_time": "2.1.144",
       "files_changed": [
@@ -1667,20 +1683,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-27T21:21:00Z",
-      "version_at_time": "2.1.121",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        "2026-w16.md",
-        "2026-w17.md"
       ],
       "files_removed": [
         ""
