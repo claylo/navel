@@ -1547,6 +1547,7 @@
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
+        "jetbrains.md",
         "mcp.md",
         "memory.md",
         "microsoft-foundry.md",
@@ -1562,9 +1563,10 @@
         "slash-commands.md",
         "sub-agents.md",
         "subagents.md",
-        "tools-reference.md"
+        "tools-reference.md",
+        "vs-code.md"
       ],
-      "mentions": 144
+      "mentions": 146
     },
     "plan": {
       "documented": true,
