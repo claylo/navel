@@ -143,9 +143,10 @@
         "hooks.md",
         "plugins-reference.md",
         "security.md",
-        "server-managed-settings.md"
+        "server-managed-settings.md",
+        "settings.md"
       ],
-      "mentions": 25
+      "mentions": 26
     },
     "CwdChanged": {
       "documented": true,
