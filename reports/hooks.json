@@ -490,6 +490,7 @@
     "WorktreeCreate": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "changelog.md",
         "claude-directory.md",
         "hooks-guide.md",
@@ -497,7 +498,7 @@
         "plugins-reference.md",
         "worktrees.md"
       ],
-      "mentions": 33
+      "mentions": 35
     },
     "WorktreeRemove": {
       "documented": true,
