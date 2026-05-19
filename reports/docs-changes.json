@@ -1,6 +1,23 @@
 {
   "changes": [
     {
+      "date": "2026-05-19T05:13:10Z",
+      "version_at_time": "2.1.144",
+      "files_changed": [
+        "changelog.md",
+        "errors.md",
+        "glossary.md",
+        "security.md",
+        "voice-dictation.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-18T23:24:46Z",
       "version_at_time": "2.1.144",
       "files_changed": [
@@ -1663,19 +1680,6 @@
       ],
       "files_added": [
         "glossary.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-28T05:51:10Z",
-      "version_at_time": "2.1.121",
-      "files_changed": [
-        "server-managed-settings.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
