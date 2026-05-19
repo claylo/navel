@@ -655,7 +655,7 @@
         "statusline.md",
         "tools-reference.md"
       ],
-      "mentions": 14
+      "mentions": 15
     },
     "advisor": {
       "documented": false,
@@ -736,7 +736,7 @@
         "changelog.md",
         "commands.md"
       ],
-      "mentions": 11
+      "mentions": 13
     },
     "branch": {
       "documented": true,
@@ -750,7 +750,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 19
+      "mentions": 20
     },
     "bridge-kick": {
       "documented": false,
@@ -824,7 +824,7 @@
         "sessions.md",
         "troubleshooting.md"
       ],
-      "mentions": 56
+      "mentions": 57
     },
     "color": {
       "documented": true,
@@ -1036,7 +1036,7 @@
         "slash-commands.md",
         "troubleshooting.md"
       ],
-      "mentions": 40
+      "mentions": 42
     },
     "dream": {
       "documented": false,
@@ -1093,7 +1093,7 @@
         "changelog.md",
         "commands.md"
       ],
-      "mentions": 4
+      "mentions": 5
     },
     "fast": {
       "documented": true,
@@ -1126,7 +1126,7 @@
         "troubleshooting.md",
         "zero-data-retention.md"
       ],
-      "mentions": 27
+      "mentions": 28
     },
     "fewer-permission-prompts": {
       "documented": true,
@@ -1354,7 +1354,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 51
+      "mentions": 52
     },
     "logout": {
       "documented": true,
@@ -1516,7 +1516,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 146
+      "mentions": 149
     },
     "passes": {
       "documented": true,
@@ -1619,7 +1619,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 155
+      "mentions": 157
     },
     "powerup": {
       "documented": true,
@@ -1762,7 +1762,7 @@
         "remote-control.md",
         "sessions.md"
       ],
-      "mentions": 64
+      "mentions": 67
     },
     "review": {
       "documented": true,
@@ -1793,7 +1793,7 @@
         "glossary.md",
         "sessions.md"
       ],
-      "mentions": 22
+      "mentions": 23
     },
     "scroll-speed": {
       "documented": true,
@@ -2084,7 +2084,7 @@
         "data-usage.md",
         "plugin-marketplaces.md"
       ],
-      "mentions": 3
+      "mentions": 4
     },
     "upgrade": {
       "documented": true,
@@ -2116,13 +2116,14 @@
     "usage-credits": {
       "documented": true,
       "doc_files": [
+        "changelog.md",
         "commands.md",
         "env-vars.md",
         "errors.md",
         "remote-control.md",
         "ultrareview.md"
       ],
-      "mentions": 5
+      "mentions": 6
     },
     "version": {
       "documented": true,
