@@ -384,6 +384,7 @@
         "communications-kit.md",
         "computer-use.md",
         "desktop.md",
+        "env-vars.md",
         "glossary.md",
         "goal.md",
         "hooks-guide.md",
@@ -397,7 +398,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 126
+      "mentions": 128
     },
     "StopFailure": {
       "documented": true,
@@ -425,13 +426,14 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "env-vars.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 35
+      "mentions": 36
     },
     "TaskCompleted": {
       "documented": true,
@@ -509,5 +511,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-05-15"
+  "docs_checked_at": "2026-05-19"
 }
