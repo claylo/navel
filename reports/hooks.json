@@ -497,7 +497,7 @@
         "plugins-reference.md",
         "worktrees.md"
       ],
-      "mentions": 32
+      "mentions": 33
     },
     "WorktreeRemove": {
       "documented": true,
