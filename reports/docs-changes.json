@@ -1,6 +1,35 @@
 {
   "changes": [
     {
+      "date": "2026-05-19T17:48:08Z",
+      "version_at_time": "2.1.145",
+      "files_changed": [
+        "agent-view.md",
+        "amazon-bedrock.md",
+        "channels-reference.md",
+        "claude-platform-on-aws.md",
+        "context-window.md",
+        "costs.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "google-vertex-ai.md",
+        "mcp.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "output-styles.md",
+        "plugins.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md"
+      ],
+      "files_added": [
+        "prompt-caching.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-19T16:07:35Z",
       "version_at_time": "2.1.144",
       "files_changed": [
@@ -1680,20 +1709,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-28T16:19:27Z",
-      "version_at_time": "2.1.121",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        "champion-kit.md",
-        "communications-kit.md"
       ],
       "files_removed": [
         ""
