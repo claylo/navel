@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-05-19T22:17:30Z",
+      "version_at_time": "2.1.145",
+      "files_changed": [
+        "changelog.md",
+        "routines.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-19T21:32:02Z",
       "version_at_time": "2.1.145",
       "files_changed": [
@@ -1672,21 +1686,6 @@
         "setup.md",
         "tools-reference.md",
         "troubleshoot-install.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-29T00:23:30Z",
-      "version_at_time": "2.1.122",
-      "files_changed": [
-        "fullscreen.md",
-        "hooks-guide.md",
-        "monitoring-usage.md"
       ],
       "files_added": [
         ""
