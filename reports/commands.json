@@ -647,6 +647,7 @@
     "add-dir": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "changelog.md",
         "cli-reference.md",
         "commands.md",
@@ -655,7 +656,7 @@
         "statusline.md",
         "tools-reference.md"
       ],
-      "mentions": 15
+      "mentions": 16
     },
     "advisor": {
       "documented": false,
@@ -734,9 +735,10 @@
       "doc_files": [
         "agent-view.md",
         "changelog.md",
+        "cli-reference.md",
         "commands.md"
       ],
-      "mentions": 13
+      "mentions": 15
     },
     "branch": {
       "documented": true,
@@ -1194,6 +1196,7 @@
       "documented": true,
       "doc_files": [
         "agent-teams.md",
+        "agent-view.md",
         "auto-mode-config.md",
         "best-practices.md",
         "changelog.md",
@@ -1232,7 +1235,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 290
+      "mentions": 291
     },
     "ide": {
       "documented": true,
@@ -1516,7 +1519,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 149
+      "mentions": 150
     },
     "passes": {
       "documented": true,
@@ -1567,7 +1570,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 146
+      "mentions": 147
     },
     "plan": {
       "documented": true,
@@ -1603,6 +1606,7 @@
         "communications-kit.md",
         "desktop.md",
         "discover-plugins.md",
+        "env-vars.md",
         "github-enterprise-server.md",
         "headless.md",
         "hooks.md",
@@ -1619,7 +1623,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 157
+      "mentions": 158
     },
     "powerup": {
       "documented": true,
@@ -1757,12 +1761,13 @@
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
+        "model-config.md",
         "monitoring-usage.md",
         "quickstart.md",
         "remote-control.md",
         "sessions.md"
       ],
-      "mentions": 67
+      "mentions": 68
     },
     "review": {
       "documented": true,
@@ -2082,9 +2087,10 @@
       "doc_files": [
         "changelog.md",
         "data-usage.md",
+        "env-vars.md",
         "plugin-marketplaces.md"
       ],
-      "mentions": 4
+      "mentions": 5
     },
     "upgrade": {
       "documented": true,
