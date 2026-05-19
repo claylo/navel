@@ -821,12 +821,14 @@
         "hooks.md",
         "interactive-mode.md",
         "keybindings.md",
+        "output-styles.md",
+        "prompt-caching.md",
         "quickstart.md",
         "remote-control.md",
         "sessions.md",
         "troubleshooting.md"
       ],
-      "mentions": 57
+      "mentions": 62
     },
     "color": {
       "documented": true,
@@ -875,6 +877,7 @@
         "how-claude-code-works.md",
         "memory.md",
         "monitoring-usage.md",
+        "prompt-caching.md",
         "remote-control.md",
         "sessions.md",
         "skills.md",
@@ -883,7 +886,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 70
+      "mentions": 76
     },
     "config": {
       "documented": true,
@@ -909,13 +912,14 @@
         "output-styles.md",
         "plugin-marketplaces.md",
         "plugins-reference.md",
+        "prompt-caching.md",
         "remote-control.md",
         "settings.md",
         "setup.md",
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 90
+      "mentions": 91
     },
     "context": {
       "documented": true,
@@ -1064,7 +1068,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 43
+      "mentions": 44
     },
     "exit": {
       "documented": true,
@@ -1083,11 +1087,12 @@
         "best-practices.md",
         "changelog.md",
         "commands.md",
+        "env-vars.md",
         "hooks.md",
         "sessions.md",
         "tools-reference.md"
       ],
-      "mentions": 9
+      "mentions": 10
     },
     "extra-usage": {
       "documented": true,
@@ -1347,6 +1352,7 @@
         "errors.md",
         "google-vertex-ai.md",
         "hooks.md",
+        "mcp.md",
         "microsoft-foundry.md",
         "monitoring-usage.md",
         "quickstart.md",
@@ -1357,7 +1363,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 52
+      "mentions": 53
     },
     "logout": {
       "documented": true,
@@ -1424,6 +1430,7 @@
         "platforms.md",
         "plugins-reference.md",
         "plugins.md",
+        "prompt-caching.md",
         "remote-control.md",
         "routines.md",
         "scheduled-tasks.md",
@@ -1435,7 +1442,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 185
+      "mentions": 188
     },
     "memory": {
       "documented": true,
@@ -1467,6 +1474,7 @@
         "overview.md",
         "permissions.md",
         "plugins-reference.md",
+        "prompt-caching.md",
         "settings.md",
         "skills.md",
         "slash-commands.md",
@@ -1475,7 +1483,7 @@
         "third-party-integrations.md",
         "web-quickstart.md"
       ],
-      "mentions": 107
+      "mentions": 108
     },
     "mobile": {
       "documented": true,
@@ -1512,6 +1520,7 @@
         "monitoring-usage.md",
         "permission-modes.md",
         "plugins-reference.md",
+        "prompt-caching.md",
         "settings.md",
         "skills.md",
         "slash-commands.md",
@@ -1519,7 +1528,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 150
+      "mentions": 154
     },
     "passes": {
       "documented": true,
@@ -1623,7 +1632,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 158
+      "mentions": 161
     },
     "powerup": {
       "documented": true,
@@ -1664,9 +1673,10 @@
         "changelog.md",
         "commands.md",
         "interactive-mode.md",
+        "prompt-caching.md",
         "remote-control.md"
       ],
-      "mentions": 4
+      "mentions": 7
     },
     "release-notes": {
       "documented": true,
@@ -1796,9 +1806,10 @@
         "env-vars.md",
         "errors.md",
         "glossary.md",
+        "prompt-caching.md",
         "sessions.md"
       ],
-      "mentions": 23
+      "mentions": 25
     },
     "scroll-speed": {
       "documented": true,
@@ -1902,6 +1913,7 @@
         "plugin-marketplaces.md",
         "plugins-reference.md",
         "plugins.md",
+        "prompt-caching.md",
         "routines.md",
         "settings.md",
         "skills.md",
@@ -1910,7 +1922,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 185
+      "mentions": 187
     },
     "status": {
       "documented": true,
@@ -1928,6 +1940,7 @@
         "errors.md",
         "headless.md",
         "hooks.md",
+        "mcp.md",
         "model-config.md",
         "monitoring-usage.md",
         "remote-control.md",
@@ -1937,7 +1950,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 39
+      "mentions": 40
     },
     "statusline": {
       "documented": true,
@@ -1952,6 +1965,7 @@
         "hooks.md",
         "model-config.md",
         "plugins-reference.md",
+        "prompt-caching.md",
         "settings.md",
         "statusline.md",
         "sub-agents.md",
@@ -1959,7 +1973,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 33
+      "mentions": 34
     },
     "stickers": {
       "documented": true,
