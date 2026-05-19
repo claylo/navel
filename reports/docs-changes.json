@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "date": "2026-05-19T16:07:35Z",
+      "version_at_time": "2.1.144",
+      "files_changed": [
+        "agent-view.md",
+        "cli-reference.md",
+        "commands.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "features-overview.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "keybindings.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "routines.md",
+        "settings.md",
+        "tools-reference.md"
+      ],
+      "files_added": [
+        "2026-w20.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-19T05:13:10Z",
       "version_at_time": "2.1.144",
       "files_changed": [
@@ -1667,19 +1694,6 @@
       "files_added": [
         "champion-kit.md",
         "communications-kit.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-28T15:51:30Z",
-      "version_at_time": "2.1.121",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        "glossary.md"
       ],
       "files_removed": [
         ""
