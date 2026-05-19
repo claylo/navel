@@ -1634,7 +1634,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 161
+      "mentions": 162
     },
     "powerup": {
       "documented": true,
@@ -1793,7 +1793,7 @@
         "subagents.md",
         "ultrareview.md"
       ],
-      "mentions": 13
+      "mentions": 14
     },
     "rewind": {
       "documented": true,
