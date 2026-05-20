@@ -1,6 +1,25 @@
 {
   "changes": [
     {
+      "date": "2026-05-20T23:29:30Z",
+      "version_at_time": "2.1.146",
+      "files_changed": [
+        "commands.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "scheduled-tasks.md",
+        "tools-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-20T17:23:31Z",
       "version_at_time": "2.1.145",
       "files_changed": [
@@ -1674,19 +1693,6 @@
     },
     {
       "date": "2026-04-29T21:12:55Z",
-      "version_at_time": "2.1.123",
-      "files_changed": [
-        "troubleshoot-install.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-29T19:33:08Z",
       "version_at_time": "2.1.123",
       "files_changed": [
         "troubleshoot-install.md"
