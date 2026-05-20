@@ -27,7 +27,6 @@
     "desktop",
     "diff",
     "doctor",
-    "dream",
     "effort",
     "exit",
     "export",
@@ -80,7 +79,6 @@
     "session",
     "setup-bedrock",
     "setup-vertex",
-    "simplify",
     "skills",
     "status",
     "statusline",
@@ -101,7 +99,8 @@
     "usage-credits",
     "version",
     "voice",
-    "web-setup"
+    "web-setup",
+    "workflows"
   ],
   "descriptions": {
     "add-dir": "Add a new working directory",
@@ -165,7 +164,6 @@
     "security-review": "Complete a security review of the pending changes on the current branch",
     "setup-bedrock": "Reconfigure Amazon Bedrock authentication, region, or model pins",
     "setup-vertex": "Reconfigure Google Vertex AI authentication, project, region, or model pins",
-    "simplify": "Review changed code for reuse, quality, and efficiency, then fix any issues found.",
     "skills": "List available skills",
     "status": "Show Claude Code status including version, model, account, API connectivity, and tool statuses",
     "stickers": "Order Claude Code stickers",
@@ -210,7 +208,6 @@
     "desktop": "available",
     "diff": "available",
     "doctor": "available",
-    "dream": "available",
     "effort": "available",
     "exit": "available",
     "export": "available",
@@ -263,7 +260,6 @@
     "session": "available",
     "setup-bedrock": "available",
     "setup-vertex": "available",
-    "simplify": "available",
     "skills": "available",
     "status": "available",
     "statusline": "available",
@@ -284,7 +280,8 @@
     "usage-credits": "available",
     "version": "disabled",
     "voice": "available",
-    "web-setup": "available"
+    "web-setup": "available",
+    "workflows": "available"
   },
   "commands_history": {
     "2.0.0": {
@@ -640,6 +637,11 @@
     "2.1.144": {
       "added": [
         "usage-credits"
+      ]
+    },
+    "2.1.146": {
+      "added": [
+        "workflows"
       ]
     }
   },
@@ -1046,11 +1048,6 @@
         "troubleshooting.md"
       ],
       "mentions": 42
-    },
-    "dream": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
     },
     "effort": {
       "documented": true,
@@ -1877,18 +1874,6 @@
       ],
       "mentions": 3
     },
-    "simplify": {
-      "documented": true,
-      "doc_files": [
-        "changelog.md",
-        "commands.md",
-        "features-overview.md",
-        "glossary.md",
-        "skills.md",
-        "slash-commands.md"
-      ],
-      "mentions": 9
-    },
     "skills": {
       "documented": true,
       "doc_files": [
@@ -2195,6 +2180,13 @@
         "web-quickstart.md"
       ],
       "mentions": 19
+    },
+    "workflows": {
+      "documented": true,
+      "doc_files": [
+        "github-actions.md"
+      ],
+      "mentions": 1
     }
   },
   "docs_checked_at": "2026-05-20"
