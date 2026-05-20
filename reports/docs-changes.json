@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-05-20T17:23:31Z",
+      "version_at_time": "2.1.145",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        "plugin-hints.md",
+        "prompt-library.md",
+        "session-storage.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-20T15:05:03Z",
       "version_at_time": "2.1.145",
       "files_changed": [
@@ -1675,21 +1690,6 @@
       "version_at_time": "2.1.123",
       "files_changed": [
         "troubleshoot-install.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-04-29T14:32:44Z",
-      "version_at_time": "2.1.123",
-      "files_changed": [
-        "skills.md",
-        "slash-commands.md",
-        "ultrareview.md"
       ],
       "files_added": [
         ""
