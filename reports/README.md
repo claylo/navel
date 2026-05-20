@@ -40,7 +40,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (102)</summary>
+<summary>Commands (101)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -71,7 +71,6 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /desktop | — | 2.1.42 | available | yes |
 | /diff | View uncommitted changes and per-turn diffs | 2.1.50 | available | yes |
 | /doctor | Diagnose and verify your Claude Code installation and set... | 2.0.0 | available | yes |
-| **/dream** | — | 2.1.97 | available | **no** |
 | /effort | Set effort level for model usage | 2.1.76 | available | yes |
 | /exit | — | 2.0.0 | available | yes |
 | /export | Export the current conversation to a file or clipboard | 2.0.0 | available | yes |
@@ -124,7 +123,6 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /session | — | 2.1.15 | available | yes |
 | /setup-bedrock | Reconfigure Amazon Bedrock authentication, region, or mod... | 2.1.92 | available | yes |
 | /setup-vertex | Reconfigure Google Vertex AI authentication, project, reg... | 2.1.98 | available | yes |
-| /simplify | Review changed code for reuse, quality, and efficiency, t... | 2.1.63 | available | yes |
 | /skills | List available skills | 2.0.73 | available | yes |
 | /status | Show Claude Code status including version, model, account... | 2.0.0 | available | yes |
 | /statusline | — | 2.0.0 | available | yes |
@@ -146,6 +144,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/version** | Print the version this session is running (not what autou... | 2.1.83 | *disabled* | yes |
 | /voice | Toggle voice mode | 2.1.59 | available | yes |
 | /web-setup | Setup Claude Code on the web (requires connecting your Gi... | 2.1.79 | available | yes |
+| /workflows | — | 2.1.146 | available | yes |
 
 </details>
 
@@ -745,6 +744,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.146 | — | +workflows | — |
 | 2.1.144 | — | +usage-credits | — |
 | 2.1.139 | — | +scroll-speed | — |
 | 2.1.132 | — | +goal, +radio | — |
