@@ -792,10 +792,11 @@
         "network-config.md",
         "overview.md",
         "platforms.md",
+        "prompt-library.md",
         "troubleshoot-install.md",
         "vs-code.md"
       ],
-      "mentions": 26
+      "mentions": 27
     },
     "claude-in-chrome": {
       "documented": true,
@@ -1001,6 +1002,7 @@
         "overview.md",
         "permission-modes.md",
         "platforms.md",
+        "prompt-library.md",
         "quickstart.md",
         "remote-control.md",
         "sandboxing.md",
@@ -1012,7 +1014,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 69
+      "mentions": 71
     },
     "diff": {
       "documented": true,
@@ -1173,9 +1175,10 @@
         "commands.md",
         "goal.md",
         "hooks.md",
+        "prompt-library.md",
         "scheduled-tasks.md"
       ],
-      "mentions": 24
+      "mentions": 30
     },
     "heapdump": {
       "documented": true,
@@ -1226,9 +1229,11 @@
         "memory.md",
         "overview.md",
         "permission-modes.md",
+        "plugin-hints.md",
         "plugin-marketplaces.md",
         "plugins-reference.md",
         "plugins.md",
+        "prompt-library.md",
         "security.md",
         "server-managed-settings.md",
         "settings.md",
@@ -1241,7 +1246,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 291
+      "mentions": 293
     },
     "ide": {
       "documented": true,
@@ -1269,10 +1274,11 @@
         "hooks.md",
         "how-claude-code-works.md",
         "memory.md",
+        "prompt-library.md",
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 32
+      "mentions": 34
     },
     "init-verifiers": {
       "documented": false,
@@ -1432,6 +1438,7 @@
         "plugins-reference.md",
         "plugins.md",
         "prompt-caching.md",
+        "prompt-library.md",
         "remote-control.md",
         "routines.md",
         "scheduled-tasks.md",
@@ -1443,7 +1450,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 188
+      "mentions": 197
     },
     "memory": {
       "documented": true,
@@ -1476,6 +1483,7 @@
         "permissions.md",
         "plugins-reference.md",
         "prompt-caching.md",
+        "prompt-library.md",
         "settings.md",
         "skills.md",
         "slash-commands.md",
@@ -1484,7 +1492,7 @@
         "third-party-integrations.md",
         "web-quickstart.md"
       ],
-      "mentions": 108
+      "mentions": 116
     },
     "mobile": {
       "documented": true,
@@ -1626,6 +1634,7 @@
         "monitoring-usage.md",
         "overview.md",
         "plugin-dependencies.md",
+        "plugin-hints.md",
         "plugin-marketplaces.md",
         "plugins-reference.md",
         "plugins.md",
@@ -1634,7 +1643,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 162
+      "mentions": 168
     },
     "powerup": {
       "documented": true,
@@ -1787,13 +1796,14 @@
         "changelog.md",
         "cli-reference.md",
         "commands.md",
+        "prompt-library.md",
         "skills.md",
         "slash-commands.md",
         "sub-agents.md",
         "subagents.md",
         "ultrareview.md"
       ],
-      "mentions": 14
+      "mentions": 15
     },
     "rewind": {
       "documented": true,
@@ -1842,11 +1852,12 @@
         "hooks-guide.md",
         "hooks.md",
         "monitoring-usage.md",
+        "prompt-library.md",
         "remote-control.md",
         "routines.md",
         "vs-code.md"
       ],
-      "mentions": 13
+      "mentions": 14
     },
     "setup-bedrock": {
       "documented": true,
@@ -1916,6 +1927,7 @@
         "plugins-reference.md",
         "plugins.md",
         "prompt-caching.md",
+        "prompt-library.md",
         "routines.md",
         "settings.md",
         "skills.md",
@@ -1924,7 +1936,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 192
+      "mentions": 199
     },
     "status": {
       "documented": true,
