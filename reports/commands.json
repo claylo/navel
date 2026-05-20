@@ -1924,12 +1924,13 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 187
+      "mentions": 192
     },
     "status": {
       "documented": true,
       "doc_files": [
         "admin-setup.md",
+        "agent-view.md",
         "amazon-bedrock.md",
         "authentication.md",
         "changelog.md",
@@ -1952,7 +1953,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 40
+      "mentions": 43
     },
     "statusline": {
       "documented": true,
@@ -2184,5 +2185,5 @@
       "mentions": 19
     }
   },
-  "docs_checked_at": "2026-05-19"
+  "docs_checked_at": "2026-05-20"
 }
