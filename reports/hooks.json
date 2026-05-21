@@ -399,7 +399,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 131
+      "mentions": 132
     },
     "StopFailure": {
       "documented": true,
@@ -513,5 +513,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-05-20"
+  "docs_checked_at": "2026-05-21"
 }
