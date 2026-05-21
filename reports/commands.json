@@ -709,6 +709,7 @@
       "doc_files": [
         "admin-setup.md",
         "agent-view.md",
+        "changelog.md",
         "commands.md",
         "env-vars.md",
         "plugins-reference.md",
@@ -716,7 +717,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 13
+      "mentions": 14
     },
     "batch": {
       "documented": true,
@@ -2051,7 +2052,7 @@
         "plugins-reference.md",
         "terminal-config.md"
       ],
-      "mentions": 15
+      "mentions": 16
     },
     "toggle-memory": {
       "documented": false,
