@@ -689,7 +689,7 @@
         "subagents.md",
         "worktrees.md"
       ],
-      "mentions": 73
+      "mentions": 74
     },
     "autocompact": {
       "documented": false,
@@ -1227,6 +1227,7 @@
         "memory.md",
         "overview.md",
         "permission-modes.md",
+        "permissions.md",
         "plugin-hints.md",
         "plugin-marketplaces.md",
         "plugins-reference.md",
@@ -1244,7 +1245,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 294
+      "mentions": 298
     },
     "ide": {
       "documented": true,
@@ -1448,7 +1449,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 197
+      "mentions": 198
     },
     "memory": {
       "documented": true,
@@ -1587,7 +1588,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 149
+      "mentions": 151
     },
     "plan": {
       "documented": true,
@@ -1922,7 +1923,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 199
+      "mentions": 203
     },
     "status": {
       "documented": true,
