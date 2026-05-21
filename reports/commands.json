@@ -1243,7 +1243,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 293
+      "mentions": 294
     },
     "ide": {
       "documented": true,
@@ -2189,5 +2189,5 @@
       "mentions": 1
     }
   },
-  "docs_checked_at": "2026-05-20"
+  "docs_checked_at": "2026-05-21"
 }
