@@ -1069,7 +1069,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 44
+      "mentions": 45
     },
     "exit": {
       "documented": true,
@@ -1197,7 +1197,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 10
+      "mentions": 11
     },
     "hooks": {
       "documented": true,
@@ -1400,7 +1400,6 @@
     "mcp": {
       "documented": true,
       "doc_files": [
-        "admin-setup.md",
         "agent-view.md",
         "agents.md",
         "best-practices.md",
@@ -1429,10 +1428,10 @@
         "hooks.md",
         "how-claude-code-works.md",
         "interactive-mode.md",
+        "managed-mcp.md",
         "mcp.md",
         "monitoring-usage.md",
         "overview.md",
-        "permissions.md",
         "platforms.md",
         "plugins-reference.md",
         "plugins.md",
@@ -1441,7 +1440,6 @@
         "remote-control.md",
         "routines.md",
         "scheduled-tasks.md",
-        "server-managed-settings.md",
         "settings.md",
         "sub-agents.md",
         "subagents.md",
@@ -1449,7 +1447,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 198
+      "mentions": 206
     },
     "memory": {
       "documented": true,
@@ -1501,7 +1499,7 @@
         "remote-control.md",
         "web-quickstart.md"
       ],
-      "mentions": 4
+      "mentions": 5
     },
     "model": {
       "documented": true,
@@ -1569,6 +1567,7 @@
         "hooks.md",
         "how-claude-code-works.md",
         "jetbrains.md",
+        "managed-mcp.md",
         "mcp.md",
         "memory.md",
         "microsoft-foundry.md",
@@ -1588,7 +1587,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 151
+      "mentions": 153
     },
     "plan": {
       "documented": true,
@@ -1629,6 +1628,7 @@
         "headless.md",
         "hooks.md",
         "jetbrains.md",
+        "managed-mcp.md",
         "mcp.md",
         "monitoring-usage.md",
         "overview.md",
@@ -1642,7 +1642,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 168
+      "mentions": 171
     },
     "powerup": {
       "documented": true,
@@ -1952,7 +1952,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 43
+      "mentions": 44
     },
     "statusline": {
       "documented": true,
