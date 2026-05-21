@@ -189,7 +189,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 26
+      "mentions": 27
     },
     "InstructionsLoaded": {
       "documented": true,
@@ -228,7 +228,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 21
+      "mentions": 22
     },
     "PermissionRequest": {
       "documented": true,
@@ -319,7 +319,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 126
+      "mentions": 127
     },
     "SessionEnd": {
       "documented": true,
@@ -347,7 +347,7 @@
         "tools-reference.md",
         "web-quickstart.md"
       ],
-      "mentions": 60
+      "mentions": 61
     },
     "Setup": {
       "documented": true,
@@ -372,7 +372,7 @@
         "routines.md",
         "web-quickstart.md"
       ],
-      "mentions": 53
+      "mentions": 54
     },
     "Stop": {
       "documented": true,
@@ -421,7 +421,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 24
+      "mentions": 25
     },
     "SubagentStop": {
       "documented": true,
@@ -467,7 +467,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 20
+      "mentions": 21
     },
     "UserPromptExpansion": {
       "documented": true,
