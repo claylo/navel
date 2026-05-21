@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-21T16:08:11Z",
+      "version_at_time": "2.1.146",
+      "files_changed": [
+        "errors.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-21T05:25:09Z",
       "version_at_time": "2.1.146",
       "files_changed": [
@@ -1686,19 +1699,6 @@
         "terminal-config.md",
         "tools-reference.md",
         "troubleshoot-install.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-01T02:32:11Z",
-      "version_at_time": "2.1.126",
-      "files_changed": [
-        "changelog.md"
       ],
       "files_added": [
         ""
