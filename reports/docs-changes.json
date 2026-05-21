@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-05-21T23:09:04Z",
+      "version_at_time": "2.1.147",
+      "files_changed": [
+        "devcontainer.md",
+        "sandboxing.md",
+        "security.md"
+      ],
+      "files_added": [
+        "sandbox-environments.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-21T22:23:51Z",
       "version_at_time": "2.1.147",
       "files_changed": [
@@ -1670,19 +1685,6 @@
       "files_changed": [
         "desktop-quickstart.md",
         "desktop.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-01T22:14:13Z",
-      "version_at_time": "2.1.126",
-      "files_changed": [
-        "plugins-reference.md"
       ],
       "files_added": [
         ""
