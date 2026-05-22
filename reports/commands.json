@@ -1439,6 +1439,7 @@
         "prompt-library.md",
         "remote-control.md",
         "routines.md",
+        "sandbox-environments.md",
         "scheduled-tasks.md",
         "settings.md",
         "sub-agents.md",
@@ -1447,7 +1448,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 206
+      "mentions": 207
     },
     "memory": {
       "documented": true,
@@ -1575,6 +1576,7 @@
         "permission-modes.md",
         "permissions.md",
         "prompt-caching.md",
+        "sandbox-environments.md",
         "sandboxing.md",
         "security.md",
         "server-managed-settings.md",
@@ -1587,7 +1589,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 153
+      "mentions": 155
     },
     "plan": {
       "documented": true,
@@ -2191,5 +2193,5 @@
       "mentions": 1
     }
   },
-  "docs_checked_at": "2026-05-21"
+  "docs_checked_at": "2026-05-22"
 }
