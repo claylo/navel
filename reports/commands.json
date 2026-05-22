@@ -100,6 +100,7 @@
     "version",
     "voice",
     "web-setup",
+    "wellbeing",
     "workflows"
   ],
   "descriptions": {
@@ -281,6 +282,7 @@
     "version": "disabled",
     "voice": "available",
     "web-setup": "available",
+    "wellbeing": "disabled",
     "workflows": "available"
   },
   "commands_history": {
@@ -642,6 +644,11 @@
     "2.1.146": {
       "added": [
         "workflows"
+      ]
+    },
+    "2.1.149": {
+      "added": [
+        "wellbeing"
       ]
     }
   },
@@ -2184,6 +2191,11 @@
         "web-quickstart.md"
       ],
       "mentions": 19
+    },
+    "wellbeing": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "workflows": {
       "documented": true,
