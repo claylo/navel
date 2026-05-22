@@ -40,7 +40,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (101)</summary>
+<summary>Commands (102)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -144,6 +144,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/version** | Print the version this session is running (not what autou... | 2.1.83 | *disabled* | yes |
 | /voice | Toggle voice mode | 2.1.59 | available | yes |
 | /web-setup | Setup Claude Code on the web (requires connecting your Gi... | 2.1.79 | available | yes |
+| **/wellbeing** | — | 2.1.149 | *disabled* | **no** |
 | /workflows | — | 2.1.146 | available | yes |
 
 </details>
@@ -744,6 +745,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.149 | — | +wellbeing | — |
 | 2.1.146 | — | +workflows | — |
 | 2.1.144 | — | +usage-credits | — |
 | 2.1.139 | — | +scroll-speed | — |
