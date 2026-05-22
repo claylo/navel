@@ -370,9 +370,10 @@
         "plugins-reference.md",
         "remote-control.md",
         "routines.md",
+        "sandbox-environments.md",
         "web-quickstart.md"
       ],
-      "mentions": 54
+      "mentions": 55
     },
     "Stop": {
       "documented": true,
@@ -513,5 +514,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-05-21"
+  "docs_checked_at": "2026-05-22"
 }
