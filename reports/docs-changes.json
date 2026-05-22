@@ -1,6 +1,38 @@
 {
   "changes": [
     {
+      "date": "2026-05-22T01:41:01Z",
+      "version_at_time": "2.1.148",
+      "files_changed": [
+        "agent-view.md",
+        "auto-mode-config.md",
+        "changelog.md",
+        "commands.md",
+        "env-vars.md",
+        "errors.md",
+        "features-overview.md",
+        "glossary.md",
+        "interactive-mode.md",
+        "keybindings.md",
+        "mcp.md",
+        "model-config.md",
+        "permission-modes.md",
+        "plugin-marketplaces.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slash-commands.md",
+        "tools-reference.md",
+        "troubleshoot-install.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-21T23:09:04Z",
       "version_at_time": "2.1.147",
       "files_changed": [
@@ -1674,20 +1706,6 @@
       ],
       "files_added": [
         "deep-links.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-02T01:35:41Z",
-      "version_at_time": "2.1.126",
-      "files_changed": [
-        "desktop-quickstart.md",
-        "desktop.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
