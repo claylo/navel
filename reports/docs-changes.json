@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-23T05:15:13Z",
+      "version_at_time": "2.1.150",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-23T01:33:22Z",
       "version_at_time": "2.1.149",
       "files_changed": [
@@ -1655,20 +1668,6 @@
       "files_changed": [
         "hooks-guide.md",
         "hooks.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-04T14:45:21Z",
-      "version_at_time": "2.1.126",
-      "files_changed": [
-        "terminal-config.md",
-        "troubleshoot-install.md"
       ],
       "files_added": [
         ""
