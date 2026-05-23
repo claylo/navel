@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-05-23T01:33:22Z",
+      "version_at_time": "2.1.149",
+      "files_changed": [
+        "sub-agents.md",
+        "subagents.md",
+        "worktrees.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-22T22:27:50Z",
       "version_at_time": "2.1.149",
       "files_changed": [
@@ -1654,19 +1669,6 @@
       "files_changed": [
         "terminal-config.md",
         "troubleshoot-install.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-04T13:24:12Z",
-      "version_at_time": "2.1.126",
-      "files_changed": [
-        "monitoring-usage.md"
       ],
       "files_added": [
         ""
