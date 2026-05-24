@@ -926,12 +926,13 @@
         "plugins-reference.md",
         "prompt-caching.md",
         "remote-control.md",
+        "sandboxing.md",
         "settings.md",
         "setup.md",
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 93
+      "mentions": 94
     },
     "context": {
       "documented": true,
@@ -2206,5 +2207,5 @@
       "mentions": 1
     }
   },
-  "docs_checked_at": "2026-05-23"
+  "docs_checked_at": "2026-05-24"
 }
