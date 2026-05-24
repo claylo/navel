@@ -1,6 +1,22 @@
 {
   "changes": [
     {
+      "date": "2026-05-24T05:20:24Z",
+      "version_at_time": "2.1.150",
+      "files_changed": [
+        "code-review.md",
+        "quickstart.md",
+        "sandboxing.md",
+        "tools-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-23T05:15:13Z",
       "version_at_time": "2.1.150",
       "files_changed": [
@@ -1654,20 +1670,6 @@
         "subagents.md",
         "voice-dictation.md",
         "vs-code.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-04T21:22:27Z",
-      "version_at_time": "2.1.128",
-      "files_changed": [
-        "hooks-guide.md",
-        "hooks.md"
       ],
       "files_added": [
         ""
