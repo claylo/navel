@@ -1,6 +1,29 @@
 {
   "changes": [
     {
+      "date": "2026-05-25T19:33:11Z",
+      "version_at_time": "2.1.150",
+      "files_changed": [
+        "claude-directory.md",
+        "commands.md",
+        "costs.md",
+        "env-vars.md",
+        "keybindings.md",
+        "managed-mcp.md",
+        "monitoring-usage.md",
+        "permissions.md",
+        "settings.md",
+        "skills.md",
+        "slash-commands.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-25T18:29:14Z",
       "version_at_time": "2.1.150",
       "files_changed": [
@@ -1652,19 +1675,6 @@
         "statusline.md",
         "tools-reference.md",
         "voice-dictation.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-05T00:23:30Z",
-      "version_at_time": "2.1.128",
-      "files_changed": [
-        "features-overview.md"
       ],
       "files_added": [
         ""
