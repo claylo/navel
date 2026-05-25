@@ -991,7 +991,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 20
+      "mentions": 21
     },
     "desktop": {
       "documented": true,
@@ -1050,6 +1050,7 @@
         "hooks.md",
         "how-claude-code-works.md",
         "keybindings.md",
+        "monitoring-usage.md",
         "plugin-dependencies.md",
         "plugins-reference.md",
         "settings.md",
@@ -1057,7 +1058,7 @@
         "slash-commands.md",
         "troubleshooting.md"
       ],
-      "mentions": 43
+      "mentions": 44
     },
     "effort": {
       "documented": true,
@@ -1457,7 +1458,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 207
+      "mentions": 208
     },
     "memory": {
       "documented": true,
@@ -1813,7 +1814,7 @@
         "subagents.md",
         "ultrareview.md"
       ],
-      "mentions": 15
+      "mentions": 17
     },
     "rewind": {
       "documented": true,
@@ -1934,7 +1935,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 203
+      "mentions": 208
     },
     "status": {
       "documented": true,
@@ -2144,19 +2145,20 @@
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 35
+      "mentions": 36
     },
     "usage-credits": {
       "documented": true,
       "doc_files": [
         "changelog.md",
         "commands.md",
+        "costs.md",
         "env-vars.md",
         "errors.md",
         "remote-control.md",
         "ultrareview.md"
       ],
-      "mentions": 6
+      "mentions": 7
     },
     "version": {
       "documented": true,
@@ -2207,5 +2209,5 @@
       "mentions": 1
     }
   },
-  "docs_checked_at": "2026-05-24"
+  "docs_checked_at": "2026-05-25"
 }
