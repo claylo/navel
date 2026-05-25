@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-25T20:30:49Z",
+      "version_at_time": "2.1.150",
+      "files_changed": [
+        "prompt-caching.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-25T19:33:11Z",
       "version_at_time": "2.1.150",
       "files_changed": [
@@ -1640,41 +1653,6 @@
         "desktop.md",
         "hooks.md",
         "settings.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-05T15:33:41Z",
-      "version_at_time": "2.1.128",
-      "files_changed": [
-        "authentication.md",
-        "channels-reference.md",
-        "channels.md",
-        "cli-reference.md",
-        "commands.md",
-        "data-usage.md",
-        "env-vars.md",
-        "fullscreen.md",
-        "headless.md",
-        "hooks.md",
-        "mcp.md",
-        "monitoring-usage.md",
-        "permissions.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "remote-control.md",
-        "scheduled-tasks.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md",
-        "statusline.md",
-        "tools-reference.md",
-        "voice-dictation.md"
       ],
       "files_added": [
         ""
