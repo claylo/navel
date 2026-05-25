@@ -1,6 +1,23 @@
 {
   "changes": [
     {
+      "date": "2026-05-25T22:20:13Z",
+      "version_at_time": "2.1.150",
+      "files_changed": [
+        "monitoring-usage.md",
+        "remote-control.md",
+        "sub-agents.md",
+        "subagents.md",
+        "tools-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-25T21:26:42Z",
       "version_at_time": "2.1.150",
       "files_changed": [
@@ -1626,30 +1643,6 @@
       "version_at_time": "2.1.129",
       "files_changed": [
         "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-05T22:03:16Z",
-      "version_at_time": "2.1.129",
-      "files_changed": [
-        "claude-code-on-the-web.md",
-        "env-vars.md",
-        "errors.md",
-        "interactive-mode.md",
-        "network-config.md",
-        "permissions.md",
-        "platforms.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "security.md",
-        "settings.md",
-        "web-quickstart.md"
       ],
       "files_added": [
         ""
