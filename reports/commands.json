@@ -1072,6 +1072,7 @@
         "model-config.md",
         "monitoring-usage.md",
         "plugins-reference.md",
+        "prompt-caching.md",
         "settings.md",
         "skills.md",
         "slash-commands.md",
@@ -1079,7 +1080,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 46
+      "mentions": 47
     },
     "exit": {
       "documented": true,
