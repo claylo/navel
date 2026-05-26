@@ -3,7 +3,7 @@
 Auto-generated tracking data for Claude Code versions, hooks, commands, and environment variables.
 
 <details>
-<summary>Hooks (29)</summary>
+<summary>Hooks (30)</summary>
 
 | Hook | Since | Documented |
 |------|-------|------------|
@@ -13,6 +13,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | ElicitationResult | 2.1.63 | yes |
 | FileChanged | 2.1.83 | yes |
 | InstructionsLoaded | 2.1.64 | yes |
+| **MessageDisplay** | 2.1.152 | **no** |
 | Notification | 2.0.0 | yes |
 | PermissionDenied | 2.1.89 | yes |
 | PermissionRequest | 2.0.45 | yes |
@@ -60,8 +61,6 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /claude-in-chrome | Automates your Chrome browser to interact with web pages ... | 2.1.7 | available | yes |
 | /clear | Start a new session with empty context; previous session ... | 2.0.0 | available | yes |
 | /color | Set the prompt bar color for this session | 2.1.7 | available | yes |
-| /commit | Create a git commit | 2.1.51 | available | yes |
-| /commit-push-pr | Commit, push, and open a PR | 2.1.51 | available | yes |
 | /compact | Free up context by summarizing the conversation so far | 2.0.0 | available | yes |
 | /config | Open config panel | 2.0.0 | available | yes |
 | /context | Visualize current context usage as a colored grid | 2.0.0 | available | yes |
@@ -112,6 +111,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /recap | Generate a one-line session recap now | 2.1.105 | available | yes |
 | /release-notes | — | 2.0.0 | available | yes |
 | /reload-plugins | Activate pending plugin changes in the current session | 2.1.64 | available | yes |
+| **/reload-skills** | Pick up skills added or changed on disk during this session | 2.1.152 | available | **no** |
 | /remote-control | — | 2.1.51 | available | yes |
 | /remote-env | Configure the default remote environment for teleport ses... | 2.0.47 | available | yes |
 | /rename | — | 2.0.41 | available | yes |
@@ -123,6 +123,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /session | — | 2.1.15 | available | yes |
 | /setup-bedrock | Reconfigure Amazon Bedrock authentication, region, or mod... | 2.1.92 | available | yes |
 | /setup-vertex | Reconfigure Google Vertex AI authentication, project, reg... | 2.1.98 | available | yes |
+| /simplify | Review the current diff and apply the fixes \u2014 equiva... | 2.1.63 | available | yes |
 | /skills | List available skills | 2.0.73 | available | yes |
 | /status | Show Claude Code status including version, model, account... | 2.0.0 | available | yes |
 | /statusline | — | 2.0.0 | available | yes |
@@ -745,6 +746,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.152 | +MessageDisplay | +reload-skills, +simplify | — |
 | 2.1.149 | — | +wellbeing | — |
 | 2.1.146 | — | +workflows | — |
 | 2.1.144 | — | +usage-credits | — |
