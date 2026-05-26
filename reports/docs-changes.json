@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "date": "2026-05-26T01:00:01Z",
+      "version_at_time": "2.1.150",
+      "files_changed": [
+        "agent-view.md",
+        "discover-plugins.md",
+        "mcp.md",
+        "permissions.md",
+        "skills.md",
+        "slash-commands.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-25T23:25:56Z",
       "version_at_time": "2.1.150",
       "files_changed": [
@@ -1630,19 +1648,6 @@
       "files_changed": [
         "cli-reference.md",
         "settings.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-06T08:10:23Z",
-      "version_at_time": "2.1.131",
-      "files_changed": [
-        "changelog.md"
       ],
       "files_added": [
         ""
