@@ -6,6 +6,7 @@
     "ElicitationResult",
     "FileChanged",
     "InstructionsLoaded",
+    "MessageDisplay",
     "Notification",
     "PermissionDenied",
     "PermissionRequest",
@@ -132,6 +133,11 @@
       "added": [
         "PostToolBatch"
       ]
+    },
+    "2.1.152": {
+      "added": [
+        "MessageDisplay"
+      ]
     }
   },
   "hooks_docs": {
@@ -201,6 +207,11 @@
         "plugins-reference.md"
       ],
       "mentions": 17
+    },
+    "MessageDisplay": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "Notification": {
       "documented": true,
@@ -275,11 +286,12 @@
         "plugin-marketplaces.md",
         "plugins-reference.md",
         "plugins.md",
+        "security-guidance.md",
         "server-managed-settings.md",
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 98
+      "mentions": 100
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -344,10 +356,11 @@
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
+        "security-guidance.md",
         "tools-reference.md",
         "web-quickstart.md"
       ],
-      "mentions": 61
+      "mentions": 62
     },
     "Setup": {
       "documented": true,
@@ -393,13 +406,14 @@
         "interactive-mode.md",
         "plugins-reference.md",
         "scheduled-tasks.md",
+        "security-guidance.md",
         "sub-agents.md",
         "subagents.md",
         "tools-reference.md",
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 132
+      "mentions": 133
     },
     "StopFailure": {
       "documented": true,
@@ -484,9 +498,10 @@
         "changelog.md",
         "hooks-guide.md",
         "hooks.md",
-        "plugins-reference.md"
+        "plugins-reference.md",
+        "security-guidance.md"
       ],
-      "mentions": 35
+      "mentions": 36
     },
     "WorktreeCreate": {
       "documented": true,
