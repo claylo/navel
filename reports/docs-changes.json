@@ -1,6 +1,22 @@
 {
   "changes": [
     {
+      "date": "2026-05-26T20:41:34Z",
+      "version_at_time": "2.1.150",
+      "files_changed": [
+        "discover-plugins.md",
+        "hooks-guide.md",
+        "plugins-reference.md",
+        "security.md"
+      ],
+      "files_added": [
+        "security-guidance.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-26T19:41:33Z",
       "version_at_time": "2.1.150",
       "files_changed": [
@@ -1621,19 +1637,6 @@
       "files_changed": [
         "changelog.md",
         "settings.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-06T16:25:55Z",
-      "version_at_time": "2.1.131",
-      "files_changed": [
-        "setup.md"
       ],
       "files_added": [
         ""
