@@ -662,10 +662,12 @@
         "commands.md",
         "permissions.md",
         "sessions.md",
+        "skills.md",
+        "slash-commands.md",
         "statusline.md",
         "tools-reference.md"
       ],
-      "mentions": 16
+      "mentions": 19
     },
     "advisor": {
       "documented": false,
@@ -1655,7 +1657,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 171
+      "mentions": 172
     },
     "powerup": {
       "documented": true,
