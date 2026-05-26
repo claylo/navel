@@ -1,6 +1,26 @@
 {
   "changes": [
     {
+      "date": "2026-05-26T23:27:05Z",
+      "version_at_time": "2.1.152",
+      "files_changed": [
+        "admin-setup.md",
+        "amazon-bedrock.md",
+        "common-workflows.md",
+        "google-vertex-ai.md",
+        "mcp.md",
+        "memory.md",
+        "microsoft-foundry.md",
+        "security-guidance.md"
+      ],
+      "files_added": [
+        "large-codebases.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-26T21:10:26Z",
       "version_at_time": "2.1.150",
       "files_changed": [
@@ -1621,24 +1641,6 @@
         "env-vars.md",
         "mcp.md",
         "settings.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-07T04:15:01Z",
-      "version_at_time": "2.1.132",
-      "files_changed": [
-        "env-vars.md",
-        "fullscreen.md",
-        "interactive-mode.md",
-        "model-config.md",
-        "statusline.md",
-        "terminal-config.md"
       ],
       "files_added": [
         ""
