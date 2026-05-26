@@ -1459,7 +1459,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 208
+      "mentions": 207
     },
     "memory": {
       "documented": true,
@@ -2210,5 +2210,5 @@
       "mentions": 1
     }
   },
-  "docs_checked_at": "2026-05-25"
+  "docs_checked_at": "2026-05-26"
 }
