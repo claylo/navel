@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-26T02:54:49Z",
+      "version_at_time": "2.1.150",
+      "files_changed": [
+        "github-enterprise-server.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-26T01:00:01Z",
       "version_at_time": "2.1.150",
       "files_changed": [
@@ -1634,20 +1647,6 @@
         "setup.md",
         "skills.md",
         "slash-commands.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-06T14:47:32Z",
-      "version_at_time": "2.1.131",
-      "files_changed": [
-        "cli-reference.md",
-        "settings.md"
       ],
       "files_added": [
         ""
