@@ -358,7 +358,6 @@
         "claude-platform-on-aws.md",
         "cli-reference.md",
         "code-review.md",
-        "desktop-changelog.md",
         "discover-plugins.md",
         "env-vars.md",
         "github-actions.md",
@@ -373,7 +372,7 @@
         "sandbox-environments.md",
         "web-quickstart.md"
       ],
-      "mentions": 55
+      "mentions": 54
     },
     "Stop": {
       "documented": true,
@@ -514,5 +513,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-05-22"
+  "docs_checked_at": "2026-05-26"
 }
