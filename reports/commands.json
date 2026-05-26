@@ -16,8 +16,6 @@
     "claude-in-chrome",
     "clear",
     "color",
-    "commit",
-    "commit-push-pr",
     "compact",
     "config",
     "context",
@@ -68,6 +66,7 @@
     "recap",
     "release-notes",
     "reload-plugins",
+    "reload-skills",
     "remote-control",
     "remote-env",
     "rename",
@@ -79,6 +78,7 @@
     "session",
     "setup-bedrock",
     "setup-vertex",
+    "simplify",
     "skills",
     "status",
     "statusline",
@@ -118,8 +118,6 @@
     "claude-in-chrome": "Automates your Chrome browser to interact with web pages - clicking elements, filling forms, capturing screenshots, reading console logs, and navigating sites. Opens pages in new tabs within your existing Chrome session. Requires site-level permissions before executing (configured in the extension).",
     "clear": "Start a new session with empty context; previous session stays on disk (resumable with /resume)",
     "color": "Set the prompt bar color for this session",
-    "commit": "Create a git commit",
-    "commit-push-pr": "Commit, push, and open a PR",
     "compact": "Free up context by summarizing the conversation so far",
     "config": "Open config panel",
     "context": "Visualize current context usage as a colored grid",
@@ -158,6 +156,7 @@
     "rate-limit-options": "Show options when rate limit is reached",
     "recap": "Generate a one-line session recap now",
     "reload-plugins": "Activate pending plugin changes in the current session",
+    "reload-skills": "Pick up skills added or changed on disk during this session",
     "remote-env": "Configure the default remote environment for teleport sessions",
     "resume": "Resume a previous conversation",
     "review": "Review a pull request",
@@ -165,6 +164,7 @@
     "security-review": "Complete a security review of the pending changes on the current branch",
     "setup-bedrock": "Reconfigure Amazon Bedrock authentication, region, or model pins",
     "setup-vertex": "Reconfigure Google Vertex AI authentication, project, region, or model pins",
+    "simplify": "Review the current diff and apply the fixes \\u2014 equivalent to /code-review --fix.",
     "skills": "List available skills",
     "status": "Show Claude Code status including version, model, account, API connectivity, and tool statuses",
     "stickers": "Order Claude Code stickers",
@@ -198,8 +198,6 @@
     "claude-in-chrome": "available",
     "clear": "available",
     "color": "available",
-    "commit": "available",
-    "commit-push-pr": "available",
     "compact": "available",
     "config": "available",
     "context": "available",
@@ -250,6 +248,7 @@
     "recap": "available",
     "release-notes": "available",
     "reload-plugins": "available",
+    "reload-skills": "available",
     "remote-control": "available",
     "remote-env": "available",
     "rename": "available",
@@ -261,6 +260,7 @@
     "session": "available",
     "setup-bedrock": "available",
     "setup-vertex": "available",
+    "simplify": "available",
     "skills": "available",
     "status": "available",
     "statusline": "available",
@@ -650,6 +650,12 @@
       "added": [
         "wellbeing"
       ]
+    },
+    "2.1.152": {
+      "added": [
+        "reload-skills",
+        "simplify"
+      ]
     }
   },
   "commands_docs": {
@@ -853,24 +859,6 @@
         "subagents.md"
       ],
       "mentions": 9
-    },
-    "commit": {
-      "documented": true,
-      "doc_files": [
-        "changelog.md",
-        "headless.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md"
-      ],
-      "mentions": 8
-    },
-    "commit-push-pr": {
-      "documented": true,
-      "doc_files": [
-        "changelog.md"
-      ],
-      "mentions": 1
     },
     "compact": {
       "documented": true,
@@ -1246,6 +1234,7 @@
         "plugins-reference.md",
         "plugins.md",
         "prompt-library.md",
+        "security-guidance.md",
         "security.md",
         "server-managed-settings.md",
         "settings.md",
@@ -1258,7 +1247,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 298
+      "mentions": 299
     },
     "ide": {
       "documented": true,
@@ -1653,11 +1642,12 @@
         "plugins-reference.md",
         "plugins.md",
         "remote-control.md",
+        "security-guidance.md",
         "settings.md",
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 172
+      "mentions": 176
     },
     "powerup": {
       "documented": true,
@@ -1723,9 +1713,15 @@
         "plugin-dependencies.md",
         "plugins-reference.md",
         "plugins.md",
-        "remote-control.md"
+        "remote-control.md",
+        "security-guidance.md"
       ],
-      "mentions": 19
+      "mentions": 20
+    },
+    "reload-skills": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "remote-control": {
       "documented": true,
@@ -1852,10 +1848,11 @@
         "changelog.md",
         "claude-directory.md",
         "commands.md",
+        "security-guidance.md",
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 7
+      "mentions": 8
     },
     "session": {
       "documented": true,
@@ -1890,6 +1887,15 @@
         "google-vertex-ai.md"
       ],
       "mentions": 3
+    },
+    "simplify": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "code-review.md",
+        "commands.md"
+      ],
+      "mentions": 4
     },
     "skills": {
       "documented": true,
@@ -2207,9 +2213,10 @@
     "workflows": {
       "documented": true,
       "doc_files": [
-        "github-actions.md"
+        "github-actions.md",
+        "security-guidance.md"
       ],
-      "mentions": 1
+      "mentions": 2
     }
   },
   "docs_checked_at": "2026-05-26"
