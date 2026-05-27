@@ -849,7 +849,7 @@
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 63
+      "mentions": 64
     },
     "color": {
       "documented": true,
@@ -889,7 +889,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 76
+      "mentions": 77
     },
     "config": {
       "documented": true,
@@ -1725,9 +1725,10 @@
     "reload-skills": {
       "documented": true,
       "doc_files": [
-        "changelog.md"
+        "changelog.md",
+        "commands.md"
       ],
-      "mentions": 1
+      "mentions": 2
     },
     "remote-control": {
       "documented": true,
@@ -1776,12 +1777,13 @@
         "cli-reference.md",
         "commands.md",
         "costs.md",
+        "hooks.md",
         "permission-modes.md",
         "remote-control.md",
         "sessions.md",
         "statusline.md"
       ],
-      "mentions": 23
+      "mentions": 25
     },
     "resume": {
       "documented": true,
@@ -1805,7 +1807,7 @@
         "remote-control.md",
         "sessions.md"
       ],
-      "mentions": 69
+      "mentions": 70
     },
     "review": {
       "documented": true,
@@ -1952,7 +1954,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 224
+      "mentions": 229
     },
     "status": {
       "documented": true,
@@ -1981,7 +1983,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 44
+      "mentions": 47
     },
     "statusline": {
       "documented": true,
@@ -2121,11 +2123,12 @@
         "changelog.md",
         "claude-code-on-the-web.md",
         "cli-reference.md",
+        "code-review.md",
         "commands.md",
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 17
+      "mentions": 11
     },
     "update": {
       "documented": true,
