@@ -794,7 +794,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 13
+      "mentions": 14
     },
     "chrome": {
       "documented": true,
@@ -1798,13 +1798,14 @@
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
+        "interactive-mode.md",
         "model-config.md",
         "monitoring-usage.md",
         "quickstart.md",
         "remote-control.md",
         "sessions.md"
       ],
-      "mentions": 68
+      "mentions": 69
     },
     "review": {
       "documented": true,
