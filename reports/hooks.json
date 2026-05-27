@@ -211,9 +211,12 @@
     "MessageDisplay": {
       "documented": true,
       "doc_files": [
-        "changelog.md"
+        "changelog.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "plugins-reference.md"
       ],
-      "mentions": 1
+      "mentions": 18
     },
     "Notification": {
       "documented": true,
@@ -364,7 +367,7 @@
         "tools-reference.md",
         "web-quickstart.md"
       ],
-      "mentions": 65
+      "mentions": 68
     },
     "Setup": {
       "documented": true,
