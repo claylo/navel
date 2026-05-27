@@ -1,6 +1,36 @@
 {
   "changes": [
     {
+      "date": "2026-05-27T19:03:31Z",
+      "version_at_time": "2.1.152",
+      "files_changed": [
+        "agent-view.md",
+        "cli-reference.md",
+        "code-review.md",
+        "commands.md",
+        "env-vars.md",
+        "errors.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "keybindings.md",
+        "monitoring-usage.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "settings.md",
+        "skills.md",
+        "slash-commands.md",
+        "ultrareview.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-27T15:52:08Z",
       "version_at_time": "2.1.152",
       "files_changed": [
@@ -1619,23 +1649,6 @@
       "version_at_time": "2.1.132",
       "files_changed": [
         "discover-plugins.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-07T16:16:11Z",
-      "version_at_time": "2.1.132",
-      "files_changed": [
-        "env-vars.md",
-        "google-vertex-ai.md",
-        "mcp.md",
-        "output-styles.md",
-        "settings.md"
       ],
       "files_added": [
         ""
