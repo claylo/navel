@@ -209,9 +209,11 @@
       "mentions": 17
     },
     "MessageDisplay": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "changelog.md"
+      ],
+      "mentions": 1
     },
     "Notification": {
       "documented": true,
@@ -228,7 +230,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 48
+      "mentions": 49
     },
     "PermissionDenied": {
       "documented": true,
@@ -362,7 +364,7 @@
         "tools-reference.md",
         "web-quickstart.md"
       ],
-      "mentions": 63
+      "mentions": 65
     },
     "Setup": {
       "documented": true,
