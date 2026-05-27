@@ -322,6 +322,7 @@
         "features-overview.md",
         "hooks-guide.md",
         "hooks.md",
+        "memory.md",
         "monitoring-usage.md",
         "permission-modes.md",
         "permissions.md",
@@ -331,7 +332,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 127
+      "mentions": 128
     },
     "SessionEnd": {
       "documented": true,
@@ -355,12 +356,13 @@
         "features-overview.md",
         "hooks-guide.md",
         "hooks.md",
+        "large-codebases.md",
         "plugins-reference.md",
         "security-guidance.md",
         "tools-reference.md",
         "web-quickstart.md"
       ],
-      "mentions": 62
+      "mentions": 63
     },
     "Setup": {
       "documented": true,
@@ -404,6 +406,7 @@
         "hooks-guide.md",
         "hooks.md",
         "interactive-mode.md",
+        "large-codebases.md",
         "plugins-reference.md",
         "scheduled-tasks.md",
         "security-guidance.md",
@@ -413,7 +416,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 133
+      "mentions": 134
     },
     "StopFailure": {
       "documented": true,
@@ -528,5 +531,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-05-26"
+  "docs_checked_at": "2026-05-27"
 }
