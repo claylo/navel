@@ -13,7 +13,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | ElicitationResult | 2.1.63 | yes |
 | FileChanged | 2.1.83 | yes |
 | InstructionsLoaded | 2.1.64 | yes |
-| **MessageDisplay** | 2.1.152 | **no** |
+| MessageDisplay | 2.1.152 | yes |
 | Notification | 2.0.0 | yes |
 | PermissionDenied | 2.1.89 | yes |
 | PermissionRequest | 2.0.45 | yes |
@@ -111,7 +111,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /recap | Generate a one-line session recap now | 2.1.105 | available | yes |
 | /release-notes | — | 2.0.0 | available | yes |
 | /reload-plugins | Activate pending plugin changes in the current session | 2.1.64 | available | yes |
-| **/reload-skills** | Pick up skills added or changed on disk during this session | 2.1.152 | available | **no** |
+| /reload-skills | Pick up skills added or changed on disk during this session | 2.1.152 | available | yes |
 | /remote-control | — | 2.1.51 | available | yes |
 | /remote-env | Configure the default remote environment for teleport ses... | 2.0.47 | available | yes |
 | /rename | — | 2.0.41 | available | yes |
