@@ -1,0 +1,25 @@
+--- v2.1.152
++++ v2.1.153
+@@ -216,7 +216,7 @@
+  - Is a git repository: true
+  - Platform: linux
+  - Shell: bash
+- - OS Version: Linux 6.17.0-1013-azure
++ - OS Version: Linux 6.17.0-1015-azure
+  - You are powered by the model named Opus 4.7. The exact model ID is claude-opus-4-7.
+  - Assistant knowledge cutoff is January 2026.
+  - The most recent Claude model family is Claude 4.X. Model IDs — Opus 4.7: 'claude-opus-4-7', Sonnet 4.6: 'claude-sonnet-4-6', Haiku 4.5: 'claude-haiku-4-5-20251001'. When building AI applications, default to the latest and most capable Claude models.
+@@ -233,11 +233,10 @@
+ Main branch (you will usually use this for PRs): main
+ 
+ Status:
+-M reports/docs-changes.json
+- M reports/nav.json
++(clean)
+ 
+ Recent commits:
+-641dbf8 chore(readme): sync claude code data (v2.1.152)
++62c4ad7 chore(readme): sync claude code data (v2.1.153)
+ 
+ ---
+ 
