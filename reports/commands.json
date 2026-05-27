@@ -666,6 +666,7 @@
         "changelog.md",
         "cli-reference.md",
         "commands.md",
+        "large-codebases.md",
         "permissions.md",
         "sessions.md",
         "skills.md",
@@ -673,7 +674,7 @@
         "statusline.md",
         "tools-reference.md"
       ],
-      "mentions": 19
+      "mentions": 21
     },
     "advisor": {
       "documented": false,
@@ -1224,6 +1225,7 @@
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
+        "large-codebases.md",
         "mcp.md",
         "memory.md",
         "overview.md",
@@ -1247,7 +1249,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 299
+      "mentions": 302
     },
     "ide": {
       "documented": true,
@@ -1349,7 +1351,6 @@
       "documented": true,
       "doc_files": [
         "admin-setup.md",
-        "amazon-bedrock.md",
         "authentication.md",
         "changelog.md",
         "claude-code-on-the-web.md",
@@ -1358,10 +1359,8 @@
         "costs.md",
         "env-vars.md",
         "errors.md",
-        "google-vertex-ai.md",
         "hooks.md",
         "mcp.md",
-        "microsoft-foundry.md",
         "monitoring-usage.md",
         "quickstart.md",
         "remote-control.md",
@@ -1371,7 +1370,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 53
+      "mentions": 50
     },
     "logout": {
       "documented": true,
@@ -1430,6 +1429,7 @@
         "hooks.md",
         "how-claude-code-works.md",
         "interactive-mode.md",
+        "large-codebases.md",
         "managed-mcp.md",
         "mcp.md",
         "monitoring-usage.md",
@@ -1450,7 +1450,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 207
+      "mentions": 208
     },
     "memory": {
       "documented": true,
@@ -1477,6 +1477,7 @@
         "hooks.md",
         "how-claude-code-works.md",
         "interactive-mode.md",
+        "large-codebases.md",
         "memory.md",
         "output-styles.md",
         "overview.md",
@@ -1492,7 +1493,7 @@
         "third-party-integrations.md",
         "web-quickstart.md"
       ],
-      "mentions": 116
+      "mentions": 121
     },
     "mobile": {
       "documented": true,
@@ -1570,6 +1571,7 @@
         "hooks.md",
         "how-claude-code-works.md",
         "jetbrains.md",
+        "large-codebases.md",
         "managed-mcp.md",
         "mcp.md",
         "memory.md",
@@ -1591,7 +1593,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 155
+      "mentions": 160
     },
     "plan": {
       "documented": true,
@@ -1632,6 +1634,7 @@
         "headless.md",
         "hooks.md",
         "jetbrains.md",
+        "large-codebases.md",
         "managed-mcp.md",
         "mcp.md",
         "monitoring-usage.md",
@@ -1647,7 +1650,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 176
+      "mentions": 178
     },
     "powerup": {
       "documented": true,
@@ -1924,6 +1927,7 @@
         "hooks.md",
         "how-claude-code-works.md",
         "interactive-mode.md",
+        "large-codebases.md",
         "mcp.md",
         "memory.md",
         "model-config.md",
@@ -1944,7 +1948,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 208
+      "mentions": 224
     },
     "status": {
       "documented": true,
@@ -2219,5 +2223,5 @@
       "mentions": 2
     }
   },
-  "docs_checked_at": "2026-05-26"
+  "docs_checked_at": "2026-05-27"
 }
