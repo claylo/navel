@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-27T01:42:32Z",
+      "version_at_time": "2.1.152",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-26T23:27:05Z",
       "version_at_time": "2.1.152",
       "files_changed": [
@@ -1623,24 +1636,6 @@
       "version_at_time": "2.1.132",
       "files_changed": [
         "memory.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-07T09:52:43Z",
-      "version_at_time": "2.1.132",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "claude-code-on-the-web.md",
-        "cli-reference.md",
-        "env-vars.md",
-        "mcp.md",
-        "settings.md"
       ],
       "files_added": [
         ""
