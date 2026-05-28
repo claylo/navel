@@ -816,7 +816,7 @@
         "troubleshoot-install.md",
         "vs-code.md"
       ],
-      "mentions": 27
+      "mentions": 28
     },
     "claude-in-chrome": {
       "documented": true,
@@ -1074,7 +1074,7 @@
         "subagents.md",
         "workflows.md"
       ],
-      "mentions": 54
+      "mentions": 56
     },
     "exit": {
       "documented": true,
@@ -1121,7 +1121,7 @@
         "monitoring-usage.md",
         "settings.md"
       ],
-      "mentions": 27
+      "mentions": 28
     },
     "feedback": {
       "documented": true,
@@ -1397,7 +1397,7 @@
         "remote-control.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 19
+      "mentions": 20
     },
     "loops": {
       "documented": false,
@@ -1456,7 +1456,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 208
+      "mentions": 209
     },
     "memory": {
       "documented": true,
@@ -1545,7 +1545,7 @@
         "subagents.md",
         "workflows.md"
       ],
-      "mentions": 158
+      "mentions": 160
     },
     "passes": {
       "documented": true,
@@ -1657,7 +1657,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 178
+      "mentions": 180
     },
     "powerup": {
       "documented": true,
@@ -1764,7 +1764,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 47
+      "mentions": 48
     },
     "remote-env": {
       "documented": true,
@@ -1910,7 +1910,7 @@
         "code-review.md",
         "commands.md"
       ],
-      "mentions": 5
+      "mentions": 6
     },
     "skills": {
       "documented": true,
@@ -2245,7 +2245,7 @@
         "settings.md",
         "workflows.md"
       ],
-      "mentions": 34
+      "mentions": 35
     }
   },
   "docs_checked_at": "2026-05-28"
