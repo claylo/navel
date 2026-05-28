@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-28T09:11:09Z",
+      "version_at_time": "2.1.153",
+      "files_changed": [
+        "setup.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-28T07:15:58Z",
       "version_at_time": "2.1.153",
       "files_changed": [
@@ -1635,26 +1648,6 @@
         "settings.md",
         "sub-agents.md",
         "subagents.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-08T00:23:50Z",
-      "version_at_time": "2.1.133",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "changelog.md",
-        "google-vertex-ai.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "model-config.md",
-        "third-party-integrations.md",
-        "vs-code.md"
       ],
       "files_added": [
         ""
