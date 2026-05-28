@@ -398,6 +398,7 @@
       "documented": true,
       "doc_files": [
         "agent-view.md",
+        "best-practices.md",
         "champion-kit.md",
         "changelog.md",
         "cli-reference.md",
@@ -419,9 +420,10 @@
         "subagents.md",
         "tools-reference.md",
         "ultraplan.md",
-        "ultrareview.md"
+        "ultrareview.md",
+        "workflows.md"
       ],
-      "mentions": 134
+      "mentions": 137
     },
     "StopFailure": {
       "documented": true,
@@ -536,5 +538,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-05-27"
+  "docs_checked_at": "2026-05-28"
 }
