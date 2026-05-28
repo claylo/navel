@@ -123,7 +123,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /session | — | 2.1.15 | available | yes |
 | /setup-bedrock | Reconfigure Amazon Bedrock authentication, region, or mod... | 2.1.92 | available | yes |
 | /setup-vertex | Reconfigure Google Vertex AI authentication, project, reg... | 2.1.98 | available | yes |
-| /simplify | Review the current diff and apply the fixes \u2014 equiva... | 2.1.63 | available | yes |
+| /simplify | Review the changed code for reuse, simplification, effici... | 2.1.63 | available | yes |
 | /skills | List available skills | 2.0.73 | available | yes |
 | /status | Show Claude Code status including version, model, account... | 2.0.0 | available | yes |
 | /statusline | — | 2.0.0 | available | yes |
