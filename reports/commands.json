@@ -703,9 +703,10 @@
         "slash-commands.md",
         "sub-agents.md",
         "subagents.md",
+        "workflows.md",
         "worktrees.md"
       ],
-      "mentions": 77
+      "mentions": 78
     },
     "autocompact": {
       "documented": false,
@@ -921,9 +922,10 @@
         "settings.md",
         "setup.md",
         "terminal-config.md",
-        "voice-dictation.md"
+        "voice-dictation.md",
+        "workflows.md"
       ],
-      "mentions": 96
+      "mentions": 98
     },
     "context": {
       "documented": true,
@@ -1069,9 +1071,10 @@
         "slash-commands.md",
         "statusline.md",
         "sub-agents.md",
-        "subagents.md"
+        "subagents.md",
+        "workflows.md"
       ],
-      "mentions": 47
+      "mentions": 54
     },
     "exit": {
       "documented": true,
@@ -1171,14 +1174,16 @@
     "goal": {
       "documented": true,
       "doc_files": [
+        "best-practices.md",
         "changelog.md",
         "commands.md",
+        "glossary.md",
         "goal.md",
         "hooks.md",
         "prompt-library.md",
         "scheduled-tasks.md"
       ],
-      "mentions": 30
+      "mentions": 33
     },
     "heapdump": {
       "documented": true,
@@ -1249,7 +1254,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 302
+      "mentions": 303
     },
     "ide": {
       "documented": true,
@@ -1537,7 +1542,8 @@
         "slash-commands.md",
         "statusline.md",
         "sub-agents.md",
-        "subagents.md"
+        "subagents.md",
+        "workflows.md"
       ],
       "mentions": 158
     },
@@ -1911,6 +1917,7 @@
       "doc_files": [
         "agent-teams.md",
         "agent-view.md",
+        "agents.md",
         "best-practices.md",
         "champion-kit.md",
         "changelog.md",
@@ -1952,9 +1959,10 @@
         "slash-commands.md",
         "sub-agents.md",
         "subagents.md",
-        "tools-reference.md"
+        "tools-reference.md",
+        "workflows.md"
       ],
-      "mentions": 229
+      "mentions": 232
     },
     "status": {
       "documented": true,
@@ -2224,11 +2232,20 @@
     "workflows": {
       "documented": true,
       "doc_files": [
+        "agents.md",
+        "best-practices.md",
         "changelog.md",
+        "claude-directory.md",
+        "commands.md",
+        "env-vars.md",
         "github-actions.md",
-        "security-guidance.md"
+        "glossary.md",
+        "model-config.md",
+        "security-guidance.md",
+        "settings.md",
+        "workflows.md"
       ],
-      "mentions": 3
+      "mentions": 34
     }
   },
   "docs_checked_at": "2026-05-28"
