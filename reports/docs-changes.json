@@ -1,6 +1,28 @@
 {
   "changes": [
     {
+      "date": "2026-05-28T07:15:58Z",
+      "version_at_time": "2.1.153",
+      "files_changed": [
+        "agent-view.md",
+        "commands.md",
+        "keybindings.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "settings.md",
+        "setup.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-28T01:36:15Z",
       "version_at_time": "2.1.153",
       "files_changed": [
@@ -1633,23 +1655,6 @@
         "model-config.md",
         "third-party-integrations.md",
         "vs-code.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-07T22:20:47Z",
-      "version_at_time": "2.1.133",
-      "files_changed": [
-        "authentication.md",
-        "claude-code-on-the-web.md",
-        "debug-your-config.md",
-        "errors.md",
-        "routines.md"
       ],
       "files_added": [
         ""
