@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-05-28T01:36:15Z",
+      "version_at_time": "2.1.153",
+      "files_changed": [
+        "changelog.md",
+        "env-vars.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-27T19:03:31Z",
       "version_at_time": "2.1.152",
       "files_changed": [
@@ -1636,19 +1650,6 @@
         "debug-your-config.md",
         "errors.md",
         "routines.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-07T17:05:37Z",
-      "version_at_time": "2.1.132",
-      "files_changed": [
-        "discover-plugins.md"
       ],
       "files_added": [
         ""
