@@ -1074,7 +1074,7 @@
         "subagents.md",
         "workflows.md"
       ],
-      "mentions": 56
+      "mentions": 55
     },
     "exit": {
       "documented": true,
@@ -2237,15 +2237,17 @@
         "changelog.md",
         "claude-directory.md",
         "commands.md",
+        "desktop.md",
         "env-vars.md",
         "github-actions.md",
         "glossary.md",
         "model-config.md",
         "security-guidance.md",
         "settings.md",
+        "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 35
+      "mentions": 38
     }
   },
   "docs_checked_at": "2026-05-29"
