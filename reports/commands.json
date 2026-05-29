@@ -1456,7 +1456,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 209
+      "mentions": 212
     },
     "memory": {
       "documented": true,
@@ -1657,7 +1657,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 180
+      "mentions": 181
     },
     "powerup": {
       "documented": true,
@@ -1910,7 +1910,7 @@
         "code-review.md",
         "commands.md"
       ],
-      "mentions": 6
+      "mentions": 7
     },
     "skills": {
       "documented": true,
@@ -1962,7 +1962,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 232
+      "mentions": 233
     },
     "status": {
       "documented": true,
@@ -2248,5 +2248,5 @@
       "mentions": 35
     }
   },
-  "docs_checked_at": "2026-05-28"
+  "docs_checked_at": "2026-05-29"
 }
