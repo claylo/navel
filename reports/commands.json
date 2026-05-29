@@ -925,7 +925,7 @@
         "voice-dictation.md",
         "workflows.md"
       ],
-      "mentions": 98
+      "mentions": 99
     },
     "context": {
       "documented": true,
@@ -1265,7 +1265,7 @@
         "terminal-config.md",
         "vs-code.md"
       ],
-      "mentions": 7
+      "mentions": 8
     },
     "init": {
       "documented": true,
@@ -1545,7 +1545,7 @@
         "subagents.md",
         "workflows.md"
       ],
-      "mentions": 160
+      "mentions": 161
     },
     "passes": {
       "documented": true,
@@ -1657,7 +1657,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 181
+      "mentions": 182
     },
     "powerup": {
       "documented": true,
@@ -1962,7 +1962,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 233
+      "mentions": 235
     },
     "status": {
       "documented": true,
@@ -1991,7 +1991,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 47
+      "mentions": 48
     },
     "statusline": {
       "documented": true,
@@ -2080,7 +2080,7 @@
         "interactive-mode.md",
         "terminal-config.md"
       ],
-      "mentions": 14
+      "mentions": 15
     },
     "theme": {
       "documented": true,
