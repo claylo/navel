@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-05-29T03:05:15Z",
+      "version_at_time": "2.1.156",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-28T23:31:14Z",
       "version_at_time": "2.1.156",
       "files_changed": [
@@ -1660,19 +1673,6 @@
         "hooks.md",
         "sessions.md",
         "setup.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-08T19:09:40Z",
-      "version_at_time": "2.1.136",
-      "files_changed": [
-        "changelog.md"
       ],
       "files_added": [
         ""
