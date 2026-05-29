@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-05-29T18:05:32Z",
+      "version_at_time": "2.1.157",
+      "files_changed": [
+        "mcp.md",
+        "plugin-marketplaces.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-29T03:05:15Z",
       "version_at_time": "2.1.156",
       "files_changed": [
@@ -1657,21 +1671,6 @@
       "date": "2026-05-08T21:40:12Z",
       "version_at_time": "2.1.136",
       "files_changed": [
-        "setup.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-08T21:23:25Z",
-      "version_at_time": "2.1.136",
-      "files_changed": [
-        "hooks.md",
-        "sessions.md",
         "setup.md"
       ],
       "files_added": [
