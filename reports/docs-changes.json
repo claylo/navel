@@ -1,6 +1,25 @@
 {
   "changes": [
     {
+      "date": "2026-05-29T22:33:10Z",
+      "version_at_time": "2.1.157",
+      "files_changed": [
+        "desktop.md",
+        "env-vars.md",
+        "hooks.md",
+        "skills.md",
+        "slash-commands.md",
+        "statusline.md",
+        "tools-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-29T20:48:08Z",
       "version_at_time": "2.1.157",
       "files_changed": [
@@ -1662,19 +1681,6 @@
       "files_added": [
         "2026-w18.md",
         "2026-w19.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-09T00:19:34Z",
-      "version_at_time": "2.1.137",
-      "files_changed": [
-        "changelog.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
