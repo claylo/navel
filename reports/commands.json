@@ -706,7 +706,7 @@
         "workflows.md",
         "worktrees.md"
       ],
-      "mentions": 78
+      "mentions": 80
     },
     "autocompact": {
       "documented": false,
@@ -925,7 +925,7 @@
         "voice-dictation.md",
         "workflows.md"
       ],
-      "mentions": 99
+      "mentions": 101
     },
     "context": {
       "documented": true,
@@ -1254,7 +1254,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 303
+      "mentions": 305
     },
     "ide": {
       "documented": true,
@@ -1456,7 +1456,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 213
+      "mentions": 216
     },
     "memory": {
       "documented": true,
@@ -1657,7 +1657,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 182
+      "mentions": 188
     },
     "powerup": {
       "documented": true,
@@ -1724,9 +1724,11 @@
         "plugins-reference.md",
         "plugins.md",
         "remote-control.md",
-        "security-guidance.md"
+        "security-guidance.md",
+        "skills.md",
+        "slash-commands.md"
       ],
-      "mentions": 20
+      "mentions": 24
     },
     "reload-skills": {
       "documented": true,
@@ -1846,7 +1848,7 @@
         "prompt-caching.md",
         "sessions.md"
       ],
-      "mentions": 25
+      "mentions": 26
     },
     "scroll-speed": {
       "documented": true,
@@ -1962,7 +1964,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 235
+      "mentions": 248
     },
     "status": {
       "documented": true,
@@ -2080,7 +2082,7 @@
         "interactive-mode.md",
         "terminal-config.md"
       ],
-      "mentions": 15
+      "mentions": 16
     },
     "theme": {
       "documented": true,
@@ -2247,8 +2249,8 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 38
+      "mentions": 39
     }
   },
-  "docs_checked_at": "2026-05-29"
+  "docs_checked_at": "2026-05-30"
 }
