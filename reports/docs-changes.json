@@ -1,6 +1,40 @@
 {
   "changes": [
     {
+      "date": "2026-05-30T00:29:01Z",
+      "version_at_time": "2.1.157",
+      "files_changed": [
+        "agent-view.md",
+        "cli-reference.md",
+        "env-vars.md",
+        "errors.md",
+        "interactive-mode.md",
+        "keybindings.md",
+        "mcp.md",
+        "memory.md",
+        "monitoring-usage.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "settings.md",
+        "skills.md",
+        "slash-commands.md",
+        "sub-agents.md",
+        "subagents.md",
+        "terminal-config.md",
+        "tools-reference.md",
+        "workflows.md",
+        "worktrees.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-29T22:33:10Z",
       "version_at_time": "2.1.157",
       "files_changed": [
@@ -1667,20 +1701,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-09T03:04:00Z",
-      "version_at_time": "2.1.137",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        "2026-w18.md",
-        "2026-w19.md"
       ],
       "files_removed": [
         ""
