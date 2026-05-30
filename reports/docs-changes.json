@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-05-30T18:23:00Z",
+      "version_at_time": "2.1.158",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        "2026-w21.md",
+        "2026-w22.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-05-30T07:55:46Z",
       "version_at_time": "2.1.158",
       "files_changed": [
@@ -1674,19 +1688,6 @@
       "version_at_time": "2.1.138",
       "files_changed": [
         "errors.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-09T06:42:49Z",
-      "version_at_time": "2.1.138",
-      "files_changed": [
-        "changelog.md"
       ],
       "files_added": [
         ""
