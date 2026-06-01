@@ -216,7 +216,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 18
+      "mentions": 26
     },
     "Notification": {
       "documented": true,
@@ -423,7 +423,7 @@
         "ultrareview.md",
         "workflows.md"
       ],
-      "mentions": 138
+      "mentions": 141
     },
     "StopFailure": {
       "documented": true,
@@ -538,5 +538,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-05-29"
+  "docs_checked_at": "2026-06-01"
 }
