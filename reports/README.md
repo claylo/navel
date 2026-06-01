@@ -41,7 +41,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (102)</summary>
+<summary>Commands (103)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -67,6 +67,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /copy | Copy Claude's last response to clipboard (or /copy N for ... | 2.1.20 | available | yes |
 | /daemon | Manage background services: assistants, scheduled tasks, ... | 2.1.119 | available | yes |
 | /debug | Enable debug logging for this session and help diagnose i... | 2.1.30 | available | yes |
+| **/design-sync** | — | 2.1.160 | available | **no** |
 | /desktop | — | 2.1.42 | available | yes |
 | /diff | View uncommitted changes and per-turn diffs | 2.1.50 | available | yes |
 | /doctor | Diagnose and verify your Claude Code installation and set... | 2.0.0 | available | yes |
@@ -136,8 +137,8 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /theme | Change the theme | 2.0.73 | available | yes |
 | **/toggle-memory** | Toggle automemory off/on for this session | 2.1.90 | *disabled* | **no** |
 | /tui | Set the terminal UI renderer (default | fullscreen) | 2.1.110 | available | yes |
-| /ultraplan | — | 2.1.83 | available | yes |
-| /ultrareview | — | 2.1.83 | available | yes |
+| /ultraplan | Claude Code on the web drafts a plan you can edit and app... | 2.1.83 | available | yes |
+| /ultrareview | Find and verify bugs in your branch using Claude Code on ... | 2.1.83 | available | yes |
 | **/update** | Switch to the latest version (conversation continues) | 2.1.101 | *disabled* | yes |
 | /upgrade | Upgrade to Max for higher rate limits and more Opus | 2.0.0 | available | yes |
 | /usage | — | 2.0.0 | available | yes |
@@ -746,6 +747,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.160 | — | +design-sync | — |
 | 2.1.152 | +MessageDisplay | +reload-skills, +simplify | — |
 | 2.1.149 | — | +wellbeing | — |
 | 2.1.146 | — | +workflows | — |
@@ -966,4 +968,4 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 ---
-*Last updated: 2026-05-30*
+*Last updated: 2026-06-01*
