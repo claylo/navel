@@ -22,6 +22,7 @@
     "copy",
     "daemon",
     "debug",
+    "design-sync",
     "desktop",
     "diff",
     "doctor",
@@ -174,6 +175,8 @@
     "theme": "Change the theme",
     "toggle-memory": "Toggle automemory off/on for this session",
     "tui": "Set the terminal UI renderer (default | fullscreen)",
+    "ultraplan": "Claude Code on the web drafts a plan you can edit and approve",
+    "ultrareview": "Find and verify bugs in your branch using Claude Code on the web",
     "update": "Switch to the latest version (conversation continues)",
     "upgrade": "Upgrade to Max for higher rate limits and more Opus",
     "usage-credits": "Configure usage credits to keep working when you hit a limit",
@@ -204,6 +207,7 @@
     "copy": "available",
     "daemon": "available",
     "debug": "available",
+    "design-sync": "available",
     "desktop": "available",
     "diff": "available",
     "doctor": "available",
@@ -656,6 +660,11 @@
         "reload-skills",
         "simplify"
       ]
+    },
+    "2.1.160": {
+      "added": [
+        "design-sync"
+      ]
     }
   },
   "commands_docs": {
@@ -985,6 +994,11 @@
         "slash-commands.md"
       ],
       "mentions": 21
+    },
+    "design-sync": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "desktop": {
       "documented": true,
@@ -2252,5 +2266,5 @@
       "mentions": 39
     }
   },
-  "docs_checked_at": "2026-05-30"
+  "docs_checked_at": "2026-06-01"
 }
