@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-06-01T23:32:54Z",
+      "version_at_time": "2.1.160",
+      "files_changed": [
+        "permission-modes.md",
+        "plugins.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-01T22:03:41Z",
       "version_at_time": "2.1.160",
       "files_changed": [
@@ -1688,21 +1702,6 @@
       "version_at_time": "2.1.138",
       "files_changed": [
         "glossary.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-10T23:08:15Z",
-      "version_at_time": "2.1.138",
-      "files_changed": [
-        "settings.md",
-        "skills.md",
-        "slash-commands.md"
       ],
       "files_added": [
         ""
