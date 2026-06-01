@@ -1070,6 +1070,7 @@
     "effort": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "changelog.md",
         "commands.md",
         "costs.md",
@@ -1088,7 +1089,7 @@
         "subagents.md",
         "workflows.md"
       ],
-      "mentions": 55
+      "mentions": 56
     },
     "exit": {
       "documented": true,
@@ -1099,7 +1100,7 @@
         "quickstart.md",
         "remote-control.md"
       ],
-      "mentions": 9
+      "mentions": 10
     },
     "export": {
       "documented": true,
@@ -1268,7 +1269,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 305
+      "mentions": 313
     },
     "ide": {
       "documented": true,
@@ -1396,6 +1397,7 @@
       "documented": true,
       "doc_files": [
         "admin-setup.md",
+        "agent-view.md",
         "amazon-bedrock.md",
         "authentication.md",
         "changelog.md",
@@ -1411,7 +1413,7 @@
         "remote-control.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 20
+      "mentions": 21
     },
     "loops": {
       "documented": false,
@@ -1470,7 +1472,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 216
+      "mentions": 218
     },
     "memory": {
       "documented": true,
@@ -1559,7 +1561,7 @@
         "subagents.md",
         "workflows.md"
       ],
-      "mentions": 161
+      "mentions": 162
     },
     "passes": {
       "documented": true,
@@ -1665,13 +1667,14 @@
         "plugin-marketplaces.md",
         "plugins-reference.md",
         "plugins.md",
+        "prompt-caching.md",
         "remote-control.md",
         "security-guidance.md",
         "settings.md",
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 188
+      "mentions": 189
     },
     "powerup": {
       "documented": true,
@@ -1737,12 +1740,13 @@
         "plugin-dependencies.md",
         "plugins-reference.md",
         "plugins.md",
+        "prompt-caching.md",
         "remote-control.md",
         "security-guidance.md",
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 24
+      "mentions": 25
     },
     "reload-skills": {
       "documented": true,
