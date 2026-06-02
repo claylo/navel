@@ -1,6 +1,26 @@
 {
   "changes": [
     {
+      "date": "2026-06-02T09:25:08Z",
+      "version_at_time": "2.1.160",
+      "files_changed": [
+        "changelog.md",
+        "errors.md",
+        "mcp.md",
+        "overview.md",
+        "plugins-reference.md",
+        "settings.md",
+        "troubleshooting.md",
+        "workflows.md"
+      ],
+      "files_added": [
+        "mcp-quickstart.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-02T07:34:33Z",
       "version_at_time": "2.1.160",
       "files_changed": [
@@ -1665,36 +1685,6 @@
         "permission-modes.md",
         "permissions.md",
         "quickstart.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-11T23:01:35Z",
-      "version_at_time": "2.1.139",
-      "files_changed": [
-        "agent-view.md",
-        "commands.md",
-        "env-vars.md",
-        "fullscreen.md",
-        "glossary.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "interactive-mode.md",
-        "llm-gateway.md",
-        "mcp.md",
-        "memory.md",
-        "monitoring-usage.md",
-        "output-styles.md",
-        "permission-modes.md",
-        "plugins-reference.md",
-        "quickstart.md",
-        "settings.md",
-        "vs-code.md"
       ],
       "files_added": [
         ""
