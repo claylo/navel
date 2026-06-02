@@ -53,7 +53,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /background | — | 2.1.119 | available | yes |
 | /batch | Research and plan a large-scale change, then execute it i... | 2.1.63 | available | yes |
 | /bg |  | 2.1.119 | available | yes |
-| /branch | — | 2.1.77 | available | yes |
+| /branch | Create a branch of the current conversation at this point | 2.1.77 | available | yes |
 | **/bridge-kick** | Inject bridge failure states for manual recovery testing | 2.1.76 | *disabled* | **no** |
 | **/brief** | Toggle brief-only mode | 2.1.72 | available | **no** |
 | /btw | Ask a quick side question without interrupting the main c... | 2.1.6 | available | yes |
