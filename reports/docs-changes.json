@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-06-02T01:49:53Z",
+      "version_at_time": "2.1.160",
+      "files_changed": [
+        "mcp.md",
+        "overview.md"
+      ],
+      "files_added": [
+        "mcp-quickstart.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-01T23:32:54Z",
       "version_at_time": "2.1.160",
       "files_changed": [
@@ -1692,19 +1706,6 @@
       ],
       "files_added": [
         "agent-view.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-11T14:34:23Z",
-      "version_at_time": "2.1.138",
-      "files_changed": [
-        "glossary.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
