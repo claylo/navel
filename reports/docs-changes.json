@@ -1,6 +1,28 @@
 {
   "changes": [
     {
+      "date": "2026-06-02T19:11:22Z",
+      "version_at_time": "2.1.161",
+      "files_changed": [
+        "changelog.md",
+        "claude-code-on-the-web.md",
+        "errors.md",
+        "fast-mode.md",
+        "mcp.md",
+        "overview.md",
+        "plugins-reference.md",
+        "settings.md",
+        "troubleshooting.md",
+        "workflows.md"
+      ],
+      "files_added": [
+        "mcp-quickstart.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-02T17:32:55Z",
       "version_at_time": "2.1.160",
       "files_changed": [
@@ -1681,26 +1703,6 @@
         "agent-teams.md",
         "settings.md",
         "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-12T18:36:07Z",
-      "version_at_time": "2.1.139",
-      "files_changed": [
-        "cli-reference.md",
-        "data-usage.md",
-        "env-vars.md",
-        "fast-mode.md",
-        "monitoring-usage.md",
-        "output-styles.md",
-        "permissions.md",
-        "sandboxing.md"
       ],
       "files_added": [
         ""
