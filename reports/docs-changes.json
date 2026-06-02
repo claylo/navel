@@ -1,6 +1,26 @@
 {
   "changes": [
     {
+      "date": "2026-06-02T13:10:12Z",
+      "version_at_time": "2.1.160",
+      "files_changed": [
+        "changelog.md",
+        "errors.md",
+        "mcp.md",
+        "overview.md",
+        "plugins-reference.md",
+        "settings.md",
+        "troubleshooting.md",
+        "workflows.md"
+      ],
+      "files_added": [
+        "mcp-quickstart.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-02T11:29:42Z",
       "version_at_time": "2.1.160",
       "files_changed": [
@@ -1665,23 +1685,6 @@
       "version_at_time": "2.1.139",
       "files_changed": [
         "plugins.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-12T01:32:42Z",
-      "version_at_time": "2.1.139",
-      "files_changed": [
-        "claude-directory.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "permission-modes.md",
-        "plugins-reference.md"
       ],
       "files_added": [
         ""
