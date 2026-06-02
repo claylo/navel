@@ -1,6 +1,32 @@
 {
   "changes": [
     {
+      "date": "2026-06-02T21:03:07Z",
+      "version_at_time": "2.1.161",
+      "files_changed": [
+        "changelog.md",
+        "claude-code-on-the-web.md",
+        "commands.md",
+        "errors.md",
+        "fast-mode.md",
+        "interactive-mode.md",
+        "mcp.md",
+        "overview.md",
+        "plugins-reference.md",
+        "settings.md",
+        "terminal-config.md",
+        "troubleshooting.md",
+        "vs-code.md",
+        "workflows.md"
+      ],
+      "files_added": [
+        "mcp-quickstart.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-02T19:11:22Z",
       "version_at_time": "2.1.161",
       "files_changed": [
@@ -1688,21 +1714,6 @@
       "files_changed": [
         "mcp.md",
         "security.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-12T19:34:44Z",
-      "version_at_time": "2.1.139",
-      "files_changed": [
-        "agent-teams.md",
-        "settings.md",
-        "tools-reference.md"
       ],
       "files_added": [
         ""
