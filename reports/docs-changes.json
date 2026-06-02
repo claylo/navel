@@ -1,6 +1,26 @@
 {
   "changes": [
     {
+      "date": "2026-06-02T05:34:26Z",
+      "version_at_time": "2.1.160",
+      "files_changed": [
+        "changelog.md",
+        "errors.md",
+        "mcp.md",
+        "overview.md",
+        "plugins-reference.md",
+        "settings.md",
+        "troubleshooting.md",
+        "workflows.md"
+      ],
+      "files_added": [
+        "mcp-quickstart.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-02T03:06:12Z",
       "version_at_time": "2.1.160",
       "files_changed": [
@@ -1673,33 +1693,6 @@
       "files_added": [
         "agents.md",
         "worktrees.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-11T19:34:57Z",
-      "version_at_time": "2.1.139",
-      "files_changed": [
-        "changelog.md",
-        "commands.md",
-        "data-usage.md",
-        "debug-your-config.md",
-        "env-vars.md",
-        "hooks.md",
-        "llm-gateway.md",
-        "model-config.md",
-        "permissions.md",
-        "scheduled-tasks.md",
-        "sub-agents.md",
-        "subagents.md",
-        "third-party-integrations.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        "claude-platform-on-aws.md",
-        "goal.md"
       ],
       "files_removed": [
         ""
