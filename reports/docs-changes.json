@@ -1,6 +1,23 @@
 {
   "changes": [
     {
+      "date": "2026-06-02T03:06:12Z",
+      "version_at_time": "2.1.160",
+      "files_changed": [
+        "changelog.md",
+        "mcp.md",
+        "overview.md",
+        "plugins-reference.md",
+        "workflows.md"
+      ],
+      "files_added": [
+        "mcp-quickstart.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-02T01:49:53Z",
       "version_at_time": "2.1.160",
       "files_changed": [
@@ -1683,29 +1700,6 @@
       "files_added": [
         "claude-platform-on-aws.md",
         "goal.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-11T18:20:51Z",
-      "version_at_time": "2.1.139",
-      "files_changed": [
-        "admin-setup.md",
-        "cli-reference.md",
-        "commands.md",
-        "common-workflows.md",
-        "env-vars.md",
-        "interactive-mode.md",
-        "keybindings.md",
-        "overview.md",
-        "settings.md",
-        "sub-agents.md",
-        "subagents.md"
-      ],
-      "files_added": [
-        "agent-view.md"
       ],
       "files_removed": [
         ""
