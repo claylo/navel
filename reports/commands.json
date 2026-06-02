@@ -1674,7 +1674,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 189
+      "mentions": 190
     },
     "powerup": {
       "documented": true,
@@ -2270,5 +2270,5 @@
       "mentions": 39
     }
   },
-  "docs_checked_at": "2026-06-01"
+  "docs_checked_at": "2026-06-02"
 }
