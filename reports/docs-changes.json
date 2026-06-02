@@ -1,6 +1,26 @@
 {
   "changes": [
     {
+      "date": "2026-06-02T07:34:33Z",
+      "version_at_time": "2.1.160",
+      "files_changed": [
+        "changelog.md",
+        "errors.md",
+        "mcp.md",
+        "overview.md",
+        "plugins-reference.md",
+        "settings.md",
+        "troubleshooting.md",
+        "workflows.md"
+      ],
+      "files_added": [
+        "mcp-quickstart.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-02T05:34:26Z",
       "version_at_time": "2.1.160",
       "files_changed": [
@@ -1678,21 +1698,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-11T21:30:23Z",
-      "version_at_time": "2.1.139",
-      "files_changed": [
-        "agent-view.md",
-        "commands.md"
-      ],
-      "files_added": [
-        "agents.md",
-        "worktrees.md"
       ],
       "files_removed": [
         ""
