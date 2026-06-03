@@ -1,6 +1,43 @@
 {
   "changes": [
     {
+      "date": "2026-06-03T07:37:36Z",
+      "version_at_time": "2.1.161",
+      "files_changed": [
+        "agent-view.md",
+        "auto-mode-config.md",
+        "changelog.md",
+        "claude-code-on-the-web.md",
+        "commands.md",
+        "desktop.md",
+        "env-vars.md",
+        "errors.md",
+        "fast-mode.md",
+        "fullscreen.md",
+        "glossary.md",
+        "interactive-mode.md",
+        "mcp.md",
+        "overview.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugins-reference.md",
+        "settings.md",
+        "sub-agents.md",
+        "subagents.md",
+        "terminal-config.md",
+        "tools-reference.md",
+        "troubleshooting.md",
+        "vs-code.md",
+        "workflows.md"
+      ],
+      "files_added": [
+        "mcp-quickstart.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-03T05:38:46Z",
       "version_at_time": "2.1.161",
       "files_changed": [
@@ -1813,21 +1850,6 @@
       "version_at_time": "2.1.140",
       "files_changed": [
         "fast-mode.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-13T17:43:18Z",
-      "version_at_time": "2.1.140",
-      "files_changed": [
-        "authentication.md",
-        "headless.md",
-        "legal-and-compliance.md"
       ],
       "files_added": [
         ""
