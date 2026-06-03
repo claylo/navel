@@ -1,6 +1,43 @@
 {
   "changes": [
     {
+      "date": "2026-06-03T01:55:00Z",
+      "version_at_time": "2.1.161",
+      "files_changed": [
+        "agent-view.md",
+        "auto-mode-config.md",
+        "changelog.md",
+        "claude-code-on-the-web.md",
+        "commands.md",
+        "desktop.md",
+        "env-vars.md",
+        "errors.md",
+        "fast-mode.md",
+        "fullscreen.md",
+        "glossary.md",
+        "interactive-mode.md",
+        "mcp.md",
+        "overview.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugins-reference.md",
+        "settings.md",
+        "sub-agents.md",
+        "subagents.md",
+        "terminal-config.md",
+        "tools-reference.md",
+        "troubleshooting.md",
+        "vs-code.md",
+        "workflows.md"
+      ],
+      "files_added": [
+        "mcp-quickstart.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-03T00:38:43Z",
       "version_at_time": "2.1.161",
       "files_changed": [
@@ -1746,22 +1783,6 @@
         "claude-code-on-the-web.md",
         "model-config.md",
         "server-managed-settings.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-13T00:27:03Z",
-      "version_at_time": "2.1.140",
-      "files_changed": [
-        "permissions.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md"
       ],
       "files_added": [
         ""
