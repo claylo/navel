@@ -1,6 +1,52 @@
 {
   "changes": [
     {
+      "date": "2026-06-03T21:04:09Z",
+      "version_at_time": "2.1.162",
+      "files_changed": [
+        "agent-view.md",
+        "amazon-bedrock.md",
+        "auto-mode-config.md",
+        "changelog.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "claude-directory.md",
+        "commands.md",
+        "context-window.md",
+        "desktop.md",
+        "env-vars.md",
+        "errors.md",
+        "fast-mode.md",
+        "fullscreen.md",
+        "glossary.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "mcp.md",
+        "monitoring-usage.md",
+        "overview.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugins-reference.md",
+        "prompt-caching.md",
+        "settings.md",
+        "sub-agents.md",
+        "subagents.md",
+        "terminal-config.md",
+        "tools-reference.md",
+        "troubleshooting.md",
+        "vs-code.md",
+        "workflows.md"
+      ],
+      "files_added": [
+        "mcp-quickstart.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-03T19:17:21Z",
       "version_at_time": "2.1.162",
       "files_changed": [
@@ -1976,25 +2022,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-14T14:52:40Z",
-      "version_at_time": "2.1.141",
-      "files_changed": [
-        "agent-view.md",
-        "desktop-scheduled-tasks.md",
-        "desktop.md",
-        "goal.md",
-        "remote-control.md",
-        "sub-agents.md",
-        "subagents.md"
-      ],
-      "files_added": [
-        "desktop-changelog.md"
       ],
       "files_removed": [
         ""
