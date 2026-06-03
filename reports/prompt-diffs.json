@@ -34,7 +34,7 @@
     "v2.1.158",
     "v2.1.159",
     "v2.1.160",
-    "v2.1.161"
+    "v2.1.162"
   ],
   "diffs": {
     "v2.1.120..v2.1.121": {
@@ -169,9 +169,9 @@
       "lines_added": 8,
       "lines_removed": 7
     },
-    "v2.1.160..v2.1.161": {
-      "lines_added": 7,
-      "lines_removed": 5
+    "v2.1.160..v2.1.162": {
+      "lines_added": 16,
+      "lines_removed": 43
     }
   },
   "unchanged": [],
