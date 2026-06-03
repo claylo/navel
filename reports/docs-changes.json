@@ -1,6 +1,52 @@
 {
   "changes": [
     {
+      "date": "2026-06-03T23:34:33Z",
+      "version_at_time": "2.1.162",
+      "files_changed": [
+        "agent-view.md",
+        "amazon-bedrock.md",
+        "auto-mode-config.md",
+        "changelog.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "claude-directory.md",
+        "commands.md",
+        "context-window.md",
+        "desktop.md",
+        "env-vars.md",
+        "errors.md",
+        "fast-mode.md",
+        "fullscreen.md",
+        "glossary.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "mcp.md",
+        "monitoring-usage.md",
+        "overview.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugins-reference.md",
+        "prompt-caching.md",
+        "settings.md",
+        "sub-agents.md",
+        "subagents.md",
+        "terminal-config.md",
+        "tools-reference.md",
+        "troubleshooting.md",
+        "vs-code.md",
+        "workflows.md"
+      ],
+      "files_added": [
+        "mcp-quickstart.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-03T22:06:50Z",
       "version_at_time": "2.1.162",
       "files_changed": [
@@ -2024,33 +2070,6 @@
       "version_at_time": "2.1.142",
       "files_changed": [
         "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-14T16:29:44Z",
-      "version_at_time": "2.1.141",
-      "files_changed": [
-        "agent-view.md",
-        "amazon-bedrock.md",
-        "best-practices.md",
-        "checkpointing.md",
-        "claude-code-on-the-web.md",
-        "cli-reference.md",
-        "commands.md",
-        "env-vars.md",
-        "glossary.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "mcp.md",
-        "sub-agents.md",
-        "subagents.md",
-        "voice-dictation.md"
       ],
       "files_added": [
         ""
