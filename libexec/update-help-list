@@ -97,7 +97,10 @@ _capture_help_tree() {
   subcmd_names=$(echo "$help_text" | _parse_subcommands)
 
   # Build subcommands tree (recurse if under depth limit)
-  local subcmds_json="{}"
+  # Uses temp files to avoid ARG_MAX limits on large JSON trees.
+  local tmp_subs
+  tmp_subs=$(mktemp)
+  echo '{}' > "$tmp_subs"
   if [[ -n "$subcmd_names" && "$depth" -lt "$MAX_DEPTH" ]]; then
     while IFS= read -r subcmd; do
       [[ -z "$subcmd" ]] && continue
@@ -107,19 +110,26 @@ _capture_help_tree() {
       else
         sub_prefix="$subcmd"
       fi
-      local sub_tree
-      sub_tree=$(_capture_help_tree "$exe_cmd" "$sub_prefix" $((depth + 1)))
-      subcmds_json=$(echo "$subcmds_json" | jq --arg k "$subcmd" --argjson v "$sub_tree" '. + {($k): $v}')
+      local tmp_subtree
+      tmp_subtree=$(mktemp)
+      ( _capture_help_tree "$exe_cmd" "$sub_prefix" $((depth + 1)) ) > "$tmp_subtree"
+      jq --arg k "$subcmd" --slurpfile v "$tmp_subtree" '. + {($k): $v[0]}' "$tmp_subs" > "${tmp_subs}.new"
+      mv "${tmp_subs}.new" "$tmp_subs"
+      rm -f "$tmp_subtree"
     done <<< "$subcmd_names"
   fi
 
-  # Assemble node
+  # Assemble node — pipe text through stdin, read subcmds from file
+  local tmp_text
+  tmp_text=$(mktemp)
+  printf '%s' "$help_text" > "$tmp_text"
   jq -n \
     --arg cmd "$full_cmd" \
-    --arg text "$help_text" \
+    --rawfile text "$tmp_text" \
     --argjson opts "$options_json" \
-    --argjson subs "$subcmds_json" \
-    '{command: $cmd, text: $text, options: $opts, subcommands: $subs}'
+    --slurpfile subs "$tmp_subs" \
+    '{command: $cmd, text: $text, options: $opts, subcommands: $subs[0]}'
+  rm -f "$tmp_text" "$tmp_subs"
 }
 
 # Strip "text" fields from a help tree, keeping only options and subcommands.
@@ -225,25 +235,26 @@ while IFS= read -r version; do
     done
 
     if $has_changes; then
-      version_entry=$(jq -n \
-        --argjson ao "$added_opts" \
-        --argjson ro "$removed_opts" \
-        --argjson as "$added_subs" \
-        --argjson rs "$removed_subs" \
-        '{added_options: $ao, removed_options: $ro, added_subcommands: $as, removed_subcommands: $rs}')
-      history=$(echo "$history" | jq --arg v "$version" --argjson e "$version_entry" '. + {($v): $e}')
+      # Use temp files to avoid ARG_MAX on large diff objects
+      tmp_entry=$(mktemp)
+      printf '%s\n%s\n%s\n%s' "$added_opts" "$removed_opts" "$added_subs" "$removed_subs" \
+        | jq -s '{added_options: .[0], removed_options: .[1], added_subcommands: .[2], removed_subcommands: .[3]}' > "$tmp_entry"
+      history=$(echo "$history" | jq --arg v "$version" --slurpfile e "$tmp_entry" '. + {($v): $e[0]}')
+      rm -f "$tmp_entry"
     fi
   else
     # First version — everything is "added"
-    first_entry=$(echo "$curr_flat" | jq -s '
+    tmp_first=$(mktemp)
+    echo "$curr_flat" | jq -s '
       {
         added_options: (reduce .[] as $n ({}; . + {($n.path): $n.options})),
         removed_options: {},
         added_subcommands: (reduce .[] as $n ({}; . + {($n.path): $n.subcommands})),
         removed_subcommands: {}
       }
-    ')
-    history=$(echo "$history" | jq --arg v "$version" --argjson e "$first_entry" '. + {($v): $e}')
+    ' > "$tmp_first"
+    history=$(echo "$history" | jq --arg v "$version" --slurpfile e "$tmp_first" '. + {($v): $e[0]}')
+    rm -f "$tmp_first"
   fi
 
   prev_flat="$curr_flat"
@@ -297,12 +308,20 @@ fi
 
 # ── Write report ──────────────────────────────────────────────────────
 
+# Assemble report via temp files to avoid ARG_MAX
+tmp_report_help=$(mktemp)
+tmp_report_hist=$(mktemp)
+tmp_report_docs=$(mktemp)
+printf '%s' "$help_json" > "$tmp_report_help"
+printf '%s' "$history" > "$tmp_report_hist"
+printf '%s' "$help_docs" > "$tmp_report_docs"
 jq -n \
-  --argjson help "$help_json" \
-  --argjson history "$history" \
-  --argjson docs "$help_docs" \
+  --slurpfile help "$tmp_report_help" \
+  --slurpfile history "$tmp_report_hist" \
+  --slurpfile docs "$tmp_report_docs" \
   --arg date "$today" \
-  '{help: $help, help_history: $history, help_docs: $docs, docs_checked_at: $date}' > "${REPORTS_DIR}/help.json"
+  '{help: $help[0], help_history: $history[0], help_docs: $docs[0], docs_checked_at: $date}' > "${REPORTS_DIR}/help.json"
+rm -f "$tmp_report_help" "$tmp_report_hist" "$tmp_report_docs"
 
 # Count for summary
 opt_count=$(echo "$help_json" | jq '.claude.options | length')
