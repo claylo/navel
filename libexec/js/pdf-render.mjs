@@ -15,7 +15,7 @@ import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from 
 import { basename, join } from "node:path";
 import { execSync } from "node:child_process";
 import { preprocessMdx, truncateChangelog, parseNavTabs } from "./dash-transforms.mjs";
-import { fixEscapedBackticks, escapeSlashBeforeStrongClose } from "./typst-fixups.mjs";
+import { fixEscapedBackticks, escapeSlashBeforeStrongClose, escapeSlashAfterStrongOpen } from "./typst-fixups.mjs";
 
 const REPO_ROOT = process.env.REPO_ROOT;
 if (!REPO_ROOT) {
@@ -905,6 +905,10 @@ for (const file of files) {
     // Escape `/` before a strong-emphasis close so `*content/*` doesn't
     // open a Typst block comment. See libexec/js/typst-fixups.mjs.
     typstContent = escapeSlashBeforeStrongClose(typstContent);
+
+    // Escape `/` after a strong-emphasis open so `*/content*` doesn't
+    // close a Typst block comment. See libexec/js/typst-fixups.mjs.
+    typstContent = escapeSlashAfterStrongOpen(typstContent);
 
     // Convert callout blockquotes to gentle-clues admonitions.
     // markdown2typst renders our callouts as:
