@@ -1,6 +1,53 @@
 {
   "changes": [
     {
+      "date": "2026-06-04T21:34:09Z",
+      "version_at_time": "2.1.163",
+      "files_changed": [
+        "agent-view.md",
+        "amazon-bedrock.md",
+        "auto-mode-config.md",
+        "changelog.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "claude-directory.md",
+        "commands.md",
+        "context-window.md",
+        "desktop.md",
+        "env-vars.md",
+        "errors.md",
+        "fast-mode.md",
+        "fullscreen.md",
+        "glossary.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "mcp.md",
+        "monitoring-usage.md",
+        "overview.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugins-reference.md",
+        "prompt-caching.md",
+        "settings.md",
+        "sub-agents.md",
+        "subagents.md",
+        "terminal-config.md",
+        "tools-reference.md",
+        "troubleshoot-install.md",
+        "troubleshooting.md",
+        "vs-code.md",
+        "workflows.md"
+      ],
+      "files_added": [
+        "mcp-quickstart.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-04T20:43:09Z",
       "version_at_time": "2.1.163",
       "files_changed": [
@@ -2472,36 +2519,6 @@
         "glossary.md",
         "security.md",
         "voice-dictation.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-18T23:24:46Z",
-      "version_at_time": "2.1.144",
-      "files_changed": [
-        "agent-view.md",
-        "cli-reference.md",
-        "discover-plugins.md",
-        "env-vars.md",
-        "errors.md",
-        "fast-mode.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "mcp.md",
-        "model-config.md",
-        "permission-modes.md",
-        "plugin-dependencies.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "settings.md",
-        "sub-agents.md",
-        "subagents.md",
-        "tools-reference.md"
       ],
       "files_added": [
         ""
