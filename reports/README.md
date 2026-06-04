@@ -41,32 +41,31 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (103)</summary>
+<summary>Commands (100)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
 | /add-dir | Add a new working directory | 2.0.0 | available | yes |
-| **/advisor** | Configure the Advisor Tool to consult a stronger model fo... | 2.1.83 | available | **no** |
+| **/advisor** | Let Claude consult a stronger model at key moments | 2.1.83 | available | **no** |
 | /agents | Manage agent configurations | 2.0.0 | available | yes |
-| **/autocompact** | Configure the auto-compact window size | 2.1.89 | available | **no** |
+| **/autocompact** | Set how full the context gets before auto-summarizing | 2.1.89 | available | **no** |
 | /autofix-pr | Monitor and autofix any issues with the current PR | 2.1.94 | available | yes |
 | /background | — | 2.1.119 | available | yes |
-| /batch | Research and plan a large-scale change, then execute it i... | 2.1.63 | available | yes |
 | /bg |  | 2.1.119 | available | yes |
 | /branch | Create a branch of the current conversation at this point | 2.1.77 | available | yes |
-| **/bridge-kick** | Inject bridge failure states for manual recovery testing | 2.1.76 | *disabled* | **no** |
+| **/bridge-kick** | Inject Remote Control failures for recovery testing | 2.1.76 | *disabled* | **no** |
 | **/brief** | Toggle brief-only mode | 2.1.72 | available | **no** |
 | /btw | Ask a quick side question without interrupting the main c... | 2.1.6 | available | yes |
-| /chrome | Claude in Chrome (beta) settings | 2.0.71 | available | yes |
-| /claude-in-chrome | Automates your Chrome browser to interact with web pages ... | 2.1.7 | available | yes |
+| /chrome | Open Claude in Chrome (beta) settings | 2.0.71 | available | yes |
+| /claude-in-chrome | — | 2.1.7 | available | yes |
 | /clear | Start a new session with empty context; previous session ... | 2.0.0 | available | yes |
 | /color | Set the prompt bar color for this session | 2.1.7 | available | yes |
 | /compact | Free up context by summarizing the conversation so far | 2.0.0 | available | yes |
-| /config | Open config panel | 2.0.0 | available | yes |
+| /config | Open settings | 2.0.0 | available | yes |
 | /context | Visualize current context usage as a colored grid | 2.0.0 | available | yes |
 | /copy | Copy Claude's last response to clipboard (or /copy N for ... | 2.1.20 | available | yes |
-| /daemon | Manage background services: assistants, scheduled tasks, ... | 2.1.119 | available | yes |
-| /debug | Enable debug logging for this session and help diagnose i... | 2.1.30 | available | yes |
+| **/cowork-plugin** | — | 2.1.163 | available | **no** |
+| /daemon | Manage background services and routines | 2.1.119 | available | yes |
 | **/design-sync** | — | 2.1.160 | available | **no** |
 | /desktop | — | 2.1.42 | available | yes |
 | /diff | View uncommitted changes and per-turn diffs | 2.1.50 | available | yes |
@@ -77,10 +76,9 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /extra-usage | Renamed to /usage-credits | 2.0.36 | available | yes |
 | /fast | — | 2.1.36 | available | yes |
 | /feedback | Submit feedback, report a bug, or share your conversation | 2.0.0 | available | yes |
-| /fewer-permission-prompts | Scan your transcripts for common read-only Bash and MCP t... | 2.1.113 | available | yes |
-| /focus | Toggle focus view (show only your prompt, a tool summary,... | 2.1.110 | available | yes |
+| /focus | Toggle focus view: just your prompt, summary, and response | 2.1.110 | available | yes |
 | /fork | Spawn a background agent that inherits the full conversation | 2.1.8 | available | yes |
-| /goal | Set a goal \u2014 keep working until the condition is met | 2.1.132 | available | yes |
+| /goal | Set a goal Claude checks before stopping | 2.1.132 | available | yes |
 | /heapdump | Dump the JS heap to ~/Desktop | 2.1.71 | available | yes |
 | /help | Show help and available commands | 2.0.0 | available | yes |
 | /hooks | View hook configurations for tool events | 2.0.0 | available | yes |
@@ -91,13 +89,13 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /install | Install Claude Code native build | 2.0.0 | available | yes |
 | /install-github-app | Set up Claude GitHub Actions for a repository | 2.0.0 | available | yes |
 | /install-slack-app | Install the Claude Slack app | 2.0.62 | available | yes |
-| /keybindings | Open or create your keybindings configuration file | 2.1.6 | available | yes |
+| /keybindings | Open your keyboard shortcuts file | 2.1.6 | available | yes |
 | **/keybindings-help** | — | 2.1.20 | available | **no** |
 | /login | — | 2.0.0 | available | yes |
 | /logout | Sign out from your Anthropic account | 2.0.0 | available | yes |
-| **/loops** | List, create, and delete recurring loops and stop-hooks | 2.1.101 | *disabled* | **no** |
+| **/loops** | List, create, and delete loops | 2.1.101 | *disabled* | **no** |
 | /mcp | Manage MCP servers | 2.0.0 | available | yes |
-| /memory | Edit Claude memory files | 2.0.0 | available | yes |
+| /memory | Open a memory file in your editor | 2.0.0 | available | yes |
 | /mobile | — | 2.0.72 | available | yes |
 | /model | — | 2.0.0 | available | yes |
 | /passes | — | 2.0.45 | available | yes |
@@ -114,7 +112,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /reload-plugins | Activate pending plugin changes in the current session | 2.1.64 | available | yes |
 | /reload-skills | Pick up skills added or changed on disk during this session | 2.1.152 | available | yes |
 | /remote-control | — | 2.1.51 | available | yes |
-| /remote-env | Configure the default remote environment for teleport ses... | 2.0.47 | available | yes |
+| /remote-env | Choose the default environment for cloud agents | 2.0.47 | available | yes |
 | /rename | — | 2.0.41 | available | yes |
 | /resume | Resume a previous conversation | 2.0.0 | available | yes |
 | /review | Review a pull request | 2.0.0 | available | yes |
@@ -124,7 +122,6 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /session | — | 2.1.15 | available | yes |
 | /setup-bedrock | Reconfigure Amazon Bedrock authentication, region, or mod... | 2.1.92 | available | yes |
 | /setup-vertex | Reconfigure Google Vertex AI authentication, project, reg... | 2.1.98 | available | yes |
-| /simplify | Review the changed code for reuse, simplification, effici... | 2.1.63 | available | yes |
 | /skills | List available skills | 2.0.73 | available | yes |
 | /status | Show Claude Code status including version, model, account... | 2.0.0 | available | yes |
 | /statusline | — | 2.0.0 | available | yes |
@@ -143,9 +140,9 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /upgrade | Upgrade to Max for higher rate limits and more Opus | 2.0.0 | available | yes |
 | /usage | — | 2.0.0 | available | yes |
 | /usage-credits | Configure usage credits to keep working when you hit a limit | 2.1.144 | available | yes |
-| **/version** | Print the version this session is running (not what autou... | 2.1.83 | *disabled* | yes |
+| **/version** | Show this session's version (autoupdate may have a newer ... | 2.1.83 | *disabled* | yes |
 | /voice | Toggle voice mode | 2.1.59 | available | yes |
-| /web-setup | Setup Claude Code on the web (requires connecting your Gi... | 2.1.79 | available | yes |
+| /web-setup | Set up Claude Code on the web with your GitHub account | 2.1.79 | available | yes |
 | **/wellbeing** | — | 2.1.149 | *disabled* | **no** |
 | /workflows | — | 2.1.146 | available | yes |
 
@@ -747,6 +744,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.163 | — | +cowork-plugin | — |
 | 2.1.160 | — | +design-sync | — |
 | 2.1.152 | +MessageDisplay | +reload-skills, +simplify | — |
 | 2.1.149 | — | +wellbeing | — |
@@ -968,4 +966,4 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 ---
-*Last updated: 2026-06-02*
+*Last updated: 2026-06-04*
