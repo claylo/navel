@@ -1,6 +1,55 @@
 {
   "changes": [
     {
+      "date": "2026-06-04T23:27:45Z",
+      "version_at_time": "2.1.163",
+      "files_changed": [
+        "agent-view.md",
+        "amazon-bedrock.md",
+        "auto-mode-config.md",
+        "changelog.md",
+        "chrome.md",
+        "claude-code-on-the-web.md",
+        "claude-directory.md",
+        "commands.md",
+        "context-window.md",
+        "deep-links.md",
+        "desktop.md",
+        "env-vars.md",
+        "errors.md",
+        "fast-mode.md",
+        "fullscreen.md",
+        "glossary.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "mcp.md",
+        "memory.md",
+        "monitoring-usage.md",
+        "overview.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugins-reference.md",
+        "prompt-caching.md",
+        "settings.md",
+        "sub-agents.md",
+        "subagents.md",
+        "terminal-config.md",
+        "tools-reference.md",
+        "troubleshoot-install.md",
+        "troubleshooting.md",
+        "vs-code.md",
+        "workflows.md"
+      ],
+      "files_added": [
+        "mcp-quickstart.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-04T22:32:04Z",
       "version_at_time": "2.1.163",
       "files_changed": [
@@ -2525,33 +2574,6 @@
       ],
       "files_added": [
         "prompt-caching.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-19T16:07:35Z",
-      "version_at_time": "2.1.144",
-      "files_changed": [
-        "agent-view.md",
-        "cli-reference.md",
-        "commands.md",
-        "discover-plugins.md",
-        "env-vars.md",
-        "features-overview.md",
-        "headless.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "keybindings.md",
-        "model-config.md",
-        "monitoring-usage.md",
-        "routines.md",
-        "settings.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        "2026-w20.md"
       ],
       "files_removed": [
         ""
