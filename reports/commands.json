@@ -6,7 +6,6 @@
     "autocompact",
     "autofix-pr",
     "background",
-    "batch",
     "bg",
     "branch",
     "bridge-kick",
@@ -20,8 +19,8 @@
     "config",
     "context",
     "copy",
+    "cowork-plugin",
     "daemon",
-    "debug",
     "design-sync",
     "desktop",
     "diff",
@@ -32,7 +31,6 @@
     "extra-usage",
     "fast",
     "feedback",
-    "fewer-permission-prompts",
     "focus",
     "fork",
     "goal",
@@ -79,7 +77,6 @@
     "session",
     "setup-bedrock",
     "setup-vertex",
-    "simplify",
     "skills",
     "status",
     "statusline",
@@ -106,36 +103,32 @@
   ],
   "descriptions": {
     "add-dir": "Add a new working directory",
-    "advisor": "Configure the Advisor Tool to consult a stronger model for guidance at key moments during a task",
+    "advisor": "Let Claude consult a stronger model at key moments",
     "agents": "Manage agent configurations",
-    "autocompact": "Configure the auto-compact window size",
+    "autocompact": "Set how full the context gets before auto-summarizing",
     "autofix-pr": "Monitor and autofix any issues with the current PR",
-    "batch": "Research and plan a large-scale change, then execute it in parallel across 5\\u201330 isolated worktree agents that each open a PR.",
     "bg": "",
     "branch": "Create a branch of the current conversation at this point",
-    "bridge-kick": "Inject bridge failure states for manual recovery testing",
+    "bridge-kick": "Inject Remote Control failures for recovery testing",
     "brief": "Toggle brief-only mode",
     "btw": "Ask a quick side question without interrupting the main conversation",
-    "chrome": "Claude in Chrome (beta) settings",
-    "claude-in-chrome": "Automates your Chrome browser to interact with web pages - clicking elements, filling forms, capturing screenshots, reading console logs, and navigating sites. Opens pages in new tabs within your existing Chrome session. Requires site-level permissions before executing (configured in the extension).",
+    "chrome": "Open Claude in Chrome (beta) settings",
     "clear": "Start a new session with empty context; previous session stays on disk (resumable with /resume)",
     "color": "Set the prompt bar color for this session",
     "compact": "Free up context by summarizing the conversation so far",
-    "config": "Open config panel",
+    "config": "Open settings",
     "context": "Visualize current context usage as a colored grid",
     "copy": "Copy Claude's last response to clipboard (or /copy N for the Nth-latest)",
-    "daemon": "Manage background services: assistants, scheduled tasks, and remote control",
-    "debug": "Enable debug logging for this session and help diagnose issues",
+    "daemon": "Manage background services and routines",
     "diff": "View uncommitted changes and per-turn diffs",
     "doctor": "Diagnose and verify your Claude Code installation and settings",
     "effort": "Set effort level for model usage",
     "export": "Export the current conversation to a file or clipboard",
     "extra-usage": "Renamed to /usage-credits",
     "feedback": "Submit feedback, report a bug, or share your conversation",
-    "fewer-permission-prompts": "Scan your transcripts for common read-only Bash and MCP tool calls, then add a prioritized allowlist to project .claude/settings.json to reduce permission prompts.",
-    "focus": "Toggle focus view (show only your prompt, a tool summary, and the final response)",
+    "focus": "Toggle focus view: just your prompt, summary, and response",
     "fork": "Spawn a background agent that inherits the full conversation",
-    "goal": "Set a goal \\u2014 keep working until the condition is met",
+    "goal": "Set a goal Claude checks before stopping",
     "heapdump": "Dump the JS heap to ~/Desktop",
     "help": "Show help and available commands",
     "hooks": "View hook configurations for tool events",
@@ -145,11 +138,11 @@
     "install": "Install Claude Code native build",
     "install-github-app": "Set up Claude GitHub Actions for a repository",
     "install-slack-app": "Install the Claude Slack app",
-    "keybindings": "Open or create your keybindings configuration file",
+    "keybindings": "Open your keyboard shortcuts file",
     "logout": "Sign out from your Anthropic account",
-    "loops": "List, create, and delete recurring loops and stop-hooks",
+    "loops": "List, create, and delete loops",
     "mcp": "Manage MCP servers",
-    "memory": "Edit Claude memory files",
+    "memory": "Open a memory file in your editor",
     "plan": "Enable plan mode or view the current session plan",
     "powerup": "Discover Claude Code features through quick interactive lessons",
     "privacy-settings": "View and update your privacy settings",
@@ -159,14 +152,13 @@
     "recap": "Generate a one-line session recap now",
     "reload-plugins": "Activate pending plugin changes in the current session",
     "reload-skills": "Pick up skills added or changed on disk during this session",
-    "remote-env": "Configure the default remote environment for teleport sessions",
+    "remote-env": "Choose the default environment for cloud agents",
     "resume": "Resume a previous conversation",
     "review": "Review a pull request",
     "scroll-speed": "Adjust mouse wheel scroll speed",
     "security-review": "Complete a security review of the pending changes on the current branch",
     "setup-bedrock": "Reconfigure Amazon Bedrock authentication, region, or model pins",
     "setup-vertex": "Reconfigure Google Vertex AI authentication, project, region, or model pins",
-    "simplify": "Review the changed code for reuse, simplification, efficiency, and altitude cleanups, then apply the fixes. Quality only \\u2014 it does not hunt for bugs; use /code-review for that.",
     "skills": "List available skills",
     "status": "Show Claude Code status including version, model, account, API connectivity, and tool statuses",
     "stickers": "Order Claude Code stickers",
@@ -181,9 +173,9 @@
     "update": "Switch to the latest version (conversation continues)",
     "upgrade": "Upgrade to Max for higher rate limits and more Opus",
     "usage-credits": "Configure usage credits to keep working when you hit a limit",
-    "version": "Print the version this session is running (not what autoupdate downloaded)",
+    "version": "Show this session's version (autoupdate may have a newer one)",
     "voice": "Toggle voice mode",
-    "web-setup": "Setup Claude Code on the web (requires connecting your GitHub account)"
+    "web-setup": "Set up Claude Code on the web with your GitHub account"
   },
   "status": {
     "add-dir": "available",
@@ -192,7 +184,6 @@
     "autocompact": "available",
     "autofix-pr": "available",
     "background": "available",
-    "batch": "available",
     "bg": "available",
     "branch": "available",
     "bridge-kick": "disabled",
@@ -206,8 +197,8 @@
     "config": "available",
     "context": "available",
     "copy": "available",
+    "cowork-plugin": "available",
     "daemon": "available",
-    "debug": "available",
     "design-sync": "available",
     "desktop": "available",
     "diff": "available",
@@ -218,7 +209,6 @@
     "extra-usage": "available",
     "fast": "available",
     "feedback": "available",
-    "fewer-permission-prompts": "available",
     "focus": "available",
     "fork": "available",
     "goal": "available",
@@ -265,7 +255,6 @@
     "session": "available",
     "setup-bedrock": "available",
     "setup-vertex": "available",
-    "simplify": "available",
     "skills": "available",
     "status": "available",
     "statusline": "available",
@@ -666,6 +655,11 @@
       "added": [
         "design-sync"
       ]
+    },
+    "2.1.163": {
+      "added": [
+        "cowork-plugin"
+      ]
     }
   },
   "commands_docs": {
@@ -745,20 +739,6 @@
         "subagents.md"
       ],
       "mentions": 14
-    },
-    "batch": {
-      "documented": true,
-      "doc_files": [
-        "agents.md",
-        "changelog.md",
-        "claude-platform-on-aws.md",
-        "commands.md",
-        "features-overview.md",
-        "glossary.md",
-        "skills.md",
-        "slash-commands.md"
-      ],
-      "mentions": 9
     },
     "bg": {
       "documented": true,
@@ -970,31 +950,17 @@
       ],
       "mentions": 10
     },
+    "cowork-plugin": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
     "daemon": {
       "documented": true,
       "doc_files": [
         "agent-view.md"
       ],
       "mentions": 2
-    },
-    "debug": {
-      "documented": true,
-      "doc_files": [
-        "changelog.md",
-        "channels-reference.md",
-        "claude-directory.md",
-        "commands.md",
-        "debug-your-config.md",
-        "env-vars.md",
-        "features-overview.md",
-        "glossary.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "monitoring-usage.md",
-        "skills.md",
-        "slash-commands.md"
-      ],
-      "mentions": 21
     },
     "design-sync": {
       "documented": false,
@@ -1156,13 +1122,6 @@
         "zero-data-retention.md"
       ],
       "mentions": 29
-    },
-    "fewer-permission-prompts": {
-      "documented": true,
-      "doc_files": [
-        "commands.md"
-      ],
-      "mentions": 1
     },
     "focus": {
       "documented": true,
@@ -1924,15 +1883,6 @@
       ],
       "mentions": 3
     },
-    "simplify": {
-      "documented": true,
-      "doc_files": [
-        "changelog.md",
-        "code-review.md",
-        "commands.md"
-      ],
-      "mentions": 7
-    },
     "skills": {
       "documented": true,
       "doc_files": [
@@ -2271,5 +2221,5 @@
       "mentions": 39
     }
   },
-  "docs_checked_at": "2026-06-02"
+  "docs_checked_at": "2026-06-04"
 }
