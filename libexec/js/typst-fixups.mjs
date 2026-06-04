@@ -55,6 +55,49 @@ export function escapeSlashBeforeStrongClose(typstContent) {
   }).join("\n");
 }
 
+// Escape `/` after a strong-emphasis opening `*` so Typst doesn't read
+// the leading star-slash as a block-comment closer.
+//
+// Source markdown `** /mcp shows X**` becomes Typst `* /mcp shows X*`.
+// Typst parses the leading star-slash as an unterminated block-comment
+// close, dying with "unexpected end of block comment". Replacing the
+// slash with `\/` produces `*\/mcp shows X*` — strong("/mcp shows X").
+//
+// Skips content inside fenced code blocks, same as escapeSlashBeforeStrongClose.
+export function escapeSlashAfterStrongOpen(typstContent) {
+  if (!typstContent.includes("*/")) return typstContent;
+
+  const lines = typstContent.split("\n");
+  let inFence = false;
+  let fenceLen = 0;
+
+  return lines.map(line => {
+    const trimmed = line.trim();
+
+    const fenceMatch = trimmed.match(/^(`{3,})/);
+    if (fenceMatch) {
+      const ticks = fenceMatch[1].length;
+      if (!inFence) {
+        inFence = true;
+        fenceLen = ticks;
+        return line;
+      } else if (ticks >= fenceLen && trimmed.replace(/`/g, "").trim() === "") {
+        inFence = false;
+        fenceLen = 0;
+        return line;
+      }
+      return line;
+    }
+
+    if (inFence) return line;
+    if (!line.includes("*/")) return line;
+
+    // Match `*/` right after a strong-open `*` — the `*` must be at a
+    // strong-open boundary (start of line or after whitespace/bracket).
+    return line.replace(/(^|[\s(\[{])\*\/([^*\n])/g, "$1*\\/$2");
+  }).join("\n");
+}
+
 /**
  * Repair markdown2typst's \` escape sequences inside inline raw text.
  *
