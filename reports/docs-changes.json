@@ -1,6 +1,26 @@
 {
   "changes": [
     {
+      "date": "2026-06-05T21:32:51Z",
+      "version_at_time": "2.1.166",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "claude-platform-on-aws.md",
+        "errors.md",
+        "google-vertex-ai.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "third-party-integrations.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-05T20:38:15Z",
       "version_at_time": "2.1.166",
       "files_changed": [
@@ -2557,21 +2577,6 @@
       "files_changed": [
         "changelog.md",
         "routines.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-19T21:32:02Z",
-      "version_at_time": "2.1.145",
-      "files_changed": [
-        "changelog.md",
-        "prompt-caching.md",
-        "settings.md"
       ],
       "files_added": [
         ""
