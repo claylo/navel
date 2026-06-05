@@ -1281,6 +1281,7 @@
       "doc_files": [
         "changelog.md",
         "claude-code-on-the-web.md",
+        "commands.md",
         "communications-kit.md",
         "gitlab-ci-cd.md",
         "overview.md",
@@ -1288,7 +1289,7 @@
         "setup.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 43
+      "mentions": 44
     },
     "install-github-app": {
       "documented": true,
@@ -1522,7 +1523,7 @@
         "subagents.md",
         "workflows.md"
       ],
-      "mentions": 164
+      "mentions": 165
     },
     "passes": {
       "documented": true,
@@ -1577,7 +1578,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 161
+      "mentions": 163
     },
     "plan": {
       "documented": true,
@@ -1635,7 +1636,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 191
+      "mentions": 193
     },
     "powerup": {
       "documented": true,
