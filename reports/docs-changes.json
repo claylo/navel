@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-06-05T17:38:22Z",
+      "version_at_time": "2.1.165",
+      "files_changed": [
+        "quickstart.md",
+        "settings.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-05T07:26:26Z",
       "version_at_time": "2.1.165",
       "files_changed": [
@@ -2542,19 +2556,6 @@
       "version_at_time": "2.1.145",
       "files_changed": [
         "permissions.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-19T18:36:28Z",
-      "version_at_time": "2.1.145",
-      "files_changed": [
-        "cli-reference.md"
       ],
       "files_added": [
         ""
