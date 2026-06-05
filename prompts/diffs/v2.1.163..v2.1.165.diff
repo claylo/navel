@@ -1,0 +1,15 @@
+--- v2.1.163
++++ v2.1.165
+@@ -70,10 +70,10 @@
+ Main branch (you will usually use this for PRs): main
+ 
+ Status:
+-M reports/docs-changes.json
++M npm/versions.json
+ 
+ Recent commits:
+-316943b fix(pdf): escape star-slash at start of bold spans in Typst output (#73)
++ed0b548 chore(readme): sync claude code data (v2.1.163)
+ 
+ ---
+ 
