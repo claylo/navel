@@ -423,7 +423,7 @@
         "ultrareview.md",
         "workflows.md"
       ],
-      "mentions": 143
+      "mentions": 146
     },
     "StopFailure": {
       "documented": true,
@@ -458,7 +458,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 39
+      "mentions": 40
     },
     "TaskCompleted": {
       "documented": true,
