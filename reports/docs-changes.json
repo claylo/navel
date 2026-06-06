@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-06T03:04:44Z",
+      "version_at_time": "2.1.167",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-05T21:32:51Z",
       "version_at_time": "2.1.166",
       "files_changed": [
@@ -2563,20 +2576,6 @@
         "slash-commands.md",
         "statusline.md",
         "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-19T22:17:30Z",
-      "version_at_time": "2.1.145",
-      "files_changed": [
-        "changelog.md",
-        "routines.md"
       ],
       "files_added": [
         ""
