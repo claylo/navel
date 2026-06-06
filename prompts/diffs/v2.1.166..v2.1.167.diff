@@ -1,0 +1,15 @@
+--- v2.1.166
++++ v2.1.167
+@@ -70,10 +70,10 @@
+ Main branch (you will usually use this for PRs): main
+ 
+ Status:
+-M reports/docs-changes.json
++M npm/versions.json
+ 
+ Recent commits:
+-2c6a594 chore(readme): sync claude code data (v2.1.166)
++e85b4f6 chore(prompts): sync claude code data (v2.1.166) — report updated
+ 
+ ---
+ 
