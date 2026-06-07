@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-07T00:30:53Z",
+      "version_at_time": "2.1.168",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-06T03:04:44Z",
       "version_at_time": "2.1.167",
       "files_changed": [
@@ -2554,34 +2567,6 @@
       ],
       "files_removed": [
         "observability.md"
-      ]
-    },
-    {
-      "date": "2026-05-20T05:13:20Z",
-      "version_at_time": "2.1.145",
-      "files_changed": [
-        "agent-view.md",
-        "cli-reference.md",
-        "commands.md",
-        "discover-plugins.md",
-        "env-vars.md",
-        "fullscreen.md",
-        "hooks.md",
-        "interactive-mode.md",
-        "monitoring-usage.md",
-        "output-styles.md",
-        "permission-modes.md",
-        "plugins-reference.md",
-        "skills.md",
-        "slash-commands.md",
-        "statusline.md",
-        "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
       ]
     }
   ]
