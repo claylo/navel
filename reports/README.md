@@ -41,7 +41,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (100)</summary>
+<summary>Commands (101)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -56,6 +56,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/bridge-kick** | Inject Remote Control failures for recovery testing | 2.1.76 | *disabled* | **no** |
 | **/brief** | Toggle brief-only mode | 2.1.72 | available | **no** |
 | /btw | Ask a quick side question without interrupting the main c... | 2.1.6 | available | yes |
+| /cd | Move this session to a new working directory | 2.1.169 | available | yes |
 | /chrome | Open Claude in Chrome (beta) settings | 2.0.71 | available | yes |
 | /claude-in-chrome | — | 2.1.7 | available | yes |
 | /clear | Start a new session with empty context; previous session ... | 2.0.0 | available | yes |
@@ -744,6 +745,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.169 | — | +cd | — |
 | 2.1.163 | — | +cowork-plugin | — |
 | 2.1.160 | — | +design-sync | — |
 | 2.1.152 | +MessageDisplay | +reload-skills, +simplify | — |
