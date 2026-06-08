@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-06-08T20:46:30Z",
+      "version_at_time": "2.1.169",
+      "files_changed": [
+        "admin-setup.md",
+        "data-usage.md",
+        "zero-data-retention.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-08T18:49:06Z",
       "version_at_time": "2.1.169",
       "files_changed": [
@@ -2548,21 +2563,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-20T17:23:31Z",
-      "version_at_time": "2.1.145",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        "plugin-hints.md",
-        "prompt-library.md",
-        "session-storage.md"
       ],
       "files_removed": [
         ""
