@@ -807,7 +807,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 19
+      "mentions": 20
     },
     "chrome": {
       "documented": true,
@@ -2247,7 +2247,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 39
+      "mentions": 40
     }
   },
   "docs_checked_at": "2026-06-08"
