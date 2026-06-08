@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-08T03:06:00Z",
+      "version_at_time": "2.1.168",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        "routines.md"
+      ]
+    },
+    {
       "date": "2026-06-07T00:30:53Z",
       "version_at_time": "2.1.168",
       "files_changed": [
@@ -2554,19 +2567,6 @@
       ],
       "files_removed": [
         ""
-      ]
-    },
-    {
-      "date": "2026-05-20T09:00:20Z",
-      "version_at_time": "2.1.145",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        "observability.md"
       ]
     }
   ]
