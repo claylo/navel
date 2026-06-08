@@ -388,10 +388,11 @@
         "platforms.md",
         "plugins-reference.md",
         "remote-control.md",
+        "routines.md",
         "sandbox-environments.md",
         "web-quickstart.md"
       ],
-      "mentions": 53
+      "mentions": 54
     },
     "Stop": {
       "documented": true,
