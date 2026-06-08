@@ -11,6 +11,7 @@
     "bridge-kick",
     "brief",
     "btw",
+    "cd",
     "chrome",
     "claude-in-chrome",
     "clear",
@@ -112,6 +113,7 @@
     "bridge-kick": "Inject Remote Control failures for recovery testing",
     "brief": "Toggle brief-only mode",
     "btw": "Ask a quick side question without interrupting the main conversation",
+    "cd": "Move this session to a new working directory",
     "chrome": "Open Claude in Chrome (beta) settings",
     "clear": "Start a new session with empty context; previous session stays on disk (resumable with /resume)",
     "color": "Set the prompt bar color for this session",
@@ -189,6 +191,7 @@
     "bridge-kick": "disabled",
     "brief": "available",
     "btw": "available",
+    "cd": "available",
     "chrome": "available",
     "claude-in-chrome": "available",
     "clear": "available",
@@ -660,6 +663,11 @@
       "added": [
         "cowork-plugin"
       ]
+    },
+    "2.1.169": {
+      "added": [
+        "cd"
+      ]
     }
   },
   "commands_docs": {
@@ -783,6 +791,23 @@
         "subagents.md"
       ],
       "mentions": 16
+    },
+    "cd": {
+      "documented": true,
+      "doc_files": [
+        "agent-view.md",
+        "changelog.md",
+        "communications-kit.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "permissions.md",
+        "plugins-reference.md",
+        "sessions.md",
+        "sub-agents.md",
+        "subagents.md",
+        "tools-reference.md"
+      ],
+      "mentions": 19
     },
     "chrome": {
       "documented": true,
