@@ -1,6 +1,32 @@
 {
   "changes": [
     {
+      "date": "2026-06-09T20:47:03Z",
+      "version_at_time": "2.1.170",
+      "files_changed": [
+        "agent-view.md",
+        "auto-mode-config.md",
+        "claude-code-on-the-web.md",
+        "claude-directory.md",
+        "claude-platform-on-aws.md",
+        "env-vars.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "large-codebases.md",
+        "model-config.md",
+        "prompt-caching.md",
+        "settings.md",
+        "setup.md",
+        "third-party-integrations.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-09T19:42:24Z",
       "version_at_time": "2.1.170",
       "files_changed": [
@@ -2625,22 +2651,6 @@
       ],
       "files_added": [
         "sandbox-environments.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-21T22:23:51Z",
-      "version_at_time": "2.1.147",
-      "files_changed": [
-        "auto-mode-config.md",
-        "desktop.md",
-        "glossary.md",
-        "permission-modes.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
