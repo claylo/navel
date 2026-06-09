@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-06-09T01:37:59Z",
+      "version_at_time": "2.1.169",
+      "files_changed": [
+        "agents.md",
+        "workflows.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-08T22:32:53Z",
       "version_at_time": "2.1.169",
       "files_changed": [
@@ -2541,19 +2555,6 @@
         "hooks.md",
         "permissions.md",
         "settings.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-21T02:02:59Z",
-      "version_at_time": "2.1.146",
-      "files_changed": [
-        "changelog.md"
       ],
       "files_added": [
         ""
