@@ -717,7 +717,7 @@
         "workflows.md",
         "worktrees.md"
       ],
-      "mentions": 79
+      "mentions": 80
     },
     "autocompact": {
       "documented": false,
@@ -921,6 +921,7 @@
         "env-vars.md",
         "fullscreen.md",
         "github-actions.md",
+        "headless.md",
         "interactive-mode.md",
         "jetbrains.md",
         "keybindings.md",
@@ -940,7 +941,7 @@
         "voice-dictation.md",
         "workflows.md"
       ],
-      "mentions": 103
+      "mentions": 104
     },
     "context": {
       "documented": true,
@@ -1369,6 +1370,7 @@
         "costs.md",
         "env-vars.md",
         "errors.md",
+        "headless.md",
         "hooks.md",
         "mcp.md",
         "monitoring-usage.md",
@@ -1380,7 +1382,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 56
+      "mentions": 57
     },
     "logout": {
       "documented": true,
@@ -1607,7 +1609,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 173
+      "mentions": 175
     },
     "plan": {
       "documented": true,
