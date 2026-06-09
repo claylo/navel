@@ -1,6 +1,68 @@
 {
   "changes": [
     {
+      "date": "2026-06-09T16:09:12Z",
+      "version_at_time": "2.1.169",
+      "files_changed": [
+        "agent-teams.md",
+        "agent-view.md",
+        "authentication.md",
+        "auto-mode-config.md",
+        "channels.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md",
+        "commands.md",
+        "costs.md",
+        "debug-your-config.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "errors.md",
+        "github-enterprise-server.md",
+        "gitlab-ci-cd.md",
+        "glossary.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "keybindings.md",
+        "memory.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugin-hints.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "prompt-caching.md",
+        "remote-control.md",
+        "sandbox-environments.md",
+        "sandboxing.md",
+        "security.md",
+        "server-managed-settings.md",
+        "sessions.md",
+        "settings.md",
+        "skills.md",
+        "slash-commands.md",
+        "sub-agents.md",
+        "subagents.md",
+        "troubleshooting.md",
+        "ultraplan.md",
+        "ultrareview.md",
+        "vs-code.md",
+        "worktrees.md",
+        "zero-data-retention.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-09T01:37:59Z",
       "version_at_time": "2.1.169",
       "files_changed": [
@@ -2538,23 +2600,6 @@
       "version_at_time": "2.1.146",
       "files_changed": [
         "errors.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-21T05:25:09Z",
-      "version_at_time": "2.1.146",
-      "files_changed": [
-        "admin-setup.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "permissions.md",
-        "settings.md"
       ],
       "files_added": [
         ""
