@@ -717,7 +717,7 @@
         "workflows.md",
         "worktrees.md"
       ],
-      "mentions": 80
+      "mentions": 81
     },
     "autocompact": {
       "documented": false,
@@ -1965,7 +1965,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 250
+      "mentions": 251
     },
     "status": {
       "documented": true,
