@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-09T21:35:20Z",
+      "version_at_time": "2.1.170",
+      "files_changed": [
+        "settings.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-09T20:47:03Z",
       "version_at_time": "2.1.170",
       "files_changed": [
@@ -2636,21 +2649,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-21T23:09:04Z",
-      "version_at_time": "2.1.147",
-      "files_changed": [
-        "devcontainer.md",
-        "sandboxing.md",
-        "security.md"
-      ],
-      "files_added": [
-        "sandbox-environments.md"
       ],
       "files_removed": [
         ""
