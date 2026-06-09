@@ -1,6 +1,32 @@
 {
   "changes": [
     {
+      "date": "2026-06-09T19:42:24Z",
+      "version_at_time": "2.1.170",
+      "files_changed": [
+        "agent-teams.md",
+        "changelog.md",
+        "channels-reference.md",
+        "env-vars.md",
+        "errors.md",
+        "monitoring-usage.md",
+        "overview.md",
+        "permission-modes.md",
+        "permissions.md",
+        "remote-control.md",
+        "sandboxing.md",
+        "settings.md",
+        "troubleshoot-install.md",
+        "worktrees.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-09T18:42:54Z",
       "version_at_time": "2.1.170",
       "files_changed": [
@@ -2615,24 +2641,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-21T21:00:07Z",
-      "version_at_time": "2.1.147",
-      "files_changed": [
-        "admin-setup.md",
-        "changelog.md",
-        "mcp.md",
-        "permissions.md",
-        "server-managed-settings.md",
-        "settings.md"
-      ],
-      "files_added": [
-        "managed-mcp.md"
       ],
       "files_removed": [
         ""
