@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-09T22:32:26Z",
+      "version_at_time": "2.1.170",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-09T21:35:20Z",
       "version_at_time": "2.1.170",
       "files_changed": [
@@ -2614,38 +2627,6 @@
       "version_at_time": "2.1.148",
       "files_changed": [
         "setup.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-22T01:41:01Z",
-      "version_at_time": "2.1.148",
-      "files_changed": [
-        "agent-view.md",
-        "auto-mode-config.md",
-        "changelog.md",
-        "commands.md",
-        "env-vars.md",
-        "errors.md",
-        "features-overview.md",
-        "glossary.md",
-        "interactive-mode.md",
-        "keybindings.md",
-        "mcp.md",
-        "model-config.md",
-        "permission-modes.md",
-        "plugin-marketplaces.md",
-        "settings.md",
-        "setup.md",
-        "skills.md",
-        "slash-commands.md",
-        "tools-reference.md",
-        "troubleshoot-install.md"
       ],
       "files_added": [
         ""
