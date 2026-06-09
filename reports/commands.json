@@ -686,7 +686,7 @@
         "statusline.md",
         "tools-reference.md"
       ],
-      "mentions": 21
+      "mentions": 23
     },
     "advisor": {
       "documented": false,
@@ -797,6 +797,7 @@
       "doc_files": [
         "agent-view.md",
         "changelog.md",
+        "commands.md",
         "communications-kit.md",
         "hooks-guide.md",
         "hooks.md",
@@ -807,7 +808,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 20
+      "mentions": 26
     },
     "chrome": {
       "documented": true,
@@ -939,7 +940,7 @@
         "voice-dictation.md",
         "workflows.md"
       ],
-      "mentions": 102
+      "mentions": 103
     },
     "context": {
       "documented": true,
@@ -1180,10 +1181,11 @@
         "glossary.md",
         "goal.md",
         "hooks.md",
+        "model-config.md",
         "prompt-library.md",
         "scheduled-tasks.md"
       ],
-      "mentions": 33
+      "mentions": 34
     },
     "heapdump": {
       "documented": true,
@@ -1283,10 +1285,11 @@
         "how-claude-code-works.md",
         "memory.md",
         "prompt-library.md",
+        "settings.md",
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 34
+      "mentions": 36
     },
     "init-verifiers": {
       "documented": false,
@@ -1377,7 +1380,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 51
+      "mentions": 56
     },
     "logout": {
       "documented": true,
@@ -1502,7 +1505,7 @@
         "third-party-integrations.md",
         "web-quickstart.md"
       ],
-      "mentions": 121
+      "mentions": 122
     },
     "mobile": {
       "documented": true,
@@ -1546,9 +1549,10 @@
         "statusline.md",
         "sub-agents.md",
         "subagents.md",
-        "workflows.md"
+        "workflows.md",
+        "zero-data-retention.md"
       ],
-      "mentions": 165
+      "mentions": 174
     },
     "passes": {
       "documented": true,
@@ -1603,7 +1607,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 163
+      "mentions": 173
     },
     "plan": {
       "documented": true,
@@ -1733,7 +1737,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 25
+      "mentions": 26
     },
     "reload-skills": {
       "documented": true,
@@ -1959,7 +1963,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 247
+      "mentions": 250
     },
     "status": {
       "documented": true,
@@ -1988,7 +1992,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 48
+      "mentions": 49
     },
     "statusline": {
       "documented": true,
@@ -2011,7 +2015,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 34
+      "mentions": 35
     },
     "stickers": {
       "documented": true,
@@ -2028,7 +2032,7 @@
         "commands.md",
         "goal.md"
       ],
-      "mentions": 5
+      "mentions": 6
     },
     "tasks": {
       "documented": true,
@@ -2250,5 +2254,5 @@
       "mentions": 40
     }
   },
-  "docs_checked_at": "2026-06-08"
+  "docs_checked_at": "2026-06-09"
 }
