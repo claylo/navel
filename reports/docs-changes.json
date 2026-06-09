@@ -1,6 +1,32 @@
 {
   "changes": [
     {
+      "date": "2026-06-09T18:42:54Z",
+      "version_at_time": "2.1.170",
+      "files_changed": [
+        "admin-setup.md",
+        "claude-code-on-the-web.md",
+        "desktop.md",
+        "glossary.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "monitoring-usage.md",
+        "plugins.md",
+        "security.md",
+        "sub-agents.md",
+        "subagents.md",
+        "troubleshoot-install.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-09T17:41:16Z",
       "version_at_time": "2.1.170",
       "files_changed": [
@@ -2607,19 +2633,6 @@
       ],
       "files_added": [
         "managed-mcp.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-21T16:31:03Z",
-      "version_at_time": "2.1.147",
-      "files_changed": [
-        "scheduled-tasks.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
