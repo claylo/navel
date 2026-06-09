@@ -1,6 +1,36 @@
 {
   "changes": [
     {
+      "date": "2026-06-09T17:41:16Z",
+      "version_at_time": "2.1.170",
+      "files_changed": [
+        "cli-reference.md",
+        "communications-kit.md",
+        "context-window.md",
+        "costs.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "env-vars.md",
+        "errors.md",
+        "github-actions.md",
+        "glossary.md",
+        "interactive-mode.md",
+        "mcp.md",
+        "model-config.md",
+        "prompt-caching.md",
+        "settings.md",
+        "sub-agents.md",
+        "subagents.md",
+        "zero-data-retention.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-09T16:09:12Z",
       "version_at_time": "2.1.169",
       "files_changed": [
@@ -2587,19 +2617,6 @@
       "version_at_time": "2.1.147",
       "files_changed": [
         "scheduled-tasks.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-21T16:08:11Z",
-      "version_at_time": "2.1.146",
-      "files_changed": [
-        "errors.md"
       ],
       "files_added": [
         ""
