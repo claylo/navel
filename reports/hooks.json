@@ -257,7 +257,7 @@
         "permission-modes.md",
         "plugins-reference.md"
       ],
-      "mentions": 44
+      "mentions": 45
     },
     "PostCompact": {
       "documented": true,
@@ -296,7 +296,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 100
+      "mentions": 102
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -337,7 +337,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 128
+      "mentions": 130
     },
     "SessionEnd": {
       "documented": true,
@@ -511,7 +511,7 @@
         "plugins-reference.md",
         "security-guidance.md"
       ],
-      "mentions": 36
+      "mentions": 37
     },
     "WorktreeCreate": {
       "documented": true,
@@ -538,5 +538,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-06-08"
+  "docs_checked_at": "2026-06-09"
 }
