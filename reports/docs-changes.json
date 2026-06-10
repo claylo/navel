@@ -1,6 +1,27 @@
 {
   "changes": [
     {
+      "date": "2026-06-10T18:10:22Z",
+      "version_at_time": "2.1.172",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "claude-directory.md",
+        "claude-platform-on-aws.md",
+        "context-window.md",
+        "google-vertex-ai.md",
+        "microsoft-foundry.md",
+        "plugins.md",
+        "prompt-library.md",
+        "third-party-integrations.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        "tool-search.md"
+      ]
+    },
+    {
       "date": "2026-06-10T03:05:18Z",
       "version_at_time": "2.1.170",
       "files_changed": [
@@ -2627,22 +2648,6 @@
       "version_at_time": "2.1.150",
       "files_changed": [
         "fast-mode.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-24T05:20:24Z",
-      "version_at_time": "2.1.150",
-      "files_changed": [
-        "code-review.md",
-        "quickstart.md",
-        "sandboxing.md",
-        "tools-reference.md"
       ],
       "files_added": [
         ""
