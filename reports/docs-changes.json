@@ -1,6 +1,35 @@
 {
   "changes": [
     {
+      "date": "2026-06-10T00:33:33Z",
+      "version_at_time": "2.1.170",
+      "files_changed": [
+        "cli-reference.md",
+        "commands.md",
+        "data-usage.md",
+        "desktop.md",
+        "env-vars.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "mcp.md",
+        "model-config.md",
+        "overview.md",
+        "permission-modes.md",
+        "prompt-caching.md",
+        "quickstart.md",
+        "settings.md",
+        "setup.md",
+        "tools-reference.md",
+        "web-quickstart.md"
+      ],
+      "files_added": [
+        "advisor.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-09T23:30:28Z",
       "version_at_time": "2.1.170",
       "files_changed": [
@@ -2616,19 +2645,6 @@
         "sub-agents.md",
         "subagents.md",
         "worktrees.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-22T22:27:50Z",
-      "version_at_time": "2.1.149",
-      "files_changed": [
-        "changelog.md"
       ],
       "files_added": [
         ""
