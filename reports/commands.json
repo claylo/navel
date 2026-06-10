@@ -945,11 +945,12 @@
         "remote-control.md",
         "sandboxing.md",
         "settings.md",
+        "setup.md",
         "terminal-config.md",
         "voice-dictation.md",
         "workflows.md"
       ],
-      "mentions": 102
+      "mentions": 104
     },
     "context": {
       "documented": true,
@@ -1028,12 +1029,13 @@
         "sandboxing.md",
         "sessions.md",
         "settings.md",
+        "setup.md",
         "troubleshoot-install.md",
         "web-quickstart.md",
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 71
+      "mentions": 72
     },
     "diff": {
       "documented": true,
@@ -1322,9 +1324,10 @@
         "gitlab-ci-cd.md",
         "overview.md",
         "quickstart.md",
+        "setup.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 32
+      "mentions": 44
     },
     "install-github-app": {
       "documented": true,
@@ -1608,6 +1611,7 @@
         "security.md",
         "server-managed-settings.md",
         "settings.md",
+        "setup.md",
         "skills.md",
         "slash-commands.md",
         "sub-agents.md",
@@ -1615,7 +1619,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 175
+      "mentions": 177
     },
     "plan": {
       "documented": true,
