@@ -689,9 +689,18 @@
       "mentions": 23
     },
     "advisor": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "advisor.md",
+        "cli-reference.md",
+        "commands.md",
+        "env-vars.md",
+        "model-config.md",
+        "prompt-caching.md",
+        "settings.md",
+        "tools-reference.md"
+      ],
+      "mentions": 18
     },
     "agents": {
       "documented": true,
@@ -1148,7 +1157,7 @@
         "troubleshooting.md",
         "zero-data-retention.md"
       ],
-      "mentions": 29
+      "mentions": 30
     },
     "focus": {
       "documented": true,
@@ -1522,6 +1531,7 @@
     "model": {
       "documented": true,
       "doc_files": [
+        "advisor.md",
         "agent-teams.md",
         "agent-view.md",
         "amazon-bedrock.md",
@@ -1554,7 +1564,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 177
+      "mentions": 180
     },
     "passes": {
       "documented": true,
@@ -2166,6 +2176,7 @@
     "usage": {
       "documented": true,
       "doc_files": [
+        "advisor.md",
         "changelog.md",
         "claude-directory.md",
         "code-review.md",
@@ -2179,7 +2190,7 @@
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 37
+      "mentions": 38
     },
     "usage-credits": {
       "documented": true,
@@ -2256,5 +2267,5 @@
       "mentions": 40
     }
   },
-  "docs_checked_at": "2026-06-09"
+  "docs_checked_at": "2026-06-10"
 }
