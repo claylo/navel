@@ -98,7 +98,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /mcp | Manage MCP servers | 2.0.0 | available | yes |
 | /memory | Open a memory file in your editor | 2.0.0 | available | yes |
 | /mobile | — | 2.0.72 | available | yes |
-| /model | — | 2.0.0 | available | yes |
+| /model | Set model for this FleetView session (not persisted) | 2.0.0 | available | yes |
 | /passes | — | 2.0.45 | available | yes |
 | /permissions | — | 2.0.0 | available | yes |
 | /plan | Enable plan mode or view the current session plan | 2.0.56 | available | yes |
