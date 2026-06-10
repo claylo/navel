@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-06-10T23:32:55Z",
+      "version_at_time": "2.1.172",
+      "files_changed": [
+        "model-config.md",
+        "plugins.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-10T19:50:01Z",
       "version_at_time": "2.1.172",
       "files_changed": [
@@ -2625,29 +2639,6 @@
       "version_at_time": "2.1.150",
       "files_changed": [
         "prompt-caching.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-25T19:33:11Z",
-      "version_at_time": "2.1.150",
-      "files_changed": [
-        "claude-directory.md",
-        "commands.md",
-        "costs.md",
-        "env-vars.md",
-        "keybindings.md",
-        "managed-mcp.md",
-        "monitoring-usage.md",
-        "permissions.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md"
       ],
       "files_added": [
         ""
