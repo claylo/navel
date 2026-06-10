@@ -145,6 +145,7 @@
     "loops": "List, create, and delete loops",
     "mcp": "Manage MCP servers",
     "memory": "Open a memory file in your editor",
+    "model": "Set model for this FleetView session (not persisted)",
     "plan": "Enable plan mode or view the current session plan",
     "powerup": "Discover Claude Code features through quick interactive lessons",
     "privacy-settings": "View and update your privacy settings",
