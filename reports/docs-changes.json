@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-10T19:50:01Z",
+      "version_at_time": "2.1.172",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        "tool-search.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-10T18:10:22Z",
       "version_at_time": "2.1.172",
       "files_changed": [
@@ -2635,19 +2648,6 @@
         "settings.md",
         "skills.md",
         "slash-commands.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-25T18:29:14Z",
-      "version_at_time": "2.1.150",
-      "files_changed": [
-        "fast-mode.md"
       ],
       "files_added": [
         ""
