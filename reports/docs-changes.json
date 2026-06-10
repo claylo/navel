@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-10T03:05:18Z",
+      "version_at_time": "2.1.170",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        "setup.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-10T01:43:50Z",
       "version_at_time": "2.1.170",
       "files_changed": [
@@ -2630,19 +2643,6 @@
         "quickstart.md",
         "sandboxing.md",
         "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-23T05:15:13Z",
-      "version_at_time": "2.1.150",
-      "files_changed": [
-        "changelog.md"
       ],
       "files_added": [
         ""
