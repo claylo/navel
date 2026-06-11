@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-11T09:27:16Z",
+      "version_at_time": "2.1.173",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-11T01:50:30Z",
       "version_at_time": "2.1.172",
       "files_changed": [
@@ -2626,19 +2639,6 @@
         "sub-agents.md",
         "subagents.md",
         "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-25T21:26:42Z",
-      "version_at_time": "2.1.150",
-      "files_changed": [
-        "output-styles.md"
       ],
       "files_added": [
         ""
