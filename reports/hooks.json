@@ -422,7 +422,7 @@
         "ultrareview.md",
         "workflows.md"
       ],
-      "mentions": 146
+      "mentions": 147
     },
     "StopFailure": {
       "documented": true,
@@ -536,5 +536,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-06-10"
+  "docs_checked_at": "2026-06-11"
 }
