@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "date": "2026-06-11T23:32:42Z",
+      "version_at_time": "2.1.174",
+      "files_changed": [
+        "cli-reference.md",
+        "headless.md",
+        "monitoring-usage.md",
+        "sessions.md",
+        "troubleshoot-install.md",
+        "vs-code.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-11T18:58:57Z",
       "version_at_time": "2.1.173",
       "files_changed": [
@@ -2629,19 +2647,6 @@
         "permissions.md",
         "skills.md",
         "slash-commands.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-25T23:25:56Z",
-      "version_at_time": "2.1.150",
-      "files_changed": [
-        "features-overview.md"
       ],
       "files_added": [
         ""
