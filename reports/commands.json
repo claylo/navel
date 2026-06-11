@@ -949,7 +949,7 @@
         "voice-dictation.md",
         "workflows.md"
       ],
-      "mentions": 101
+      "mentions": 102
     },
     "context": {
       "documented": true,
@@ -1190,7 +1190,7 @@
         "model-config.md",
         "scheduled-tasks.md"
       ],
-      "mentions": 28
+      "mentions": 29
     },
     "heapdump": {
       "documented": true,
@@ -1555,7 +1555,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 180
+      "mentions": 184
     },
     "passes": {
       "documented": true,
@@ -1668,7 +1668,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 193
+      "mentions": 195
     },
     "powerup": {
       "documented": true,
@@ -1991,7 +1991,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 49
+      "mentions": 50
     },
     "statusline": {
       "documented": true,
@@ -2252,5 +2252,5 @@
       "mentions": 35
     }
   },
-  "docs_checked_at": "2026-06-10"
+  "docs_checked_at": "2026-06-11"
 }
