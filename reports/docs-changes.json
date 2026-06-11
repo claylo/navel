@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-11T01:50:30Z",
+      "version_at_time": "2.1.172",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-10T23:32:55Z",
       "version_at_time": "2.1.172",
       "files_changed": [
@@ -2626,19 +2639,6 @@
       "version_at_time": "2.1.150",
       "files_changed": [
         "output-styles.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-25T20:30:49Z",
-      "version_at_time": "2.1.150",
-      "files_changed": [
-        "prompt-caching.md"
       ],
       "files_added": [
         ""
