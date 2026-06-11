@@ -835,10 +835,11 @@
         "network-config.md",
         "overview.md",
         "platforms.md",
+        "prompt-library.md",
         "troubleshoot-install.md",
         "vs-code.md"
       ],
-      "mentions": 28
+      "mentions": 29
     },
     "claude-in-chrome": {
       "documented": true,
@@ -913,7 +914,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 74
+      "mentions": 81
     },
     "config": {
       "documented": true,
@@ -923,6 +924,7 @@
         "authentication.md",
         "changelog.md",
         "claude-code-on-the-web.md",
+        "claude-directory.md",
         "commands.md",
         "costs.md",
         "desktop.md",
@@ -949,13 +951,14 @@
         "voice-dictation.md",
         "workflows.md"
       ],
-      "mentions": 102
+      "mentions": 105
     },
     "context": {
       "documented": true,
       "doc_files": [
         "changelog.md",
         "claude-code-on-the-web.md",
+        "claude-directory.md",
         "commands.md",
         "context-window.md",
         "costs.md",
@@ -972,7 +975,7 @@
         "statusline.md",
         "voice-dictation.md"
       ],
-      "mentions": 46
+      "mentions": 47
     },
     "copy": {
       "documented": true,
@@ -1007,6 +1010,7 @@
         "best-practices.md",
         "changelog.md",
         "claude-code-on-the-web.md",
+        "claude-directory.md",
         "commands.md",
         "computer-use.md",
         "desktop-quickstart.md",
@@ -1020,6 +1024,7 @@
         "overview.md",
         "permission-modes.md",
         "platforms.md",
+        "prompt-library.md",
         "quickstart.md",
         "remote-control.md",
         "sandboxing.md",
@@ -1031,7 +1036,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 69
+      "mentions": 72
     },
     "diff": {
       "documented": true,
@@ -1188,9 +1193,10 @@
         "goal.md",
         "hooks.md",
         "model-config.md",
+        "prompt-library.md",
         "scheduled-tasks.md"
       ],
-      "mentions": 29
+      "mentions": 35
     },
     "heapdump": {
       "documented": true,
@@ -1247,6 +1253,7 @@
         "plugin-marketplaces.md",
         "plugins-reference.md",
         "plugins.md",
+        "prompt-library.md",
         "security-guidance.md",
         "security.md",
         "server-managed-settings.md",
@@ -1260,7 +1267,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 307
+      "mentions": 313
     },
     "ide": {
       "documented": true,
@@ -1288,11 +1295,12 @@
         "hooks.md",
         "how-claude-code-works.md",
         "memory.md",
+        "prompt-library.md",
         "settings.md",
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 34
+      "mentions": 36
     },
     "init-verifiers": {
       "documented": false,
@@ -1353,7 +1361,7 @@
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 17
+      "mentions": 20
     },
     "keybindings-help": {
       "documented": false,
@@ -1429,6 +1437,7 @@
         "commands.md",
         "common-workflows.md",
         "computer-use.md",
+        "context-window.md",
         "costs.md",
         "debug-your-config.md",
         "desktop-scheduled-tasks.md",
@@ -1453,6 +1462,7 @@
         "plugins-reference.md",
         "plugins.md",
         "prompt-caching.md",
+        "prompt-library.md",
         "remote-control.md",
         "routines.md",
         "sandbox-environments.md",
@@ -1464,7 +1474,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 238
+      "mentions": 250
     },
     "memory": {
       "documented": true,
@@ -1507,7 +1517,7 @@
         "third-party-integrations.md",
         "web-quickstart.md"
       ],
-      "mentions": 99
+      "mentions": 122
     },
     "mobile": {
       "documented": true,
@@ -1610,7 +1620,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 172
+      "mentions": 177
     },
     "plan": {
       "documented": true,
@@ -1835,13 +1845,14 @@
         "changelog.md",
         "cli-reference.md",
         "commands.md",
+        "prompt-library.md",
         "skills.md",
         "slash-commands.md",
         "sub-agents.md",
         "subagents.md",
         "ultrareview.md"
       ],
-      "mentions": 16
+      "mentions": 17
     },
     "rewind": {
       "documented": true,
@@ -1874,12 +1885,13 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "claude-directory.md",
         "commands.md",
         "security-guidance.md",
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 7
+      "mentions": 8
     },
     "session": {
       "documented": true,
@@ -1890,11 +1902,12 @@
         "hooks-guide.md",
         "hooks.md",
         "monitoring-usage.md",
+        "prompt-library.md",
         "remote-control.md",
         "routines.md",
         "vs-code.md"
       ],
-      "mentions": 13
+      "mentions": 14
     },
     "setup-bedrock": {
       "documented": true,
@@ -1927,6 +1940,7 @@
         "claude-directory.md",
         "commands.md",
         "communications-kit.md",
+        "context-window.md",
         "costs.md",
         "debug-your-config.md",
         "deep-links.md",
@@ -1962,7 +1976,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 237
+      "mentions": 251
     },
     "status": {
       "documented": true,
@@ -1997,6 +2011,7 @@
       "documented": true,
       "doc_files": [
         "best-practices.md",
+        "claude-directory.md",
         "commands.md",
         "costs.md",
         "env-vars.md",
@@ -2013,7 +2028,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 34
+      "mentions": 35
     },
     "stickers": {
       "documented": true,
@@ -2087,12 +2102,13 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "claude-directory.md",
         "commands.md",
         "interactive-mode.md",
         "plugins-reference.md",
         "terminal-config.md"
       ],
-      "mentions": 14
+      "mentions": 16
     },
     "toggle-memory": {
       "documented": false,
@@ -2249,7 +2265,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 35
+      "mentions": 40
     }
   },
   "docs_checked_at": "2026-06-11"
