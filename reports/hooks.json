@@ -282,6 +282,7 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "claude-directory.md",
         "context-window.md",
         "features-overview.md",
         "hooks-guide.md",
@@ -295,7 +296,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 99
+      "mentions": 102
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -517,12 +518,13 @@
       "doc_files": [
         "agent-view.md",
         "changelog.md",
+        "claude-directory.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
         "worktrees.md"
       ],
-      "mentions": 34
+      "mentions": 35
     },
     "WorktreeRemove": {
       "documented": true,
