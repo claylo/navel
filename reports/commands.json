@@ -693,6 +693,7 @@
       "documented": true,
       "doc_files": [
         "advisor.md",
+        "changelog.md",
         "cli-reference.md",
         "commands.md",
         "env-vars.md",
@@ -701,7 +702,7 @@
         "settings.md",
         "tools-reference.md"
       ],
-      "mentions": 18
+      "mentions": 19
     },
     "agents": {
       "documented": true,
@@ -1565,7 +1566,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 184
+      "mentions": 187
     },
     "passes": {
       "documented": true,
@@ -1678,7 +1679,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 195
+      "mentions": 196
     },
     "powerup": {
       "documented": true,
@@ -2191,7 +2192,7 @@
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 38
+      "mentions": 39
     },
     "usage-credits": {
       "documented": true,
