@@ -1,6 +1,37 @@
 {
   "changes": [
     {
+      "date": "2026-06-12T22:32:49Z",
+      "version_at_time": "2.1.176",
+      "files_changed": [
+        "agent-teams.md",
+        "amazon-bedrock.md",
+        "claude-code-on-the-web.md",
+        "costs.md",
+        "env-vars.md",
+        "errors.md",
+        "fullscreen.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "keybindings.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "permissions.md",
+        "plugin-hints.md",
+        "remote-control.md",
+        "settings.md",
+        "sub-agents.md",
+        "subagents.md",
+        "vs-code.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-12T20:45:19Z",
       "version_at_time": "2.1.176",
       "files_changed": [
@@ -2617,19 +2648,6 @@
       "version_at_time": "2.1.152",
       "files_changed": [
         "interactive-mode.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-27T01:42:32Z",
-      "version_at_time": "2.1.152",
-      "files_changed": [
-        "changelog.md"
       ],
       "files_added": [
         ""
