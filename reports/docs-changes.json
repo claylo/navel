@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-12T20:45:19Z",
+      "version_at_time": "2.1.176",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        "platforms.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-12T19:39:35Z",
       "version_at_time": "2.1.175",
       "files_changed": [
@@ -2620,26 +2633,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-26T23:27:05Z",
-      "version_at_time": "2.1.152",
-      "files_changed": [
-        "admin-setup.md",
-        "amazon-bedrock.md",
-        "common-workflows.md",
-        "google-vertex-ai.md",
-        "mcp.md",
-        "memory.md",
-        "microsoft-foundry.md",
-        "security-guidance.md"
-      ],
-      "files_added": [
-        "large-codebases.md"
       ],
       "files_removed": [
         ""
