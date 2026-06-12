@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-12T09:22:41Z",
+      "version_at_time": "2.1.175",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-12T05:34:52Z",
       "version_at_time": "2.1.175",
       "files_changed": [
@@ -2636,21 +2649,6 @@
       ],
       "files_removed": [
         ""
-      ]
-    },
-    {
-      "date": "2026-05-26T19:41:33Z",
-      "version_at_time": "2.1.150",
-      "files_changed": [
-        "best-practices.md",
-        "cli-reference.md",
-        "memory.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        "desktop-changelog.md"
       ]
     }
   ]
