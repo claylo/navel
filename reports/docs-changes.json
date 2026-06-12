@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-12T19:39:35Z",
+      "version_at_time": "2.1.175",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        "platforms.md"
+      ]
+    },
+    {
       "date": "2026-06-12T15:03:06Z",
       "version_at_time": "2.1.175",
       "files_changed": [
@@ -2627,22 +2640,6 @@
       ],
       "files_added": [
         "large-codebases.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-26T21:10:26Z",
-      "version_at_time": "2.1.150",
-      "files_changed": [
-        "discover-plugins.md",
-        "hooks-guide.md",
-        "plugins-reference.md",
-        "security.md"
-      ],
-      "files_added": [
-        "security-guidance.md"
       ],
       "files_removed": [
         ""
