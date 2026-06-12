@@ -702,7 +702,7 @@
         "settings.md",
         "tools-reference.md"
       ],
-      "mentions": 19
+      "mentions": 21
     },
     "agents": {
       "documented": true,
@@ -716,6 +716,7 @@
         "debug-your-config.md",
         "desktop.md",
         "how-claude-code-works.md",
+        "model-config.md",
         "permissions.md",
         "plugin-marketplaces.md",
         "plugins-reference.md",
@@ -728,7 +729,7 @@
         "workflows.md",
         "worktrees.md"
       ],
-      "mentions": 81
+      "mentions": 84
     },
     "autocompact": {
       "documented": false,
@@ -875,7 +876,7 @@
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 66
+      "mentions": 67
     },
     "color": {
       "documented": true,
@@ -915,7 +916,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 81
+      "mentions": 82
     },
     "config": {
       "documented": true,
@@ -1268,7 +1269,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 313
+      "mentions": 314
     },
     "ide": {
       "documented": true,
@@ -1475,7 +1476,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 250
+      "mentions": 251
     },
     "memory": {
       "documented": true,
@@ -1566,7 +1567,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 187
+      "mentions": 190
     },
     "passes": {
       "documented": true,
@@ -1789,7 +1790,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 49
+      "mentions": 50
     },
     "remote-env": {
       "documented": true,
@@ -1977,7 +1978,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 251
+      "mentions": 249
     },
     "status": {
       "documented": true,
@@ -2006,7 +2007,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 50
+      "mentions": 52
     },
     "statusline": {
       "documented": true,
@@ -2020,6 +2021,7 @@
         "fast-mode.md",
         "hooks.md",
         "model-config.md",
+        "plugin-hints.md",
         "plugins-reference.md",
         "prompt-caching.md",
         "settings.md",
@@ -2029,7 +2031,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 35
+      "mentions": 36
     },
     "stickers": {
       "documented": true,
@@ -2192,7 +2194,7 @@
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 39
+      "mentions": 40
     },
     "usage-credits": {
       "documented": true,
