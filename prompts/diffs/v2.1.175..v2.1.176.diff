@@ -1,0 +1,27 @@
+--- v2.1.175
++++ v2.1.176
+@@ -70,10 +70,13 @@
+ Main branch (you will usually use this for PRs): main
+ 
+ Status:
+-M reports/docs-changes.json
++M npm/versions.json
++ M reports/commands.json
++ M reports/docs-changes.json
++ M reports/hooks.json
+ 
+ Recent commits:
+-3b3ab96 chore(readme): sync claude code data (v2.1.175)
++2711cd3 chore(docs): sync claude code data (v2.1.175) — 1 docs changed
+ 
+ ---
+ 
+@@ -106,7 +109,7 @@
+ - `description` (string, required) — A short (3-5 word) description of the task
+ - `prompt` (string, required) — The task for the agent to perform
+ - `subagent_type` (string) — The type of specialized agent to use for this task
+-- `model` (string) — Optional model override for this agent. Takes precedence over the agent definition's model frontmatter. If omitted, uses the agent definition's model, or inherits from the parent.
++- `model` (string) — Optional model override for this agent. Takes precedence over the agent definition's model frontmatter. If omitted, uses the agent definition's model, or inherits from the parent. Ignored for subagent_type: "fork" — forks always inherit the parent model.
+ - `run_in_background` (boolean) — Set to true to run this agent in the background. You will be notified when it completes.
+ - `isolation` (string) — Isolation mode. "worktree" creates a temporary git worktree so the agent works on an isolated copy of the repo.
+ 
