@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-06-12T00:35:30Z",
+      "version_at_time": "2.1.174",
+      "files_changed": [
+        "code-review.md",
+        "mcp.md",
+        "quickstart.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-11T23:32:42Z",
       "version_at_time": "2.1.174",
       "files_changed": [
@@ -2629,24 +2644,6 @@
       "version_at_time": "2.1.150",
       "files_changed": [
         "github-enterprise-server.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-26T01:00:01Z",
-      "version_at_time": "2.1.150",
-      "files_changed": [
-        "agent-view.md",
-        "discover-plugins.md",
-        "mcp.md",
-        "permissions.md",
-        "skills.md",
-        "slash-commands.md"
       ],
       "files_added": [
         ""
