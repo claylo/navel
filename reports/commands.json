@@ -835,12 +835,11 @@
         "how-claude-code-works.md",
         "network-config.md",
         "overview.md",
-        "platforms.md",
         "prompt-library.md",
         "troubleshoot-install.md",
         "vs-code.md"
       ],
-      "mentions": 29
+      "mentions": 27
     },
     "claude-in-chrome": {
       "documented": true,
@@ -1024,7 +1023,6 @@
         "mcp-quickstart.md",
         "overview.md",
         "permission-modes.md",
-        "platforms.md",
         "prompt-library.md",
         "quickstart.md",
         "remote-control.md",
@@ -1037,7 +1035,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 72
+      "mentions": 65
     },
     "diff": {
       "documented": true,
@@ -1459,7 +1457,6 @@
         "mcp.md",
         "monitoring-usage.md",
         "overview.md",
-        "platforms.md",
         "plugins-reference.md",
         "plugins.md",
         "prompt-caching.md",
@@ -1475,7 +1472,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 250
+      "mentions": 249
     },
     "memory": {
       "documented": true,
@@ -1780,7 +1777,6 @@
         "overview.md",
         "permission-modes.md",
         "permissions.md",
-        "platforms.md",
         "remote-control.md",
         "security.md",
         "settings.md",
@@ -1789,7 +1785,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 49
+      "mentions": 46
     },
     "remote-env": {
       "documented": true,
