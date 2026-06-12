@@ -150,27 +150,32 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Environment Variables (583 tracked, 246 documented)</summary>
+<summary>Environment Variables (627 tracked, 268 documented)</summary>
 
 | Variable | Since | Documented |
 |----------|-------|------------|
-| **__CFB** | 0.2.33 | **no** |
-| **AI_AGENT** | 2.1.120 | **no** |
+| **AGENT_PROXY_AUTH_TOKEN** | 2.1.128 | **no** |
+| **AGENT_PROXY_URL** | 2.1.128 | **no** |
+| AI_AGENT | 2.1.120 | yes |
 | **ALACRITTY_LOG** | 0.2.33 | **no** |
 | ANTHROPIC_API_KEY | 0.2.54 | yes |
 | ANTHROPIC_AUTH_TOKEN | 0.2.33 | yes |
-| **ANTHROPIC_AWS_API_KEY** | 2.1.90 | **no** |
-| **ANTHROPIC_AWS_BASE_URL** | 2.1.90 | **no** |
-| **ANTHROPIC_AWS_WORKSPACE_ID** | 2.1.90 | **no** |
+| ANTHROPIC_AWS_API_KEY | 2.1.90 | yes |
+| ANTHROPIC_AWS_BASE_URL | 2.1.90 | yes |
+| ANTHROPIC_AWS_WORKSPACE_ID | 2.1.90 | yes |
 | ANTHROPIC_BASE_URL | 0.2.56 | yes |
 | ANTHROPIC_BEDROCK_BASE_URL | 2.0.71 | yes |
 | ANTHROPIC_BEDROCK_MANTLE_BASE_URL | 2.1.94 | yes |
+| ANTHROPIC_BEDROCK_SERVICE_TIER | 2.1.122 | yes |
 | ANTHROPIC_BETAS | 0.2.104 | yes |
 | **ANTHROPIC_CONFIG_DIR** | 2.1.116 | **no** |
 | ANTHROPIC_CUSTOM_HEADERS | 0.2.40 | yes |
 | ANTHROPIC_CUSTOM_MODEL_OPTION | 2.1.78 | yes |
 | ANTHROPIC_CUSTOM_MODEL_OPTION_DESCRIPTION | 2.1.78 | yes |
 | ANTHROPIC_CUSTOM_MODEL_OPTION_NAME | 2.1.78 | yes |
+| ANTHROPIC_DEFAULT_FABLE_MODEL | 2.1.170 | yes |
+| ANTHROPIC_DEFAULT_FABLE_MODEL_DESCRIPTION | 2.1.170 | yes |
+| ANTHROPIC_DEFAULT_FABLE_MODEL_NAME | 2.1.170 | yes |
 | ANTHROPIC_DEFAULT_HAIKU_MODEL | 1.0.114 | yes |
 | ANTHROPIC_DEFAULT_HAIKU_MODEL_DESCRIPTION | 2.1.84 | yes |
 | ANTHROPIC_DEFAULT_HAIKU_MODEL_NAME | 2.1.84 | yes |
@@ -180,6 +185,8 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | ANTHROPIC_DEFAULT_SONNET_MODEL | 1.0.87 | yes |
 | ANTHROPIC_DEFAULT_SONNET_MODEL_DESCRIPTION | 2.1.84 | yes |
 | ANTHROPIC_DEFAULT_SONNET_MODEL_NAME | 2.1.84 | yes |
+| **ANTHROPIC_ENVIRONMENT_ID** | 2.1.145 | **no** |
+| **ANTHROPIC_ENVIRONMENT_KEY** | 2.1.145 | **no** |
 | **ANTHROPIC_FEDERATION_RULE_ID** | 2.1.116 | **no** |
 | ANTHROPIC_FOUNDRY_API_KEY | 2.0.45 | yes |
 | ANTHROPIC_FOUNDRY_BASE_URL | 2.0.45 | yes |
@@ -192,10 +199,12 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **ANTHROPIC_UNIX_SOCKET** | 2.1.73 | **no** |
 | ANTHROPIC_VERTEX_BASE_URL | 2.1.97 | yes |
 | ANTHROPIC_VERTEX_PROJECT_ID | 0.2.106 | yes |
-| **API_FORCE_IDLE_TIMEOUT** | 2.1.117 | **no** |
+| ANTHROPIC_WORKSPACE_ID | 2.1.141 | yes |
+| API_FORCE_IDLE_TIMEOUT | 2.1.117 | yes |
 | API_TIMEOUT_MS | 0.2.33 | yes |
-| **APP_URL** | 2.0.15 | **no** |
 | APPDATA | 0.2.33 | yes |
+| **APP_URL** | 2.0.15 | **no** |
+| **AUTOMODE_DECISION_LOG** | 2.1.160 | **no** |
 | AWS_ACCESS_KEY_ID | 0.2.33 | yes |
 | AWS_BEARER_TOKEN_BEDROCK | 1.0.49 | yes |
 | **AWS_DEFAULT_REGION** | 0.2.33 | **no** |
@@ -228,6 +237,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | BETA_TRACING_ENDPOINT | 2.0.70 | yes |
 | BROWSER | 1.0.19 | yes |
 | **BUGHUNTER_DEV_BUNDLE_B64** | 2.1.85 | **no** |
+| **BUGHUNTER_FLEET_SIZE** | 2.1.124 | **no** |
 | **BUILDKITE** | 2.0.28 | **no** |
 | **BUN_DISABLE_DYNAMIC_CHUNK_SIZE** | 2.1.113 | **no** |
 | **BUN_ENV** | 2.1.113 | **no** |
@@ -238,105 +248,114 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | C | 0.2.33 | yes |
 | **C9_PID** | 2.1.110 | **no** |
 | **C9_USER** | 2.1.110 | **no** |
+| **CCR_EGRESS_GATEWAY_ENABLED** | 2.1.124 | **no** |
 | **CCR_ENABLE_BUNDLE** | 2.1.80 | **no** |
 | CCR_FORCE_BUNDLE | 2.1.80 | yes |
+| **CCR_SPAWN_TIMESTAMP_MS** | 2.1.144 | **no** |
 | **CCR_UPSTREAM_PROXY_ENABLED** | 2.1.85 | **no** |
 | **CF_PAGES** | 2.0.28 | **no** |
 | **CHOKIDAR_INTERVAL** | 1.0.49 | **no** |
 | **CHOKIDAR_USEPOLLING** | 1.0.49 | **no** |
 | **CIRCLECI** | 2.0.28 | **no** |
-| **CLAUBBIT** | 0.2.79 | **no** |
 | **CLAUDE_AFTER_LAST_COMPACT** | 2.1.40 | **no** |
+| **CLAUDE_AGENTS_SELECT** | 2.1.119 | **no** |
 | **CLAUDE_AGENT_SDK_CLIENT_APP** | 2.1.39 | **no** |
 | CLAUDE_AGENT_SDK_DISABLE_BUILTIN_AGENTS | 2.1.27 | yes |
 | CLAUDE_AGENT_SDK_MCP_NO_PREFIX | 2.1.10 | yes |
 | **CLAUDE_AGENT_SDK_VERSION** | 1.0.128 | **no** |
-| **CLAUDE_AGENTS_SELECT** | 2.1.119 | **no** |
-| **CLAUDE_ASYNC_AGENT_STALL_TIMEOUT_MS** | 2.1.113 | **no** |
-| CLAUDE_AUTO_BACKGROUND_TASKS | 2.1.47 | yes |
+| CLAUDE_ASYNC_AGENT_STALL_TIMEOUT_MS | 2.1.113 | yes |
 | CLAUDE_AUTOCOMPACT_PCT_OVERRIDE | 2.0.20 | yes |
+| CLAUDE_AUTO_BACKGROUND_TASKS | 2.1.47 | yes |
 | CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR | 1.0.18 | yes |
+| **CLAUDE_BG_AUTH_SNAPSHOT_PATH** | 2.1.142 | **no** |
 | **CLAUDE_BG_BACKEND** | 2.1.113 | **no** |
+| **CLAUDE_BG_CLAIM_AUTH** | 2.1.169 | **no** |
 | **CLAUDE_BG_ISOLATION** | 2.1.119 | **no** |
+| **CLAUDE_BG_MEMORY_TOGGLED_OFF** | 2.1.147 | **no** |
+| **CLAUDE_BG_PTY_AUTH** | 2.1.169 | **no** |
 | **CLAUDE_BG_RENDEZVOUS_SOCK** | 2.1.119 | **no** |
+| **CLAUDE_BG_RV_AUTH** | 2.1.169 | **no** |
+| **CLAUDE_BG_SESSION_PERMISSION_RULES** | 2.1.146 | **no** |
+| **CLAUDE_BG_SOCKET_TOKENS_PATH** | 2.1.169 | **no** |
 | **CLAUDE_BG_SOURCE** | 2.1.119 | **no** |
+| **CLAUDE_BG_STARTUP_WEDGE_MS** | 2.1.129 | **no** |
+| **CLAUDE_BG_TCC_DISCLAIMED** | 2.1.143 | **no** |
+| **CLAUDE_BRIDGE_REATTACH_OUTBOUND_ONLY** | 2.1.147 | **no** |
 | **CLAUDE_BRIDGE_REATTACH_SEQ** | 2.1.118 | **no** |
 | **CLAUDE_BRIDGE_REATTACH_SESSION** | 2.1.118 | **no** |
 | **CLAUDE_BRIDGE_USE_CCR_V2** | 2.1.70 | **no** |
+| **CLAUDE_BYTE_STREAM_IDLE_TIMEOUT_MS** | 2.1.157 | **no** |
 | **CLAUDE_CHROME_PERMISSION_MODE** | 2.1.26 | **no** |
-| CLAUDE_CODE_ACCESSIBILITY | 2.0.77 | yes |
 | **CLAUDE_CODE_ACCOUNT_TAGGED_ID** | 2.1.76 | **no** |
 | CLAUDE_CODE_ACCOUNT_UUID | 2.1.51 | yes |
 | **CLAUDE_CODE_ACTION** | 0.2.114 | **no** |
 | CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD | 2.1.20 | yes |
 | **CLAUDE_CODE_ADDITIONAL_PROTECTION** | 2.0.23 | **no** |
 | **CLAUDE_CODE_AGENT** | 2.1.119 | **no** |
-| **CLAUDE_CODE_AGENT_COST_STEER** | 2.1.89 | **no** |
-| **CLAUDE_CODE_AGENT_LIST_IN_MESSAGES** | 2.1.84 | **no** |
-| **CLAUDE_CODE_ALWAYS_ENABLE_EFFORT** | 2.1.70 | **no** |
+| CLAUDE_CODE_ALT_SCREEN_FULL_REPAINT | 2.1.144 | yes |
+| CLAUDE_CODE_ALWAYS_ENABLE_EFFORT | 2.1.70 | yes |
 | **CLAUDE_CODE_API_BASE_URL** | 2.1.8 | **no** |
 | **CLAUDE_CODE_API_KEY_FILE_DESCRIPTOR** | 1.0.109 | **no** |
 | CLAUDE_CODE_API_KEY_HELPER_TTL_MS | 0.2.116 | yes |
-| **CLAUDE_CODE_ATTRIBUTION_HEADER** | 2.1.15 | **no** |
+| CLAUDE_CODE_ATTRIBUTION_HEADER | 2.1.15 | yes |
 | CLAUDE_CODE_AUTO_COMPACT_WINDOW | 2.1.75 | yes |
-| CLAUDE_CODE_AUTO_CONNECT_IDE | 1.0.35 | yes |
 | **CLAUDE_CODE_BASE_REF** | 2.1.16 | **no** |
 | **CLAUDE_CODE_BASE_REFS** | 2.1.105 | **no** |
 | **CLAUDE_CODE_BASH_SANDBOX_SHOW_INDICATOR** | 2.0.14 | **no** |
+| **CLAUDE_CODE_BENCH_LIVE_COUNTS** | 2.1.136 | **no** |
 | **CLAUDE_CODE_BLOCKING_LIMIT_OVERRIDE** | 2.0.77 | **no** |
-| **CLAUDE_CODE_BRIEF** | 2.1.72 | **no** |
 | **CLAUDE_CODE_BRIEF_UPLOAD** | 2.1.72 | **no** |
-| **CLAUDE_CODE_BUBBLEWRAP** | 2.0.52 | **no** |
+| **CLAUDE_CODE_BYOC_ENABLE_DATADOG** | 2.1.136 | **no** |
 | CLAUDE_CODE_CERT_STORE | 2.1.101 | yes |
 | **CLAUDE_CODE_CLASSIFIER_SUMMARY** | 2.1.119 | **no** |
 | CLAUDE_CODE_CLIENT_CERT | 1.0.36 | yes |
 | CLAUDE_CODE_CLIENT_KEY | 1.0.36 | yes |
 | CLAUDE_CODE_CLIENT_KEY_PASSPHRASE | 1.0.36 | yes |
+| **CLAUDE_CODE_COLD_COMPACT** | 2.1.124 | **no** |
 | **CLAUDE_CODE_COMMIT_LOG** | 2.1.85 | **no** |
 | **CLAUDE_CODE_CONTAINER_ID** | 1.0.120 | **no** |
+| **CLAUDE_CODE_COORDINATOR_MODE** | 2.1.152 | **no** |
 | **CLAUDE_CODE_CUSTOM_OAUTH_URL** | 2.1.32 | **no** |
 | **CLAUDE_CODE_DAEMON_COLD_START** | 2.1.120 | **no** |
 | **CLAUDE_CODE_DATADOG_FLUSH_INTERVAL_MS** | 2.1.21 | **no** |
-| CLAUDE_CODE_DEBUG_LOG_LEVEL | 2.1.71 | yes |
 | CLAUDE_CODE_DEBUG_LOGS_DIR | 1.0.122 | yes |
-| **CLAUDE_CODE_DEBUG_REPAINTS** | 2.1.83 | **no** |
+| CLAUDE_CODE_DEBUG_LOG_LEVEL | 2.1.71 | yes |
 | **CLAUDE_CODE_DECSTBM** | 2.1.113 | **no** |
 | **CLAUDE_CODE_DIAGNOSTICS_FILE** | 2.0.56 | **no** |
 | CLAUDE_CODE_DISABLE_1M_CONTEXT | 2.1.50 | yes |
 | CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING | 2.1.41 | yes |
-| **CLAUDE_CODE_DISABLE_ADVISOR_TOOL** | 2.1.83 | **no** |
+| CLAUDE_CODE_DISABLE_ADVISOR_TOOL | 2.1.83 | yes |
+| CLAUDE_CODE_DISABLE_AGENT_VIEW | 2.1.139 | yes |
+| CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN | 2.1.132 | yes |
 | CLAUDE_CODE_DISABLE_ATTACHMENTS | 1.0.128 | yes |
 | CLAUDE_CODE_DISABLE_AUTO_MEMORY | 2.1.31 | yes |
-| CLAUDE_CODE_DISABLE_BACKGROUND_TASKS | 2.1.4 | yes |
 | **CLAUDE_CODE_DISABLE_CLAUDE_API_SKILL** | 2.1.89 | **no** |
+| **CLAUDE_CODE_DISABLE_CLAUDE_CODE_SKILL** | 2.1.154 | **no** |
 | CLAUDE_CODE_DISABLE_CLAUDE_MDS | 1.0.111 | yes |
 | CLAUDE_CODE_DISABLE_CRON | 2.1.72 | yes |
 | CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS | 2.0.45 | yes |
 | CLAUDE_CODE_DISABLE_FAST_MODE | 2.1.39 | yes |
-| CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY | 2.0.22 | yes |
-| CLAUDE_CODE_DISABLE_FILE_CHECKPOINTING | 1.0.128 | yes |
 | CLAUDE_CODE_DISABLE_GIT_INSTRUCTIONS | 2.1.64 | yes |
 | CLAUDE_CODE_DISABLE_LEGACY_MODEL_REMAP | 2.1.68 | yes |
-| CLAUDE_CODE_DISABLE_MOUSE | 2.1.89 | yes |
 | CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC | 0.2.116 | yes |
 | CLAUDE_CODE_DISABLE_NONSTREAMING_FALLBACK | 2.1.83 | yes |
 | CLAUDE_CODE_DISABLE_OFFICIAL_MARKETPLACE_AUTOINSTALL | 2.1.14 | yes |
-| **CLAUDE_CODE_DISABLE_POLICY_SKILLS** | 2.1.89 | **no** |
+| CLAUDE_CODE_DISABLE_POLICY_SKILLS | 2.1.89 | yes |
 | **CLAUDE_CODE_DISABLE_PRECOMPACT_SKIP** | 2.1.69 | **no** |
-| CLAUDE_CODE_DISABLE_TERMINAL_TITLE | 1.0.52 | yes |
 | CLAUDE_CODE_DISABLE_THINKING | 2.1.41 | yes |
-| CLAUDE_CODE_DISABLE_VIRTUAL_SCROLL | 2.1.72 | yes |
+| CLAUDE_CODE_DISABLE_WORKFLOWS | 2.1.152 | yes |
 | **CLAUDE_CODE_DONT_INHERIT_ENV** | 0.2.119 | **no** |
-| **CLAUDE_CODE_EAGER_FLUSH** | 2.1.32 | **no** |
 | CLAUDE_CODE_EFFORT_LEVEL | 2.0.46 | yes |
 | **CLAUDE_CODE_EMIT_SESSION_STATE_EVENTS** | 2.1.83 | **no** |
 | **CLAUDE_CODE_EMIT_TOOL_USE_SUMMARIES** | 2.1.19 | **no** |
 | **CLAUDE_CODE_ENABLE_APPEND_SUBAGENT_PROMPT** | 2.1.111 | **no** |
+| CLAUDE_CODE_ENABLE_AUTO_MODE | 2.1.158 | yes |
 | CLAUDE_CODE_ENABLE_AWAY_SUMMARY | 2.1.105 | yes |
 | CLAUDE_CODE_ENABLE_BACKGROUND_PLUGIN_REFRESH | 2.1.110 | yes |
-| **CLAUDE_CODE_ENABLE_CFC** | 2.0.71 | **no** |
 | **CLAUDE_CODE_ENABLE_EXPERIMENTAL_ADVISOR_TOOL** | 2.1.110 | **no** |
+| CLAUDE_CODE_ENABLE_FEEDBACK_SURVEY_FOR_OTEL | 2.1.136 | yes |
 | CLAUDE_CODE_ENABLE_FINE_GRAINED_TOOL_STREAMING | 2.1.40 | yes |
+| CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY | 2.1.129 | yes |
 | CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION | 2.0.66 | yes |
 | **CLAUDE_CODE_ENABLE_PROXY_AUTH_HELPER** | 2.1.111 | **no** |
 | **CLAUDE_CODE_ENABLE_SDK_FILE_CHECKPOINTING** | 2.0.43 | **no** |
@@ -354,15 +373,16 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | CLAUDE_CODE_EXTRA_BODY | 0.2.45 | yes |
 | **CLAUDE_CODE_EXTRA_METADATA** | 2.1.78 | **no** |
 | CLAUDE_CODE_FILE_READ_MAX_OUTPUT_TOKENS | 2.0.77 | yes |
-| **CLAUDE_CODE_FORCE_FULL_LOGO** | 2.0.11 | **no** |
-| **CLAUDE_CODE_FORCE_FULLSCREEN_UPSELL** | 2.1.110 | **no** |
+| **CLAUDE_CODE_FORCE_MID_CONVERSATION_SYSTEM** | 2.1.154 | **no** |
+| CLAUDE_CODE_FORCE_SYNC_OUTPUT | 2.1.129 | yes |
 | CLAUDE_CODE_FORK_SUBAGENT | 2.1.117 | yes |
 | **CLAUDE_CODE_FRAME_TIMING_LOG** | 2.1.74 | **no** |
 | CLAUDE_CODE_GIT_BASH_PATH | 1.0.49 | yes |
 | CLAUDE_CODE_GLOB_HIDDEN | 2.1.14 | yes |
 | CLAUDE_CODE_GLOB_NO_IGNORE | 2.1.14 | yes |
 | CLAUDE_CODE_GLOB_TIMEOUT_SECONDS | 2.1.14 | yes |
-| CLAUDE_CODE_HIDE_CWD | 2.1.119 | yes |
+| **CLAUDE_CODE_HOST_AUTH_ENV_VAR** | 2.1.145 | **no** |
+| **CLAUDE_CODE_HOST_AUTH_REFRESH_TIMEOUT_MS** | 2.1.145 | **no** |
 | **CLAUDE_CODE_HOST_PLATFORM** | 2.1.40 | **no** |
 | CLAUDE_CODE_IDE_HOST_OVERRIDE | 1.0.4 | yes |
 | CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL | 1.0.4 | yes |
@@ -370,15 +390,17 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **CLAUDE_CODE_IDLE_THRESHOLD_MINUTES** | 2.1.84 | **no** |
 | **CLAUDE_CODE_IDLE_TOKEN_THRESHOLD** | 2.1.84 | **no** |
 | **CLAUDE_CODE_INCLUDE_PARTIAL_MESSAGES** | 2.1.32 | **no** |
-| **CLAUDE_CODE_IS_COWORK** | 2.1.32 | **no** |
-| **CLAUDE_CODE_LEAN_PROMPT** | 2.1.120 | **no** |
+| **CLAUDE_CODE_INVESTIGATE_FIRST** | 2.1.122 | **no** |
+| **CLAUDE_CODE_LOOP_KEEPALIVE** | 2.1.157 | **no** |
+| **CLAUDE_CODE_LOOP_PERSISTENT** | 2.1.129 | **no** |
 | CLAUDE_CODE_MAX_CONTEXT_TOKENS | 2.1.98 | yes |
 | CLAUDE_CODE_MAX_OUTPUT_TOKENS | 1.0.10 | yes |
 | CLAUDE_CODE_MAX_RETRIES | 1.0.44 | yes |
 | CLAUDE_CODE_MAX_TOOL_USE_CONCURRENCY | 2.0.32 | yes |
-| **CLAUDE_CODE_MCP_ALLOWLIST_ENV** | 2.1.94 | **no** |
+| CLAUDE_CODE_MAX_TURNS | 2.1.139 | yes |
+| CLAUDE_CODE_MCP_ALLOWLIST_ENV | 2.1.94 | yes |
+| CLAUDE_CODE_NATIVE_CURSOR | 2.1.136 | yes |
 | CLAUDE_CODE_NEW_INIT | 2.1.77 | yes |
-| CLAUDE_CODE_NO_FLICKER | 2.1.89 | yes |
 | **CLAUDE_CODE_OAUTH_CLIENT_ID** | 2.1.2 | **no** |
 | CLAUDE_CODE_OAUTH_REFRESH_TOKEN | 2.1.59 | yes |
 | CLAUDE_CODE_OAUTH_SCOPES | 2.1.59 | yes |
@@ -388,20 +410,22 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | CLAUDE_CODE_OTEL_FLUSH_TIMEOUT_MS | 2.0.10 | yes |
 | CLAUDE_CODE_OTEL_HEADERS_HELPER_DEBOUNCE_MS | 2.0.73 | yes |
 | CLAUDE_CODE_OTEL_SHUTDOWN_TIMEOUT_MS | 0.2.126 | yes |
+| CLAUDE_CODE_PACKAGE_MANAGER_AUTO_UPDATE | 2.1.129 | yes |
 | **CLAUDE_CODE_PERFETTO_TRACE** | 2.1.10 | **no** |
 | CLAUDE_CODE_PERFORCE_MODE | 2.1.98 | yes |
-| **CLAUDE_CODE_PLAN_MODE_INTERVIEW_PHASE** | 2.1.16 | **no** |
-| **CLAUDE_CODE_PLAN_MODE_REQUIRED** | 2.0.70 | **no** |
 | **CLAUDE_CODE_PLAN_V2_AGENT_COUNT** | 2.0.41 | **no** |
 | **CLAUDE_CODE_PLAN_V2_EXPLORE_AGENT_COUNT** | 2.0.45 | **no** |
 | CLAUDE_CODE_PLUGIN_CACHE_DIR | 2.1.42 | yes |
 | CLAUDE_CODE_PLUGIN_GIT_TIMEOUT_MS | 2.1.51 | yes |
 | CLAUDE_CODE_PLUGIN_KEEP_MARKETPLACE_ON_FAILURE | 2.1.90 | yes |
+| CLAUDE_CODE_PLUGIN_PREFER_HTTPS | 2.1.141 | yes |
 | CLAUDE_CODE_PLUGIN_SEED_DIR | 2.1.63 | yes |
 | **CLAUDE_CODE_PLUGIN_USE_ZIP_CACHE** | 2.1.59 | **no** |
-| **CLAUDE_CODE_POST_FOR_SESSION_INGRESS_V2** | 2.1.27 | **no** |
+| CLAUDE_CODE_POWERSHELL_RESPECT_EXECUTION_POLICY | 2.1.143 | yes |
+| **CLAUDE_CODE_PROACTIVE** | 2.1.128 | **no** |
 | **CLAUDE_CODE_PROFILE_STARTUP** | 2.0.31 | **no** |
-| **CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST** | 2.1.83 | **no** |
+| CLAUDE_CODE_PROPAGATE_TRACEPARENT | 2.1.152 | yes |
+| CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST | 2.1.83 | yes |
 | **CLAUDE_CODE_PROXY_AUTH_HELPER_TTL_MS** | 2.1.111 | **no** |
 | CLAUDE_CODE_PROXY_RESOLVES_HOSTS | 2.0.55 | yes |
 | **CLAUDE_CODE_PWSH_PARSE_TIMEOUT_MS** | 2.1.85 | **no** |
@@ -416,24 +440,28 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **CLAUDE_CODE_REPO_CHECKOUTS** | 2.1.105 | **no** |
 | **CLAUDE_CODE_RESUME_FROM_SESSION** | 2.1.105 | **no** |
 | CLAUDE_CODE_RESUME_INTERRUPTED_TURN | 2.1.42 | yes |
+| CLAUDE_CODE_RESUME_PROMPT | 2.1.140 | yes |
 | **CLAUDE_CODE_RESUME_THRESHOLD_MINUTES** | 2.1.89 | **no** |
 | **CLAUDE_CODE_RESUME_TOKEN_THRESHOLD** | 2.1.89 | **no** |
 | **CLAUDE_CODE_RETRY_WATCHDOG** | 2.1.116 | **no** |
+| CLAUDE_CODE_SAFE_MODE | 2.1.169 | yes |
 | **CLAUDE_CODE_SANDBOXED** | 2.1.94 | **no** |
 | CLAUDE_CODE_SCRIPT_CAPS | 2.1.98 | yes |
 | CLAUDE_CODE_SCROLL_SPEED | 2.1.89 | yes |
+| **CLAUDE_CODE_SDK_HAS_HOST_AUTH_REFRESH** | 2.1.145 | **no** |
 | **CLAUDE_CODE_SDK_HAS_OAUTH_REFRESH** | 2.1.101 | **no** |
+| CLAUDE_CODE_SESSIONEND_HOOKS_TIMEOUT_MS | 2.1.74 | yes |
 | **CLAUDE_CODE_SESSION_ACCESS_TOKEN** | 1.0.77 | **no** |
+| CLAUDE_CODE_SESSION_ID | 2.0.24 | yes |
 | **CLAUDE_CODE_SESSION_KIND** | 2.1.119 | **no** |
 | **CLAUDE_CODE_SESSION_LOG** | 2.1.119 | **no** |
 | **CLAUDE_CODE_SESSION_NAME** | 2.1.119 | **no** |
-| CLAUDE_CODE_SESSIONEND_HOOKS_TIMEOUT_MS | 2.1.74 | yes |
 | CLAUDE_CODE_SHELL | 2.0.65 | yes |
 | CLAUDE_CODE_SHELL_PREFIX | 1.0.60 | yes |
 | CLAUDE_CODE_SIMPLE | 2.1.48 | yes |
 | CLAUDE_CODE_SIMPLE_SYSTEM_PROMPT | 2.1.116 | yes |
 | **CLAUDE_CODE_SIMULATE_PROXY_USAGE** | 2.1.92 | **no** |
-| **CLAUDE_CODE_SKIP_ANTHROPIC_AWS_AUTH** | 2.1.90 | **no** |
+| CLAUDE_CODE_SKIP_ANTHROPIC_AWS_AUTH | 2.1.90 | yes |
 | CLAUDE_CODE_SKIP_BEDROCK_AUTH | 0.2.125 | yes |
 | **CLAUDE_CODE_SKIP_FAST_MODE_NETWORK_ERRORS** | 2.1.76 | **no** |
 | **CLAUDE_CODE_SKIP_FAST_MODE_ORG_CHECK** | 2.1.92 | **no** |
@@ -442,18 +470,25 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | CLAUDE_CODE_SKIP_PROMPT_HISTORY | 2.0.70 | yes |
 | CLAUDE_CODE_SKIP_VERTEX_AUTH | 0.2.104 | yes |
 | **CLAUDE_CODE_SLOW_OPERATION_THRESHOLD_MS** | 2.1.38 | **no** |
+| **CLAUDE_CODE_SPAWN_TIMESTAMP_MS** | 2.1.152 | **no** |
 | **CLAUDE_CODE_SSE_PORT** | 0.2.106 | **no** |
 | **CLAUDE_CODE_STALL_TIMEOUT_MS_FOR_TESTING** | 2.1.69 | **no** |
+| CLAUDE_CODE_STOP_HOOK_BLOCK_CAP | 2.1.143 | yes |
 | CLAUDE_CODE_SUBAGENT_MODEL | 1.0.57 | yes |
 | CLAUDE_CODE_SUBPROCESS_ENV_SCRUB | 2.1.79 | yes |
 | **CLAUDE_CODE_SUBSCRIPTION_TYPE** | 2.1.117 | **no** |
-| CLAUDE_CODE_SYNC_PLUGIN_INSTALL | 2.1.40 | yes |
+| **CLAUDE_CODE_SUPERVISED** | 2.1.139 | **no** |
+| **CLAUDE_CODE_SYNC_PLUGINS** | 2.1.157 | **no** |
+| **CLAUDE_CODE_SYNC_PLUGINS_INSTALL_TIMEOUT_MS** | 2.1.157 | **no** |
+| **CLAUDE_CODE_SYNC_PLUGINS_MCP_TIMEOUT_MS** | 2.1.157 | **no** |
 | CLAUDE_CODE_SYNC_PLUGIN_INSTALL_TIMEOUT_MS | 2.1.41 | yes |
+| CLAUDE_CODE_SYNC_SKILLS | 2.1.149 | yes |
 | CLAUDE_CODE_SYNTAX_HIGHLIGHT | 2.0.31 | yes |
 | **CLAUDE_CODE_SYSTEM_PROMPT_GB_FEATURE** | 2.1.111 | **no** |
 | **CLAUDE_CODE_TAGS** | 2.0.28 | **no** |
 | CLAUDE_CODE_TASK_LIST_ID | 2.1.2 | yes |
 | **CLAUDE_CODE_TEAM_ONBOARDING** | 2.1.94 | **no** |
+| **CLAUDE_CODE_TEE_SDK_STDOUT** | 2.1.139 | **no** |
 | **CLAUDE_CODE_TEST_FIXTURES_ROOT** | 1.0.109 | **no** |
 | CLAUDE_CODE_TMPDIR | 2.1.5 | yes |
 | **CLAUDE_CODE_TMUX_PREFIX** | 2.1.8 | **no** |
@@ -462,49 +497,59 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | CLAUDE_CODE_TMUX_TRUECOLOR | 2.1.83 | yes |
 | **CLAUDE_CODE_TUI_JUST_SWITCHED** | 2.1.110 | **no** |
 | **CLAUDE_CODE_ULTRAREVIEW_PREFLIGHT_FIXTURE** | 2.1.105 | **no** |
-| **CLAUDE_CODE_USE_ANTHROPIC_AWS** | 2.1.90 | **no** |
+| CLAUDE_CODE_USER_EMAIL | 2.1.51 | yes |
+| CLAUDE_CODE_USE_ANTHROPIC_AWS | 2.1.90 | yes |
 | CLAUDE_CODE_USE_BEDROCK | 0.2.33 | yes |
-| **CLAUDE_CODE_USE_CCR_V2** | 2.1.47 | **no** |
 | **CLAUDE_CODE_USE_COWORK_PLUGINS** | 2.1.15 | **no** |
 | CLAUDE_CODE_USE_FOUNDRY | 2.0.45 | yes |
 | CLAUDE_CODE_USE_MANTLE | 2.1.94 | yes |
 | CLAUDE_CODE_USE_POWERSHELL_TOOL | 2.1.81 | yes |
 | CLAUDE_CODE_USE_VERTEX | 0.2.33 | yes |
-| CLAUDE_CODE_USER_EMAIL | 2.1.51 | yes |
 | **CLAUDE_CODE_VERIFY_PROMPT** | 2.1.119 | **no** |
+| **CLAUDE_CODE_VOICE_FORWARD_INTERIMS_TYPED** | 2.1.141 | **no** |
 | **CLAUDE_CODE_WEBSOCKET_AUTH_FILE_DESCRIPTOR** | 1.0.78 | **no** |
 | **CLAUDE_CODE_WORKER_EPOCH** | 2.1.51 | **no** |
+| **CLAUDE_CODE_WORKFLOWS** | 2.1.146 | **no** |
 | **CLAUDE_CODE_WORKSPACE_HOST_PATHS** | 2.1.76 | **no** |
 | CLAUDE_CONFIG_DIR | 0.2.33 | yes |
 | **CLAUDE_COWORK_MEMORY_EXTRA_GUIDELINES** | 2.1.77 | **no** |
 | **CLAUDE_COWORK_MEMORY_GUIDELINES** | 2.1.120 | **no** |
+| **CLAUDE_COWORK_MEMORY_INDEX_CONTENT** | 2.1.122 | **no** |
 | **CLAUDE_COWORK_MEMORY_PATH_OVERRIDE** | 2.1.64 | **no** |
-| **CLAUDE_DEBUG** | 1.0.91 | **no** |
 | CLAUDE_ENABLE_BYTE_WATCHDOG | 2.1.105 | yes |
-| CLAUDE_ENABLE_STREAM_WATCHDOG | 2.1.40 | yes |
+| CLAUDE_ENABLE_BYTE_WATCHDOG_BEDROCK | 2.1.143 | yes |
 | CLAUDE_ENV_FILE | 2.0.52 | yes |
 | **CLAUDE_FORCE_DISPLAY_SURVEY** | 1.0.64 | **no** |
-| **CLAUDE_JOB_DIR** | 2.1.119 | **no** |
+| **CLAUDE_IMPORT_CONVERSATIONS** | 2.1.152 | **no** |
+| CLAUDE_JOB_DIR | 2.1.119 | yes |
 | **CLAUDE_LOCAL_OAUTH_API_BASE** | 2.1.85 | **no** |
 | **CLAUDE_LOCAL_OAUTH_APPS_BASE** | 2.1.85 | **no** |
 | **CLAUDE_LOCAL_OAUTH_CONSOLE_BASE** | 2.1.86 | **no** |
+| CLAUDE_MEMORY_STORES | 2.1.143 | yes |
+| **CLAUDE_PROJECT_UUID** | 2.1.174 | **no** |
+| **CLAUDE_PTY_HEARTBEAT_MS** | 2.1.166 | **no** |
+| **CLAUDE_PTY_HOST_EXEC** | 2.1.144 | **no** |
+| **CLAUDE_PTY_ORPHAN_CHECK_MS** | 2.1.154 | **no** |
 | **CLAUDE_PTY_RECORD** | 2.1.119 | **no** |
 | CLAUDE_REMOTE_CONTROL_SESSION_NAME_PREFIX | 2.1.92 | yes |
 | **CLAUDE_REPL_VARIANT** | 2.1.108 | **no** |
+| **CLAUDE_SECURESTORAGE_CONFIG_DIR** | 2.1.144 | **no** |
 | **CLAUDE_SESSION_INGRESS_TOKEN_FILE** | 2.1.83 | **no** |
 | **CLAUDE_SLOW_FIRST_BYTE_MS** | 2.1.110 | **no** |
 | CLAUDE_STREAM_IDLE_TIMEOUT_MS | 2.1.84 | yes |
+| **CLAUDE_SUBAGENT_BG_SHELL_MAX_MS** | 2.1.133 | **no** |
 | **CLAUDE_TMPDIR** | 2.1.15 | **no** |
 | **CLAUDE_TRUSTED_DEVICE_TOKEN** | 2.1.86 | **no** |
 | **CLI_WIDTH** | 2.1.69 | **no** |
+| **CLOUDSDK_CONFIG** | 2.1.98 | **no** |
 | CLOUD_ML_REGION | 0.2.33 | yes |
 | **CLOUD_RUN_JOB** | 0.2.33 | **no** |
-| **CLOUDSDK_CONFIG** | 2.1.98 | **no** |
 | **CODER** | 2.1.110 | **no** |
 | **CODER_WORKSPACE_NAME** | 2.1.110 | **no** |
 | **CODESPACES** | 2.0.28 | **no** |
 | **COLORFGBG** | 2.1.84 | **no** |
 | **COLORTERM** | 2.0.66 | **no** |
+| **COMPUTER_USE_SWIFT_NODE_PATH** | 2.1.84 | **no** |
 | **COMSPEC** | 1.0.49 | **no** |
 | **COREPACK_ENABLE_AUTO_PIN** | 0.2.74 | **no** |
 | **CURSOR_TRACE_ID** | 0.2.33 | **no** |
@@ -519,27 +564,20 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **DEVPOD** | 2.1.110 | **no** |
 | **DEVPOD_WORKSPACE_UID** | 2.1.110 | **no** |
 | DISABLE_AUTO_COMPACT | 2.0.77 | yes |
-| DISABLE_AUTOUPDATER | 0.2.39 | yes |
-| DISABLE_BUG_COMMAND | 0.2.39 | yes |
-| DISABLE_COMPACT | 2.0.30 | yes |
-| DISABLE_COST_WARNINGS | 0.2.39 | yes |
-| DISABLE_DOCTOR_COMMAND | 1.0.58 | yes |
+| **DISABLE_BRIEF_MODE_STOP_HOOK** | 2.1.122 | **no** |
 | DISABLE_ERROR_REPORTING | 0.2.39 | yes |
-| DISABLE_EXTRA_USAGE_COMMAND | 2.0.36 | yes |
-| DISABLE_FEEDBACK_COMMAND | 1.0.102 | yes |
-| DISABLE_INSTALL_GITHUB_APP_COMMAND | 1.0.58 | yes |
+| DISABLE_GROWTHBOOK | 2.1.124 | yes |
 | DISABLE_INSTALLATION_CHECKS | 1.0.114 | yes |
 | DISABLE_INTERLEAVED_THINKING | 1.0.1 | yes |
-| DISABLE_LOGIN_COMMAND | 1.0.58 | yes |
-| DISABLE_LOGOUT_COMMAND | 1.0.58 | yes |
 | DISABLE_PROMPT_CACHING | 0.2.33 | yes |
+| DISABLE_PROMPT_CACHING_FABLE | 2.1.170 | yes |
 | DISABLE_PROMPT_CACHING_HAIKU | 1.0.113 | yes |
 | DISABLE_PROMPT_CACHING_OPUS | 1.0.113 | yes |
 | DISABLE_PROMPT_CACHING_SONNET | 1.0.113 | yes |
 | DISABLE_TELEMETRY | 0.2.39 | yes |
-| DISABLE_UPDATES | 2.1.118 | yes |
-| DISABLE_UPGRADE_COMMAND | 1.0.58 | yes |
-| **DO_NOT_TRACK** | 2.1.92 | **no** |
+| **DISPLAY** | 2.1.145 | **no** |
+| DO_NOT_TRACK | 2.1.92 | yes |
+| **DS_CHROMIUM_PATH** | 2.1.166 | **no** |
 | **DYNO** | 0.2.33 | **no** |
 | EDITOR | 0.2.54 | yes |
 | ENABLE_BETA_TRACING_DETAILED | 2.0.70 | yes |
@@ -554,7 +592,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **FLY_MACHINE_ID** | 2.0.15 | **no** |
 | FORCE_AUTOUPDATE_PLUGINS | 2.1.2 | yes |
 | **FORCE_CODE_TERMINAL** | 0.2.65 | **no** |
-| **FORCE_COLOR** | 2.1.105 | **no** |
+| FORCE_COLOR | 2.1.105 | yes |
 | FORCE_PROMPT_CACHING_5M | 2.1.108 | yes |
 | **FUNCTION_NAME** | 0.2.33 | **no** |
 | **FUNCTION_TARGET** | 0.2.33 | **no** |
@@ -563,11 +601,15 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **GCE_METADATA_HOST** | 0.2.33 | **no** |
 | **GCE_METADATA_IP** | 0.2.33 | **no** |
 | GCLOUD_PROJECT | 0.2.33 | yes |
+| **GH_ENTERPRISE_TOKEN** | 2.1.128 | **no** |
+| **GH_HOST** | 2.1.128 | **no** |
+| GH_TOKEN | 2.1.6 | yes |
+| **GITHUB_ACTIONS** | 0.2.65 | **no** |
 | **GITHUB_ACTION_INPUTS** | 1.0.85 | **no** |
 | **GITHUB_ACTION_PATH** | 1.0.87 | **no** |
-| **GITHUB_ACTIONS** | 0.2.65 | **no** |
 | **GITHUB_ACTOR** | 0.2.109 | **no** |
 | **GITHUB_ACTOR_ID** | 0.2.109 | **no** |
+| **GITHUB_ENTERPRISE_TOKEN** | 2.1.128 | **no** |
 | **GITHUB_ENV** | 2.1.98 | **no** |
 | **GITHUB_EVENT_NAME** | 0.2.109 | **no** |
 | **GITHUB_EVENT_PATH** | 2.1.98 | **no** |
@@ -594,23 +636,24 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **GRPC_TRACE** | 0.2.76 | **no** |
 | **GRPC_VERBOSITY** | 0.2.76 | **no** |
 | HOME | 0.2.33 | yes |
-| HTTP_PROXY | 0.2.33 | yes |
 | HTTPS_PROXY | 0.2.33 | yes |
-| **INVOCATION_ID** | 2.1.119 | **no** |
+| HTTP_PROXY | 0.2.33 | yes |
+| **INTELLIJ_TERMINAL_COMMAND_BLOCKS** | 2.1.132 | **no** |
+| **INTELLIJ_TERMINAL_COMMAND_BLOCKS_REWORKED** | 2.1.132 | **no** |
 | IS_DEMO | 0.2.39 | yes |
 | **IS_SANDBOX** | 1.0.44 | **no** |
 | **ITERM_SESSION_ID** | 2.0.70 | **no** |
-| **K_CONFIGURATION** | 0.2.33 | **no** |
-| **K_SERVICE** | 0.2.33 | **no** |
 | **KITTY_WINDOW_ID** | 0.2.33 | **no** |
 | **KONSOLE_VERSION** | 0.2.33 | **no** |
 | **KUBERNETES_SERVICE_HOST** | 2.0.28 | **no** |
+| **K_CONFIGURATION** | 0.2.33 | **no** |
+| K_SERVICE | 0.2.33 | yes |
 | LANG | 2.1.81 | yes |
 | **LC_ALL** | 2.1.81 | **no** |
 | **LC_TERMINAL** | 2.1.26 | **no** |
 | **LC_TIME** | 2.1.81 | **no** |
+| **LOCALAPPDATA** | 0.2.90 | **no** |
 | **LOCAL_BRIDGE** | 2.1.26 | **no** |
-| LOCALAPPDATA | 0.2.90 | yes |
 | MAX_MCP_OUTPUT_TOKENS | 1.0.28 | yes |
 | MAX_STRUCTURED_OUTPUT_RETRIES | 2.0.43 | yes |
 | MAX_THINKING_TOKENS | 0.2.47 | yes |
@@ -620,17 +663,13 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **MCP_OAUTH_CLIENT_METADATA_URL** | 2.1.81 | **no** |
 | MCP_REMOTE_SERVER_CONNECTION_BATCH_SIZE | 2.0.77 | yes |
 | MCP_SERVER_CONNECTION_BATCH_SIZE | 1.0.53 | yes |
-| MCP_TIMEOUT | 0.2.42 | yes |
 | MCP_TOOL_TIMEOUT | 0.2.55 | yes |
 | **MCP_TRUNCATION_PROMPT_OVERRIDE** | 2.1.89 | **no** |
 | **MCP_XAA_IDP_CLIENT_SECRET** | 2.1.83 | **no** |
 | **METADATA_SERVER_DETECTION** | 0.2.33 | **no** |
-| **MODIFIERS_NODE_PATH** | 2.0.77 | **no** |
 | **MSYSTEM** | 0.2.33 | **no** |
 | N | 1.0.109 | yes |
 | **NETLIFY** | 0.2.33 | **no** |
-| NO_COLOR | 2.1.105 | yes |
-| NO_PROXY | 0.2.33 | yes |
 | **NODE_CLUSTER_SCHED_POLICY** | 2.1.113 | **no** |
 | **NODE_DEBUG** | 0.2.33 | **no** |
 | NODE_ENV | 0.2.109 | yes |
@@ -639,6 +678,8 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | NODE_TLS_REJECT_UNAUTHORIZED | 2.1.113 | yes |
 | **NODE_UNIQUE_ID** | 2.1.113 | **no** |
 | **NODE_USE_SYSTEM_CA** | 2.1.113 | **no** |
+| NO_COLOR | 2.1.105 | yes |
+| NO_PROXY | 0.2.33 | yes |
 | **OSTYPE** | 0.2.76 | **no** |
 | OTEL_EXPORTER_OTLP_ENDPOINT | 0.2.76 | yes |
 | OTEL_EXPORTER_OTLP_HEADERS | 0.2.76 | yes |
@@ -650,16 +691,16 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | OTEL_EXPORTER_OTLP_TRACES_PROTOCOL | 2.0.18 | yes |
 | **OTEL_EXPORTER_PROMETHEUS_HOST** | 0.2.76 | **no** |
 | **OTEL_EXPORTER_PROMETHEUS_PORT** | 0.2.76 | **no** |
+| OTEL_LOGS_EXPORTER | 1.0.7 | yes |
+| OTEL_LOGS_EXPORT_INTERVAL | 1.0.7 | yes |
 | OTEL_LOG_RAW_API_BODIES | 2.1.111 | yes |
 | OTEL_LOG_TOOL_CONTENT | 2.0.18 | yes |
 | OTEL_LOG_TOOL_DETAILS | 2.1.20 | yes |
 | OTEL_LOG_USER_PROMPTS | 1.0.7 | yes |
-| OTEL_LOGS_EXPORT_INTERVAL | 1.0.7 | yes |
-| OTEL_LOGS_EXPORTER | 1.0.7 | yes |
-| OTEL_METRIC_EXPORT_INTERVAL | 0.2.76 | yes |
 | OTEL_METRICS_EXPORTER | 0.2.76 | yes |
-| OTEL_TRACES_EXPORT_INTERVAL | 2.0.18 | yes |
+| OTEL_METRIC_EXPORT_INTERVAL | 0.2.76 | yes |
 | OTEL_TRACES_EXPORTER | 2.0.18 | yes |
+| OTEL_TRACES_EXPORT_INTERVAL | 2.0.18 | yes |
 | P | 2.0.45 | yes |
 | **P4PORT** | 2.1.59 | **no** |
 | PATH | 0.2.33 | yes |
@@ -667,7 +708,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **PKG_CONFIG_PATH** | 0.2.33 | **no** |
 | PREFIX | 2.1.116 | yes |
 | **PROJECT_DOMAIN** | 2.0.28 | **no** |
-| **PWD** | 1.0.4 | **no** |
+| PWD | 1.0.4 | yes |
 | **RAILWAY_ENVIRONMENT_NAME** | 2.0.15 | **no** |
 | **RAILWAY_SERVICE_NAME** | 2.0.15 | **no** |
 | **RENDER** | 2.0.15 | **no** |
@@ -677,15 +718,17 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **RUNNER_OS** | 0.2.109 | **no** |
 | S | 2.0.45 | yes |
 | **SAFEUSER** | 2.1.51 | **no** |
+| **SCREENSHOT_DIR** | 2.1.145 | **no** |
 | **SDK_NATIVE_BIN** | 2.1.119 | **no** |
-| **SESSION_INGRESS_URL** | 1.0.98 | **no** |
 | **SESSIONNAME** | 0.2.33 | **no** |
+| **SESSION_INGRESS_URL** | 1.0.98 | **no** |
 | **SHARP_FORCE_GLOBAL_LIBVIPS** | 0.2.33 | **no** |
 | **SHARP_IGNORE_GLOBAL_LIBVIPS** | 0.2.33 | **no** |
 | SHELL | 0.2.33 | yes |
 | SLASH_COMMAND_TOOL_CHAR_BUDGET | 1.0.122 | yes |
 | **SPACE_CREATOR_USER_ID** | 2.0.28 | **no** |
 | **SRT_DEBUG** | 2.0.49 | **no** |
+| **SRT_WIN_PATH** | 2.1.169 | **no** |
 | **SSH_CLIENT** | 0.2.33 | **no** |
 | **SSH_CONNECTION** | 0.2.33 | **no** |
 | **SSH_TTY** | 0.2.33 | **no** |
@@ -694,17 +737,16 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **SWE_BENCH_INSTANCE_ID** | 1.0.70 | **no** |
 | **SWE_BENCH_RUN_ID** | 1.0.70 | **no** |
 | **SWE_BENCH_TASK_ID** | 1.0.70 | **no** |
-| **SYSTEM_OIDCREQUESTURI** | 2.1.38 | **no** |
 | **SYSTEMROOT** | 0.2.33 | **no** |
+| **SYSTEM_OIDCREQUESTURI** | 2.1.38 | **no** |
 | TASK_MAX_OUTPUT_LENGTH | 2.0.77 | yes |
-| **TEAM_MEMORY_SYNC_URL** | 2.1.71 | **no** |
 | TERM | 0.2.33 | yes |
-| **TERM_PROGRAM** | 0.2.33 | **no** |
-| **TERM_PROGRAM_VERSION** | 1.0.114 | **no** |
 | TERMINAL | 2.1.83 | yes |
 | **TERMINAL_EMULATOR** | 0.2.108 | **no** |
 | **TERMINATOR_UUID** | 0.2.33 | **no** |
 | **TERMUX_VERSION** | 2.1.116 | **no** |
+| **TERM_PROGRAM** | 0.2.33 | **no** |
+| **TERM_PROGRAM_VERSION** | 1.0.114 | **no** |
 | **TEST_ENABLE_SESSION_PERSISTENCE** | 1.0.106 | **no** |
 | **TEST_GRACEFUL_FS_GLOBAL_PATCH** | 0.2.104 | **no** |
 | **TILIX_ID** | 0.2.33 | **no** |
@@ -712,31 +754,33 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **TMUX_PANE** | 2.1.8 | **no** |
 | TRACEPARENT | 2.1.110 | yes |
 | TRACESTATE | 2.1.110 | yes |
+| USER | 1.0.124 | yes |
+| **USERNAME** | 2.0.71 | **no** |
+| USERPROFILE | 0.2.36 | yes |
 | **USE_API_CONTEXT_MANAGEMENT** | 1.0.71 | **no** |
 | USE_BUILTIN_RIPGREP | 0.2.33 | yes |
 | **USE_LOCAL_OAUTH** | 1.0.26 | **no** |
 | **USE_STAGING_OAUTH** | 2.1.38 | **no** |
-| USER | 1.0.124 | yes |
-| **USERNAME** | 2.0.71 | **no** |
-| USERPROFILE | 0.2.36 | yes |
 | **UV_THREADPOOL_SIZE** | 1.0.93 | **no** |
 | V | 1.0.71 | yes |
-| **VCR_RECORD** | 2.1.69 | **no** |
 | **VERBOSE_SSR** | 2.1.113 | **no** |
 | **VERCEL** | 0.2.33 | **no** |
 | VISUAL | 0.2.54 | yes |
 | **VOICE_STREAM_BASE_URL** | 2.1.59 | **no** |
 | **VSCODE_GIT_ASKPASS_MAIN** | 0.2.104 | **no** |
 | **VTE_VERSION** | 0.2.33 | **no** |
+| **WAYLAND_DISPLAY** | 2.1.161 | **no** |
 | **WEBSITE_SITE_NAME** | 0.2.33 | **no** |
 | **WEBSITE_SKU** | 2.0.15 | **no** |
 | **WSL_DISTRO_NAME** | 0.2.33 | **no** |
+| **WSL_INTEROP** | 2.1.157 | **no** |
 | **WT_SESSION** | 0.2.33 | **no** |
 | **XDG_CONFIG_HOME** | 1.0.3 | **no** |
 | **XDG_RUNTIME_DIR** | 2.0.30 | **no** |
 | **XTERM_VERSION** | 0.2.33 | **no** |
 | **ZED_TERM** | 2.1.26 | **no** |
 | **ZELLIJ** | 2.1.97 | **no** |
+| **__CFB** | 0.2.33 | **no** |
 
 </details>
 
@@ -745,15 +789,38 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
-| 2.1.169 | — | +cd | — |
-| 2.1.163 | — | +cowork-plugin | — |
-| 2.1.160 | — | +design-sync | — |
-| 2.1.152 | +MessageDisplay | +reload-skills, +simplify | — |
-| 2.1.149 | — | +wellbeing | — |
-| 2.1.146 | — | +workflows | — |
-| 2.1.144 | — | +usage-credits | — |
-| 2.1.139 | — | +scroll-speed | — |
-| 2.1.132 | — | +goal, +radio | — |
+| 2.1.174 | — | — | +1 |
+| 2.1.172 | — | — | -1 |
+| 2.1.170 | — | — | +5 |
+| 2.1.169 | — | +cd | +7, -4 |
+| 2.1.166 | — | — | +3, -2 |
+| 2.1.163 | — | +cowork-plugin | -1 |
+| 2.1.162 | — | — | -16 |
+| 2.1.161 | — | — | +1 |
+| 2.1.160 | — | +design-sync | +1, -23 |
+| 2.1.159 | — | — | +1 |
+| 2.1.158 | — | — | +1 |
+| 2.1.157 | — | — | +6 |
+| 2.1.154 | — | — | +3, -1 |
+| 2.1.152 | +MessageDisplay | +reload-skills, +simplify | +5 |
+| 2.1.149 | — | +wellbeing | +2 |
+| 2.1.147 | — | — | +2 |
+| 2.1.146 | — | +workflows | +2 |
+| 2.1.145 | — | — | +7, -1 |
+| 2.1.144 | — | +usage-credits | +4 |
+| 2.1.143 | — | — | +5 |
+| 2.1.142 | — | — | +1, -2 |
+| 2.1.141 | — | — | +3 |
+| 2.1.140 | — | — | +2, -1 |
+| 2.1.139 | — | +scroll-speed | +4, -1 |
+| 2.1.136 | — | — | +5 |
+| 2.1.133 | — | — | +2 |
+| 2.1.132 | — | +goal, +radio | +4 |
+| 2.1.129 | — | — | +6 |
+| 2.1.128 | — | — | +7 |
+| 2.1.124 | — | — | +4 |
+| 2.1.122 | — | — | +4, -1 |
+| 2.1.121 | — | — | +2, -2 |
 | 2.1.120 | — | — | +5 |
 | 2.1.119 | — | +autocompact, +background, +bg, +daemon, +stop | +17, -1 |
 | 2.1.118 | +PostToolBatch | +pro-trial-expired | +3 |
