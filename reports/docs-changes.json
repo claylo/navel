@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-06-12T05:34:52Z",
+      "version_at_time": "2.1.175",
+      "files_changed": [
+        "jetbrains.md",
+        "vs-code.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-12T00:35:30Z",
       "version_at_time": "2.1.174",
       "files_changed": [
@@ -2637,19 +2651,6 @@
       ],
       "files_removed": [
         "desktop-changelog.md"
-      ]
-    },
-    {
-      "date": "2026-05-26T02:54:49Z",
-      "version_at_time": "2.1.150",
-      "files_changed": [
-        "github-enterprise-server.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
       ]
     }
   ]
