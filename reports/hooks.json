@@ -412,6 +412,7 @@
         "hooks-guide.md",
         "hooks.md",
         "interactive-mode.md",
+        "keybindings.md",
         "large-codebases.md",
         "plugins-reference.md",
         "scheduled-tasks.md",
@@ -423,7 +424,7 @@
         "ultrareview.md",
         "workflows.md"
       ],
-      "mentions": 147
+      "mentions": 149
     },
     "StopFailure": {
       "documented": true,
