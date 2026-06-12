@@ -1620,7 +1620,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 177
+      "mentions": 178
     },
     "plan": {
       "documented": true,
@@ -2268,5 +2268,5 @@
       "mentions": 40
     }
   },
-  "docs_checked_at": "2026-06-11"
+  "docs_checked_at": "2026-06-12"
 }
