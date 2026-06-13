@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-06-13T21:29:25Z",
+      "version_at_time": "2.1.177",
+      "files_changed": [
+        "model-config.md",
+        "settings.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-13T16:30:37Z",
       "version_at_time": "2.1.177",
       "files_changed": [
@@ -2589,19 +2603,6 @@
       "version_at_time": "2.1.154",
       "files_changed": [
         "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-28T18:51:35Z",
-      "version_at_time": "2.1.154",
-      "files_changed": [
-        "agents.md"
       ],
       "files_added": [
         ""
