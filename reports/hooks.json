@@ -238,13 +238,12 @@
     "PermissionDenied": {
       "documented": true,
       "doc_files": [
-        "auto-mode-config.md",
         "changelog.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 22
+      "mentions": 21
     },
     "PermissionRequest": {
       "documented": true,
@@ -539,5 +538,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-06-12"
+  "docs_checked_at": "2026-06-13"
 }
