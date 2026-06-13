@@ -768,7 +768,7 @@
         "cli-reference.md",
         "commands.md"
       ],
-      "mentions": 16
+      "mentions": 17
     },
     "branch": {
       "documented": true,
@@ -820,7 +820,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 26
+      "mentions": 27
     },
     "chrome": {
       "documented": true,
@@ -986,7 +986,7 @@
         "commands.md",
         "terminal-config.md"
       ],
-      "mentions": 10
+      "mentions": 11
     },
     "cowork-plugin": {
       "documented": false,
@@ -996,9 +996,10 @@
     "daemon": {
       "documented": true,
       "doc_files": [
-        "agent-view.md"
+        "agent-view.md",
+        "changelog.md"
       ],
-      "mentions": 2
+      "mentions": 3
     },
     "design-sync": {
       "documented": false,
@@ -1142,7 +1143,7 @@
         "monitoring-usage.md",
         "settings.md"
       ],
-      "mentions": 28
+      "mentions": 29
     },
     "feedback": {
       "documented": true,
@@ -1529,7 +1530,7 @@
         "remote-control.md",
         "web-quickstart.md"
       ],
-      "mentions": 5
+      "mentions": 6
     },
     "model": {
       "documented": true,
@@ -2271,5 +2272,5 @@
       "mentions": 40
     }
   },
-  "docs_checked_at": "2026-06-12"
+  "docs_checked_at": "2026-06-13"
 }
