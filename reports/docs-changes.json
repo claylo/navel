@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-06-13T03:05:36Z",
+      "version_at_time": "2.1.177",
+      "files_changed": [
+        "jetbrains.md",
+        "overview.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-13T01:44:42Z",
       "version_at_time": "2.1.177",
       "files_changed": [
@@ -2618,36 +2632,6 @@
       "files_changed": [
         "changelog.md",
         "env-vars.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-27T19:03:31Z",
-      "version_at_time": "2.1.152",
-      "files_changed": [
-        "agent-view.md",
-        "cli-reference.md",
-        "code-review.md",
-        "commands.md",
-        "env-vars.md",
-        "errors.md",
-        "headless.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "interactive-mode.md",
-        "keybindings.md",
-        "monitoring-usage.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md",
-        "ultrareview.md"
       ],
       "files_added": [
         ""
