@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-13T01:44:42Z",
+      "version_at_time": "2.1.177",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-12T22:32:49Z",
       "version_at_time": "2.1.176",
       "files_changed": [
@@ -2635,19 +2648,6 @@
         "skills.md",
         "slash-commands.md",
         "ultrareview.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-27T15:52:08Z",
-      "version_at_time": "2.1.152",
-      "files_changed": [
-        "interactive-mode.md"
       ],
       "files_added": [
         ""
