@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-13T07:16:43Z",
+      "version_at_time": "2.1.177",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        "auto-mode-config.md"
+      ]
+    },
+    {
       "date": "2026-06-13T05:30:57Z",
       "version_at_time": "2.1.177",
       "files_changed": [
@@ -2609,28 +2622,6 @@
       "version_at_time": "2.1.153",
       "files_changed": [
         "setup.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-28T07:15:58Z",
-      "version_at_time": "2.1.153",
-      "files_changed": [
-        "agent-view.md",
-        "commands.md",
-        "keybindings.md",
-        "model-config.md",
-        "monitoring-usage.md",
-        "settings.md",
-        "setup.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md"
       ],
       "files_added": [
         ""
