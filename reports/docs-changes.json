@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-13T09:03:31Z",
+      "version_at_time": "2.1.177",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        "auto-mode-config.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-13T07:16:43Z",
       "version_at_time": "2.1.177",
       "files_changed": [
@@ -2612,19 +2625,6 @@
       ],
       "files_added": [
         "workflows.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-28T09:11:09Z",
-      "version_at_time": "2.1.153",
-      "files_changed": [
-        "setup.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
