@@ -1227,6 +1227,7 @@
       "doc_files": [
         "agent-teams.md",
         "agent-view.md",
+        "auto-mode-config.md",
         "best-practices.md",
         "changelog.md",
         "chrome.md",
@@ -1269,7 +1270,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 313
+      "mentions": 314
     },
     "ide": {
       "documented": true,
@@ -1482,6 +1483,7 @@
       "documented": true,
       "doc_files": [
         "admin-setup.md",
+        "auto-mode-config.md",
         "best-practices.md",
         "champion-kit.md",
         "changelog.md",
@@ -1518,7 +1520,7 @@
         "third-party-integrations.md",
         "web-quickstart.md"
       ],
-      "mentions": 121
+      "mentions": 122
     },
     "mobile": {
       "documented": true,
@@ -1582,6 +1584,7 @@
         "agent-teams.md",
         "agent-view.md",
         "analytics.md",
+        "auto-mode-config.md",
         "best-practices.md",
         "champion-kit.md",
         "changelog.md",
@@ -1620,7 +1623,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 174
+      "mentions": 178
     },
     "plan": {
       "documented": true,
