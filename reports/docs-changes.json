@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-14T19:33:25Z",
+      "version_at_time": "2.1.177",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-14T18:28:31Z",
       "version_at_time": "2.1.177",
       "files_changed": [
@@ -2572,37 +2585,6 @@
       "version_at_time": "2.1.156",
       "files_changed": [
         "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-28T23:31:14Z",
-      "version_at_time": "2.1.156",
-      "files_changed": [
-        "agent-view.md",
-        "chrome.md",
-        "cli-reference.md",
-        "code-review.md",
-        "commands.md",
-        "discover-plugins.md",
-        "env-vars.md",
-        "errors.md",
-        "fast-mode.md",
-        "hooks.md",
-        "interactive-mode.md",
-        "mcp.md",
-        "permission-modes.md",
-        "plugin-dependencies.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "settings.md",
-        "voice-dictation.md",
-        "vs-code.md"
       ],
       "files_added": [
         ""
