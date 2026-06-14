@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-14T18:28:31Z",
+      "version_at_time": "2.1.177",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-13T21:29:25Z",
       "version_at_time": "2.1.177",
       "files_changed": [
@@ -2590,19 +2603,6 @@
         "settings.md",
         "voice-dictation.md",
         "vs-code.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-28T19:50:41Z",
-      "version_at_time": "2.1.154",
-      "files_changed": [
-        "changelog.md"
       ],
       "files_added": [
         ""
