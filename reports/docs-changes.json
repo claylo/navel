@@ -1,6 +1,22 @@
 {
   "changes": [
     {
+      "date": "2026-06-15T23:35:04Z",
+      "version_at_time": "2.1.178",
+      "files_changed": [
+        "agent-view.md",
+        "remote-control.md",
+        "settings.md"
+      ],
+      "files_added": [
+        "2026-w23.md",
+        "2026-w24.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-15T22:48:25Z",
       "version_at_time": "2.1.178",
       "files_changed": [
@@ -2579,19 +2595,6 @@
         "slash-commands.md",
         "statusline.md",
         "tools-reference.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-29T20:48:08Z",
-      "version_at_time": "2.1.157",
-      "files_changed": [
-        "changelog.md"
       ],
       "files_added": [
         ""
