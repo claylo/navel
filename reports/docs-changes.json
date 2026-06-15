@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "date": "2026-06-15T22:00:58Z",
+      "version_at_time": "2.1.178",
+      "files_changed": [
+        "authentication.md",
+        "features-overview.md",
+        "headless.md",
+        "legal-and-compliance.md",
+        "overview.md",
+        "quickstart.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-14T19:33:25Z",
       "version_at_time": "2.1.177",
       "files_changed": [
@@ -2572,19 +2590,6 @@
       "files_changed": [
         "mcp.md",
         "plugin-marketplaces.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-29T03:05:15Z",
-      "version_at_time": "2.1.156",
-      "files_changed": [
-        "changelog.md"
       ],
       "files_added": [
         ""
