@@ -414,6 +414,7 @@
         "interactive-mode.md",
         "keybindings.md",
         "large-codebases.md",
+        "permissions.md",
         "plugins-reference.md",
         "scheduled-tasks.md",
         "security-guidance.md",
@@ -424,7 +425,7 @@
         "ultrareview.md",
         "workflows.md"
       ],
-      "mentions": 149
+      "mentions": 150
     },
     "StopFailure": {
       "documented": true,
@@ -539,5 +540,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-06-13"
+  "docs_checked_at": "2026-06-15"
 }
