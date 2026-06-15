@@ -22,6 +22,7 @@
     "copy",
     "cowork-plugin",
     "daemon",
+    "design-login",
     "design-sync",
     "desktop",
     "diff",
@@ -122,6 +123,7 @@
     "context": "Visualize current context usage as a colored grid",
     "copy": "Copy Claude's last response to clipboard (or /copy N for the Nth-latest)",
     "daemon": "Manage background services and routines",
+    "design-login": "Authorize design-system access for /design-sync with your claude.ai account",
     "diff": "View uncommitted changes and per-turn diffs",
     "doctor": "Diagnose and verify your Claude Code installation and settings",
     "effort": "Set effort level for model usage",
@@ -203,6 +205,7 @@
     "copy": "available",
     "cowork-plugin": "available",
     "daemon": "available",
+    "design-login": "available",
     "design-sync": "available",
     "desktop": "available",
     "diff": "available",
@@ -669,6 +672,11 @@
       "added": [
         "cd"
       ]
+    },
+    "2.1.178": {
+      "added": [
+        "design-login"
+      ]
     }
   },
   "commands_docs": {
@@ -1000,6 +1008,11 @@
         "changelog.md"
       ],
       "mentions": 3
+    },
+    "design-login": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "design-sync": {
       "documented": false,
@@ -2272,5 +2285,5 @@
       "mentions": 40
     }
   },
-  "docs_checked_at": "2026-06-14"
+  "docs_checked_at": "2026-06-15"
 }
