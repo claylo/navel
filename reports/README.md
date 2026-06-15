@@ -41,7 +41,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (101)</summary>
+<summary>Commands (102)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -67,6 +67,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /copy | Copy Claude's last response to clipboard (or /copy N for ... | 2.1.20 | available | yes |
 | **/cowork-plugin** | — | 2.1.163 | available | **no** |
 | /daemon | Manage background services and routines | 2.1.119 | available | yes |
+| **/design-login** | Authorize design-system access for /design-sync with your... | 2.1.178 | available | **no** |
 | **/design-sync** | — | 2.1.160 | available | **no** |
 | /desktop | — | 2.1.42 | available | yes |
 | /diff | View uncommitted changes and per-turn diffs | 2.1.50 | available | yes |
@@ -745,6 +746,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.178 | — | +design-login | — |
 | 2.1.169 | — | +cd | — |
 | 2.1.163 | — | +cowork-plugin | — |
 | 2.1.160 | — | +design-sync | — |
@@ -968,4 +970,4 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 ---
-*Last updated: 2026-06-14*
+*Last updated: 2026-06-15*
