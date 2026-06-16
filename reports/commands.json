@@ -776,7 +776,7 @@
         "cli-reference.md",
         "commands.md"
       ],
-      "mentions": 17
+      "mentions": 18
     },
     "branch": {
       "documented": true,
@@ -961,7 +961,7 @@
         "voice-dictation.md",
         "workflows.md"
       ],
-      "mentions": 105
+      "mentions": 112
     },
     "context": {
       "documented": true,
@@ -1085,7 +1085,7 @@
         "slash-commands.md",
         "troubleshooting.md"
       ],
-      "mentions": 48
+      "mentions": 49
     },
     "effort": {
       "documented": true,
@@ -1283,7 +1283,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 314
+      "mentions": 315
     },
     "ide": {
       "documented": true,
@@ -1804,7 +1804,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 50
+      "mentions": 52
     },
     "remote-env": {
       "documented": true,
@@ -1884,9 +1884,10 @@
         "errors.md",
         "glossary.md",
         "prompt-caching.md",
-        "sessions.md"
+        "sessions.md",
+        "settings.md"
       ],
-      "mentions": 26
+      "mentions": 27
     },
     "scroll-speed": {
       "documented": true,
@@ -1992,7 +1993,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 249
+      "mentions": 251
     },
     "status": {
       "documented": true,
@@ -2123,9 +2124,10 @@
         "commands.md",
         "interactive-mode.md",
         "plugins-reference.md",
+        "settings.md",
         "terminal-config.md"
       ],
-      "mentions": 16
+      "mentions": 18
     },
     "toggle-memory": {
       "documented": false,
@@ -2282,8 +2284,8 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 40
+      "mentions": 41
     }
   },
-  "docs_checked_at": "2026-06-15"
+  "docs_checked_at": "2026-06-16"
 }
