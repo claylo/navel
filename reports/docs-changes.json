@@ -1,6 +1,43 @@
 {
   "changes": [
     {
+      "date": "2026-06-16T22:00:40Z",
+      "version_at_time": "2.1.179",
+      "files_changed": [
+        "advisor.md",
+        "agent-teams.md",
+        "amazon-bedrock.md",
+        "changelog.md",
+        "costs.md",
+        "env-vars.md",
+        "fast-mode.md",
+        "fullscreen.md",
+        "hooks.md",
+        "model-config.md",
+        "output-styles.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugin-hints.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "remote-control.md",
+        "settings.md",
+        "skills.md",
+        "slash-commands.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md",
+        "tools-reference.md",
+        "workflows.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-16T19:12:51Z",
       "version_at_time": "2.1.179",
       "files_changed": [
@@ -2555,40 +2592,6 @@
       "version_at_time": "2.1.158",
       "files_changed": [
         "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-30T00:29:01Z",
-      "version_at_time": "2.1.157",
-      "files_changed": [
-        "agent-view.md",
-        "cli-reference.md",
-        "env-vars.md",
-        "errors.md",
-        "interactive-mode.md",
-        "keybindings.md",
-        "mcp.md",
-        "memory.md",
-        "monitoring-usage.md",
-        "permission-modes.md",
-        "permissions.md",
-        "plugins-reference.md",
-        "plugins.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md",
-        "sub-agents.md",
-        "subagents.md",
-        "terminal-config.md",
-        "tools-reference.md",
-        "workflows.md",
-        "worktrees.md"
       ],
       "files_added": [
         ""
