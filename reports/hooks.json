@@ -471,7 +471,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 21
+      "mentions": 22
     },
     "TaskCreated": {
       "documented": true,
@@ -482,7 +482,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 21
+      "mentions": 22
     },
     "TeammateIdle": {
       "documented": true,
@@ -493,7 +493,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 21
+      "mentions": 22
     },
     "UserPromptExpansion": {
       "documented": true,
@@ -540,5 +540,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-06-15"
+  "docs_checked_at": "2026-06-16"
 }
