@@ -710,7 +710,7 @@
         "settings.md",
         "tools-reference.md"
       ],
-      "mentions": 21
+      "mentions": 20
     },
     "agents": {
       "documented": true,
@@ -737,7 +737,7 @@
         "workflows.md",
         "worktrees.md"
       ],
-      "mentions": 84
+      "mentions": 87
     },
     "autocompact": {
       "documented": false,
@@ -884,7 +884,7 @@
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 67
+      "mentions": 68
     },
     "color": {
       "documented": true,
@@ -1153,10 +1153,11 @@
         "fast-mode.md",
         "google-vertex-ai.md",
         "microsoft-foundry.md",
+        "model-config.md",
         "monitoring-usage.md",
         "settings.md"
       ],
-      "mentions": 29
+      "mentions": 30
     },
     "feedback": {
       "documented": true,
@@ -1197,7 +1198,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 15
+      "mentions": 17
     },
     "goal": {
       "documented": true,
@@ -1283,7 +1284,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 315
+      "mentions": 316
     },
     "ide": {
       "documented": true,
@@ -1408,7 +1409,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 57
+      "mentions": 56
     },
     "logout": {
       "documented": true,
@@ -1427,10 +1428,9 @@
         "hooks.md",
         "microsoft-foundry.md",
         "monitoring-usage.md",
-        "remote-control.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 21
+      "mentions": 20
     },
     "loops": {
       "documented": false,
@@ -1570,6 +1570,7 @@
         "model-config.md",
         "monitoring-usage.md",
         "permission-modes.md",
+        "permissions.md",
         "plugins-reference.md",
         "prompt-caching.md",
         "settings.md",
@@ -1581,7 +1582,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 190
+      "mentions": 193
     },
     "passes": {
       "documented": true,
@@ -1804,7 +1805,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 52
+      "mentions": 53
     },
     "remote-env": {
       "documented": true,
@@ -1993,7 +1994,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 251
+      "mentions": 258
     },
     "status": {
       "documented": true,
@@ -2022,7 +2023,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 51
+      "mentions": 52
     },
     "statusline": {
       "documented": true,
@@ -2046,7 +2047,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 36
+      "mentions": 37
     },
     "stickers": {
       "documented": true,
@@ -2284,7 +2285,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 41
+      "mentions": 42
     }
   },
   "docs_checked_at": "2026-06-16"
