@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-16T19:12:51Z",
+      "version_at_time": "2.1.179",
+      "files_changed": [
+        "permissions.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-15T23:35:04Z",
       "version_at_time": "2.1.178",
       "files_changed": [
@@ -2576,25 +2589,6 @@
         "tools-reference.md",
         "workflows.md",
         "worktrees.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-05-29T22:33:10Z",
-      "version_at_time": "2.1.157",
-      "files_changed": [
-        "desktop.md",
-        "env-vars.md",
-        "hooks.md",
-        "skills.md",
-        "slash-commands.md",
-        "statusline.md",
-        "tools-reference.md"
       ],
       "files_added": [
         ""
