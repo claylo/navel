@@ -53,7 +53,6 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /background | — | 2.1.119 | available | yes |
 | /bg |  | 2.1.119 | available | yes |
 | /branch | Create a branch of the current conversation at this point | 2.1.77 | available | yes |
-| **/bridge-kick** | Inject Remote Control failures for recovery testing | 2.1.76 | *disabled* | **no** |
 | **/brief** | Toggle brief-only mode | 2.1.72 | available | **no** |
 | /btw | Ask a quick side question without interrupting the main c... | 2.1.6 | available | yes |
 | /cd | Move this session to a new working directory | 2.1.169 | available | yes |
@@ -67,6 +66,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /copy | Copy Claude's last response to clipboard (or /copy N for ... | 2.1.20 | available | yes |
 | **/cowork-plugin** | — | 2.1.163 | available | **no** |
 | /daemon | Manage background services and routines | 2.1.119 | available | yes |
+| **/design** | — | 2.1.181 | available | **no** |
 | **/design-login** | Authorize design-system access for /design-sync with your... | 2.1.178 | available | **no** |
 | **/design-sync** | — | 2.1.160 | available | **no** |
 | /desktop | — | 2.1.42 | available | yes |
@@ -746,6 +746,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.181 | — | +design | — |
 | 2.1.178 | — | +design-login | — |
 | 2.1.169 | — | +cd | — |
 | 2.1.163 | — | +cowork-plugin | — |
