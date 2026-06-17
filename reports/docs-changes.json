@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-17T22:35:37Z",
+      "version_at_time": "2.1.181",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-17T18:09:54Z",
       "version_at_time": "2.1.179",
       "files_changed": [
@@ -2569,34 +2582,6 @@
       "files_changed": [
         "permission-modes.md",
         "plugins.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-01T22:03:41Z",
-      "version_at_time": "2.1.160",
-      "files_changed": [
-        "agent-view.md",
-        "cli-reference.md",
-        "desktop.md",
-        "discover-plugins.md",
-        "features-overview.md",
-        "glossary.md",
-        "goal.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "large-codebases.md",
-        "model-config.md",
-        "prompt-caching.md",
-        "scheduled-tasks.md",
-        "security-guidance.md",
-        "voice-dictation.md",
-        "workflows.md"
       ],
       "files_added": [
         ""
