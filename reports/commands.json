@@ -1284,7 +1284,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 316
+      "mentions": 317
     },
     "ide": {
       "documented": true,
@@ -1994,7 +1994,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 258
+      "mentions": 259
     },
     "status": {
       "documented": true,
@@ -2288,5 +2288,5 @@
       "mentions": 42
     }
   },
-  "docs_checked_at": "2026-06-16"
+  "docs_checked_at": "2026-06-17"
 }
