@@ -8,7 +8,6 @@
     "background",
     "bg",
     "branch",
-    "bridge-kick",
     "brief",
     "btw",
     "cd",
@@ -22,6 +21,7 @@
     "copy",
     "cowork-plugin",
     "daemon",
+    "design",
     "design-login",
     "design-sync",
     "desktop",
@@ -111,7 +111,6 @@
     "autofix-pr": "Monitor and autofix any issues with the current PR",
     "bg": "",
     "branch": "Create a branch of the current conversation at this point",
-    "bridge-kick": "Inject Remote Control failures for recovery testing",
     "brief": "Toggle brief-only mode",
     "btw": "Ask a quick side question without interrupting the main conversation",
     "cd": "Move this session to a new working directory",
@@ -191,7 +190,6 @@
     "background": "available",
     "bg": "available",
     "branch": "available",
-    "bridge-kick": "disabled",
     "brief": "available",
     "btw": "available",
     "cd": "available",
@@ -205,6 +203,7 @@
     "copy": "available",
     "cowork-plugin": "available",
     "daemon": "available",
+    "design": "available",
     "design-login": "available",
     "design-sync": "available",
     "desktop": "available",
@@ -677,6 +676,11 @@
       "added": [
         "design-login"
       ]
+    },
+    "2.1.181": {
+      "added": [
+        "design"
+      ]
     }
   },
   "commands_docs": {
@@ -788,11 +792,6 @@
         "statusline.md"
       ],
       "mentions": 18
-    },
-    "bridge-kick": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
     },
     "brief": {
       "documented": false,
@@ -1008,6 +1007,11 @@
         "changelog.md"
       ],
       "mentions": 3
+    },
+    "design": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "design-login": {
       "documented": false,
@@ -1994,7 +1998,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 259
+      "mentions": 261
     },
     "status": {
       "documented": true,
