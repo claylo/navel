@@ -41,7 +41,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (102)</summary>
+<summary>Commands (103)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -98,6 +98,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/loops** | List, create, and delete loops | 2.1.101 | *disabled* | **no** |
 | /mcp | Manage MCP servers | 2.0.0 | available | yes |
 | /memory | Open a memory file in your editor | 2.0.0 | available | yes |
+| **/migrate** | Import config from another AI coding agent (Codex, Gemini... | 2.1.182 | available | **no** |
 | /mobile | — | 2.0.72 | available | yes |
 | /model | Set model for this FleetView session (not persisted) | 2.0.0 | available | yes |
 | /passes | — | 2.0.45 | available | yes |
@@ -746,6 +747,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.182 | — | +migrate | — |
 | 2.1.181 | — | +design | — |
 | 2.1.178 | — | +design-login | — |
 | 2.1.169 | — | +cd | — |
