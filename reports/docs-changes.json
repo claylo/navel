@@ -1,6 +1,26 @@
 {
   "changes": [
     {
+      "date": "2026-06-18T18:03:46Z",
+      "version_at_time": "2.1.181",
+      "files_changed": [
+        "claude-code-on-the-web.md",
+        "env-vars.md",
+        "features-overview.md",
+        "glossary.md",
+        "network-config.md",
+        "settings.md",
+        "tools-reference.md",
+        "zero-data-retention.md"
+      ],
+      "files_added": [
+        "artifacts.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-18T01:51:38Z",
       "version_at_time": "2.1.181",
       "files_changed": [
@@ -2567,20 +2587,6 @@
         "overview.md",
         "plugins-reference.md",
         "workflows.md"
-      ],
-      "files_added": [
-        "mcp-quickstart.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-02T01:49:53Z",
-      "version_at_time": "2.1.160",
-      "files_changed": [
-        "mcp.md",
-        "overview.md"
       ],
       "files_added": [
         "mcp-quickstart.md"
