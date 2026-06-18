@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-18T19:05:39Z",
+      "version_at_time": "2.1.181",
+      "files_changed": [
+        "artifacts.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-18T18:03:46Z",
       "version_at_time": "2.1.181",
       "files_changed": [
@@ -2569,23 +2582,6 @@
         "plugins-reference.md",
         "settings.md",
         "troubleshooting.md",
-        "workflows.md"
-      ],
-      "files_added": [
-        "mcp-quickstart.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-02T03:06:12Z",
-      "version_at_time": "2.1.160",
-      "files_changed": [
-        "changelog.md",
-        "mcp.md",
-        "overview.md",
-        "plugins-reference.md",
         "workflows.md"
       ],
       "files_added": [
