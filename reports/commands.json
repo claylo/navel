@@ -1393,6 +1393,7 @@
       "documented": true,
       "doc_files": [
         "admin-setup.md",
+        "artifacts.md",
         "authentication.md",
         "changelog.md",
         "claude-code-on-the-web.md",
@@ -1407,13 +1408,14 @@
         "monitoring-usage.md",
         "quickstart.md",
         "remote-control.md",
+        "tools-reference.md",
         "troubleshoot-install.md",
         "ultrareview.md",
         "voice-dictation.md",
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 56
+      "mentions": 59
     },
     "logout": {
       "documented": true,
@@ -1446,6 +1448,7 @@
       "doc_files": [
         "agent-view.md",
         "agents.md",
+        "artifacts.md",
         "best-practices.md",
         "changelog.md",
         "channels-reference.md",
@@ -1494,12 +1497,13 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 250
+      "mentions": 251
     },
     "memory": {
       "documented": true,
       "doc_files": [
         "admin-setup.md",
+        "artifacts.md",
         "auto-mode-config.md",
         "best-practices.md",
         "champion-kit.md",
@@ -1537,7 +1541,7 @@
         "third-party-integrations.md",
         "web-quickstart.md"
       ],
-      "mentions": 122
+      "mentions": 123
     },
     "mobile": {
       "documented": true,
@@ -1602,6 +1606,7 @@
         "agent-teams.md",
         "agent-view.md",
         "analytics.md",
+        "artifacts.md",
         "auto-mode-config.md",
         "best-practices.md",
         "champion-kit.md",
@@ -1641,7 +1646,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 178
+      "mentions": 179
     },
     "plan": {
       "documented": true,
@@ -1668,6 +1673,7 @@
     "plugin": {
       "documented": true,
       "doc_files": [
+        "artifacts.md",
         "best-practices.md",
         "changelog.md",
         "channels-reference.md",
@@ -1699,7 +1705,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 196
+      "mentions": 197
     },
     "powerup": {
       "documented": true,
@@ -2292,5 +2298,5 @@
       "mentions": 42
     }
   },
-  "docs_checked_at": "2026-06-17"
+  "docs_checked_at": "2026-06-18"
 }
