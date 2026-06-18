@@ -53,6 +53,7 @@
     "loops",
     "mcp",
     "memory",
+    "migrate",
     "mobile",
     "model",
     "passes",
@@ -146,6 +147,7 @@
     "loops": "List, create, and delete loops",
     "mcp": "Manage MCP servers",
     "memory": "Open a memory file in your editor",
+    "migrate": "Import config from another AI coding agent (Codex, Gemini CLI)",
     "model": "Set model for this FleetView session (not persisted)",
     "plan": "Enable plan mode or view the current session plan",
     "powerup": "Discover Claude Code features through quick interactive lessons",
@@ -235,6 +237,7 @@
     "loops": "disabled",
     "mcp": "available",
     "memory": "available",
+    "migrate": "available",
     "mobile": "available",
     "model": "available",
     "passes": "available",
@@ -680,6 +683,11 @@
     "2.1.181": {
       "added": [
         "design"
+      ]
+    },
+    "2.1.182": {
+      "added": [
+        "migrate"
       ]
     }
   },
@@ -1543,6 +1551,11 @@
       ],
       "mentions": 123
     },
+    "migrate": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
     "mobile": {
       "documented": true,
       "doc_files": [
@@ -1704,7 +1717,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 196
+      "mentions": 200
     },
     "powerup": {
       "documented": true,
@@ -1776,7 +1789,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 26
+      "mentions": 28
     },
     "reload-skills": {
       "documented": true,
