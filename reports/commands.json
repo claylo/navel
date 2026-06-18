@@ -923,7 +923,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 82
+      "mentions": 83
     },
     "config": {
       "documented": true,
@@ -960,7 +960,7 @@
         "voice-dictation.md",
         "workflows.md"
       ],
-      "mentions": 113
+      "mentions": 114
     },
     "context": {
       "documented": true,
@@ -1113,7 +1113,7 @@
         "subagents.md",
         "workflows.md"
       ],
-      "mentions": 60
+      "mentions": 61
     },
     "exit": {
       "documented": true,
@@ -1161,7 +1161,7 @@
         "monitoring-usage.md",
         "settings.md"
       ],
-      "mentions": 30
+      "mentions": 31
     },
     "feedback": {
       "documented": true,
@@ -1497,7 +1497,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 251
+      "mentions": 252
     },
     "memory": {
       "documented": true,
@@ -1673,7 +1673,6 @@
     "plugin": {
       "documented": true,
       "doc_files": [
-        "artifacts.md",
         "best-practices.md",
         "changelog.md",
         "channels-reference.md",
@@ -1705,7 +1704,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 197
+      "mentions": 196
     },
     "powerup": {
       "documented": true,
@@ -1815,7 +1814,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 54
+      "mentions": 55
     },
     "remote-env": {
       "documented": true,
@@ -1961,6 +1960,7 @@
         "agent-teams.md",
         "agent-view.md",
         "agents.md",
+        "artifacts.md",
         "best-practices.md",
         "champion-kit.md",
         "changelog.md",
@@ -2004,7 +2004,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 261
+      "mentions": 265
     },
     "status": {
       "documented": true,
@@ -2150,13 +2150,14 @@
       "doc_files": [
         "agent-view.md",
         "changelog.md",
+        "cli-reference.md",
         "commands.md",
         "env-vars.md",
         "fullscreen.md",
         "settings.md",
         "terminal-config.md"
       ],
-      "mentions": 16
+      "mentions": 18
     },
     "ultraplan": {
       "documented": true,
