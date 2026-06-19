@@ -296,7 +296,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 102
+      "mentions": 103
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -540,5 +540,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-06-16"
+  "docs_checked_at": "2026-06-19"
 }
