@@ -853,7 +853,7 @@
         "troubleshoot-install.md",
         "vs-code.md"
       ],
-      "mentions": 29
+      "mentions": 28
     },
     "claude-in-chrome": {
       "documented": true,
@@ -965,7 +965,7 @@
         "voice-dictation.md",
         "workflows.md"
       ],
-      "mentions": 116
+      "mentions": 117
     },
     "context": {
       "documented": true,
@@ -1502,7 +1502,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 252
+      "mentions": 256
     },
     "memory": {
       "documented": true,
@@ -1595,7 +1595,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 194
+      "mentions": 195
     },
     "passes": {
       "documented": true,
@@ -1819,7 +1819,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 55
+      "mentions": 56
     },
     "remote-env": {
       "documented": true,
