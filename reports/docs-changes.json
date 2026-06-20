@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-20T14:47:30Z",
+      "version_at_time": "2.1.183",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        "typescript-v2-preview.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-20T13:34:47Z",
       "version_at_time": "2.1.183",
       "files_changed": [
@@ -2540,28 +2553,6 @@
     {
       "date": "2026-06-02T19:11:22Z",
       "version_at_time": "2.1.161",
-      "files_changed": [
-        "changelog.md",
-        "claude-code-on-the-web.md",
-        "errors.md",
-        "fast-mode.md",
-        "mcp.md",
-        "overview.md",
-        "plugins-reference.md",
-        "settings.md",
-        "troubleshooting.md",
-        "workflows.md"
-      ],
-      "files_added": [
-        "mcp-quickstart.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-02T17:32:55Z",
-      "version_at_time": "2.1.160",
       "files_changed": [
         "changelog.md",
         "claude-code-on-the-web.md",
