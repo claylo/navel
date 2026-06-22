@@ -117,7 +117,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /remote-env | Choose the default environment for cloud agents | 2.0.47 | available | yes |
 | /rename | — | 2.0.41 | available | yes |
 | /resume | Resume a previous conversation | 2.0.0 | available | yes |
-| /review | Review a pull request | 2.0.0 | available | yes |
+| /review | Review a GitHub pull request; for your working diff use /... | 2.0.0 | available | yes |
 | /rewind | — | 2.0.0 | available | yes |
 | /scroll-speed | Adjust mouse wheel scroll speed | 2.1.139 | available | yes |
 | /security-review | Complete a security review of the pending changes on the ... | 2.0.0 | available | yes |
@@ -972,4 +972,4 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 ---
-*Last updated: 2026-06-19*
+*Last updated: 2026-06-22*
