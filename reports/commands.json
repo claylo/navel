@@ -1420,7 +1420,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 59
+      "mentions": 60
     },
     "logout": {
       "documented": true,
@@ -1502,7 +1502,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 256
+      "mentions": 257
     },
     "memory": {
       "documented": true,
@@ -1709,7 +1709,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 200
+      "mentions": 202
     },
     "powerup": {
       "documented": true,
@@ -1883,7 +1883,7 @@
         "subagents.md",
         "ultrareview.md"
       ],
-      "mentions": 17
+      "mentions": 18
     },
     "rewind": {
       "documented": true,
@@ -2301,7 +2301,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 42
+      "mentions": 43
     }
   },
   "docs_checked_at": "2026-06-22"
