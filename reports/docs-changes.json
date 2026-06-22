@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-22T21:44:21Z",
+      "version_at_time": "2.1.186",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-20T21:30:24Z",
       "version_at_time": "2.1.185",
       "files_changed": [
@@ -2513,32 +2526,6 @@
     },
     {
       "date": "2026-06-02T22:05:09Z",
-      "version_at_time": "2.1.161",
-      "files_changed": [
-        "changelog.md",
-        "claude-code-on-the-web.md",
-        "commands.md",
-        "errors.md",
-        "fast-mode.md",
-        "interactive-mode.md",
-        "mcp.md",
-        "overview.md",
-        "plugins-reference.md",
-        "settings.md",
-        "terminal-config.md",
-        "troubleshooting.md",
-        "vs-code.md",
-        "workflows.md"
-      ],
-      "files_added": [
-        "mcp-quickstart.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-02T21:03:07Z",
       "version_at_time": "2.1.161",
       "files_changed": [
         "changelog.md",
