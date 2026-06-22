@@ -1,0 +1,50 @@
+--- v2.1.185
++++ v2.1.186
+@@ -70,14 +70,15 @@
+ Main branch (you will usually use this for PRs): main
+ 
+ Status:
+-(clean)
++M npm/versions.json
++ M reports/commands.json
+ 
+ Recent commits:
+-6db207a chore(readme): sync claude code data (v2.1.185)
++5207b0b chore(prompts): sync claude code data (v2.1.185) — report updated
+ 
+ ---
+ 
+-## Tool Definitions (29 tools)
++## Tool Definitions (30 tools)
+ 
+ ### Agent
+ 
+@@ -726,6 +727,28 @@
+ - `reason` (string, required) — One short sentence explaining the chosen delay. Goes to telemetry and is shown to the user. Be specific.
+ - `prompt` (string, required) — The /loop input to fire on wake-up. Pass the same /loop input verbatim each turn so the next firing re-enters the skill and continues the loop. For autonomous /loop (no user prompt), pass the literal sentinel `<<autonomous-loop-dynamic>>` instead (the dynamic-pacing variant, not the CronCreate-mode `<<autonomous-loop>>`).
+ 
++### SendMessage
++
++# SendMessage
++
++Send a message to another agent.
++
++```json
++{"to": "researcher", "summary": "assign task 1", "message": "start on task #1"}
++```
++
++| `to` | |
++|---|---|
++| `"researcher"` | Teammate by name |
++| `"main"` | The main conversation (background subagents only) |
++
++Your plain text output is NOT visible to other agents — to communicate, you MUST call this tool. Messages from teammates are delivered automatically; you don't check an inbox. Refer to active teammates by name; to resume a completed background agent, use the `agentId` (format `a...-...`) from its spawn result. When relaying, don't quote the original — it's already rendered to the user.
++
++**Parameters:**
++- `to` (string, required) — Recipient: teammate name
++- `summary` (string) — A 5-10 word summary shown as a preview in the UI (required when message is a string)
++- `message` (string, required) — Plain text message content
++
+ ### Skill
+ 
+ Execute a skill within the main conversation
