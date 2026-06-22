@@ -158,7 +158,7 @@
     "reload-skills": "Pick up skills added or changed on disk during this session",
     "remote-env": "Choose the default environment for cloud agents",
     "resume": "Resume a previous conversation",
-    "review": "Review a pull request",
+    "review": "Review a GitHub pull request; for your working diff use /code-review",
     "scroll-speed": "Adjust mouse wheel scroll speed",
     "security-review": "Complete a security review of the pending changes on the current branch",
     "setup-bedrock": "Reconfigure Amazon Bedrock authentication, region, or model pins",
@@ -2304,5 +2304,5 @@
       "mentions": 42
     }
   },
-  "docs_checked_at": "2026-06-19"
+  "docs_checked_at": "2026-06-22"
 }
