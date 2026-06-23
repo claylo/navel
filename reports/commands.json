@@ -56,6 +56,7 @@
     "mobile",
     "model",
     "passes",
+    "pause-memory",
     "permissions",
     "plan",
     "plugin",
@@ -89,7 +90,6 @@
     "teleport",
     "terminal-setup",
     "theme",
-    "toggle-memory",
     "tui",
     "ultraplan",
     "ultrareview",
@@ -170,7 +170,6 @@
     "team-onboarding": "Help teammates ramp on Claude Code with a guide from your usage",
     "teleport": "Resume a Claude Code session from claude.ai",
     "theme": "Change the theme",
-    "toggle-memory": "Toggle automemory off/on for this session",
     "tui": "Set the terminal UI renderer (default | fullscreen)",
     "ultraplan": "Claude Code on the web drafts a plan you can edit and approve",
     "ultrareview": "Find and verify bugs in your branch using Claude Code on the web",
@@ -238,6 +237,7 @@
     "mobile": "available",
     "model": "available",
     "passes": "available",
+    "pause-memory": "disabled",
     "permissions": "available",
     "plan": "available",
     "plugin": "available",
@@ -271,7 +271,6 @@
     "teleport": "available",
     "terminal-setup": "available",
     "theme": "available",
-    "toggle-memory": "disabled",
     "tui": "available",
     "ultraplan": "available",
     "ultrareview": "available",
@@ -685,6 +684,11 @@
     "2.1.182": {
       "added": [
         "migrate"
+      ]
+    },
+    "2.1.187": {
+      "added": [
+        "pause-memory"
       ]
     }
   },
@@ -1607,6 +1611,11 @@
       ],
       "mentions": 1
     },
+    "pause-memory": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
     "permissions": {
       "documented": true,
       "doc_files": [
@@ -2147,11 +2156,6 @@
         "terminal-config.md"
       ],
       "mentions": 18
-    },
-    "toggle-memory": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
     },
     "tui": {
       "documented": true,
