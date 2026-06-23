@@ -1316,6 +1316,7 @@
     "init": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "best-practices.md",
         "champion-kit.md",
         "changelog.md",
@@ -1333,7 +1334,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 36
+      "mentions": 37
     },
     "init-verifiers": {
       "documented": false,
@@ -1603,7 +1604,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 195
+      "mentions": 199
     },
     "passes": {
       "documented": true,
