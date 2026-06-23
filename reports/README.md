@@ -101,6 +101,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /mobile | — | 2.0.72 | available | yes |
 | /model | Set model for this FleetView session (not persisted) | 2.0.0 | available | yes |
 | /passes | — | 2.0.45 | available | yes |
+| **/pause-memory** | — | 2.1.187 | *disabled* | **no** |
 | /permissions | — | 2.0.0 | available | yes |
 | /plan | Enable plan mode or view the current session plan | 2.0.56 | available | yes |
 | /plugin | — | 2.0.12 | available | yes |
@@ -134,7 +135,6 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /teleport | Resume a Claude Code session from claude.ai | 2.1.92 | available | yes |
 | /terminal-setup | — | 2.0.0 | available | yes |
 | /theme | Change the theme | 2.0.73 | available | yes |
-| **/toggle-memory** | Toggle automemory off/on for this session | 2.1.90 | *disabled* | **no** |
 | /tui | Set the terminal UI renderer (default | fullscreen) | 2.1.110 | available | yes |
 | /ultraplan | Claude Code on the web drafts a plan you can edit and app... | 2.1.83 | available | yes |
 | /ultrareview | Find and verify bugs in your branch using Claude Code on ... | 2.1.83 | available | yes |
@@ -746,6 +746,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.187 | — | +pause-memory | — |
 | 2.1.182 | — | +migrate | — |
 | 2.1.181 | — | +design | — |
 | 2.1.178 | — | +design-login | — |
