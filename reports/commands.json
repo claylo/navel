@@ -826,13 +826,14 @@
         "hooks-guide.md",
         "hooks.md",
         "permissions.md",
+        "plugin-relevance.md",
         "plugins-reference.md",
         "sessions.md",
         "sub-agents.md",
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 27
+      "mentions": 28
     },
     "chrome": {
       "documented": true,
@@ -1014,9 +1015,11 @@
       "mentions": 3
     },
     "design": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "plugin-relevance.md"
+      ],
+      "mentions": 1
     },
     "design-login": {
       "documented": false,
@@ -1420,7 +1423,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 60
+      "mentions": 61
     },
     "logout": {
       "documented": true,
@@ -1502,7 +1505,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 257
+      "mentions": 259
     },
     "memory": {
       "documented": true,
@@ -1700,6 +1703,7 @@
         "plugin-dependencies.md",
         "plugin-hints.md",
         "plugin-marketplaces.md",
+        "plugin-relevance.md",
         "plugins-reference.md",
         "plugins.md",
         "prompt-caching.md",
@@ -1709,7 +1713,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 202
+      "mentions": 207
     },
     "powerup": {
       "documented": true,
@@ -1876,14 +1880,13 @@
         "changelog.md",
         "cli-reference.md",
         "commands.md",
-        "prompt-library.md",
         "skills.md",
         "slash-commands.md",
         "sub-agents.md",
         "subagents.md",
         "ultrareview.md"
       ],
-      "mentions": 18
+      "mentions": 17
     },
     "rewind": {
       "documented": true,
@@ -2304,5 +2307,5 @@
       "mentions": 43
     }
   },
-  "docs_checked_at": "2026-06-22"
+  "docs_checked_at": "2026-06-23"
 }
