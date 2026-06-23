@@ -1405,6 +1405,7 @@
       "documented": true,
       "doc_files": [
         "admin-setup.md",
+        "agent-view.md",
         "artifacts.md",
         "authentication.md",
         "changelog.md",
@@ -1427,7 +1428,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 61
+      "mentions": 63
     },
     "logout": {
       "documented": true,
