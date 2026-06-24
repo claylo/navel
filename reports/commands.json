@@ -818,7 +818,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 17
+      "mentions": 18
     },
     "cd": {
       "documented": true,
@@ -970,7 +970,7 @@
         "voice-dictation.md",
         "workflows.md"
       ],
-      "mentions": 118
+      "mentions": 119
     },
     "context": {
       "documented": true,
@@ -1053,6 +1053,7 @@
         "goal.md",
         "how-claude-code-works.md",
         "mcp-quickstart.md",
+        "model-config.md",
         "overview.md",
         "permission-modes.md",
         "platforms.md",
@@ -1068,7 +1069,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 72
+      "mentions": 73
     },
     "diff": {
       "documented": true,
@@ -1373,7 +1374,7 @@
         "github-actions.md",
         "github-enterprise-server.md"
       ],
-      "mentions": 9
+      "mentions": 10
     },
     "install-slack-app": {
       "documented": true,
@@ -1511,7 +1512,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 259
+      "mentions": 260
     },
     "memory": {
       "documented": true,
@@ -1583,6 +1584,7 @@
         "env-vars.md",
         "errors.md",
         "fast-mode.md",
+        "fullscreen.md",
         "github-actions.md",
         "glossary.md",
         "hooks-guide.md",
@@ -1604,7 +1606,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 201
+      "mentions": 208
     },
     "passes": {
       "documented": true,
@@ -2023,7 +2025,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 265
+      "mentions": 267
     },
     "status": {
       "documented": true,
