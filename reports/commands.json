@@ -789,7 +789,7 @@
         "cli-reference.md",
         "commands.md"
       ],
-      "mentions": 18
+      "mentions": 19
     },
     "branch": {
       "documented": true,
@@ -818,7 +818,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 16
+      "mentions": 17
     },
     "cd": {
       "documented": true,
@@ -970,7 +970,7 @@
         "voice-dictation.md",
         "workflows.md"
       ],
-      "mentions": 117
+      "mentions": 118
     },
     "context": {
       "documented": true,
@@ -1373,7 +1373,7 @@
         "github-actions.md",
         "github-enterprise-server.md"
       ],
-      "mentions": 8
+      "mentions": 9
     },
     "install-slack-app": {
       "documented": true,
@@ -1604,7 +1604,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 199
+      "mentions": 201
     },
     "passes": {
       "documented": true,
@@ -1724,7 +1724,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 207
+      "mentions": 208
     },
     "powerup": {
       "documented": true,
@@ -2171,7 +2171,7 @@
         "settings.md",
         "terminal-config.md"
       ],
-      "mentions": 18
+      "mentions": 19
     },
     "ultraplan": {
       "documented": true,
@@ -2208,7 +2208,7 @@
         "env-vars.md",
         "plugin-marketplaces.md"
       ],
-      "mentions": 5
+      "mentions": 7
     },
     "upgrade": {
       "documented": true,
@@ -2313,5 +2313,5 @@
       "mentions": 43
     }
   },
-  "docs_checked_at": "2026-06-23"
+  "docs_checked_at": "2026-06-24"
 }
