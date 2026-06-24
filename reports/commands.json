@@ -851,14 +851,13 @@
         "computer-use.md",
         "desktop.md",
         "how-claude-code-works.md",
-        "network-config.md",
         "overview.md",
         "platforms.md",
         "prompt-library.md",
         "troubleshoot-install.md",
         "vs-code.md"
       ],
-      "mentions": 28
+      "mentions": 27
     },
     "claude-in-chrome": {
       "documented": true,
@@ -1774,10 +1773,9 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
-        "commands.md",
-        "network-config.md"
+        "commands.md"
       ],
-      "mentions": 5
+      "mentions": 4
     },
     "reload-plugins": {
       "documented": true,
