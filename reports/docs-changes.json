@@ -1,6 +1,28 @@
 {
   "changes": [
     {
+      "date": "2026-06-25T07:08:28Z",
+      "version_at_time": "2.1.191",
+      "files_changed": [
+        "authentication.md",
+        "costs.md",
+        "env-vars.md",
+        "errors.md",
+        "llm-gateway.md",
+        "model-config.md",
+        "settings.md",
+        "third-party-integrations.md"
+      ],
+      "files_added": [
+        "llm-gateway-connect.md",
+        "llm-gateway-protocol.md",
+        "llm-gateway-rollout.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-25T05:21:13Z",
       "version_at_time": "2.1.191",
       "files_changed": [
@@ -2219,52 +2241,6 @@
     },
     {
       "date": "2026-06-03T22:06:50Z",
-      "version_at_time": "2.1.162",
-      "files_changed": [
-        "agent-view.md",
-        "amazon-bedrock.md",
-        "auto-mode-config.md",
-        "changelog.md",
-        "chrome.md",
-        "claude-code-on-the-web.md",
-        "claude-directory.md",
-        "commands.md",
-        "context-window.md",
-        "desktop.md",
-        "env-vars.md",
-        "errors.md",
-        "fast-mode.md",
-        "fullscreen.md",
-        "glossary.md",
-        "headless.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "interactive-mode.md",
-        "mcp.md",
-        "monitoring-usage.md",
-        "overview.md",
-        "permission-modes.md",
-        "permissions.md",
-        "plugins-reference.md",
-        "prompt-caching.md",
-        "settings.md",
-        "sub-agents.md",
-        "subagents.md",
-        "terminal-config.md",
-        "tools-reference.md",
-        "troubleshooting.md",
-        "vs-code.md",
-        "workflows.md"
-      ],
-      "files_added": [
-        "mcp-quickstart.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-03T21:04:09Z",
       "version_at_time": "2.1.162",
       "files_changed": [
         "agent-view.md",
