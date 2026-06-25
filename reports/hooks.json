@@ -195,7 +195,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 27
+      "mentions": 28
     },
     "InstructionsLoaded": {
       "documented": true,
@@ -425,7 +425,7 @@
         "ultrareview.md",
         "workflows.md"
       ],
-      "mentions": 150
+      "mentions": 151
     },
     "StopFailure": {
       "documented": true,
@@ -435,7 +435,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 19
+      "mentions": 20
     },
     "SubagentStart": {
       "documented": true,
@@ -540,5 +540,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-06-19"
+  "docs_checked_at": "2026-06-25"
 }
