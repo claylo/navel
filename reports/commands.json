@@ -894,7 +894,7 @@
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 69
+      "mentions": 70
     },
     "color": {
       "documented": true,
@@ -1435,7 +1435,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 63
+      "mentions": 64
     },
     "logout": {
       "documented": true,
@@ -1676,7 +1676,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 179
+      "mentions": 180
     },
     "plan": {
       "documented": true,
@@ -1929,7 +1929,7 @@
         "sessions.md",
         "settings.md"
       ],
-      "mentions": 27
+      "mentions": 28
     },
     "scroll-speed": {
       "documented": true,
@@ -2251,7 +2251,7 @@
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 40
+      "mentions": 41
     },
     "usage-credits": {
       "documented": true,
@@ -2289,7 +2289,7 @@
         "settings.md",
         "voice-dictation.md"
       ],
-      "mentions": 32
+      "mentions": 33
     },
     "web-setup": {
       "documented": true,
