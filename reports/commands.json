@@ -923,6 +923,7 @@
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
+        "llm-gateway-connect.md",
         "memory.md",
         "monitoring-usage.md",
         "prompt-caching.md",
@@ -934,7 +935,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 83
+      "mentions": 84
     },
     "config": {
       "documented": true,
@@ -955,6 +956,7 @@
         "interactive-mode.md",
         "jetbrains.md",
         "keybindings.md",
+        "llm-gateway-connect.md",
         "mcp-quickstart.md",
         "mcp.md",
         "model-config.md",
@@ -971,7 +973,7 @@
         "voice-dictation.md",
         "workflows.md"
       ],
-      "mentions": 119
+      "mentions": 120
     },
     "context": {
       "documented": true,
@@ -1095,6 +1097,7 @@
         "hooks.md",
         "how-claude-code-works.md",
         "keybindings.md",
+        "llm-gateway-connect.md",
         "monitoring-usage.md",
         "plugin-dependencies.md",
         "plugins-reference.md",
@@ -1103,7 +1106,7 @@
         "slash-commands.md",
         "troubleshooting.md"
       ],
-      "mentions": 50
+      "mentions": 51
     },
     "effort": {
       "documented": true,
@@ -1115,6 +1118,7 @@
         "env-vars.md",
         "errors.md",
         "hooks.md",
+        "llm-gateway-protocol.md",
         "model-config.md",
         "monitoring-usage.md",
         "plugins-reference.md",
@@ -1127,7 +1131,7 @@
         "subagents.md",
         "workflows.md"
       ],
-      "mentions": 61
+      "mentions": 62
     },
     "exit": {
       "documented": true,
@@ -1448,11 +1452,12 @@
         "google-vertex-ai.md",
         "hooks-guide.md",
         "hooks.md",
+        "llm-gateway-connect.md",
         "microsoft-foundry.md",
         "monitoring-usage.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 20
+      "mentions": 22
     },
     "loops": {
       "documented": false,
@@ -1591,6 +1596,9 @@
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
+        "llm-gateway-connect.md",
+        "llm-gateway-protocol.md",
+        "llm-gateway-rollout.md",
         "llm-gateway.md",
         "model-config.md",
         "monitoring-usage.md",
@@ -1607,7 +1615,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 208
+      "mentions": 225
     },
     "passes": {
       "documented": true,
@@ -1825,6 +1833,7 @@
         "glossary.md",
         "goal.md",
         "how-claude-code-works.md",
+        "llm-gateway-connect.md",
         "overview.md",
         "permission-modes.md",
         "permissions.md",
@@ -1837,7 +1846,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 56
+      "mentions": 57
     },
     "remote-env": {
       "documented": true,
@@ -2046,6 +2055,8 @@
         "errors.md",
         "headless.md",
         "hooks.md",
+        "llm-gateway-connect.md",
+        "llm-gateway-rollout.md",
         "mcp.md",
         "model-config.md",
         "monitoring-usage.md",
@@ -2056,7 +2067,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 52
+      "mentions": 61
     },
     "statusline": {
       "documented": true,
