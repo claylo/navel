@@ -1482,6 +1482,7 @@
         "claude-directory.md",
         "cli-reference.md",
         "commands.md",
+        "common-workflows.md",
         "computer-use.md",
         "context-window.md",
         "costs.md",
@@ -1521,7 +1522,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 261
+      "mentions": 262
     },
     "memory": {
       "documented": true,
@@ -1745,9 +1746,10 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
-        "commands.md"
+        "commands.md",
+        "common-workflows.md"
       ],
-      "mentions": 2
+      "mentions": 3
     },
     "privacy-settings": {
       "documented": true,
@@ -1885,6 +1887,7 @@
         "checkpointing.md",
         "cli-reference.md",
         "commands.md",
+        "common-workflows.md",
         "costs.md",
         "env-vars.md",
         "errors.md",
@@ -1899,7 +1902,7 @@
         "remote-control.md",
         "sessions.md"
       ],
-      "mentions": 69
+      "mentions": 71
     },
     "review": {
       "documented": true,
