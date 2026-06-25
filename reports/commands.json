@@ -718,12 +718,13 @@
         "cli-reference.md",
         "commands.md",
         "env-vars.md",
+        "feature-availability.md",
         "model-config.md",
         "prompt-caching.md",
         "settings.md",
         "tools-reference.md"
       ],
-      "mentions": 20
+      "mentions": 26
     },
     "agents": {
       "documented": true,
@@ -850,6 +851,7 @@
         "commands.md",
         "computer-use.md",
         "desktop.md",
+        "feature-availability.md",
         "how-claude-code-works.md",
         "network-config.md",
         "overview.md",
@@ -858,7 +860,7 @@
         "troubleshoot-install.md",
         "vs-code.md"
       ],
-      "mentions": 28
+      "mentions": 29
     },
     "claude-in-chrome": {
       "documented": true,
@@ -1052,6 +1054,7 @@
         "desktop-scheduled-tasks.md",
         "desktop.md",
         "errors.md",
+        "feature-availability.md",
         "glossary.md",
         "goal.md",
         "how-claude-code-works.md",
@@ -1072,7 +1075,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 73
+      "mentions": 78
     },
     "diff": {
       "documented": true,
@@ -1490,6 +1493,7 @@
         "discover-plugins.md",
         "env-vars.md",
         "errors.md",
+        "feature-availability.md",
         "features-overview.md",
         "glossary.md",
         "google-vertex-ai.md",
@@ -1518,7 +1522,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 261
+      "mentions": 262
     },
     "memory": {
       "documented": true,
@@ -1539,6 +1543,7 @@
         "desktop.md",
         "env-vars.md",
         "errors.md",
+        "feature-availability.md",
         "features-overview.md",
         "github-actions.md",
         "glossary.md",
@@ -1562,7 +1567,7 @@
         "third-party-integrations.md",
         "web-quickstart.md"
       ],
-      "mentions": 123
+      "mentions": 124
     },
     "mobile": {
       "documented": true,
@@ -1830,6 +1835,7 @@
         "data-usage.md",
         "desktop.md",
         "env-vars.md",
+        "feature-availability.md",
         "glossary.md",
         "goal.md",
         "how-claude-code-works.md",
@@ -1846,7 +1852,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 57
+      "mentions": 59
     },
     "remote-env": {
       "documented": true,
@@ -2007,6 +2013,7 @@
         "desktop-quickstart.md",
         "desktop.md",
         "env-vars.md",
+        "feature-availability.md",
         "features-overview.md",
         "github-actions.md",
         "glossary.md",
@@ -2036,7 +2043,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 267
+      "mentions": 268
     },
     "status": {
       "documented": true,
@@ -2194,13 +2201,14 @@
         "changelog.md",
         "claude-code-on-the-web.md",
         "commands.md",
+        "feature-availability.md",
         "permission-modes.md",
         "remote-control.md",
         "terminal-config.md",
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 14
+      "mentions": 15
     },
     "ultrareview": {
       "documented": true,
@@ -2210,10 +2218,11 @@
         "cli-reference.md",
         "code-review.md",
         "commands.md",
+        "feature-availability.md",
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 11
+      "mentions": 12
     },
     "update": {
       "documented": true,
@@ -2317,6 +2326,7 @@
         "commands.md",
         "desktop.md",
         "env-vars.md",
+        "feature-availability.md",
         "github-actions.md",
         "glossary.md",
         "model-config.md",
@@ -2325,7 +2335,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 43
+      "mentions": 44
     }
   },
   "docs_checked_at": "2026-06-25"
