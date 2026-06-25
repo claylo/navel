@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "date": "2026-06-25T05:21:13Z",
+      "version_at_time": "2.1.191",
+      "files_changed": [
+        "admin-setup.md",
+        "amazon-bedrock.md",
+        "checkpointing.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "errors.md",
+        "fast-mode.md",
+        "glossary.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "mcp.md",
+        "model-config.md",
+        "sandboxing.md",
+        "server-managed-settings.md",
+        "settings.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-24T21:32:07Z",
       "version_at_time": "2.1.191",
       "files_changed": [
@@ -2261,45 +2288,6 @@
         "interactive-mode.md",
         "mcp.md",
         "monitoring-usage.md",
-        "overview.md",
-        "permission-modes.md",
-        "permissions.md",
-        "plugins-reference.md",
-        "prompt-caching.md",
-        "settings.md",
-        "sub-agents.md",
-        "subagents.md",
-        "terminal-config.md",
-        "tools-reference.md",
-        "troubleshooting.md",
-        "vs-code.md",
-        "workflows.md"
-      ],
-      "files_added": [
-        "mcp-quickstart.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-03T19:17:21Z",
-      "version_at_time": "2.1.162",
-      "files_changed": [
-        "agent-view.md",
-        "amazon-bedrock.md",
-        "auto-mode-config.md",
-        "changelog.md",
-        "claude-code-on-the-web.md",
-        "commands.md",
-        "desktop.md",
-        "env-vars.md",
-        "errors.md",
-        "fast-mode.md",
-        "fullscreen.md",
-        "glossary.md",
-        "interactive-mode.md",
-        "mcp.md",
         "overview.md",
         "permission-modes.md",
         "permissions.md",
