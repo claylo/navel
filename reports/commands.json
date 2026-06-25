@@ -1435,7 +1435,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 64
+      "mentions": 66
     },
     "logout": {
       "documented": true,
