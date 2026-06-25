@@ -223,7 +223,6 @@
       "doc_files": [
         "changelog.md",
         "channels-reference.md",
-        "common-workflows.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
@@ -233,7 +232,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 49
+      "mentions": 48
     },
     "PermissionDenied": {
       "documented": true,
