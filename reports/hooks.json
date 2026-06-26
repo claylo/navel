@@ -347,9 +347,10 @@
         "env-vars.md",
         "hooks-guide.md",
         "hooks.md",
-        "plugins-reference.md"
+        "plugins-reference.md",
+        "sessions.md"
       ],
-      "mentions": 25
+      "mentions": 26
     },
     "SessionStart": {
       "documented": true,
@@ -426,7 +427,7 @@
         "ultrareview.md",
         "workflows.md"
       ],
-      "mentions": 152
+      "mentions": 151
     },
     "StopFailure": {
       "documented": true,
@@ -541,5 +542,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-06-25"
+  "docs_checked_at": "2026-06-26"
 }
