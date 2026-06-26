@@ -1158,7 +1158,7 @@
         "sessions.md",
         "tools-reference.md"
       ],
-      "mentions": 10
+      "mentions": 12
     },
     "extra-usage": {
       "documented": true,
@@ -1174,7 +1174,6 @@
         "amazon-bedrock.md",
         "changelog.md",
         "commands.md",
-        "env-vars.md",
         "fast-mode.md",
         "google-vertex-ai.md",
         "microsoft-foundry.md",
@@ -1182,7 +1181,7 @@
         "monitoring-usage.md",
         "settings.md"
       ],
-      "mentions": 31
+      "mentions": 30
     },
     "feedback": {
       "documented": true,
@@ -1299,6 +1298,7 @@
         "security-guidance.md",
         "security.md",
         "server-managed-settings.md",
+        "sessions.md",
         "settings.md",
         "skills.md",
         "slash-commands.md",
@@ -1309,7 +1309,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 317
+      "mentions": 318
     },
     "ide": {
       "documented": true,
@@ -1620,7 +1620,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 226
+      "mentions": 225
     },
     "passes": {
       "documented": true,
@@ -1902,7 +1902,7 @@
         "remote-control.md",
         "sessions.md"
       ],
-      "mentions": 71
+      "mentions": 70
     },
     "review": {
       "documented": true,
@@ -2091,6 +2091,7 @@
         "plugin-hints.md",
         "plugins-reference.md",
         "prompt-caching.md",
+        "sessions.md",
         "settings.md",
         "statusline.md",
         "sub-agents.md",
@@ -2098,7 +2099,7 @@
         "terminal-config.md",
         "voice-dictation.md"
       ],
-      "mentions": 37
+      "mentions": 38
     },
     "stickers": {
       "documented": true,
