@@ -708,7 +708,7 @@
         "statusline.md",
         "tools-reference.md"
       ],
-      "mentions": 23
+      "mentions": 24
     },
     "advisor": {
       "documented": true,
@@ -1438,7 +1438,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 66
+      "mentions": 67
     },
     "logout": {
       "documented": true,
@@ -1522,7 +1522,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 262
+      "mentions": 263
     },
     "memory": {
       "documented": true,
@@ -1620,7 +1620,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 225
+      "mentions": 226
     },
     "passes": {
       "documented": true,
@@ -1681,7 +1681,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 180
+      "mentions": 181
     },
     "plan": {
       "documented": true,
@@ -2338,5 +2338,5 @@
       "mentions": 44
     }
   },
-  "docs_checked_at": "2026-06-25"
+  "docs_checked_at": "2026-06-26"
 }
