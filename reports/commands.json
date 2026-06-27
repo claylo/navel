@@ -1438,7 +1438,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 67
+      "mentions": 68
     },
     "logout": {
       "documented": true,
@@ -2339,5 +2339,5 @@
       "mentions": 44
     }
   },
-  "docs_checked_at": "2026-06-26"
+  "docs_checked_at": "2026-06-27"
 }
