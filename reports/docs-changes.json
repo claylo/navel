@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-27T18:25:38Z",
+      "version_at_time": "2.1.195",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        "2026-w15.md"
+      ]
+    },
+    {
       "date": "2026-06-27T01:39:36Z",
       "version_at_time": "2.1.195",
       "files_changed": [
@@ -1687,55 +1700,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-04T23:27:45Z",
-      "version_at_time": "2.1.163",
-      "files_changed": [
-        "agent-view.md",
-        "amazon-bedrock.md",
-        "auto-mode-config.md",
-        "changelog.md",
-        "chrome.md",
-        "claude-code-on-the-web.md",
-        "claude-directory.md",
-        "commands.md",
-        "context-window.md",
-        "deep-links.md",
-        "desktop.md",
-        "env-vars.md",
-        "errors.md",
-        "fast-mode.md",
-        "fullscreen.md",
-        "glossary.md",
-        "headless.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "interactive-mode.md",
-        "mcp.md",
-        "memory.md",
-        "monitoring-usage.md",
-        "overview.md",
-        "permission-modes.md",
-        "permissions.md",
-        "plugins-reference.md",
-        "prompt-caching.md",
-        "settings.md",
-        "sub-agents.md",
-        "subagents.md",
-        "terminal-config.md",
-        "tools-reference.md",
-        "troubleshoot-install.md",
-        "troubleshooting.md",
-        "vs-code.md",
-        "workflows.md"
-      ],
-      "files_added": [
-        "mcp-quickstart.md"
       ],
       "files_removed": [
         ""
