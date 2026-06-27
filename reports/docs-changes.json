@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-27T19:32:05Z",
+      "version_at_time": "2.1.195",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        "2026-w15.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-27T18:25:38Z",
       "version_at_time": "2.1.195",
       "files_changed": [
@@ -1684,19 +1697,6 @@
       "files_changed": [
         "quickstart.md",
         "settings.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-05T07:26:26Z",
-      "version_at_time": "2.1.165",
-      "files_changed": [
-        "changelog.md"
       ],
       "files_added": [
         ""
