@@ -282,6 +282,7 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "claude-apps-gateway-config.md",
         "claude-directory.md",
         "context-window.md",
         "features-overview.md",
@@ -296,7 +297,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 103
+      "mentions": 104
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -375,6 +376,7 @@
       "doc_files": [
         "amazon-bedrock.md",
         "changelog.md",
+        "claude-apps-gateway-config.md",
         "claude-code-on-the-web.md",
         "claude-platform-on-aws.md",
         "cli-reference.md",
@@ -393,7 +395,7 @@
         "sandbox-environments.md",
         "web-quickstart.md"
       ],
-      "mentions": 54
+      "mentions": 57
     },
     "Stop": {
       "documented": true,
@@ -542,5 +544,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-06-26"
+  "docs_checked_at": "2026-06-29"
 }
