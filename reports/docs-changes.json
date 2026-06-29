@@ -1,6 +1,42 @@
 {
   "changes": [
     {
+      "date": "2026-06-29T21:32:47Z",
+      "version_at_time": "2.1.196",
+      "files_changed": [
+        "admin-setup.md",
+        "authentication.md",
+        "auto-mode-config.md",
+        "cli-reference.md",
+        "costs.md",
+        "data-usage.md",
+        "env-vars.md",
+        "llm-gateway-connect.md",
+        "llm-gateway-protocol.md",
+        "llm-gateway-rollout.md",
+        "llm-gateway.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "permission-modes.md",
+        "permissions.md",
+        "quickstart.md",
+        "server-managed-settings.md",
+        "settings.md",
+        "third-party-integrations.md"
+      ],
+      "files_added": [
+        "claude-apps-gateway-config.md",
+        "claude-apps-gateway-deploy.md",
+        "claude-apps-gateway-on-gcp.md",
+        "claude-apps-gateway-spend-limits.md",
+        "claude-apps-gateway.md",
+        "gateways.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-27T19:32:05Z",
       "version_at_time": "2.1.195",
       "files_changed": [
@@ -1683,20 +1719,6 @@
         "slash-commands.md",
         "sub-agents.md",
         "subagents.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-05T17:38:22Z",
-      "version_at_time": "2.1.165",
-      "files_changed": [
-        "quickstart.md",
-        "settings.md"
       ],
       "files_added": [
         ""
