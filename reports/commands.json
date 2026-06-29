@@ -1269,6 +1269,7 @@
         "best-practices.md",
         "changelog.md",
         "chrome.md",
+        "claude-apps-gateway-config.md",
         "claude-code-on-the-web.md",
         "claude-directory.md",
         "cli-reference.md",
@@ -1309,7 +1310,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 318
+      "mentions": 321
     },
     "ide": {
       "documented": true,
@@ -1419,18 +1420,23 @@
         "artifacts.md",
         "authentication.md",
         "changelog.md",
+        "claude-apps-gateway-deploy.md",
+        "claude-apps-gateway-on-gcp.md",
+        "claude-apps-gateway.md",
         "claude-code-on-the-web.md",
         "claude-platform-on-aws.md",
         "commands.md",
         "costs.md",
         "env-vars.md",
         "errors.md",
+        "gateways.md",
         "headless.md",
         "hooks.md",
         "mcp.md",
         "monitoring-usage.md",
         "quickstart.md",
         "remote-control.md",
+        "settings.md",
         "tools-reference.md",
         "troubleshoot-install.md",
         "ultrareview.md",
@@ -1438,7 +1444,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 68
+      "mentions": 92
     },
     "logout": {
       "documented": true,
@@ -1587,6 +1593,7 @@
         "agent-view.md",
         "amazon-bedrock.md",
         "changelog.md",
+        "claude-apps-gateway.md",
         "claude-code-on-the-web.md",
         "cli-reference.md",
         "commands.md",
@@ -1596,6 +1603,7 @@
         "errors.md",
         "fast-mode.md",
         "fullscreen.md",
+        "gateways.md",
         "github-actions.md",
         "glossary.md",
         "hooks-guide.md",
@@ -1604,7 +1612,6 @@
         "llm-gateway-connect.md",
         "llm-gateway-protocol.md",
         "llm-gateway-rollout.md",
-        "llm-gateway.md",
         "model-config.md",
         "monitoring-usage.md",
         "permission-modes.md",
@@ -1620,7 +1627,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 225
+      "mentions": 226
     },
     "passes": {
       "documented": true,
@@ -1646,6 +1653,8 @@
         "best-practices.md",
         "champion-kit.md",
         "changelog.md",
+        "claude-apps-gateway-config.md",
+        "claude-apps-gateway.md",
         "claude-directory.md",
         "cli-reference.md",
         "commands.md",
@@ -1653,6 +1662,7 @@
         "data-usage.md",
         "debug-your-config.md",
         "desktop.md",
+        "gateways.md",
         "glossary.md",
         "headless.md",
         "hooks-guide.md",
@@ -1681,7 +1691,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 181
+      "mentions": 186
     },
     "plan": {
       "documented": true,
@@ -1962,6 +1972,7 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "claude-apps-gateway-config.md",
         "claude-code-on-the-web.md",
         "code-review.md",
         "hooks-guide.md",
@@ -1972,7 +1983,7 @@
         "routines.md",
         "vs-code.md"
       ],
-      "mentions": 14
+      "mentions": 17
     },
     "setup-bedrock": {
       "documented": true,
@@ -2339,5 +2350,5 @@
       "mentions": 44
     }
   },
-  "docs_checked_at": "2026-06-27"
+  "docs_checked_at": "2026-06-29"
 }
