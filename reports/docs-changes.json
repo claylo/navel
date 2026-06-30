@@ -1,6 +1,27 @@
 {
   "changes": [
     {
+      "date": "2026-06-30T19:35:18Z",
+      "version_at_time": "2.1.197",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "claude-apps-gateway.md",
+        "claude-platform-on-aws.md",
+        "desktop.md",
+        "google-vertex-ai.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "permission-modes.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-30T18:35:30Z",
       "version_at_time": "2.1.197",
       "files_changed": [
@@ -1747,19 +1768,6 @@
       ],
       "files_removed": [
         ""
-      ]
-    },
-    {
-      "date": "2026-06-08T03:06:00Z",
-      "version_at_time": "2.1.168",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        "routines.md"
       ]
     }
   ]
