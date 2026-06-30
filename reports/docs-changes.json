@@ -1,6 +1,34 @@
 {
   "changes": [
     {
+      "date": "2026-06-30T18:35:30Z",
+      "version_at_time": "2.1.197",
+      "files_changed": [
+        "advisor.md",
+        "claude-apps-gateway.md",
+        "cli-reference.md",
+        "context-window.md",
+        "desktop.md",
+        "env-vars.md",
+        "errors.md",
+        "github-actions.md",
+        "glossary.md",
+        "hooks.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "permission-modes.md",
+        "settings.md",
+        "sub-agents.md",
+        "subagents.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-30T16:44:31Z",
       "version_at_time": "2.1.197",
       "files_changed": [
@@ -1732,19 +1760,6 @@
       ],
       "files_removed": [
         "routines.md"
-      ]
-    },
-    {
-      "date": "2026-06-07T00:30:53Z",
-      "version_at_time": "2.1.168",
-      "files_changed": [
-        "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
       ]
     }
   ]
