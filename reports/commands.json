@@ -928,7 +928,6 @@
         "hooks.md",
         "how-claude-code-works.md",
         "llm-gateway-connect.md",
-        "memory.md",
         "monitoring-usage.md",
         "prompt-caching.md",
         "remote-control.md",
@@ -939,7 +938,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 85
+      "mentions": 83
     },
     "config": {
       "documented": true,
@@ -1298,7 +1297,6 @@
         "how-claude-code-works.md",
         "large-codebases.md",
         "mcp.md",
-        "memory.md",
         "overview.md",
         "permission-modes.md",
         "permissions.md",
@@ -1321,7 +1319,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 325
+      "mentions": 324
     },
     "ide": {
       "documented": true,
@@ -1349,13 +1347,12 @@
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
-        "memory.md",
         "prompt-library.md",
         "settings.md",
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 37
+      "mentions": 33
     },
     "init-verifiers": {
       "documented": false,
@@ -1569,7 +1566,6 @@
         "how-claude-code-works.md",
         "interactive-mode.md",
         "large-codebases.md",
-        "memory.md",
         "output-styles.md",
         "overview.md",
         "permissions.md",
@@ -1584,7 +1580,7 @@
         "third-party-integrations.md",
         "web-quickstart.md"
       ],
-      "mentions": 124
+      "mentions": 114
     },
     "mobile": {
       "documented": true,
@@ -1684,7 +1680,6 @@
         "large-codebases.md",
         "managed-mcp.md",
         "mcp.md",
-        "memory.md",
         "microsoft-foundry.md",
         "model-config.md",
         "permission-modes.md",
@@ -1704,7 +1699,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 187
+      "mentions": 186
     },
     "plan": {
       "documented": true,
@@ -2049,7 +2044,6 @@
         "interactive-mode.md",
         "large-codebases.md",
         "mcp.md",
-        "memory.md",
         "model-config.md",
         "output-styles.md",
         "overview.md",
@@ -2069,7 +2063,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 272
+      "mentions": 269
     },
     "status": {
       "documented": true,
