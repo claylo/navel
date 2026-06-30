@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-30T05:23:23Z",
+      "version_at_time": "2.1.196",
+      "files_changed": [
+        "commands.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-29T21:32:47Z",
       "version_at_time": "2.1.196",
       "files_changed": [
@@ -1690,35 +1703,6 @@
         "model-config.md",
         "monitoring-usage.md",
         "third-party-integrations.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-05T20:38:15Z",
-      "version_at_time": "2.1.166",
-      "files_changed": [
-        "admin-setup.md",
-        "commands.md",
-        "discover-plugins.md",
-        "env-vars.md",
-        "headless.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "interactive-mode.md",
-        "monitoring-usage.md",
-        "plugins-reference.md",
-        "prompt-caching.md",
-        "settings.md",
-        "setup.md",
-        "skills.md",
-        "slash-commands.md",
-        "sub-agents.md",
-        "subagents.md"
       ],
       "files_added": [
         ""
