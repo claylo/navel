@@ -1026,19 +1026,24 @@
     "design": {
       "documented": true,
       "doc_files": [
+        "commands.md",
         "plugin-relevance.md"
+      ],
+      "mentions": 2
+    },
+    "design-login": {
+      "documented": true,
+      "doc_files": [
+        "commands.md"
       ],
       "mentions": 1
     },
-    "design-login": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
-    },
     "design-sync": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
+      "documented": true,
+      "doc_files": [
+        "commands.md"
+      ],
+      "mentions": 2
     },
     "desktop": {
       "documented": true,
@@ -2054,7 +2059,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 268
+      "mentions": 269
     },
     "status": {
       "documented": true,
@@ -2350,5 +2355,5 @@
       "mentions": 44
     }
   },
-  "docs_checked_at": "2026-06-29"
+  "docs_checked_at": "2026-06-30"
 }
