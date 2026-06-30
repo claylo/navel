@@ -838,7 +838,7 @@
         "subagents.md",
         "tools-reference.md"
       ],
-      "mentions": 28
+      "mentions": 29
     },
     "chrome": {
       "documented": true,
@@ -1002,7 +1002,7 @@
         "statusline.md",
         "voice-dictation.md"
       ],
-      "mentions": 50
+      "mentions": 51
     },
     "copy": {
       "documented": true,
@@ -1639,7 +1639,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 231
+      "mentions": 232
     },
     "passes": {
       "documented": true,
