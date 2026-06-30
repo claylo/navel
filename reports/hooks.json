@@ -203,9 +203,10 @@
         "changelog.md",
         "hooks-guide.md",
         "hooks.md",
+        "memory.md",
         "plugins-reference.md"
       ],
-      "mentions": 16
+      "mentions": 17
     },
     "MessageDisplay": {
       "documented": true,
@@ -328,6 +329,7 @@
         "features-overview.md",
         "hooks-guide.md",
         "hooks.md",
+        "memory.md",
         "monitoring-usage.md",
         "permission-modes.md",
         "permissions.md",
@@ -337,7 +339,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 129
+      "mentions": 131
     },
     "SessionEnd": {
       "documented": true,
