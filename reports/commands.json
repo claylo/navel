@@ -780,7 +780,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 14
+      "mentions": 17
     },
     "bg": {
       "documented": true,
@@ -790,7 +790,7 @@
         "cli-reference.md",
         "commands.md"
       ],
-      "mentions": 19
+      "mentions": 18
     },
     "branch": {
       "documented": true,
@@ -855,12 +855,13 @@
         "how-claude-code-works.md",
         "network-config.md",
         "overview.md",
+        "permission-modes.md",
         "platforms.md",
         "prompt-library.md",
         "troubleshoot-install.md",
         "vs-code.md"
       ],
-      "mentions": 29
+      "mentions": 31
     },
     "claude-in-chrome": {
       "documented": true,
@@ -892,11 +893,12 @@
         "prompt-caching.md",
         "quickstart.md",
         "remote-control.md",
+        "scheduled-tasks.md",
         "sessions.md",
         "settings.md",
         "troubleshooting.md"
       ],
-      "mentions": 70
+      "mentions": 71
     },
     "color": {
       "documented": true,
@@ -937,7 +939,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 84
+      "mentions": 85
     },
     "config": {
       "documented": true,
@@ -975,11 +977,12 @@
         "voice-dictation.md",
         "workflows.md"
       ],
-      "mentions": 120
+      "mentions": 121
     },
     "context": {
       "documented": true,
       "doc_files": [
+        "amazon-bedrock.md",
         "changelog.md",
         "claude-code-on-the-web.md",
         "claude-directory.md",
@@ -999,7 +1002,7 @@
         "statusline.md",
         "voice-dictation.md"
       ],
-      "mentions": 47
+      "mentions": 50
     },
     "copy": {
       "documented": true,
@@ -1080,7 +1083,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 78
+      "mentions": 79
     },
     "diff": {
       "documented": true,
@@ -1112,9 +1115,11 @@
         "settings.md",
         "skills.md",
         "slash-commands.md",
+        "sub-agents.md",
+        "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 51
+      "mentions": 55
     },
     "effort": {
       "documented": true,
@@ -1315,7 +1320,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 321
+      "mentions": 325
     },
     "ide": {
       "documented": true,
@@ -1533,7 +1538,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 263
+      "mentions": 270
     },
     "memory": {
       "documented": true,
@@ -1623,6 +1628,7 @@
         "permissions.md",
         "plugins-reference.md",
         "prompt-caching.md",
+        "scheduled-tasks.md",
         "settings.md",
         "skills.md",
         "slash-commands.md",
@@ -1632,7 +1638,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 226
+      "mentions": 231
     },
     "passes": {
       "documented": true,
@@ -1685,6 +1691,7 @@
         "prompt-caching.md",
         "sandbox-environments.md",
         "sandboxing.md",
+        "scheduled-tasks.md",
         "security.md",
         "server-managed-settings.md",
         "settings.md",
@@ -1696,7 +1703,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 186
+      "mentions": 187
     },
     "plan": {
       "documented": true,
@@ -1755,7 +1762,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 209
+      "mentions": 213
     },
     "powerup": {
       "documented": true,
@@ -1850,6 +1857,7 @@
         "data-usage.md",
         "desktop.md",
         "env-vars.md",
+        "errors.md",
         "feature-availability.md",
         "glossary.md",
         "goal.md",
@@ -1867,7 +1875,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 59
+      "mentions": 64
     },
     "remote-env": {
       "documented": true,
@@ -1917,7 +1925,7 @@
         "remote-control.md",
         "sessions.md"
       ],
-      "mentions": 70
+      "mentions": 71
     },
     "review": {
       "documented": true,
@@ -2051,6 +2059,7 @@
         "prompt-caching.md",
         "prompt-library.md",
         "routines.md",
+        "scheduled-tasks.md",
         "settings.md",
         "skills.md",
         "slash-commands.md",
@@ -2059,7 +2068,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 269
+      "mentions": 272
     },
     "status": {
       "documented": true,
@@ -2303,7 +2312,7 @@
         "plugins.md",
         "statusline.md"
       ],
-      "mentions": 47
+      "mentions": 48
     },
     "voice": {
       "documented": true,
@@ -2315,7 +2324,7 @@
         "settings.md",
         "voice-dictation.md"
       ],
-      "mentions": 33
+      "mentions": 34
     },
     "web-setup": {
       "documented": true,
