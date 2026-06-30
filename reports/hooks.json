@@ -216,7 +216,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 26
+      "mentions": 27
     },
     "Notification": {
       "documented": true,
@@ -224,6 +224,7 @@
         "changelog.md",
         "channels-reference.md",
         "common-workflows.md",
+        "env-vars.md",
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
@@ -233,7 +234,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 49
+      "mentions": 50
     },
     "PermissionDenied": {
       "documented": true,
@@ -429,7 +430,7 @@
         "ultrareview.md",
         "workflows.md"
       ],
-      "mentions": 151
+      "mentions": 152
     },
     "StopFailure": {
       "documented": true,
@@ -451,7 +452,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 25
+      "mentions": 26
     },
     "SubagentStop": {
       "documented": true,
@@ -517,7 +518,7 @@
         "plugins-reference.md",
         "security-guidance.md"
       ],
-      "mentions": 37
+      "mentions": 38
     },
     "WorktreeCreate": {
       "documented": true,
@@ -544,5 +545,5 @@
       "mentions": 21
     }
   },
-  "docs_checked_at": "2026-06-29"
+  "docs_checked_at": "2026-06-30"
 }
