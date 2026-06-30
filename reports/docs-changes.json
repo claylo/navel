@@ -1,6 +1,22 @@
 {
   "changes": [
     {
+      "date": "2026-06-30T16:44:31Z",
+      "version_at_time": "2.1.197",
+      "files_changed": [
+        "desktop-quickstart.md",
+        "desktop.md",
+        "setup.md",
+        "troubleshoot-install.md"
+      ],
+      "files_added": [
+        "desktop-linux.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-30T07:14:39Z",
       "version_at_time": "2.1.196",
       "files_changed": [
@@ -1721,19 +1737,6 @@
     {
       "date": "2026-06-07T00:30:53Z",
       "version_at_time": "2.1.168",
-      "files_changed": [
-        "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-06T03:04:44Z",
-      "version_at_time": "2.1.167",
       "files_changed": [
         "changelog.md"
       ],
