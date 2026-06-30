@@ -1058,6 +1058,7 @@
         "claude-directory.md",
         "commands.md",
         "computer-use.md",
+        "desktop-linux.md",
         "desktop-quickstart.md",
         "desktop-scheduled-tasks.md",
         "desktop.md",
@@ -1083,7 +1084,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 79
+      "mentions": 81
     },
     "diff": {
       "documented": true,
