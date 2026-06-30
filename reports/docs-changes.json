@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-06-30T21:33:47Z",
+      "version_at_time": "2.1.197",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        "memory.md"
+      ]
+    },
+    {
       "date": "2026-06-30T19:35:18Z",
       "version_at_time": "2.1.197",
       "files_changed": [
@@ -1752,19 +1765,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-08T05:34:51Z",
-      "version_at_time": "2.1.168",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        "routines.md"
       ],
       "files_removed": [
         ""
