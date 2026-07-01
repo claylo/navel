@@ -1485,7 +1485,6 @@
         "best-practices.md",
         "changelog.md",
         "channels-reference.md",
-        "channels.md",
         "chrome.md",
         "claude-code-on-the-web.md",
         "claude-directory.md",
@@ -1531,7 +1530,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 270
+      "mentions": 269
     },
     "memory": {
       "documented": true,
@@ -1731,7 +1730,6 @@
         "best-practices.md",
         "changelog.md",
         "channels-reference.md",
-        "channels.md",
         "cli-reference.md",
         "commands.md",
         "communications-kit.md",
@@ -1760,7 +1758,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 213
+      "mentions": 202
     },
     "powerup": {
       "documented": true,
@@ -1819,7 +1817,6 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
-        "channels.md",
         "commands.md",
         "discover-plugins.md",
         "mcp.md",
@@ -1832,7 +1829,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 28
+      "mentions": 26
     },
     "reload-skills": {
       "documented": true,
@@ -1848,7 +1845,6 @@
         "admin-setup.md",
         "authentication.md",
         "changelog.md",
-        "channels.md",
         "claude-code-on-the-web.md",
         "cli-reference.md",
         "commands.md",
@@ -1873,7 +1869,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 64
+      "mentions": 62
     },
     "remote-env": {
       "documented": true,
