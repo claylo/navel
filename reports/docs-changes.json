@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-07-01T16:50:24Z",
+      "version_at_time": "2.1.197",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        "2026-w13.md"
+      ]
+    },
+    {
       "date": "2026-07-01T09:07:02Z",
       "version_at_time": "2.1.197",
       "files_changed": [
@@ -1685,36 +1698,6 @@
         "sub-agents.md",
         "subagents.md",
         "troubleshoot-install.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-09T17:41:16Z",
-      "version_at_time": "2.1.170",
-      "files_changed": [
-        "cli-reference.md",
-        "communications-kit.md",
-        "context-window.md",
-        "costs.md",
-        "desktop-quickstart.md",
-        "desktop.md",
-        "env-vars.md",
-        "errors.md",
-        "github-actions.md",
-        "glossary.md",
-        "interactive-mode.md",
-        "mcp.md",
-        "model-config.md",
-        "prompt-caching.md",
-        "settings.md",
-        "sub-agents.md",
-        "subagents.md",
-        "zero-data-retention.md"
       ],
       "files_added": [
         ""
