@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-07-01T01:46:36Z",
+      "version_at_time": "2.1.197",
+      "files_changed": [
+        "agent-teams.md",
+        "agent-view.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-06-30T22:28:16Z",
       "version_at_time": "2.1.197",
       "files_changed": [
@@ -1748,21 +1762,6 @@
       "version_at_time": "2.1.169",
       "files_changed": [
         "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-08T20:46:30Z",
-      "version_at_time": "2.1.169",
-      "files_changed": [
-        "admin-setup.md",
-        "data-usage.md",
-        "zero-data-retention.md"
       ],
       "files_added": [
         ""
