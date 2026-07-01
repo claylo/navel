@@ -6,7 +6,6 @@
     "autocompact",
     "autofix-pr",
     "background",
-    "bg",
     "branch",
     "brief",
     "btw",
@@ -41,7 +40,6 @@
     "hooks",
     "ide",
     "init",
-    "init-verifiers",
     "insights",
     "install",
     "install-github-app",
@@ -59,6 +57,7 @@
     "pause-memory",
     "permissions",
     "plan",
+    "plan-artifact",
     "plugin",
     "powerup",
     "privacy-settings",
@@ -80,6 +79,7 @@
     "session",
     "setup-bedrock",
     "setup-vertex",
+    "skill-doctor",
     "skills",
     "status",
     "statusline",
@@ -106,15 +106,14 @@
   "descriptions": {
     "add-dir": "Add a new working directory",
     "advisor": "Let Claude consult a stronger model at key moments",
-    "agents": "Manage agent configurations",
+    "agents": "(removed) Ask Claude to create/manage subagents, or edit .claude/agents/",
     "autocompact": "Set how full the context gets before auto-summarizing",
     "autofix-pr": "Monitor and autofix any issues with the current PR",
-    "bg": "",
     "branch": "Create a branch of the current conversation at this point",
     "brief": "Toggle brief-only mode",
     "btw": "Ask a quick side question without interrupting the main conversation",
     "cd": "Move this session to a new working directory",
-    "chrome": "Open Claude in Chrome (beta) settings",
+    "chrome": "Open Claude in Chrome settings",
     "clear": "Start a new session with empty context; previous session stays on disk (resumable with /resume)",
     "color": "Set the prompt bar color for this session",
     "compact": "Free up context by summarizing the conversation so far",
@@ -122,6 +121,7 @@
     "context": "Visualize current context usage as a colored grid",
     "copy": "Copy Claude's last response to clipboard (or /copy N for the Nth-latest)",
     "daemon": "Manage background services and routines",
+    "design": "Grant or revoke Claude agent access to your Design projects",
     "design-login": "Authorize design-system access for /design-sync with your claude.ai account",
     "diff": "View uncommitted changes and per-turn diffs",
     "doctor": "Diagnose and verify your Claude Code installation and settings",
@@ -136,7 +136,6 @@
     "help": "Show help and available commands",
     "hooks": "View hook configurations for tool events",
     "ide": "Manage IDE integrations and show status",
-    "init-verifiers": "Create verifier skill(s) for automated verification of code changes",
     "insights": "Generate a report analyzing your Claude Code sessions",
     "install": "Install Claude Code native build",
     "install-github-app": "Set up Claude GitHub Actions for a repository",
@@ -163,6 +162,7 @@
     "security-review": "Complete a security review of the pending changes on the current branch",
     "setup-bedrock": "Reconfigure Amazon Bedrock authentication, region, or model pins",
     "setup-vertex": "Reconfigure Google Vertex AI authentication, project, region, or model pins",
+    "skill-doctor": "Show which loaded skills are unused and costing context",
     "skills": "List available skills",
     "status": "Show Claude Code status including version, model, account, API connectivity, and tool statuses",
     "stickers": "Order Claude Code stickers",
@@ -187,7 +187,6 @@
     "autocompact": "available",
     "autofix-pr": "available",
     "background": "available",
-    "bg": "available",
     "branch": "available",
     "brief": "available",
     "btw": "available",
@@ -222,7 +221,6 @@
     "hooks": "available",
     "ide": "available",
     "init": "available",
-    "init-verifiers": "available",
     "insights": "available",
     "install": "available",
     "install-github-app": "available",
@@ -240,6 +238,7 @@
     "pause-memory": "disabled",
     "permissions": "available",
     "plan": "available",
+    "plan-artifact": "available",
     "plugin": "available",
     "powerup": "available",
     "privacy-settings": "available",
@@ -261,6 +260,7 @@
     "session": "available",
     "setup-bedrock": "available",
     "setup-vertex": "available",
+    "skill-doctor": "available",
     "skills": "available",
     "status": "available",
     "statusline": "available",
@@ -690,6 +690,12 @@
       "added": [
         "pause-memory"
       ]
+    },
+    "2.1.198": {
+      "added": [
+        "plan-artifact",
+        "skill-doctor"
+      ]
     }
   },
   "commands_docs": {
@@ -781,16 +787,6 @@
         "subagents.md"
       ],
       "mentions": 17
-    },
-    "bg": {
-      "documented": true,
-      "doc_files": [
-        "agent-view.md",
-        "changelog.md",
-        "cli-reference.md",
-        "commands.md"
-      ],
-      "mentions": 18
     },
     "branch": {
       "documented": true,
@@ -1357,11 +1353,6 @@
       ],
       "mentions": 37
     },
-    "init-verifiers": {
-      "documented": false,
-      "doc_files": [],
-      "mentions": 0
-    },
     "insights": {
       "documented": true,
       "doc_files": [
@@ -1728,6 +1719,11 @@
       ],
       "mentions": 38
     },
+    "plan-artifact": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
     "plugin": {
       "documented": true,
       "doc_files": [
@@ -2016,6 +2012,11 @@
         "google-vertex-ai.md"
       ],
       "mentions": 3
+    },
+    "skill-doctor": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "skills": {
       "documented": true,
