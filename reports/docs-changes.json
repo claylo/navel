@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-07-01T19:35:34Z",
+      "version_at_time": "2.1.198",
+      "files_changed": [
+        "env-vars.md",
+        "settings.md",
+        "vs-code.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-01T18:38:47Z",
       "version_at_time": "2.1.198",
       "files_changed": [
@@ -1650,32 +1665,6 @@
       "version_at_time": "2.1.170",
       "files_changed": [
         "settings.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-09T20:47:03Z",
-      "version_at_time": "2.1.170",
-      "files_changed": [
-        "agent-view.md",
-        "auto-mode-config.md",
-        "claude-code-on-the-web.md",
-        "claude-directory.md",
-        "claude-platform-on-aws.md",
-        "env-vars.md",
-        "hooks-guide.md",
-        "hooks.md",
-        "large-codebases.md",
-        "model-config.md",
-        "prompt-caching.md",
-        "settings.md",
-        "setup.md",
-        "third-party-integrations.md"
       ],
       "files_added": [
         ""
