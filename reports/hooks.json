@@ -562,7 +562,6 @@
         "champion-kit.md",
         "changelog.md",
         "channels-reference.md",
-        "channels.md",
         "chrome.md",
         "claude-apps-gateway-spend-limits.md",
         "claude-code-on-the-web.md",
@@ -629,7 +628,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 944
+      "mentions": 937
     }
   },
   "docs_checked_at": "2026-07-01"
