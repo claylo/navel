@@ -1,6 +1,23 @@
 {
   "changes": [
     {
+      "date": "2026-07-01T18:38:47Z",
+      "version_at_time": "2.1.198",
+      "files_changed": [
+        "advisor.md",
+        "env-vars.md",
+        "llm-gateway-protocol.md",
+        "monitoring-usage.md",
+        "tools-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-01T17:37:59Z",
       "version_at_time": "2.1.198",
       "files_changed": [
@@ -1659,32 +1676,6 @@
         "settings.md",
         "setup.md",
         "third-party-integrations.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-09T19:42:24Z",
-      "version_at_time": "2.1.170",
-      "files_changed": [
-        "agent-teams.md",
-        "changelog.md",
-        "channels-reference.md",
-        "env-vars.md",
-        "errors.md",
-        "monitoring-usage.md",
-        "overview.md",
-        "permission-modes.md",
-        "permissions.md",
-        "remote-control.md",
-        "sandboxing.md",
-        "settings.md",
-        "troubleshoot-install.md",
-        "worktrees.md"
       ],
       "files_added": [
         ""
