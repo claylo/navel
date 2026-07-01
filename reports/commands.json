@@ -1383,7 +1383,7 @@
         "setup.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 44
+      "mentions": 45
     },
     "install-github-app": {
       "documented": true,
@@ -2365,5 +2365,5 @@
       "mentions": 44
     }
   },
-  "docs_checked_at": "2026-06-30"
+  "docs_checked_at": "2026-07-01"
 }
