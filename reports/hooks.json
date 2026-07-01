@@ -29,7 +29,8 @@
     "UserPromptExpansion",
     "UserPromptSubmit",
     "WorktreeCreate",
-    "WorktreeRemove"
+    "WorktreeRemove",
+    "terminal"
   ],
   "hooks_history": {
     "2.0.0": {
@@ -137,6 +138,11 @@
     "2.1.152": {
       "added": [
         "MessageDisplay"
+      ]
+    },
+    "2.1.198": {
+      "added": [
+        "terminal"
       ]
     }
   },
@@ -543,7 +549,88 @@
         "worktrees.md"
       ],
       "mentions": 21
+    },
+    "terminal": {
+      "documented": true,
+      "doc_files": [
+        "admin-setup.md",
+        "agent-teams.md",
+        "agent-view.md",
+        "artifacts.md",
+        "authentication.md",
+        "best-practices.md",
+        "champion-kit.md",
+        "changelog.md",
+        "channels-reference.md",
+        "channels.md",
+        "chrome.md",
+        "claude-apps-gateway-spend-limits.md",
+        "claude-code-on-the-web.md",
+        "claude-directory.md",
+        "cli-reference.md",
+        "code-review.md",
+        "commands.md",
+        "common-workflows.md",
+        "communications-kit.md",
+        "computer-use.md",
+        "context-window.md",
+        "deep-links.md",
+        "desktop-linux.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "devcontainer.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "errors.md",
+        "features-overview.md",
+        "fullscreen.md",
+        "github-actions.md",
+        "github-enterprise-server.md",
+        "glossary.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "keybindings.md",
+        "llm-gateway-connect.md",
+        "llm-gateway-rollout.md",
+        "mcp-quickstart.md",
+        "mcp.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "overview.md",
+        "permission-modes.md",
+        "platforms.md",
+        "plugin-dependencies.md",
+        "plugin-hints.md",
+        "plugin-marketplaces.md",
+        "prompt-caching.md",
+        "prompt-library.md",
+        "quickstart.md",
+        "remote-control.md",
+        "routines.md",
+        "scheduled-tasks.md",
+        "sessions.md",
+        "settings.md",
+        "setup.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md",
+        "terminal-config.md",
+        "tools-reference.md",
+        "troubleshoot-install.md",
+        "troubleshooting.md",
+        "ultraplan.md",
+        "ultrareview.md",
+        "voice-dictation.md",
+        "vs-code.md",
+        "web-quickstart.md",
+        "worktrees.md",
+        "zero-data-retention.md"
+      ],
+      "mentions": 943
     }
   },
-  "docs_checked_at": "2026-06-30"
+  "docs_checked_at": "2026-07-01"
 }
