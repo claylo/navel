@@ -3,7 +3,7 @@
 Auto-generated tracking data for Claude Code versions, hooks, commands, and environment variables.
 
 <details>
-<summary>Hooks (30)</summary>
+<summary>Hooks (31)</summary>
 
 | Hook | Since | Documented |
 |------|-------|------------|
@@ -37,6 +37,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | UserPromptSubmit | 2.0.0 | yes |
 | WorktreeCreate | 2.1.50 | yes |
 | WorktreeRemove | 2.1.50 | yes |
+| terminal | 2.1.198 | yes |
 
 </details>
 
@@ -47,16 +48,15 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 |---------|-------------|-------|--------|------------|
 | /add-dir | Add a new working directory | 2.0.0 | available | yes |
 | /advisor | Let Claude consult a stronger model at key moments | 2.1.83 | available | yes |
-| /agents | Manage agent configurations | 2.0.0 | available | yes |
+| /agents | (removed) Ask Claude to create/manage subagents, or edit ... | 2.0.0 | available | yes |
 | **/autocompact** | Set how full the context gets before auto-summarizing | 2.1.89 | available | **no** |
 | /autofix-pr | Monitor and autofix any issues with the current PR | 2.1.94 | available | yes |
 | /background | — | 2.1.119 | available | yes |
-| /bg |  | 2.1.119 | available | yes |
 | /branch | Create a branch of the current conversation at this point | 2.1.77 | available | yes |
 | **/brief** | Toggle brief-only mode | 2.1.72 | available | **no** |
 | /btw | Ask a quick side question without interrupting the main c... | 2.1.6 | available | yes |
 | /cd | Move this session to a new working directory | 2.1.169 | available | yes |
-| /chrome | Open Claude in Chrome (beta) settings | 2.0.71 | available | yes |
+| /chrome | Open Claude in Chrome settings | 2.0.71 | available | yes |
 | /claude-in-chrome | — | 2.1.7 | available | yes |
 | /clear | Start a new session with empty context; previous session ... | 2.0.0 | available | yes |
 | /color | Set the prompt bar color for this session | 2.1.7 | available | yes |
@@ -66,7 +66,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /copy | Copy Claude's last response to clipboard (or /copy N for ... | 2.1.20 | available | yes |
 | **/cowork-plugin** | — | 2.1.163 | available | **no** |
 | /daemon | Manage background services and routines | 2.1.119 | available | yes |
-| /design | — | 2.1.181 | available | yes |
+| /design | Grant or revoke Claude agent access to your Design projects | 2.1.181 | available | yes |
 | /design-login | Authorize design-system access for /design-sync with your... | 2.1.178 | available | yes |
 | /design-sync | — | 2.1.160 | available | yes |
 | /desktop | — | 2.1.42 | available | yes |
@@ -86,7 +86,6 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /hooks | View hook configurations for tool events | 2.0.0 | available | yes |
 | /ide | Manage IDE integrations and show status | 2.0.0 | available | yes |
 | /init | — | 2.0.0 | available | yes |
-| **/init-verifiers** | Create verifier skill(s) for automated verification of co... | 2.1.51 | available | **no** |
 | /insights | Generate a report analyzing your Claude Code sessions | 2.1.30 | available | yes |
 | /install | Install Claude Code native build | 2.0.0 | available | yes |
 | /install-github-app | Set up Claude GitHub Actions for a repository | 2.0.0 | available | yes |
@@ -104,6 +103,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/pause-memory** | — | 2.1.187 | *disabled* | **no** |
 | /permissions | — | 2.0.0 | available | yes |
 | /plan | Enable plan mode or view the current session plan | 2.0.56 | available | yes |
+| **/plan-artifact** | — | 2.1.198 | available | **no** |
 | /plugin | — | 2.0.12 | available | yes |
 | /powerup | Discover Claude Code features through quick interactive l... | 2.1.90 | available | yes |
 | /privacy-settings | View and update your privacy settings | 2.0.0 | available | yes |
@@ -125,6 +125,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /session | — | 2.1.15 | available | yes |
 | /setup-bedrock | Reconfigure Amazon Bedrock authentication, region, or mod... | 2.1.92 | available | yes |
 | /setup-vertex | Reconfigure Google Vertex AI authentication, project, reg... | 2.1.98 | available | yes |
+| **/skill-doctor** | Show which loaded skills are unused and costing context | 2.1.198 | available | **no** |
 | /skills | List available skills | 2.0.73 | available | yes |
 | /status | Show Claude Code status including version, model, account... | 2.0.0 | available | yes |
 | /statusline | — | 2.0.0 | available | yes |
@@ -746,6 +747,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.198 | +terminal | +plan-artifact, +skill-doctor | — |
 | 2.1.187 | — | +pause-memory | — |
 | 2.1.182 | — | +migrate | — |
 | 2.1.181 | — | +design | — |
