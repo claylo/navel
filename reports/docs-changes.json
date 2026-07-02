@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-07-02T18:34:06Z",
+      "version_at_time": "2.1.199",
+      "files_changed": [
+        "desktop-linux.md",
+        "interactive-mode.md",
+        "keybindings.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        "2026-w16.md"
+      ]
+    },
+    {
       "date": "2026-07-02T17:35:23Z",
       "version_at_time": "2.1.198",
       "files_changed": [
@@ -1635,27 +1650,6 @@
       ],
       "files_removed": [
         ""
-      ]
-    },
-    {
-      "date": "2026-06-10T18:10:22Z",
-      "version_at_time": "2.1.172",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "claude-directory.md",
-        "claude-platform-on-aws.md",
-        "context-window.md",
-        "google-vertex-ai.md",
-        "microsoft-foundry.md",
-        "plugins.md",
-        "prompt-library.md",
-        "third-party-integrations.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        "tool-search.md"
       ]
     }
   ]
