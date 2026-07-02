@@ -42,7 +42,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (102)</summary>
+<summary>Commands (105)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -67,7 +67,9 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/cowork-plugin** | — | 2.1.163 | available | **no** |
 | /daemon | Manage background services and routines | 2.1.119 | available | yes |
 | /design | Grant or revoke Claude agent access to your Design projects | 2.1.181 | available | yes |
+| **/design-consent** | Grant Claude agent access to your Design projects | 2.1.199 | available | **no** |
 | /design-login | Authorize design-system access for /design-sync with your... | 2.1.178 | available | yes |
+| **/design-revoke** | Revoke Claude agent access to your Design projects | 2.1.199 | available | **no** |
 | /design-sync | — | 2.1.160 | available | yes |
 | /desktop | — | 2.1.42 | available | yes |
 | /diff | View uncommitted changes and per-turn diffs | 2.1.50 | available | yes |
@@ -124,6 +126,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /security-review | Complete a security review of the pending changes on the ... | 2.0.0 | available | yes |
 | /session | — | 2.1.15 | available | yes |
 | /setup-bedrock | Reconfigure Amazon Bedrock authentication, region, or mod... | 2.1.92 | available | yes |
+| **/setup-cowork** | — | 2.1.199 | available | **no** |
 | /setup-vertex | Reconfigure Google Vertex AI authentication, project, reg... | 2.1.98 | available | yes |
 | **/skill-doctor** | Show which loaded skills are unused and costing context | 2.1.198 | available | **no** |
 | /skills | List available skills | 2.0.73 | available | yes |
@@ -747,6 +750,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.199 | — | +design-consent, +design-revoke, +setup-cowork | — |
 | 2.1.198 | +terminal | +plan-artifact, +skill-doctor | — |
 | 2.1.187 | — | +pause-memory | — |
 | 2.1.182 | — | +migrate | — |
