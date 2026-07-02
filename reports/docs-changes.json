@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-07-02T22:24:20Z",
+      "version_at_time": "2.1.199",
+      "files_changed": [
+        "workflows.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-02T19:32:25Z",
       "version_at_time": "2.1.199",
       "files_changed": [
@@ -1630,20 +1643,6 @@
       "version_at_time": "2.1.172",
       "files_changed": [
         "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-10T23:32:55Z",
-      "version_at_time": "2.1.172",
-      "files_changed": [
-        "model-config.md",
-        "plugins.md"
       ],
       "files_added": [
         ""
