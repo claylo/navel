@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-07-02T19:32:25Z",
+      "version_at_time": "2.1.199",
+      "files_changed": [
+        "plugins.md"
+      ],
+      "files_added": [
+        "2026-w16.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-02T18:34:06Z",
       "version_at_time": "2.1.199",
       "files_changed": [
@@ -1634,19 +1647,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-10T19:50:01Z",
-      "version_at_time": "2.1.172",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        "tool-search.md"
       ],
       "files_removed": [
         ""
