@@ -240,7 +240,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 50
+      "mentions": 51
     },
     "PermissionDenied": {
       "documented": true,
@@ -632,5 +632,5 @@
       "mentions": 944
     }
   },
-  "docs_checked_at": "2026-07-01"
+  "docs_checked_at": "2026-07-02"
 }
