@@ -2188,12 +2188,13 @@
         "commands.md",
         "github-enterprise-server.md",
         "interactive-mode.md",
+        "keybindings.md",
         "statusline.md",
         "tools-reference.md",
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 18
+      "mentions": 21
     },
     "team-onboarding": {
       "documented": true,
