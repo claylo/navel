@@ -757,7 +757,7 @@
         "workflows.md",
         "worktrees.md"
       ],
-      "mentions": 87
+      "mentions": 88
     },
     "autocompact": {
       "documented": false,
@@ -797,7 +797,7 @@
         "sessions.md",
         "statusline.md"
       ],
-      "mentions": 18
+      "mentions": 19
     },
     "brief": {
       "documented": false,
@@ -1081,7 +1081,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 81
+      "mentions": 82
     },
     "diff": {
       "documented": true,
@@ -1091,7 +1091,7 @@
         "permissions.md",
         "plugins-reference.md"
       ],
-      "mentions": 5
+      "mentions": 6
     },
     "doctor": {
       "documented": true,
@@ -1447,7 +1447,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 92
+      "mentions": 94
     },
     "logout": {
       "documented": true,
@@ -2367,5 +2367,5 @@
       "mentions": 44
     }
   },
-  "docs_checked_at": "2026-07-01"
+  "docs_checked_at": "2026-07-02"
 }
