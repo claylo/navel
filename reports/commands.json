@@ -21,7 +21,9 @@
     "cowork-plugin",
     "daemon",
     "design",
+    "design-consent",
     "design-login",
+    "design-revoke",
     "design-sync",
     "desktop",
     "diff",
@@ -78,6 +80,7 @@
     "security-review",
     "session",
     "setup-bedrock",
+    "setup-cowork",
     "setup-vertex",
     "skill-doctor",
     "skills",
@@ -122,7 +125,9 @@
     "copy": "Copy Claude's last response to clipboard (or /copy N for the Nth-latest)",
     "daemon": "Manage background services and routines",
     "design": "Grant or revoke Claude agent access to your Design projects",
+    "design-consent": "Grant Claude agent access to your Design projects",
     "design-login": "Authorize design-system access for /design-sync with your claude.ai account",
+    "design-revoke": "Revoke Claude agent access to your Design projects",
     "diff": "View uncommitted changes and per-turn diffs",
     "doctor": "Diagnose and verify your Claude Code installation and settings",
     "effort": "Set effort level for model usage",
@@ -202,7 +207,9 @@
     "cowork-plugin": "available",
     "daemon": "available",
     "design": "available",
+    "design-consent": "available",
     "design-login": "available",
+    "design-revoke": "available",
     "design-sync": "available",
     "desktop": "available",
     "diff": "available",
@@ -259,6 +266,7 @@
     "security-review": "available",
     "session": "available",
     "setup-bedrock": "available",
+    "setup-cowork": "available",
     "setup-vertex": "available",
     "skill-doctor": "available",
     "skills": "available",
@@ -696,6 +704,13 @@
         "plan-artifact",
         "skill-doctor"
       ]
+    },
+    "2.1.199": {
+      "added": [
+        "design-consent",
+        "design-revoke",
+        "setup-cowork"
+      ]
     }
   },
   "commands_docs": {
@@ -1031,12 +1046,22 @@
       ],
       "mentions": 2
     },
+    "design-consent": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
+    },
     "design-login": {
       "documented": true,
       "doc_files": [
         "commands.md"
       ],
       "mentions": 1
+    },
+    "design-revoke": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "design-sync": {
       "documented": true,
@@ -2004,6 +2029,11 @@
         "commands.md"
       ],
       "mentions": 3
+    },
+    "setup-cowork": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "setup-vertex": {
       "documented": true,
