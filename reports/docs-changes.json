@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-07-02T03:12:25Z",
+      "version_at_time": "2.1.198",
+      "files_changed": [
+        "errors.md",
+        "model-config.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-02T01:41:26Z",
       "version_at_time": "2.1.198",
       "files_changed": [
@@ -1640,19 +1654,6 @@
       ],
       "files_removed": [
         ""
-      ]
-    },
-    {
-      "date": "2026-06-10T01:43:50Z",
-      "version_at_time": "2.1.170",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        "setup.md"
       ]
     }
   ]
