@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-07-02T17:35:23Z",
+      "version_at_time": "2.1.198",
+      "files_changed": [
+        "artifacts.md",
+        "feature-availability.md",
+        "tools-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-02T03:12:25Z",
       "version_at_time": "2.1.198",
       "files_changed": [
@@ -1641,19 +1656,6 @@
       ],
       "files_removed": [
         "tool-search.md"
-      ]
-    },
-    {
-      "date": "2026-06-10T03:05:18Z",
-      "version_at_time": "2.1.170",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        "setup.md"
-      ],
-      "files_removed": [
-        ""
       ]
     }
   ]
