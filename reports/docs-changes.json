@@ -1,6 +1,62 @@
 {
   "changes": [
     {
+      "date": "2026-07-03T03:03:52Z",
+      "version_at_time": "2.1.199",
+      "files_changed": [
+        "admin-setup.md",
+        "advisor.md",
+        "agent-teams.md",
+        "agent-view.md",
+        "agents.md",
+        "amazon-bedrock.md",
+        "auto-mode-config.md",
+        "chrome.md",
+        "claude-apps-gateway-config.md",
+        "claude-apps-gateway-deploy.md",
+        "claude-apps-gateway.md",
+        "claude-code-on-the-web.md",
+        "claude-platform-on-aws.md",
+        "cli-reference.md",
+        "commands.md",
+        "context-window.md",
+        "debug-your-config.md",
+        "desktop.md",
+        "env-vars.md",
+        "errors.md",
+        "fullscreen.md",
+        "gateways.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "mcp.md",
+        "memory.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "permission-modes.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "sandboxing.md",
+        "server-managed-settings.md",
+        "sessions.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slash-commands.md",
+        "sub-agents.md",
+        "subagents.md",
+        "third-party-integrations.md",
+        "tools-reference.md",
+        "worktrees.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-03T00:27:39Z",
       "version_at_time": "2.1.199",
       "files_changed": [
@@ -1635,19 +1691,6 @@
         "microsoft-foundry.md",
         "prompt-library.md",
         "third-party-integrations.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-11T09:27:16Z",
-      "version_at_time": "2.1.173",
-      "files_changed": [
-        "changelog.md"
       ],
       "files_added": [
         ""
