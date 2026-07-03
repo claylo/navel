@@ -769,7 +769,7 @@
         "workflows.md",
         "worktrees.md"
       ],
-      "mentions": 81
+      "mentions": 82
     },
     "autocompact": {
       "documented": false,
@@ -991,7 +991,7 @@
         "vs-code.md",
         "workflows.md"
       ],
-      "mentions": 122
+      "mentions": 123
     },
     "context": {
       "documented": true,
@@ -1566,7 +1566,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 275
+      "mentions": 276
     },
     "memory": {
       "documented": true,
