@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "date": "2026-07-03T00:27:39Z",
+      "version_at_time": "2.1.199",
+      "files_changed": [
+        "advisor.md",
+        "agent-view.md",
+        "changelog.md",
+        "costs.md",
+        "env-vars.md",
+        "permission-modes.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-02T22:24:20Z",
       "version_at_time": "2.1.199",
       "files_changed": [
@@ -1628,19 +1646,6 @@
     {
       "date": "2026-06-11T09:27:16Z",
       "version_at_time": "2.1.173",
-      "files_changed": [
-        "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-11T01:50:30Z",
-      "version_at_time": "2.1.172",
       "files_changed": [
         "changelog.md"
       ],
