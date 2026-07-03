@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-07-03T23:24:26Z",
+      "version_at_time": "2.1.201",
+      "files_changed": [
+        "setup.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        "llm-gateway-rollout.md"
+      ]
+    },
+    {
       "date": "2026-07-03T19:32:22Z",
       "version_at_time": "2.1.200",
       "files_changed": [
@@ -1666,21 +1679,6 @@
       "files_changed": [
         "jetbrains.md",
         "vs-code.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-12T00:35:30Z",
-      "version_at_time": "2.1.174",
-      "files_changed": [
-        "code-review.md",
-        "mcp.md",
-        "quickstart.md"
       ],
       "files_added": [
         ""
