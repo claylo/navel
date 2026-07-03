@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-07-03T15:40:16Z",
+      "version_at_time": "2.1.200",
+      "files_changed": [
+        "env-vars.md",
+        "llm-gateway-protocol.md",
+        "permissions.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-03T03:03:52Z",
       "version_at_time": "2.1.199",
       "files_changed": [
@@ -1671,26 +1686,6 @@
         "sessions.md",
         "troubleshoot-install.md",
         "vs-code.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-11T18:58:57Z",
-      "version_at_time": "2.1.173",
-      "files_changed": [
-        "amazon-bedrock.md",
-        "claude-directory.md",
-        "claude-platform-on-aws.md",
-        "context-window.md",
-        "google-vertex-ai.md",
-        "microsoft-foundry.md",
-        "prompt-library.md",
-        "third-party-integrations.md"
       ],
       "files_added": [
         ""
