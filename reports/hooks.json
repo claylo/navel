@@ -227,6 +227,7 @@
     "Notification": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "changelog.md",
         "channels-reference.md",
         "common-workflows.md",
@@ -240,7 +241,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 51
+      "mentions": 53
     },
     "PermissionDenied": {
       "documented": true,
@@ -376,7 +377,7 @@
         "tools-reference.md",
         "web-quickstart.md"
       ],
-      "mentions": 69
+      "mentions": 71
     },
     "Setup": {
       "documented": true,
@@ -402,7 +403,7 @@
         "sandbox-environments.md",
         "web-quickstart.md"
       ],
-      "mentions": 58
+      "mentions": 60
     },
     "Stop": {
       "documented": true,
@@ -436,7 +437,7 @@
         "ultrareview.md",
         "workflows.md"
       ],
-      "mentions": 152
+      "mentions": 151
     },
     "StopFailure": {
       "documented": true,
@@ -458,7 +459,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 27
+      "mentions": 29
     },
     "SubagentStop": {
       "documented": true,
@@ -537,7 +538,7 @@
         "plugins-reference.md",
         "worktrees.md"
       ],
-      "mentions": 35
+      "mentions": 37
     },
     "WorktreeRemove": {
       "documented": true,
@@ -614,6 +615,8 @@
         "sessions.md",
         "settings.md",
         "setup.md",
+        "skills.md",
+        "slash-commands.md",
         "statusline.md",
         "sub-agents.md",
         "subagents.md",
@@ -629,7 +632,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 943
+      "mentions": 957
     }
   },
   "docs_checked_at": "2026-07-03"
