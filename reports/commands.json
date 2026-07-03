@@ -801,7 +801,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 17
+      "mentions": 18
     },
     "branch": {
       "documented": true,
@@ -919,7 +919,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 9
+      "mentions": 10
     },
     "compact": {
       "documented": true,
@@ -1214,7 +1214,7 @@
         "monitoring-usage.md",
         "settings.md"
       ],
-      "mentions": 30
+      "mentions": 31
     },
     "feedback": {
       "documented": true,
@@ -1343,7 +1343,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 325
+      "mentions": 326
     },
     "ide": {
       "documented": true,
@@ -1656,7 +1656,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 232
+      "mentions": 233
     },
     "passes": {
       "documented": true,
@@ -2398,5 +2398,5 @@
       "mentions": 45
     }
   },
-  "docs_checked_at": "2026-07-02"
+  "docs_checked_at": "2026-07-03"
 }
