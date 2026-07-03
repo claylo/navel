@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-07-03T19:32:22Z",
+      "version_at_time": "2.1.200",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-03T15:40:16Z",
       "version_at_time": "2.1.200",
       "files_changed": [
@@ -1668,24 +1681,6 @@
         "code-review.md",
         "mcp.md",
         "quickstart.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-11T23:32:42Z",
-      "version_at_time": "2.1.174",
-      "files_changed": [
-        "cli-reference.md",
-        "headless.md",
-        "monitoring-usage.md",
-        "sessions.md",
-        "troubleshoot-install.md",
-        "vs-code.md"
       ],
       "files_added": [
         ""
