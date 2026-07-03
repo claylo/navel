@@ -376,7 +376,7 @@
         "tools-reference.md",
         "web-quickstart.md"
       ],
-      "mentions": 68
+      "mentions": 69
     },
     "Setup": {
       "documented": true,
@@ -402,7 +402,7 @@
         "sandbox-environments.md",
         "web-quickstart.md"
       ],
-      "mentions": 57
+      "mentions": 58
     },
     "Stop": {
       "documented": true,
@@ -458,7 +458,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 26
+      "mentions": 27
     },
     "SubagentStop": {
       "documented": true,
@@ -629,8 +629,8 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 942
+      "mentions": 943
     }
   },
-  "docs_checked_at": "2026-07-02"
+  "docs_checked_at": "2026-07-03"
 }
