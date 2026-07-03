@@ -756,9 +756,6 @@
         "changelog.md",
         "claude-code-on-the-web.md",
         "commands.md",
-        "debug-your-config.md",
-        "desktop.md",
-        "how-claude-code-works.md",
         "model-config.md",
         "permissions.md",
         "plugin-marketplaces.md",
@@ -772,7 +769,7 @@
         "workflows.md",
         "worktrees.md"
       ],
-      "mentions": 88
+      "mentions": 81
     },
     "autocompact": {
       "documented": false,
@@ -801,7 +798,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 18
+      "mentions": 21
     },
     "branch": {
       "documented": true,
@@ -847,9 +844,10 @@
         "sessions.md",
         "sub-agents.md",
         "subagents.md",
-        "tools-reference.md"
+        "tools-reference.md",
+        "worktrees.md"
       ],
-      "mentions": 29
+      "mentions": 30
     },
     "chrome": {
       "documented": true,
@@ -887,6 +885,7 @@
         "best-practices.md",
         "changelog.md",
         "checkpointing.md",
+        "chrome.md",
         "claude-code-on-the-web.md",
         "commands.md",
         "context-window.md",
@@ -907,19 +906,22 @@
         "scheduled-tasks.md",
         "sessions.md",
         "settings.md",
+        "sub-agents.md",
+        "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 71
+      "mentions": 76
     },
     "color": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "changelog.md",
         "commands.md",
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 10
+      "mentions": 12
     },
     "compact": {
       "documented": true,
@@ -950,7 +952,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 85
+      "mentions": 86
     },
     "config": {
       "documented": true,
@@ -1007,6 +1009,7 @@
         "hooks.md",
         "how-claude-code-works.md",
         "keybindings.md",
+        "plugins.md",
         "remote-control.md",
         "sessions.md",
         "skills.md",
@@ -1014,7 +1017,7 @@
         "statusline.md",
         "voice-dictation.md"
       ],
-      "mentions": 51
+      "mentions": 53
     },
     "copy": {
       "documented": true,
@@ -1034,9 +1037,10 @@
       "documented": true,
       "doc_files": [
         "agent-view.md",
-        "changelog.md"
+        "changelog.md",
+        "cli-reference.md"
       ],
-      "mentions": 3
+      "mentions": 4
     },
     "design": {
       "documented": true,
@@ -1106,7 +1110,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 82
+      "mentions": 83
     },
     "diff": {
       "documented": true,
@@ -1135,6 +1139,7 @@
         "monitoring-usage.md",
         "plugin-dependencies.md",
         "plugins-reference.md",
+        "sandboxing.md",
         "settings.md",
         "skills.md",
         "slash-commands.md",
@@ -1142,11 +1147,12 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 55
+      "mentions": 57
     },
     "effort": {
       "documented": true,
       "doc_files": [
+        "agent-teams.md",
         "agent-view.md",
         "changelog.md",
         "commands.md",
@@ -1167,7 +1173,7 @@
         "subagents.md",
         "workflows.md"
       ],
-      "mentions": 62
+      "mentions": 64
     },
     "exit": {
       "documented": true,
@@ -1178,7 +1184,7 @@
         "quickstart.md",
         "remote-control.md"
       ],
-      "mentions": 10
+      "mentions": 12
     },
     "export": {
       "documented": true,
@@ -1204,6 +1210,7 @@
     "fast": {
       "documented": true,
       "doc_files": [
+        "agent-teams.md",
         "amazon-bedrock.md",
         "changelog.md",
         "commands.md",
@@ -1212,9 +1219,11 @@
         "microsoft-foundry.md",
         "model-config.md",
         "monitoring-usage.md",
-        "settings.md"
+        "settings.md",
+        "sub-agents.md",
+        "subagents.md"
       ],
-      "mentions": 31
+      "mentions": 34
     },
     "feedback": {
       "documented": true,
@@ -1343,7 +1352,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 326
+      "mentions": 328
     },
     "ide": {
       "documented": true,
@@ -1472,7 +1481,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 94
+      "mentions": 102
     },
     "logout": {
       "documented": true,
@@ -1540,6 +1549,7 @@
         "mcp.md",
         "monitoring-usage.md",
         "overview.md",
+        "permission-modes.md",
         "platforms.md",
         "plugins-reference.md",
         "plugins.md",
@@ -1556,7 +1566,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 270
+      "mentions": 275
     },
     "memory": {
       "documented": true,
@@ -1616,6 +1626,7 @@
     "model": {
       "documented": true,
       "doc_files": [
+        "admin-setup.md",
         "advisor.md",
         "agent-teams.md",
         "agent-view.md",
@@ -1656,7 +1667,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 233
+      "mentions": 250
     },
     "passes": {
       "documented": true,
@@ -1721,7 +1732,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 188
+      "mentions": 190
     },
     "plan": {
       "documented": true,
@@ -1884,8 +1895,10 @@
         "feature-availability.md",
         "glossary.md",
         "goal.md",
+        "hooks.md",
         "how-claude-code-works.md",
         "llm-gateway-connect.md",
+        "mcp.md",
         "overview.md",
         "permission-modes.md",
         "permissions.md",
@@ -1893,12 +1906,14 @@
         "remote-control.md",
         "security.md",
         "settings.md",
+        "skills.md",
+        "slash-commands.md",
         "tools-reference.md",
         "ultraplan.md",
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 64
+      "mentions": 69
     },
     "remote-env": {
       "documented": true,
@@ -1948,7 +1963,7 @@
         "remote-control.md",
         "sessions.md"
       ],
-      "mentions": 71
+      "mentions": 72
     },
     "review": {
       "documented": true,
@@ -2101,7 +2116,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 272
+      "mentions": 277
     },
     "status": {
       "documented": true,
