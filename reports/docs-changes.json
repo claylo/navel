@@ -1,6 +1,80 @@
 {
   "changes": [
     {
+      "date": "2026-07-04T03:03:43Z",
+      "version_at_time": "2.1.201",
+      "files_changed": [
+        "admin-setup.md",
+        "advisor.md",
+        "agent-view.md",
+        "amazon-bedrock.md",
+        "artifacts.md",
+        "authentication.md",
+        "auto-mode-config.md",
+        "channels.md",
+        "chrome.md",
+        "claude-apps-gateway-config.md",
+        "claude-apps-gateway-deploy.md",
+        "claude-apps-gateway-on-gcp.md",
+        "claude-apps-gateway-spend-limits.md",
+        "claude-apps-gateway.md",
+        "claude-code-on-the-web.md",
+        "claude-platform-on-aws.md",
+        "cli-reference.md",
+        "code-review.md",
+        "commands.md",
+        "computer-use.md",
+        "costs.md",
+        "data-usage.md",
+        "desktop.md",
+        "devcontainer.md",
+        "env-vars.md",
+        "errors.md",
+        "fast-mode.md",
+        "feature-availability.md",
+        "github-actions.md",
+        "gitlab-ci-cd.md",
+        "google-vertex-ai.md",
+        "headless.md",
+        "legal-and-compliance.md",
+        "llm-gateway-connect.md",
+        "llm-gateway-protocol.md",
+        "llm-gateway-rollout.md",
+        "llm-gateway.md",
+        "mcp.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "permission-modes.md",
+        "platforms.md",
+        "prompt-caching.md",
+        "quickstart.md",
+        "remote-control.md",
+        "routines.md",
+        "scheduled-tasks.md",
+        "server-managed-settings.md",
+        "settings.md",
+        "setup.md",
+        "third-party-integrations.md",
+        "tools-reference.md",
+        "troubleshoot-install.md",
+        "troubleshooting.md",
+        "ultraplan.md",
+        "ultrareview.md",
+        "voice-dictation.md",
+        "vs-code.md",
+        "workflows.md",
+        "zero-data-retention.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-04T00:34:22Z",
       "version_at_time": "2.1.201",
       "files_changed": [
@@ -1695,19 +1769,6 @@
       "version_at_time": "2.1.175",
       "files_changed": [
         "hooks.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-12T09:22:41Z",
-      "version_at_time": "2.1.175",
-      "files_changed": [
-        "changelog.md"
       ],
       "files_added": [
         ""
