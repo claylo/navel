@@ -1650,7 +1650,6 @@
         "how-claude-code-works.md",
         "llm-gateway-connect.md",
         "llm-gateway-protocol.md",
-        "llm-gateway-rollout.md",
         "model-config.md",
         "monitoring-usage.md",
         "permission-modes.md",
@@ -1667,7 +1666,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 250
+      "mentions": 241
     },
     "passes": {
       "documented": true,
@@ -2136,7 +2135,6 @@
         "headless.md",
         "hooks.md",
         "llm-gateway-connect.md",
-        "llm-gateway-rollout.md",
         "mcp.md",
         "model-config.md",
         "monitoring-usage.md",
@@ -2147,7 +2145,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 61
+      "mentions": 59
     },
     "statusline": {
       "documented": true,
@@ -2413,5 +2411,5 @@
       "mentions": 45
     }
   },
-  "docs_checked_at": "2026-07-03"
+  "docs_checked_at": "2026-07-04"
 }
