@@ -987,11 +987,12 @@
         "settings.md",
         "setup.md",
         "terminal-config.md",
+        "tools-reference.md",
         "voice-dictation.md",
         "vs-code.md",
         "workflows.md"
       ],
-      "mentions": 123
+      "mentions": 125
     },
     "context": {
       "documented": true,
@@ -1017,7 +1018,7 @@
         "statusline.md",
         "voice-dictation.md"
       ],
-      "mentions": 53
+      "mentions": 54
     },
     "copy": {
       "documented": true,
@@ -1110,7 +1111,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 83
+      "mentions": 85
     },
     "diff": {
       "documented": true,
@@ -1650,6 +1651,7 @@
         "how-claude-code-works.md",
         "llm-gateway-connect.md",
         "llm-gateway-protocol.md",
+        "llm-gateway-rollout.md",
         "model-config.md",
         "monitoring-usage.md",
         "permission-modes.md",
@@ -1666,7 +1668,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 241
+      "mentions": 255
     },
     "passes": {
       "documented": true,
@@ -1701,6 +1703,7 @@
         "data-usage.md",
         "debug-your-config.md",
         "desktop.md",
+        "errors.md",
         "gateways.md",
         "glossary.md",
         "headless.md",
@@ -1731,7 +1734,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 191
+      "mentions": 194
     },
     "plan": {
       "documented": true,
@@ -1912,7 +1915,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 69
+      "mentions": 73
     },
     "remote-env": {
       "documented": true,
@@ -2135,6 +2138,7 @@
         "headless.md",
         "hooks.md",
         "llm-gateway-connect.md",
+        "llm-gateway-rollout.md",
         "mcp.md",
         "model-config.md",
         "monitoring-usage.md",
@@ -2145,7 +2149,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 59
+      "mentions": 61
     },
     "statusline": {
       "documented": true,
