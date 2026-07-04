@@ -425,7 +425,6 @@
         "interactive-mode.md",
         "keybindings.md",
         "large-codebases.md",
-        "llm-gateway-rollout.md",
         "permissions.md",
         "plugins-reference.md",
         "scheduled-tasks.md",
@@ -437,7 +436,7 @@
         "ultrareview.md",
         "workflows.md"
       ],
-      "mentions": 151
+      "mentions": 150
     },
     "StopFailure": {
       "documented": true,
@@ -595,7 +594,6 @@
         "jetbrains.md",
         "keybindings.md",
         "llm-gateway-connect.md",
-        "llm-gateway-rollout.md",
         "mcp-quickstart.md",
         "mcp.md",
         "model-config.md",
@@ -632,8 +630,8 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 959
+      "mentions": 958
     }
   },
-  "docs_checked_at": "2026-07-03"
+  "docs_checked_at": "2026-07-04"
 }
