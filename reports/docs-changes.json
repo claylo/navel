@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-07-06T18:39:36Z",
+      "version_at_time": "2.1.201",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        "claude-code-features.md",
+        "streaming-output.md"
+      ]
+    },
+    {
       "date": "2026-07-06T17:57:06Z",
       "version_at_time": "2.1.201",
       "files_changed": [
@@ -1760,19 +1774,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-12T20:45:19Z",
-      "version_at_time": "2.1.176",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        "platforms.md"
       ],
       "files_removed": [
         ""
