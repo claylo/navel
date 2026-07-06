@@ -1,0 +1,38 @@
+--- v2.1.201
++++ v2.1.202
+@@ -70,10 +70,10 @@
+ Main branch (you will usually use this for PRs): main
+ 
+ Status:
+-(clean)
++M npm/versions.json
+ 
+ Recent commits:
+-fde9cb5 chore(readme): sync claude code data (v2.1.201)
++aceae43 chore(docs): sync claude code data (v2.1.201) — 1 docs changed
+ 
+ ---
+ 
+@@ -571,7 +571,7 @@
+ 
+ Do NOT schedule a short-interval wakeup to poll for background work you started — when harness-tracked work finishes, you are re-invoked automatically, so polling is wasted. Instead schedule a long fallback (1200s+) so the loop survives if the work hangs or never notifies. The exception is external work the harness cannot track (a CI run, a deploy, a remote queue) — there, pick a delay matched to how fast that state actually changes.
+ 
+-Pass the same /loop prompt back via `prompt` each turn so the next firing repeats the task. For an autonomous /loop (no user prompt), pass the literal sentinel `<<autonomous-loop-dynamic>>` as `prompt` instead — the runtime resolves it back to the autonomous-loop instructions at fire time. (There is a similar `<<autonomous-loop>>` sentinel for CronCreate-based autonomous loops; do not confuse the two — ScheduleWakeup always uses the `-dynamic` variant.) Omit the call to end the loop.
++Pass the same /loop prompt back via `prompt` each turn so the next firing repeats the task. For an autonomous /loop (no user prompt), pass the literal sentinel `<<autonomous-loop-dynamic>>` as `prompt` instead — the runtime resolves it back to the autonomous-loop instructions at fire time. (There is a similar `<<autonomous-loop>>` sentinel for CronCreate-based autonomous loops; do not confuse the two — ScheduleWakeup always uses the `-dynamic` variant.) To end the loop, call this tool with `stop: true` (omit every other field) — the loop ends immediately and no further wakeups fire.
+ 
+ ## Picking delaySeconds
+ 
+@@ -594,9 +594,10 @@
+ 
+ 
+ **Parameters:**
+-- `delaySeconds` (number, required) — Seconds from now to wake up. Clamped to [60, 3600] by the runtime.
+-- `reason` (string, required) — One short sentence explaining the chosen delay. Goes to telemetry and is shown to the user. Be specific.
+-- `prompt` (string, required) — The /loop input to fire on wake-up. Pass the same /loop input verbatim each turn so the next firing re-enters the skill and continues the loop. For autonomous /loop (no user prompt), pass the literal sentinel `<<autonomous-loop-dynamic>>` instead (the dynamic-pacing variant, not the CronCreate-mode `<<autonomous-loop>>`).
++- `delaySeconds` (number) — Seconds from now to wake up. Clamped to [60, 3600] by the runtime. Required unless `stop` is true.
++- `reason` (string) — One short sentence explaining the chosen delay. Goes to telemetry and is shown to the user. Be specific. Required unless `stop` is true.
++- `prompt` (string) — The /loop input to fire on wake-up. Pass the same /loop input verbatim each turn so the next firing re-enters the skill and continues the loop. For autonomous /loop (no user prompt), pass the literal sentinel `<<autonomous-loop-dynamic>>` instead (the dynamic-pacing variant, not the CronCreate-mode `<<autonomous-loop>>`). Required unless `stop` is true.
++- `stop` (boolean) — Set to true to end the dynamic loop immediately instead of scheduling another wakeup. When true, all other fields are ignored and no further wakeups fire.
+ 
+ ### SendMessage
+ 
