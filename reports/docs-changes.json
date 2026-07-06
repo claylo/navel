@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-07-06T15:05:03Z",
+      "version_at_time": "2.1.201",
+      "files_changed": [
+        "github-enterprise-server.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-04T03:03:43Z",
       "version_at_time": "2.1.201",
       "files_changed": [
@@ -1762,19 +1775,6 @@
       ],
       "files_removed": [
         "platforms.md"
-      ]
-    },
-    {
-      "date": "2026-06-12T15:03:06Z",
-      "version_at_time": "2.1.175",
-      "files_changed": [
-        "hooks.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
       ]
     }
   ]
