@@ -1,6 +1,23 @@
 {
   "changes": [
     {
+      "date": "2026-07-07T15:01:25Z",
+      "version_at_time": "2.1.202",
+      "files_changed": [
+        "hooks-guide.md",
+        "hooks.md",
+        "mcp.md",
+        "plugins-reference.md",
+        "setup.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-07T00:36:44Z",
       "version_at_time": "2.1.202",
       "files_changed": [
@@ -1768,19 +1785,6 @@
       ],
       "files_removed": [
         "auto-mode-config.md"
-      ]
-    },
-    {
-      "date": "2026-06-13T05:30:57Z",
-      "version_at_time": "2.1.177",
-      "files_changed": [
-        "mcp.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
       ]
     }
   ]
