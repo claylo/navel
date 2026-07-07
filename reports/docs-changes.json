@@ -1,6 +1,40 @@
 {
   "changes": [
     {
+      "date": "2026-07-07T00:36:44Z",
+      "version_at_time": "2.1.202",
+      "files_changed": [
+        "agent-view.md",
+        "changelog.md",
+        "commands.md",
+        "env-vars.md",
+        "errors.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "mcp.md",
+        "monitoring-usage.md",
+        "network-config.md",
+        "permission-modes.md",
+        "permissions.md",
+        "remote-control.md",
+        "scheduled-tasks.md",
+        "settings.md",
+        "skills.md",
+        "slash-commands.md",
+        "tools-reference.md",
+        "troubleshooting.md",
+        "ultrareview.md",
+        "voice-dictation.md",
+        "workflows.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-06T23:26:55Z",
       "version_at_time": "2.1.202",
       "files_changed": [
@@ -1741,20 +1775,6 @@
       "version_at_time": "2.1.177",
       "files_changed": [
         "mcp.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-13T03:05:36Z",
-      "version_at_time": "2.1.177",
-      "files_changed": [
-        "jetbrains.md",
-        "overview.md"
       ],
       "files_added": [
         ""
