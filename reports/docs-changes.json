@@ -1,6 +1,22 @@
 {
   "changes": [
     {
+      "date": "2026-07-07T18:43:29Z",
+      "version_at_time": "2.1.203",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        "2026-w22.md",
+        "2026-w25.md",
+        "typescript.md",
+        "user-input.md"
+      ]
+    },
+    {
       "date": "2026-07-07T15:58:44Z",
       "version_at_time": "2.1.202",
       "files_changed": [
@@ -1770,19 +1786,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-13T09:03:31Z",
-      "version_at_time": "2.1.177",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        "auto-mode-config.md"
       ],
       "files_removed": [
         ""
