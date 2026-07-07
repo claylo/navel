@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-07-07T15:58:44Z",
+      "version_at_time": "2.1.202",
+      "files_changed": [
+        "channels-reference.md",
+        "hooks.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-07T15:01:25Z",
       "version_at_time": "2.1.202",
       "files_changed": [
@@ -1772,19 +1786,6 @@
       ],
       "files_removed": [
         ""
-      ]
-    },
-    {
-      "date": "2026-06-13T07:16:43Z",
-      "version_at_time": "2.1.177",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        "auto-mode-config.md"
       ]
     }
   ]
