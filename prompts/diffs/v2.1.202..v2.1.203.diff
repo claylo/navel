@@ -1,0 +1,48 @@
+--- v2.1.202
++++ v2.1.203
+@@ -70,10 +70,11 @@
+ Main branch (you will usually use this for PRs): main
+ 
+ Status:
+-(clean)
++M npm/versions.json
++ M reports/docs-changes.json
+ 
+ Recent commits:
+-29f8393 chore(readme): sync claude code data (v2.1.202)
++112a52b chore(hooks): sync claude code data (v2.1.202) — metadata updated
+ 
+ ---
+ 
+@@ -275,19 +276,19 @@
+ 
+ ## Entering an existing worktree
+ 
+-Pass `path` instead of `name` to switch the session into a worktree that already exists (e.g., one you just created with `git worktree add`). The path must appear in `git worktree list` for the current repository — paths that are not registered worktrees of this repo are rejected. ExitWorktree will not remove a worktree entered this way; use `action: "keep"` to return to the original directory.
++Pass `path` instead of `name` to switch the session into a worktree that already exists (e.g., one you just created with `git worktree add`). On first entry from the launch directory, the path must appear in `git worktree list` for the repository that owns it — the current repository or, in a multi-repo workspace, a repository nested inside it; paths registered by neither are rejected. ExitWorktree will not remove a worktree entered this way; use `action: "keep"` to return to the original directory.
+ 
+ Switching with `path` also works when the session is already in a worktree (the previous worktree is left on disk, untouched, and only the new one is tracked for exit-time cleanup), and from agents whose working directory was pinned at launch (subagent isolation or explicit cwd). In both cases the target must be a worktree under `.claude/worktrees/` of the same repository, and from a pinned agent the switch only affects this agent, not the parent session. After a further switch, previously-visited worktrees are no longer writable — re-issue EnterWorktree with `path` to return to one.
+ 
+ ## Parameters
+ 
+ - `name` (optional): A name for a new worktree. If neither `name` nor `path` is provided, a random name is generated.
+-- `path` (optional): Path to an existing worktree of the current repository to enter instead of creating one. Mutually exclusive with `name`.
++- `path` (optional): Path to an existing worktree to enter instead of creating one — of the current repository, or (on first entry from the launch directory) of a repository nested inside it. Mutually exclusive with `name`.
+ 
+ 
+ **Parameters:**
+ - `name` (string) — Optional name for a new worktree. Each "/"-separated segment may contain only letters, digits, dots, underscores, and dashes; max 64 chars total. A random name is generated if not provided. Mutually exclusive with `path`.
+-- `path` (string) — Path to an existing worktree of the current repository to switch into instead of creating a new one. Must appear in `git worktree list` for the current repo. Mutually exclusive with `name`.
++- `path` (string) — Path to an existing worktree to switch into instead of creating a new one. Must appear in `git worktree list` for the current repo — or, on first entry from the launch directory, for a repo nested inside it (multi-repo workspace). Mutually exclusive with `name`.
+ 
+ ### ExitWorktree
+ 
+@@ -614,7 +615,7 @@
+ | `"researcher"` | Teammate by name |
+ | `"main"` | The main conversation (background subagents only) |
+ 
+-Your plain text output is NOT visible to other agents — to communicate, you MUST call this tool. Messages from teammates are delivered automatically; you don't check an inbox. Refer to active teammates by name; to address a background agent that has no name (or whose name a teammate holds) — or to resume a completed one — use its `agentId` (format `a...-...`) from its spawn result. When relaying, don't quote the original — it's already rendered to the user.
++Your plain text output is NOT visible to other agents — to communicate, you MUST call this tool. Messages from teammates are delivered automatically; you don't check an inbox. Refer to agents by name — names keep working after an agent completes (a send resumes it from its transcript). Use the raw `agentId` (format `a...-...`) from its spawn result only when the agent has no name, or when a newer agent took the name (latest wins). When relaying, don't quote the original — it's already rendered to the user.
+ 
+ **Parameters:**
+ - `to` (string, required) — Recipient: teammate name
