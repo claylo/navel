@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-07-07T19:38:51Z",
+      "version_at_time": "2.1.203",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        "2026-w25.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-07T18:43:29Z",
       "version_at_time": "2.1.203",
       "files_changed": [
@@ -1768,20 +1781,6 @@
       "version_at_time": "2.1.177",
       "files_changed": [
         "model-config.md",
-        "settings.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-13T16:30:37Z",
-      "version_at_time": "2.1.177",
-      "files_changed": [
-        "admin-setup.md",
         "settings.md"
       ],
       "files_added": [
