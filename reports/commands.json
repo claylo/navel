@@ -1353,7 +1353,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 328
+      "mentions": 331
     },
     "ide": {
       "documented": true,
@@ -1541,6 +1541,7 @@
         "features-overview.md",
         "glossary.md",
         "google-vertex-ai.md",
+        "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
         "interactive-mode.md",
@@ -1567,7 +1568,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 276
+      "mentions": 280
     },
     "memory": {
       "documented": true,
