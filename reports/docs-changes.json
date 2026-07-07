@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-07-07T20:36:44Z",
+      "version_at_time": "2.1.203",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        "2026-w22.md",
+        "typescript.md",
+        "user-input.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-07T19:38:51Z",
       "version_at_time": "2.1.203",
       "files_changed": [
@@ -1768,20 +1783,6 @@
       "version_at_time": "2.1.177",
       "files_changed": [
         "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-13T21:29:25Z",
-      "version_at_time": "2.1.177",
-      "files_changed": [
-        "model-config.md",
-        "settings.md"
       ],
       "files_added": [
         ""
