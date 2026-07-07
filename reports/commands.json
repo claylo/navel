@@ -992,7 +992,7 @@
         "vs-code.md",
         "workflows.md"
       ],
-      "mentions": 125
+      "mentions": 129
     },
     "context": {
       "documented": true,
@@ -1915,7 +1915,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 73
+      "mentions": 74
     },
     "remote-env": {
       "documented": true,
@@ -1929,6 +1929,7 @@
     "rename": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "best-practices.md",
         "changelog.md",
         "cli-reference.md",
@@ -1940,7 +1941,7 @@
         "sessions.md",
         "statusline.md"
       ],
-      "mentions": 26
+      "mentions": 29
     },
     "resume": {
       "documented": true,
@@ -1979,7 +1980,7 @@
         "subagents.md",
         "ultrareview.md"
       ],
-      "mentions": 17
+      "mentions": 18
     },
     "rewind": {
       "documented": true,
@@ -2189,9 +2190,10 @@
         "agent-view.md",
         "changelog.md",
         "commands.md",
-        "goal.md"
+        "goal.md",
+        "tools-reference.md"
       ],
-      "mentions": 6
+      "mentions": 7
     },
     "tasks": {
       "documented": true,
@@ -2407,13 +2409,14 @@
         "github-actions.md",
         "glossary.md",
         "model-config.md",
+        "monitoring-usage.md",
         "security-guidance.md",
         "settings.md",
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 45
+      "mentions": 49
     }
   },
-  "docs_checked_at": "2026-07-04"
+  "docs_checked_at": "2026-07-07"
 }
