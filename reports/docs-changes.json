@@ -1,6 +1,42 @@
 {
   "changes": [
     {
+      "date": "2026-07-08T15:47:48Z",
+      "version_at_time": "2.1.204",
+      "files_changed": [
+        "agent-view.md",
+        "authentication.md",
+        "auto-mode-config.md",
+        "cli-reference.md",
+        "commands.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "errors.md",
+        "llm-gateway-connect.md",
+        "mcp.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "permission-modes.md",
+        "plugins-reference.md",
+        "remote-control.md",
+        "security-guidance.md",
+        "settings.md",
+        "skills.md",
+        "slash-commands.md",
+        "sub-agents.md",
+        "subagents.md",
+        "tools-reference.md",
+        "vs-code.md",
+        "workflows.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-08T07:00:39Z",
       "version_at_time": "2.1.204",
       "files_changed": [
@@ -1770,19 +1806,6 @@
         "legal-and-compliance.md",
         "overview.md",
         "quickstart.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-14T19:33:25Z",
-      "version_at_time": "2.1.177",
-      "files_changed": [
-        "changelog.md"
       ],
       "files_added": [
         ""
