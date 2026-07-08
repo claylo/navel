@@ -73,7 +73,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /design-sync | — | 2.1.160 | available | yes |
 | /desktop | — | 2.1.42 | available | yes |
 | /diff | View uncommitted changes and per-turn diffs | 2.1.50 | available | yes |
-| /doctor | Diagnose and verify your Claude Code installation and set... | 2.0.0 | available | yes |
+| /doctor | — | 2.0.0 | available | yes |
 | /effort | Set effort level for model usage | 2.1.76 | available | yes |
 | /exit | — | 2.0.0 | available | yes |
 | /export | Export the current conversation to a file or clipboard | 2.0.0 | available | yes |
