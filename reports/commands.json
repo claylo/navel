@@ -716,6 +716,7 @@
     "add-dir": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "changelog.md",
         "cli-reference.md",
         "commands.md",
@@ -728,7 +729,7 @@
         "statusline.md",
         "tools-reference.md"
       ],
-      "mentions": 24
+      "mentions": 25
     },
     "advisor": {
       "documented": true,
@@ -749,6 +750,7 @@
     "agents": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "agents.md",
         "best-practices.md",
         "changelog.md",
@@ -767,7 +769,7 @@
         "workflows.md",
         "worktrees.md"
       ],
-      "mentions": 80
+      "mentions": 82
     },
     "autocompact": {
       "documented": false,
@@ -787,6 +789,7 @@
       "documented": true,
       "doc_files": [
         "admin-setup.md",
+        "agent-view.md",
         "changelog.md",
         "commands.md",
         "env-vars.md",
@@ -795,7 +798,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 16
+      "mentions": 23
     },
     "branch": {
       "documented": true,
@@ -829,6 +832,7 @@
     "cd": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "changelog.md",
         "commands.md",
         "communications-kit.md",
@@ -843,7 +847,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 29
+      "mentions": 30
     },
     "chrome": {
       "documented": true,
@@ -911,12 +915,13 @@
     "color": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "changelog.md",
         "commands.md",
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 10
+      "mentions": 12
     },
     "compact": {
       "documented": true,
@@ -953,6 +958,7 @@
       "documented": true,
       "doc_files": [
         "agent-teams.md",
+        "agent-view.md",
         "authentication.md",
         "changelog.md",
         "claude-code-on-the-web.md",
@@ -986,7 +992,7 @@
         "vs-code.md",
         "workflows.md"
       ],
-      "mentions": 128
+      "mentions": 129
     },
     "context": {
       "documented": true,
@@ -1031,10 +1037,11 @@
     "daemon": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "changelog.md",
         "cli-reference.md"
       ],
-      "mentions": 2
+      "mentions": 4
     },
     "design": {
       "documented": true,
@@ -1119,6 +1126,7 @@
     "doctor": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "changelog.md",
         "commands.md",
         "debug-your-config.md",
@@ -1140,12 +1148,13 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 57
+      "mentions": 59
     },
     "effort": {
       "documented": true,
       "doc_files": [
         "agent-teams.md",
+        "agent-view.md",
         "changelog.md",
         "commands.md",
         "costs.md",
@@ -1165,17 +1174,18 @@
         "subagents.md",
         "workflows.md"
       ],
-      "mentions": 64
+      "mentions": 66
     },
     "exit": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "changelog.md",
         "commands.md",
         "quickstart.md",
         "remote-control.md"
       ],
-      "mentions": 9
+      "mentions": 13
     },
     "export": {
       "documented": true,
@@ -1297,6 +1307,7 @@
       "documented": true,
       "doc_files": [
         "agent-teams.md",
+        "agent-view.md",
         "auto-mode-config.md",
         "best-practices.md",
         "changelog.md",
@@ -1342,7 +1353,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 329
+      "mentions": 331
     },
     "ide": {
       "documented": true,
@@ -1358,6 +1369,7 @@
     "init": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "best-practices.md",
         "champion-kit.md",
         "changelog.md",
@@ -1375,7 +1387,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 36
+      "mentions": 37
     },
     "insights": {
       "documented": true,
@@ -1442,6 +1454,7 @@
       "documented": true,
       "doc_files": [
         "admin-setup.md",
+        "agent-view.md",
         "artifacts.md",
         "authentication.md",
         "changelog.md",
@@ -1469,12 +1482,13 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 100
+      "mentions": 105
     },
     "logout": {
       "documented": true,
       "doc_files": [
         "admin-setup.md",
+        "agent-view.md",
         "amazon-bedrock.md",
         "authentication.md",
         "changelog.md",
@@ -1490,7 +1504,7 @@
         "monitoring-usage.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 21
+      "mentions": 22
     },
     "loops": {
       "documented": false,
@@ -1500,6 +1514,7 @@
     "mcp": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "agents.md",
         "artifacts.md",
         "best-practices.md",
@@ -1553,7 +1568,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 280
+      "mentions": 281
     },
     "memory": {
       "documented": true,
@@ -1616,6 +1631,7 @@
         "admin-setup.md",
         "advisor.md",
         "agent-teams.md",
+        "agent-view.md",
         "amazon-bedrock.md",
         "changelog.md",
         "claude-apps-gateway.md",
@@ -1653,7 +1669,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 246
+      "mentions": 255
     },
     "passes": {
       "documented": true,
@@ -1672,6 +1688,7 @@
       "doc_files": [
         "admin-setup.md",
         "agent-teams.md",
+        "agent-view.md",
         "analytics.md",
         "artifacts.md",
         "auto-mode-config.md",
@@ -1718,7 +1735,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 192
+      "mentions": 196
     },
     "plan": {
       "documented": true,
@@ -1913,6 +1930,7 @@
     "rename": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "best-practices.md",
         "changelog.md",
         "cli-reference.md",
@@ -1924,7 +1942,7 @@
         "sessions.md",
         "statusline.md"
       ],
-      "mentions": 27
+      "mentions": 29
     },
     "resume": {
       "documented": true,
@@ -2054,6 +2072,7 @@
       "documented": true,
       "doc_files": [
         "agent-teams.md",
+        "agent-view.md",
         "agents.md",
         "artifacts.md",
         "best-practices.md",
@@ -2101,12 +2120,13 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 275
+      "mentions": 277
     },
     "status": {
       "documented": true,
       "doc_files": [
         "admin-setup.md",
+        "agent-view.md",
         "amazon-bedrock.md",
         "authentication.md",
         "changelog.md",
@@ -2131,7 +2151,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 62
+      "mentions": 63
     },
     "statusline": {
       "documented": true,
@@ -2168,17 +2188,19 @@
     "stop": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "changelog.md",
         "commands.md",
         "goal.md",
         "tools-reference.md"
       ],
-      "mentions": 5
+      "mentions": 7
     },
     "tasks": {
       "documented": true,
       "doc_files": [
         "agent-teams.md",
+        "agent-view.md",
         "agents.md",
         "changelog.md",
         "claude-code-on-the-web.md",
@@ -2192,7 +2214,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 20
+      "mentions": 21
     },
     "team-onboarding": {
       "documented": true,
@@ -2242,6 +2264,7 @@
     "tui": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "changelog.md",
         "cli-reference.md",
         "commands.md",
@@ -2250,7 +2273,7 @@
         "settings.md",
         "terminal-config.md"
       ],
-      "mentions": 18
+      "mentions": 19
     },
     "ultraplan": {
       "documented": true,
