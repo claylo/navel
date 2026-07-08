@@ -910,7 +910,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 76
+      "mentions": 77
     },
     "color": {
       "documented": true,
@@ -1148,7 +1148,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 57
+      "mentions": 58
     },
     "effort": {
       "documented": true,
@@ -1185,7 +1185,7 @@
         "quickstart.md",
         "remote-control.md"
       ],
-      "mentions": 12
+      "mentions": 13
     },
     "export": {
       "documented": true,
@@ -2151,7 +2151,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 61
+      "mentions": 62
     },
     "statusline": {
       "documented": true,
@@ -2419,5 +2419,5 @@
       "mentions": 49
     }
   },
-  "docs_checked_at": "2026-07-07"
+  "docs_checked_at": "2026-07-08"
 }
