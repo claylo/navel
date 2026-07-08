@@ -537,9 +537,10 @@
         "hooks-guide.md",
         "hooks.md",
         "plugins-reference.md",
+        "settings.md",
         "worktrees.md"
       ],
-      "mentions": 38
+      "mentions": 40
     },
     "WorktreeRemove": {
       "documented": true,
@@ -633,7 +634,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 962
+      "mentions": 963
     }
   },
   "docs_checked_at": "2026-07-08"
