@@ -377,7 +377,7 @@
         "tools-reference.md",
         "web-quickstart.md"
       ],
-      "mentions": 71
+      "mentions": 72
     },
     "Setup": {
       "documented": true,
@@ -438,7 +438,7 @@
         "ultrareview.md",
         "workflows.md"
       ],
-      "mentions": 154
+      "mentions": 155
     },
     "StopFailure": {
       "documented": true,
@@ -539,7 +539,7 @@
         "plugins-reference.md",
         "worktrees.md"
       ],
-      "mentions": 37
+      "mentions": 38
     },
     "WorktreeRemove": {
       "documented": true,
@@ -633,8 +633,8 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 961
+      "mentions": 962
     }
   },
-  "docs_checked_at": "2026-07-07"
+  "docs_checked_at": "2026-07-08"
 }
