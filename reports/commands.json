@@ -129,7 +129,6 @@
     "design-login": "Authorize design-system access for /design-sync with your claude.ai account",
     "design-revoke": "Revoke Claude agent access to your Design projects",
     "diff": "View uncommitted changes and per-turn diffs",
-    "doctor": "Diagnose and verify your Claude Code installation and settings",
     "effort": "Set effort level for model usage",
     "export": "Export the current conversation to a file or clipboard",
     "extra-usage": "Renamed to /usage-credits",
