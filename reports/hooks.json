@@ -227,6 +227,7 @@
     "Notification": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "changelog.md",
         "channels-reference.md",
         "common-workflows.md",
@@ -240,7 +241,7 @@
         "terminal-config.md",
         "tools-reference.md"
       ],
-      "mentions": 51
+      "mentions": 53
     },
     "PermissionDenied": {
       "documented": true,
@@ -407,6 +408,7 @@
     "Stop": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "best-practices.md",
         "champion-kit.md",
         "changelog.md",
@@ -436,7 +438,7 @@
         "ultrareview.md",
         "workflows.md"
       ],
-      "mentions": 150
+      "mentions": 155
     },
     "StopFailure": {
       "documented": true,
@@ -529,6 +531,7 @@
     "WorktreeCreate": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "changelog.md",
         "claude-directory.md",
         "hooks-guide.md",
@@ -537,7 +540,7 @@
         "settings.md",
         "worktrees.md"
       ],
-      "mentions": 37
+      "mentions": 40
     },
     "WorktreeRemove": {
       "documented": true,
@@ -555,6 +558,7 @@
       "doc_files": [
         "admin-setup.md",
         "agent-teams.md",
+        "agent-view.md",
         "artifacts.md",
         "authentication.md",
         "best-practices.md",
@@ -630,7 +634,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 939
+      "mentions": 963
     }
   },
   "docs_checked_at": "2026-07-08"
