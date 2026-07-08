@@ -722,6 +722,7 @@
         "cli-reference.md",
         "commands.md",
         "large-codebases.md",
+        "mcp.md",
         "permissions.md",
         "sessions.md",
         "skills.md",
@@ -729,7 +730,7 @@
         "statusline.md",
         "tools-reference.md"
       ],
-      "mentions": 24
+      "mentions": 25
     },
     "advisor": {
       "documented": true,
@@ -798,7 +799,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 21
+      "mentions": 23
     },
     "branch": {
       "documented": true,
@@ -1174,7 +1175,7 @@
         "subagents.md",
         "workflows.md"
       ],
-      "mentions": 64
+      "mentions": 66
     },
     "exit": {
       "documented": true,
@@ -1242,7 +1243,7 @@
         "troubleshooting.md",
         "zero-data-retention.md"
       ],
-      "mentions": 30
+      "mentions": 33
     },
     "focus": {
       "documented": true,
@@ -1482,7 +1483,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 102
+      "mentions": 104
     },
     "logout": {
       "documented": true,
@@ -1568,7 +1569,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 280
+      "mentions": 281
     },
     "memory": {
       "documented": true,
@@ -1735,7 +1736,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 194
+      "mentions": 196
     },
     "plan": {
       "documented": true,
@@ -1916,7 +1917,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 74
+      "mentions": 76
     },
     "remote-env": {
       "documented": true,
@@ -2000,7 +2001,7 @@
         "sessions.md",
         "settings.md"
       ],
-      "mentions": 28
+      "mentions": 29
     },
     "scroll-speed": {
       "documented": true,
@@ -2151,7 +2152,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 62
+      "mentions": 63
     },
     "statusline": {
       "documented": true,
@@ -2403,6 +2404,7 @@
         "best-practices.md",
         "changelog.md",
         "claude-directory.md",
+        "cli-reference.md",
         "commands.md",
         "desktop.md",
         "env-vars.md",
@@ -2416,7 +2418,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 49
+      "mentions": 52
     }
   },
   "docs_checked_at": "2026-07-08"
