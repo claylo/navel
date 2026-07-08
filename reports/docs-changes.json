@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-07-08T21:26:35Z",
+      "version_at_time": "2.1.205",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        "agent-view.md"
+      ]
+    },
+    {
       "date": "2026-07-08T16:33:36Z",
       "version_at_time": "2.1.204",
       "files_changed": [
@@ -1789,22 +1802,6 @@
       "files_added": [
         "2026-w23.md",
         "2026-w24.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-15T22:48:25Z",
-      "version_at_time": "2.1.178",
-      "files_changed": [
-        "changelog.md",
-        "desktop.md",
-        "permissions.md",
-        "troubleshoot-install.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
