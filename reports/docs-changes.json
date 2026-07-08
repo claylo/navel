@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-07-08T16:33:36Z",
+      "version_at_time": "2.1.204",
+      "files_changed": [
+        "mcp-quickstart.md",
+        "plugins.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-08T15:47:48Z",
       "version_at_time": "2.1.204",
       "files_changed": [
@@ -1788,24 +1802,6 @@
         "desktop.md",
         "permissions.md",
         "troubleshoot-install.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-15T22:00:58Z",
-      "version_at_time": "2.1.178",
-      "files_changed": [
-        "authentication.md",
-        "features-overview.md",
-        "headless.md",
-        "legal-and-compliance.md",
-        "overview.md",
-        "quickstart.md"
       ],
       "files_added": [
         ""
