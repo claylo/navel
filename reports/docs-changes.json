@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-07-08T22:23:14Z",
+      "version_at_time": "2.1.205",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        "agent-view.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-08T21:26:35Z",
       "version_at_time": "2.1.205",
       "files_changed": [
@@ -1786,22 +1799,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-15T23:35:04Z",
-      "version_at_time": "2.1.178",
-      "files_changed": [
-        "agent-view.md",
-        "remote-control.md",
-        "settings.md"
-      ],
-      "files_added": [
-        "2026-w23.md",
-        "2026-w24.md"
       ],
       "files_removed": [
         ""
