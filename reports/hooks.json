@@ -389,6 +389,7 @@
         "claude-platform-on-aws.md",
         "cli-reference.md",
         "code-review.md",
+        "debug-your-config.md",
         "discover-plugins.md",
         "env-vars.md",
         "github-actions.md",
@@ -403,7 +404,7 @@
         "sandbox-environments.md",
         "web-quickstart.md"
       ],
-      "mentions": 60
+      "mentions": 61
     },
     "Stop": {
       "documented": true,
@@ -540,7 +541,7 @@
         "settings.md",
         "worktrees.md"
       ],
-      "mentions": 40
+      "mentions": 42
     },
     "WorktreeRemove": {
       "documented": true,
@@ -577,6 +578,7 @@
         "communications-kit.md",
         "computer-use.md",
         "context-window.md",
+        "debug-your-config.md",
         "deep-links.md",
         "desktop-linux.md",
         "desktop-quickstart.md",
@@ -590,6 +592,7 @@
         "github-actions.md",
         "github-enterprise-server.md",
         "glossary.md",
+        "headless.md",
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
@@ -634,8 +637,8 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 963
+      "mentions": 970
     }
   },
-  "docs_checked_at": "2026-07-08"
+  "docs_checked_at": "2026-07-09"
 }
