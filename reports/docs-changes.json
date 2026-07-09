@@ -1,6 +1,23 @@
 {
   "changes": [
     {
+      "date": "2026-07-09T23:28:58Z",
+      "version_at_time": "2.1.206",
+      "files_changed": [
+        "desktop.md",
+        "feature-availability.md",
+        "llm-gateway-connect.md",
+        "llm-gateway-rollout.md",
+        "platforms.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-09T21:32:13Z",
       "version_at_time": "2.1.206",
       "files_changed": [
@@ -1797,19 +1814,6 @@
         "slash-commands.md",
         "sub-agents.md",
         "subagents.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-17T09:34:55Z",
-      "version_at_time": "2.1.179",
-      "files_changed": [
-        "changelog.md"
       ],
       "files_added": [
         ""
