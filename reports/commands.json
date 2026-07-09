@@ -895,7 +895,7 @@
         "troubleshoot-install.md",
         "vs-code.md"
       ],
-      "mentions": 31
+      "mentions": 33
     },
     "claude-in-chrome": {
       "documented": true,
@@ -1141,7 +1141,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 86
+      "mentions": 87
     },
     "diff": {
       "documented": true,
