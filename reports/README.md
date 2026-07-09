@@ -42,13 +42,14 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (105)</summary>
+<summary>Commands (107)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
 | /add-dir | Add a new working directory | 2.0.0 | available | yes |
 | /advisor | Let Claude consult a stronger model at key moments | 2.1.83 | available | yes |
 | /agents | (removed) Ask Claude to create/manage subagents, or edit ... | 2.0.0 | available | yes |
+| **/artifacts** | — | 2.1.206 | *disabled* | yes |
 | **/autocompact** | Set how full the context gets before auto-summarizing | 2.1.89 | available | **no** |
 | /autofix-pr | Monitor and autofix any issues with the current PR | 2.1.94 | available | yes |
 | /background | — | 2.1.119 | available | yes |
@@ -122,6 +123,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /resume | Resume a previous conversation | 2.0.0 | available | yes |
 | /review | Review a GitHub pull request; for your working diff use /... | 2.0.0 | available | yes |
 | /rewind | — | 2.0.0 | available | yes |
+| /schedule | — | 2.1.80 | available | yes |
 | /scroll-speed | Adjust mouse wheel scroll speed | 2.1.139 | available | yes |
 | /security-review | Complete a security review of the pending changes on the ... | 2.0.0 | available | yes |
 | /session | — | 2.1.15 | available | yes |
@@ -750,6 +752,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.206 | — | +artifacts, +schedule | — |
 | 2.1.199 | — | +design-consent, +design-revoke, +setup-cowork | — |
 | 2.1.198 | +terminal | +plan-artifact, +skill-doctor | — |
 | 2.1.187 | — | +pause-memory | — |
@@ -979,4 +982,4 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 ---
-*Last updated: 2026-07-08*
+*Last updated: 2026-07-09*
