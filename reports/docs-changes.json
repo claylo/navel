@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-07-09T21:32:13Z",
+      "version_at_time": "2.1.206",
+      "files_changed": [
+        "desktop-quickstart.md",
+        "desktop.md",
+        "settings.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-09T17:40:43Z",
       "version_at_time": "2.1.205",
       "files_changed": [
@@ -1795,43 +1810,6 @@
       "version_at_time": "2.1.179",
       "files_changed": [
         "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-16T22:00:40Z",
-      "version_at_time": "2.1.179",
-      "files_changed": [
-        "advisor.md",
-        "agent-teams.md",
-        "amazon-bedrock.md",
-        "changelog.md",
-        "costs.md",
-        "env-vars.md",
-        "fast-mode.md",
-        "fullscreen.md",
-        "hooks.md",
-        "model-config.md",
-        "output-styles.md",
-        "permission-modes.md",
-        "permissions.md",
-        "plugin-hints.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "remote-control.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "tools-reference.md",
-        "workflows.md"
       ],
       "files_added": [
         ""
