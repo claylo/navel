@@ -1,6 +1,55 @@
 {
   "changes": [
     {
+      "date": "2026-07-09T17:40:43Z",
+      "version_at_time": "2.1.205",
+      "files_changed": [
+        "agent-view.md",
+        "auto-mode-config.md",
+        "claude-code-on-the-web.md",
+        "cli-reference.md",
+        "commands.md",
+        "debug-your-config.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "env-vars.md",
+        "errors.md",
+        "fast-mode.md",
+        "headless.md",
+        "hooks.md",
+        "how-claude-code-works.md",
+        "keybindings.md",
+        "llm-gateway-connect.md",
+        "mcp.md",
+        "model-config.md",
+        "monitoring-usage.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugin-dependencies.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md",
+        "remote-control.md",
+        "sandboxing.md",
+        "settings.md",
+        "skills.md",
+        "slash-commands.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md",
+        "troubleshoot-install.md",
+        "troubleshooting.md",
+        "vs-code.md",
+        "web-quickstart.md",
+        "worktrees.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-08T22:23:14Z",
       "version_at_time": "2.1.205",
       "files_changed": [
@@ -1783,19 +1832,6 @@
         "subagents.md",
         "tools-reference.md",
         "workflows.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-16T19:12:51Z",
-      "version_at_time": "2.1.179",
-      "files_changed": [
-        "permissions.md"
       ],
       "files_added": [
         ""
