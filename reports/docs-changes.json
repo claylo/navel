@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-07-10T15:49:10Z",
+      "version_at_time": "2.1.206",
+      "files_changed": [
+        "desktop-linux.md",
+        "overview.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-10T00:28:03Z",
       "version_at_time": "2.1.206",
       "files_changed": [
@@ -1795,22 +1809,6 @@
       "version_at_time": "2.1.181",
       "files_changed": [
         "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-17T18:09:54Z",
-      "version_at_time": "2.1.179",
-      "files_changed": [
-        "skills.md",
-        "slash-commands.md",
-        "sub-agents.md",
-        "subagents.md"
       ],
       "files_added": [
         ""
