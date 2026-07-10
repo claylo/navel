@@ -739,7 +739,7 @@
         "statusline.md",
         "tools-reference.md"
       ],
-      "mentions": 25
+      "mentions": 26
     },
     "advisor": {
       "documented": true,
@@ -872,7 +872,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 30
+      "mentions": 31
     },
     "chrome": {
       "documented": true,
@@ -1172,7 +1172,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 51
+      "mentions": 53
     },
     "effort": {
       "documented": true,
@@ -1512,7 +1512,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 105
+      "mentions": 107
     },
     "logout": {
       "documented": true,
@@ -1703,7 +1703,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 264
+      "mentions": 266
     },
     "passes": {
       "documented": true,
@@ -1951,7 +1951,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 76
+      "mentions": 77
     },
     "remote-env": {
       "documented": true,
@@ -2207,7 +2207,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 64
+      "mentions": 65
     },
     "statusline": {
       "documented": true,
@@ -2476,5 +2476,5 @@
       "mentions": 52
     }
   },
-  "docs_checked_at": "2026-07-09"
+  "docs_checked_at": "2026-07-10"
 }
