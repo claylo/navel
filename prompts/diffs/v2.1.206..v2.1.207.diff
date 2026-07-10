@@ -1,0 +1,25 @@
+--- v2.1.206
++++ v2.1.207
+@@ -70,10 +70,11 @@
+ Main branch (you will usually use this for PRs): main
+ 
+ Status:
+-(clean)
++M npm/versions.json
++ M reports/commands.json
+ 
+ Recent commits:
+-2df137c chore(readme): sync claude code data (v2.1.206)
++0dee8bd chore(docs): sync claude code data (v2.1.206) — 4 docs changed
+ 
+ ---
+ 
+@@ -575,7 +576,7 @@
+ 
+ ## Picking delaySeconds
+ 
+-The Anthropic prompt cache has a 5-minute TTL. Sleeping past 300 seconds means the next wake-up reads your full conversation context uncached — slower and more expensive. So the natural breakpoints:
++This session's requests use the default 5-minute Anthropic prompt-cache TTL. Sleeping past 300 seconds means the next wake-up reads your full conversation context uncached — slower and more expensive. So the natural breakpoints:
+ 
+ - **Under 5 minutes (60s–270s)**: cache stays warm. Right for actively polling external state the harness can't notify you about — a CI run, a deploy, a remote queue.
+ - **5 minutes to 1 hour (300s–3600s)**: pay the cache miss. Right when there's no point checking sooner — waiting on something that takes minutes to change, genuinely idle, or as the long fallback heartbeat when something else is the primary wake signal.
