@@ -42,7 +42,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (107)</summary>
+<summary>Commands (108)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -102,6 +102,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /memory | Open a memory file in your editor | 2.0.0 | available | yes |
 | /mobile | — | 2.0.72 | available | yes |
 | /model | Set model for this FleetView session (not persisted) | 2.0.0 | available | yes |
+| **/morning** | — | 2.1.207 | available | **no** |
 | /passes | — | 2.0.45 | available | yes |
 | **/pause-memory** | — | 2.1.187 | *disabled* | **no** |
 | /permissions | — | 2.0.0 | available | yes |
@@ -752,6 +753,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.207 | — | +morning | — |
 | 2.1.206 | — | +artifacts, +schedule | — |
 | 2.1.199 | — | +design-consent, +design-revoke, +setup-cowork | — |
 | 2.1.198 | +terminal | +plan-artifact, +skill-doctor | — |
