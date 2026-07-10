@@ -56,6 +56,7 @@
     "memory",
     "mobile",
     "model",
+    "morning",
     "passes",
     "pause-memory",
     "permissions",
@@ -243,6 +244,7 @@
     "memory": "available",
     "mobile": "available",
     "model": "available",
+    "morning": "available",
     "passes": "available",
     "pause-memory": "disabled",
     "permissions": "available",
@@ -719,6 +721,11 @@
       "added": [
         "artifacts",
         "schedule"
+      ]
+    },
+    "2.1.207": {
+      "added": [
+        "morning"
       ]
     }
   },
@@ -1704,6 +1711,11 @@
         "zero-data-retention.md"
       ],
       "mentions": 266
+    },
+    "morning": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "passes": {
       "documented": true,
