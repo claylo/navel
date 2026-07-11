@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-07-11T14:29:23Z",
+      "version_at_time": "2.1.207",
+      "files_changed": [
+        "desktop-linux.md",
+        "setup.md",
+        "troubleshoot-install.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-11T06:45:15Z",
       "version_at_time": "2.1.207",
       "files_changed": [
@@ -1785,40 +1800,6 @@
       "files_changed": [
         "skills.md",
         "slash-commands.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-18T19:53:19Z",
-      "version_at_time": "2.1.181",
-      "files_changed": [
-        "agent-teams.md",
-        "amazon-bedrock.md",
-        "claude-code-on-the-web.md",
-        "cli-reference.md",
-        "commands.md",
-        "env-vars.md",
-        "fullscreen.md",
-        "headless.md",
-        "mcp-quickstart.md",
-        "monitoring-usage.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "remote-control.md",
-        "sandboxing.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "ultrareview.md",
-        "workflows.md"
       ],
       "files_added": [
         ""
