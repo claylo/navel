@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-07-11T04:10:43Z",
+      "version_at_time": "2.1.207",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        "2026-w27.md",
+        "2026-w28.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-11T01:35:32Z",
       "version_at_time": "2.1.207",
       "files_changed": [
@@ -1804,26 +1818,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-18T18:03:46Z",
-      "version_at_time": "2.1.181",
-      "files_changed": [
-        "claude-code-on-the-web.md",
-        "env-vars.md",
-        "features-overview.md",
-        "glossary.md",
-        "network-config.md",
-        "settings.md",
-        "tools-reference.md",
-        "zero-data-retention.md"
-      ],
-      "files_added": [
-        "artifacts.md"
       ],
       "files_removed": [
         ""
