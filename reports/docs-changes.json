@@ -1,6 +1,23 @@
 {
   "changes": [
     {
+      "date": "2026-07-11T06:45:15Z",
+      "version_at_time": "2.1.207",
+      "files_changed": [
+        "communications-kit.md",
+        "permissions.md",
+        "security.md",
+        "tools-reference.md",
+        "vs-code.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-11T04:10:43Z",
       "version_at_time": "2.1.207",
       "files_changed": [
@@ -1802,19 +1819,6 @@
         "subagents.md",
         "ultrareview.md",
         "workflows.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-18T19:05:39Z",
-      "version_at_time": "2.1.181",
-      "files_changed": [
-        "artifacts.md"
       ],
       "files_added": [
         ""
