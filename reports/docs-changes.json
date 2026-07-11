@@ -1,6 +1,28 @@
 {
   "changes": [
     {
+      "date": "2026-07-11T01:35:32Z",
+      "version_at_time": "2.1.207",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "changelog.md",
+        "claude-platform-on-aws.md",
+        "desktop.md",
+        "glossary.md",
+        "google-vertex-ai.md",
+        "how-claude-code-works.md",
+        "model-config.md",
+        "permission-modes.md",
+        "permissions.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-10T16:43:12Z",
       "version_at_time": "2.1.206",
       "files_changed": [
@@ -1802,19 +1824,6 @@
       ],
       "files_added": [
         "artifacts.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-18T01:51:38Z",
-      "version_at_time": "2.1.181",
-      "files_changed": [
-        "memory.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
