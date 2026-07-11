@@ -879,7 +879,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 31
+      "mentions": 32
     },
     "chrome": {
       "documented": true,
@@ -1028,7 +1028,7 @@
         "vs-code.md",
         "workflows.md"
       ],
-      "mentions": 129
+      "mentions": 130
     },
     "context": {
       "documented": true,
@@ -1179,7 +1179,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 53
+      "mentions": 54
     },
     "effort": {
       "documented": true,
@@ -2421,7 +2421,7 @@
         "remote-control.md",
         "ultrareview.md"
       ],
-      "mentions": 10
+      "mentions": 11
     },
     "version": {
       "documented": true,
@@ -2488,5 +2488,5 @@
       "mentions": 52
     }
   },
-  "docs_checked_at": "2026-07-10"
+  "docs_checked_at": "2026-07-11"
 }
