@@ -898,10 +898,11 @@
         "overview.md",
         "permission-modes.md",
         "platforms.md",
+        "prompt-library.md",
         "troubleshoot-install.md",
         "vs-code.md"
       ],
-      "mentions": 32
+      "mentions": 33
     },
     "claude-in-chrome": {
       "documented": true,
@@ -1135,6 +1136,7 @@
         "overview.md",
         "permission-modes.md",
         "platforms.md",
+        "prompt-library.md",
         "quickstart.md",
         "remote-control.md",
         "sandboxing.md",
@@ -1146,7 +1148,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 85
+      "mentions": 87
     },
     "diff": {
       "documented": true,
@@ -1312,9 +1314,10 @@
         "goal.md",
         "hooks.md",
         "model-config.md",
+        "prompt-library.md",
         "scheduled-tasks.md"
       ],
-      "mentions": 29
+      "mentions": 35
     },
     "heapdump": {
       "documented": true,
@@ -1372,6 +1375,7 @@
         "plugin-marketplaces.md",
         "plugins-reference.md",
         "plugins.md",
+        "prompt-library.md",
         "security-guidance.md",
         "security.md",
         "server-managed-settings.md",
@@ -1386,7 +1390,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 332
+      "mentions": 333
     },
     "ide": {
       "documented": true,
@@ -1415,11 +1419,12 @@
         "hooks.md",
         "how-claude-code-works.md",
         "memory.md",
+        "prompt-library.md",
         "settings.md",
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 35
+      "mentions": 37
     },
     "insights": {
       "documented": true,
@@ -1589,6 +1594,7 @@
         "plugins-reference.md",
         "plugins.md",
         "prompt-caching.md",
+        "prompt-library.md",
         "remote-control.md",
         "routines.md",
         "sandbox-environments.md",
@@ -1601,7 +1607,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 276
+      "mentions": 285
     },
     "memory": {
       "documented": true,
@@ -1637,6 +1643,7 @@
         "permissions.md",
         "plugins-reference.md",
         "prompt-caching.md",
+        "prompt-library.md",
         "settings.md",
         "skills.md",
         "slash-commands.md",
@@ -1645,7 +1652,7 @@
         "third-party-integrations.md",
         "web-quickstart.md"
       ],
-      "mentions": 116
+      "mentions": 124
     },
     "mobile": {
       "documented": true,
@@ -2094,11 +2101,12 @@
         "hooks-guide.md",
         "hooks.md",
         "monitoring-usage.md",
+        "prompt-library.md",
         "remote-control.md",
         "routines.md",
         "vs-code.md"
       ],
-      "mentions": 16
+      "mentions": 17
     },
     "setup-bedrock": {
       "documented": true,
@@ -2169,6 +2177,7 @@
         "plugins-reference.md",
         "plugins.md",
         "prompt-caching.md",
+        "prompt-library.md",
         "routines.md",
         "scheduled-tasks.md",
         "settings.md",
@@ -2179,7 +2188,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 271
+      "mentions": 278
     },
     "status": {
       "documented": true,
@@ -2479,5 +2488,5 @@
       "mentions": 52
     }
   },
-  "docs_checked_at": "2026-07-11"
+  "docs_checked_at": "2026-07-12"
 }
