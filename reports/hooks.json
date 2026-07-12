@@ -612,6 +612,7 @@
         "plugin-hints.md",
         "plugin-marketplaces.md",
         "prompt-caching.md",
+        "prompt-library.md",
         "quickstart.md",
         "remote-control.md",
         "routines.md",
@@ -636,8 +637,8 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 973
+      "mentions": 974
     }
   },
-  "docs_checked_at": "2026-07-11"
+  "docs_checked_at": "2026-07-12"
 }
