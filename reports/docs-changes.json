@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-07-12T00:23:09Z",
+      "version_at_time": "2.1.207",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        "prompt-library.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-11T23:19:21Z",
       "version_at_time": "2.1.207",
       "files_changed": [
@@ -1782,29 +1795,6 @@
       ],
       "files_removed": [
         "typescript-v2-preview.md"
-      ]
-    },
-    {
-      "date": "2026-06-19T22:21:07Z",
-      "version_at_time": "2.1.183",
-      "files_changed": [
-        "chrome.md",
-        "claude-code-on-the-web.md",
-        "commands.md",
-        "env-vars.md",
-        "headless.md",
-        "keybindings.md",
-        "managed-mcp.md",
-        "mcp.md",
-        "model-config.md",
-        "permission-modes.md",
-        "settings.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
       ]
     }
   ]
