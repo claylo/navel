@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-07-13T23:21:27Z",
+      "version_at_time": "2.1.208",
+      "files_changed": [
+        "network-config.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-13T22:20:14Z",
       "version_at_time": "2.1.208",
       "files_changed": [
@@ -1855,19 +1868,6 @@
       ],
       "files_removed": [
         ""
-      ]
-    },
-    {
-      "date": "2026-06-24T07:09:05Z",
-      "version_at_time": "2.1.187",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        "network-config.md"
       ]
     }
   ]
