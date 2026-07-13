@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-07-13T22:20:14Z",
+      "version_at_time": "2.1.208",
+      "files_changed": [
+        "desktop.md",
+        "llm-gateway-connect.md",
+        "network-config.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-13T21:21:29Z",
       "version_at_time": "2.1.207",
       "files_changed": [
@@ -1853,19 +1868,6 @@
       ],
       "files_removed": [
         "network-config.md"
-      ]
-    },
-    {
-      "date": "2026-06-24T00:26:52Z",
-      "version_at_time": "2.1.187",
-      "files_changed": [
-        "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
       ]
     }
   ]
