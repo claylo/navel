@@ -1441,13 +1441,14 @@
         "claude-code-on-the-web.md",
         "commands.md",
         "communications-kit.md",
+        "desktop-wsl.md",
         "gitlab-ci-cd.md",
         "overview.md",
         "quickstart.md",
         "setup.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 45
+      "mentions": 46
     },
     "install-github-app": {
       "documented": true,
@@ -2488,5 +2489,5 @@
       "mentions": 52
     }
   },
-  "docs_checked_at": "2026-07-12"
+  "docs_checked_at": "2026-07-13"
 }
