@@ -557,6 +557,7 @@
     "terminal": {
       "documented": true,
       "doc_files": [
+        "accessibility.md",
         "admin-setup.md",
         "agent-teams.md",
         "agent-view.md",
@@ -638,7 +639,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 975
+      "mentions": 990
     }
   },
   "docs_checked_at": "2026-07-13"
