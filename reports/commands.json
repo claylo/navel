@@ -1711,7 +1711,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 266
+      "mentions": 269
     },
     "morning": {
       "documented": false,
@@ -2320,6 +2320,7 @@
     "theme": {
       "documented": true,
       "doc_files": [
+        "accessibility.md",
         "changelog.md",
         "claude-directory.md",
         "commands.md",
@@ -2328,11 +2329,12 @@
         "settings.md",
         "terminal-config.md"
       ],
-      "mentions": 18
+      "mentions": 20
     },
     "tui": {
       "documented": true,
       "doc_files": [
+        "accessibility.md",
         "agent-view.md",
         "changelog.md",
         "cli-reference.md",
@@ -2342,7 +2344,7 @@
         "settings.md",
         "terminal-config.md"
       ],
-      "mentions": 19
+      "mentions": 20
     },
     "ultraplan": {
       "documented": true,
@@ -2409,7 +2411,7 @@
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 41
+      "mentions": 42
     },
     "usage-credits": {
       "documented": true,
@@ -2422,7 +2424,7 @@
         "remote-control.md",
         "ultrareview.md"
       ],
-      "mentions": 11
+      "mentions": 12
     },
     "version": {
       "documented": true,
