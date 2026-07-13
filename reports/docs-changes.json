@@ -1,6 +1,63 @@
 {
   "changes": [
     {
+      "date": "2026-07-13T21:21:29Z",
+      "version_at_time": "2.1.207",
+      "files_changed": [
+        "agent-teams.md",
+        "agent-view.md",
+        "amazon-bedrock.md",
+        "authentication.md",
+        "auto-mode-config.md",
+        "claude-apps-gateway-config.md",
+        "claude-apps-gateway-deploy.md",
+        "claude-apps-gateway.md",
+        "claude-directory.md",
+        "claude-platform-on-aws.md",
+        "cli-reference.md",
+        "commands.md",
+        "costs.md",
+        "debug-your-config.md",
+        "desktop.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "errors.md",
+        "feature-availability.md",
+        "fullscreen.md",
+        "gateways.md",
+        "glossary.md",
+        "google-vertex-ai.md",
+        "headless.md",
+        "hooks.md",
+        "keybindings.md",
+        "large-codebases.md",
+        "managed-mcp.md",
+        "mcp.md",
+        "memory.md",
+        "model-config.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugins-reference.md",
+        "remote-control.md",
+        "sandboxing.md",
+        "server-managed-settings.md",
+        "settings.md",
+        "setup.md",
+        "sub-agents.md",
+        "subagents.md",
+        "tools-reference.md",
+        "troubleshoot-install.md",
+        "workflows.md",
+        "worktrees.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-13T19:32:59Z",
       "version_at_time": "2.1.207",
       "files_changed": [
@@ -1803,19 +1860,6 @@
       "version_at_time": "2.1.187",
       "files_changed": [
         "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-23T21:34:14Z",
-      "version_at_time": "2.1.187",
-      "files_changed": [
-        "agent-view.md"
       ],
       "files_added": [
         ""
