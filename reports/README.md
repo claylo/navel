@@ -49,7 +49,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /add-dir | Add a new working directory | 2.0.0 | available | yes |
 | /advisor | Let Claude consult a stronger model at key moments | 2.1.83 | available | yes |
 | /agents | (removed) Ask Claude to create/manage subagents, or edit ... | 2.0.0 | available | yes |
-| **/artifacts** | — | 2.1.206 | *disabled* | yes |
+| /artifacts | — | 2.1.206 | available | yes |
 | **/autocompact** | Set how full the context gets before auto-summarizing | 2.1.89 | available | **no** |
 | /autofix-pr | Monitor and autofix any issues with the current PR | 2.1.94 | available | yes |
 | /background | — | 2.1.119 | available | yes |
