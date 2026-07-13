@@ -1,6 +1,25 @@
 {
   "changes": [
     {
+      "date": "2026-07-13T18:35:16Z",
+      "version_at_time": "2.1.207",
+      "files_changed": [
+        "admin-setup.md",
+        "analytics.md",
+        "cli-reference.md",
+        "costs.md",
+        "errors.md",
+        "feature-availability.md",
+        "settings.md"
+      ],
+      "files_added": [
+        "accessibility.md"
+      ],
+      "files_removed": [
+        "hosting.md"
+      ]
+    },
+    {
       "date": "2026-07-13T17:40:39Z",
       "version_at_time": "2.1.207",
       "files_changed": [
@@ -1801,38 +1820,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-23T00:31:30Z",
-      "version_at_time": "2.1.186",
-      "files_changed": [
-        "agent-teams.md",
-        "claude-platform-on-aws.md",
-        "cli-reference.md",
-        "commands.md",
-        "env-vars.md",
-        "errors.md",
-        "interactive-mode.md",
-        "mcp.md",
-        "monitoring-usage.md",
-        "permissions.md",
-        "plugin-marketplaces.md",
-        "prompt-library.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md",
-        "sub-agents.md",
-        "subagents.md",
-        "tools-reference.md",
-        "ultrareview.md",
-        "workflows.md"
-      ],
-      "files_added": [
-        "plugin-relevance.md"
       ],
       "files_removed": [
         ""
