@@ -191,7 +191,7 @@
     "add-dir": "available",
     "advisor": "available",
     "agents": "available",
-    "artifacts": "disabled",
+    "artifacts": "available",
     "autocompact": "available",
     "autofix-pr": "available",
     "background": "available",
@@ -879,7 +879,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 32
+      "mentions": 33
     },
     "chrome": {
       "documented": true,
@@ -1009,6 +1009,7 @@
         "interactive-mode.md",
         "jetbrains.md",
         "keybindings.md",
+        "large-codebases.md",
         "llm-gateway-connect.md",
         "mcp-quickstart.md",
         "mcp.md",
@@ -1028,7 +1029,7 @@
         "vs-code.md",
         "workflows.md"
       ],
-      "mentions": 130
+      "mentions": 132
     },
     "context": {
       "documented": true,
@@ -1148,7 +1149,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 87
+      "mentions": 88
     },
     "diff": {
       "documented": true,
@@ -1172,6 +1173,7 @@
         "hooks.md",
         "how-claude-code-works.md",
         "keybindings.md",
+        "memory.md",
         "settings.md",
         "skills.md",
         "slash-commands.md",
@@ -1179,7 +1181,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 54
+      "mentions": 55
     },
     "effort": {
       "documented": true,
@@ -1362,6 +1364,7 @@
         "features-overview.md",
         "glossary.md",
         "goal.md",
+        "headless.md",
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
@@ -1390,7 +1393,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 333
+      "mentions": 336
     },
     "ide": {
       "documented": true,
@@ -1424,7 +1427,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 37
+      "mentions": 38
     },
     "insights": {
       "documented": true,
@@ -1481,7 +1484,7 @@
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 20
+      "mentions": 21
     },
     "keybindings-help": {
       "documented": false,
@@ -1520,7 +1523,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 107
+      "mentions": 115
     },
     "logout": {
       "documented": true,
@@ -1608,7 +1611,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 285
+      "mentions": 290
     },
     "memory": {
       "documented": true,
@@ -1653,7 +1656,7 @@
         "third-party-integrations.md",
         "web-quickstart.md"
       ],
-      "mentions": 124
+      "mentions": 125
     },
     "mobile": {
       "documented": true,
@@ -1687,6 +1690,7 @@
         "gateways.md",
         "github-actions.md",
         "glossary.md",
+        "google-vertex-ai.md",
         "headless.md",
         "hooks-guide.md",
         "hooks.md",
@@ -1711,7 +1715,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 269
+      "mentions": 272
     },
     "morning": {
       "documented": false,
@@ -1759,6 +1763,7 @@
         "hooks.md",
         "how-claude-code-works.md",
         "jetbrains.md",
+        "keybindings.md",
         "large-codebases.md",
         "managed-mcp.md",
         "mcp.md",
@@ -1780,9 +1785,10 @@
         "sub-agents.md",
         "subagents.md",
         "tools-reference.md",
-        "vs-code.md"
+        "vs-code.md",
+        "worktrees.md"
       ],
-      "mentions": 200
+      "mentions": 206
     },
     "plan": {
       "documented": true,
@@ -1804,7 +1810,7 @@
         "subagents.md",
         "vs-code.md"
       ],
-      "mentions": 39
+      "mentions": 40
     },
     "plan-artifact": {
       "documented": false,
@@ -1964,7 +1970,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 77
+      "mentions": 78
     },
     "remote-env": {
       "documented": true,
@@ -2046,12 +2052,13 @@
         "costs.md",
         "env-vars.md",
         "errors.md",
+        "fullscreen.md",
         "glossary.md",
         "prompt-caching.md",
         "sessions.md",
         "settings.md"
       ],
-      "mentions": 30
+      "mentions": 31
     },
     "schedule": {
       "documented": true,
@@ -2220,7 +2227,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 66
+      "mentions": 67
     },
     "statusline": {
       "documented": true,
@@ -2426,7 +2433,7 @@
         "remote-control.md",
         "ultrareview.md"
       ],
-      "mentions": 12
+      "mentions": 13
     },
     "version": {
       "documented": true,
@@ -2485,12 +2492,13 @@
         "glossary.md",
         "model-config.md",
         "monitoring-usage.md",
+        "remote-control.md",
         "security-guidance.md",
         "settings.md",
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 52
+      "mentions": 53
     }
   },
   "docs_checked_at": "2026-07-13"
