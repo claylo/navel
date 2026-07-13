@@ -801,7 +801,7 @@
         "tools-reference.md",
         "zero-data-retention.md"
       ],
-      "mentions": 16
+      "mentions": 17
     },
     "autocompact": {
       "documented": false,
@@ -1134,6 +1134,7 @@
         "mcp-quickstart.md",
         "mcp.md",
         "model-config.md",
+        "network-config.md",
         "overview.md",
         "permission-modes.md",
         "platforms.md",
@@ -1149,7 +1150,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 88
+      "mentions": 90
     },
     "diff": {
       "documented": true,
@@ -1592,6 +1593,7 @@
         "mcp-quickstart.md",
         "mcp.md",
         "monitoring-usage.md",
+        "network-config.md",
         "overview.md",
         "permission-modes.md",
         "platforms.md",
@@ -1611,7 +1613,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 290
+      "mentions": 291
     },
     "memory": {
       "documented": true,
@@ -1839,6 +1841,7 @@
         "managed-mcp.md",
         "mcp.md",
         "monitoring-usage.md",
+        "network-config.md",
         "overview.md",
         "plugin-dependencies.md",
         "plugin-hints.md",
@@ -1853,7 +1856,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 218
+      "mentions": 219
     },
     "powerup": {
       "documented": true,
@@ -1970,7 +1973,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 78
+      "mentions": 79
     },
     "remote-env": {
       "documented": true,
