@@ -2279,11 +2279,13 @@
         "interactive-mode.md",
         "keybindings.md",
         "statusline.md",
+        "sub-agents.md",
+        "subagents.md",
         "tools-reference.md",
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 21
+      "mentions": 24
     },
     "team-onboarding": {
       "documented": true,
