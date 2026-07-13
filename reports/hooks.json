@@ -369,6 +369,7 @@
         "cli-reference.md",
         "env-vars.md",
         "features-overview.md",
+        "headless.md",
         "hooks-guide.md",
         "hooks.md",
         "large-codebases.md",
@@ -377,7 +378,7 @@
         "tools-reference.md",
         "web-quickstart.md"
       ],
-      "mentions": 72
+      "mentions": 74
     },
     "Setup": {
       "documented": true,
@@ -394,6 +395,7 @@
         "env-vars.md",
         "github-actions.md",
         "gitlab-ci-cd.md",
+        "headless.md",
         "hooks-guide.md",
         "hooks.md",
         "microsoft-foundry.md",
@@ -404,7 +406,7 @@
         "sandbox-environments.md",
         "web-quickstart.md"
       ],
-      "mentions": 61
+      "mentions": 63
     },
     "Stop": {
       "documented": true,
@@ -639,7 +641,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 991
+      "mentions": 997
     }
   },
   "docs_checked_at": "2026-07-13"
