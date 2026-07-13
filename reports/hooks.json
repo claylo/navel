@@ -439,7 +439,7 @@
         "ultrareview.md",
         "workflows.md"
       ],
-      "mentions": 155
+      "mentions": 156
     },
     "StopFailure": {
       "documented": true,
@@ -639,7 +639,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 990
+      "mentions": 991
     }
   },
   "docs_checked_at": "2026-07-13"
