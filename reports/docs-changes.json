@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-07-13T13:50:13Z",
+      "version_at_time": "2.1.207",
+      "files_changed": [
+        "desktop-quickstart.md",
+        "desktop.md"
+      ],
+      "files_added": [
+        "desktop-wsl.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-12T00:23:09Z",
       "version_at_time": "2.1.207",
       "files_changed": [
@@ -1782,19 +1796,6 @@
       ],
       "files_removed": [
         ""
-      ]
-    },
-    {
-      "date": "2026-06-20T13:34:47Z",
-      "version_at_time": "2.1.183",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        "typescript-v2-preview.md"
       ]
     }
   ]
