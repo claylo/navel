@@ -1,6 +1,22 @@
 {
   "changes": [
     {
+      "date": "2026-07-13T19:32:59Z",
+      "version_at_time": "2.1.207",
+      "files_changed": [
+        "fullscreen.md",
+        "sub-agents.md",
+        "subagents.md",
+        "tools-reference.md"
+      ],
+      "files_added": [
+        "hosting.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-13T18:35:16Z",
       "version_at_time": "2.1.207",
       "files_changed": [
@@ -1800,23 +1816,6 @@
       "version_at_time": "2.1.187",
       "files_changed": [
         "agent-view.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-23T20:43:16Z",
-      "version_at_time": "2.1.187",
-      "files_changed": [
-        "agent-view.md",
-        "claude-code-on-the-web.md",
-        "skills.md",
-        "slack.md",
-        "slash-commands.md"
       ],
       "files_added": [
         ""
