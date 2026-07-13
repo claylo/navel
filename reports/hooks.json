@@ -582,6 +582,7 @@
         "deep-links.md",
         "desktop-linux.md",
         "desktop-quickstart.md",
+        "desktop-wsl.md",
         "desktop.md",
         "devcontainer.md",
         "discover-plugins.md",
@@ -637,8 +638,8 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 974
+      "mentions": 975
     }
   },
-  "docs_checked_at": "2026-07-12"
+  "docs_checked_at": "2026-07-13"
 }
