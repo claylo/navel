@@ -1464,7 +1464,7 @@
         "github-actions.md",
         "github-enterprise-server.md"
       ],
-      "mentions": 10
+      "mentions": 11
     },
     "install-slack-app": {
       "documented": true,
@@ -1616,7 +1616,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 292
+      "mentions": 295
     },
     "memory": {
       "documented": true,
@@ -1793,7 +1793,7 @@
         "vs-code.md",
         "worktrees.md"
       ],
-      "mentions": 207
+      "mentions": 209
     },
     "plan": {
       "documented": true,
@@ -1912,7 +1912,7 @@
         "commands.md",
         "network-config.md"
       ],
-      "mentions": 5
+      "mentions": 6
     },
     "reload-plugins": {
       "documented": true,
@@ -2299,7 +2299,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 24
+      "mentions": 25
     },
     "team-onboarding": {
       "documented": true,
@@ -2408,7 +2408,7 @@
         "commands.md",
         "env-vars.md"
       ],
-      "mentions": 8
+      "mentions": 9
     },
     "usage": {
       "documented": true,
@@ -2427,7 +2427,7 @@
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 42
+      "mentions": 44
     },
     "usage-credits": {
       "documented": true,
@@ -2505,7 +2505,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 53
+      "mentions": 54
     }
   },
   "docs_checked_at": "2026-07-14"
