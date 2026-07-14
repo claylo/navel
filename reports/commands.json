@@ -1992,9 +1992,10 @@
         "tools-reference.md",
         "ultraplan.md",
         "vs-code.md",
-        "web-quickstart.md"
+        "web-quickstart.md",
+        "zero-data-retention.md"
       ],
-      "mentions": 79
+      "mentions": 80
     },
     "remote-env": {
       "documented": true,
