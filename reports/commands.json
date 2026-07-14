@@ -1150,7 +1150,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 90
+      "mentions": 89
     },
     "diff": {
       "documented": true,
@@ -2504,5 +2504,5 @@
       "mentions": 53
     }
   },
-  "docs_checked_at": "2026-07-13"
+  "docs_checked_at": "2026-07-14"
 }
