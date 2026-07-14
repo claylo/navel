@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "date": "2026-07-14T20:27:44Z",
+      "version_at_time": "2.1.210",
+      "files_changed": [
+        "data-usage.md",
+        "glossary.md",
+        "how-claude-code-works.md",
+        "remote-control.md",
+        "security.md",
+        "zero-data-retention.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-14T19:32:46Z",
       "version_at_time": "2.1.209",
       "files_changed": [
@@ -1874,33 +1892,6 @@
         "llm-gateway-connect.md",
         "llm-gateway-protocol.md",
         "llm-gateway-rollout.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-25T05:21:13Z",
-      "version_at_time": "2.1.191",
-      "files_changed": [
-        "admin-setup.md",
-        "amazon-bedrock.md",
-        "checkpointing.md",
-        "discover-plugins.md",
-        "env-vars.md",
-        "errors.md",
-        "fast-mode.md",
-        "glossary.md",
-        "hooks.md",
-        "interactive-mode.md",
-        "mcp.md",
-        "model-config.md",
-        "sandboxing.md",
-        "server-managed-settings.md",
-        "settings.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
