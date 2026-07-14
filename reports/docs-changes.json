@@ -1,6 +1,22 @@
 {
   "changes": [
     {
+      "date": "2026-07-14T18:23:59Z",
+      "version_at_time": "2.1.209",
+      "files_changed": [
+        "changelog.md",
+        "features-overview.md",
+        "model-config.md",
+        "overview.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-14T17:29:30Z",
       "version_at_time": "2.1.209",
       "files_changed": [
@@ -1849,21 +1865,6 @@
       "version_at_time": "2.1.191",
       "files_changed": [
         "permission-modes.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-24T19:34:18Z",
-      "version_at_time": "2.1.191",
-      "files_changed": [
-        "discover-plugins.md",
-        "sub-agents.md",
-        "subagents.md"
       ],
       "files_added": [
         ""
