@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "date": "2026-07-14T01:35:02Z",
+      "version_at_time": "2.1.208",
+      "files_changed": [
+        "admin-setup.md",
+        "amazon-bedrock.md",
+        "analytics.md",
+        "auto-mode-config.md",
+        "changelog.md",
+        "costs.md",
+        "desktop-linux.md",
+        "desktop-quickstart.md",
+        "desktop.md",
+        "feature-availability.md",
+        "google-vertex-ai.md",
+        "legal-and-compliance.md",
+        "llm-gateway-protocol.md",
+        "model-config.md",
+        "permission-modes.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-14T00:21:35Z",
       "version_at_time": "2.1.208",
       "files_changed": [
@@ -1835,43 +1862,6 @@
       "version_at_time": "2.1.190",
       "files_changed": [
         "changelog.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-24T15:48:40Z",
-      "version_at_time": "2.1.190",
-      "files_changed": [
-        "admin-setup.md",
-        "advisor.md",
-        "amazon-bedrock.md",
-        "claude-code-on-the-web.md",
-        "commands.md",
-        "desktop.md",
-        "discover-plugins.md",
-        "env-vars.md",
-        "errors.md",
-        "fast-mode.md",
-        "fullscreen.md",
-        "github-actions.md",
-        "glossary.md",
-        "interactive-mode.md",
-        "mcp.md",
-        "model-config.md",
-        "monitoring-usage.md",
-        "sandboxing.md",
-        "server-managed-settings.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md",
-        "sub-agents.md",
-        "subagents.md",
-        "voice-dictation.md"
       ],
       "files_added": [
         ""
