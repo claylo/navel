@@ -1,6 +1,29 @@
 {
   "changes": [
     {
+      "date": "2026-07-14T00:21:35Z",
+      "version_at_time": "2.1.208",
+      "files_changed": [
+        "artifacts.md",
+        "authentication.md",
+        "glossary.md",
+        "goal.md",
+        "hooks.md",
+        "jetbrains.md",
+        "microsoft-foundry.md",
+        "routines.md",
+        "third-party-integrations.md",
+        "tools-reference.md",
+        "vs-code.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-13T23:21:27Z",
       "version_at_time": "2.1.208",
       "files_changed": [
@@ -1852,19 +1875,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-24T09:04:33Z",
-      "version_at_time": "2.1.187",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        "network-config.md"
       ],
       "files_removed": [
         ""
