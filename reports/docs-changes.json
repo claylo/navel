@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "date": "2026-07-14T23:20:22Z",
+      "version_at_time": "2.1.210",
+      "files_changed": [
+        "claude-code-on-the-web.md",
+        "commands.md",
+        "desktop-quickstart.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "interactive-mode.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-14T20:27:44Z",
       "version_at_time": "2.1.210",
       "files_changed": [
@@ -1870,28 +1888,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-25T07:08:28Z",
-      "version_at_time": "2.1.191",
-      "files_changed": [
-        "authentication.md",
-        "costs.md",
-        "env-vars.md",
-        "errors.md",
-        "llm-gateway.md",
-        "model-config.md",
-        "settings.md",
-        "third-party-integrations.md"
-      ],
-      "files_added": [
-        "llm-gateway-connect.md",
-        "llm-gateway-protocol.md",
-        "llm-gateway-rollout.md"
       ],
       "files_removed": [
         ""
