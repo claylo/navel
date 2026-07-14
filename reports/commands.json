@@ -2499,13 +2499,14 @@
         "glossary.md",
         "model-config.md",
         "monitoring-usage.md",
+        "overview.md",
         "remote-control.md",
         "security-guidance.md",
         "settings.md",
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 54
+      "mentions": 55
     }
   },
   "docs_checked_at": "2026-07-14"
