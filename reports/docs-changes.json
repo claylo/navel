@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-07-14T17:29:30Z",
+      "version_at_time": "2.1.209",
+      "files_changed": [
+        "plugins-reference.md",
+        "settings.md",
+        "troubleshoot-install.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-14T16:29:23Z",
       "version_at_time": "2.1.209",
       "files_changed": [
@@ -1852,19 +1867,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-24T18:35:18Z",
-      "version_at_time": "2.1.190",
-      "files_changed": [
-        "interactive-mode.md"
-      ],
-      "files_added": [
-        "file-checkpointing.md"
       ],
       "files_removed": [
         ""
