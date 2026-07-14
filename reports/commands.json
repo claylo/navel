@@ -1320,7 +1320,7 @@
         "prompt-library.md",
         "scheduled-tasks.md"
       ],
-      "mentions": 35
+      "mentions": 36
     },
     "heapdump": {
       "documented": true,
@@ -1369,6 +1369,7 @@
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
+        "jetbrains.md",
         "large-codebases.md",
         "mcp.md",
         "memory.md",
@@ -1394,7 +1395,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 336
+      "mentions": 337
     },
     "ide": {
       "documented": true,
@@ -1405,7 +1406,7 @@
         "terminal-config.md",
         "vs-code.md"
       ],
-      "mentions": 9
+      "mentions": 11
     },
     "init": {
       "documented": true,
@@ -1516,6 +1517,7 @@
         "monitoring-usage.md",
         "quickstart.md",
         "remote-control.md",
+        "routines.md",
         "settings.md",
         "tools-reference.md",
         "troubleshoot-install.md",
@@ -1524,7 +1526,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 115
+      "mentions": 116
     },
     "logout": {
       "documented": true,
@@ -1588,6 +1590,7 @@
         "hooks.md",
         "how-claude-code-works.md",
         "interactive-mode.md",
+        "jetbrains.md",
         "large-codebases.md",
         "managed-mcp.md",
         "mcp-quickstart.md",
@@ -1613,7 +1616,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 291
+      "mentions": 292
     },
     "memory": {
       "documented": true,
@@ -1790,7 +1793,7 @@
         "vs-code.md",
         "worktrees.md"
       ],
-      "mentions": 206
+      "mentions": 207
     },
     "plan": {
       "documented": true,
@@ -2079,7 +2082,7 @@
         "tools-reference.md",
         "web-quickstart.md"
       ],
-      "mentions": 31
+      "mentions": 34
     },
     "scroll-speed": {
       "documented": true,
@@ -2221,6 +2224,7 @@
         "llm-gateway-connect.md",
         "llm-gateway-rollout.md",
         "mcp.md",
+        "microsoft-foundry.md",
         "model-config.md",
         "monitoring-usage.md",
         "remote-control.md",
@@ -2230,7 +2234,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 67
+      "mentions": 69
     },
     "statusline": {
       "documented": true,
