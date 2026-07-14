@@ -4,6 +4,7 @@
     "advisor",
     "agents",
     "artifacts",
+    "auto-mode-setup",
     "autocompact",
     "autofix-pr",
     "background",
@@ -113,6 +114,7 @@
     "add-dir": "Add a new working directory",
     "advisor": "Let Claude consult a stronger model at key moments",
     "agents": "(removed) Ask Claude to create/manage subagents, or edit .claude/agents/",
+    "auto-mode-setup": "Set up and customise auto mode \\u2014 environment context, plus optional rule tweaks",
     "autocompact": "Set how full the context gets before auto-summarizing",
     "autofix-pr": "Monitor and autofix any issues with the current PR",
     "branch": "Create a branch of the current conversation at this point",
@@ -182,7 +184,7 @@
     "ultrareview": "Find and verify bugs in your branch using Claude Code on the web",
     "update": "Switch to the latest version (conversation continues)",
     "upgrade": "Upgrade to Max for higher rate limits and more Opus",
-    "usage-credits": "Configure usage credits to keep working when you hit a limit",
+    "usage-credits": "Configure usage credits or request them from your admin when you hit a limit",
     "version": "Show this session's version (autoupdate may have a newer one)",
     "voice": "Toggle voice mode",
     "web-setup": "Set up Claude Code on the web with your GitHub account"
@@ -192,6 +194,7 @@
     "advisor": "available",
     "agents": "available",
     "artifacts": "available",
+    "auto-mode-setup": "available",
     "autocompact": "available",
     "autofix-pr": "available",
     "background": "available",
@@ -727,6 +730,11 @@
       "added": [
         "morning"
       ]
+    },
+    "2.1.210": {
+      "added": [
+        "auto-mode-setup"
+      ]
     }
   },
   "commands_docs": {
@@ -802,6 +810,11 @@
         "zero-data-retention.md"
       ],
       "mentions": 17
+    },
+    "auto-mode-setup": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "autocompact": {
       "documented": false,
@@ -1062,9 +1075,10 @@
       "doc_files": [
         "changelog.md",
         "commands.md",
-        "terminal-config.md"
+        "terminal-config.md",
+        "troubleshooting.md"
       ],
-      "mentions": 12
+      "mentions": 13
     },
     "cowork-plugin": {
       "documented": false,
@@ -1264,7 +1278,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 38
+      "mentions": 40
     },
     "feedback": {
       "documented": true,
@@ -1395,7 +1409,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 337
+      "mentions": 338
     },
     "ide": {
       "documented": true,
@@ -1458,13 +1472,15 @@
     "install-github-app": {
       "documented": true,
       "doc_files": [
+        "agent-view.md",
         "changelog.md",
         "commands.md",
         "env-vars.md",
+        "errors.md",
         "github-actions.md",
         "github-enterprise-server.md"
       ],
-      "mentions": 11
+      "mentions": 14
     },
     "install-slack-app": {
       "documented": true,
@@ -1526,7 +1542,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 116
+      "mentions": 117
     },
     "logout": {
       "documented": true,
@@ -1616,7 +1632,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 295
+      "mentions": 302
     },
     "memory": {
       "documented": true,
@@ -1720,7 +1736,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 273
+      "mentions": 275
     },
     "morning": {
       "documented": false,
@@ -1760,6 +1776,7 @@
         "data-usage.md",
         "debug-your-config.md",
         "desktop.md",
+        "env-vars.md",
         "errors.md",
         "gateways.md",
         "glossary.md",
@@ -1767,6 +1784,7 @@
         "hooks-guide.md",
         "hooks.md",
         "how-claude-code-works.md",
+        "interactive-mode.md",
         "jetbrains.md",
         "keybindings.md",
         "large-codebases.md",
@@ -1793,7 +1811,7 @@
         "vs-code.md",
         "worktrees.md"
       ],
-      "mentions": 209
+      "mentions": 214
     },
     "plan": {
       "documented": true,
@@ -1859,7 +1877,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 219
+      "mentions": 220
     },
     "powerup": {
       "documented": true,
@@ -2234,7 +2252,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 69
+      "mentions": 72
     },
     "statusline": {
       "documented": true,
@@ -2299,7 +2317,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 25
+      "mentions": 27
     },
     "team-onboarding": {
       "documented": true,
@@ -2406,9 +2424,10 @@
       "doc_files": [
         "changelog.md",
         "commands.md",
-        "env-vars.md"
+        "env-vars.md",
+        "errors.md"
       ],
-      "mentions": 9
+      "mentions": 10
     },
     "usage": {
       "documented": true,
@@ -2427,7 +2446,7 @@
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 44
+      "mentions": 45
     },
     "usage-credits": {
       "documented": true,
@@ -2506,7 +2525,7 @@
         "tools-reference.md",
         "workflows.md"
       ],
-      "mentions": 55
+      "mentions": 57
     }
   },
   "docs_checked_at": "2026-07-14"
