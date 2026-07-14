@@ -530,7 +530,7 @@
         "plugins-reference.md",
         "security-guidance.md"
       ],
-      "mentions": 38
+      "mentions": 39
     },
     "WorktreeCreate": {
       "documented": true,
@@ -642,7 +642,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 999
+      "mentions": 1010
     }
   },
   "docs_checked_at": "2026-07-14"
