@@ -42,7 +42,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (108)</summary>
+<summary>Commands (109)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -50,6 +50,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /advisor | Let Claude consult a stronger model at key moments | 2.1.83 | available | yes |
 | /agents | (removed) Ask Claude to create/manage subagents, or edit ... | 2.0.0 | available | yes |
 | /artifacts | — | 2.1.206 | available | yes |
+| **/auto-mode-setup** | Set up and customise auto mode \u2014 environment context... | 2.1.210 | available | **no** |
 | **/autocompact** | Set how full the context gets before auto-summarizing | 2.1.89 | available | **no** |
 | /autofix-pr | Monitor and autofix any issues with the current PR | 2.1.94 | available | yes |
 | /background | — | 2.1.119 | available | yes |
@@ -148,7 +149,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | **/update** | Switch to the latest version (conversation continues) | 2.1.101 | *disabled* | yes |
 | /upgrade | Upgrade to Max for higher rate limits and more Opus | 2.0.0 | available | yes |
 | /usage | — | 2.0.0 | available | yes |
-| /usage-credits | Configure usage credits to keep working when you hit a limit | 2.1.144 | available | yes |
+| /usage-credits | Configure usage credits or request them from your admin w... | 2.1.144 | available | yes |
 | **/version** | Show this session's version (autoupdate may have a newer ... | 2.1.83 | *disabled* | yes |
 | /voice | Toggle voice mode | 2.1.59 | available | yes |
 | /web-setup | Set up Claude Code on the web with your GitHub account | 2.1.79 | available | yes |
@@ -753,6 +754,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.210 | — | +auto-mode-setup | — |
 | 2.1.207 | — | +morning | — |
 | 2.1.206 | — | +artifacts, +schedule | — |
 | 2.1.199 | — | +design-consent, +design-revoke, +setup-cowork | — |
