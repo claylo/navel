@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-07-14T16:29:23Z",
+      "version_at_time": "2.1.209",
+      "files_changed": [
+        "setup.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-14T07:35:49Z",
       "version_at_time": "2.1.209",
       "files_changed": [
@@ -1855,19 +1868,6 @@
       ],
       "files_removed": [
         ""
-      ]
-    },
-    {
-      "date": "2026-06-24T17:39:20Z",
-      "version_at_time": "2.1.190",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        "file-checkpointing.md"
       ]
     }
   ]
