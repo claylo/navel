@@ -252,7 +252,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 22
+      "mentions": 23
     },
     "PermissionRequest": {
       "documented": true,
@@ -305,7 +305,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 104
+      "mentions": 105
     },
     "PostToolUseFailure": {
       "documented": true,
@@ -315,7 +315,7 @@
         "hooks.md",
         "plugins-reference.md"
       ],
-      "mentions": 23
+      "mentions": 24
     },
     "PreCompact": {
       "documented": true,
@@ -336,6 +336,7 @@
         "features-overview.md",
         "hooks-guide.md",
         "hooks.md",
+        "jetbrains.md",
         "memory.md",
         "monitoring-usage.md",
         "permission-modes.md",
@@ -346,7 +347,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 131
+      "mentions": 133
     },
     "SessionEnd": {
       "documented": true,
@@ -641,8 +642,8 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 997
+      "mentions": 998
     }
   },
-  "docs_checked_at": "2026-07-13"
+  "docs_checked_at": "2026-07-14"
 }
