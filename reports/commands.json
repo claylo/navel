@@ -2253,7 +2253,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 72
+      "mentions": 73
     },
     "statusline": {
       "documented": true,
@@ -2318,7 +2318,7 @@
         "ultraplan.md",
         "ultrareview.md"
       ],
-      "mentions": 27
+      "mentions": 28
     },
     "team-onboarding": {
       "documented": true,
@@ -2447,7 +2447,7 @@
         "voice-dictation.md",
         "vs-code.md"
       ],
-      "mentions": 45
+      "mentions": 46
     },
     "usage-credits": {
       "documented": true,
@@ -2529,5 +2529,5 @@
       "mentions": 57
     }
   },
-  "docs_checked_at": "2026-07-14"
+  "docs_checked_at": "2026-07-15"
 }
