@@ -923,7 +923,7 @@
         "chrome.md",
         "mcp.md"
       ],
-      "mentions": 2
+      "mentions": 3
     },
     "clear": {
       "documented": true,
@@ -1122,9 +1122,10 @@
     "design-sync": {
       "documented": true,
       "doc_files": [
-        "commands.md"
+        "commands.md",
+        "feature-availability.md"
       ],
-      "mentions": 2
+      "mentions": 7
     },
     "desktop": {
       "documented": true,
@@ -1164,7 +1165,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 89
+      "mentions": 90
     },
     "diff": {
       "documented": true,
@@ -1633,7 +1634,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 303
+      "mentions": 304
     },
     "memory": {
       "documented": true,
@@ -1904,9 +1905,10 @@
     "radio": {
       "documented": true,
       "doc_files": [
-        "commands.md"
+        "commands.md",
+        "feature-availability.md"
       ],
-      "mentions": 1
+      "mentions": 6
     },
     "rate-limit-options": {
       "documented": false,
@@ -2481,12 +2483,13 @@
       "doc_files": [
         "changelog.md",
         "commands.md",
+        "feature-availability.md",
         "interactive-mode.md",
         "keybindings.md",
         "settings.md",
         "voice-dictation.md"
       ],
-      "mentions": 34
+      "mentions": 35
     },
     "web-setup": {
       "documented": true,
