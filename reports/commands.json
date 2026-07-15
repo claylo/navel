@@ -1196,7 +1196,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 56
+      "mentions": 57
     },
     "effort": {
       "documented": true,
@@ -1812,7 +1812,7 @@
         "vs-code.md",
         "worktrees.md"
       ],
-      "mentions": 214
+      "mentions": 215
     },
     "plan": {
       "documented": true,
@@ -2050,7 +2050,7 @@
         "remote-control.md",
         "sessions.md"
       ],
-      "mentions": 73
+      "mentions": 74
     },
     "review": {
       "documented": true,
