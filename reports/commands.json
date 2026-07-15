@@ -1270,6 +1270,7 @@
         "fast-mode.md",
         "google-vertex-ai.md",
         "headless.md",
+        "llm-gateway-connect.md",
         "microsoft-foundry.md",
         "model-config.md",
         "monitoring-usage.md",
@@ -1278,7 +1279,7 @@
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 40
+      "mentions": 41
     },
     "feedback": {
       "documented": true,
