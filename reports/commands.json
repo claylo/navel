@@ -892,7 +892,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 33
+      "mentions": 34
     },
     "chrome": {
       "documented": true,
@@ -1196,7 +1196,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 55
+      "mentions": 56
     },
     "effort": {
       "documented": true,
