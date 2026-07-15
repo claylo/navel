@@ -761,6 +761,7 @@
       "doc_files": [
         "advisor.md",
         "changelog.md",
+        "claude-platform-on-aws.md",
         "cli-reference.md",
         "commands.md",
         "env-vars.md",
@@ -770,7 +771,7 @@
         "settings.md",
         "tools-reference.md"
       ],
-      "mentions": 26
+      "mentions": 27
     },
     "agents": {
       "documented": true,
@@ -1411,7 +1412,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 338
+      "mentions": 339
     },
     "ide": {
       "documented": true,
@@ -1617,6 +1618,7 @@
         "network-config.md",
         "overview.md",
         "permission-modes.md",
+        "permissions.md",
         "platforms.md",
         "plugins-reference.md",
         "plugins.md",
@@ -1625,6 +1627,7 @@
         "remote-control.md",
         "routines.md",
         "sandbox-environments.md",
+        "sandboxing.md",
         "scheduled-tasks.md",
         "settings.md",
         "sub-agents.md",
@@ -1634,7 +1637,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 304
+      "mentions": 328
     },
     "memory": {
       "documented": true,
@@ -1813,7 +1816,7 @@
         "vs-code.md",
         "worktrees.md"
       ],
-      "mentions": 215
+      "mentions": 217
     },
     "plan": {
       "documented": true,
@@ -1879,7 +1882,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 220
+      "mentions": 222
     },
     "powerup": {
       "documented": true,
@@ -1952,7 +1955,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 28
+      "mentions": 29
     },
     "reload-skills": {
       "documented": true,
@@ -2476,7 +2479,7 @@
         "plugins.md",
         "statusline.md"
       ],
-      "mentions": 48
+      "mentions": 50
     },
     "voice": {
       "documented": true,
