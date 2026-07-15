@@ -1,6 +1,32 @@
 {
   "changes": [
     {
+      "date": "2026-07-15T19:30:22Z",
+      "version_at_time": "2.1.211",
+      "files_changed": [
+        "amazon-bedrock.md",
+        "authentication.md",
+        "auto-mode-config.md",
+        "chrome.md",
+        "commands.md",
+        "desktop.md",
+        "feature-availability.md",
+        "fullscreen.md",
+        "llm-gateway-connect.md",
+        "llm-gateway-rollout.md",
+        "platforms.md",
+        "plugin-dependencies.md",
+        "plugin-hints.md",
+        "remote-control.md"
+      ],
+      "files_added": [
+        "agent-loop.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-15T18:26:06Z",
       "version_at_time": "2.1.210",
       "files_changed": [
@@ -1900,25 +1926,6 @@
       ],
       "files_removed": [
         "common-workflows.md"
-      ]
-    },
-    {
-      "date": "2026-06-25T19:36:24Z",
-      "version_at_time": "2.1.193",
-      "files_changed": [
-        "agent-view.md",
-        "cli-reference.md",
-        "monitoring-usage.md",
-        "overview.md",
-        "quickstart.md",
-        "setup.md",
-        "third-party-integrations.md"
-      ],
-      "files_added": [
-        "feature-availability.md"
-      ],
-      "files_removed": [
-        ""
       ]
     }
   ]
