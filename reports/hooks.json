@@ -347,7 +347,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 133
+      "mentions": 134
     },
     "SessionEnd": {
       "documented": true,
@@ -530,7 +530,7 @@
         "plugins-reference.md",
         "security-guidance.md"
       ],
-      "mentions": 39
+      "mentions": 41
     },
     "WorktreeCreate": {
       "documented": true,
