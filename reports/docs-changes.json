@@ -1,6 +1,22 @@
 {
   "changes": [
     {
+      "date": "2026-07-15T18:26:06Z",
+      "version_at_time": "2.1.210",
+      "files_changed": [
+        "desktop.md",
+        "errors.md",
+        "server-managed-settings.md",
+        "settings.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        "agent-loop.md"
+      ]
+    },
+    {
       "date": "2026-07-15T17:30:58Z",
       "version_at_time": "2.1.210",
       "files_changed": [
@@ -1900,19 +1916,6 @@
       ],
       "files_added": [
         "feature-availability.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-25T18:43:27Z",
-      "version_at_time": "2.1.191",
-      "files_changed": [
-        "agent-teams.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
