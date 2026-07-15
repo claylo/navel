@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "date": "2026-07-15T22:21:34Z",
+      "version_at_time": "2.1.211",
+      "files_changed": [
+        "fast-mode.md",
+        "llm-gateway-protocol.md",
+        "mcp.md",
+        "prompt-caching.md",
+        "sandboxing.md",
+        "settings.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-15T21:22:26Z",
       "version_at_time": "2.1.211",
       "files_changed": [
@@ -1932,19 +1950,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-25T21:34:05Z",
-      "version_at_time": "2.1.193",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        "common-workflows.md"
       ],
       "files_removed": [
         ""
