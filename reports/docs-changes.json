@@ -1,6 +1,20 @@
 {
   "changes": [
     {
+      "date": "2026-07-15T17:30:58Z",
+      "version_at_time": "2.1.210",
+      "files_changed": [
+        "env-vars.md",
+        "mcp.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-15T16:32:18Z",
       "version_at_time": "2.1.210",
       "files_changed": [
@@ -1896,19 +1910,6 @@
       "version_at_time": "2.1.191",
       "files_changed": [
         "agent-teams.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-25T17:41:01Z",
-      "version_at_time": "2.1.191",
-      "files_changed": [
-        "remote-control.md"
       ],
       "files_added": [
         ""
