@@ -1,6 +1,41 @@
 {
   "changes": [
     {
+      "date": "2026-07-15T16:32:18Z",
+      "version_at_time": "2.1.210",
+      "files_changed": [
+        "admin-setup.md",
+        "amazon-bedrock.md",
+        "authentication.md",
+        "claude-directory.md",
+        "cli-reference.md",
+        "commands.md",
+        "env-vars.md",
+        "google-vertex-ai.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "managed-mcp.md",
+        "mcp.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugin-marketplaces.md",
+        "sessions.md",
+        "settings.md",
+        "terminal-config.md",
+        "third-party-integrations.md",
+        "tools-reference.md",
+        "vs-code.md",
+        "worktrees.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-15T15:32:21Z",
       "version_at_time": "2.1.210",
       "files_changed": [
@@ -1874,20 +1909,6 @@
       "version_at_time": "2.1.191",
       "files_changed": [
         "remote-control.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-25T16:47:06Z",
-      "version_at_time": "2.1.191",
-      "files_changed": [
-        "debug-your-config.md",
-        "hooks-guide.md"
       ],
       "files_added": [
         ""
