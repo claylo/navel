@@ -1,6 +1,41 @@
 {
   "changes": [
     {
+      "date": "2026-07-15T21:22:26Z",
+      "version_at_time": "2.1.211",
+      "files_changed": [
+        "advisor.md",
+        "artifacts.md",
+        "channels.md",
+        "claude-apps-gateway-config.md",
+        "claude-code-on-the-web.md",
+        "claude-platform-on-aws.md",
+        "desktop-scheduled-tasks.md",
+        "desktop.md",
+        "feature-availability.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "mcp.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugin-dependencies.md",
+        "sandbox-environments.md",
+        "sandboxing.md",
+        "scheduled-tasks.md",
+        "slack.md",
+        "sub-agents.md",
+        "subagents.md",
+        "tools-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-15T19:30:22Z",
       "version_at_time": "2.1.211",
       "files_changed": [
@@ -1913,19 +1948,6 @@
       ],
       "files_removed": [
         ""
-      ]
-    },
-    {
-      "date": "2026-06-25T20:39:51Z",
-      "version_at_time": "2.1.193",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        "common-workflows.md"
       ]
     }
   ]
