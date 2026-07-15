@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "date": "2026-07-15T00:20:36Z",
+      "version_at_time": "2.1.210",
+      "files_changed": [
+        "admin-setup.md",
+        "changelog.md",
+        "claude-code-on-the-web.md",
+        "mcp.md",
+        "plugin-marketplaces.md",
+        "plugins-reference.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-14T23:20:22Z",
       "version_at_time": "2.1.210",
       "files_changed": [
@@ -1872,19 +1890,6 @@
         "mcp-quickstart.md",
         "routines.md",
         "web-quickstart.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-25T09:04:08Z",
-      "version_at_time": "2.1.191",
-      "files_changed": [
-        "changelog.md"
       ],
       "files_added": [
         ""
