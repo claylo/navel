@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-07-15T15:32:21Z",
+      "version_at_time": "2.1.210",
+      "files_changed": [
+        "llm-gateway-connect.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-15T00:20:36Z",
       "version_at_time": "2.1.210",
       "files_changed": [
@@ -1875,21 +1888,6 @@
       "files_changed": [
         "debug-your-config.md",
         "hooks-guide.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-25T15:54:17Z",
-      "version_at_time": "2.1.191",
-      "files_changed": [
-        "mcp-quickstart.md",
-        "routines.md",
-        "web-quickstart.md"
       ],
       "files_added": [
         ""
