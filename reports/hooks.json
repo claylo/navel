@@ -612,6 +612,7 @@
         "monitoring-usage.md",
         "overview.md",
         "permission-modes.md",
+        "permissions.md",
         "platforms.md",
         "plugin-dependencies.md",
         "plugin-hints.md",
@@ -642,7 +643,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 1011
+      "mentions": 1015
     }
   },
   "docs_checked_at": "2026-07-15"
