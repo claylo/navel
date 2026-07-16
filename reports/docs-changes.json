@@ -1,6 +1,59 @@
 {
   "changes": [
     {
+      "date": "2026-07-16T23:19:54Z",
+      "version_at_time": "2.1.212",
+      "files_changed": [
+        "advisor.md",
+        "agent-teams.md",
+        "agent-view.md",
+        "amazon-bedrock.md",
+        "artifacts.md",
+        "auto-mode-config.md",
+        "channels-reference.md",
+        "chrome.md",
+        "claude-apps-gateway.md",
+        "claude-directory.md",
+        "claude-platform-on-aws.md",
+        "cli-reference.md",
+        "common-workflows.md",
+        "costs.md",
+        "data-usage.md",
+        "deep-links.md",
+        "desktop.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "google-vertex-ai.md",
+        "mcp.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "permission-modes.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "prompt-caching.md",
+        "quickstart.md",
+        "routines.md",
+        "sandboxing.md",
+        "scheduled-tasks.md",
+        "security-guidance.md",
+        "sessions.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slash-commands.md",
+        "troubleshoot-install.md",
+        "troubleshooting.md",
+        "vs-code.md",
+        "web-quickstart.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-16T22:22:56Z",
       "version_at_time": "2.1.212",
       "files_changed": [
@@ -1998,20 +2051,6 @@
       ],
       "files_removed": [
         "2026-w15.md"
-      ]
-    },
-    {
-      "date": "2026-06-27T01:39:36Z",
-      "version_at_time": "2.1.195",
-      "files_changed": [
-        "changelog.md"
-      ],
-      "files_added": [
-        "2026-w25.md",
-        "2026-w26.md"
-      ],
-      "files_removed": [
-        ""
       ]
     }
   ]
