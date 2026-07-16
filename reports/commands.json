@@ -1084,6 +1084,7 @@
         "hooks.md",
         "how-claude-code-works.md",
         "keybindings.md",
+        "memory.md",
         "plugins.md",
         "remote-control.md",
         "sessions.md",
@@ -1092,7 +1093,7 @@
         "statusline.md",
         "voice-dictation.md"
       ],
-      "mentions": 54
+      "mentions": 58
     },
     "copy": {
       "documented": true,
@@ -1252,7 +1253,7 @@
         "subagents.md",
         "workflows.md"
       ],
-      "mentions": 70
+      "mentions": 71
     },
     "exit": {
       "documented": true,
@@ -1496,7 +1497,7 @@
         "setup.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 46
+      "mentions": 47
     },
     "install-github-app": {
       "documented": true,
@@ -1556,6 +1557,7 @@
         "env-vars.md",
         "errors.md",
         "gateways.md",
+        "github-enterprise-server.md",
         "headless.md",
         "hooks.md",
         "mcp.md",
@@ -1571,7 +1573,7 @@
         "vs-code.md",
         "web-quickstart.md"
       ],
-      "mentions": 117
+      "mentions": 119
     },
     "logout": {
       "documented": true,
@@ -1663,7 +1665,7 @@
         "troubleshooting.md",
         "vs-code.md"
       ],
-      "mentions": 328
+      "mentions": 329
     },
     "memory": {
       "documented": true,
@@ -1708,7 +1710,7 @@
         "third-party-integrations.md",
         "web-quickstart.md"
       ],
-      "mentions": 127
+      "mentions": 126
     },
     "mobile": {
       "documented": true,
@@ -1909,7 +1911,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 223
+      "mentions": 224
     },
     "powerup": {
       "documented": true,
