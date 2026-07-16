@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-07-16T14:42:03Z",
+      "version_at_time": "2.1.211",
+      "files_changed": [
+        "remote-control.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-16T04:15:33Z",
       "version_at_time": "2.1.211",
       "files_changed": [
@@ -1932,19 +1945,6 @@
       "version_at_time": "2.1.193",
       "files_changed": [
         "troubleshoot-install.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-26T01:43:27Z",
-      "version_at_time": "2.1.193",
-      "files_changed": [
-        "changelog.md"
       ],
       "files_added": [
         ""
