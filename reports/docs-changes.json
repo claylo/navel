@@ -1,6 +1,41 @@
 {
   "changes": [
     {
+      "date": "2026-07-16T21:23:18Z",
+      "version_at_time": "2.1.212",
+      "files_changed": [
+        "channels.md",
+        "claude-code-on-the-web.md",
+        "context-window.md",
+        "debug-your-config.md",
+        "discover-plugins.md",
+        "github-enterprise-server.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "keybindings.md",
+        "large-codebases.md",
+        "llm-gateway-connect.md",
+        "mcp-quickstart.md",
+        "mcp.md",
+        "memory.md",
+        "model-config.md",
+        "quickstart.md",
+        "remote-control.md",
+        "sandbox-environments.md",
+        "security-guidance.md",
+        "skills.md",
+        "slash-commands.md",
+        "terminal-config.md",
+        "worktrees.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-16T20:20:21Z",
       "version_at_time": "2.1.212",
       "files_changed": [
@@ -1963,19 +1998,6 @@
         "subagents.md",
         "tools-reference.md",
         "voice-dictation.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-26T22:27:29Z",
-      "version_at_time": "2.1.195",
-      "files_changed": [
-        "errors.md"
       ],
       "files_added": [
         ""
