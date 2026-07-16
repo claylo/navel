@@ -11,6 +11,7 @@
     "branch",
     "brief",
     "btw",
+    "bug",
     "cd",
     "chrome",
     "claude-in-chrome",
@@ -92,6 +93,7 @@
     "statusline",
     "stickers",
     "stop",
+    "subtask",
     "tasks",
     "team-onboarding",
     "teleport",
@@ -120,6 +122,7 @@
     "branch": "Create a branch of the current conversation at this point",
     "brief": "Toggle brief-only mode",
     "btw": "Ask a quick side question without interrupting the main conversation",
+    "bug": "Report a bug or share your conversation",
     "cd": "Move this session to a new working directory",
     "chrome": "Open Claude in Chrome settings",
     "clear": "Start a new session with empty context; previous session stays on disk (resumable with /resume)",
@@ -137,7 +140,7 @@
     "effort": "Set effort level for model usage",
     "export": "Export the current conversation to a file or clipboard",
     "extra-usage": "Renamed to /usage-credits",
-    "feedback": "Submit feedback, report a bug, or share your conversation",
+    "feedback": "Send feedback to Anthropic or report a bug",
     "focus": "Toggle focus view: just your prompt, summary, and response",
     "fork": "Spawn a background agent that inherits the full conversation",
     "goal": "Set a goal Claude checks before stopping",
@@ -176,13 +179,13 @@
     "status": "Show Claude Code status including version, model, account, API connectivity, and tool statuses",
     "stickers": "Order Claude Code stickers",
     "stop": "Stop this background session; transcript and worktree are kept",
+    "subtask": "Send a subagent off with your full context; its result comes back here",
     "team-onboarding": "Help teammates ramp on Claude Code with a guide from your usage",
     "teleport": "Resume a Claude Code session from claude.ai",
     "theme": "Change the theme",
     "tui": "Set the terminal UI renderer (default | fullscreen)",
     "ultraplan": "Claude Code on the web drafts a plan you can edit and approve",
     "ultrareview": "Find and verify bugs in your branch using Claude Code on the web",
-    "update": "Switch to the latest version (conversation continues)",
     "upgrade": "Upgrade to Max for higher rate limits and more Opus",
     "usage-credits": "Configure usage credits or request them from your admin when you hit a limit",
     "version": "Show this session's version (autoupdate may have a newer one)",
@@ -201,6 +204,7 @@
     "branch": "available",
     "brief": "available",
     "btw": "available",
+    "bug": "available",
     "cd": "available",
     "chrome": "available",
     "claude-in-chrome": "available",
@@ -282,6 +286,7 @@
     "statusline": "available",
     "stickers": "available",
     "stop": "available",
+    "subtask": "available",
     "tasks": "available",
     "team-onboarding": "available",
     "teleport": "available",
@@ -735,6 +740,12 @@
       "added": [
         "auto-mode-setup"
       ]
+    },
+    "2.1.212": {
+      "added": [
+        "bug",
+        "subtask"
+      ]
     }
   },
   "commands_docs": {
@@ -876,6 +887,14 @@
         "subagents.md"
       ],
       "mentions": 18
+    },
+    "bug": {
+      "documented": true,
+      "doc_files": [
+        "changelog.md",
+        "commands.md"
+      ],
+      "mentions": 2
     },
     "cd": {
       "documented": true,
@@ -2316,6 +2335,11 @@
         "tools-reference.md"
       ],
       "mentions": 7
+    },
+    "subtask": {
+      "documented": false,
+      "doc_files": [],
+      "mentions": 0
     },
     "tasks": {
       "documented": true,
