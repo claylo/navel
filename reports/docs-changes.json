@@ -1,6 +1,63 @@
 {
   "changes": [
     {
+      "date": "2026-07-16T15:33:55Z",
+      "version_at_time": "2.1.211",
+      "files_changed": [
+        "accessibility.md",
+        "admin-setup.md",
+        "advisor.md",
+        "agent-view.md",
+        "amazon-bedrock.md",
+        "authentication.md",
+        "auto-mode-config.md",
+        "channels-reference.md",
+        "chrome.md",
+        "cli-reference.md",
+        "commands.md",
+        "costs.md",
+        "desktop.md",
+        "env-vars.md",
+        "errors.md",
+        "feature-availability.md",
+        "google-vertex-ai.md",
+        "headless.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "large-codebases.md",
+        "llm-gateway-connect.md",
+        "mcp.md",
+        "memory.md",
+        "model-config.md",
+        "network-config.md",
+        "permission-modes.md",
+        "permissions.md",
+        "prompt-caching.md",
+        "remote-control.md",
+        "routines.md",
+        "sandboxing.md",
+        "server-managed-settings.md",
+        "sessions.md",
+        "settings.md",
+        "skills.md",
+        "slash-commands.md",
+        "statusline.md",
+        "sub-agents.md",
+        "subagents.md",
+        "terminal-config.md",
+        "tools-reference.md",
+        "troubleshoot-install.md",
+        "workflows.md",
+        "worktrees.md"
+      ],
+      "files_added": [
+        "corporate-launcher.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-16T14:42:03Z",
       "version_at_time": "2.1.211",
       "files_changed": [
@@ -1932,19 +1989,6 @@
       "version_at_time": "2.1.195",
       "files_changed": [
         "fullscreen.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-26T07:15:07Z",
-      "version_at_time": "2.1.193",
-      "files_changed": [
-        "troubleshoot-install.md"
       ],
       "files_added": [
         ""
