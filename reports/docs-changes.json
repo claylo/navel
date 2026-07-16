@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "date": "2026-07-16T17:35:41Z",
+      "version_at_time": "2.1.211",
+      "files_changed": [
+        "authentication.md",
+        "statusline.md",
+        "zero-data-retention.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-16T15:33:55Z",
       "version_at_time": "2.1.211",
       "files_changed": [
@@ -1976,19 +1991,6 @@
         "sub-agents.md",
         "subagents.md",
         "workflows.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-26T19:34:43Z",
-      "version_at_time": "2.1.195",
-      "files_changed": [
-        "fullscreen.md"
       ],
       "files_added": [
         ""
