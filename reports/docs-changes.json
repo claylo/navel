@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-07-16T20:20:21Z",
+      "version_at_time": "2.1.212",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        "2026-w24.md"
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-16T18:26:24Z",
       "version_at_time": "2.1.211",
       "files_changed": [
@@ -1963,21 +1976,6 @@
       "version_at_time": "2.1.195",
       "files_changed": [
         "errors.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-26T21:30:23Z",
-      "version_at_time": "2.1.195",
-      "files_changed": [
-        "llm-gateway-protocol.md",
-        "model-config.md",
-        "settings.md"
       ],
       "files_added": [
         ""
