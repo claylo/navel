@@ -771,7 +771,7 @@
         "settings.md",
         "tools-reference.md"
       ],
-      "mentions": 27
+      "mentions": 28
     },
     "agents": {
       "documented": true,
@@ -839,12 +839,14 @@
         "changelog.md",
         "commands.md",
         "env-vars.md",
+        "errors.md",
+        "network-config.md",
         "plugins-reference.md",
         "settings.md",
         "sub-agents.md",
         "subagents.md"
       ],
-      "mentions": 23
+      "mentions": 28
     },
     "branch": {
       "documented": true,
@@ -893,7 +895,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 34
+      "mentions": 35
     },
     "chrome": {
       "documented": true,
@@ -905,6 +907,7 @@
         "cli-reference.md",
         "commands.md",
         "computer-use.md",
+        "corporate-launcher.md",
         "desktop.md",
         "feature-availability.md",
         "how-claude-code-works.md",
@@ -916,7 +919,7 @@
         "troubleshoot-install.md",
         "vs-code.md"
       ],
-      "mentions": 33
+      "mentions": 34
     },
     "claude-in-chrome": {
       "documented": true,
@@ -953,11 +956,12 @@
         "scheduled-tasks.md",
         "sessions.md",
         "settings.md",
+        "statusline.md",
         "sub-agents.md",
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 79
+      "mentions": 81
     },
     "color": {
       "documented": true,
@@ -1166,7 +1170,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 90
+      "mentions": 91
     },
     "diff": {
       "documented": true,
@@ -1184,6 +1188,7 @@
         "changelog.md",
         "cli-reference.md",
         "commands.md",
+        "corporate-launcher.md",
         "debug-your-config.md",
         "env-vars.md",
         "errors.md",
@@ -1191,6 +1196,7 @@
         "how-claude-code-works.md",
         "keybindings.md",
         "memory.md",
+        "permission-modes.md",
         "settings.md",
         "skills.md",
         "slash-commands.md",
@@ -1198,7 +1204,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 57
+      "mentions": 59
     },
     "effort": {
       "documented": true,
@@ -1246,12 +1252,13 @@
         "best-practices.md",
         "changelog.md",
         "commands.md",
+        "corporate-launcher.md",
         "env-vars.md",
         "hooks.md",
         "sessions.md",
         "tools-reference.md"
       ],
-      "mentions": 12
+      "mentions": 13
     },
     "extra-usage": {
       "documented": true,
@@ -1412,7 +1419,7 @@
         "tools-reference.md",
         "worktrees.md"
       ],
-      "mentions": 339
+      "mentions": 340
     },
     "ide": {
       "documented": true,
@@ -1682,7 +1689,7 @@
         "third-party-integrations.md",
         "web-quickstart.md"
       ],
-      "mentions": 125
+      "mentions": 127
     },
     "mobile": {
       "documented": true,
@@ -1741,7 +1748,7 @@
         "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 275
+      "mentions": 280
     },
     "morning": {
       "documented": false,
@@ -1778,6 +1785,7 @@
         "cli-reference.md",
         "commands.md",
         "communications-kit.md",
+        "corporate-launcher.md",
         "data-usage.md",
         "debug-your-config.md",
         "desktop.md",
@@ -1816,7 +1824,7 @@
         "vs-code.md",
         "worktrees.md"
       ],
-      "mentions": 217
+      "mentions": 224
     },
     "plan": {
       "documented": true,
@@ -1975,6 +1983,8 @@
         "claude-code-on-the-web.md",
         "cli-reference.md",
         "commands.md",
+        "corporate-launcher.md",
+        "costs.md",
         "data-usage.md",
         "desktop.md",
         "env-vars.md",
@@ -1999,9 +2009,10 @@
         "ultraplan.md",
         "vs-code.md",
         "web-quickstart.md",
+        "workflows.md",
         "zero-data-retention.md"
       ],
-      "mentions": 80
+      "mentions": 83
     },
     "remote-env": {
       "documented": true,
@@ -2134,6 +2145,7 @@
       "documented": true,
       "doc_files": [
         "changelog.md",
+        "chrome.md",
         "claude-apps-gateway-config.md",
         "claude-code-on-the-web.md",
         "code-review.md",
@@ -2145,7 +2157,7 @@
         "routines.md",
         "vs-code.md"
       ],
-      "mentions": 17
+      "mentions": 18
     },
     "setup-bedrock": {
       "documented": true,
@@ -2241,6 +2253,7 @@
         "claude-platform-on-aws.md",
         "commands.md",
         "computer-use.md",
+        "corporate-launcher.md",
         "debug-your-config.md",
         "env-vars.md",
         "errors.md",
@@ -2259,7 +2272,7 @@
         "third-party-integrations.md",
         "troubleshoot-install.md"
       ],
-      "mentions": 73
+      "mentions": 78
     },
     "statusline": {
       "documented": true,
@@ -2356,7 +2369,7 @@
         "terminal-config.md",
         "troubleshooting.md"
       ],
-      "mentions": 20
+      "mentions": 21
     },
     "theme": {
       "documented": true,
@@ -2466,7 +2479,7 @@
         "remote-control.md",
         "ultrareview.md"
       ],
-      "mentions": 14
+      "mentions": 16
     },
     "version": {
       "documented": true,
