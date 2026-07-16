@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-07-16T01:35:12Z",
+      "version_at_time": "2.1.211",
+      "files_changed": [
+        "changelog.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-15T22:21:34Z",
       "version_at_time": "2.1.211",
       "files_changed": [
@@ -1934,19 +1947,6 @@
         "server-managed-settings.md",
         "ultrareview.md",
         "web-quickstart.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-25T22:31:24Z",
-      "version_at_time": "2.1.193",
-      "files_changed": [
-        "monitoring-usage.md"
       ],
       "files_added": [
         ""
