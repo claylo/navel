@@ -1,6 +1,19 @@
 {
   "changes": [
     {
+      "date": "2026-07-16T18:26:24Z",
+      "version_at_time": "2.1.211",
+      "files_changed": [
+        ""
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        "2026-w24.md"
+      ]
+    },
+    {
       "date": "2026-07-16T17:35:41Z",
       "version_at_time": "2.1.211",
       "files_changed": [
@@ -1965,32 +1978,6 @@
         "llm-gateway-protocol.md",
         "model-config.md",
         "settings.md"
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-26T20:34:42Z",
-      "version_at_time": "2.1.195",
-      "files_changed": [
-        "agent-teams.md",
-        "artifacts.md",
-        "channels.md",
-        "devcontainer.md",
-        "env-vars.md",
-        "fast-mode.md",
-        "goal.md",
-        "llm-gateway.md",
-        "sandbox-environments.md",
-        "sandboxing.md",
-        "sessions.md",
-        "sub-agents.md",
-        "subagents.md",
-        "workflows.md"
       ],
       "files_added": [
         ""
