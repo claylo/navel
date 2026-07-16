@@ -42,7 +42,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 </details>
 
 <details>
-<summary>Commands (109)</summary>
+<summary>Commands (111)</summary>
 
 | Command | Description | Since | Status | Documented |
 |---------|-------------|-------|--------|------------|
@@ -57,6 +57,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /branch | Create a branch of the current conversation at this point | 2.1.77 | available | yes |
 | **/brief** | Toggle brief-only mode | 2.1.72 | available | **no** |
 | /btw | Ask a quick side question without interrupting the main c... | 2.1.6 | available | yes |
+| /bug | Report a bug or share your conversation | 2.1.212 | available | yes |
 | /cd | Move this session to a new working directory | 2.1.169 | available | yes |
 | /chrome | Open Claude in Chrome settings | 2.0.71 | available | yes |
 | /claude-in-chrome | — | 2.1.7 | available | yes |
@@ -81,7 +82,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /export | Export the current conversation to a file or clipboard | 2.0.0 | available | yes |
 | /extra-usage | Renamed to /usage-credits | 2.0.36 | available | yes |
 | /fast | — | 2.1.36 | available | yes |
-| /feedback | Submit feedback, report a bug, or share your conversation | 2.0.0 | available | yes |
+| /feedback | Send feedback to Anthropic or report a bug | 2.0.0 | available | yes |
 | /focus | Toggle focus view: just your prompt, summary, and response | 2.1.110 | available | yes |
 | /fork | Spawn a background agent that inherits the full conversation | 2.1.8 | available | yes |
 | /goal | Set a goal Claude checks before stopping | 2.1.132 | available | yes |
@@ -138,6 +139,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /statusline | — | 2.0.0 | available | yes |
 | /stickers | Order Claude Code stickers | 2.0.32 | available | yes |
 | /stop | Stop this background session; transcript and worktree are... | 2.1.119 | available | yes |
+| **/subtask** | Send a subagent off with your full context; its result co... | 2.1.212 | available | **no** |
 | /tasks | — | 2.0.45 | available | yes |
 | /team-onboarding | Help teammates ramp on Claude Code with a guide from your... | 2.1.94 | available | yes |
 | /teleport | Resume a Claude Code session from claude.ai | 2.1.92 | available | yes |
@@ -146,7 +148,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 | /tui | Set the terminal UI renderer (default | fullscreen) | 2.1.110 | available | yes |
 | /ultraplan | Claude Code on the web drafts a plan you can edit and app... | 2.1.83 | available | yes |
 | /ultrareview | Find and verify bugs in your branch using Claude Code on ... | 2.1.83 | available | yes |
-| **/update** | Switch to the latest version (conversation continues) | 2.1.101 | *disabled* | yes |
+| **/update** | — | 2.1.101 | *disabled* | yes |
 | /upgrade | Upgrade to Max for higher rate limits and more Opus | 2.0.0 | available | yes |
 | /usage | — | 2.0.0 | available | yes |
 | /usage-credits | Configure usage credits or request them from your admin w... | 2.1.144 | available | yes |
@@ -754,6 +756,7 @@ Auto-generated tracking data for Claude Code versions, hooks, commands, and envi
 
 | Version | Hooks | Commands | Env vars |
 |---------|-------|----------|----------|
+| 2.1.212 | — | +bug, +subtask | — |
 | 2.1.210 | — | +auto-mode-setup | — |
 | 2.1.207 | — | +morning | — |
 | 2.1.206 | — | +artifacts, +schedule | — |
