@@ -379,7 +379,7 @@
         "tools-reference.md",
         "web-quickstart.md"
       ],
-      "mentions": 74
+      "mentions": 76
     },
     "Setup": {
       "documented": true,
@@ -408,7 +408,7 @@
         "sandbox-environments.md",
         "web-quickstart.md"
       ],
-      "mentions": 65
+      "mentions": 66
     },
     "Stop": {
       "documented": true,
@@ -646,7 +646,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 1027
+      "mentions": 1033
     }
   },
   "docs_checked_at": "2026-07-16"
