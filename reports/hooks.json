@@ -347,7 +347,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 135
+      "mentions": 136
     },
     "SessionEnd": {
       "documented": true,
@@ -386,6 +386,7 @@
       "doc_files": [
         "amazon-bedrock.md",
         "changelog.md",
+        "chrome.md",
         "claude-apps-gateway-config.md",
         "claude-code-on-the-web.md",
         "claude-platform-on-aws.md",
@@ -407,7 +408,7 @@
         "sandbox-environments.md",
         "web-quickstart.md"
       ],
-      "mentions": 64
+      "mentions": 65
     },
     "Stop": {
       "documented": true,
@@ -582,6 +583,7 @@
         "communications-kit.md",
         "computer-use.md",
         "context-window.md",
+        "corporate-launcher.md",
         "debug-your-config.md",
         "deep-links.md",
         "desktop-linux.md",
@@ -610,6 +612,7 @@
         "mcp.md",
         "model-config.md",
         "monitoring-usage.md",
+        "network-config.md",
         "overview.md",
         "permission-modes.md",
         "permissions.md",
@@ -643,7 +646,7 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 1017
+      "mentions": 1027
     }
   },
   "docs_checked_at": "2026-07-16"
