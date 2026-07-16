@@ -347,7 +347,7 @@
         "tools-reference.md",
         "vs-code.md"
       ],
-      "mentions": 134
+      "mentions": 135
     },
     "SessionEnd": {
       "documented": true,
@@ -643,8 +643,8 @@
         "worktrees.md",
         "zero-data-retention.md"
       ],
-      "mentions": 1014
+      "mentions": 1016
     }
   },
-  "docs_checked_at": "2026-07-15"
+  "docs_checked_at": "2026-07-16"
 }
