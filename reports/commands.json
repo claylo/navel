@@ -957,7 +957,7 @@
         "subagents.md",
         "troubleshooting.md"
       ],
-      "mentions": 77
+      "mentions": 79
     },
     "color": {
       "documented": true,
@@ -1882,7 +1882,7 @@
         "skills.md",
         "slash-commands.md"
       ],
-      "mentions": 222
+      "mentions": 223
     },
     "powerup": {
       "documented": true,
@@ -2055,7 +2055,7 @@
         "remote-control.md",
         "sessions.md"
       ],
-      "mentions": 74
+      "mentions": 75
     },
     "review": {
       "documented": true,
@@ -2356,7 +2356,7 @@
         "terminal-config.md",
         "troubleshooting.md"
       ],
-      "mentions": 19
+      "mentions": 20
     },
     "theme": {
       "documented": true,
@@ -2466,7 +2466,7 @@
         "remote-control.md",
         "ultrareview.md"
       ],
-      "mentions": 13
+      "mentions": 14
     },
     "version": {
       "documented": true,
@@ -2536,5 +2536,5 @@
       "mentions": 57
     }
   },
-  "docs_checked_at": "2026-07-15"
+  "docs_checked_at": "2026-07-16"
 }
