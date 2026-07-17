@@ -1,6 +1,70 @@
 {
   "changes": [
     {
+      "date": "2026-07-17T03:02:56Z",
+      "version_at_time": "2.1.212",
+      "files_changed": [
+        "advisor.md",
+        "agent-teams.md",
+        "agent-view.md",
+        "amazon-bedrock.md",
+        "artifacts.md",
+        "auto-mode-config.md",
+        "changelog.md",
+        "channels-reference.md",
+        "checkpointing.md",
+        "chrome.md",
+        "claude-apps-gateway.md",
+        "claude-directory.md",
+        "claude-platform-on-aws.md",
+        "cli-reference.md",
+        "common-workflows.md",
+        "costs.md",
+        "data-usage.md",
+        "deep-links.md",
+        "desktop.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "fullscreen.md",
+        "google-vertex-ai.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "keybindings.md",
+        "mcp.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "prompt-caching.md",
+        "quickstart.md",
+        "routines.md",
+        "sandboxing.md",
+        "scheduled-tasks.md",
+        "security-guidance.md",
+        "sessions.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slash-commands.md",
+        "statusline.md",
+        "troubleshoot-install.md",
+        "troubleshooting.md",
+        "vs-code.md",
+        "web-quickstart.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-17T01:35:25Z",
       "version_at_time": "2.1.212",
       "files_changed": [
@@ -2109,42 +2173,6 @@
       ],
       "files_added": [
         ""
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-29T21:32:47Z",
-      "version_at_time": "2.1.196",
-      "files_changed": [
-        "admin-setup.md",
-        "authentication.md",
-        "auto-mode-config.md",
-        "cli-reference.md",
-        "costs.md",
-        "data-usage.md",
-        "env-vars.md",
-        "llm-gateway-connect.md",
-        "llm-gateway-protocol.md",
-        "llm-gateway-rollout.md",
-        "llm-gateway.md",
-        "monitoring-usage.md",
-        "network-config.md",
-        "permission-modes.md",
-        "permissions.md",
-        "quickstart.md",
-        "server-managed-settings.md",
-        "settings.md",
-        "third-party-integrations.md"
-      ],
-      "files_added": [
-        "claude-apps-gateway-config.md",
-        "claude-apps-gateway-deploy.md",
-        "claude-apps-gateway-on-gcp.md",
-        "claude-apps-gateway-spend-limits.md",
-        "claude-apps-gateway.md",
-        "gateways.md"
       ],
       "files_removed": [
         ""
