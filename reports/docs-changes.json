@@ -1,6 +1,70 @@
 {
   "changes": [
     {
+      "date": "2026-07-17T13:33:38Z",
+      "version_at_time": "2.1.212",
+      "files_changed": [
+        "advisor.md",
+        "agent-teams.md",
+        "agent-view.md",
+        "amazon-bedrock.md",
+        "artifacts.md",
+        "auto-mode-config.md",
+        "changelog.md",
+        "channels-reference.md",
+        "checkpointing.md",
+        "chrome.md",
+        "claude-apps-gateway.md",
+        "claude-directory.md",
+        "claude-platform-on-aws.md",
+        "cli-reference.md",
+        "common-workflows.md",
+        "costs.md",
+        "data-usage.md",
+        "deep-links.md",
+        "desktop.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "fullscreen.md",
+        "google-vertex-ai.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "keybindings.md",
+        "mcp.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "prompt-caching.md",
+        "quickstart.md",
+        "routines.md",
+        "sandboxing.md",
+        "scheduled-tasks.md",
+        "security-guidance.md",
+        "sessions.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slash-commands.md",
+        "statusline.md",
+        "troubleshoot-install.md",
+        "troubleshooting.md",
+        "vs-code.md",
+        "web-quickstart.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-17T12:26:34Z",
       "version_at_time": "2.1.212",
       "files_changed": [
@@ -2550,19 +2614,6 @@
       ],
       "files_removed": [
         ""
-      ]
-    },
-    {
-      "date": "2026-07-01T07:26:42Z",
-      "version_at_time": "2.1.197",
-      "files_changed": [
-        ""
-      ],
-      "files_added": [
-        ""
-      ],
-      "files_removed": [
-        "migration-guide.md"
       ]
     }
   ]
