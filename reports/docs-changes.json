@@ -1,6 +1,70 @@
 {
   "changes": [
     {
+      "date": "2026-07-17T05:55:19Z",
+      "version_at_time": "2.1.212",
+      "files_changed": [
+        "advisor.md",
+        "agent-teams.md",
+        "agent-view.md",
+        "amazon-bedrock.md",
+        "artifacts.md",
+        "auto-mode-config.md",
+        "changelog.md",
+        "channels-reference.md",
+        "checkpointing.md",
+        "chrome.md",
+        "claude-apps-gateway.md",
+        "claude-directory.md",
+        "claude-platform-on-aws.md",
+        "cli-reference.md",
+        "common-workflows.md",
+        "costs.md",
+        "data-usage.md",
+        "deep-links.md",
+        "desktop.md",
+        "discover-plugins.md",
+        "env-vars.md",
+        "fullscreen.md",
+        "google-vertex-ai.md",
+        "headless.md",
+        "hooks-guide.md",
+        "hooks.md",
+        "interactive-mode.md",
+        "jetbrains.md",
+        "keybindings.md",
+        "mcp.md",
+        "microsoft-foundry.md",
+        "model-config.md",
+        "permission-modes.md",
+        "permissions.md",
+        "plugins-reference.md",
+        "plugins.md",
+        "prompt-caching.md",
+        "quickstart.md",
+        "routines.md",
+        "sandboxing.md",
+        "scheduled-tasks.md",
+        "security-guidance.md",
+        "sessions.md",
+        "settings.md",
+        "setup.md",
+        "skills.md",
+        "slash-commands.md",
+        "statusline.md",
+        "troubleshoot-install.md",
+        "troubleshooting.md",
+        "vs-code.md",
+        "web-quickstart.md"
+      ],
+      "files_added": [
+        ""
+      ],
+      "files_removed": [
+        ""
+      ]
+    },
+    {
       "date": "2026-07-17T04:08:43Z",
       "version_at_time": "2.1.212",
       "files_changed": [
@@ -2171,59 +2235,6 @@
       ],
       "files_added": [
         "desktop-linux.md"
-      ],
-      "files_removed": [
-        ""
-      ]
-    },
-    {
-      "date": "2026-06-30T07:14:39Z",
-      "version_at_time": "2.1.196",
-      "files_changed": [
-        "admin-setup.md",
-        "agent-teams.md",
-        "agent-view.md",
-        "amazon-bedrock.md",
-        "auto-mode-config.md",
-        "claude-apps-gateway-config.md",
-        "claude-apps-gateway-deploy.md",
-        "claude-apps-gateway-spend-limits.md",
-        "claude-apps-gateway.md",
-        "claude-code-on-the-web.md",
-        "computer-use.md",
-        "debug-your-config.md",
-        "deep-links.md",
-        "discover-plugins.md",
-        "env-vars.md",
-        "errors.md",
-        "fullscreen.md",
-        "hooks.md",
-        "interactive-mode.md",
-        "jetbrains.md",
-        "llm-gateway-connect.md",
-        "mcp.md",
-        "model-config.md",
-        "monitoring-usage.md",
-        "permission-modes.md",
-        "permissions.md",
-        "plugin-dependencies.md",
-        "plugin-marketplaces.md",
-        "plugins-reference.md",
-        "remote-control.md",
-        "scheduled-tasks.md",
-        "sessions.md",
-        "settings.md",
-        "skills.md",
-        "slash-commands.md",
-        "statusline.md",
-        "sub-agents.md",
-        "subagents.md",
-        "tools-reference.md",
-        "voice-dictation.md",
-        "workflows.md"
-      ],
-      "files_added": [
-        ""
       ],
       "files_removed": [
         ""
